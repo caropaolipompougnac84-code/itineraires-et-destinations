@@ -14,7 +14,7 @@ header.top{background:var(--teal);color:#fff;padding:1.2rem 0 1.4rem}
 header.top .lvl{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;border-radius:999px;padding:.2rem .8rem;font-size:.9rem;margin:0 .3rem .3rem 0}
 header.top h1{font-family:Fraunces,Georgia,serif;font-size:clamp(1.8rem,6vw,2.7rem);line-height:1.15;margin:.6rem 0 .3rem}
 header.top p{margin:.25rem 0;opacity:.96}header.top a{color:#fff;font-weight:700}
-nav.sn{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav.sn{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);overflow:visible;white-space:normal}
 nav.sn a{display:inline-block;padding:.65rem .8rem;text-decoration:none;color:var(--teal);font-weight:700;font-size:.95rem}
 nav.sn a.dys{color:var(--rust)}
 section,.card{scroll-margin-top:3.4rem}section{margin:1.6rem 0}
@@ -62,6 +62,17 @@ button.g{background:var(--rust);color:#fff}.score{font-weight:700;margin-left:.3
 footer{margin-top:2.5rem;background:var(--teal);color:#fff;padding:1.2rem 0;font-size:.95rem}footer a{color:#fff}
 @media print{nav.sn,button,.noprint{display:none!important}body{background:#fff}.ans[hidden]{display:none!important}}
 </style>
+<style>
+nav.sn{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);white-space:normal;overflow:visible}
+nav.sn .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:0;padding:.15rem 0}
+nav.sn a{display:inline-flex;align-items:center;padding:.45rem .7rem;min-height:44px;text-decoration:none;color:var(--teal);font-weight:700;font-size:.92rem}
+nav.sn a.dys{color:var(--rust)}
+section,.card,.plan-de-route{scroll-margin-top:6.5rem}
+@media(max-width:600px){
+  nav.sn a{padding:.4rem .55rem;font-size:.86rem}
+  section,.card,.plan-de-route{scroll-margin-top:7.5rem}
+}
+</style>
 <link rel="stylesheet" href="/css/plan-de-route.css"/>
 <style>
 .link-css-plan{}
@@ -70,7 +81,7 @@ footer{margin-top:2.5rem;background:var(--teal);color:#fff;padding:1.2rem 0;font
 .site-nav .wrap{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:.55rem .8rem}
 .site-nav a{color:#fff;font-weight:700;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
 .site-nav a:hover,.site-nav a:focus{text-decoration:underline}
-nav.sn{white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+nav.sn{white-space:normal;overflow:visible}
 .downloads{margin:.6rem 0 1rem}
 .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .steps5{padding-left:1.2em}
@@ -111,42 +122,85 @@ figcaption .cr{display:block;margin-top:.25rem;font-weight:400}
 <dt>Aims</dt><dd>Deconstruct a model essay, master a B2 toolbox (passives, inversion, punctuation), organise ideas in categories 1, 2 and 3, use the five parts of the essay, plan with a dialectical grid, make revision flashcards, peer-review, write a 250 to 300-word argued essay.</dd>
 <dt>Cultural anchor</dt><dd>Albert Anker, Appliquée (Fleissig), 1886 · K-Pop, manga, Hollywood and streaming · minority languages online</dd>
 </dl></aside>
-<p>Four stages: deconstruct a model, train the language toolbox, plan, then peer-review and write.</p>
+<p>Five sessions: deconstruct a model, learn how the essay is built, train the language toolbox, plan and draft, then peer-review and write.</p>
 <p><a href='/writing-an-essay/'>Back to the standard version</a></p>
 </div></header>
 <nav class="sn" aria-label="Contents"><div class="wrap">
-<a href="#plan-de-route">Plan de route</a><a href="#intro">Overview</a><a href="#s1">Stage 1</a><a href="#s2">Stage 2</a><a href="#method-build">Method</a><a href="#s3">Stage 3</a><a href="#flashcards">Flashcards</a><a href="#s4">Stage 4</a><a href="#vocab">Vocabulary</a><a href='/writing-an-essay/'>Standard version</a>
+<a href="#plan-de-route">Plan de route</a><a href="#intro">Overview</a><a href="#s1">Session 1</a><a href="#s2">Session 2</a><a href="#s3">Session 3</a><a href="#s4">Session 4</a><a href="#flashcards">Flashcards</a><a href="#s5">Session 5</a><a href="#vocab">Vocabulary</a><a href='/writing-an-essay/'>Standard version</a>
 </div></nav>
 <main class="wrap" id="main">
 <aside class="help-class" lang="en" style="margin:14px 0;padding:12px 14px;border:2px solid #1d3557;border-radius:12px;background:#fff"><h2 style="margin:0 0 .4em;font-size:1.05rem">Help in class</h2><ul style="margin:.2em 0 0;padding-left:1.2em"><li>Can you repeat, please?</li><li>Can you speak more slowly?</li><li>What's … in French?</li><li>How do you say … in English?</li><li>I need help.</li></ul></aside>
 
 
-<section class="plan-de-route" id="plan-de-route" lang="fr">
+<section class="plan-de-route" lang="fr" id="plan-de-route">
 <h2>Plan de route</h2>
-<p class="pdr-note">Quatre étapes, dans l'ordre de la séquence. La source ne donne pas de durée pour les activités : on ne fixe donc pas d'horaire ici. Chaque étape se termine par un point d'arrêt naturel.</p>
-<ol class="pdr-steps">
+<p class="pdr-lead">Séance de 55 minutes, calibrée sur 52 minutes. 5 séances.</p>
+<ol>
 <li>
-  <h3>Étape 1 · Deconstruction</h3>
-  <p class="pdr-time">Durée non indiquée dans la source</p>
+  <a href="#s1">Séance 1 · Deconstruction</a>
+  <span class="pdr-time">52 min</span>
   <p class="pdr-aim">Lire le modèle, colorier la structure, retracer les paragraphes PEEL, relever le lexique et la ponctuation.</p>
-  <p class="pdr-stop"><b>Si l'heure se termine ici.</b> On s'arrête à la fin de cette étape. La fois suivante, on ouvre la boîte à outils.</p>
+  <ul class="pdr-steps">
+    <li>8 min · Recap</li>
+    <li>12 min · Read the model</li>
+    <li>12 min · Colour-code the structure</li>
+    <li>12 min · PEEL in the body paragraphs</li>
+    <li>8 min · Vocabulary, grammar and punctuation hunt</li>
+  </ul>
+  <p class="pdr-stop"><b>Point d'arrêt.</b> Fin de cette séance. La fois suivante : les cinq parties de l'essai et les catégories 1, 2 et 3.</p>
+  <p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d'arrêt, on condense : on dicte une trace écrite courte (hook, research question, deux topic sentences) ; tour de table, un linker ou un exemple chacun, pour que chacun ait parlé au moins une fois ; le travail à la maison (copier les quatre codes couleur, apprendre trois mots) est écrit au tableau.</p>
 </li>
 <li>
-  <h3>Étape 2 · Methodology and language toolbox</h3>
-  <p class="pdr-time">Durée non indiquée dans la source</p>
-  <p class="pdr-aim">Comprendre les cinq parties de l'essai, classer les idées en catégories 1, 2 et 3, retenir des amorces et des mots de liaison, travailler la grammaire et la ponctuation.</p>
-  <p class="pdr-stop"><b>Si l'heure se termine ici.</b> La fois suivante, le brainstorming et le plan guidé.</p>
+  <a href="#s2">Séance 2 · How the essay is built</a>
+  <span class="pdr-time">52 min</span>
+  <p class="pdr-aim">Comprendre les cinq parties de l'essai et classer les idées en catégories 1, 2 et 3.</p>
+  <ul class="pdr-steps">
+    <li>8 min · Recap et le plan en cinq parties</li>
+    <li>14 min · The five parts, step by step, et l'exercice sur le modèle</li>
+    <li>15 min · Organising ideas by categories 1, 2, 3</li>
+    <li>10 min · Sort these ideas</li>
+    <li>5 min · Trace et consigne</li>
+  </ul>
+  <p class="pdr-stop"><b>Point d'arrêt.</b> Fin de cette séance. La fois suivante : amorces, mots de liaison et boîte à outils.</p>
+  <p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d'arrêt, on condense : on dicte les cinq parties et ce que devient chaque catégorie ; tour de table, une idée classée en 1, 2 ou 3, chacun à son tour ; le travail à la maison (remplir la grille des catégories pour le sujet) est écrit au tableau.</p>
 </li>
 <li>
-  <h3>Étape 3 · Brainstorming and guided planning</h3>
-  <p class="pdr-time">Durée non indiquée dans la source</p>
+  <a href="#s4">Séance 3 · Starters, linkers and the language toolbox</a>
+  <span class="pdr-time">52 min</span>
+  <p class="pdr-aim">Retenir des amorces et des mots de liaison, travailler la grammaire et la ponctuation.</p>
+  <ul class="pdr-steps">
+    <li>14 min · Sentence starters et exercice</li>
+    <li>16 min · Linking words et exercices</li>
+    <li>14 min · Expanding your vocabulary, B2 grammar, punctuation check</li>
+    <li>8 min · Trace écrite et consigne du travail à la maison</li>
+  </ul>
+  <p class="pdr-stop"><b>Point d'arrêt.</b> Fin de cette séance. La fois suivante : le brainstorming et le premier jet.</p>
+  <p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d'arrêt, on condense : on dicte une amorce par partie et trois linkers ; tour de table, une amorce dite à voix haute chacun ; le travail à la maison (trois phrases avec soft power, heritage et glocalization, une phrase au passif) est écrit au tableau.</p>
+</li>
+<li>
+  <a href="#s5">Séance 4 · Brainstorming and guided planning</a>
+  <span class="pdr-time">52 min</span>
   <p class="pdr-aim">Trier les idées par catégories, remplir la grille, écrire un premier jet de 250 à 300 mots.</p>
-  <p class="pdr-stop"><b>Si l'heure se termine ici.</b> Le premier jet peut se terminer à la maison. Avant l'évaluation, fabriquer ses flashcards.</p>
+  <ul class="pdr-steps">
+    <li>8 min · Recap et outils de la séance 3</li>
+    <li>12 min · Grille des catégories 1, 2, 3</li>
+    <li>12 min · Guided planning grid</li>
+    <li>20 min · Premier jet, 250 à 300 mots</li>
+  </ul>
+  <p class="pdr-stop"><b>Point d'arrêt.</b> Le premier jet peut se terminer à la maison. Avant l'évaluation, fabriquer ses flashcards.</p>
+  <p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d'arrêt, on condense : on dicte le plan en cinq parties à recopier sur la fiche ; tour de table, la phrase d'accroche ou la question de recherche, chacun à son tour ; le travail à la maison (finir le premier jet et les flashcards) est écrit au tableau.</p>
 </li>
 <li>
-  <h3>Étape 4 · Peer review and summative assessment</h3>
-  <p class="pdr-time">Durée non indiquée dans la source</p>
+  <a href="#s5">Séance 5 · Peer review and summative assessment</a>
+  <span class="pdr-time">52 min</span>
   <p class="pdr-aim">Relire un devoir de camarade, puis écrire l'essai évalué, avec la grille sur 20.</p>
+  <ul class="pdr-steps">
+    <li>8 min · Recap et rappel de la grille</li>
+    <li>12 min · Peer review</li>
+    <li>32 min · Timed essay, 250 à 300 words</li>
+  </ul>
+  <p class="pdr-stop"><b>Point d'arrêt.</b> Fin de la séquence. Le homework : relire l'essai avec la grille.</p>
+  <p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d'arrêt, on condense : on dicte le plan de l'essai en cinq points ; tour de table, une phrase de relecture (un point de la grille) chacun ; le travail à la maison (finir ou relire l'essai avec la grille) est écrit au tableau.</p>
 </li>
 </ol>
 </section>
@@ -184,7 +238,7 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <span class="cr">Image: public domain (the artist died in 1910) · <a href="https://commons.wikimedia.org/wiki/File:Fleissig--Appliqu%C3%A9e_by_Albert_Anker,_1886.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption></figure>
 
 <section id="s1">
-<h2 class="seance-h">Stage 1 · Deconstruction</h2>
+<h2 class="seance-h">Session 1 · Deconstruction</h2>
 <div class="card rappel"><p class="bar">Recap</p>
 <p>What do you already know about writing an argued essay? Name one linker and one example you could use on this topic.</p>
 <button type="button" class="ans-btn" aria-expanded="false" aria-controls="r1">Show answers</button>
@@ -274,11 +328,11 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 </section>
 
 <section id="s2">
-<h2 class="seance-h">Stage 2 · Methodology and language toolbox</h2>
+<h2 class="seance-h">Session 2 · How the essay is built</h2>
 <div class="card rappel"><p class="bar">Recap</p>
-<p>From Stage 1: what is the research question of the model, and what are the two sides of the debate?</p>
+<p>From Session 1: what is the research question of the model, and what are the two sides of the debate?</p>
 <button type="button" class="ans-btn" aria-expanded="false" aria-controls="r2">Show answers</button>
-<div class="ans" id="r2" hidden><p>See Stage 1 answer keys: the model question and the Pros / Cons structure.</p></div>
+<div class="ans" id="r2" hidden><p>See Session 1 answer keys: the model question and the Pros / Cons structure.</p></div>
 </div>
 
 <div class="card method">
@@ -301,7 +355,7 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <li><strong>Synthesis.</strong> Bring the two sides together. Show the tension, the condition, or the limit: for example, globalization puts pressure on local cultures, yet it also gives them a stage, provided people choose to use it. This can be a short paragraph of its own, or the first movement of the conclusion. It is not a third random example, and it is not a simple repeat of “on the one hand / on the other hand.”</li>
 <li><strong>Conclusion.</strong> Answer the question, with nuance. Then open briefly: a consequence, a responsibility, or a further question (for instance, the role of schools or of public policy). Do not add a new argument, and do not copy the introduction word for word.</li>
 </ol>
-<p>How to read the model in Stage 1 with these five jobs: the first paragraph does both the introduction and the presentation of the topic; the next two paragraphs are the argumentation; the last paragraph begins with a synthesis (“yet it does not make cultural uniformity inevitable”) and ends with the conclusion (“cultural diversity survives when societies choose to protect their roots”).</p>
+<p>How to read the model in Session 1 with these five jobs: the first paragraph does both the introduction and the presentation of the topic; the next two paragraphs are the argumentation; the last paragraph begins with a synthesis (“yet it does not make cultural uniformity inevitable”) and ends with the conclusion (“cultural diversity survives when societies choose to protect their roots”).</p>
 </div>
 
 <div class="card ex" id="g-s2-e2">
@@ -393,6 +447,9 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 </div>
 </div>
 
+</section>
+<section id="s3">
+<h2 class="seance-h">Session 3 · Starters, linkers and the language toolbox</h2>
 <div class="card method" id="starters">
 <h3>Sentence starters for each part</h3>
 <p>Use these as opening moves, then write your own sentence. Do not stack three starters in a row. One clear start is enough.</p>
@@ -532,10 +589,10 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 
 </section>
 
-<section id="s3">
-<h2 class="seance-h">Stage 3 · Brainstorming and guided planning</h2>
+<section id="s4">
+<h2 class="seance-h">Session 4 · Brainstorming and guided planning</h2>
 <div class="card rappel"><p class="bar">Recap</p>
-<p>Name two grammar tools from Stage 2 that you will use in your draft.</p>
+<p>Name two grammar tools from Session 3 that you will use in your draft.</p>
 <button type="button" class="ans-btn" aria-expanded="false" aria-controls="r3">Show answers</button>
 <div class="ans" id="r3" hidden><p>Examples: modals, gerunds after prepositions, impersonal passives, inversion, capital I, English punctuation.</p></div>
 </div>
@@ -652,8 +709,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 </p>
 </div>
 </section>
-<section id="s4">
-<h2 class="seance-h">Stage 4 · Peer review and summative assessment</h2>
+<section id="s5">
+<h2 class="seance-h">Session 5 · Peer review and summative assessment</h2>
 <div class="card rappel"><p class="bar">Recap</p>
 <p>Before you write: what goes in the introduction, and what goes in the conclusion?</p>
 <button type="button" class="ans-btn" aria-expanded="false" aria-controls="r4">Show answers</button>

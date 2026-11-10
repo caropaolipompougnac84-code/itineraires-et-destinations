@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "fr-4e",
+    "credit": "Gustave Caillebotte, Rue de Paris, temps de pluie, 1877. Huile sur toile, Art Institute of Chicago. Domaine public.",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg",
+    "url": "https://quatrieme-francais-annee.netlify.app/"
+  },
+  {
+    "slug": "fr-3e",
+    "credit": "Rembrandt, Autoportrait aux deux cercles, vers 1665-1669. Huile sur toile, Kenwood House, Londres. Domaine public.",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_Self-portrait_(Kenwood).jpg",
+    "url": "https://troisieme-francais-annee.netlify.app/"
+  },
+  {
+    "slug": "en-4e",
+    "credit": "Thomas Moran, The Grand Canyon of the Yellowstone, 1872. Oil on canvas. Smithsonian American Art Museum, Washington. Public domain.",
+    "source": "https://commons.wikimedia.org/wiki/File:Thomas_Moran_-_Grand_Canyon_of_the_Yellowstone.jpg",
+    "url": "https://anglais-quatrieme.netlify.app/"
+  },
+  {
+    "slug": "en-3e",
+    "credit": "J. M. W. Turner, The Fighting Temeraire tugged to her last berth to be broken up, 1839. Oil on canvas. National Gallery, London. Public domain.",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg",
+    "url": "https://caropaolipompougnac84-code.github.io/anglais-troisieme/"
+  },
+  {
+    "slug": "brevet",
+    "credit": "Jean Siméon Chardin, Un philosophe occupé de sa lecture (Portrait du peintre Joseph Aved), 1734. Musée du Louvre, Paris. Domaine public.",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Sim%C3%A9on_Chardin_-_Le_philosophe_lisant.jpg",
+    "url": "https://troisieme-francais-annee.netlify.app/#t0-brevet"
+  }
+]

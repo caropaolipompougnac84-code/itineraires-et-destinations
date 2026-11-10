@@ -312,6 +312,42 @@
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120569971490243&set=a.122104658121490243"
     },
     {
+      "id": "anglais-day-in-london",
+      "title": "Anglais · A Day in London",
+      "summary": "Une journée à Londres pour travailler la langue et la culture.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "A1 vers B1",
+      "collection": "lg-anglais",
+      "themes": [
+        "voyage",
+        "culture"
+      ],
+      "url": "https://jeu-a-day-in-london.netlify.app/",
+      "date": "2026-11-07",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120579019490243&set=a.122119039767490243",
+      "group": "voyage-culture"
+    },
+    {
+      "id": "anglais-getting-around-london",
+      "title": "Anglais · Getting Around London",
+      "summary": "Se déplacer à Londres : transports et langage utile.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "Bac pro · lycée général · adapté",
+      "collection": "lg-anglais",
+      "themes": [
+        "voyage",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/getting-around-london/",
+      "date": "2026-11-07",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120575731490243&set=a.122104658121490243",
+      "group": "voyage-culture"
+    },
+    {
       "id": "lg-lettres-1re-rimbaud-cahier-douai",
       "title": "Lettres · 1re · Rimbaud, Cahier de Douai : Partir à seize ans",
       "summary": "Poésie : Rimbaud et le motif du départ.",
@@ -1096,23 +1132,6 @@
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120580171490243&set=a.122119021533490243"
     },
     {
-      "id": "meth-day-in-london",
-      "title": "Anglais · A Day in London",
-      "summary": "Une journée à Londres pour travailler la langue et la culture.",
-      "section": "methodologie",
-      "subject": "anglais",
-      "level": "tous",
-      "levelLabel": "Transversal",
-      "collection": "methodologie",
-      "themes": [
-        "voyage",
-        "culture"
-      ],
-      "url": "https://jeu-a-day-in-london.netlify.app/",
-      "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120579019490243&set=a.122119039767490243"
-    },
-    {
       "id": "meth-trame-batir-annee",
       "title": "Méthodologie · Trame : bâtir l'année",
       "summary": "Progression annuelle en français et en anglais, de la Seconde à la Terminale.",
@@ -1127,22 +1146,6 @@
       "url": "https://trame-lycee.netlify.app/",
       "date": "2026-11-07",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120577621490243&set=a.122119041117490243"
-    },
-    {
-      "id": "meth-getting-around-london",
-      "title": "Anglais · Getting Around London",
-      "summary": "Se déplacer à Londres : transports et langage utile.",
-      "section": "methodologie",
-      "subject": "anglais",
-      "level": "tous",
-      "levelLabel": "Transversal",
-      "collection": "methodologie",
-      "themes": [
-        "voyage"
-      ],
-      "url": "https://itineraires-destinations.fr/getting-around-london/",
-      "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120575731490243&set=a.122104658121490243"
     },
     {
       "id": "segpa-lettres-4e-annee-brevet",

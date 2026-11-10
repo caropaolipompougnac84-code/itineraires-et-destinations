@@ -1,3 +1,4 @@
+@import url("/css/plan-de-route.css");
 /* A Long Heritage: one calm palette around diaphanous beige. Loaded after the page styles. */
 :root{--h-paper:#f3ece0;--h-ivory:#fbf8f1;--h-cream:#ece3d2;--h-line:#dccfb9;--h-line2:#bfae90;--h-ink:#2e2924;--h-soft:#5d544a;--h-navy:#2f3d52;--h-ox:#7a3131;--h-sage:#56664c;--h-umber:#80613c;--h-okbg:#e4e9dc;--h-okink:#2f4128;--h-kobg:#f2dfd8;--h-koink:#5f2222}
 html body{background:var(--h-paper)!important;color:var(--h-ink)!important}
@@ -97,3 +98,11 @@ figcaption{overflow-wrap:anywhere}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:16px 0;align-items:start}
 .gallery .art{margin:0}
 .art.tall img{max-height:560px;width:auto}
+
+/* Plan de route and then-and-now captions, in the heritage palette */
+.plan-de-route{max-width:none;color:var(--h-ink);border-color:var(--h-line2)}
+.plan-de-route h2{color:var(--h-navy)!important;border-bottom:0!important}
+.plan-de-route a{color:var(--h-ox)}
+.then-now{margin:.35rem 0 1.1rem;font-size:1.02rem;line-height:1.45;max-width:46rem}
+.bus .plan-de-route{color:inherit;border-color:currentColor}
+.downloads{margin:0.6rem 0 1rem}

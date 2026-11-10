@@ -62,3 +62,18 @@
 @media print{
   .plan-de-route{ border-color: #000; }
 }
+
+.plan-de-route .pdr-lead{
+  margin: 0 0 .75rem;
+}
+.plan-de-route .pdr-steps{
+  margin: .3rem 0 .15rem;
+  padding-left: 1.15rem;
+}
+.plan-de-route .pdr-steps li{
+  margin: .12rem 0;
+}
+.plan-de-route .pdr-exit{
+  padding: .35rem .55rem;
+  border-left: 3px solid currentColor;
+}

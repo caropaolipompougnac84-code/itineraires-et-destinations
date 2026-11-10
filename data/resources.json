@@ -183,14 +183,14 @@
       "section": "lycee-general",
       "subject": "anglais",
       "level": "methode",
-      "levelLabel": "Méthodologie écrit",
+      "levelLabel": "1re / Tle · tronc commun B1+ vers B2 · LLCER vers C1",
       "collection": "lg-anglais",
       "themes": [
         "ecrit",
         "examen"
       ],
-      "url": "https://writing-the-essay-anglais.netlify.app/",
-      "date": "2026-11-07",
+      "url": "https://itineraires-destinations.fr/writing-an-essay/",
+      "date": "2026-11-11",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120812725490243&set=a.122104658121490243"
     },
     {
@@ -968,6 +968,23 @@
       "url": "https://english-punctuation-practice.netlify.app/",
       "date": "2026-11-07",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778087490243&set=a.122104658121490243"
+    },
+    {
+      "id": "meth-writing-an-essay",
+      "title": "Anglais · Méthode · Writing an Essay",
+      "summary": "Méthodologie de l'écrit : construire un essai en anglais.",
+      "section": "methodologie",
+      "subject": "anglais",
+      "level": "methode",
+      "levelLabel": "1re / Tle · tronc commun B1+ vers B2 · LLCER vers C1",
+      "collection": "methodologie",
+      "themes": [
+        "ecrit",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/writing-an-essay/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120812725490243&set=a.122104658121490243"
     },
     {
       "id": "meth-resumer-argumenter",

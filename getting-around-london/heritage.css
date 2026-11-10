@@ -121,3 +121,53 @@ figcaption{overflow-wrap:anywhere}
     line-height:1.45;
   }
 }
+
+/* How to make your flashcards: visible method, not a ready-made deck */
+.flashcards-method{
+  margin:1.4rem 0 1.6rem;
+  padding:1rem 1.1rem 1.15rem;
+  border:1px solid var(--h-line2);
+  background:var(--h-ivory);
+  border-radius:6px;
+  color:var(--h-ink);
+}
+.flashcards-method h2,.flashcards-method h3{
+  color:var(--h-navy)!important;
+  border-bottom:0!important;
+  margin-top:0.85rem;
+}
+.flashcards-method h2{margin-top:0;font-size:1.45rem}
+.flashcards-method h3{font-size:1.15rem}
+.flashcards-method ul,.flashcards-method ol{margin:0.35rem 0 0.7rem 1.15rem}
+.flashcards-method li{margin:0.2rem 0}
+.flashcard-models{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px;
+  margin:0.7rem 0 1rem;
+}
+.flashcard{
+  margin:0;
+  border:1px solid var(--h-line2);
+  background:#fffdf8;
+  border-radius:4px;
+  overflow:hidden;
+}
+.flashcard .face{
+  padding:0.55rem 0.7rem;
+}
+.flashcard .face.front{border-bottom:1px dashed var(--h-line2)}
+.flashcard .face-label{
+  display:block;
+  font-size:0.75rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--h-umber);
+  margin-bottom:0.2rem;
+}
+.flashcard p{margin:0;font-size:0.98rem;line-height:1.35}
+.flashcards-method .downloads{margin:0.4rem 0 0}
+@media(max-width:600px){
+  .flashcards-method{padding:0.85rem 0.8rem}
+  .flashcard-models{grid-template-columns:1fr}
+}

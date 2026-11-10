@@ -99,7 +99,7 @@ figcaption{overflow-wrap:anywhere}
 .gallery .art{margin:0}
 .art.tall img{max-height:560px;width:auto}
 
-/* Plan de route and then-and-now captions, in the heritage palette */
+/* Road map and then-and-now captions, in the heritage palette */
 .plan-de-route{max-width:none;color:var(--h-ink);border-color:var(--h-line2)}
 .plan-de-route h2{color:var(--h-navy)!important;border-bottom:0!important}
 .plan-de-route a{color:var(--h-ox)}

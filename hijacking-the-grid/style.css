@@ -226,3 +226,15 @@ section.panel{display:grid!important}
   .tabs,.topnav,.aide-classe,.downloads{display:none!important}
   section.panel{break-inside:auto}
 }
+
+/* Keep the floating Help in class control from covering the lesson on a phone */
+body.std{padding-bottom:4.75rem}
+@media (max-width:600px){
+  body.std{padding-bottom:5.25rem}
+  .aide-classe{right:8px;bottom:8px;max-width:calc(100vw - 16px)}
+  .aide-ouvrir{font-size:14px;padding:8px 12px}
+  .aide-panneau{width:min(320px,calc(100vw - 16px))}
+}
+@supports (padding-bottom: env(safe-area-inset-bottom)){
+  body.std{padding-bottom:calc(4.75rem + env(safe-area-inset-bottom))}
+}

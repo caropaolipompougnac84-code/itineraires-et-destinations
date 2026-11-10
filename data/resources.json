@@ -284,7 +284,7 @@
       "section": "lycee-general",
       "subject": "anglais",
       "level": "1re",
-      "levelLabel": "1re / Tle B1–B2",
+      "levelLabel": "1re / Tle B1 à B2",
       "collection": "lg-anglais",
       "themes": [
         "citoyennete",
@@ -563,11 +563,11 @@
     {
       "id": "lp-anglais-every-vocational-year",
       "title": "Anglais · CAP à Bac pro · English for every vocational year",
-      "summary": "Anglais professionnel du CAP A2 au Bac pro B1–B2.",
+      "summary": "Anglais professionnel du CAP A2 au Bac pro B1 à B2.",
       "section": "lycee-pro",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "CAP A2 à Bac pro B1–B2",
+      "levelLabel": "CAP A2 à Bac pro B1 à B2",
       "collection": "lp-anglais",
       "themes": [
         "travail"
@@ -677,11 +677,11 @@
     {
       "id": "lp-lettres-chef-doeuvre-hesperides",
       "title": "Lettres · Bac pro · Du Jardin des Hespérides au chef-d'œuvre",
-      "summary": "Projet chef-d'œuvre, aussi adaptable en SEGPA 4e–3e.",
+      "summary": "Projet chef-d'œuvre, aussi adaptable en SEGPA 4e à 3e.",
       "section": "lycee-pro",
       "subject": "lettres",
       "level": "tous",
-      "levelLabel": "Bac pro (et SEGPA 4e–3e)",
+      "levelLabel": "Bac pro (et SEGPA 4e à 3e)",
       "collection": "lp-lettres",
       "themes": [
         "litterature",
@@ -760,12 +760,12 @@
     },
     {
       "id": "agri-parcours-lycees-agricoles",
-      "title": "Anglais / Lettres · Lycées agricoles · CAP–BTSA",
+      "title": "Anglais / Lettres · Lycées agricoles · CAP à BTSA",
       "summary": "Parcours anglais et français pour les lycées agricoles.",
       "section": "lycee-agricole",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "CAP–BTSA",
+      "levelLabel": "CAP à BTSA",
       "collection": "agri-anglais",
       "themes": [
         "travail",
@@ -849,7 +849,7 @@
       "section": "segpa",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "6e–3e",
+      "levelLabel": "6e à 3e",
       "collection": "segpa-anglais",
       "themes": [
         "examen"
@@ -1011,7 +1011,7 @@
       "section": "methodologie",
       "subject": "transversal",
       "level": "tous",
-      "levelLabel": "CAP–Bac général",
+      "levelLabel": "CAP au Bac général",
       "collection": "methodologie",
       "themes": [
         "examen"
@@ -1093,7 +1093,7 @@
       "section": "methodologie",
       "subject": "transversal",
       "level": "tous",
-      "levelLabel": "2de–Tle",
+      "levelLabel": "2de à Tle",
       "collection": "methodologie",
       "themes": [
         "examen"
@@ -1114,7 +1114,7 @@
       "themes": [
         "voyage"
       ],
-      "url": "https://getting-around-london.netlify.app/",
+      "url": "https://itineraires-destinations.fr/getting-around-london/",
       "date": "2026-11-07",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120575731490243&set=a.122104658121490243"
     },

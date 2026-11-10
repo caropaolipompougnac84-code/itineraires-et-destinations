@@ -1,0 +1,99 @@
+/* A Long Heritage: one calm palette around diaphanous beige. Loaded after the page styles. */
+:root{--h-paper:#f3ece0;--h-ivory:#fbf8f1;--h-cream:#ece3d2;--h-line:#dccfb9;--h-line2:#bfae90;--h-ink:#2e2924;--h-soft:#5d544a;--h-navy:#2f3d52;--h-ox:#7a3131;--h-sage:#56664c;--h-umber:#80613c;--h-okbg:#e4e9dc;--h-okink:#2f4128;--h-kobg:#f2dfd8;--h-koink:#5f2222}
+html body{background:var(--h-paper)!important;color:var(--h-ink)!important}
+body{font-family:Georgia,'Times New Roman',serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;text-shadow:none!important}
+h1{color:var(--h-navy)!important;font-weight:600;letter-spacing:.005em;line-height:1.15}
+h2{color:var(--h-ox)!important;border-bottom:1px solid var(--h-line2)!important;font-weight:600}
+h3{color:var(--h-navy)!important}
+a{color:var(--h-ox)}
+.level{background:transparent!important;color:var(--h-soft)!important;border:0!important;border-top:1px solid var(--h-line2)!important;border-bottom:1px solid var(--h-line2)!important;border-radius:0!important;box-shadow:none!important;font-weight:600;letter-spacing:.06em;font-variant:small-caps}
+.c0,.c1,.c2,.c3,.c4,.c5,.c6,.c7{border-color:var(--h-line2)!important}
+.gl{color:var(--h-umber)!important;font-variant:small-caps;letter-spacing:.05em}
+.grp a{background:var(--h-ivory)!important;color:var(--h-ink)!important;border-width:1px!important;border-radius:999px}
+.grp a:hover,.grp a:focus-visible{border-color:var(--h-navy)!important;color:var(--h-navy)!important}
+.box,.ws,.q,details,.card{background:var(--h-ivory)!important;color:var(--h-ink)!important;border:1px solid var(--h-line)!important;border-radius:6px!important;box-shadow:none!important}
+.card{border-left:3px solid var(--h-ox)!important}
+.card b,.ad .card b{color:var(--h-navy)!important;background:transparent!important}
+.card small,.hint,.gloss{color:var(--h-soft)!important}
+.ad .hint{background:var(--h-cream)!important}
+.safe{background:var(--h-kobg)!important;border:1px solid var(--h-ox)!important}
+.film,.ext,.teacher{border:1px dashed var(--h-line2)!important}
+.task,.recap{border:1px solid var(--h-line)!important;border-top:3px solid var(--h-sage)!important}
+.intro{background:var(--h-ivory)!important;border:1px solid var(--h-line)!important;border-top:3px solid var(--h-ox)!important}
+.intro .tag{background:transparent!important;color:var(--h-soft)!important;border:1px solid var(--h-line2);font-weight:700}
+.c1x,.fr{border:1px dashed var(--h-line2)!important}
+.opt-name{background:var(--h-cream)!important;color:var(--h-navy)!important}
+.tc{color:var(--h-umber)!important}
+.lines{color:var(--h-soft)!important}
+.quote{background:var(--h-cream)!important;color:var(--h-ink)!important;border-left:3px solid var(--h-umber)!important;box-shadow:none!important}
+.quote small{color:var(--h-umber)!important}
+.starters,.grammar{background:var(--h-ivory)!important;border:1px dashed var(--h-line2)!important}
+table td,table th{border:1px solid var(--h-line)!important}
+table th{background:var(--h-cream)!important;color:var(--h-ink)!important}
+table td{background:var(--h-ivory)}
+summary{color:var(--h-ox)!important}
+footer{background:transparent!important;color:var(--h-soft)!important;border:0!important;border-top:1px solid var(--h-line2)!important;border-radius:0!important}
+input,textarea,select{border:1px solid var(--h-line2)!important;background:#fffdf8!important;color:var(--h-ink)!important}
+button,.check,.resume,#stepbar button{background:var(--h-navy)!important;color:var(--h-ivory)!important;border:0;border-radius:4px!important}
+.say{background:var(--h-ivory)!important;color:var(--h-ink)!important;border:1px solid var(--h-umber)!important}
+.ad .say:not(.playing){background:var(--h-sage)!important;color:var(--h-ivory)!important;border:0!important}
+.say.playing,.ad .say.playing{background:var(--h-navy)!important;color:var(--h-ivory)!important}
+.opt,.mw,.md,.chip,.tool{background:var(--h-ivory)!important;color:var(--h-ink)!important;border:1px solid var(--h-line2)!important}
+.opt.right,.mw.right,.md.right,.ad .opt.right{background:var(--h-okbg)!important;border:2px solid var(--h-sage)!important;color:var(--h-okink)!important}
+.opt.wrong,.mw.wrong,.md.wrong,.ad .opt.wrong{background:var(--h-kobg)!important;border:2px solid var(--h-ox)!important;color:var(--h-koink)!important}
+.mw.sel,.tool[aria-pressed=true]{background:var(--h-navy)!important;color:var(--h-ivory)!important}
+.opt:focus-visible,.mw:focus-visible,.md:focus-visible,.chip:focus-visible,.tool:focus-visible{outline:2px solid var(--h-navy)!important}
+.fb.ok{color:var(--h-okink)!important}.fb.ko{color:var(--h-koink)!important}
+.gapfill input.right{border-color:var(--h-sage)!important;background:var(--h-okbg)!important}.gapfill input.wrong{border-color:var(--h-ox)!important;background:var(--h-kobg)!important}
+.score,.grand{background:var(--h-cream)!important;color:var(--h-ink)!important;border:1px solid var(--h-line2)}
+.label-home{background:var(--h-okbg)!important;color:var(--h-okink)!important}
+.label-class{background:var(--h-kobg)!important;color:var(--h-koink)!important}
+.corrige{background:#eef0e6!important;color:var(--h-ink)!important;border-left:3px solid var(--h-sage)!important}
+.dlg .who{color:var(--h-ox)!important}
+.vq,.yt{border:1px solid var(--h-line2)!important;box-shadow:0 1px 6px rgba(60,45,30,.12)!important}
+.pop{background:rgba(46,41,36,.82)!important}
+.pop .q{background:var(--h-ivory)!important;color:var(--h-ink)!important;border:1px solid var(--h-line2)!important}
+.pop .cue-t{color:var(--h-umber)!important}
+@media(max-width:600px){.vq.asking .pop{background:var(--h-paper)!important}}
+.art img,.poster{border:1px solid var(--h-line2)!important;padding:6px;background:var(--h-ivory);border-radius:2px!important;box-shadow:0 2px 10px rgba(60,45,30,.14)!important}
+.art figcaption,figcaption{color:var(--h-soft)!important}
+.step{border:1px solid var(--h-line2)!important;background:var(--h-ivory)!important;border-radius:6px!important}
+.step>.num{background:var(--h-navy)!important;color:var(--h-ivory)!important}
+.gap{border:1px solid var(--h-umber)!important;background:#fffdf8!important}
+/* adapted (dys): same palette, high contrast, sans serif kept */
+body.ad{background:var(--h-paper)!important;color:#2a2622!important}
+.ad h1,.ad h2,.ad h3{font-family:'Atkinson Hyperlegible',Verdana,sans-serif!important;font-variant:normal}
+.ad .level{font-variant:normal;letter-spacing:.02em}
+.ad .gl{font-variant:normal}
+.ad .grp a,.ad .box,.ad .ws,.ad .q,.ad details,.ad .card,.ad .links a{background:var(--h-ivory)!important;color:#2a2622!important}
+.ad .quote{background:var(--h-cream)!important}
+.ad .intro .tag{background:var(--h-cream)!important;color:#2a2622!important}
+/* teacher toggle */
+html .at-bar{background:var(--h-cream)!important;border-bottom:1px solid var(--h-line2)!important}
+html .at-btn{color:var(--h-navy)!important;background:var(--h-ivory)!important;border:1px solid var(--h-navy)!important;border-radius:4px!important}
+html .at-btn:hover{background:var(--h-cream)!important}
+html .at-btn[aria-pressed=true],html .at-btn[aria-expanded=true]{background:var(--h-navy)!important;color:var(--h-ivory)!important}
+html .at-btn:focus-visible{outline:2px solid var(--h-umber)!important}
+@media print{html body{background:#fff!important;color:#000!important}}
+/* London Buses page */
+:root:root{--bg:#f3ece0!important;--paper:#fbf8f1!important;--muted:#5d544a!important;--line:#dccfb9!important;--red:#7a3131!important;--soft:#ece3d2!important;--ok:#56664c!important;--stone:#bfae90!important;--yellow:#c9a24a!important;--glass:#d9dfe0!important;--river:#b8c7cc!important;--district:#3f7a50!important;--victoria:#3f84a8!important;--jubilee:#8a9097!important;--central:#a63a30!important;--display:'Cormorant Garamond',Georgia,serif!important;--ink:#2e2924!important;--navy:#2f3d52!important;color-scheme:light!important}
+.bus{font-family:Georgia,'Times New Roman',serif}
+.bus header.top{border-bottom:1px solid var(--h-line2)!important}
+.bus h1{font-weight:600!important;letter-spacing:0!important}
+.bus h2{font-weight:600!important;border:0!important}
+.bus h3,.bus .eyebrow{font-family:Georgia,serif!important;color:var(--h-umber)!important;font-weight:700}
+.bus nav.tabs{background:var(--h-ivory)!important}
+.bus nav.tabs button{background:transparent!important;color:var(--h-ink)!important;border:1px solid var(--h-line)!important;font-family:Georgia,serif!important;font-weight:400!important}
+.bus nav.tabs button[aria-selected=true]{background:var(--h-navy)!important;color:var(--h-ivory)!important;border-color:var(--h-navy)!important}
+.bus details,.bus .card,.bus figure,.bus .media a{border-radius:4px!important}
+.bus details{background:transparent!important;border:0!important;border-top:1px solid var(--h-line)!important}
+.bus .card{border-left:1px solid var(--h-line)!important}
+.bus .teacher{border:1px dashed var(--h-line2)!important;background:var(--h-cream)!important}
+.bus .herit{background:var(--h-cream);color:var(--h-ink);padding:10px;text-align:center;font-size:1.05rem;border-top:1px solid var(--h-line2);border-bottom:1px solid var(--h-line2)}
+.bus .herit a{color:var(--h-ox)}
+.bus table td{background:transparent}
+figcaption{overflow-wrap:anywhere}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:16px 0;align-items:start}
+.gallery .art{margin:0}
+.art.tall img{max-height:560px;width:auto}

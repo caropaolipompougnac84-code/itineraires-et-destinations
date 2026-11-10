@@ -489,19 +489,19 @@
     },
     {
       "id": "lp-anglais-cap-exam-toolkit-coiffure",
-      "title": "Anglais · CAP Coiffure · Exam Toolkit",
-      "summary": "Boîte à outils d'examen pour le CAP Coiffure (A2).",
+      "title": "Anglais · Exam Toolkit · CAP et CAPA · My Working Day",
+      "summary": "Boîte à outils d'examen A2, My Working Day, pour plusieurs métiers de CAP (lycée professionnel et CFA) et de CAPA (lycée agricole).",
       "section": "lycee-pro",
       "subject": "anglais",
       "level": "cap",
-      "levelLabel": "CAP A2 : Coiffure",
+      "levelLabel": "CAP et CAPA · A2",
       "collection": "lp-anglais",
       "themes": [
         "examen",
         "travail"
       ],
-      "url": "https://pedagogie-de-la-reussite.netlify.app/cap-coiffure/",
-      "date": "2026-11-07",
+      "url": "https://itineraires-destinations.fr/cap-coiffure/",
+      "date": "2026-11-10",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120811471490243&set=a.122104658121490243"
     },
     {

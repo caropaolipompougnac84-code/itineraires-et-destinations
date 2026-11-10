@@ -1,5 +1,5 @@
 /* Réponses cachées par défaut, bouton par bloc et mode professeur.
-   © 2026 Madame Carole Paoli Pompougnac · CC BY-NC-ND 4.0 */
+   © 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0 */
 (function () {
   if (window.__answersToggle) return;
   window.__answersToggle = true;

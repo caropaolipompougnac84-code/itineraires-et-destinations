@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exam Toolkit · CAP et CAPA · My Working Day · Itinéraires et destinations</title>
+  <meta name="description" content="Exam Toolkit, My Working Day : boîte à outils d'examen A2 pour plusieurs métiers de CAP et de CAPA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+
+:root{--ink:#1f2a24;--green:#2f5d46;--green2:#e6efe9;--cream:#faf7f0;--gold:#b5862f;--line:#d8d2c2;--red:#9b3b2f;}
+.toolkit{box-sizing:border-box;background:var(--cream);color:var(--ink);font:17px/1.55 "Source Sans 3", "Segoe UI", Arial, sans-serif;padding-bottom:2rem}
+.toolkit *,.toolkit *::before,.toolkit *::after{box-sizing:border-box}
+body.dys .toolkit{font:20px/1.9 Verdana,Arial,sans-serif;letter-spacing:.03em;word-spacing:.12em}
+body.dys .toolkit .card p,body.dys .toolkit li{max-width:60ch}
+.tk-header{background:var(--green);color:#fff;padding:22px 18px 16px}
+.tk-header h1{margin:0;font-family:"Playfair Display", Georgia, serif;font-size:clamp(1.45rem,4vw,1.85rem);font-weight:600}
+.tk-header .sub{opacity:.9;margin-top:4px}
+.toolkit-main{max-width:1000px;margin:0 auto;padding:14px 16px}
+.toolkit .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.toolkit button{font:inherit;cursor:pointer;border:1px solid var(--green);background:#fff;color:var(--green);border-radius:8px;padding:8px 12px;min-height:2.6em}
+.toolkit button.on{background:var(--green);color:#fff}
+.toolkit .group{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0}
+.toolkit .group h3{margin:0 0 6px;font-size:.95em;color:var(--green)}
+.toolkit .tabs{display:flex;flex-wrap:wrap;gap:8px;border-bottom:2px solid var(--green);margin-top:16px;padding-bottom:8px}
+.toolkit .tabs a{display:inline-block;font:inherit;border:1px solid var(--green);background:#fff;color:var(--green);border-radius:8px;padding:8px 12px;text-decoration:none;min-height:2.6em;line-height:1.3}
+.toolkit .tabs a:hover,.toolkit .tabs a:focus{background:var(--green2)}
+.toolkit .panel{display:block;margin-top:1.4rem;padding-top:.2rem}
+.toolkit .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0}
+.toolkit .card h2{font-family:"Playfair Display", Georgia, serif;color:var(--green);margin:0 0 8px;font-size:1.3em}
+.toolkit .card h3{margin:12px 0 6px;color:var(--green);font-size:1.05em}
+.toolkit .prof{border-left:5px solid var(--gold);background:#fffaf0}
+.toolkit .prof::before{content:"Version prof";display:inline-block;font-size:.75em;font-weight:bold;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+body.eleve .toolkit .prof{display:none}
+.toolkit .bilan{border:2px dashed var(--green);background:var(--green2)}
+.toolkit .bilan h3{margin-top:0}
+.toolkit .time{font-weight:bold;color:var(--gold)}
+.toolkit .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0}
+.toolkit table{border-collapse:collapse;width:100%;margin:0;font-size:.95em}
+.toolkit th,.toolkit td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.toolkit th{background:var(--green2)}
+.toolkit figure{margin:0}
+.toolkit figure img{width:100%;height:auto;max-height:28rem;object-fit:contain;background:#eee;border-radius:8px}
+
+.toolkit .then-now{margin:0.2rem 0 1rem;font-size:1.02em;line-height:1.45;max-width:46rem}
+.toolkit .illu-row img{width:100%;height:auto;max-height:420px;object-fit:contain;background:#f3f1ec;display:block}
+.toolkit .fiche-secours,.toolkit .feuille-route{overflow-x:auto}
+
+.toolkit figcaption{font-size:.85em;color:#555;margin-top:6px;line-height:1.45}
+.toolkit figcaption .credit{display:block;margin-top:2px;font-size:.8em}
+.toolkit .illu-row{display:grid;grid-template-columns:1fr;gap:1rem;margin:0.4rem 0 0.8rem}
+@media (min-width:720px){
+  .toolkit .illu-row{grid-template-columns:1fr 1fr;align-items:start}
+}
+.toolkit .lines{border-bottom:1px solid #aaa;height:1.9em}
+.toolkit .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.toolkit .role{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fcfcfa}
+.toolkit .role b{color:var(--green)}
+.toolkit .doc{border:1px solid var(--line);border-radius:8px;padding:10px;background:#fcfcfa;margin:8px 0}
+.toolkit .doc .t{font-weight:bold;font-size:.85em;color:var(--gold);text-transform:uppercase}
+@media (max-width:600px){
+  .toolkit-main{padding:10px 12px}
+  .tk-header{padding:16px 14px 12px}
+  .toolkit table{font-size:.88em}
+  .toolkit figure img{max-height:22rem}
+}
+@page{size:A4;margin:16mm}
+@media print{
+  .site-header,.breadcrumb,.nav-burger,.nav-main,.downloads{display:none!important}
+  .toolkit .bar,.toolkit .tabs,.toolkit .group{display:none!important}
+  .toolkit .panel{display:block!important;break-inside:auto}
+  .toolkit .card{break-inside:avoid}
+  body{background:#fff;color:#111}
+  .site-footer{break-inside:avoid}
+  a[href^="http"]{text-decoration:none;color:inherit}
+}
+
+  </style>
+</head>
+<body data-section="lycee-pro">
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a class="brand-mark" href="../index.html">Itinéraires et destinations</a>
+        <span class="brand-tag">Séquences prêtes à l'emploi · Français, anglais · Tous niveaux</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger"><span class="sr-only">Menu</span></label>
+      <nav class="nav-main" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../lycee-pro/index.html" aria-current="page">Lycée professionnel</a>
+        <a href="../lycee-general/index.html">Lycée général</a>
+        <a href="../lycee-agricole/index.html">Lycée agricole</a>
+        <a href="../cfa/index.html">CFA</a>
+        <a href="../segpa/index.html">6e à 3e · SEGPA</a>
+        <a href="../methodologie/index.html">Méthodologie</a>
+        <a href="../themes.html">Thèmes</a>
+        <a href="../nouveautes.html">Nouveautés</a>
+        <a href="../a-propos.html">À propos</a>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../lycee-pro/index.html">Lycée professionnel</a></li><li aria-current="page">Exam Toolkit</li></ol></nav>
+
+  <div class="toolkit">
+  <header class="tk-header">
+    <h1 id="title">Exam Toolkit</h1>
+    <div class="sub" id="subtitle">English · CAP et CAPA · A2 · My Working Day</div>
+    <p class="downloads" lang="fr">Télécharger cette séquence :
+      <a href="exam-toolkit-cap-cuisine.pdf">PDF</a> ·
+      <a href="exam-toolkit-cap-cuisine.docx">Word (.docx)</a> ·
+      <a href="exam-toolkit-cap-cuisine.odt">LibreOffice (.odt)</a>. Les fichiers proposés au téléchargement reprennent la version CAP Cuisine.
+      Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>
+    </p>
+  </header>
+  <main class="toolkit-main">
+
+  <div class="group">
+    <h3>CAP · lycée professionnel et CFA</h3>
+    <div class="bar" id="trades-cap"></div>
+    <h3>CAPA · lycée agricole</h3>
+    <div class="bar" id="trades-capa"></div>
+  </div>
+
+  <div class="bar">
+    <button type="button" id="bProf" class="on">Version prof</button>
+    <button type="button" id="bEleve">Version élève</button>
+    <button type="button" id="bDys">Version dys</button>
+    <button type="button" id="bPrint">Imprimer</button>
+  </div>
+
+  <nav class="tabs" id="tabs" aria-label="Aller à une partie"></nav>
+  <div id="panels"></div>
+
+  </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></strong></p>
+        <p class="muted" style="margin:0.4rem 0 0">Catalogue pédagogique · Itinéraires et destinations</p>
+      </div>
+      <div class="licence">
+        <p style="margin:0">Licence Creative Commons BY-NC-SA 4.0</p>
+        <p style="margin:0.35rem 0 0">Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">Détails de la licence</a>.</p>
+        <p class="photo-credits-foot">Tableaux du domaine public, Wikimedia Commons : Vermeer, Manet, Caillebotte, Menzel, Cassatt, Rosa Bonheur, Pissarro. Photographies : City Foodsters (CC BY 2.0) ; Wilfredor (CC BY-SA 4.0) ; IQRemix (CC BY-SA 2.0) ; Steve Jurvetson (CC BY 2.0) ; Jack de Nijs / Anefo, Nationaal Archief (aucune restriction connue) ; Pierre Bona (CC BY-SA 3.0) ; SA, The Green Ark · Bostanie (CC BY 4.0) ; Grendelkhan (CC BY-SA 4.0), Wikimedia Commons.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js" defer></script>
+  <script>
+const TRADES = {
+cuisine:{grp:"cap",dip:"CAP Cuisine",job:"commis chef",place:"a restaurant kitchen",
+ art:{f:"Johannes Vermeer - Het melkmeisje - Google Art Project.jpg",a:"Johannes Vermeer",t:"The Milkmaid",y:"vers 1660",m:"Rijksmuseum, Amsterdam"},
+ artQ:["What is the woman doing?","What food can you see on the table?","Is the kitchen clean and tidy? Why?"],
+ places:[["kitchen","cuisine"],["cold room","chambre froide"],["dining room","salle"],["pass","passe"],["storeroom","réserve"],["dishwashing area","plonge"]],
+ tools:[["knife","couteau"],["chopping board","planche à découper"],["saucepan","casserole"],["oven","four"],["whisk","fouet"],["apron","tablier"]],
+ actions:[["chop","émincer"],["peel","éplucher"],["cook","cuire"],["taste","goûter"],["clean","nettoyer"],["plate up","dresser"]],
+ day:[["8:00","I put on my uniform and wash my hands."],["8:30","I check the deliveries and the cold room."],["9:00","I peel and chop the vegetables."],["12:00","I cook and plate up the dishes."],["15:00","I clean my station."]],
+ roles:[["The chef","Chop the onions, please. Quick!","Answer and say what you are doing."],["A waiter","Table 4: no nuts, it's an allergy.","Repeat the order and say what you must do."],["A customer","Is the soup vegetarian?","Answer politely and explain the dish."]],
+ rules:[["wash your hands before you cook",1],["wear an apron and a hat",1],["keep raw meat on the red board",1],["wear rings or a watch",0],["run in the kitchen",0]],
+ jury:[["What do you do at the beginning of the day?","First I put on my uniform and I wash my hands. Then I check the deliveries and the temperature of the cold room."],["How do you avoid food contamination?","I always wash my hands. I use a different board for raw meat and I keep food in the fridge."]],
+ docs:["WANTED: commis chef. Small restaurant, 35 hours a week. Start at 8 a.m. Clean uniform, teamwork, be on time.","KITCHEN RULES. Wash your hands. Raw meat on the red board only. No jewellery.","Message from the chef: Tomorrow we have 40 customers. Please arrive at 7:30 and prepare the vegetables."]},
+
+epc:{grp:"cap",dip:"CAP Équipier polyvalent du commerce",job:"shop assistant",place:"a supermarket",
+ art:{f:"Edouard Manet, A Bar at the Folies-Bergère.jpg",a:"Édouard Manet",t:"A Bar at the Folies-Bergère",y:"1882",m:"Courtauld Gallery, Londres"},
+ artQ:["Where is the woman?","What products can you see on the counter?","Does she look happy, tired or bored? Why?"],
+ places:[["shop floor","surface de vente"],["stockroom","réserve"],["checkout","caisse"],["shelf","rayon"],["aisle","allée"],["delivery area","quai de réception"]],
+ tools:[["price tag","étiquette"],["scanner","douchette"],["till","caisse enregistreuse"],["trolley","chariot"],["box cutter","cutter"],["safety shoes","chaussures de sécurité"]],
+ actions:[["unload","décharger"],["fill the shelves","mettre en rayon"],["label","étiqueter"],["greet","accueillir"],["advise","conseiller"],["take payment","encaisser"]],
+ day:[["7:30","I unload the delivery."],["8:30","I fill the shelves and check the prices."],["9:00","I greet the customers."],["14:00","I work at the checkout."],["19:00","I tidy the shelves."]],
+ roles:[["A customer","Excuse me, where is the rice?","Give directions in the shop."],["A customer","Can I pay by card?","Answer and take the payment."],["The manager","Please check the dates on the yoghurts.","Say what you do and when."]],
+ rules:[["wear safety shoes in the stockroom",1],["bend your knees to lift a heavy box",1],["check the use-by dates",1],["leave boxes in the aisles",0],["cut towards you with a box cutter",0]],
+ jury:[["What do you do when a customer is angry?","I stay calm and polite. I listen to the customer and I ask my manager for help."],["How do you fill the shelves?","I put the old products at the front and the new products at the back. I check the dates and the price tags."]],
+ docs:["WANTED: shop assistant. Supermarket, 30 hours a week, Saturday work. Smile, teamwork, be on time.","STOCKROOM RULES. Safety shoes. Bend your knees. No boxes in the aisles.","Message from the manager: Big delivery on Monday at 7 a.m. Please fill the drinks aisle first."]},
+
+menuisier:{grp:"cap",dip:"CAP Menuisier fabricant",job:"joiner",place:"a joinery workshop",
+ art:{f:"Gustave Caillebotte - The Floor Planers - Google Art Project.jpg",a:"Gustave Caillebotte",t:"Les Raboteurs de parquet",y:"1875",m:"Musée d'Orsay, Paris"},
+ artQ:["How many men can you see?","What are they doing?","What tools can you see on the floor?"],
+ places:[["workshop","atelier"],["wood store","stock de bois"],["machine area","zone machines"],["finishing room","cabine de finition"],["building site","chantier"],["office","bureau"]],
+ tools:[["saw","scie"],["plane","rabot"],["chisel","ciseau à bois"],["drill","perceuse"],["tape measure","mètre ruban"],["safety glasses","lunettes de protection"]],
+ actions:[["measure","mesurer"],["cut","couper"],["plane","raboter"],["sand","poncer"],["assemble","assembler"],["varnish","vernir"]],
+ day:[["7:30","I read the plan."],["8:00","I choose and measure the wood."],["10:00","I cut the boards on the machines."],["14:00","I assemble and sand the pieces."],["16:30","I clean the machines."]],
+ roles:[["A customer","I want a pine bookcase, two metres high.","Ask questions: wood, size, colour."],["The boss","Cut six boards, 80 centimetres each.","Repeat the order and say what tool you use."],["A colleague","Can you pass me the drill?","Answer and give the tool."]],
+ rules:[["wear safety glasses",1],["wear ear defenders near the machines",1],["unplug the machine before you clean it",1],["wear gloves near a moving blade",0],["wear loose clothes",0]],
+ jury:[["What is your favourite tool and why?","My favourite tool is the plane because I like to make the wood smooth."],["What do you do before you use a machine?","I put on my glasses and my ear defenders. I check the blade and I read the instructions."]],
+ docs:["WANTED: joiner. Workshop, 35 hours a week, start at 7:30. Read a plan, careful work.","WORKSHOP RULES. Glasses and ear defenders. Unplug before cleaning. No gloves near a blade.","Message from the boss: Monday we start the kitchen for Mrs Martin. Please measure the oak boards."]},
+
+rics:{grp:"cap",dip:"CAP Réalisations industrielles en chaudronnerie ou soudage",job:"welder",place:"a metal workshop",
+ art:{f:"Adolph Menzel - Eisenwalzwerk - Google Art Project.jpg",a:"Adolph Menzel",t:"The Iron Rolling Mill",y:"1872 à 1875",m:"Alte Nationalgalerie, Berlin"},
+ artQ:["Is it hot or cold in this place? Why?","What are the workers doing?","Is this job dangerous? Why?"],
+ places:[["workshop","atelier"],["welding booth","poste de soudure"],["metal store","stock de métal"],["cutting area","zone de découpe"],["paint area","zone de peinture"],["office","bureau"]],
+ tools:[["welding torch","torche de soudage"],["welding mask","masque de soudeur"],["grinder","meuleuse"],["metal sheet","tôle"],["folding machine","plieuse"],["gloves","gants"]],
+ actions:[["read a drawing","lire un plan"],["mark out","tracer"],["cut","couper"],["bend","plier"],["weld","souder"],["grind","meuler"]],
+ day:[["7:30","I read the drawing."],["8:00","I mark out the metal sheet."],["9:30","I cut and bend the pieces."],["13:30","I weld the pieces."],["16:00","I grind and check my work."]],
+ roles:[["The boss","Weld these two pieces before 4 o'clock.","Repeat the order and ask a question."],["A colleague","Where is the grinder?","Answer and give directions."],["A visitor","Is your job dangerous?","Explain the risks and the protection."]],
+ rules:[["wear a welding mask",1],["wear gloves and long sleeves",1],["keep a fire extinguisher near you",1],["look at the arc without a mask",0],["weld near flammable products",0]],
+ jury:[["What is your favourite part of the job?","I like welding because I make strong pieces with my hands."],["How do you protect yourself when you weld?","I always wear my mask, my gloves and long sleeves. I check there is a fire extinguisher."]],
+ docs:["WANTED: welder. Metal workshop, 35 hours a week, start at 7:30. Read a drawing, precise work.","WELDING RULES. Mask and gloves. Fire extinguisher near you. Nothing flammable in the booth.","Message from the boss: Tomorrow we make 20 gates. Please cut the metal sheets first."]},
+
+aepe:{grp:"cap",dip:"CAP Accompagnant éducatif petite enfance",job:"nursery assistant",place:"a nursery",
+ art:{f:"Mary Cassatt - The Child's Bath - Google Art Project.jpg",a:"Mary Cassatt",t:"The Child's Bath",y:"1893",m:"Art Institute of Chicago"},
+ artQ:["Who can you see?","What is the woman doing?","How does the child feel? Why?"],
+ places:[["nursery","crèche"],["playroom","salle de jeux"],["changing area","espace de change"],["nap room","dortoir"],["kitchen","cuisine"],["garden","jardin"]],
+ tools:[["nappy","couche"],["changing mat","matelas à langer"],["bottle","biberon"],["bib","bavoir"],["toys","jouets"],["picture book","album"]],
+ actions:[["welcome","accueillir"],["change","changer"],["feed","donner à manger"],["play","jouer"],["read a story","lire une histoire"],["put to bed","coucher"]],
+ day:[["7:30","I welcome the parents and the children."],["9:00","I play with the children."],["11:30","I help the children eat."],["12:30","I put the children to bed."],["16:30","I tell the parents about the day."]],
+ roles:[["A parent","My daughter didn't sleep well last night.","Answer kindly and say what you will do."],["A child","I'm hungry!","Answer the child with simple words."],["A colleague","Can you change Léo, please?","Say yes and explain the steps."]],
+ rules:[["wash your hands before and after a change",1],["check the allergies of each child",1],["keep small objects away from babies",1],["leave a baby alone on the changing mat",0],["give medicine without a prescription",0]],
+ jury:[["How do you welcome a parent in the morning?","I say hello with a smile. I ask how the child slept and I write the information."],["What do you do if a child is crying?","I stay calm. I talk softly, I give a cuddle and I try to understand the problem."]],
+ docs:["WANTED: nursery assistant. Nursery with 20 children, 35 hours a week, start at 7:30. Patient, kind, teamwork.","NURSERY RULES. Wash your hands. Check allergies. Never leave a baby alone on the changing mat.","Message from the manager: Tomorrow it's Emma's first day. Please welcome her mother at 8:00."]},
+
+agri:{grp:"capa",dip:"CAPA Métiers de l'agriculture",job:"farm worker",place:"a dairy farm",
+ art:{f:"Rosa Bonheur - Labourage nivernais.jpg",a:"Rosa Bonheur",t:"Labourage nivernais",y:"1849",m:"Musée d'Orsay, Paris"},
+ artQ:["What animals can you see?","What season is it? Why?","What are the men doing?"],
+ places:[["farm","exploitation"],["field","champ"],["barn","grange"],["cowshed","étable"],["milking parlour","salle de traite"],["machinery shed","hangar"]],
+ tools:[["tractor","tracteur"],["trailer","remorque"],["pitchfork","fourche"],["bucket","seau"],["feeder","auge"],["boots","bottes"]],
+ actions:[["feed the animals","nourrir les animaux"],["milk","traire"],["clean the cowshed","curer l'étable"],["plough","labourer"],["sow","semer"],["harvest","récolter"]],
+ day:[["6:30","I feed the calves."],["7:00","I milk the cows."],["9:00","I clean the cowshed."],["14:00","I drive the tractor in the fields."],["18:00","I check the animals."]],
+ roles:[["The farmer","Can you check the water for the heifers?","Say yes and explain what you do."],["The vet","This cow is ill. Keep her separate.","Repeat and ask a question."],["A visitor","What do the cows eat?","Explain simply."]],
+ rules:[["wear safety boots",1],["turn off the engine before you get off the tractor",1],["wash your hands after you touch the animals",1],["walk behind a cow without speaking",0],["carry a passenger on the tractor",0]],
+ jury:[["Which animals do you work with?","I work with dairy cows and calves. I feed them and I help with the milking."],["Why is safety important on a farm?","Because animals and machines can be dangerous. I always wear boots and I never stand behind a cow."]],
+ docs:["WANTED: farm worker. Dairy farm, 60 cows, start at 6:30, weekend work one week in two. Tractor licence a plus.","FARM RULES. Safety boots. Engine off before you get off. Speak to the cows when you walk behind them.","Message from the farmer: Tomorrow the vet comes at 9:00. Please clean the cowshed before."]},
+
+jardin:{grp:"capa",dip:"CAPA Jardinier paysagiste",job:"landscape gardener",place:"a park and private gardens",
+ art:{f:"G. Caillebotte - Les jardiniers.jpg",a:"Gustave Caillebotte",t:"Les Jardiniers",y:"1875 à 1877",m:"collection particulière"},
+ artQ:["What are the men doing?","What can you see in the garden?","Is it hot or cold? Why?"],
+ places:[["garden","jardin"],["park","parc"],["tree nursery","pépinière"],["greenhouse","serre"],["lawn","pelouse"],["flower bed","massif"]],
+ tools:[["spade","bêche"],["rake","râteau"],["watering can","arrosoir"],["lawnmower","tondeuse"],["hedge trimmer","taille-haie"],["wheelbarrow","brouette"]],
+ actions:[["dig","bêcher"],["plant","planter"],["water","arroser"],["mow","tondre"],["prune","tailler"],["weed","désherber"]],
+ day:[["8:00","I load the tools in the van."],["8:30","I mow the lawn in the park."],["10:00","I prune the hedges."],["14:00","I plant flowers in a flower bed."],["16:30","I clean the tools."]],
+ roles:[["A customer","I want flowers that like the sun.","Advise the customer."],["The boss","Mow the lawn in the park this morning.","Repeat and say which machine you use."],["A passer-by","Is it a good time to plant roses?","Answer politely."]],
+ rules:[["wear ear defenders with the lawnmower",1],["wear gloves and safety glasses",1],["check that nobody is near the machine",1],["use the hedge trimmer without glasses",0],["leave tools on the path",0]],
+ jury:[["What do you do in the winter?","In the winter I prune the trees and the hedges and I clean the tools."],["Which machine do you use the most?","I use the lawnmower the most. I always wear ear defenders."]],
+ docs:["WANTED: landscape gardener. Company in Dordogne, 35 hours a week, start at 8:00. Outdoor work, driving licence a plus.","SAFETY RULES. Ear defenders and glasses. Check that nobody is near. No tools on the paths.","Message from the boss: Tomorrow we plant 50 roses at the town hall. Please load the van at 7:45."]},
+
+sapver:{grp:"capa",dip:"CAPA Services aux personnes et vente en espace rural",job:"care and sales assistant",place:"a farm shop and village homes",
+ art:{f:"Pissaro - La Charcutière 1883.jpg",a:"Camille Pissarro",t:"La Charcutière",y:"1883",m:"Tate, Londres"},
+ artQ:["Where is the woman?","What is she selling?","Who are the customers?"],
+ places:[["farm shop","magasin de producteurs"],["market","marché"],["village shop","épicerie"],["counter","comptoir"],["care home","EHPAD"],["home","domicile"]],
+ tools:[["scales","balance"],["price label","étiquette"],["till","caisse"],["apron","tablier"],["basket","panier"],["shopping list","liste de courses"]],
+ actions:[["welcome","accueillir"],["weigh","peser"],["serve","servir"],["help","aider"],["prepare a meal","préparer un repas"],["keep company","tenir compagnie"]],
+ day:[["8:00","I open the farm shop."],["9:00","I serve the customers and weigh the vegetables."],["11:00","I help an elderly lady with her shopping."],["12:00","I prepare a meal with her."],["17:00","I clean the counter."]],
+ roles:[["A customer","Half a kilo of tomatoes, please.","Weigh, give the price, say goodbye."],["An elderly man","Can you help me read this letter?","Answer kindly and help."],["The manager","Put the local cheese at the front.","Repeat and say why."]],
+ rules:[["wash your hands before you touch food",1],["check the temperature of the fridge",1],["respect the privacy of the person",1],["leave a wet floor without a sign",0],["give medicine without instructions",0]],
+ jury:[["Why do you like working in a rural area?","Because I know the people and I like local products. I help people who live alone."],["How do you speak to an elderly person?","I speak slowly and clearly. I am patient and polite and I listen."]],
+ docs:["WANTED: sales and care assistant. Farm shop and home help, 28 hours a week, start at 8:00. Driving licence, patient, smiling.","SHOP RULES. Wash your hands. Check the fridge temperature. Sign on a wet floor.","Message from the manager: Tomorrow Mr Dupuy needs help with his shopping at 11:00. Please call him before."]}
+};
+
+
+
+const ILLU = {
+cuisine:{
+  artSrc:"img/vermeer-laitiere.jpg", artW:1248, artH:1400,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/cuisine-kitchen.jpg", photoW:1400, photoH:933,
+  photoAlt:"Chefs in white jackets preparing and plating food in a warm restaurant kitchen.",
+  photoCap:"Chefs at work in a restaurant kitchen.",
+  photoCredit:"Photo: City Foodsters, CC BY 2.0, Wikimedia Commons. Saison, San Francisco.",
+  linkCap:"Then and now: around 1660, in The Milkmaid, a maid pours milk in a kitchen. Today, chefs prepare food in a restaurant kitchen."
+},
+epc:{
+  artSrc:"img/manet-bar.jpg", artW:1400, artH:1045,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/epc-supermarket.jpg", photoW:1400, photoH:869,
+  photoAlt:"A supermarket aisle, with food and drinks on the shelves.",
+  photoCap:"A supermarket aisle, with products ready for sale.",
+  photoCredit:"Photo: Wilfredor, CC BY-SA 4.0, Wikimedia Commons.",
+  linkCap:"Then and now: in 1882, in A Bar at the Folies-Bergère, a woman stands at a counter with bottles and fruit. Today, food and drinks are still sold along the shelves of a shop."
+},
+menuisier:{
+  artSrc:"img/caillebotte-raboteurs.jpg", artW:1400, artH:983,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/menuisier-atelier.jpg", photoW:1400, photoH:933,
+  photoAlt:"A carpenter's workshop in warm light, with a workbench, tools and wood.",
+  photoCap:"A carpenter's workshop, with wood, a bench and tools.",
+  photoCredit:"Photo: IQRemix, CC BY-SA 2.0, Wikimedia Commons.",
+  linkCap:"Then and now: in 1875, in Les Raboteurs de parquet, three men plane a wooden floor. Today, a carpenter's workshop is still a place of wood, tools and light."
+},
+rics:{
+  artSrc:"img/menzel-laminage.jpg", artW:1400, artH:869,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/rics-soudure.jpg", photoW:1300, photoH:1400,
+  photoAlt:"A welder at work, with gloves and sparks.",
+  photoCap:"A welder at work, with heat and sparks.",
+  photoCredit:"Photo: Steve Jurvetson, CC BY 2.0, Wikimedia Commons.",
+  linkCap:"Then and now: from 1872 to 1875, in The Iron Rolling Mill, workers shape hot metal. Today, a welder still works with heat, metal and sparks."
+},
+aepe:{
+  artSrc:"img/cassatt-bain.jpg", artW:917, artH:1400,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/aepe-albums.jpg", photoW:1400, photoH:2005,
+  photoAlt:"A teacher with young children in a classroom, 1969.",
+  photoCap:"A teacher with young children in a classroom, 1969.",
+  photoCredit:"Photo: Jack de Nijs / Anefo, 6 January 1969, Nationaal Archief / Spaarnestad Photo. No known copyright restrictions.",
+  linkCap:"Then and now: in 1893, in The Child's Bath, a woman washes a little girl. In 1969, a teacher looks after young children in a classroom."
+},
+agri:{
+  artSrc:"img/bonheur-labourage.jpg", artW:1400, artH:700,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/agri-brocciu.jpg", photoW:1400, photoH:1168,
+  photoAlt:"A woman making brocciu at the cheese fair in Venaco, Corsica, in 2012.",
+  photoCap:"Démonstration de fabrication du brocciu, Fiera di u Casgiu, Venaco, Corse, 2012.",
+  photoCredit:"Photo: Pierre Bona, CC BY-SA 3.0, Wikimedia Commons.",
+  linkCap:"Then and now: in 1849, in Labourage nivernais, farmers plough a field with oxen. Today, a woman makes brocciu, a Corsican cheese, at the cheese fair in Venaco."
+},
+jardin:{
+  artSrc:"img/caillebotte-jardiniers.jpg", artW:800, artH:577,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/jardin-haie.jpg", photoW:1400, photoH:933,
+  photoAlt:"A gardener watering rows of young plants in a vegetable garden, at sunset.",
+  photoCap:"A gardener watering rows of plants in a vegetable garden.",
+  photoCredit:"Photo: SA, The Green Ark · Bostanie, CC BY 4.0, Wikimedia Commons. Bostanie community garden, Skopje.",
+  linkCap:"Then and now: between 1875 and 1877, in Les Jardiniers, two gardeners water young plants in a vegetable garden. Today, a gardener still waters rows of plants, with covers to protect them."
+},
+sapver:{
+  artSrc:"img/pissarro-charcutiere.jpg", artW:1163, artH:1400,
+  artCredit:"Domaine public, Wikimedia Commons.",
+  photoSrc:"img/sapver-magasin.jpg", photoW:1400, photoH:1050,
+  photoAlt:"Bunches of colourful chard offered for sale at a market.",
+  photoCap:"Fresh vegetables offered for sale at a market.",
+  photoCredit:"Photo: Grendelkhan, CC BY-SA 4.0, Wikimedia Commons.",
+  linkCap:"Then and now: in 1883, in La Charcutière, a woman sells food at a market stall. Today, fresh food is still offered for sale, like these bunches of chard at a market."
+}
+}
+
+
+let cur = "cuisine";
+const TABS = [["ov","Overview"],["s1","Session 1"],["s2","Session 2"],["s3","Session 3"],["s4","Session 4"],["s5","Session 5"],["ev","Assessment"],["secours","Issue de secours"],["key","Answer key"]];
+
+function tbl(rows, h1="English", h2="Français"){return `<div class="tbl-scroll"><table><tr><th>${h1}</th><th>${h2}</th></tr>${rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table></div>`}
+function lines(n){return Array.from({length:n},()=>'<div class="lines"></div>').join("")}
+function rot(a,k){return a.slice(k).concat(a.slice(0,k))}
+function scramble(s){const w=s.replace(/\.$/,"").split(" ");w.splice(1,0,"always");return rot(w,2).join(" / ")}
+function withAlways(s){const w=s.split(" ");w.splice(1,0,"always");return w.join(" ")}
+function bilan(n,items){return `<div class="card bilan"><h3>Bilan écrit · note de synthèse ${n}</h3><p>À la fin de l'heure, chaque élève écrit seul, sur sa fiche. On ramasse, on corrige dans l'heure ou au début de la séance suivante.</p><ol>${items.map(i=>`<li>${i}${lines(1)}</li>`).join("")}</ol><div class="prof card" style="margin:8px 0 0">Correction rapide : 1 point par phrase juste et compréhensible. Deuxième essai autorisé à la séance suivante. On garde la meilleure note.</div></div>`}
+
+function render(){
+ const T = TRADES[cur];
+ document.getElementById("title").textContent = "Exam Toolkit: " + T.dip;
+ document.getElementById("subtitle").textContent = "English · " + T.dip + " · A2 · My Working Day";
+ document.title = "Exam Toolkit: " + T.dip;
+ const I = ILLU[cur];
+ const fig = `<figure><img src="${I.artSrc}" alt="${T.art.a}, ${T.art.t}, ${T.art.y}" width="${I.artW}" height="${I.artH}"><figcaption><b>${T.art.a}</b>, <i>${T.art.t}</i>, ${T.art.y}, ${T.art.m}. <span class="credit">${I.artCredit}</span></figcaption></figure>`;
+ const photo = `<figure><img src="${I.photoSrc}" alt="${I.photoAlt}" width="${I.photoW}" height="${I.photoH}"><figcaption>${I.photoCap} <span class="credit">${I.photoCredit}</span></figcaption></figure>`;
+ const pair = `<div class="card"><div class="illu-row">${fig}${photo}</div><p class="then-now">${I.linkCap}</p></div>`;
+ const all = T.places.concat(T.tools, T.actions);
+ const tools = T.tools, toolsFr = rot(tools.map(t=>t[1]),2);
+ const letters = "abcdef";
+ const P = {};
+
+ P.ov = `
+ ${pair}
+ <div class="card"><h2>Your job: ${T.job}</h2>
+ <p><b>Diplôme :</b> ${T.dip}.</p>
+ <p><b>Niveau :</b> A2 (CECRL).</p>
+ <p><b>Problématique :</b> How can I talk about my job and my working day in English?</p>
+ <p><b>Tâche finale :</b> a 2-minute oral presentation of my job in ${T.place}, then questions from the jury, and a written summary note (note de synthèse).</p></div>
+ <div class="card prof"><h3>Programme et objectifs</h3>
+ <p><b>Programme :</b> BO spécial n° 5 du 11 avril 2019, langues vivantes en voie professionnelle, thème du monde professionnel.</p>
+ <p><b>Objectifs linguistiques :</b> present simple, always, usually, sometimes, never ; telling the time ; must et mustn't ; vocabulaire du métier ; questions simples.</p>
+ <p><b>Ancrage culturel :</b> ${T.art.a}, <i>${T.art.t}</i> (${T.art.y}). Le tableau sert d'entrée dans le métier : on décrit, on compare avec le métier d'aujourd'hui.</p>
+ <p><b>Évaluation :</b> un bilan écrit en note de synthèse à chaque séance (formatif), puis à la séance 5 un oral noté sur 40 et une note de synthèse notée sur 20 (sommatif).</p></div>
+ <div class="card"><h3>Your road map</h3>
+ <table><tr><th>Session</th><th>What I do</th><th>What I write at the end</th></tr>
+ <tr><td>1. My Workplace</td><td>I describe a painting and I learn the words of my job.</td><td>Bilan 1 : my workplace in 3 sentences</td></tr>
+ <tr><td>2. My Working Day</td><td>I tell the time and I describe my day.</td><td>Bilan 2 : my day in 4 sentences</td></tr>
+ <tr><td>3. Safety First</td><td>I explain the rules with must and mustn't.</td><td>Bilan 3 : 4 safety rules</td></tr>
+ <tr><td>4. The Jury's Questions</td><td>I answer tricky questions.</td><td>Bilan 4 : my answers to 2 questions</td></tr>
+ <tr><td>5. Exam Simulation</td><td>I present my job to a jury.</td><td>Note de synthèse finale, sur 20</td></tr></table></div>
+ <div class="card prof feuille-route"><h3>Feuille de route · ${T.dip}</h3>
+ <p><b>Volume :</b> 6 heures (cinq séances de 55 minutes, la séance 5 en deux heures).</p>
+ <p><b>Fil rouge :</b> parler à un client anglais comme on aimerait qu'on nous parle, poliment, lentement, clairement.</p>
+ <div class="tbl-scroll"><table>
+ <tr><th>Séance</th><th>Objectif</th><th>Supports</th><th>Trace écrite</th><th>Évaluation</th><th>Date</th><th>Fait</th></tr>
+ <tr><td>1. My Workplace</td><td>Décrire le tableau, nommer 8 mots du métier</td><td>Tableau projeté, liste de mots</td><td>Carte mentale (3 branches)</td><td>Bilan écrit 1</td><td></td><td>☐</td></tr>
+ <tr><td>2. Working Day and Customer</td><td>Dire l'heure, décrire sa journée, accueillir un client</td><td>Journée type, 7 règles d'or, dialogue en 6 étapes, cartes</td><td>Branche Times, dialogue recopié</td><td>Bilan écrit 2</td><td></td><td>☐</td></tr>
+ <tr><td>3. Safety First</td><td>Énoncer les règles avec must et mustn't</td><td>Règles du métier, jeu Supervisor Says</td><td>Branche Rules</td><td>Bilan écrit 3</td><td></td><td>☐</td></tr>
+ <tr><td>4. The Jury's Questions</td><td>Répondre au jury et au client</td><td>Questions, hot seat</td><td>Réponses modèles</td><td>Évaluation intermédiaire /20, bilan 4</td><td></td><td>☐</td></tr>
+ <tr><td>5. Exam Simulation</td><td>Présenter son métier 2 minutes, rédiger une note de synthèse</td><td>Plan en 5 étapes, 3 documents</td><td>Note de synthèse</td><td>Oral /40, note de synthèse /20</td><td></td><td>☐</td></tr>
+ </table></div>
+ <h3>Avant de commencer</h3>
+ <p>Vérifier que le tableau s'affiche en ligne. Photocopier la fiche issue de secours pour chaque élève, au cas où. Prévoir les téléphones des élèves pour enregistrer l'oral.</p>
+ <h3>Différenciation</h3>
+ <p>Version dys en haut de page. Élèves en difficulté : dialogue en 6 étapes donné en entier, ils lisent puis remplacent un seul mot. Élèves à l'aise : ils jouent un client qui pose une question imprévue.</p>
+ <h3>Élève absent</h3>
+ <p>Il rattrape avec la fiche issue de secours et passe l'oral d'une minute à la séance suivante.</p>
+ <h3>Lien avec la PFMP</h3>
+ <p>Demander à chaque élève une phrase vraie sur son lieu de stage. Elle sert dans le bilan 2 et dans la présentation finale.</p>
+ </div>`;
+
+ P.s1 = `
+ <div class="card prof"><h3>Déroulé · 55 min</h3>
+ <p><span class="time">5 min</span> Le tableau projeté, sans titre. Question : What job is it? Les élèves proposent.</p>
+ <p><span class="time">15 min</span> Description guidée du tableau (cadre ci-dessous). On compare avec le métier d'aujourd'hui.</p>
+ <p><span class="time">15 min</span> Vocabulaire : lecture, répétition, exercice d'appariement.</p>
+ <p><span class="time">10 min</span> Carte mentale : le métier au centre, cinq branches (Places, Tools, Actions, Times, Rules). On remplit les trois premières.</p>
+ <p><span class="time">10 min</span> Bilan écrit 1.</p></div>
+ <div class="card"><h2>Session 1 · My Workplace</h2>${fig}<p class="then-now">${I.linkCap}</p>${photo}
+ <h3>Look and answer</h3><ol>${T.artQ.map(q=>`<li>${q}${lines(1)}</li>`).join("")}</ol>
+ <h3>Useful phrases</h3><p>In the painting, I can see... · The person is ...ing. · In the background, there is... · Today, a ${T.job} uses...</p></div>
+ <div class="card"><h3>Words of my job</h3><div class="roles"><div>${tbl(T.places,"Places","Lieux")}</div><div>${tbl(T.tools,"Tools","Outils")}</div><div>${tbl(T.actions,"Actions","Actions")}</div></div></div>
+ <div class="card"><h3>Exercise 1 · Match the tools</h3>
+ <table><tr><th>English</th><th>Français</th></tr>${tools.map((t,i)=>`<tr><td>${i+1}. ${t[0]}</td><td>${letters[i]}. ${toolsFr[i]}</td></tr>`).join("")}</table>
+ <p>1 ... 2 ... 3 ... 4 ... 5 ... 6 ...</p></div>
+ <div class="card"><h3>Exercise 2 · My mind map</h3><p>Write <b>${T.job}</b> in the centre. Draw five branches: Places, Tools, Actions, Times, Rules. Today, complete Places, Tools and Actions.</p></div>
+ ${bilan(1,[`I am a ${T.job}. I work in ...`,"In my workplace, there is a ... and a ...","I use a ... to ..."])}`;
+
+ P.s2 = `
+ <div class="card prof"><h3>Déroulé · 55 min</h3>
+ <p><span class="time">5 min</span> Rappel : cinq mots de la séance 1, à l'oral, tour de classe.</p>
+ <p><span class="time">10 min</span> L'heure et la journée type : lecture, puis exercice 3.</p>
+ <p><span class="time">5 min</span> Question à la classe, en français : « Vous êtes anglais, un ${T.job} français vient chez vous ou vous accueille. Qu'est-ce que vous avez envie qu'il vous dise ? » On note les idées au tableau.</p>
+ <p><span class="time">10 min</span> On compare avec les sept règles d'or et le dialogue en six étapes. Lecture à deux voix.</p>
+ <p><span class="time">15 min</span> Jeu de rôle par deux avec les cartes : l'un est le client anglais, l'autre le professionnel. Le client coche les règles d'or respectées.</p>
+ <p><span class="time">10 min</span> Bilan écrit 2.</p></div>
+ <div class="card"><h2>Session 2 · My Working Day and My Customer</h2>
+ <div class="illu-row">${photo}</div>
+ <h3>A day in ${T.place}</h3>${tbl(T.day,"Time","What I do")}
+ <h3>How often?</h3><p><b>always</b> 100 % · <b>usually</b> 80 % · <b>sometimes</b> 40 % · <b>never</b> 0 %</p>
+ <p>The adverb goes before the verb: I <b>always</b> wash my hands.</p></div>
+ <div class="card"><h3>Speak to the customer</h3>
+ <p>Imagine: you are English. A French ${T.job} speaks to you in English. What do you want to hear?</p>
+ <h3>The 7 golden rules</h3>
+ <ol>
+ <li>Smile and say hello and your name.</li>
+ <li>Speak slowly. Use short sentences and easy words.</li>
+ <li>Listen first. Ask: Can you show me the problem?</li>
+ <li>Explain what you do before you do it.</li>
+ <li>Give the time and the price.</li>
+ <li>Ask before you touch or move something: Can I...?</li>
+ <li>At the end: Can you check, please? Thank you, goodbye!</li>
+ </ol>
+ <h3>Model dialogue in 6 steps</h3>
+ <div class="tbl-scroll"><table>
+ <tr><th>Step</th><th>What I say</th></tr>
+ <tr><td>1. Hello and my name</td><td>Good evening! Welcome to ${T.place}.</td></tr>
+ <tr><td>2. Listen and ask</td><td>How can I help you today?</td></tr>
+ <tr><td>3. Explain simply</td><td>I am a ${T.job}. I can explain what I do.</td></tr>
+ <tr><td>4. Time and price</td><td>It is ready in 15 minutes.</td></tr>
+ <tr><td>5. Ask permission, take care</td><td>Is everything OK? Can I...?</td></tr>
+ <tr><td>6. Check and say goodbye</td><td>Thank you. Have a nice day!</td></tr>
+ </table></div>
+ <p class="prof">Pour le CAP Cuisine, on peut utiliser le dialogue du document : « Good evening! Welcome to the restaurant. » ; « Today the special is chicken with vegetables. » ; « Do you have any allergies? » ; « Your dish is ready in 15 minutes. » ; « Is everything OK? Do you like it? » ; « Thank you for coming. Have a nice evening! »</p>
+ </div>
+ <div class="card"><h3>Exercise 3 · Put the words in order</h3><ol>${T.day.slice(0,4).map(d=>`<li>${scramble(d[1])}${lines(1)}</li>`).join("")}</ol></div>
+ <div class="card"><h3>Exercise 4 · Role-play cards</h3><div class="roles">${T.roles.map(r=>`<div class="role"><b>${r[0]}</b><p>"${r[1]}"</p><p><i>Your task:</i> ${r[2]}</p></div>`).join("")}</div>
+ <p>Work in pairs. Student A reads the card. Student B answers. Then swap.</p></div>
+ ${bilan(2,"I start at ... and I ...|At ..., I usually ...|In the afternoon, I ...|I never ...".split("|"))}`;
+
+ P.s3 = `
+ <div class="card prof"><h3>Déroulé · 55 min</h3>
+ <p><span class="time">5 min</span> Rappel : ma journée en deux phrases.</p>
+ <p><span class="time">15 min</span> Les règles de sécurité : must et mustn't, avec des pictogrammes dessinés au tableau.</p>
+ <p><span class="time">10 min</span> Exercice 5.</p>
+ <p><span class="time">15 min</span> Jeu « Supervisor Says » : un élève donne une consigne, la classe mime seulement si la phrase commence par « Supervisor says ».</p>
+ <p><span class="time">10 min</span> Bilan écrit 3. On complète la branche Rules de la carte mentale.</p></div>
+ <div class="card"><h2>Session 3 · Safety First</h2>
+ <p><b>You must</b> = c'est obligatoire. <b>You mustn't</b> = c'est interdit.</p>
+ <h3>Exercise 5 · Must or mustn't?</h3><ol>${T.rules.map(r=>`<li>You .............. ${r[0]}.</li>`).join("")}</ol></div>
+ <div class="card"><h3>Game · Supervisor Says</h3><p>Examples: Supervisor says: put on your ${T.tools[5][0]}! · Supervisor says: ${T.actions[0][0]}! · ${T.actions[1][0][0].toUpperCase()+T.actions[1][0].slice(1)}! (don't move!)</p></div>
+ ${bilan(3,["In my job, you must ...","You must also ...","You mustn't ...","It is important because ..."])}`;
+
+ P.s4 = `
+ <div class="card prof"><h3>Déroulé · 55 min</h3>
+ <p><span class="time">5 min</span> Rappel : deux règles de sécurité.</p>
+ <p><span class="time">15 min</span> Les questions du jury : lecture, puis on cherche des réponses ensemble. Les modèles ne sont donnés qu'après.</p>
+ <p><span class="time">25 min</span> Hot seat : un élève sur la chaise, trois élèves posent les questions, une minute par élève.</p>
+ <p><span class="time">10 min</span> Bilan écrit 4.</p></div>
+ <div class="card"><h2>Session 4 · The Jury's Tricky Questions</h2>
+ <ol><li>Can you introduce yourself?</li><li>Why did you choose this job?</li>${T.jury.map(j=>`<li>${j[0]}</li>`).join("")}<li>Tell me about your work placement.</li></ol>
+ <h3>Help</h3><p>If you don't understand: <b>Can you repeat, please?</b> · <b>Can you speak slowly, please?</b> · If you need time: <b>Let me think...</b></p></div>
+ <div class="card"><h3>Hot seat</h3><p>One student sits on the chair. Three students ask questions. One minute each. The class listens and gives one tip: "Well done!" or "You should..."</p></div>
+ ${bilan(4,["I chose this job because ...",T.jury[0][0],T.jury[1][0]])}`;
+
+ const D = T.docs;
+ P.s5 = `
+ <div class="card prof"><h3>Déroulé · 2 heures (oral, puis écrit)</h3>
+ <p><span class="time">10 min</span> Préparation de l'oral avec le plan en cinq étapes.</p>
+ <p><span class="time">40 min</span> Simulation par groupes de trois : un candidat, deux membres du jury qui notent avec la grille. On tourne.</p>
+ <p><span class="time">5 min</span> Retour collectif.</p>
+ <p><span class="time">50 min</span> Note de synthèse finale, en temps limité, sans dictionnaire.</p></div>
+ <div class="card"><h2>Session 5 · Exam Simulation</h2>
+ <h3>My presentation plan (2 minutes)</h3>
+ <ol><li><b>Me:</b> Hello, my name is ... I am ... years old. I am a student in ${T.dip}.</li>
+ <li><b>My workplace:</b> I did my work placement in ${T.place}. There is ...</li>
+ <li><b>My day:</b> I start at ... I always ... I usually ...</li>
+ <li><b>Safety:</b> In my job, you must ... You mustn't ...</li>
+ <li><b>My opinion:</b> I like my job because ... Thank you for listening.</li></ol></div>
+ <div class="card"><h2>Note de synthèse finale</h2>
+ <p><b>Situation :</b> a new apprentice starts tomorrow. Read the three documents and write a note for him or her.</p>
+ <div class="doc"><div class="t">Document 1 · Job advert</div>${D[0]}</div>
+ <div class="doc"><div class="t">Document 2 · Safety notice</div>${D[1]}</div>
+ <div class="doc"><div class="t">Document 3 · Message</div>${D[2]}</div>
+ <p><b>Write 60 to 80 words.</b> Say: what the job is, when you start, three rules, and what to do tomorrow. Use: First, Then, Finally.</p>
+ ${lines(9)}</div>`;
+
+ P.ev = `
+ <div class="card"><h2>Oral grid · /40</h2>
+ <table><tr><th>Criteria</th><th>0 to 3</th><th>4 to 6</th><th>7 to 8</th><th>9 to 10</th></tr>
+ <tr><td><b>1. Me and my workplace</b></td><td>A few words</td><td>Short sentences, some words of the job</td><td>Clear sentences, the right words</td><td>Clear, precise, personal</td></tr>
+ <tr><td><b>2. My working day</b></td><td>No times, no verbs</td><td>Some times, some mistakes</td><td>Times and adverbs mostly correct</td><td>Correct, detailed, with adverbs</td></tr>
+ <tr><td><b>3. Safety rules</b></td><td>No rule</td><td>One or two rules</td><td>Three rules with must and mustn't</td><td>Rules explained with because</td></tr>
+ <tr><td><b>4. Answers to the jury</b></td><td>No answer</td><td>Short answers, with help</td><td>Answers without help</td><td>Fluent answers, asks for repetition if needed</td></tr></table>
+ <p>Total : ........ / 40 · Objectif : au moins 30 / 40.</p></div>
+ <div class="card"><h2>Note de synthèse · /20</h2>
+ <table><tr><th>Criteria</th><th>Points</th></tr>
+ <tr><td><b>Information from the three documents</b> (job, start time, rules, task for tomorrow)</td><td>/ 6</td></tr>
+ <tr><td><b>Organisation</b> (First, Then, Finally ; one idea per sentence)</td><td>/ 4</td></tr>
+ <tr><td><b>Language</b> (present simple, must and mustn't, words of the job)</td><td>/ 6</td></tr>
+ <tr><td><b>Task</b> (60 to 80 words, written for the apprentice, no copy of whole sentences)</td><td>/ 4</td></tr></table>
+ <p>Total : ........ / 20</p></div>
+ <div class="card"><h2>I can · Yes or not yet</h2>
+ <table><tr><th>I can...</th><th>Yes</th><th>Not yet</th></tr>
+ ${["name 8 words of my job","tell the time","describe my day with always and usually","give 3 safety rules with must and mustn't","answer 3 questions from the jury","write a short summary note"].map(c=>`<tr><td>${c}</td><td></td><td></td></tr>`).join("")}</table></div>`;
+
+ const rulesKey = T.rules.map(r=>`<li>You ${r[1]?"must":"mustn't"} ${r[0]}.</li>`).join("");
+ P.secours = `
+ <div class="card prof"><h3>Issue de secours · si le temps manque</h3>
+ <h4>Plan B · 3 heures au lieu de 6</h4>
+ <div class="tbl-scroll"><table>
+ <tr><th>Heure</th><th>Contenu</th><th>On garde</th><th>On supprime</th></tr>
+ <tr><td>1</td><td>Séances 1 et 2</td><td>Tableau (10 min), 6 mots, journée type, dialogue client en 6 étapes</td><td>Exercice 1, carte mentale complète</td></tr>
+ <tr><td>2</td><td>Séances 3 et 4</td><td>3 règles, 3 questions du jury, un passage en hot seat</td><td>Jeu Supervisor Says, évaluation intermédiaire</td></tr>
+ <tr><td>3</td><td>Séance 5 raccourcie</td><td>Oral d'une minute, note de synthèse avec 2 documents (40 mots)</td><td>Simulation complète en groupes</td></tr>
+ </table></div>
+ <h4>Plan C · une seule heure</h4>
+ <p>On distribue la fiche ci-dessous. 20 minutes pour la compléter avec l'aide du professeur, 20 minutes d'oral par deux, 15 minutes pour la mini note de synthèse. Évaluation sur 20 : oral /10 et écrit /10.</p>
+ <p><b>Conversion des notes.</b> Plan B : oral sur 20 (critères 1, 2 et 4 de la grille, ramenés sur 20) et note de synthèse sur 20. Plan C : la fiche est notée sur 20.</p></div>
+ <div class="card"><h3>My job in 5 minutes · Fiche issue de secours</h3>
+ <ol>
+ <li>My job: I am a ${T.job}. I work in ${T.place}.</li>
+ <li>Six words: ${T.tools[0][0]}, ${T.tools[1][0]}, ${T.tools[2][0]}, ${T.actions[0][0]}, ${T.actions[1][0]}, ${T.actions[2][0]}.</li>
+ <li>My day: I start at ...... I always ...... I usually ......</li>
+ <li>Two rules: You must ... You mustn't ...</li>
+ <li>My customer: Good evening! Welcome. Thank you. Have a nice day!</li>
+ </ol>
+ </div>`;
+
+ P.key = `
+ <div class="card prof"><h2>Answer key · ${T.dip}</h2>
+ <h3>Exercise 1</h3><p>${tools.map((t,i)=>`${i+1} ${letters[toolsFr.indexOf(t[1])]}`).join(" · ")}</p>
+ <h3>Exercise 3</h3><ol>${T.day.slice(0,4).map(d=>`<li>${withAlways(d[1])}</li>`).join("")}</ol>
+ <p>On accepte usually à la place de always si l'élève le justifie.</p>
+ <h3>Exercise 5</h3><ol>${rulesKey}</ol>
+ <h3>Session 4 · model answers</h3><ol><li>Hello, my name is ... I'm ... years old. I'm a student in ${T.dip}.</li><li>I chose this job because I like ... and I want to ...</li>${T.jury.map(j=>`<li>${j[1]}</li>`).join("")}</ol>
+ <h3>Note de synthèse · model (about 75 words)</h3>
+ <p>Welcome! You are a new ${T.job} in ${T.place}. First, read the information: the job is described in the advert (hours and start time). Then, remember the rules: ${T.rules.filter(r=>r[1]).slice(0,2).map(r=>"you must "+r[0]).join(", ")} and you mustn't ${T.rules.find(r=>!r[1])[0]}. Finally, tomorrow: ${D[2].split(": ").slice(1).join(": ")} Good luck!</p>
+ <p>À adapter : l'élève reprend les heures exactes du document 1.</p></div>`;
+
+
+ const tabs = document.getElementById("tabs"), panels = document.getElementById("panels");
+ tabs.innerHTML = TABS.map(t => `<a href="#p-${t[0]}">${t[1]}</a>`).join("");
+ panels.innerHTML = TABS.map(t => `<section class="panel" id="p-${t[0]}">${P[t[0]]}</section>`).join("");
+ document.querySelectorAll("[data-trade]").forEach(b => b.classList.toggle("on", b.dataset.trade === cur));
+}
+
+function buildTrades(){
+ for(const [k,T] of Object.entries(TRADES)){
+  const b=document.createElement("button");
+  b.textContent=T.dip.replace(/^CAPA? /,"");
+  b.dataset.trade=k;
+  b.onclick=()=>{cur=k;render();window.scrollTo({top:0,behavior:"smooth"});};
+  document.getElementById(T.grp==="cap"?"trades-cap":"trades-capa").appendChild(b);
+ }
+}
+const bP=document.getElementById("bProf"), bE=document.getElementById("bEleve");
+bP.onclick=()=>{document.body.classList.remove("eleve");bP.classList.add("on");bE.classList.remove("on");};
+bE.onclick=()=>{document.body.classList.add("eleve");bE.classList.add("on");bP.classList.remove("on");};
+document.getElementById("bDys").onclick=e=>{document.body.classList.toggle("dys");e.target.classList.toggle("on");};
+document.getElementById("bPrint").onclick=()=>window.print();
+buildTrades();render();
+
+  </script>
+</body>
+</html>

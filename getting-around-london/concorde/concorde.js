@@ -1,5 +1,5 @@
 /* Interactive questions and dialogue audio for « Indian Railways ».
-   © 2026 Madame Carole Paoli Pompougnac · CC BY-NC-ND 4.0 */
+   © 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0 */
 (function () {
   function norm(s) {
     return (s || '').toLowerCase().replace(/[’']/g, "'").replace(/[.,!?;:"]/g, '').replace(/\s+/g, ' ').trim();

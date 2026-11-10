@@ -1,0 +1,64 @@
+/* Plan de route — modèle commun à toutes les séquences.
+   À placer en tête de séquence, toujours visible (ne pas le replier).
+   Pour chaque étape : un numéro, un lien vers la partie, une durée,
+   un but en une ligne. Aux moments utiles : un point d'arrêt
+   (où s'arrêter en fin d'heure, et ce qu'on reprend la fois suivante)
+   et une sortie de secours (si le temps manque, si la classe bloque,
+   ou si la technique échoue). S'appuyer seulement sur le matériel
+   déjà présent dans la séquence. Langage d'enseignant, sans formule trop lisse. */
+
+.plan-de-route{
+  margin: 1.1rem 0 1.5rem;
+  padding: .85rem 0 1.05rem;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.plan-de-route h2{
+  margin: 0 0 .55rem;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+.plan-de-route ol{
+  margin: 0;
+  padding-left: 1.3rem;
+}
+.plan-de-route li{
+  margin: .7rem 0;
+}
+.plan-de-route a{
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.plan-de-route .pdr-time{
+  font-weight: 700;
+  white-space: nowrap;
+}
+.plan-de-route .pdr-time::before{
+  content: " · ";
+  font-weight: 400;
+}
+.plan-de-route .pdr-aim,
+.plan-de-route .pdr-stop,
+.plan-de-route .pdr-exit{
+  margin: .18rem 0 0;
+}
+.plan-de-route .pdr-stop,
+.plan-de-route .pdr-exit{
+  font-size: .95em;
+}
+@media (max-width: 600px){
+  .plan-de-route{
+    font-size: .98rem;
+    padding: .7rem 0 .9rem;
+    margin: .9rem 0 1.2rem;
+  }
+  .plan-de-route h2{ font-size: 1.2rem; }
+  .plan-de-route .pdr-time{ white-space: normal; }
+}
+@media print{
+  .plan-de-route{ border-color: #000; }
+}

@@ -10,6 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="sequence.css" />
+  <style>
+    @page{size:A4;margin:16mm}
+    @media print{
+      .site-header,.breadcrumb,.nav-burger,.nav-main,.nav-toggle,.downloads{display:none!important}
+      .site-footer{break-inside:avoid}
+      body{background:#fff}
+    }
+  </style>
 </head>
 <body data-section="lycee-general">
   <header class="site-header">
@@ -47,7 +55,13 @@
     </div>
 
     <p class="seq-actions">
-      <a class="work-link" href="perec-et-ponge-premiere.pdf">Télécharger le PDF de la séquence</a>
+      <p class="downloads" lang="fr">Télécharger cette séquence :
+      <a class="work-link" href="perec-et-ponge-premiere.pdf">PDF</a> ·
+      <a class="work-link" href="perec-et-ponge-premiere.docx">Word (.docx)</a> ·
+      <a class="work-link" href="perec-et-ponge-premiere.odt">LibreOffice (.odt)</a>.
+      Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>
+    </p>
       <a class="work-link work-link-secondary" href="#textes">Aller aux textes à lire</a>
     </p>
 
@@ -814,13 +828,13 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-ND 4.0</strong></p>
+        <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></strong></p>
         <p class="muted" style="margin:0.4rem 0 0">Catalogue pédagogique · Itinéraires et destinations</p>
       </div>
       <div class="licence">
-        <p style="margin:0">Licence Creative Commons BY-NC-ND 4.0</p>
-        <p style="margin:0.35rem 0 0">Utilisation libre avec crédit ; pas d'usage commercial ; pas de modification.
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr" rel="license">Détails de la licence</a>.</p>
+        <p style="margin:0">Licence Creative Commons BY-NC-SA 4.0</p>
+        <p style="margin:0.35rem 0 0">Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">Détails de la licence</a>.</p>
         <p class="photo-credits-foot">Tableaux du domaine public via Wikimedia Commons : Caillebotte, Chardin, Aertsen, Hammershøi. Les textes de Francis Ponge et de Georges Perec restent la propriété de leurs éditeurs et doivent être lus dans leur édition.</p>
       </div>
     </div>

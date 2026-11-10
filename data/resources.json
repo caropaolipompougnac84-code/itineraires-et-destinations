@@ -5,8 +5,8 @@
     "subtitle": "Ressources Anglais & Lettres · Lycée pro, général, CFA",
     "author": "Madame Carole Paoli Pompougnac",
     "year": 2026,
-    "licence": "CC BY-NC-ND",
-    "licenceNote": "Utilisation libre avec crédit ; pas d'usage commercial ; pas de modification.",
+    "licence": "CC BY-NC-SA",
+    "licenceNote": "Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.",
     "facebookPage": "Ressources Anglais & Lettres • Lycée pro, général, CFA",
     "facebookSubtitle": "Itinéraires et destinations",
     "facebookUrl": "https://www.facebook.com/profile.php?id=61594707303557",
@@ -488,7 +488,24 @@
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120765163490243&set=a.122104658121490243"
     },
     {
-      "id": "lp-anglais-cap-exam-toolkit-coiffure",
+      "id": "lp-anglais-cap-coiffure",
+      "title": "Anglais · CAP Coiffure · Exam Toolkit",
+      "summary": "Boîte à outils d'examen pour le CAP Coiffure (A2).",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "cap",
+      "levelLabel": "CAP A2 : Coiffure",
+      "collection": "lp-anglais",
+      "themes": [
+        "examen",
+        "travail"
+      ],
+      "url": "https://itineraires-destinations.fr/cap-coiffure/",
+      "date": "2026-11-07",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120811471490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-cap-exam-toolkit",
       "title": "Anglais · Exam Toolkit · CAP et CAPA · My Working Day",
       "summary": "Boîte à outils d'examen A2, My Working Day, pour plusieurs métiers de CAP (lycée professionnel et CFA) et de CAPA (lycée agricole).",
       "section": "lycee-pro",
@@ -500,9 +517,8 @@
         "examen",
         "travail"
       ],
-      "url": "https://itineraires-destinations.fr/cap-coiffure/",
-      "date": "2026-11-10",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120811471490243&set=a.122104658121490243"
+      "url": "https://itineraires-destinations.fr/exam-toolkit-cap-capa/",
+      "date": "2026-11-10"
     },
     {
       "id": "lp-anglais-bacpro-english",

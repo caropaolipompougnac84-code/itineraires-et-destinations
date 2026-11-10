@@ -177,16 +177,38 @@
   flex-wrap: wrap;
   gap: 1.2rem 1.8rem;
   margin: 1.2rem 0 1.6rem;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .seq .portraits figure {
-  flex: 1 1 15rem;
   margin: 0;
   min-width: 0;
+}
+.seq .portraits figure:first-child {
+  flex: 0 1 20rem;
+}
+.seq .portraits figure:last-child {
+  flex: 1 1 18rem;
+  max-width: 26rem;
 }
 .seq .portraits figure img {
   width: 100%;
   height: auto;
+}
+/* Tall photographs stay generous without filling the screen */
+.seq figure.illu-photo img {
+  width: auto;
+  max-width: 100%;
+  max-height: 36rem;
+  height: auto;
+  margin-inline: auto;
+}
+.seq .with-illu figure img {
+  width: 100%;
+  height: auto;
+  max-height: 32rem;
+  object-fit: contain;
+  object-position: center top;
+  background: transparent;
 }
 .seq .with-illu {
   display: grid;

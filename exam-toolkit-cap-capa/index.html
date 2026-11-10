@@ -332,13 +332,15 @@ sapver:{
 
 
 let cur = "cuisine";
-const TABS = [["ov","Overview"],["s1","Session 1"],["s2","Session 2"],["s3","Session 3"],["s4","Session 4"],["s5","Session 5"],["ev","Assessment"],["secours","Issue de secours"],["key","Answer key"]];
+const TABS = [["ov","Overview"],["s1","Session 1"],["s2","Session 2"],["s3","Session 3"],["s4","Session 4"],["s5","Session 5"],["fc","Flashcards"],["ev","Assessment"],["secours","Issue de secours"],["key","Answer key"]];
 
 function tbl(rows, h1="English", h2="Français"){return `<div class="tbl-scroll"><table><tr><th>${h1}</th><th>${h2}</th></tr>${rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table></div>`}
 function lines(n){return Array.from({length:n},()=>'<div class="lines"></div>').join("")}
 function rot(a,k){return a.slice(k).concat(a.slice(0,k))}
 function scramble(s){const w=s.replace(/\.$/,"").split(" ");w.splice(1,0,"always");return rot(w,2).join(" / ")}
 function withAlways(s){const w=s.split(" ");w.splice(1,0,"always");return w.join(" ")}
+const NUM=["twelve","one","two","three","four","five","six","seven","eight","nine","ten","eleven"];
+function tw(t){const [h,m]=t.split(":").map(Number);const w=n=>NUM[n%12];if(m===0)return `It's ${w(h)} o'clock.`;if(m===30)return `It's half past ${w(h)}.`;if(m===15)return `It's quarter past ${w(h)}.`;if(m===45)return `It's quarter to ${w(h+1)}.`;return `It's ${w(h)} ${m}.`}
 function bilan(n,items){return `<div class="card bilan"><h3>Bilan écrit · note de synthèse ${n}</h3><p>À la fin de l'heure, chaque élève écrit seul, sur sa fiche. On ramasse, on corrige dans l'heure ou au début de la séance suivante.</p><ol>${items.map(i=>`<li>${i}${lines(1)}</li>`).join("")}</ol><div class="prof card" style="margin:8px 0 0">Correction rapide : 1 point par phrase juste et compréhensible. Deuxième essai autorisé à la séance suivante. On garde la meilleure note.</div></div>`}
 
 function render(){
@@ -391,6 +393,8 @@ function render(){
  <p>Version dys en haut de page. Élèves en difficulté : dialogue en 6 étapes donné en entier, ils lisent puis remplacent un seul mot. Élèves à l'aise : ils jouent un client qui pose une question imprévue.</p>
  <h3>Élève absent</h3>
  <p>Il rattrape avec la fiche issue de secours et passe l'oral d'une minute à la séance suivante.</p>
+ <h3>Flashcards</h3>
+ <p>À chaque séance, quelques minutes pour fabriquer ses propres cartes à la main sur des bristols (consignes, matériel et grille dans la section Flashcards, plus bas sur cette page). Le paquet est noté sur 10.</p>
  <h3>Lien avec la PFMP</h3>
  <p>Demander à chaque élève une phrase vraie sur son lieu de stage. Elle sert dans le bilan 2 et dans la présentation finale.</p>
  </div>`;
@@ -448,10 +452,11 @@ function render(){
  <tr><td>6. Check and say goodbye</td><td>Thank you. Have a nice day!</td></tr>
  </table></div>
  <p class="prof">Pour le CAP Cuisine, on peut utiliser le dialogue du document : « Good evening! Welcome to the restaurant. » ; « Today the special is chicken with vegetables. » ; « Do you have any allergies? » ; « Your dish is ready in 15 minutes. » ; « Is everything OK? Do you like it? » ; « Thank you for coming. Have a nice evening! »</p>
+ <h3>What the customer does NOT want</h3><p>Words the customer cannot understand · speaking too fast · no price · touching things without asking · leaving without a word.</p>
  </div>
  <div class="card"><h3>Exercise 3 · Put the words in order</h3><ol>${T.day.slice(0,4).map(d=>`<li>${scramble(d[1])}${lines(1)}</li>`).join("")}</ol></div>
  <div class="card"><h3>Exercise 4 · Role-play cards</h3><div class="roles">${T.roles.map(r=>`<div class="role"><b>${r[0]}</b><p>"${r[1]}"</p><p><i>Your task:</i> ${r[2]}</p></div>`).join("")}</div>
- <p>Work in pairs. Student A reads the card. Student B answers. Then swap.</p></div>
+ <p>Work in pairs. Student A is the English customer. Student B is the ${T.job}. Student A ticks the golden rules: 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5 ☐ 6 ☐ 7 ☐. Then swap.</p></div>
  ${bilan(2,"I start at ... and I ...|At ..., I usually ...|In the afternoon, I ...|I never ...".split("|"))}`;
 
  P.s3 = `
@@ -474,7 +479,7 @@ function render(){
  <p><span class="time">25 min</span> Hot seat : un élève sur la chaise, trois élèves posent les questions, une minute par élève.</p>
  <p><span class="time">10 min</span> Bilan écrit 4.</p></div>
  <div class="card"><h2>Session 4 · The Jury's Tricky Questions</h2>
- <ol><li>Can you introduce yourself?</li><li>Why did you choose this job?</li>${T.jury.map(j=>`<li>${j[0]}</li>`).join("")}<li>Tell me about your work placement.</li></ol>
+ <ol><li>Can you introduce yourself?</li><li>Why did you choose this job?</li>${T.jury.map(j=>`<li>${j[0]}</li>`).join("")}<li>An English customer arrives. What do you say?</li><li>Tell me about your work placement.</li></ol>
  <h3>Help</h3><p>If you don't understand: <b>Can you repeat, please?</b> · <b>Can you speak slowly, please?</b> · If you need time: <b>Let me think...</b></p></div>
  <div class="card"><h3>Hot seat</h3><p>One student sits on the chair. Three students ask questions. One minute each. The class listens and gives one tip: "Well done!" or "You should..."</p></div>
  ${bilan(4,["I chose this job because ...",T.jury[0][0],T.jury[1][0]])}`;
@@ -501,7 +506,18 @@ function render(){
  <p><b>Write 60 to 80 words.</b> Say: what the job is, when you start, three rules, and what to do tomorrow. Use: First, Then, Finally.</p>
  ${lines(9)}</div>`;
 
+ const vq = T.tools.slice(0,3).concat(T.actions.slice(0,3));
+ const tq = [T.day[0],T.day[2],T.day[4]];
+ const tf = T.rules.map((r,i)=>{const shown = i%2 ? !r[1] : !!r[1]; return {txt:`You ${shown?"must":"mustn't"} ${r[0]}.`, ok: shown===!!r[1]};});
  P.ev = `
+ <div class="card"><h2>Évaluation intermédiaire · après la séance 3 · /20</h2>
+ <p class="prof">Durée : 20 minutes, en début de séance 4. Sans dictionnaire. Corrigé dans la section Answer key, plus bas sur cette page.</p>
+ <h3>A. Translate into English (/6)</h3><ol>${vq.map(v=>`<li>${v[1]} : ..............................</li>`).join("")}</ol>
+ <h3>B. Write the time in words (/3)</h3><ol>${tq.map(d=>`<li>${d[0]} : ......................................</li>`).join("")}</ol>
+ <h3>C. True or false? (/5)</h3><ol>${tf.map(t=>`<li>${t.txt} &nbsp; True ☐ &nbsp; False ☐</li>`).join("")}</ol>
+ <h3>D. Write 3 sentences about your day. Use always, usually or never (/6)</h3>${lines(3)}
+ <div class="tbl-scroll"><table><tr><th>Exercice</th><th>Barème</th></tr><tr><td>A</td><td>1 point par mot juste (orthographe approchée acceptée si le mot est reconnaissable)</td></tr><tr><td>B</td><td>1 point par heure juste</td></tr><tr><td>C</td><td>1 point par réponse juste</td></tr><tr><td>D</td><td>Par phrase : 1 point verbe au présent correct, 1 point adverbe bien placé</td></tr></table></div>
+ <p>Total : ........ / 20</p></div>
  <div class="card"><h2>Oral grid · /40</h2>
  <table><tr><th>Criteria</th><th>0 to 3</th><th>4 to 6</th><th>7 to 8</th><th>9 to 10</th></tr>
  <tr><td><b>1. Me and my workplace</b></td><td>A few words</td><td>Short sentences, some words of the job</td><td>Clear sentences, the right words</td><td>Clear, precise, personal</td></tr>
@@ -532,16 +548,78 @@ function render(){
  </table></div>
  <h4>Plan C · une seule heure</h4>
  <p>On distribue la fiche ci-dessous. 20 minutes pour la compléter avec l'aide du professeur, 20 minutes d'oral par deux, 15 minutes pour la mini note de synthèse. Évaluation sur 20 : oral /10 et écrit /10.</p>
- <p><b>Conversion des notes.</b> Plan B : oral sur 20 (critères 1, 2 et 4 de la grille, ramenés sur 20) et note de synthèse sur 20. Plan C : la fiche est notée sur 20.</p></div>
+ <h3>Conversion des notes</h3>
+ <p>Plan B : oral sur 20 (critères 1, 2 et 4 de la grille, ramenés sur 20) et note de synthèse sur 20. Plan C : la fiche est notée sur 20.</p></div>
  <div class="card"><h3>My job in 5 minutes · Fiche issue de secours</h3>
- <ol>
- <li>My job: I am a ${T.job}. I work in ${T.place}.</li>
- <li>Six words: ${T.tools[0][0]}, ${T.tools[1][0]}, ${T.tools[2][0]}, ${T.actions[0][0]}, ${T.actions[1][0]}, ${T.actions[2][0]}.</li>
- <li>My day: I start at ...... I always ...... I usually ......</li>
- <li>Two rules: You must ... You mustn't ...</li>
- <li>My customer: Good evening! Welcome. Thank you. Have a nice day!</li>
- </ol>
+ <p><b>1. My job:</b> I am a ${T.job}. I work in ${T.place}.</p>
+ <p><b>2. Six words:</b> ${T.tools.slice(0,3).map(t=>t[0]).join(", ")}, ${T.actions.slice(0,3).map(t=>t[0]).join(", ")}.</p>
+ <p><b>3. My day:</b> I start at ...... I always ...... I usually ......</p>
+ <p><b>4. Two rules:</b> You must ${T.rules[0][0]}. You mustn't ${T.rules.find(r=>!r[1])[0]}.</p>
+ <p><b>5. My customer:</b> ${T.client[0]} ${T.client[3]} ${T.client[5]}</p>
+ <h3>Oral · 1 minute (/10)</h3>
+ <div class="tbl-scroll"><table><tr><th>Criteria</th><th>Points</th></tr><tr><td>I say my job and my workplace</td><td>/ 2</td></tr><tr><td>I describe my day with a time</td><td>/ 3</td></tr><tr><td>I give one rule</td><td>/ 2</td></tr><tr><td>I greet the customer politely</td><td>/ 3</td></tr></table></div>
+ <h3>Mini note de synthèse · 40 words (/10)</h3>
+ <div class="doc"><div class="t">Document 1</div>${T.docs[0]}</div>
+ <div class="doc"><div class="t">Document 2</div>${T.docs[2]}</div>
+ <p>Write a note for a new apprentice: the job, the start time, the task for tomorrow.</p>${lines(5)}
+ <div class="tbl-scroll"><table><tr><th>Criteria</th><th>Points</th></tr><tr><td>Information from the 2 documents</td><td>/ 4</td></tr><tr><td>Correct sentences</td><td>/ 4</td></tr><tr><td>About 40 words</td><td>/ 2</td></tr></table></div>
  </div>`;
+
+
+ const CATS = [["Place","vert"],["Tool","bleu"],["Action","rouge"],["Rule","orange"],["Customer","violet"],["Jury","noir"]];
+ const bank=[["Place",T.places.map(x=>x[0]+" / "+x[1])],["Tool",T.tools.map(x=>x[0]+" / "+x[1])],["Action",T.actions.map(x=>x[0]+" / "+x[1])],
+  ["Rule",T.rules.map(r=>`You ${r[1]?"must":"mustn't"} ${r[0]}.`)],["Customer",T.client],["Jury",T.jury.map(j=>j[0])]];
+ P.fc = `
+ <div class="card prof"><h2>Mes flashcards sur bristol · mode d'emploi</h2>
+ <p><b>Principe :</b> chaque élève fabrique ses cartes à la main, sur des bristols. Écrire le mot, c'est déjà l'apprendre. Le paquet reste dans son sac, il révise partout, sans écran.</p>
+ <h3>Matériel</h3>
+ <p>Des fiches bristol format A7 (74 × 105 mm), environ 25 par élève, ou des bristols A6 coupés en deux. Des feutres de six couleurs. Un élastique ou une enveloppe pour le paquet. Une petite boîte en carton à trois compartiments pour l'entraînement (une boîte à chaussures avec deux séparations suffit). On peut aussi imprimer le modèle vierge et le découper.</p>
+ <h3>Code couleur</h3>
+ <div class="tbl-scroll"><table><tr><th>Catégorie</th><th>Couleur du feutre</th></tr>${CATS.map(c=>`<tr><td>${c[0]}</td><td>${c[1]}</td></tr>`).join("")}</table></div>
+ <h3>Déroulé dans la séquence</h3>
+ <div class="tbl-scroll"><table><tr><th>Séance</th><th>Temps</th><th>Cartes à fabriquer</th></tr>
+ <tr><td>1</td><td>10 min</td><td>6 cartes : 3 lieux, 3 outils</td></tr>
+ <tr><td>2</td><td>10 min</td><td>6 cartes : 3 actions, 3 phrases pour le client</td></tr>
+ <tr><td>3</td><td>8 min</td><td>4 cartes de règles avec must et mustn't</td></tr>
+ <tr><td>4</td><td>15 min</td><td>4 cartes de questions du jury, puis entraînement par deux</td></tr>
+ <tr><td>5</td><td>5 min</td><td>Révision avant l'oral : chacun tire 5 cartes au hasard</td></tr></table></div>
+ <h3>Entraînement par deux, en trois boîtes</h3>
+ <p>A montre le recto, B répond en français et donne une phrase. Carte réussie : elle avance d'une boîte. Carte ratée : retour en boîte 1. Objectif avant l'oral : 15 cartes en boîte 3.</p>
+ <h3>Grille · mon paquet de cartes /10</h3>
+ <div class="tbl-scroll"><table><tr><th>Critère</th><th>Points</th></tr>
+ <tr><td>20 cartes ou plus, avec le code couleur respecté</td><td>/ 2</td></tr>
+ <tr><td>Écriture lisible, orthographe juste au recto et au verso</td><td>/ 3</td></tr>
+ <tr><td>Phrases exemples personnelles et correctes</td><td>/ 3</td></tr>
+ <tr><td>Contrôle : le professeur tire 5 cartes, l'élève répond (4 réponses justes ou plus = 2 points)</td><td>/ 2</td></tr></table></div>
+ <p class="downloads">Modèle vierge à imprimer et à découper :
+  <a href="flashcards/blank-flashcards.pdf">PDF</a> ·
+  <a href="flashcards/blank-flashcards.docx">Word (.docx)</a> ·
+  <a href="flashcards/blank-flashcards.odt">LibreOffice (.odt)</a>.
+ </p></div>
+
+ <div class="card"><h2>My Flashcards · ${T.job}</h2>
+ <p><b>Make your own cards by hand, on bristol cards.</b></p>
+ <ol>
+ <li><b>Front:</b> the English word or sentence, in big letters, with the colour of the category.</li>
+ <li><b>Back:</b> the French, then one example sentence. Write about <b>your</b> work placement.</li>
+ <li><b>Corner:</b> write the category and the date.</li>
+ <li><b>Check:</b> show your card to a partner before you start the next one.</li>
+ </ol>
+ <h3>Model card</h3>
+ <div class="roles">
+ <div class="role" style="min-height:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:2px solid #2b5cab"><span style="font-size:.75em;color:#2b5cab">TOOL · front</span><b style="font-size:1.4em;color:#2b5cab">${T.tools[0][0]}</b></div>
+ <div class="role" style="min-height:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:2px solid #2b5cab"><span style="font-size:.75em;color:#2b5cab">back</span><b>${T.tools[0][1]}</b><i>At my placement, I use my ${T.tools[0][0]} every day.</i></div>
+ </div>
+ <h3>Colours</h3><p>${CATS.map(c=>`<b>${c[0]}</b> = ${c[1]}`).join(" · ")}</p></div>
+
+ <div class="card"><h3>Word bank · choose your words</h3>
+ <p>You don't have to take all the words. Choose the words you use at your work placement and add your own.</p>
+ ${bank.map(b=>`<p><b>${b[0]}:</b> ${b[1].join(" · ")}</p>`).join("")}
+ <p><b>My own words:</b></p>${lines(3)}</div>
+
+ <div class="card"><h3>My pack · checklist</h3>
+ <div class="tbl-scroll"><table><tr><th>I have...</th><th>✓</th></tr>
+ ${["6 cards Place and Tool","6 cards Action and Customer","4 cards Rule","4 cards Jury","an example sentence on every card","15 cards in box 3"].map(x=>`<tr><td>${x}</td><td>☐</td></tr>`).join("")}</table></div></div>`;
 
  P.key = `
  <div class="card prof"><h2>Answer key · ${T.dip}</h2>
@@ -550,6 +628,11 @@ function render(){
  <p>On accepte usually à la place de always si l'élève le justifie.</p>
  <h3>Exercise 5</h3><ol>${rulesKey}</ol>
  <h3>Session 4 · model answers</h3><ol><li>Hello, my name is ... I'm ... years old. I'm a student in ${T.dip}.</li><li>I chose this job because I like ... and I want to ...</li>${T.jury.map(j=>`<li>${j[1]}</li>`).join("")}</ol>
+ <h3>Évaluation intermédiaire</h3>
+ <p><b>A.</b> ${vq.map(v=>v[1]+" = "+v[0]).join(" · ")}</p>
+ <p><b>B.</b> ${tq.map(d=>d[0]+" : "+tw(d[0])).join(" · ")}</p>
+ <p><b>C.</b> ${tf.map((t,i)=>(i+1)+" "+(t.ok?"True":"False")).join(" · ")}</p>
+ <p><b>D.</b> Exemple : ${withAlways(T.day[0][1])} I usually ... I never ...</p>
  <h3>Note de synthèse · model (about 75 words)</h3>
  <p>Welcome! You are a new ${T.job} in ${T.place}. First, read the information: the job is described in the advert (hours and start time). Then, remember the rules: ${T.rules.filter(r=>r[1]).slice(0,2).map(r=>"you must "+r[0]).join(", ")} and you mustn't ${T.rules.find(r=>!r[1])[0]}. Finally, tomorrow: ${D[2].split(": ").slice(1).join(": ")} Good luck!</p>
  <p>À adapter : l'élève reprend les heures exactes du document 1.</p></div>`;

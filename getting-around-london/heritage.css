@@ -171,3 +171,9 @@ figcaption{overflow-wrap:anywhere}
   .flashcards-method{padding:0.85rem 0.8rem}
   .flashcard-models{grid-template-columns:1fr}
 }
+
+.flashcards-method table{width:100%;border-collapse:collapse;font-size:0.98rem;margin:0.4rem 0 0.8rem}
+.flashcards-method th,.flashcards-method td{border:1px solid var(--h-line2);padding:0.4rem 0.55rem;text-align:left;vertical-align:top}
+.flashcards-method th{background:var(--h-cream)}
+.flashcards-method .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.flashcards-method .own-words{letter-spacing:.08em;color:var(--h-soft)}

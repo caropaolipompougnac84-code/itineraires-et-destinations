@@ -80,6 +80,27 @@
     const credit = r.credit
       ? `<p class="muted" style="font-size:0.75rem;margin:0.25rem 0 0">${escapeHtml(r.credit)}</p>`
       : "";
+    function versionLinksHTML(r) {
+      if (Array.isArray(r.versionLinks) && r.versionLinks.length) {
+        return `<span class="work-links">` + r.versionLinks.map((v) => {
+          if (v && v.url) {
+            const external = /^https?:/i.test(v.url) && !/itineraires-destinations\.fr/i.test(v.url);
+            return `<a class="work-link" href="${escapeAttr(v.url)}"${external ? ' target="_blank" rel="noopener"' : ""}>${escapeHtml(v.label)}</a>`;
+          }
+          const note = v && v.note ? ` (${escapeHtml(v.note)})` : "";
+          return `<span class="work-link-soon">${escapeHtml((v && v.label) || "")}${note}</span>`;
+        }).join("") + `</span>`;
+      }
+      if (hasUrl) {
+        const external = /^https?:/i.test(r.url) && !/itineraires-destinations\.fr/i.test(r.url);
+        return `<span class="work-links"><a class="work-link" href="${escapeAttr(r.url)}"${external ? ' target="_blank" rel="noopener"' : ""}>Voir le support</a>${
+            r.facebookUrl
+              ? `<a class="work-link work-link-secondary" href="${escapeAttr(r.facebookUrl)}" target="_blank" rel="noopener">Annonce Facebook</a>`
+              : ""
+          }</span>`;
+      }
+      return `<span class="muted">Lien à venir</span>`;
+    }
     return `
 <article class="work reveal" data-id="${escapeAttr(r.id || "")}">
   ${img}
@@ -90,15 +111,7 @@
       ${themes}
     </ul>
     ${r.summary ? `<p class="work-summary">${escapeHtml(r.summary)}</p>` : ""}
-    ${
-      hasUrl
-        ? `<span class="work-links"><a class="work-link" href="${escapeAttr(r.url)}" target="_blank" rel="noopener">Voir le support</a>${
-            r.facebookUrl
-              ? `<a class="work-link work-link-secondary" href="${escapeAttr(r.facebookUrl)}" target="_blank" rel="noopener">Annonce Facebook</a>`
-              : ""
-          }</span>`
-        : `<span class="muted">Lien à venir</span>`
-    }
+    ${versionLinksHTML(r)}
     ${credit}
   </div>
 </article>`;

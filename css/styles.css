@@ -292,6 +292,10 @@ a:hover { color: var(--burgundy-deep); }
   padding-bottom: 1px;
 }
 .work-link-secondary:hover { border-bottom-color: var(--ink-soft); color: var(--ink); }
+.work-link-soon {
+  font-weight: 500; font-size: 0.88rem; color: var(--ink-soft);
+}
+
 
 /* Filters: light, typographic */
 .filters {

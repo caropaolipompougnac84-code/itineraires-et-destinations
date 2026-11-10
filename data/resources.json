@@ -379,19 +379,29 @@
     },
     {
       "id": "lg-lettres-1re-ponge-perec",
-      "title": "Lettres · 1re · L'Homme et l'objet : Ponge et Perec",
-      "summary": "Ponge et Perec : l'homme face aux objets.",
+      "title": "Perec et Ponge",
+      "summary": "Du secret des choses au vertige de la consommation, en Première générale. Une version Terminale spécialité HLP, pour préparer la classe prépa littéraire et l'université, sera proposée à côté de celle-ci.",
       "section": "lycee-general",
       "subject": "lettres",
       "level": "1re",
-      "levelLabel": "1re",
+      "levelLabel": "Niveau Première",
       "collection": "lg-lettres",
       "themes": [
         "litterature"
       ],
-      "url": "https://ponge-perec-homme-objet-premiere.netlify.app/",
-      "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120595897490243&set=a.122104658121490243"
+      "url": "https://itineraires-destinations.fr/perec-et-ponge/",
+      "date": "2026-11-10",
+      "versionLinks": [
+        {
+          "label": "Niveau Première",
+          "url": "https://itineraires-destinations.fr/perec-et-ponge/"
+        },
+        {
+          "label": "Terminale spécialité HLP · Préparer la classe prépa littéraire",
+          "url": null,
+          "note": "à paraître"
+        }
+      ]
     },
     {
       "id": "lg-lettres-1re-gracq",

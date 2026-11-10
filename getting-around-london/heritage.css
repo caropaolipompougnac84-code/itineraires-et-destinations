@@ -106,3 +106,18 @@ figcaption{overflow-wrap:anywhere}
 .then-now{margin:.35rem 0 1.1rem;font-size:1.02rem;line-height:1.45;max-width:46rem}
 .bus .plan-de-route{color:inherit;border-color:currentColor}
 .downloads{margin:0.6rem 0 1rem}
+
+/* Level line: wrap cleanly on a phone when both BO tracks are shown */
+.level{
+  line-height:1.4;
+  overflow-wrap:anywhere;
+  text-wrap:pretty;
+}
+@media(max-width:600px){
+  .level{
+    font-size:0.98rem!important;
+    letter-spacing:.03em;
+    padding:10px 12px!important;
+    line-height:1.45;
+  }
+}

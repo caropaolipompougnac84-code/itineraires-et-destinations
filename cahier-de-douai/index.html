@@ -271,6 +271,41 @@
       }
     }
 
+
+    .fiche-diss {
+      margin: 1.6rem 0 2rem;
+      padding: 1.15rem 1.15rem 1.3rem;
+      background: var(--paper-3);
+      border: 1px solid var(--rule);
+      border-left: 5px solid var(--burgundy);
+    }
+    .fiche-diss h2 { margin-top: 0; }
+    .fiche-diss p { margin: 0; }
+    .fiche-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.7rem;
+      margin: 0.9rem 0 0;
+    }
+    .fiche-btns a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      padding: 0.4rem 1.05rem;
+      border: 1.5px solid var(--burgundy);
+      border-radius: 6px;
+      color: var(--burgundy);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .fiche-btns a:hover,
+    .fiche-btns a:focus {
+      background: var(--burgundy);
+      color: #fff;
+    }
+
     @media (max-width: 600px) {
       .tours .r { padding-left: 0; }
       .seances li { padding-left: 2rem; }
@@ -330,6 +365,16 @@
       <p id="problematique-titre"><strong>Problématique.</strong> Peut-on se libérer par la poésie quand le monde, lui, reste en guerre et en manque ?</p>
     </aside>
 
+
+    <section class="fiche-diss" id="fiche-dissertation" aria-labelledby="fiche-dissertation-titre">
+      <h2 id="fiche-dissertation-titre">Et si la dissertation tombe sur Rimbaud ?</h2>
+      <p>Fiche méthode, brouillon en spirale de Gorse, deux copies modèles. Une méthode pour l'écrit du bac de français, à partir du Cahier de Douai. Vingt pages, pour les Premières du lycée général et technologique.</p>
+      <div class="fiche-btns">
+        <a href="Fiche-methode-dissertation-Rimbaud-Cahier-de-Douai.pdf">PDF</a>
+        <a href="Fiche-methode-dissertation-Rimbaud-Cahier-de-Douai.docx">Word</a>
+        <a href="Fiche-methode-dissertation-Rimbaud-Cahier-de-Douai.odt">LibreOffice</a>
+      </div>
+    </section>
 
     <section class="mathilde" id="mathilde" aria-labelledby="mathilde-titre">
       <h2 id="mathilde-titre">L'autre côté de la légende : Mathilde Mauté</h2>
@@ -535,8 +580,16 @@
 
     <section id="telechargements" aria-labelledby="telechargements-titre">
       <h2 id="telechargements-titre">Téléchargements</h2>
-      <p>Trois documents, chacun en PDF, Word et LibreOffice. Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>.</p>
+      <p>Quatre documents, chacun en PDF, Word et LibreOffice. Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>.</p>
       <ul class="downloads">
+        <li>
+          <p class="doc-title">Et si la dissertation tombe sur Rimbaud ? Fiche méthode (20 pages)</p>
+          <span class="doc-links">
+            <a href="Fiche-methode-dissertation-Rimbaud-Cahier-de-Douai.pdf">PDF</a>
+            <a href="Fiche-methode-dissertation-Rimbaud-Cahier-de-Douai.docx">Word (.docx)</a>
+            <a href="Fiche-methode-dissertation-Rimbaud-Cahier-de-Douai.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
         <li>
           <p class="doc-title">Séquence (98 pages)</p>
           <span class="doc-links">

@@ -39,8 +39,8 @@ figure.paint img,figure.vid video{display:block;width:100%;height:auto}
 figure.paint figcaption,figure.vid figcaption{padding:.6rem .9rem;font-size:.92rem}
 .qr{max-width:140px;height:auto}
 ol li{margin:.35rem 0}
-details.ans{background:#f3f8f8;border:2px solid var(--teal2);border-radius:14px;padding:.8rem 1rem;margin:1rem 0}
-details.ans summary{font-weight:700;cursor:pointer;color:var(--teal);font-size:1.05rem}
+.ans{background:#f3f8f8;border:2px solid var(--teal2);border-radius:14px;padding:.8rem 1rem .9rem;margin:1rem 0}
+.ans-label{font-weight:700;color:var(--teal);font-size:1.05rem;margin:0 0 .45rem}
 footer{padding:1.2rem 0 2rem;border-top:1px solid var(--line);font-size:.95rem}
 table{width:100%;border-collapse:collapse;margin:.5rem 0}
 th,td{border:1px solid var(--line);padding:.4rem .55rem;text-align:left;vertical-align:top}
@@ -184,8 +184,8 @@ th{background:#f7f1e4}
 <div class="line"></div>
 </section>
 
-<details class="ans" id="answers">
-<summary>Answer key (click to open)</summary>
+<div class="ans" id="answers">
+<p class="ans-label"><strong>Answer key</strong></p>
 <h3>Set 1</h3>
 <ol>
 <li>Where do you live?</li>
@@ -221,7 +221,7 @@ th{background:#f7f1e4}
 <p>Tom said, “Are you coming to the match on Saturday?”<br>“Yes, I am,” answered Lily.<br>“Great,” said Tom. “Bring your scarf.”</p>
 <h3>Set 6</h3>
 <p>Last Friday, I went to the cinema with my friends. We watched a film about a young chef. It’s called <i>The Kitchen</i>. It was funny, exciting and a bit sad. Did you see it?</p>
-</details>
+</div>
 
 <section class="card" id="flashcards" lang="en">
 <h2>My bristol flashcards · how to use them</h2>
@@ -271,6 +271,5 @@ th{background:#f7f1e4}
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>
 <p>The video, the exercises and the answers are original. Photograph: Willi Heidelbach, <i>Metal movable type</i>, 9 March 2003, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.5/deed.en">CC BY 2.5</a>. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0 licence</a>.</p>
 </div></footer>
-<script src="answers-toggle.js" defer data-lang="en"></script>
 </body>
 </html>

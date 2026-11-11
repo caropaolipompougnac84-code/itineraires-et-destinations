@@ -160,6 +160,27 @@
   ],
   "resources": [
     {
+      "id": "lg-option-passing-the-flame",
+      "title": "Anglais · Tle spécialité LLCER · Passing the Flame",
+      "summary": "Othello, or the trap of theatrical illusion: a C1 sequence in English, towards hypokhâgne and Licence LLCER.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Tle spécialité LLCER",
+      "collection": "lg-anglais",
+      "themes": [
+        "litterature",
+        "culture",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/passing-the-flame/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120774223490243&set=a.122104658121490243",
+      "image": "passing-the-flame.jpg",
+      "credit": "Théodore Chassériau, Othello et Desdémone à Venise, 1849-1850, oil on wood, Musée du Louvre, Paris, RF 3897. Public domain."
+    },
+    {
       "id": "meth-preparer-examens-francais",
       "title": "Méthodologie · Préparer aux examens en français",
       "summary": "Les ressources de français réunies par examen : brevet (DNB), CAP, bac professionnel, bac de français à l’écrit et à l’oral.",
@@ -733,22 +754,6 @@
       "url": "https://jeu-amoureux-theatre-terminale.netlify.app/",
       "date": "2026-11-07",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120821347490243&set=a.122104658121490243"
-    },
-    {
-      "id": "lg-option-passing-the-flame",
-      "title": "Lettres · Tle option littérature · Passing the Flame",
-      "summary": "Othello en perspective hypokhâgne / Licence LLCER.",
-      "section": "lycee-general",
-      "subject": "lettres",
-      "level": "tle-option",
-      "levelLabel": "Tle option littérature",
-      "collection": "lg-option-litterature",
-      "themes": [
-        "litterature"
-      ],
-      "url": "https://passing-the-flame-othello.netlify.app/",
-      "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120774223490243&set=a.122104658121490243"
     },
     {
       "id": "lg-option-deux-deesses",

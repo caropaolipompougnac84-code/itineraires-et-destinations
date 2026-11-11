@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Passing the Flame · Othello · LLCER Terminale · Itinéraires et destinations</title>
+  <meta name="description" content="Passing the Flame: a C1 English sequence on Shakespeare’s Othello and the trap of theatrical illusion. Specialism LLCER anglais, Terminale of the lycée général et technologique. Madame Carole Paoli Pompougnac." />
+  <meta name="author" content="Madame Carole Paoli Pompougnac" />
+  <link rel="canonical" href="https://itineraires-destinations.fr/passing-the-flame/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Itinéraires et destinations" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Passing the Flame · Othello, or the trap of theatrical illusion" />
+  <meta property="og:description" content="A C1 sequence in English on Shakespeare’s Othello: ten lessons, the spirale de Gorse, a midpoint commentary and a summative assessment. Madame Carole Paoli Pompougnac." />
+  <meta property="og:url" content="https://itineraires-destinations.fr/passing-the-flame/" />
+  <meta property="og:image" content="https://itineraires-destinations.fr/passing-the-flame/img/chasseriau-othello-desdemona-venice.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+
+    body,
+    body[data-section="lycee-general"] {
+      --navy: #1A3658;
+      --navy-deep: #0F2340;
+      --burgundy: #1A3658;
+      --burgundy-deep: #0F2340;
+      --lg: #1A3658;
+    }
+    .page-content { padding-bottom: 3rem; max-width: 46rem; }
+    .page-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 2.1rem 0 0.75rem;
+    }
+    .page-content h3 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.3rem 0 0.45rem;
+    }
+    .page-content p { margin: 0 0 1rem; }
+    .page-content ul, .page-content ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+    .page-content li { margin: 0.35rem 0; }
+    .programme {
+      margin: 0 0 1.2rem;
+      font-size: 0.98rem;
+      color: var(--ink-soft);
+    }
+    .hero-illu {
+      margin: 0.4rem 0 1.6rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .hero-illu img { width: 100%; height: auto; display: block; background: #1a1410; }
+    .hero-illu figcaption {
+      padding: 0.5rem 0.9rem 0.8rem;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+    .pourquoi-box {
+      margin: 1.2rem 0 1.8rem;
+      padding: 1rem 1.1rem 1.05rem 1.15rem;
+      background: var(--paper-3);
+      border: 1px solid var(--rule);
+      border-left: 5px solid var(--navy);
+    }
+    .pourquoi-box p { margin: 0; font-size: 1.08rem; line-height: 1.7; }
+    .pourquoi-box strong { color: var(--navy); font-weight: 700; }
+    .corpus { list-style: none; margin: 0 0 1.2rem; padding: 0; }
+    .corpus li {
+      margin: 0;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .corpus li:last-child { border-bottom: 0; }
+    .corpus strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 0 0 0.15rem;
+    }
+    .corpus span { color: var(--ink-soft); }
+    .spirale-fig {
+      margin: 1rem 0 1.3rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .spirale-fig img {
+      width: min(100%, 22rem);
+      height: auto;
+      display: block;
+      margin: 0.8rem auto 0.2rem;
+      background: #fff;
+    }
+    .spirale-fig figcaption {
+      padding: 0.55rem 0.9rem 0.85rem;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+    .tours { list-style: none; margin: 0 0 1rem; padding: 0; }
+    .tours li {
+      margin: 0;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .tours li:last-child { border-bottom: 0; }
+    .tours .n {
+      display: inline-block;
+      min-width: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-right: 0.25rem;
+    }
+    .tours .q { font-weight: 600; }
+    .tours .r {
+      display: block;
+      color: var(--ink-soft);
+      margin: 0.2rem 0 0;
+      padding-left: 1.7rem;
+    }
+    .pointe { margin: 0.8rem 0 1.2rem; font-size: 1.05rem; }
+    .penseurs { list-style: none; margin: 0 0 1rem; padding: 0; }
+    .penseurs li {
+      margin: 0;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .penseurs li:last-child { border-bottom: 0; }
+    .seances { list-style: none; margin: 0 0 1rem; padding: 0; counter-reset: seance; }
+    .seances li {
+      margin: 0;
+      padding: 0.75rem 0 0.75rem 2.4rem;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+    .seances li:last-child { border-bottom: 0; }
+    .seances li::before {
+      counter-increment: seance;
+      content: counter(seance);
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      font-weight: 700;
+      color: var(--navy);
+      font-variant-numeric: tabular-nums;
+    }
+    .seances strong { display: block; margin: 0 0 0.15rem; }
+    .seances span { color: var(--ink-soft); font-size: 0.95rem; }
+    .downloads { margin: 0.4rem 0 0; padding: 0; list-style: none; }
+    .downloads li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.7rem;
+      align-items: baseline;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--rule);
+      margin: 0;
+    }
+    .downloads li:last-child { border-bottom: 0; }
+    .downloads .doc-title { flex: 1 1 12rem; font-weight: 600; margin: 0; }
+    .downloads .doc-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .downloads a { min-height: 2.75rem; display: inline-flex; align-items: center; }
+    .illu-credit { font-size: 0.88rem; color: var(--ink-soft); margin: 1.2rem 0 0; }
+    .manque {
+      margin: 0.35rem 0 0.2rem;
+      padding: 0.65rem 0.8rem;
+      background: var(--paper-3);
+      border-left: 4px solid var(--navy);
+      font-size: 0.95rem;
+    }
+    .deesses { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.4rem 0 1.4rem; }
+    .deesses figure { margin: 0; background: #fff; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+    .deesses img { width: 100%; height: 15rem; object-fit: cover; display: block; }
+    .deesses figcaption { padding: 0.45rem 0.7rem 0.65rem; font-size: 0.84rem; color: var(--ink-soft); line-height: 1.4; }
+    @media (max-width: 600px) {
+      .tours .r { padding-left: 0; }
+      .seances li { padding-left: 2rem; }
+      .deesses { grid-template-columns: 1fr; }
+      .deesses img { height: 13rem; }
+    }
+  
+    .dedicace, .note-intention {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      line-height: 1.65;
+      margin: 0 0 1.1rem;
+    }
+    .note-label, .ded-label {
+      font-weight: 700;
+      color: var(--navy);
+      margin: 1.1rem 0 0.4rem;
+    }
+    .video-wrap {
+      margin: 1rem 0 1.4rem;
+      background: #0F2340;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .video-wrap video {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 70vh;
+      background: #0F2340;
+    }
+    .spirale-fig img {
+      width: min(100%, 36rem);
+    }
+
+    html { scroll-padding-top: 5.5rem; }
+    .page-content h2, .page-hero h1 { scroll-margin-top: 5.5rem; }
+    .page-hero h1, .page-content h1, .page-content h2, .page-content h3 {
+      color: #1A3658;
+    }
+    .page-hero .kicker, .kicker {
+      color: #1A3658 !important;
+    }
+    .brand-mark { color: #1A3658; }
+  </style>
+</head>
+<body data-section="lycee-general">
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a class="brand-mark" href="../index.html">Itinéraires et destinations</a>
+        <span class="brand-tag">Séquences prêtes à l'emploi · Français, anglais · Tous niveaux</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger"><span class="sr-only">Menu</span></label>
+      <nav class="nav-main" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../lycee-pro/index.html">Lycée professionnel</a>
+        <a href="../lycee-general/index.html" aria-current="page">Lycée général</a>
+        <a href="../lycee-agricole/index.html">Lycée agricole</a>
+        <a href="../cfa/index.html">CFA</a>
+        <a href="../segpa/index.html">6e à 3e · SEGPA</a>
+        <a href="../methodologie/index.html">Méthodologie</a>
+        <a href="../themes.html">Thèmes</a>
+        <a href="../nouveautes.html">Nouveautés</a>
+        <a href="../a-propos.html">À propos</a>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../lycee-general/index.html">Lycée général</a></li><li><a href="../lycee-general/anglais.html">Anglais</a></li><li>Passing the Flame</li></ol></nav>
+
+  <main class="wrap page-content">
+    <section class="page-hero">
+      <p class="kicker">Anglais · Terminale · Spécialité LLCER · Lycée général et technologique</p>
+      <h1>Passing the Flame</h1>
+      <p class="lede">Othello, or the trap of theatrical illusion. A C1 sequence in English: ten lessons, the spirale de Gorse, a midpoint commentary and a summative assessment.</p>
+    </section>
+
+    <p class="programme">Spécialité Langues, littératures et cultures étrangères et régionales, anglais, Terminale. Programme of the Bulletin officiel spécial n° 8 of 25 July 2019: thematic areas « Arts et débats d’idées » and « Expression et construction de soi » (mise en scène de soi). Level C1, for a strong Terminale class and for students heading to hypokhâgne or the first year of a Licence LLCER. The play is offered as a demanding object, not as a text presented as a programme limitatif.</p>
+
+    <figure class="hero-illu">
+      <img src="img/chasseriau-othello-desdemona-venice.jpg" width="1280" height="1668" alt="Théodore Chassériau, Othello et Desdémone à Venise: a man and a woman in a Venetian interior, close together and already slightly uneasy." />
+      <figcaption>Théodore Chassériau, <cite>Othello et Desdémone à Venise</cite>, 1849-1850, oil on wood, Musée du Louvre, Paris, RF 3897, public domain.</figcaption>
+    </figure>
+
+    <section aria-labelledby="presentation">
+      <h2 id="presentation">Presentation</h2>
+      <p class="ded-label">Dédicace</p>
+      <p class="dedicace">« À la mémoire du Professeur Pierre Spriet,<br />
+et à tous mes maîtres des classes préparatoires et de l’Université Bordeaux III,<br />
+qui m’ont appris à lire le monde entre les lignes.<br />
+Aux artistes de la Royal Shakespeare Company (Stratford-upon-Avon, 1984-85),<br />
+qui m’ont montré que l’amour du texte rend les êtres meilleurs.<br />
+Aux élèves de Terminale qui s’apprêtent à entrer en Hypokhâgne ou en Licence d’Anglais :<br />
+puisse cette flamme devenir la vôtre. »</p>
+      <p class="ded-label">Note d’intention</p>
+      <p>Ce dossier est né d’un élan de gratitude. Il ne prétend à aucun titre académique : il est le témoignage d’une amoureuse des mots, de la langue anglaise et de la langue française, dont toute la vie intérieure a été éclairée par des passeurs généreux. À travers une étude approfondie du piège théâtral dans Othello et quatre explications de texte modèles (dont la scène d’espionnage de l’Acte IV, scène 1), il invite les futurs étudiants à découvrir que la littérature n’est jamais un savoir mort, mais une école de lucidité et d’humanité.</p>
+      <p>The sequence is written in British English throughout, including the teacher’s notes. The dédicace and the note d’intention remain in this exact French. A five-minute video essay opens the work: an homage to Professor Pierre Spriet and to Bordeaux III, and to the Royal Shakespeare Company at Stratford-upon-Avon in 1984-85, including Ben Kingsley’s <cite>Othello</cite>.</p>
+    </section>
+
+    <div class="video-wrap">
+      <video controls preload="metadata" poster="img/chasseriau-othello-desdemona-venice.jpg" title="Passing the Flame, a video essay by Madame Carole Paoli Pompougnac">
+        <source src="video/passing-the-flame.mp4" type="video/mp4" />
+        The video essay is in the folder <code>video/passing-the-flame.mp4</code>.
+      </video>
+    </div>
+
+    <aside class="pourquoi-box" aria-labelledby="problematique-titre">
+      <p id="problematique-titre"><strong>Guiding question.</strong> How does Shakespeare turn theatre itself into a trap of perception in <cite>Othello</cite>, and what does that trap still teach us about language, jealousy and the courage to read between the lines?</p>
+    </aside>
+
+    <section aria-labelledby="corpus">
+      <h2 id="corpus">The corpus</h2>
+      <ul class="corpus">
+        <li><strong>William Shakespeare, <cite>Othello</cite></strong> <span>Public-domain English text (Project Gutenberg ebook 1531). In class, line numbers may be aligned with the Folger Shakespeare Library Digital Text. Close readings of I.1, I.3, III.3, III.4, IV.1 and V.2.</span></li>
+        <li><strong>François-Victor Hugo, <cite>Othello ou le More de Venise</cite></strong> <span>The only French translation used, public domain. A comparative exercise in Lesson 9. Yves Bonnefoy and Jean-Michel Déprats are not used.</span></li>
+        <li><strong>Public-domain critics</strong> <span>Thomas Rymer (1693), Samuel Johnson (1765), S. T. Coleridge, William Hazlitt (1817), A. C. Bradley (1904). Students answer the critic. Modern critics may be named, not quoted at length.</span></li>
+        <li><strong>Théodore Chassériau, <cite>Othello et Desdémone à Venise</cite>, 1849-1850</strong> <span>Louvre, RF 3897, public domain. A first exercise in looking, not a plot illustration.</span></li>
+        <li><strong>The video essay</strong> <span>About five minutes, by Madame Carole Paoli Pompougnac, on transmission, humility, and the theatrical trap.</span></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="spirale">
+      <h2 id="spirale">The spirale de Gorse</h2>
+      <p>Ten turns tighten towards a tip. The tip then opens into three paths: existential, political and civilisational. The French name of the method is kept. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</p>
+      <figure class="spirale-fig">
+        <img src="img/spirale-othello.png" width="1866" height="2598" alt="Diagram of the spirale de Gorse: ten turns, a tip, and three paths, existential, political and civilisational." />
+        <figcaption>Diagram of the spirale de Gorse: ten turns tighten towards a tip, which opens into three paths. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</figcaption>
+      </figure>
+      <ol class="tours">
+        <li><strong>Can we trust what we see?</strong> <span>Seeing and knowing.</span></li>
+        <li><strong>Why tell an audience you are not what you seem?</strong> <span>Appearance and profession. I.1, « I am not what I am ».</span></li>
+        <li><strong>How does a story about oneself win a hearing?</strong> <span>Testimony and self-fashioning. The Senate, I.3.</span></li>
+        <li><strong>When does a demand for proof become a wish to be confirmed?</strong> <span>Evidence and confirmation. III.3, ocular proof.</span></li>
+        <li><strong>Who decides what a gift is allowed to mean?</strong> <span>Object and narrative. III.4, the handkerchief and the test of trust.</span></li>
+        <li><strong>How can a scene be directed before anyone speaks?</strong> <span>Staging and interpretation. IV.1.</span></li>
+        <li><strong>Can two people share a conversation and not share its meaning?</strong> <span>Referent and assigned story. Bianca and the handkerchief.</span></li>
+        <li><strong>How can murder be made to sound like justice?</strong> <span>Rhetoric and justification. V.2, « Put out the light », « Speak of me as I am ».</span></li>
+        <li><strong>Does literature educate judgement, or only show its limits?</strong> <span>Critique and responsibility. Public-domain critics and Hugo.</span></li>
+        <li><strong>Can we explain the trap without being trapped by our own reading?</strong> <span>Explanation and humility. Summative commentary.</span></li>
+      </ol>
+      <p><strong>The tip.</strong> When a society believes images and rumours rather than facts and persons, who becomes the victim, and why?</p>
+    </section>
+
+    <section aria-labelledby="seances">
+      <h2 id="seances">The ten lessons</h2>
+      <p>Each lesson lasts 55 minutes and is timed on 52, with a stopping point at about minute 44 and an eight-minute emergency exit. The midpoint commentary is sat after Lesson 5. Lesson 10 is the summative hour.</p>
+      <ol class="seances">
+        <li><strong>Inheriting a way of reading</strong> <span>The video essay, the dedication, Chassériau, the spiral, a diagnostic.</span></li>
+        <li><strong>Iago’s invitation</strong> <span>« I am not what I am » (I.1). A contract with the spectator.</span></li>
+        <li><strong>The Senate: a story that wins a hearing</strong> <span>I.3. « Her father lov’d me »; « I saw Othello’s visage in his mind »; « Look to her, Moor »; « My life upon her faith ».</span></li>
+        <li><strong>The desire for proof</strong> <span>III.3. The green-eyed monster; « Haply, for I am black »; ocular proof.</span></li>
+        <li><strong>The handkerchief and the test of trust</strong> <span>III.4, a mandatory close reading: Emilia’s silence, the moist-hand speech, the history of the handkerchief, Desdemona’s change of subject. Midpoint assessment.</span></li>
+        <li><strong>Directing the spectator</strong> <span>IV.1. Othello made to watch a scene whose meaning has been prepared for him.</span></li>
+        <li><strong>One conversation, two meanings</strong> <span>Bianca, the handkerchief, and the assignment of a story.</span></li>
+        <li><strong>The language of justification</strong> <span>V.2. « Put out the light »; « Speak of me as I am. »</span></li>
+        <li><strong>What can literature teach?</strong> <span>Public-domain critics, a translation exercise from François-Victor Hugo, a debate on judgement.</span></li>
+        <li><strong>Explaining the trap</strong> <span>Summative commentary: « How does Shakespeare make Othello a spectator of his own deception? » A short director’s commentary.</span></li>
+      </ol>
+    </section>
+
+    <section id="telechargements" aria-labelledby="telechargements-titre">
+      <h2 id="telechargements-titre">Downloads</h2>
+      <p>Four documents, each in PDF, Word and LibreOffice. You may use and adapt these documents, with credit to their author, without commercial use, and share your versions under the same conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a>.</p>
+      <ul class="downloads">
+        <li>
+          <p class="doc-title">Student sequence (29 pages)</p>
+          <span class="doc-links">
+            <a href="Sequence-Othello-Passing-the-Flame.pdf">PDF</a>
+            <a href="Sequence-Othello-Passing-the-Flame.docx">Word (.docx)</a>
+            <a href="Sequence-Othello-Passing-the-Flame.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <p class="doc-title">Teacher’s sheet (5 pages)</p>
+          <span class="doc-links">
+            <a href="Fiche-prof-Othello-Passing-the-Flame.pdf">PDF</a>
+            <a href="Fiche-prof-Othello-Passing-the-Flame.docx">Word (.docx)</a>
+            <a href="Fiche-prof-Othello-Passing-the-Flame.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <p class="doc-title">Correction sheet (12 pages)</p>
+          <span class="doc-links">
+            <a href="Fiche-correction-Othello-Passing-the-Flame.pdf">PDF</a>
+            <a href="Fiche-correction-Othello-Passing-the-Flame.docx">Word (.docx)</a>
+            <a href="Fiche-correction-Othello-Passing-the-Flame.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <p class="doc-title">Accessible version: ten autonomous fiches (16 pages)</p>
+          <span class="doc-links">
+            <a href="Version-dys-Othello-Passing-the-Flame.pdf">PDF</a>
+            <a href="Version-dys-Othello-Passing-the-Flame.docx">Word (.docx)</a>
+            <a href="Version-dys-Othello-Passing-the-Flame.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <p class="pourquoi-sign">Madame Carole Paoli Pompougnac</p>
+    <p class="illu-credit">conçu par Madame Carole Paoli Pompougnac, mis en page par Grok. Théodore Chassériau, <cite>Othello et Desdémone à Venise</cite>, 1849-1850, Musée du Louvre, Paris, RF 3897, public domain. Diagram of the spirale de Gorse and pictograms: original illustrations. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</p>
+    <p style="margin:1.4rem 0 0"><a class="work-link" href="../lycee-general/anglais.html">Back to English, lycée général</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a></strong></p>
+        <p class="muted" style="margin:0.4rem 0 0">Catalogue pédagogique · Itinéraires et destinations</p>
+      </div>
+      <div class="licence">
+        <p style="margin:0">Creative Commons licence BY-NC-SA 4.0</p>
+        <p style="margin:0.35rem 0 0">You may use and adapt these documents, with credit to their author, without commercial use, and share your versions under the same conditions.
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">Licence details</a>.</p>
+        <p class="photo-credits-foot">Théodore Chassériau, Othello et Desdémone à Venise, 1849-1850, Musée du Louvre, Paris, RF 3897, public domain. Diagram of the spirale de Gorse and pictograms: original illustrations. © 2026 Madame Carole Paoli Pompougnac.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

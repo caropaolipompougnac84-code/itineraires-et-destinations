@@ -80,14 +80,14 @@
     },
     {
       "id": "lg-anglais",
-      "name": "Collection Anglais lycée général",
+      "name": "Collection Anglais lycée général et technologique",
       "section": "lycee-general",
       "subject": "anglais",
       "description": "Séquences d'anglais pour la Seconde, Première, Terminale et la spécialité."
     },
     {
       "id": "lg-lettres",
-      "name": "Collection Lettres lycée général",
+      "name": "Collection Lettres lycée général et technologique",
       "section": "lycee-general",
       "subject": "lettres",
       "description": "Séquences de lettres pour la Seconde, la Première et la Terminale."
@@ -470,7 +470,7 @@
       "section": "lycee-general",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "2de / 1re · LVA : B1 vers B1+ · général / pro",
+      "levelLabel": "2de / 1re · LVA : B1 vers B1+ · général et technologique / pro",
       "collection": "lg-anglais",
       "themes": [
         "travail",
@@ -555,7 +555,7 @@
       "section": "lycee-general",
       "subject": "anglais",
       "level": "1re",
-      "levelLabel": "1re générale · LVA B1+ / LVB B1 · bac pro / CAP",
+      "levelLabel": "1re générale et technologique · LVA B1+ / LVB B1 · bac pro / CAP",
       "collection": "lg-anglais",
       "themes": [
         "environnement",
@@ -590,7 +590,7 @@
       "section": "lycee-general",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "Bac pro · lycée général · adapté",
+      "levelLabel": "Bac pro · lycée général et technologique · adapté",
       "collection": "lg-anglais",
       "themes": [
         "voyage",
@@ -656,7 +656,7 @@
       "section": "lycee-general",
       "subject": "lettres",
       "level": "tous",
-      "levelLabel": "Lycée général",
+      "levelLabel": "Lycée général et technologique",
       "collection": "lg-lettres",
       "themes": [
         "litterature",
@@ -702,7 +702,7 @@
     {
       "id": "lg-lettres-1re-ponge-perec",
       "title": "Perec et Ponge",
-      "summary": "Du secret des choses au vertige de la consommation, en Première générale. Une version Terminale spécialité HLP, pour préparer la classe prépa littéraire et l'université, sera proposée à côté de celle-ci.",
+      "summary": "Du secret des choses au vertige de la consommation, en Première générale et technologique. Une version Terminale spécialité HLP, pour préparer la classe prépa littéraire et l'université, sera proposée à côté de celle-ci.",
       "section": "lycee-general",
       "subject": "lettres",
       "level": "1re",
@@ -1382,11 +1382,11 @@
     {
       "id": "meth-fiches-gerex",
       "title": "Méthodologie · Fiches GEREX",
-      "summary": "Fiches GEREX pour le français et l'anglais, du CAP au Bac général.",
+      "summary": "Fiches GEREX pour le français et l'anglais, du CAP au Bac général et technologique.",
       "section": "methodologie",
       "subject": "transversal",
       "level": "tous",
-      "levelLabel": "CAP au Bac général",
+      "levelLabel": "CAP au Bac général et technologique",
       "collection": "methodologie",
       "themes": [
         "examen"

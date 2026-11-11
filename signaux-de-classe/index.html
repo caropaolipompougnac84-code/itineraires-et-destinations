@@ -31,7 +31,7 @@
       border-left: 5px solid var(--burgundy);
     }
     .pourquoi-box p { margin: 0; font-size: 1.05rem; line-height: 1.7; }
-    .pourquoi-box strong { color: var(--burgundy-deep); font-weight: 700; }
+    .pourquoi-box strong { color: var(--burgundy); font-weight: 700; }
     .codes {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -70,6 +70,12 @@
       color: var(--ink-soft);
       line-height: 1.45;
     }
+    .pastilles-deco {
+      display: block;
+      width: min(16rem, 70%);
+      height: auto;
+      margin: 1rem 0 1.3rem;
+    }
     .downloads { margin: 0.4rem 0 0; padding: 0; list-style: none; }
     .downloads li {
       display: flex;
@@ -84,6 +90,7 @@
     .downloads .doc-title { flex: 1 1 12rem; font-weight: 600; margin: 0; }
     .downloads .doc-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
     .downloads a { min-height: 2.4rem; display: inline-flex; align-items: center; }
+    .illu-credit { font-size: 0.88rem; color: var(--ink-soft); margin: 1.2rem 0 0; }
     @media (max-width: 600px) {
       .codes { grid-template-columns: 1fr; }
       .code { text-align: left; display: grid; grid-template-columns: auto 1fr; column-gap: 0.75rem; align-items: center; }
@@ -124,6 +131,13 @@
       <p class="lede">Un code couleur pour participer sans s'exposer : trois ardoises sur pique, un classeur noté, et une sortie de cours prévue avec la vie scolaire.</p>
     </section>
 
+    <img class="pastilles-deco" src="img/pastilles.webp" width="900" height="346" alt="" role="presentation" />
+
+    <figure class="materiel">
+      <img src="img/hero-classe.webp" width="1200" height="675" alt="Une classe vue de dos : quelques élèves lèvent discrètement une petite ardoise sur pique, chacune avec une pastille unie bleue, verte ou orange." />
+      <figcaption>En classe, on lève l'ardoise sans un mot : seule la couleur parle.</figcaption>
+    </figure>
+
     <aside class="pourquoi-box" aria-labelledby="pourquoi-titre">
       <p id="pourquoi-titre"><strong>Pourquoi.</strong> Une séance dure 55 minutes. Elle ne peut pas être un quart d'heure d'apprentissage et quarante minutes de police de la classe. Les signaux, le classeur noté et la sortie de cours prévue avec la vie scolaire rendent ce temps aux apprentissages. Laisser faire le désordre, c'est une injustice pour les élèves qui veulent apprendre : ils n'ont pas à en payer le prix. Cette méthode protège leur droit d'apprendre, sans fermer la porte aux autres.</p>
     </aside>
@@ -149,21 +163,33 @@
         </div>
       </div>
       <figure class="materiel">
-        <img src="img/signaux-de-classe-materiel.png" width="975" height="594" alt="Trois petites ardoises sur pique plantées dans un pot, chacune portant une pastille unie, bleue, verte ou orange, et deux feuilles de pastilles de couleur posées à côté." />
-        <figcaption>Illustration originale. Rien n'est écrit sur l'ardoise : seule la couleur parle. © 2026 Madame Carole Paoli Pompougnac.</figcaption>
+        <img src="img/signaux-de-classe-materiel.webp" width="975" height="594" alt="Trois petites ardoises sur pique plantées dans un pot, chacune portant une pastille unie, bleue, verte ou orange, et deux feuilles de pastilles de couleur posées à côté." />
+        <figcaption>Les ardoises et les pastilles, prêtes à rester dans la classe.</figcaption>
       </figure>
       <p>Les ardoises restent dans la classe, rangées dans trois bacs, un par couleur. En arrivant, chaque élève en prend trois et les pose à plat sur sa table. Au lieu d'appeler ou de crier, il lève discrètement l'ardoise qui convient. Personne n'est mis en difficulté devant les autres.</p>
       <p>L'usage est obligatoire : au moins un signal par séance, pour chaque élève. Je compte chaque signal. La courbe des signaux, séance après séance, donne la note d'implication. C'est la progression qui compte, pas le nombre.</p>
+      <figure class="materiel">
+        <img src="img/courbe.webp" width="1000" height="750" alt="Une feuille posée sur un bureau, avec une courbe ascendante dessinée à la main et des pastilles bleues, vertes et orange." />
+        <figcaption>La courbe monte : c'est la progression qui est notée.</figcaption>
+      </figure>
     </section>
 
     <section aria-labelledby="classeur">
       <h2 id="classeur">Le classeur</h2>
       <p>La séquence tient dans un classeur classique à anneaux, avec des pochettes plastifiées. Selon la classe, il reste en salle ou il rentre à la maison. Avant chaque période de vacances, il est noté : c'est la note de classeur, coefficient 2, qui va avec la note d'implication.</p>
+      <figure class="materiel">
+        <img src="img/classeur.webp" width="1000" height="750" alt="Un classeur à anneaux ouvert sur un bureau, avec des pochettes plastifiées et des feuilles." />
+        <figcaption>Le classeur de la séquence, à feuilles plastifiées.</figcaption>
+      </figure>
     </section>
 
     <section aria-labelledby="sortie">
       <h2 id="sortie">La sortie de cours prévue avec la vie scolaire</h2>
       <p>Tout est convenu à l'avance avec la vie scolaire et la direction, en début d'année. Rien ne s'improvise le jour même. Un élève qui perturbe sans arrêt et empêche les autres d'apprendre sort du cours après un avertissement clair. Jamais pour une erreur ou une difficulté.</p>
+      <figure class="materiel">
+        <img src="img/salle-etudes.webp" width="1000" height="750" alt="Une salle d'études calme : un adulte à un bureau près de la fenêtre, un élève travaille plus loin, un classeur posé sur une table." />
+        <figcaption>En salle d'études ou en salle informatique, le travail continue, sous la responsabilité d'un adulte.</figcaption>
+      </figure>
       <p>Il travaille alors en salle d'études, avec son classeur et la fiche en cours, ou en salle informatique, où il télécharge la séquence sur itineraires-destinations.fr et reprend à la même fiche. Dans les deux cas, un adulte l'encadre. Le travail revient au professeur : il est corrigé et compté dans le classeur noté, comme celui des autres.</p>
       <p>La sortie n'est pas une fin. L'élève peut revenir en classe. Avant de revenir, un court échange redit les règles. Il reprend ses trois ardoises : c'est un nouveau départ.</p>
     </section>
@@ -208,6 +234,7 @@
     </section>
 
     <p class="pourquoi-sign">Madame Carole Paoli Pompougnac</p>
+    <p class="illu-credit">Illustrations originales.</p>
     <p style="margin:1.4rem 0 0"><a class="work-link" href="../methodologie/index.html">Retour à la méthodologie</a></p>
   </main>
 
@@ -221,7 +248,7 @@
         <p style="margin:0">Licence Creative Commons BY-NC-SA 4.0</p>
         <p style="margin:0.35rem 0 0">Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">Détails de la licence</a>.</p>
-        <p class="photo-credits-foot">Illustration originale des ardoises sur pique : © 2026 Madame Carole Paoli Pompougnac.</p>
+        <p class="photo-credits-foot">Illustrations originales. © 2026 Madame Carole Paoli Pompougnac.</p>
       </div>
     </div>
   </footer>

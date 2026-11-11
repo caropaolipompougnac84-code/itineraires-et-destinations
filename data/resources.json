@@ -284,15 +284,33 @@
       "section": "lycee-general",
       "subject": "anglais",
       "level": "1re",
-      "levelLabel": "1re / Tle B1 à B2",
+      "levelLabel": "1re / Tle · tronc commun B1+ vers B2 (1re), B2 (Tle) · LLCER vers C1",
       "collection": "lg-anglais",
       "themes": [
         "citoyennete",
         "culture"
       ],
-      "url": "https://british-politics-anglais.netlify.app/",
+      "url": "https://itineraires-destinations.fr/the-king-reigns/",
       "date": "2026-11-07",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120571201490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lg-anglais-tle-who-rules-britain",
+      "title": "Anglais · Tle · Who Rules Britain? Sovereignty, Crown and People",
+      "summary": "Version approfondie de The King Reigns : Magna Carta, 1689, Bagehot, Dicey, Brexit, la prorogation de 2019, l'Écosse et le vote à seize ans.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Tle · tronc commun B2 · tâches C1 · LLCER vers C1",
+      "collection": "lg-anglais",
+      "themes": [
+        "citoyennete",
+        "culture",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/who-rules-britain/",
+      "date": "2026-11-11"
     },
     {
       "id": "lg-anglais-1re-whose-land",

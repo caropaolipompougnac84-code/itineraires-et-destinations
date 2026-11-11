@@ -160,6 +160,26 @@
   ],
   "resources": [
     {
+      "id": "lg-hlp-tle-je-est-un-autre",
+      "title": "HLP · Terminale · Je est un autre ? Les métamorphoses du moi",
+      "summary": "Huit séances en onglets, la spirale de Gorse, un tableau des approches du moi, un devoir en quatre heures.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "hlp",
+      "levelLabel": "Tle HLP",
+      "collection": "lg-hlp",
+      "themes": [
+        "litterature",
+        "culture",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/hlp-je-est-un-autre/",
+      "date": "2026-11-12",
+      "image": "hlp-je-est-un-autre.jpg",
+      "credit": "Gustave Courbet, Le Désespéré, vers 1843-1845, collection particulière, domaine public."
+    },
+    {
       "id": "lg-option-passing-the-flame",
       "title": "Anglais · Tle spécialité LLCER · Passing the Flame",
       "summary": "Othello, or the trap of theatrical illusion: a C1 sequence in English, ten lessons in tabs, towards hypokhâgne and Licence LLCER.",

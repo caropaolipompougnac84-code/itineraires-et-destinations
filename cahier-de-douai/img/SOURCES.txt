@@ -38,3 +38,26 @@ Image actuellement en ligne (à remplacer) :
    Sobre, mais un peu austère, d'où la demande d'une image plus avenante.
 
 Aucune de ces images n'a été générée par intelligence artificielle.
+
+
+Portraits ajoutés pour l'encadré Mathilde Mauté (domaine public)
+
+1. Mathilde Mauté, photographie d'Alphonse Liébert, vers 1870.
+   Wikimedia Commons : https://commons.wikimedia.org/wiki/File:Mathilde_Maut%C3%A9_(1853-1914).jpg
+   Licence : domaine public (auteur mort en 1913).
+   Fichiers : mathilde-maute-liebert.jpg et .webp
+
+2. Arthur Rimbaud, photographie d'Étienne Carjat, octobre 1871.
+   Wikimedia Commons : https://commons.wikimedia.org/wiki/File:Rimbaud-Carjat-02.jpg
+   Licence : domaine public (auteur mort en 1906).
+   Le négatif original a été perdu ; les tirages conservés sont des contretypes ou retirages.
+   Fichiers : rimbaud-carjat-1871.jpg et .webp
+
+3. Paul Verlaine, photographie d'Otto Wegener, 1893.
+   Wikimedia Commons : https://commons.wikimedia.org/wiki/File:Paul_Verlaine.jpeg
+   Licence : domaine public (auteur mort en 1924).
+   Cabinet card, collection Benjamin R. Tucker. Date réelle : 1893, plus de vingt ans après le mariage avec Mathilde Mauté et le départ avec Rimbaud.
+   Aucun portrait photographique net de Verlaine autour de 1870-1872 n'a été trouvé sur Wikimedia Commons en qualité comparable. La photographie dite « probablement à Fampoux vers 1870 » (398 x 598 px, photographe inconnu) a été écartée pour sa basse définition. La photographie virale présentant « Verlaine et Rimbaud en chapeaux » n'a pas été utilisée : fausse attribution.
+   Fichiers : verlaine-wegener-1893.jpg et .webp
+
+Aucune de ces images n'a été générée par intelligence artificielle.

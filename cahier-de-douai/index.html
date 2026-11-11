@@ -172,6 +172,105 @@
     .downloads .doc-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
     .downloads a { min-height: 2.75rem; display: inline-flex; align-items: center; }
     .illu-credit { font-size: 0.88rem; color: var(--ink-soft); margin: 1.2rem 0 0; }
+
+    .mathilde {
+      margin: 1.6rem 0 2rem;
+      padding: 1.15rem 1.15rem 1.3rem;
+      background: var(--paper-3);
+      border: 1px solid var(--rule);
+      border-left: 5px solid var(--burgundy);
+    }
+    .mathilde h2 { margin-top: 0; }
+    .mathilde > p:last-child { margin-bottom: 0; }
+    .portraits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem 1rem;
+      margin: 0.2rem 0 1.2rem;
+      padding: 0;
+      list-style: none;
+    }
+    .portraits figure { margin: 0; }
+    .portraits img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #f3eadc;
+      border: 1px solid var(--rule);
+    }
+    .portraits figcaption {
+      margin: 0.4rem 0 0;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      line-height: 1.4;
+    }
+    .mathilde .plus-loin { font-size: 0.98rem; }
+    .questions { list-style: none; margin: 0 0 0.4rem; padding: 0; }
+    .questions li {
+      margin: 0;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .questions li:last-child { border-bottom: 0; }
+    .oeuvre-table-wrap {
+      overflow-x: auto;
+      margin: 0 0 1.2rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    .oeuvre-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .oeuvre-table th,
+    .oeuvre-table td {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.55rem 0.6rem 0.55rem 0;
+      text-align: left;
+      vertical-align: top;
+    }
+    .oeuvre-table th:last-child,
+    .oeuvre-table td:last-child { padding-right: 0; }
+    .oeuvre-table th {
+      color: var(--burgundy);
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+    .oeuvre-table .src { font-size: 0.82rem; color: var(--ink-soft); }
+    .table-lead { font-size: 0.95rem; color: var(--ink-soft); }
+    @media (max-width: 600px) {
+      .portraits {
+        grid-template-columns: 1fr;
+        max-width: 18rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .oeuvre-table thead { display: none; }
+      .oeuvre-table, .oeuvre-table tbody, .oeuvre-table tr, .oeuvre-table td {
+        display: block;
+        width: 100%;
+      }
+      .oeuvre-table tr {
+        border: 1px solid var(--rule);
+        border-left: 3px solid var(--burgundy);
+        padding: 0.65rem 0.7rem 0.5rem;
+        margin: 0 0 0.75rem;
+      }
+      .oeuvre-table td {
+        border: 0;
+        padding: 0.25rem 0;
+      }
+      .oeuvre-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 600;
+        color: var(--burgundy);
+        font-size: 0.8rem;
+        margin-bottom: 0.1rem;
+      }
+    }
+
     @media (max-width: 600px) {
       .tours .r { padding-left: 0; }
       .seances li { padding-left: 2rem; }
@@ -230,6 +329,131 @@
     <aside class="pourquoi-box" aria-labelledby="problematique-titre">
       <p id="problematique-titre"><strong>Problématique.</strong> Peut-on se libérer par la poésie quand le monde, lui, reste en guerre et en manque ?</p>
     </aside>
+
+
+    <section class="mathilde" id="mathilde" aria-labelledby="mathilde-titre">
+      <h2 id="mathilde-titre">L'autre côté de la légende : Mathilde Mauté</h2>
+      <div class="portraits">
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="img/mathilde-maute-liebert.webp" />
+            <img src="img/mathilde-maute-liebert.jpg" width="1000" height="1240" alt="Portrait photographique de Mathilde Mauté, jeune femme en robe sombre, vers 1870." />
+          </picture>
+          <figcaption>Mathilde Mauté, vers 1870, à l'époque de son mariage. Alphonse Liébert, domaine public.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="img/verlaine-wegener-1893.webp" />
+            <img src="img/verlaine-wegener-1893.jpg" width="1000" height="1250" alt="Portrait photographique de Paul Verlaine, barbu, un foulard autour du cou, en 1893." />
+          </picture>
+          <figcaption>Paul Verlaine, 1893, plus de vingt ans après les faits racontés ici. Otto Wegener, domaine public.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="img/rimbaud-carjat-1871.webp" />
+            <img src="img/rimbaud-carjat-1871.jpg" width="1000" height="1250" alt="Portrait photographique d'Arthur Rimbaud à dix-sept ans, par Étienne Carjat, en octobre 1871." />
+          </picture>
+          <figcaption>Arthur Rimbaud, dix-sept ans, en octobre 1871, l'année de son arrivée chez les Mauté. Étienne Carjat, domaine public.</figcaption>
+        </figure>
+      </div>
+      <p>L'histoire de Rimbaud et de Verlaine est souvent racontée comme celle de deux poètes maudits. On oublie presque toujours Mathilde Mauté, qui vivait sous le même toit.</p>
+      <p>Née le 17 avril 1853, elle croise Verlaine, ami de son demi-frère Charles de Sivry, vers 1868, à quatorze ans, et le trouve laid et mal habillé. C'est en 1869, à seize ans, qu'il s'éprend d'elle. Ils se marient le 11 août 1870 : elle a dix-sept ans, lui vingt-six. Verlaine lui dédie <cite>La Bonne Chanson</cite>.</p>
+      <p>En septembre 1871, Arthur Rimbaud, seize ans, arrive à Paris. La famille Mauté l'héberge un temps, rue Nicolet. Verlaine se remet à boire. Huit jours avant la naissance de leur fils Georges, le 30 octobre 1871, il devient violent envers Mathilde. En juillet 1872, il part avec Rimbaud. Mathilde ne le reverra plus, et Georges, nourrisson, ne verra presque plus son père.</p>
+      <p>Dans ses <cite>Mémoires de ma vie</cite>, publiés en 1935, Mathilde résume ces deux années : « Un an de paradis, un an d'enfer. » Son témoignage, longtemps relégué, interroge la voix que l'histoire littéraire choisit de garder. Les écrivains ont souvent des parcours atypiques. Un cours de littérature n'est pas un cours de morale ni de religion : on y interroge le lien, ou l'écart, entre une œuvre et une vie, sans dicter une conclusion.</p>
+      <p class="plus-loin"><strong>Pour aller plus loin.</strong> Hélène Mathieu et Daniel Grandclément, <cite>Madame Verlaine</cite>, Éditions Phébus, 2026, ISBN 978-2-7529-1543-6. <a href="https://www.editionsphebus.fr/catalogue/madame-verlaine">Page de l'éditeur</a>.</p>
+      <h3>Questions</h3>
+      <ol class="questions">
+        <li><strong>À l'oral.</strong> Quelle voix l'histoire littéraire a-t-elle longtemps retenue, et laquelle a-t-elle laissée de côté ? Qu'est-ce que cela change, selon vous, dans la manière de lire Rimbaud et Verlaine ? Vous pouvez commencer ainsi : « À mon avis, ... parce que ... »</li>
+        <li><strong>À l'écrit.</strong> Le talent d'un écrivain garantit-il l'intégrité de l'homme ? Vous pouvez commencer ainsi : « À mon avis, ... parce que ... »</li>
+        <li><strong>À l'oral ou à l'écrit.</strong> En vous appuyant sur les deux tableaux ci-dessous, que vous inspire le lien, ou l'écart, entre une œuvre et une vie ? Vous pouvez commencer ainsi : « En lisant ces tableaux, je me demande si ... »</li>
+      </ol>
+      <h3>Tableau 1. L'œuvre et l'homme</h3>
+      <p class="table-lead">Faits documentés, formulés de manière neutre. Le tableau n'invite pas à juger les œuvres, mais à interroger le rapport entre un texte étudié au lycée et des faits établis de la biographie.</p>
+      <div class="oeuvre-table-wrap">
+        <table class="oeuvre-table">
+          <thead>
+            <tr>
+              <th scope="col">Auteur</th>
+              <th scope="col">Œuvre étudiée au lycée</th>
+              <th scope="col">Ce que l'on reproche à l'homme</th>
+              <th scope="col">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Auteur">Paul Verlaine</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>Fêtes galantes</cite>, <cite>Romances sans paroles</cite></td>
+              <td data-label="Ce que l'on reproche à l'homme">Violences conjugales envers Mathilde Mauté, retenues notamment par le jugement de séparation de corps du 24 avril 1874 ; le 10 juillet 1873, à Bruxelles, il blesse Rimbaud d'un coup de revolver.</td>
+              <td class="src" data-label="Source"><a href="https://essentiels.bnf.fr/fr/image/70843083-c9e9-49f9-ad57-220a2dcc6eef-verlaine-et-mathilde-maute">BnF Essentiels</a> ; <a href="https://www.larousse.fr/encyclopedie/personnage/Paul_Verlaine/148617">Larousse</a> ; <a href="https://www.gazette-drouot.com/lots/32523984-paul-verlaine--actes-officiels---">acte de la séparation, Gazette Drouot</a></td>
+            </tr>
+            <tr>
+              <td data-label="Auteur">Jean-Jacques Rousseau</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>Émile ou De l'éducation</cite>, <cite>Les Confessions</cite></td>
+              <td data-label="Ce que l'on reproche à l'homme">Dans <cite>Les Confessions</cite>, il reconnaît avoir fait déposer aux Enfants-Trouvés les cinq enfants qu'il a eus avec Thérèse Levasseur (vers 1745-1751).</td>
+              <td class="src" data-label="Source"><a href="https://essentiels.bnf.fr/fr/article/defb1283-8d15-4f39-bcb9-4b0dd3537a1e-rousseau-en-30-dates">BnF Essentiels, « Rousseau en 30 dates »</a></td>
+            </tr>
+            <tr>
+              <td data-label="Auteur">Louis-Ferdinand Céline</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>Voyage au bout de la nuit</cite></td>
+              <td data-label="Ce que l'on reproche à l'homme">Auteur de pamphlets antisémites (<cite>Bagatelles pour un massacre</cite>, 1937 ; <cite>L'École des cadavres</cite>, 1938 ; <cite>Les Beaux Draps</cite>, 1941). Sous l'Occupation, il fréquente les milieux de la collaboration et intervient dans la presse de l'époque.</td>
+              <td class="src" data-label="Source"><a href="https://www.radiofrance.fr/franceculture/podcasts/grande-traversee-louis-ferdinand-celine-au-fond-de-la-nuit/bagatelles-pour-un-massacre-5864522">France Culture</a> ; <a href="https://www.universalis.fr/encyclopedie/louis-ferdinand-celine/3-la-derive-pamphletaire-et-antisemite/">Universalis</a></td>
+            </tr>
+            <tr>
+              <td data-label="Auteur">Jean-Paul Sartre</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>Huis clos</cite>, <cite>L'Existentialisme est un humanisme</cite></td>
+              <td data-label="Ce que l'on reproche à l'homme">Compagnon de route du Parti communiste au début des années 1950 (<cite>Les Communistes et la paix</cite>, 1952) ; il condamne l'intervention soviétique en Hongrie et rompt avec le PCF en 1956. À partir de 1970, il s'associe aux maoïstes français, notamment en acceptant la direction de <cite>La Cause du peuple</cite>. Des relations du couple Sartre-Beauvoir avec de très jeunes femmes, dont d'anciennes élèves, sont documentées par la correspondance et des témoignages.</td>
+              <td class="src" data-label="Source"><a href="https://expositions.bnf.fr/sartre/arret/1952.htm">Exposition BnF, Sartre et le PCF</a> ; <a href="https://expositions.bnf.fr/sartre/reperes/chrono.htm">chronologie BnF</a> ; <a href="https://www.retronews.fr/arts/long-format/2023/10/11/simone-de-beauvoir-occupation">Retronews / BnF, affaire Sorokine, 1941-1943</a></td>
+            </tr>
+            <tr>
+              <td data-label="Auteur">Robert Brasillach</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>Notre avant-guerre</cite> (parfois abordé comme document d'époque)</td>
+              <td data-label="Ce que l'on reproche à l'homme">Rédacteur en chef de l'hebdomadaire <cite>Je suis partout</cite> (1937-1943). Condamné à mort pour intelligence avec l'ennemi le 19 janvier 1945, fusillé le 6 février 1945.</td>
+              <td class="src" data-label="Source"><a href="https://catalogue.bnf.fr/ark:/12148/cb11893803h">Notice BnF</a> ; <a href="https://www.charles-de-gaulle.org/lhomme/biographies/robert-brasillach/">Fondation Charles de Gaulle</a></td>
+            </tr>
+            <tr>
+              <td data-label="Auteur">Pierre Drieu la Rochelle</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>Gilles</cite></td>
+              <td data-label="Ce que l'on reproche à l'homme">En 1940, il prend la direction de <cite>La Nouvelle Revue française</cite> sous l'Occupation. Une lettre du service allemand de la Propagande, le 28 novembre 1940, voit en lui une garantie pour propager l'idée d'une collaboration entre la France et l'Allemagne.</td>
+              <td class="src" data-label="Source"><a href="https://essentiels.bnf.fr/fr/image/707e26ff-bc4a-403e-b75e-1b43e0764251-courrier-commandant-militaire-en-france-section-la-propagande-autorisant-reouverture-la-maison-edition">BnF Essentiels, lettre du 28 novembre 1940</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Tableau 2. Quand la vie explique l'œuvre</h3>
+      <p class="table-lead">Ce second tableau n'est pas un répertoire de faits blâmables. Il rassemble des circonstances de vie, parfois très différentes, qui aident à comprendre une œuvre, un rythme d'écriture ou un thème.</p>
+      <div class="oeuvre-table-wrap">
+        <table class="oeuvre-table">
+          <thead>
+            <tr>
+              <th scope="col">Auteur</th>
+              <th scope="col">Œuvre étudiée au lycée</th>
+              <th scope="col">Ce que la vie éclaire dans l'œuvre</th>
+              <th scope="col">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Auteur">Honoré de Balzac</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>La Comédie humaine</cite> (<cite>Le Père Goriot</cite>, <cite>Eugénie Grandet</cite>, etc.)</td>
+              <td data-label="Ce que la vie éclaire dans l'œuvre">Après la faillite de son imprimerie, il a près de 100 000 francs de dettes dès 1828. Il écrit à un rythme intense, souvent la nuit, pour payer ses créanciers, et se ménage une issue pour échapper aux huissiers (porte dérobée de la maison de Passy). Une grande partie de l'œuvre paraît d'abord en feuilleton : un contrat de 1839 avec <cite>La Presse</cite> prévoit un paiement par feuilleton, calculé sur un nombre fixe de colonnes et de lignes. Le café fait partie de ce régime de travail. La légende des 10 litres, ou des 50 tasses par jour, n'est pas établie. Dans sa correspondance, Balzac évoque notamment trois tasses, et une livre de café moka en huit jours, soit environ 60 grammes par jour.</td>
+              <td class="src" data-label="Source"><a href="https://essentiels.bnf.fr/fr/article/64f35bd4-a784-460d-8ef1-0592d9eeb4d7-balzac-en-30-dates">BnF Essentiels, « Balzac en 30 dates »</a> ; <a href="https://www.the-saleroom.com/en-gb/auction-catalogues/international-autograph-auction-spain-s-l/catalogue-id-srint10021/lot-8b18408b-0fc6-496f-b8b9-b28b00f0ed44">contrat avec <cite>La Presse</cite>, 16 avril 1839</a> ; <a href="https://www.radiofrance.fr/franceinter/podcasts/la-chronique-de-christophe-andre/honore-de-balzac-de-l-interieur-5811203">France Inter, maison de Passy</a> ; <a href="https://actualitte.com/article/135069/insolite/balzac-buvait-il-vraiment-50-cafes-par-jour-on-a-enquete">enquête ActuaLitté sur le café</a> ; <a href="https://serd.hypotheses.org/files/2020/01/4_Bentolila_mis_en_forme_SERD.pdf">étude Bentolila, SERD, correspondance</a></td>
+            </tr>
+            <tr>
+              <td data-label="Auteur">Victor Hugo</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>Les Contemplations</cite> (dont « Demain, dès l'aube »)</td>
+              <td data-label="Ce que la vie éclaire dans l'œuvre">Du 18 juillet au 12 septembre 1843, il voyage en Espagne et dans les Pyrénées avec Juliette Drouet, tandis qu'il est marié à Adèle Foucher. Le 4 septembre 1843, sa fille Léopoldine se noie à Villequier, avec son mari Charles Vacquerie. Hugo l'apprend le 9 septembre, au Café de l'Europe à Rochefort, en lisant <cite>Le Siècle</cite>.</td>
+              <td class="src" data-label="Source"><a href="https://juliettedrouet.univ-rouen.fr/outils/chronologie">Chronologie Juliette Drouet, Université de Rouen</a> ; <a href="https://www.ville-rochefort.fr/plaque-en-hommage-au-passage-de-victor-hugo-rochefort-le-9-septembre-1843">Ville de Rochefort</a></td>
+            </tr>
+            <tr>
+              <td data-label="Auteur">George Sand</td>
+              <td data-label="Œuvre étudiée au lycée"><cite>La Mare au diable</cite>, <cite>La Petite Fadette</cite>, <cite>François le Champi</cite></td>
+              <td data-label="Ce que la vie éclaire dans l'œuvre">Née Aurore Dupin, elle vit de sa plume, élève ses enfants et mène une vie indépendante, contraire aux normes alors imposées aux femmes. Elle a notamment une liaison avec Alfred de Musset, puis une relation de près de dix ans avec Frédéric Chopin, à Paris, Majorque et Nohant.</td>
+              <td class="src" data-label="Source"><a href="https://essentiels.bnf.fr/fr/article/57176f3a-7e28-48ee-a268-10c02af5abfd-george-sand-vivre-de-sa-plume">BnF Essentiels, « George Sand, vivre de sa plume »</a> ; <a href="https://essentiels.bnf.fr/fr/personnalite/415698dd-986f-4181-a4bf-3fbd5b2b784e-george-sand">BnF Essentiels, portrait</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <section aria-labelledby="corpus">
       <h2 id="corpus">Les cinq poèmes</h2>
@@ -314,7 +538,7 @@
       <p>Trois documents, chacun en PDF, Word et LibreOffice. Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>.</p>
       <ul class="downloads">
         <li>
-          <p class="doc-title">Séquence (95 pages)</p>
+          <p class="doc-title">Séquence (98 pages)</p>
           <span class="doc-links">
             <a href="Sequence-Cahier-de-Douai-Rimbaud.pdf">PDF</a>
             <a href="Sequence-Cahier-de-Douai-Rimbaud.docx">Word (.docx)</a>
@@ -322,7 +546,7 @@
           </span>
         </li>
         <li>
-          <p class="doc-title">Fiche professeur (2 pages)</p>
+          <p class="doc-title">Fiche professeur (5 pages)</p>
           <span class="doc-links">
             <a href="Fiche-prof-Cahier-de-Douai.pdf">PDF</a>
             <a href="Fiche-prof-Cahier-de-Douai.docx">Word (.docx)</a>
@@ -341,7 +565,7 @@
     </section>
 
     <p class="pourquoi-sign">Madame Carole Paoli Pompougnac</p>
-    <p class="illu-credit">Henri Fantin-Latour, Un coin de table, 1872, musée d'Orsay, domaine public. Schéma de la spirale et pictogrammes : illustrations originales.</p>
+    <p class="illu-credit">Henri Fantin-Latour, Un coin de table, 1872, musée d'Orsay, domaine public. Portraits : Alphonse Liébert, Mathilde Mauté, vers 1870 ; Otto Wegener, Paul Verlaine, 1893 ; Étienne Carjat, Arthur Rimbaud, octobre 1871, domaine public. Schéma de la spirale et pictogrammes : illustrations originales.</p>
     <p style="margin:1.4rem 0 0"><a class="work-link" href="../lycee-general/lettres.html">Retour aux lettres</a></p>
   </main>
 
@@ -355,7 +579,7 @@
         <p style="margin:0">Licence Creative Commons BY-NC-SA 4.0</p>
         <p style="margin:0.35rem 0 0">Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">Détails de la licence</a>.</p>
-        <p class="photo-credits-foot">Henri Fantin-Latour, Un coin de table, 1872, musée d'Orsay, domaine public. Schéma de la spirale et pictogrammes : illustrations originales. © 2026 Madame Carole Paoli Pompougnac.</p>
+        <p class="photo-credits-foot">Henri Fantin-Latour, Un coin de table, 1872, musée d'Orsay, domaine public. Portraits : Alphonse Liébert, Mathilde Mauté, vers 1870 ; Otto Wegener, Paul Verlaine, 1893 ; Étienne Carjat, Arthur Rimbaud, octobre 1871, domaine public. Schéma de la spirale et pictogrammes : illustrations originales. © 2026 Madame Carole Paoli Pompougnac.</p>
       </div>
     </div>
   </footer>

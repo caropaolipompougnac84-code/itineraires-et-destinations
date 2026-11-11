@@ -160,6 +160,86 @@
   ],
   "resources": [
     {
+      "id": "meth-preparer-examens-francais",
+      "title": "Méthodologie · Préparer aux examens en français",
+      "summary": "Les ressources de français réunies par examen : brevet (DNB), CAP, bac professionnel, bac de français à l’écrit et à l’oral.",
+      "section": "methodologie",
+      "subject": "lettres",
+      "level": "tous",
+      "levelLabel": "Brevet · CAP · Bac pro · Bac de français",
+      "collection": "methodologie",
+      "methodGroup": "_top",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/francais/",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "lycee-general-lettres-preparer-examens-francais",
+      "title": "Lettres · Préparer aux examens en français",
+      "summary": "Les ressources de français réunies par examen : brevet (DNB), CAP, bac professionnel, bac de français à l’écrit et à l’oral.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Bac de français · écrit et oral",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/francais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true,
+      "collection": "lg-lettres"
+    },
+    {
+      "id": "lycee-pro-lettres-preparer-examens-francais",
+      "title": "Lettres · Préparer aux examens en français",
+      "summary": "Les ressources de français réunies par examen : brevet (DNB), CAP, bac professionnel, bac de français à l’écrit et à l’oral.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "tous",
+      "levelLabel": "CAP · Bac pro · Bac de français",
+      "collection": "lp-lettres",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/francais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true
+    },
+    {
+      "id": "cfa-lettres-preparer-examens-francais",
+      "title": "Lettres · Préparer aux examens en français",
+      "summary": "Les ressources de français réunies par examen : brevet (DNB), CAP, bac professionnel, bac de français à l’écrit et à l’oral.",
+      "section": "cfa",
+      "subject": "lettres",
+      "level": "tous",
+      "levelLabel": "CAP · Bac pro",
+      "collection": "cfa-lettres",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/francais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true
+    },
+    {
+      "id": "segpa-lettres-preparer-examens-francais",
+      "title": "Lettres · Préparer aux examens en français",
+      "summary": "Les ressources de français réunies par examen : brevet (DNB), CAP, bac professionnel, bac de français à l’écrit et à l’oral.",
+      "section": "segpa",
+      "subject": "lettres",
+      "level": "brevet",
+      "levelLabel": "Brevet (DNB)",
+      "collection": "segpa-lettres",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/francais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true
+    },
+    {
       "id": "meth-oral-du-bac",
       "title": "Lettres · Méthode · L’oral du bac de français : présenter une œuvre et dialoguer",
       "summary": "Huit séances pour lire, expliquer, présenter une œuvre et dialoguer avec l’examinateur. La Boétie et Sarraute, oraux modèles en dialogue, grilles d’oral blanc renseignées, avec la spirale de Gorse.",

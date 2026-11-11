@@ -397,3 +397,6 @@ body[data-section="option"] { --burgundy: var(--opt); }
 
 /* Méthodologie : sous-sections (La dissertation, Le commentaire, L'oral du bac) */
 .method-group-empty { margin: 0.3rem 0 0.9rem; }
+.method-top { margin: 0.4rem 0 1.4rem; }
+.method-top .work { border-left: 5px solid var(--burgundy, #7B1E3A); background: var(--paper-3, #fff); padding: 0.9rem 1.1rem 1rem; }
+.method-top .work h3 { font-size: 1.25rem; }

@@ -183,7 +183,11 @@
           return { id: g.slice(0, i), label: g.slice(i + 1) };
         });
         const filtering = !!(activeTheme || query || activeLevel);
-        listEl.innerHTML = groups
+        const top = filtered.filter((r) => r.methodGroup === "_top");
+        const topHTML = top.length
+          ? `<div class="works method-top">` + top.map((r) => workHTML(r, data.themes)).join("") + `</div>`
+          : "";
+        listEl.innerHTML = topHTML + groups
           .map((g, gi) => {
             const items = filtered.filter((r) => (r.methodGroup || groups[0].id) === g.id);
             const body = items.length
@@ -265,7 +269,7 @@ ${chipsSource
   function fillNouveautes(data) {
     const el = document.querySelector("[data-nouveautes]");
     if (!el) return;
-    const list = enrich(dedupe(data.resources || []), data.collections)
+    const list = enrich(dedupe((data.resources || []).filter((r) => !r.hideInNouveautes)), data.collections)
       .slice()
       .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))
       .slice(0, 14);

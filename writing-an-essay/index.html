@@ -49,18 +49,16 @@ select{display:block;width:100%;margin-top:.25rem}input.t,textarea{width:100%}te
 button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:.55rem 1rem;margin:.6rem .4rem 0 0;cursor:pointer;min-height:44px}
 button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--rust);outline-offset:2px}
 button.v{background:var(--teal);color:#fff}button.r{background:#e9e2d2;color:var(--ink)}
-button.ans-btn{background:#fff;color:var(--rust);border:2px solid var(--gold)}
-button.ans-btn[aria-expanded="true"]{background:var(--gold);color:var(--ink)}
 button.g{background:var(--rust);color:#fff}.score{font-weight:700;margin-left:.3rem}
 .ans{margin:.6rem 0 0;border:2px solid var(--gold);border-radius:10px;background:#fffdf7;padding:.4rem .9rem .6rem}
-.ans[hidden]{display:none}
+.ans-label{margin:.15rem 0 .35rem;color:var(--rust)}
 .devoir{border:2px solid var(--teal2)}.method{border-left:6px solid var(--teal2)}
 .model{font-family:Georgia,"Times New Roman",serif;background:#fffdf7;border:1px solid var(--line);border-radius:10px;padding:.7rem .95rem}
 .model p{margin:.45rem 0}.wc{font-size:.9rem;color:#5b6a6e}
 .swatch{display:inline-block;width:1em;height:1em;border-radius:3px;vertical-align:middle;margin-right:.25rem;border:1px solid #999}
 .swatch.blue{background:#4a7bbd}.swatch.red{background:#c45a4a}.swatch.green{background:#4a9b6a}.swatch.yellow{background:#e9b44c}
 footer{margin-top:2.5rem;background:var(--teal);color:#fff;padding:1.2rem 0;font-size:.95rem}footer a{color:#fff}
-@media print{nav.sn,button,.noprint{display:none!important}body{background:#fff}.ans[hidden]{display:none!important}}
+@media print{nav.sn,button,.noprint{display:none!important}body{background:#fff}}
 </style>
 <style>
 nav.sn{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);white-space:normal;overflow:visible}
@@ -122,7 +120,7 @@ figcaption .cr{display:block;margin-top:.25rem;font-weight:400}
 <dt>Aims</dt><dd>Deconstruct a model essay, master a B2 toolbox (passives, inversion, punctuation), organise ideas in categories 1, 2 and 3, use the five parts of the essay, plan with a dialectical grid, make revision flashcards, peer-review, write a 250 to 300-word argued essay.</dd>
 <dt>Cultural anchor</dt><dd>Albert Anker, Appliquée (Fleissig), 1886 · K-Pop, manga, Hollywood and streaming · minority languages online</dd>
 </dl></aside>
-<p>Five sessions: deconstruct a model, learn how the essay is built, train the language toolbox, plan and draft, then peer-review and write.</p>
+<p>Five lessons: deconstruct a model, learn how the essay is built, train the language toolbox, plan and draft, then peer-review and write.</p>
 <p><a href='/writing-an-essay/dys/'>Adapted version (dyslexia)</a></p>
 </div></header>
 <nav class="sn" aria-label="Contents"><div class="wrap">
@@ -175,7 +173,7 @@ figcaption .cr{display:block;margin-top:.25rem;font-weight:400}
   <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short at this stopping point, we condense: we dictate the five parts and what becomes of each category; a round of the class, one idea placed in 1, 2 or 3, each in turn; the homework (fill in the category grid for the topic) is written on the board.</p>
 </li>
 <li>
-  <a href="#s4">Lesson 3 · Starters, linkers and the language toolbox</a>
+  <a href="#s3">Lesson 3 · Starters, linkers and the language toolbox</a>
   <span class="pdr-time">52 min</span>
   <p class="pdr-aim">Learn sentence starters and linking words, work on grammar and punctuation.</p>
   <ul class="pdr-steps">
@@ -193,7 +191,7 @@ figcaption .cr{display:block;margin-top:.25rem;font-weight:400}
   <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short at this stopping point, we condense: we dictate one starter per part and three linkers; a round of the class, one starter said out loud by each student; the homework (three sentences with soft power, heritage and glocalization, one sentence in the passive) is written on the board.</p>
 </li>
 <li>
-  <a href="#s5">Lesson 4 · Brainstorming and guided planning</a>
+  <a href="#s4">Lesson 4 · Brainstorming and guided planning</a>
   <span class="pdr-time">52 min</span>
   <p class="pdr-aim">Sort ideas by category, fill in the grid, write a first draft of 250 to 300 words.</p>
   <ul class="pdr-steps">
@@ -253,9 +251,6 @@ figcaption .cr{display:block;margin-top:.25rem;font-weight:400}
 <div class="card bo" id="bo"><h3>Official curriculum (verified)</h3>
 <p>Programme of modern languages for Première and Terminale, general and technological pathways: <strong>Bulletin officiel spécial n° 1 of 22 January 2019</strong> (order of 17 January 2019, NOR MENE1901585A). Theme of the cycle terminal: <i>Founding gestures and worlds in motion</i>. This sequence works Axis 1, <i>Identities and exchanges</i>.</p>
 <p>LVA and LVB are assessed through continuous assessment for the baccalauréat. In the tronc commun, LVA aims at B2 in Terminale (B1+ towards B2 in Première). The spécialité LLCER anglais aims towards C1 by the end of Terminale (BO spécial n° 1 of 22 January 2019). Sources: <a href="https://www.education.gouv.fr/bo/19/Special1/MENE1901585A.htm">BO special n° 1 (22 Jan 2019)</a> · <a href="https://eduscol.education.gouv.fr/5811/programmes-et-ressources-en-langues-vivantes-voie-gt">éduscol, voie GT</a>.</p></div>
-<div class="card prof noprint"><p><strong>Teacher corner</strong></p>
-<p>Answers stay hidden until you open them. This button opens every answer key.</p>
-<button type="button" class="g" aria-pressed="false">Show all answers</button></div>
 <figure class="paint">
 <img src="img/anker-appliquee-fleissig-1886.jpg" alt="A focused schoolgirl writes carefully at her desk in a bright classroom." loading="lazy">
 <figcaption><span class="ref">Albert Anker (1831 to 1910), <i>Appliquée (Fleissig)</i>, 1886. Oil on canvas, 61.5 × 50 cm. Private collection.</span><br>
@@ -266,8 +261,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <h2 class="seance-h">Session 1 · Deconstruction</h2>
 <div class="card rappel"><p class="bar">Recap</p>
 <p>What do you already know about writing an argued essay? Name one linker and one example you could use on this topic.</p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="r1">Show answers</button>
-<div class="ans" id="r1" hidden><p>Possible linkers: On the one hand, However, Consequently, To conclude. Examples must be precise (a tool, a company, a cultural fact).</p></div>
+<div class="ans" id="r1"><p class="ans-label"><strong>Answer key</strong></p>
+<p>Possible linkers: On the one hand, However, Consequently, To conclude. Examples must be precise (a tool, a company, a cultural fact).</p></div>
 </div>
 
 <div class="card method"><h3>Read the model</h3>
@@ -290,8 +285,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <li><span class="swatch green"></span><strong>Green:</strong> highlight the topic sentence at the start of each body paragraph.</li>
 <li><span class="swatch yellow"></span><strong>Yellow:</strong> circle the linking words (On the one hand, Consequently, Furthermore…).</li>
 </ul>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a1">Show answers</button>
-<div class="ans" id="g-a1" hidden>
+<div class="ans" id="g-a1"><p class="ans-label"><strong>Answer key</strong></p>
+
 <p><strong>Hook:</strong> From Paris to Tokyo… same apps.</p>
 <p><strong>Research question:</strong> does global interconnectedness wipe out local identities?</p>
 <p><strong>Topic sentences:</strong> “On the one hand, economic globalization clearly pushes cultural standardization.” / “On the other hand, globalization also offers powerful tools to celebrate and export local cultures.”</p>
@@ -309,8 +304,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <button type="button" class="v" onclick="check('g-s1-e2')">Check</button>
 <button type="button" class="r" onclick="clr('g-s1-e2')">Clear</button>
 <span class="score" aria-live="polite"></span>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a2">Show answers</button>
-<div class="ans" id="g-a2" hidden>
+<div class="ans" id="g-a2"><p class="ans-label"><strong>Answer key</strong></p>
+
 <p><strong>Body 1:</strong> Point = standardization through soft power · Example = Hollywood / Netflix · Result = pressure on linguistic heritage.</p>
 <p><strong>Body 2:</strong> Point = glocalization / export of local cultures · Example = K-Pop, manga · Result = revival of minority languages and heritage shared online.</p>
 </div>
@@ -330,8 +325,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <button type="button" class="v" onclick="check('g-s1-e3')">Check</button>
 <button type="button" class="r" onclick="clr('g-s1-e3')">Clear</button>
 <span class="score" aria-live="polite"></span>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a3">Show answers</button>
-<div class="ans" id="g-a3" hidden>
+<div class="ans" id="g-a3"><p class="ans-label"><strong>Answer key</strong></p>
+
 <ol>
 <li>soft power</li>
 <li>heritage (or linguistic heritage)</li>
@@ -346,8 +341,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <li>Copy the four colour codes into your notebook with one example sentence each from the model.</li>
 <li>Learn the three vocabulary items from Exercise 3.</li>
 </ol>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-hw1">Show answers</button>
-<div class="ans" id="g-hw1" hidden><p>See the answer keys of Exercises 1 and 3.</p></div>
+<div class="ans" id="g-hw1"><p class="ans-label"><strong>Answer key</strong></p>
+<p>See the answer keys of Exercises 1 and 3.</p></div>
 </div>
 
 </section>
@@ -356,8 +351,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <h2 class="seance-h">Session 2 · How the essay is built</h2>
 <div class="card rappel"><p class="bar">Recap</p>
 <p>From Session 1: what is the research question of the model, and what are the two sides of the debate?</p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="r2">Show answers</button>
-<div class="ans" id="r2" hidden><p>See Session 1 answer keys: the model question and the Pros / Cons structure.</p></div>
+<div class="ans" id="r2"><p class="ans-label"><strong>Answer key</strong></p>
+<p>See Session 1 answer keys: the model question and the Pros / Cons structure.</p></div>
 </div>
 
 <div class="card method">
@@ -399,8 +394,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <p><button type="button" class="v" onclick="check('g-s2-e2')">Check</button>
 <button type="button" class="r" onclick="clr('g-s2-e2')">Clear</button>
 <span class="score"></span></p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a6">Show answers</button>
-<div class="ans" id="g-a6" hidden>
+<div class="ans" id="g-a6"><p class="ans-label"><strong>Answer key</strong></p>
+
 <ul>
 <li>Hook: the shared trainers, hits and apps (first sentence).</li>
 <li>Presentation of the topic: the question about interconnectedness and local identities (end of paragraph 1).</li>
@@ -461,8 +456,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <p><button type="button" class="v" onclick="check('g-s2-e3')">Check</button>
 <button type="button" class="r" onclick="clr('g-s2-e3')">Clear</button>
 <span class="score"></span></p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a7">Show answers</button>
-<div class="ans" id="g-a7" hidden>
+<div class="ans" id="g-a7"><p class="ans-label"><strong>Answer key</strong></p>
+
 <ul>
 <li>1 (uniformity): streaming platforms; global brands; English loanwords.</li>
 <li>2 (local vitality): K-Pop; manga; a minority language online.</li>
@@ -507,8 +502,8 @@ A young student absorbed in written work: concentration, draft after draft. Writ
 <p><button type="button" class="v" onclick="check('g-s2-e4')">Check</button>
 <button type="button" class="r" onclick="clr('g-s2-e4')">Clear</button>
 <span class="score"></span></p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a8">Show answers</button>
-<div class="ans" id="g-a8" hidden>
+<div class="ans" id="g-a8"><p class="ans-label"><strong>Answer key</strong></p>
+
 <ul>
 <li>From Paris to Tokyo: Introduction (hook).</li>
 <li>This raises a sharp question: Presentation of the topic.</li>
@@ -549,8 +544,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <p><button type="button" class="v" onclick="check('g-s2-e5')">Check</button>
 <button type="button" class="r" onclick="clr('g-s2-e5')">Clear</button>
 <span class="score"></span></p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a9">Show answers</button>
-<div class="ans" id="g-a9" hidden>
+<div class="ans" id="g-a9"><p class="ans-label"><strong>Answer key</strong></p>
+
 <p>Consequently, (result) · On the other hand, (the other side) · To conclude, (close and synthesis: pressure, yet a stage).</p>
 </div>
 </div>
@@ -570,8 +565,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <p><button type="button" class="v" onclick="check('g-s2-e6')">Check</button>
 <button type="button" class="r" onclick="clr('g-s2-e6')">Clear</button>
 <span class="score"></span></p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a10">Show answers</button>
-<div class="ans" id="g-a10" hidden>
+<div class="ans" id="g-a10"><p class="ans-label"><strong>Answer key</strong></p>
+
 <p>What is more: add an idea. For instance: give an example. However: contrast. As a result: cause or result. In the end: close the essay.</p>
 </div>
 </div>
@@ -596,8 +591,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <button type="button" class="v" onclick="check('g-s2-e1')">Check</button>
 <button type="button" class="r" onclick="clr('g-s2-e1')">Clear</button>
 <span class="score" aria-live="polite"></span>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a4">Show answers</button>
-<div class="ans" id="g-a4" hidden>
+<div class="ans" id="g-a4"><p class="ans-label"><strong>Answer key</strong></p>
+
 <ol><li>However, globalization continues.</li><li>This raises a question: does diversity survive?</li></ol>
 </div>
 </div>
@@ -606,8 +601,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <li>Write three sentences with soft power, heritage and glocalization.</li>
 <li>Rewrite one sentence from the model using an impersonal passive.</li>
 </ol>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-hw2">Show answers</button>
-<div class="ans" id="g-hw2" hidden>
+<div class="ans" id="g-hw2"><p class="ans-label"><strong>Answer key</strong></p>
+
 <p>Example passive: It could be argued that streaming platforms overshadow national cinema.</p>
 </div>
 </div>
@@ -618,8 +613,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <h2 class="seance-h">Session 4 · Brainstorming and guided planning</h2>
 <div class="card rappel"><p class="bar">Recap</p>
 <p>Name two grammar tools from Session 3 that you will use in your draft.</p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="r3">Show answers</button>
-<div class="ans" id="r3" hidden><p>Examples: modals, gerunds after prepositions, impersonal passives, inversion, capital I, English punctuation.</p></div>
+<div class="ans" id="r3"><p class="ans-label"><strong>Answer key</strong></p>
+<p>Examples: modals, gerunds after prepositions, impersonal passives, inversion, capital I, English punctuation.</p></div>
 </div>
 
 <div class="card method">
@@ -650,8 +645,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <li>Finish the planning grid.</li>
 <li>Write a first draft of 250 to 300 words from your grid (not from the model).</li>
 </ol>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-hw3">Show answers</button>
-<div class="ans" id="g-hw3" hidden><p>Compare your structure with the model: hook, question, two PEEL paragraphs, nuanced conclusion.</p></div>
+<div class="ans" id="g-hw3"><p class="ans-label"><strong>Answer key</strong></p>
+<p>Compare your structure with the model: hook, question, two PEEL paragraphs, nuanced conclusion.</p></div>
 </div>
 
 </section>
@@ -738,8 +733,8 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <h2 class="seance-h">Session 5 · Peer review and summative assessment</h2>
 <div class="card rappel"><p class="bar">Recap</p>
 <p>Before you write: what goes in the introduction, and what goes in the conclusion?</p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="r4">Show answers</button>
-<div class="ans" id="r4" hidden><p>Introduction: hook or context, debate, question or opinion. Conclusion: answer with nuance and a short opening or recommendation.</p></div>
+<div class="ans" id="r4"><p class="ans-label"><strong>Answer key</strong></p>
+<p>Introduction: hook or context, debate, question or opinion. Conclusion: answer with nuance and a short opening or recommendation.</p></div>
 </div>
 
 <div class="card method">
@@ -760,8 +755,7 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <p>Write your own essay on the prompt. Target: 250 to 300 words.</p>
 <textarea id="g-essay" rows="12" data-count="g-essay-n"></textarea>
 <p class="wc" id="g-essay-n"></p>
-<button type="button" class="ans-btn" aria-expanded="false" aria-controls="g-a5">Show a model</button>
-<div class="ans" id="g-a5" hidden><div class="model" id="model">
+<div class="ans" id="g-a5"><div class="model" id="model">
 <p><strong>Model essay · about 265 words</strong></p>
 <p>From Paris to Tokyo, teenagers wear the same trainers, stream the same hits and open the same apps. This shared everyday life raises a sharp question: does global interconnectedness wipe out local identities?</p>
 <p>On the one hand, economic globalization clearly pushes cultural standardization. Multinational companies, often carried by Western soft power, sell one consumer lifestyle worldwide. For instance, Hollywood blockbusters and streaming platforms such as Netflix frequently outshine national film industries. Consequently, younger generations borrow English phrases and global habits, sometimes at the expense of their own linguistic heritage.</p>
@@ -791,10 +785,7 @@ globalization puts pressure on local cultures, yet it also offers them a stage.<
 <p>All prompts, explanations, model essays and answers are original. Painting: Albert Anker, Appliquée (Fleissig), 1886, private collection. Public domain. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0 licence</a>.</p>
 </div></footer>
 <script>
-var L={s:'Show answers',h:'Hide answers',gs:'Show all answers',gh:'Hide all answers',of:'out of'};
-function setAns(b,open){var p=document.getElementById(b.getAttribute('aria-controls'));if(!p)return;p.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');b.textContent=open?L.h:L.s;}
-document.addEventListener('click',function(e){var b=e.target.closest('button.ans-btn');if(b){setAns(b,b.getAttribute('aria-expanded')!=='true');}
- var g=e.target.closest('button.g');if(g){var open=g.getAttribute('aria-pressed')!=='true';document.querySelectorAll('button.ans-btn').forEach(function(x){setAns(x,open)});document.querySelectorAll('button.g').forEach(function(x){x.setAttribute('aria-pressed',open?'true':'false');x.textContent=open?L.gh:L.gs;});}});
+var L={of:'out of'};
 document.addEventListener('input',function(e){var t=e.target;if(t.matches&&t.matches('textarea[data-count]')){var n=(t.value.replace(/['’«»:;!?.,…()]/g,' ').match(/[^\s]+/g)||[]).length;var o=document.getElementById(t.dataset.count);if(o)o.textContent=n+' words';}});
 function norm(s){return (s||'').toLowerCase().normalize('NFC').replace(/[’']/g,"'").replace(/[.!?;:,«»"]/g,'').replace(/\s+/g,' ').trim()}
 function check(id){var box=document.getElementById(id),n=0,ok=0;

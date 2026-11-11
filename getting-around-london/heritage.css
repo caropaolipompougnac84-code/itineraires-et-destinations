@@ -13,7 +13,7 @@ a{color:var(--h-ox)}
 .gl{color:var(--h-umber)!important;font-variant:small-caps;letter-spacing:.05em}
 .grp a{background:var(--h-ivory)!important;color:var(--h-ink)!important;border-width:1px!important;border-radius:999px}
 .grp a:hover,.grp a:focus-visible{border-color:var(--h-navy)!important;color:var(--h-navy)!important}
-.box,.ws,.q,details,.card{background:var(--h-ivory)!important;color:var(--h-ink)!important;border:1px solid var(--h-line)!important;border-radius:6px!important;box-shadow:none!important}
+.box,.ws,.q,details,.ans,.card{background:var(--h-ivory)!important;color:var(--h-ink)!important;border:1px solid var(--h-line)!important;border-radius:6px!important;box-shadow:none!important}
 .card{border-left:3px solid var(--h-ox)!important}
 .card b,.ad .card b{color:var(--h-navy)!important;background:transparent!important}
 .card small,.hint,.gloss{color:var(--h-soft)!important}
@@ -67,15 +67,13 @@ body.ad{background:var(--h-paper)!important;color:#2a2622!important}
 .ad h1,.ad h2,.ad h3{font-family:'Atkinson Hyperlegible',Verdana,sans-serif!important;font-variant:normal}
 .ad .level{font-variant:normal;letter-spacing:.02em}
 .ad .gl{font-variant:normal}
-.ad .grp a,.ad .box,.ad .ws,.ad .q,.ad details,.ad .card,.ad .links a{background:var(--h-ivory)!important;color:#2a2622!important}
+.ad .grp a,.ad .box,.ad .ws,.ad .q,.ad details,.ad .ans,.ad .card,.ad .links a{background:var(--h-ivory)!important;color:#2a2622!important}
 .ad .quote{background:var(--h-cream)!important}
 .ad .intro .tag{background:var(--h-cream)!important;color:#2a2622!important}
-/* teacher toggle */
-html .at-bar{background:var(--h-cream)!important;border-bottom:1px solid var(--h-line2)!important}
-html .at-btn{color:var(--h-navy)!important;background:var(--h-ivory)!important;border:1px solid var(--h-navy)!important;border-radius:4px!important}
-html .at-btn:hover{background:var(--h-cream)!important}
-html .at-btn[aria-pressed=true],html .at-btn[aria-expanded=true]{background:var(--h-navy)!important;color:var(--h-ivory)!important}
-html .at-btn:focus-visible{outline:2px solid var(--h-umber)!important}
+/* Answer keys stay visible */
+.ans{margin:8px 0;padding:8px 12px}
+.ans-label{margin:0 0 .35em;color:var(--h-ox);font-weight:700}
+.seq-sub{color:var(--h-soft)!important;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;margin:.15rem 0 1rem;line-height:1.3;text-shadow:none}
 @media print{html body{background:#fff!important;color:#000!important}}
 /* London Buses page */
 :root:root{--bg:#f3ece0!important;--paper:#fbf8f1!important;--muted:#5d544a!important;--line:#dccfb9!important;--red:#7a3131!important;--soft:#ece3d2!important;--ok:#56664c!important;--stone:#bfae90!important;--yellow:#c9a24a!important;--glass:#d9dfe0!important;--river:#b8c7cc!important;--district:#3f7a50!important;--victoria:#3f84a8!important;--jubilee:#8a9097!important;--central:#a63a30!important;--display:'Cormorant Garamond',Georgia,serif!important;--ink:#2e2924!important;--navy:#2f3d52!important;color-scheme:light!important}
@@ -87,8 +85,8 @@ html .at-btn:focus-visible{outline:2px solid var(--h-umber)!important}
 .bus nav.tabs{background:var(--h-ivory)!important}
 .bus nav.tabs button{background:transparent!important;color:var(--h-ink)!important;border:1px solid var(--h-line)!important;font-family:Georgia,serif!important;font-weight:400!important}
 .bus nav.tabs button[aria-selected=true]{background:var(--h-navy)!important;color:var(--h-ivory)!important;border-color:var(--h-navy)!important}
-.bus details,.bus .card,.bus figure,.bus .media a{border-radius:4px!important}
-.bus details{background:transparent!important;border:0!important;border-top:1px solid var(--h-line)!important}
+.bus details,.bus .ans,.bus .card,.bus figure,.bus .media a{border-radius:4px!important}
+.bus details,.bus .ans{background:transparent!important;border:0!important;border-top:1px solid var(--h-line)!important}
 .bus .card{border-left:1px solid var(--h-line)!important}
 .bus .teacher{border:1px dashed var(--h-line2)!important;background:var(--h-cream)!important}
 .bus .herit{background:var(--h-cream);color:var(--h-ink);padding:10px;text-align:center;font-size:1.05rem;border-top:1px solid var(--h-line2);border-bottom:1px solid var(--h-line2)}

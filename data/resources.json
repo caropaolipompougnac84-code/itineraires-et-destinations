@@ -176,6 +176,86 @@
       "date": "2026-11-11"
     },
     {
+      "id": "meth-preparer-examens-anglais",
+      "title": "Méthodologie · Préparer aux examens en anglais",
+      "summary": "Les examens d’anglais réunis : brevet (DNB), CAP et CAPA, bac professionnel, lycée général et technologique (LVA, LVB, LLCER, AMC, Grand Oral), avec la spirale de Gorse.",
+      "section": "methodologie",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "Brevet · CAP · Bac pro · Lycée général et technologique",
+      "collection": "methodologie",
+      "methodGroup": "_top",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/anglais/",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "lycee-general-anglais-preparer-examens-anglais",
+      "title": "Anglais · Préparer aux examens en anglais",
+      "summary": "Les examens d’anglais réunis : brevet (DNB), CAP et CAPA, bac professionnel, lycée général et technologique (LVA, LVB, LLCER, AMC, Grand Oral), avec la spirale de Gorse.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "LVA, LVB, LLCER, AMC, Grand Oral",
+      "collection": "lg-anglais",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/anglais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true
+    },
+    {
+      "id": "lycee-pro-anglais-preparer-examens-anglais",
+      "title": "Anglais · Préparer aux examens en anglais",
+      "summary": "Les examens d’anglais réunis : brevet (DNB), CAP et CAPA, bac professionnel, lycée général et technologique (LVA, LVB, LLCER, AMC, Grand Oral), avec la spirale de Gorse.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "CAP · Bac pro",
+      "collection": "lp-anglais",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/anglais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true
+    },
+    {
+      "id": "cfa-anglais-preparer-examens-anglais",
+      "title": "Anglais · Préparer aux examens en anglais",
+      "summary": "Les examens d’anglais réunis : brevet (DNB), CAP et CAPA, bac professionnel, lycée général et technologique (LVA, LVB, LLCER, AMC, Grand Oral), avec la spirale de Gorse.",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "CAP et CAPA · Bac pro",
+      "collection": "cfa-anglais",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/anglais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true
+    },
+    {
+      "id": "segpa-anglais-preparer-examens-anglais",
+      "title": "Anglais · Préparer aux examens en anglais",
+      "summary": "Les examens d’anglais réunis : brevet (DNB), CAP et CAPA, bac professionnel, lycée général et technologique (LVA, LVB, LLCER, AMC, Grand Oral), avec la spirale de Gorse.",
+      "section": "segpa",
+      "subject": "anglais",
+      "level": "3e",
+      "levelLabel": "Brevet (DNB)",
+      "collection": "segpa-anglais",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/preparer-aux-examens/anglais/",
+      "date": "2026-11-11",
+      "hideInNouveautes": true
+    },
+    {
       "id": "lycee-general-lettres-preparer-examens-francais",
       "title": "Lettres · Préparer aux examens en français",
       "summary": "Les ressources de français réunies par examen : brevet (DNB), CAP, bac professionnel, bac de français à l’écrit et à l’oral.",

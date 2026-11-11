@@ -400,3 +400,7 @@ body[data-section="option"] { --burgundy: var(--opt); }
 .method-top { margin: 0.4rem 0 1.4rem; }
 .method-top .work { border-left: 5px solid var(--burgundy, #7B1E3A); background: var(--paper-3, #fff); padding: 0.9rem 1.1rem 1rem; }
 .method-top .work h3 { font-size: 1.25rem; }
+.work:has(a[href*="/preparer-aux-examens/francais/"]) { border-left: 5px solid #7B1E3A; padding-left: 1rem; }
+.work:has(a[href*="/preparer-aux-examens/anglais/"]) { border-left: 5px solid #1A3658; padding-left: 1rem; }
+.work:has(a[href*="/preparer-aux-examens/anglais/"]) h3 { color: #1A3658; }
+.work:has(a[href*="/preparer-aux-examens/francais/"]) h3 { color: #7B1E3A; }

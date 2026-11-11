@@ -270,8 +270,6 @@ sapver:{grp:"capa",dip:"CAPA Services aux personnes et vente en espace rural",jo
  docs:["WANTED: sales and care assistant. Farm shop and home help, 28 hours a week, start at 8:00. Driving licence, patient, smiling.","SHOP RULES. Wash your hands. Check the fridge temperature. Sign on a wet floor.","Message from the manager: Tomorrow Mr Dupuy needs help with his shopping at 11:00. Please call him before."]}
 };
 
-
-
 const ILLU = {
 cuisine:{
   artSrc:"img/vermeer-laitiere.jpg", artW:1248, artH:1400,
@@ -346,7 +344,6 @@ sapver:{
   linkCap:"Then and now: in 1883, in La Charcutière, a woman sells food at a market stall. Today, fresh food is still offered for sale, like these bunches of chard at a market."
 }
 }
-
 
 let cur = "cuisine";
 {
@@ -559,7 +556,7 @@ function render(){
 </div>
  <div class="card"><h2>Session 4 · The Jury's Tricky Questions</h2>
  <ol><li>Can you introduce yourself?</li><li>Why did you choose this job?</li>${T.jury.map(j=>`<li>${j[0]}</li>`).join("")}<li>An English customer arrives. What do you say?</li><li>Tell me about your work placement.</li></ol>
- <h3>Help</h3><p>If you don't understand: <b>Can you repeat, please?</b> · <b>Can you speak slowly, please?</b> · If you need time: <b>Let me think...</b></p></div>
+ </div>
  <div class="card"><h3>Hot seat</h3><p>One student sits on the chair. Three students ask questions. One minute each. The class listens and gives one tip: "Well done!" or "You should..."</p></div>
  ${bilan(4,["I chose this job because ...",T.jury[0][0],T.jury[1][0]])}`;
 
@@ -669,7 +666,6 @@ function render(){
  <div class="tbl-scroll"><table><tr><th>Criteria</th><th>Points</th></tr><tr><td>Information from the 2 documents</td><td>/ 4</td></tr><tr><td>Correct sentences</td><td>/ 4</td></tr><tr><td>About 40 words</td><td>/ 2</td></tr></table></div>
  </div>`;
 
-
  const CATS = [["Place","vert"],["Tool","bleu"],["Action","rouge"],["Rule","orange"],["Customer","violet"],["Jury","noir"]];
  const bank=[["Place",T.places.map(x=>x[0]+" / "+x[1])],["Tool",T.tools.map(x=>x[0]+" / "+x[1])],["Action",T.actions.map(x=>x[0]+" / "+x[1])],
   ["Rule",T.rules.map(r=>`You ${r[1]?"must":"mustn't"} ${r[0]}.`)],["Customer",T.client],["Jury",T.jury.map(j=>j[0])]];
@@ -741,7 +737,6 @@ function render(){
  <p>Welcome! You are a new ${T.job} in ${T.place}. First, read the information: the job is described in the advert (hours and start time). Then, remember the rules: ${T.rules.filter(r=>r[1]).slice(0,2).map(r=>"you must "+r[0]).join(", ")} and you mustn't ${T.rules.find(r=>!r[1])[0]}. Finally, tomorrow: ${D[2].split(": ").slice(1).join(": ")} Good luck!</p>
  <p>À adapter : l'élève reprend les heures exactes du document 1.</p></div>`;
 
-
  const tabs = document.getElementById("tabs"), panels = document.getElementById("panels");
  tabs.innerHTML = TABS.map(t => `<a href="#p-${t[0]}">${t[1]}</a>`).join("");
  panels.innerHTML = TABS.map(t => `<section class="panel" id="p-${t[0]}">${P[t[0]]}</section>`).join("");
@@ -764,7 +759,6 @@ document.getElementById("bDys").onclick=e=>{document.body.classList.toggle("dys"
 document.getElementById("bPrint").onclick=()=>window.print();
 buildTrades();render();
 window.addEventListener("hashchange",()=>{const h=(location.hash||"").replace(/^#/,""); if(TRADES[h]){cur=h;render();}});
-
 
   </script>
 </body>

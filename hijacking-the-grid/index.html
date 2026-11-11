@@ -299,31 +299,7 @@
     [].forEach.call(box.querySelectorAll('.opts button'),function(k){k.classList.remove('ok','ko')});
     if(o.dataset.ok==='1'){o.classList.add('ok');fb.textContent='Yes, well done!'}else{o.classList.add('ko');fb.textContent='Not quite. Try again.'}
   });
-})();</script><div class="aide-classe" id="aideClasse" lang="en"><button aria-controls="aidePanneau" aria-expanded="false" class="aide-ouvrir" type="button">Help in class</button><div class="aide-panneau" hidden="" id="aidePanneau"><p class="aide-t">Help in class</p><p class="aide-s">Tap a sentence to hear it. Then say it!</p><ul>
-<li><button class="aide-dire" data-say="Can you repeat, please?" lang="en" type="button">Can you repeat, please?</button></li>
-<li><button class="aide-dire" data-say="Can you speak more slowly, please?" lang="en" type="button">Can you speak more slowly, please?</button></li>
-<li><button class="aide-dire" data-say="What's something in French?" lang="en" type="button">What's … in French?</button></li>
-<li><button class="aide-dire" data-say="How do you say something in English?" lang="en" type="button">How do you say … in English?</button></li>
-<li><button class="aide-dire" data-say="I need help." lang="en" type="button">I need help.</button></li>
-<li><button class="aide-dire" data-say="Could you explain that again?" lang="en" type="button">Could you explain that again?</button></li>
-</ul><p class="aide-t">Classroom English</p><ul>
-<li><button class="aide-dire" data-say="What is today's objective?" lang="en" type="button">What is today's objective?</button></li>
-<li><button class="aide-dire" data-say="How long do we have for this task?" lang="en" type="button">How long do we have for this task?</button></li>
-<li><button class="aide-dire" data-say="Can we work in pairs?" lang="en" type="button">Can we work in pairs?</button></li>
-<li><button class="aide-dire" data-say="Shall I read this aloud?" lang="en" type="button">Shall I read this aloud?</button></li>
-<li><button class="aide-dire" data-say="Could you write that on the board?" lang="en" type="button">Could you write that on the board?</button></li>
-<li><button class="aide-dire" data-say="May I ask a question?" lang="en" type="button">May I ask a question?</button></li>
-</ul><button class="aide-fermer" type="button">Close</button></div></div>
-<script>
-(function(){var A=document.getElementById("aideClasse");if(!A)return;var o=A.querySelector(".aide-ouvrir"),p=A.querySelector(".aide-panneau");
-function ouvrir(v){p.hidden=!v;o.setAttribute("aria-expanded",v?"true":"false")}
-o.addEventListener("click",function(){ouvrir(p.hidden)});A.querySelector(".aide-fermer").addEventListener("click",function(){ouvrir(false);o.focus()});
-document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!p.hidden)ouvrir(false)});
-var S=null;try{S=window.speechSynthesis||null}catch(e){}
-A.querySelectorAll(".aide-dire").forEach(function(b){b.addEventListener("click",function(){if(!S)return;S.cancel();A.querySelectorAll(".aide-dire").forEach(function(x){x.classList.remove("parle")});var u=new SpeechSynthesisUtterance(b.dataset.say);u.lang="en-GB";u.rate=0.9;try{var v=(S.getVoices()||[]).filter(function(x){return (x.lang||"").replace("_","-").indexOf("en-GB")===0||(x.lang||"").indexOf("en")==0})[0];if(v)u.voice=v}catch(e){}b.classList.add("parle");u.onend=u.onerror=function(){b.classList.remove("parle")};try{S.speak(u)}catch(e){b.classList.remove("parle")}})});
-})();
-</script>
-<script>
+})();</script><script>
 (function(){
   var P="meteo:"+location.pathname+":";
   var ADULTES='<li>à ton professeur, à la fin du cours ;</li><li>à ton professeur principal ou au CPE ;</li><li>à l\'infirmière scolaire, à l\'assistante sociale ou au psychologue de l\'Éducation nationale ;</li><li>si quelqu\'un te harcèle, à l\'école ou sur internet : le <b>3018</b>, anonyme, 7 jours sur 7 de 9 h à 23 h ;</li><li>pour toute question qui te pèse : Fil Santé Jeunes, <b>0 800 235 236</b>, anonyme, tous les jours de 9 h à 23 h ;</li><li>si tu es en danger : le <b>119</b>, jour et nuit.</li>';

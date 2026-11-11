@@ -161,20 +161,6 @@ body.ad p,body.ad li{max-width:62ch}
 .meteo-effacer{border:2px solid #5b2d6e;background:#fff;color:#5b2d6e;border-radius:10px;padding:6px 12px;font:600 14px Arial,sans-serif;cursor:pointer}
 @media print{.meteo{display:none!important}}
 
-
-/* Help in class + Classroom English (floating, phone-friendly) */
-.aide-classe{position:fixed;right:12px;bottom:12px;z-index:900;font-family:var(--f-ui),Arial,sans-serif}
-.aide-ouvrir{font:700 16px var(--f-ui),Arial,sans-serif;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:10px 16px;min-height:44px;box-shadow:0 2px 10px rgba(0,0,0,.25);cursor:pointer}
-.aide-panneau{position:absolute;right:0;bottom:54px;width:min(320px,calc(100vw - 24px));max-height:65vh;overflow:auto;background:#fff;border:2px solid var(--navy);border-radius:14px;padding:12px 14px;box-shadow:0 4px 18px rgba(0,0,0,.25);color:var(--navy)}
-.aide-panneau[hidden]{display:none!important}
-.aide-panneau .aide-t{font:700 17px var(--f-display),Georgia,serif;margin:4px 0 6px}
-.aide-panneau .aide-s{font-size:14px;margin:0 0 8px;color:#444}
-.aide-panneau ul{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-direction:column;gap:6px}
-.aide-panneau .aide-dire{width:100%;text-align:left;font:600 16px var(--f-ui),Arial,sans-serif;background:#f3f6fb;border:1px solid #c9d3e6;border-radius:10px;padding:8px 10px;color:var(--navy);cursor:pointer;min-height:40px}
-.aide-panneau .aide-dire.parle{background:var(--navy);color:#fff}
-.aide-fermer{font:600 14px var(--f-ui),Arial,sans-serif;border:2px solid var(--navy);background:#fff;border-radius:10px;padding:6px 12px;cursor:pointer;min-height:40px}
-@media print{.aide-classe{display:none!important}}
-
 /* Visible jump links, then-and-now, flashcards, downloads, phone */
 .tabs a{
   flex:0 0 auto;
@@ -223,18 +209,6 @@ section.panel{display:grid!important}
   .then-now-pair img{max-height:none}
 }
 @media print{
-  .tabs,.topnav,.aide-classe,.downloads{display:none!important}
+  .tabs,.topnav,.downloads{display:none!important}
   section.panel{break-inside:auto}
-}
-
-/* Keep the floating Help in class control from covering the lesson on a phone */
-body.std{padding-bottom:4.75rem}
-@media (max-width:600px){
-  body.std{padding-bottom:5.25rem}
-  .aide-classe{right:8px;bottom:8px;max-width:calc(100vw - 16px)}
-  .aide-ouvrir{font-size:14px;padding:8px 12px}
-  .aide-panneau{width:min(320px,calc(100vw - 16px))}
-}
-@supports (padding-bottom: env(safe-area-inset-bottom)){
-  body.std{padding-bottom:calc(4.75rem + env(safe-area-inset-bottom))}
 }

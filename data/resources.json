@@ -230,11 +230,11 @@
     {
       "id": "lg-anglais-licence-to-learn",
       "title": "Anglais · Licence to Learn",
-      "summary": "MI5, MI6 et le monde de James Bond : six leçons de B1, jusqu’à un entretien d’embauche.",
+      "summary": "MI5, MI6 et le monde de James Bond : six leçons de 55 minutes, calibrées sur 52 minutes, jusqu’à un entretien de recrutement fictif. Tronc B1, progression vers B1+ (LVA).",
       "section": "lycee-general",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "2de / 1re · B1 · général / pro",
+      "levelLabel": "2de / 1re · LVA : B1 vers B1+ · général / pro",
       "collection": "lg-anglais",
       "themes": [
         "travail",

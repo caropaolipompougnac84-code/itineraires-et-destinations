@@ -45,7 +45,7 @@
       const [s, c, t] = order[qi];
       const other = shuffle(caps.filter(x => x[0] !== s))[0][1];
       const opts = shuffle([c, t, other]);
-      game.innerHTML = '<div><strong>The Capital Trap</strong> · ' + (qi + 1) + ' / ' + order.length + ' · ' + score + ' points</div><p>What is the capital of ' + s + '?</p><div class="opts">' + opts.map(o => '<button type="button" data-o="' + o + '">' + o + '</button>').join('') + '</div><div class="fb"></div>';
+      game.innerHTML = '<div><strong>The Biggest City game</strong> · ' + (qi + 1) + ' / ' + order.length + ' · ' + score + ' points</div><p>What is the capital of ' + s + '?</p><div class="opts">' + opts.map(o => '<button type="button" data-o="' + o + '">' + o + '</button>').join('') + '</div><div class="fb"></div>';
     }
     game.addEventListener("click", function (e) {
       const btn = e.target.closest("button");

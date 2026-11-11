@@ -1,0 +1,40 @@
+Sources et licences des images candidates
+Cahier de Douai, page https://itineraires-destinations.fr/cahier-de-douai/
+
+Toutes les œuvres ci-dessous sont des tableaux du domaine public, conservés au musée d'Orsay ou au musée du Louvre. Les fichiers sont des reproductions fidèles d'œuvres bidimensionnelles, publiées sur Wikimedia Commons (licence : domaine public / PD-Art).
+
+1. Recommandée pour la page et pour la carte Facebook
+   Henri Fantin-Latour, Un coin de table, 1872, musée d'Orsay, domaine public.
+   Huile sur toile, 160 x 225 cm, inventaire RF 1959.
+   Assis à gauche : Paul Verlaine et Arthur Rimbaud.
+   Fichier Wikimedia (Google Art Project, 5587 x 3990) :
+   https://commons.wikimedia.org/wiki/File:Henri_Fantin-Latour_-_By_the_Table_-_Google_Art_Project.jpg
+   Page du musée : https://www.musee-orsay.fr/fr/oeuvres/un-coin-de-table-211
+   Fichiers préparés :
+   - /workspace/screenshots/douai-image/candidates/01-fantin-latour-un-coin-de-table.jpg (tableau entier, retenu pour la page)
+   - /workspace/screenshots/douai-image/candidates/01b-fantin-latour-rimbaud-verlaine.jpg (détail sur Verlaine et Rimbaud, retenu pour la carte Facebook)
+   - /workspace/site-douai-image/cahier-de-douai/img/fantin-latour-un-coin-de-table.jpg et .webp (version web de la page)
+
+2. Variante
+   Claude Monet, Coquelicots, 1873, musée d'Orsay, domaine public.
+   Fichier Wikimedia (Google Art Project, 5586 x 4258) :
+   https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Poppy_Field_-_Google_Art_Project.jpg
+   Fichier préparé :
+   - /workspace/screenshots/douai-image/candidates/02-monet-coquelicots.jpg
+   Pourquoi cette variante : un chemin dans un champ, très accueillant, proche de « Sensation ». Elle n'a pas le lien direct avec Rimbaud.
+
+3. Variante
+   Jean-Baptiste Camille Corot, Souvenir de Mortefontaine, 1864, musée du Louvre, domaine public.
+   Inventaire MI 692 bis.
+   Fichier Wikimedia :
+   https://commons.wikimedia.org/wiki/File:Jean-Baptiste-Camille_Corot_012.jpg
+   Fichier préparé :
+   - /workspace/screenshots/douai-image/candidates/03-corot-souvenir-de-mortefontaine.jpg
+   Pourquoi cette variante : paysage lyrique, doux, proche de la nature des poèmes. Elle n'a pas le lien direct avec Rimbaud.
+
+Image actuellement en ligne (à remplacer) :
+   Dessin au trait original, bandeau-cahier-de-douai.webp / .png :
+   la route, le cabaret et le ciel de « Ma Bohème », avec la Grande Ourse.
+   Sobre, mais un peu austère, d'où la demande d'une image plus avenante.
+
+Aucune de ces images n'a été générée par intelligence artificielle.

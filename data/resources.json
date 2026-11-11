@@ -160,6 +160,23 @@
   ],
   "resources": [
     {
+      "id": "meth-oral-du-bac",
+      "title": "Lettres · Méthode · L’oral du bac de français : présenter une œuvre et dialoguer",
+      "summary": "Huit séances pour lire, expliquer, présenter une œuvre et dialoguer avec l’examinateur. La Boétie et Sarraute, oraux modèles en dialogue, grilles d’oral blanc renseignées, avec la spirale de Gorse.",
+      "section": "methodologie",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première du lycée général et technologique",
+      "collection": "methodologie",
+      "methodGroup": "oral",
+      "themes": [
+        "oral",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/oral-du-bac/",
+      "date": "2026-11-11"
+    },
+    {
       "id": "meth-dissertation-et-essai",
       "title": "Lettres · Méthode · Dissertation et essai : les épreuves du bac en marche",
       "summary": "Huit séances pour construire une réponse personnelle : ancrer, éprouver, déplacer. Dissertation pour la voie générale, contraction et essai pour la voie technologique, avec la spirale de Gorse.",
@@ -173,7 +190,8 @@
         "examen"
       ],
       "url": "https://itineraires-destinations.fr/dissertation-et-essai/",
-      "date": "2026-11-11"
+      "date": "2026-11-11",
+      "methodGroup": "dissertation"
     },
     {
       "id": "lg-anglais-tle-hijacking-the-grid",
@@ -396,6 +414,22 @@
       "url": "https://itineraires-destinations.fr/cahier-de-douai/",
       "date": "2026-11-11",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122121235155490243&set=a.122119041117490243"
+    },
+    {
+      "id": "lg-lettres-1re-oral-du-bac",
+      "title": "Lettres · 1re · L’oral du bac de français : présenter une œuvre et dialoguer",
+      "summary": "Huit séances pour lire, expliquer, présenter une œuvre et dialoguer avec l’examinateur. La Boétie et Sarraute, oraux modèles en dialogue, grilles d’oral blanc renseignées, avec la spirale de Gorse.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "oral",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/oral-du-bac/",
+      "date": "2026-11-11"
     },
     {
       "id": "lg-lettres-1re-dissertation-essai",
@@ -983,7 +1017,8 @@
         "oral"
       ],
       "url": "https://itineraires-destinations.fr/signaux-de-classe/",
-      "date": "2026-11-11"
+      "date": "2026-11-11",
+      "methodGroup": "oral"
     },
     {
       "id": "meth-gerex-pepite",
@@ -999,7 +1034,8 @@
       ],
       "url": "https://gerex-pepite-pedagogique.netlify.app/",
       "date": "2026-11-08",
-      "facebookUrl": "https://www.facebook.com/profile.php?id=61594707303557"
+      "facebookUrl": "https://www.facebook.com/profile.php?id=61594707303557",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-theatre-lire-dire-jouer",
@@ -1016,7 +1052,8 @@
       ],
       "url": "https://theatre-bac-pro.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778555490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778555490243&set=a.122104658121490243",
+      "methodGroup": "oral"
     },
     {
       "id": "meth-english-punctuation",
@@ -1032,7 +1069,8 @@
       ],
       "url": "https://itineraires-destinations.fr/english-punctuation-practice/",
       "date": "2026-11-11",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778087490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778087490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-writing-an-essay",
@@ -1049,7 +1087,8 @@
       ],
       "url": "https://itineraires-destinations.fr/writing-an-essay/",
       "date": "2026-11-11",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120812725490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120812725490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-resumer-argumenter",
@@ -1066,7 +1105,8 @@
       ],
       "url": "https://resumer-et-argumenter.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120739459490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120739459490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-apprendre-a-apprendre",
@@ -1082,7 +1122,8 @@
       ],
       "url": "https://sommaire-ressources.netlify.app/francais.html",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120737953490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120737953490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-tomber-amoureux-etude",
@@ -1098,7 +1139,8 @@
       ],
       "url": "https://tomber-amoureux-de-letude.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120737593490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120737593490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-cours-distance-bis",
@@ -1114,7 +1156,8 @@
       ],
       "url": "https://cours-a-distance-lycees.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120733789490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120733789490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-evaluer-progresser",
@@ -1130,7 +1173,8 @@
       ],
       "url": "https://corriger-autrement.netlify.app/evaluer-progresser.html",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120729403490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120729403490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-expanding-vocabulary",
@@ -1146,7 +1190,8 @@
       ],
       "url": "https://itineraires-destinations.fr/expanding-your-vocabulary/",
       "date": "2026-11-11",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120729109490243&set=a.122104658121490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120729109490243&set=a.122104658121490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-fiches-gerex",
@@ -1162,7 +1207,8 @@
       ],
       "url": "https://fiches-gerex-tous-niveaux-lycees-pro-et-generaux.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120581491490243&set=a.122119021533490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120581491490243&set=a.122119021533490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-espace-soutien-gerex",
@@ -1178,7 +1224,8 @@
       ],
       "url": "https://espace-soutien-gerex.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120581245490243&set=a.122119021533490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120581245490243&set=a.122119021533490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-ecouter-noter-retenir",
@@ -1195,7 +1242,8 @@
       ],
       "url": "https://theatre-classique-ecouter-noter-memoriser.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120580825490243&set=a.122119021533490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120580825490243&set=a.122119021533490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-pedagogie-reussite",
@@ -1211,7 +1259,8 @@
       ],
       "url": "https://pedagogie-de-la-reussite.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120580171490243&set=a.122119021533490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120580171490243&set=a.122119021533490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "meth-trame-batir-annee",
@@ -1227,7 +1276,8 @@
       ],
       "url": "https://trame-lycee.netlify.app/",
       "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120577621490243&set=a.122119041117490243"
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120577621490243&set=a.122119041117490243",
+      "methodGroup": "dissertation"
     },
     {
       "id": "segpa-lettres-4e-annee-brevet",

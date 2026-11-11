@@ -177,6 +177,24 @@
         observeReveals();
         return;
       }
+      if (root.dataset.groups) {
+        const groups = root.dataset.groups.split("|").map((g) => {
+          const i = g.indexOf(":");
+          return { id: g.slice(0, i), label: g.slice(i + 1) };
+        });
+        const filtering = !!(activeTheme || query || activeLevel);
+        listEl.innerHTML = groups
+          .map((g, gi) => {
+            const items = filtered.filter((r) => (r.methodGroup || groups[0].id) === g.id);
+            const body = items.length
+              ? `<div class="works">` + items.map((r) => workHTML(r, data.themes)).join("") + `</div>`
+              : `<p class="muted method-group-empty">${filtering ? "Aucun support pour ce filtre." : "Ressources en préparation."}</p>`;
+            return `<h2 class="subhead method-group" id="${escapeAttr(g.id)}">${escapeHtml(g.label)}</h2>` + body;
+          })
+          .join("");
+        observeReveals();
+        return;
+      }
       listEl.innerHTML =
         `<div class="works">` +
         filtered.map((r) => workHTML(r, data.themes)).join("") +

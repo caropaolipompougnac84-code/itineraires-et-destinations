@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>American Superheroes: images of a nation · Anglais · 2nde and 1re bac pro · Itinéraires et destinations</title>
+  <meta name="description" content="Six short lessons in English, built around genuine public-domain Golden Age comic pages, for 2nde and 1re of the baccalauréat professionnel. Madame Carole Paoli Pompougnac." />
+  <meta name="author" content="Madame Carole Paoli Pompougnac" />
+  <link rel="canonical" href="https://itineraires-destinations.fr/american-superheroes/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Itinéraires et destinations" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="American Superheroes: images of a nation" />
+  <meta property="og:description" content="Six short lessons around genuine public-domain Golden Age comic pages, for 2nde and 1re of the baccalauréat professionnel." />
+  <meta property="og:url" content="https://itineraires-destinations.fr/american-superheroes/" />
+  <meta property="og:image" content="https://itineraires-destinations.fr/american-superheroes/img/man-the-guns-1942.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    body,
+    body[data-section="lycee-pro"] {
+      --navy: #1A3658;
+      --navy-deep: #0F2340;
+      --navy-mid: #2A4A73;
+      --burgundy: #1A3658;
+      --burgundy-deep: #0F2340;
+      --lg: #1A3658;
+      --pale: #EEF2F7;
+      --line: #B8C4D4;
+      --f-ui: "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
+    }
+    html { scroll-padding-top: calc(var(--header-h, 7.2rem) + 4.6rem); }
+    .page-hero h1, .page-content h1, .page-content h2, .page-content h3,
+    .kicker, .page-hero .kicker, .brand-mark { color: #1A3658; }
+    .page-content { padding-bottom: 3rem; max-width: 48rem; }
+    .page-content h2 {
+      font-family: var(--serif, "Playfair Display", Georgia, serif);
+      font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+      font-weight: 600;
+      margin: 0 0 0.7rem;
+      color: #1A3658;
+    }
+    .page-content h3 { font-size: 1.12rem; font-weight: 700; margin: 1.1rem 0 0.4rem; color: #1A3658; }
+    .page-content p { margin: 0 0 0.75rem; }
+    .page-content ul, .page-content ol { margin: 0 0 0.85rem; padding-left: 1.2rem; }
+    .page-content li { margin: 0.28rem 0; }
+    .programme { font-size: 0.95rem; color: var(--ink-soft, #555); margin: 0 0 1rem; }
+    .pourquoi-box {
+      margin: 1rem 0 1.4rem;
+      padding: 0.9rem 1.05rem;
+      background: var(--pale);
+      border: 1px solid var(--line);
+      border-left: 5px solid #1A3658;
+    }
+    .pourquoi-box p { margin: 0; font-size: 1.06rem; }
+    .pourquoi-box strong { color: #1A3658; }
+
+    /* Sticky lesson tabs, in Carole’s style: navy bar, pill links, works as jump links without JS */
+    .tabs {
+      position: sticky;
+      top: var(--header-h, 7.2rem);
+      z-index: 30;
+      background: #1A3658;
+      box-shadow: 0 2px 8px rgba(15, 35, 64, 0.25);
+    }
+    .tabs .row {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 0;
+      scrollbar-width: thin;
+    }
+    .tabs a {
+      flex: 0 0 auto;
+      font-family: var(--f-ui);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      background: transparent;
+      border: 2px solid #6f8fc4;
+      border-radius: 999px;
+      padding: 8px 14px;
+      min-height: 44px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      box-sizing: border-box;
+      white-space: nowrap;
+    }
+    .tabs a:hover, .tabs a:focus-visible {
+      background: #2A4A73;
+      border-color: #fff;
+    }
+    .tabs a:focus-visible { outline: 3px solid #F5E66B; outline-offset: 2px; }
+    .tabs a[aria-current="true"] {
+      background: #fff;
+      color: #1A3658;
+      border-color: #fff;
+    }
+
+    section.panel { display: block; padding: 1.2rem 0 2rem; min-width: 0; }
+    /* With JS: one lesson at a time, so the page is not a long wall of text */
+    html.js-tabs section.panel { display: none; }
+    html.js-tabs section.panel.is-active { display: block; }
+    @media print {
+      .tabs { display: none; }
+      html.js-tabs section.panel { display: block !important; }
+    }
+
+    .comic {
+      margin: 0.7rem 0 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .comic img { width: min(100%, 28rem); height: auto; display: block; margin: 0 auto; background: #f4f1ea; }
+    .comic figcaption {
+      padding: 0.5rem 0.85rem 0.7rem;
+      font-size: 0.86rem;
+      color: #555;
+      line-height: 1.45;
+    }
+    .vocab {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.4rem 0 0.9rem;
+      font-size: 0.98rem;
+    }
+    .vocab th, .vocab td { border: 1px solid var(--line); padding: 0.4rem 0.55rem; text-align: left; vertical-align: top; }
+    .vocab th { background: #1A3658; color: #fff; }
+    .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .starters { background: var(--pale); padding: 0.7rem 0.9rem; border-radius: 8px; margin: 0.6rem 0 0.9rem; }
+    .lichtenstein-frame {
+      margin: 1rem 0 1.3rem;
+      padding: 0.8rem;
+      background: var(--pale);
+      border: 2px solid #1A3658;
+      border-radius: 10px;
+    }
+    .lichtenstein-frame img { width: 100%; height: auto; display: block; }
+    .lichtenstein-frame a { word-break: break-all; font-weight: 600; color: #1A3658; }
+    .downloads { margin: 0.4rem 0 0; padding: 0; list-style: none; }
+    .downloads li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.9rem;
+      align-items: center;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .downloads .doc-title { flex: 1 1 12rem; font-weight: 600; margin: 0; }
+    .downloads .doc-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .downloads a { min-height: 2.75rem; display: inline-flex; align-items: center; }
+    .illu-credit { font-size: 0.88rem; color: #555; margin: 1.2rem 0 0; }
+    .timeline { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1rem; font-size: 0.95rem; }
+    .timeline th, .timeline td { border: 1px solid var(--line); padding: 0.4rem 0.55rem; text-align: left; vertical-align: top; }
+    .timeline th { background: #1A3658; color: #fff; }
+    @media (max-width: 40rem) {
+      .tabs .row { padding: 8px 4px; }
+      .comic img { width: 100%; }
+      .downloads a { min-height: 2.85rem; }
+    }
+
+    .cover-art img { width: min(100%, 22rem); height: auto; display: block; margin: 0 auto; }
+    .crops {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+      gap: 0.85rem;
+      margin: 0.6rem 0 1.1rem;
+    }
+    .crops figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    .crops img { width: 100%; height: auto; display: block; background: #f4f1ea; }
+    .crops figcaption { padding: 0.45rem 0.65rem 0.6rem; font-size: 0.86rem; color: #333; line-height: 1.4; }
+    .obj-list { list-style: none; padding: 0; margin: 0 0 1rem; }
+    .obj-list li {
+      margin: 0 0 0.55rem;
+      padding: 0.55rem 0.75rem;
+      background: var(--pale);
+      border-left: 4px solid #1A3658;
+    }
+    .obj-list strong { color: #1A3658; }
+    .nojs-note { display: none; font-size: 0.9rem; color: #555; }
+    html:not(.js-tabs) .nojs-note { display: block; }
+  </style>
+</head>
+<body data-section="lycee-pro">
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a class="brand-mark" href="../index.html">Itinéraires et destinations</a>
+        <span class="brand-tag">Séquences prêtes à l'emploi · Français, anglais · Tous niveaux</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger"><span class="sr-only">Menu</span></label>
+      <nav class="nav-main" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../lycee-pro/index.html" aria-current="page">Lycée professionnel</a>
+        <a href="../lycee-general/index.html">Lycée général</a>
+        <a href="../lycee-agricole/index.html">Lycée agricole</a>
+        <a href="../cfa/index.html">CFA</a>
+        <a href="../segpa/index.html">6e à 3e · SEGPA</a>
+        <a href="../methodologie/index.html">Méthodologie</a>
+        <a href="../themes.html">Thèmes</a>
+        <a href="../nouveautes.html">Nouveautés</a>
+        <a href="../a-propos.html">À propos</a>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../lycee-pro/index.html">Lycée professionnel</a></li><li><a href="../lycee-pro/anglais.html">Anglais</a></li><li>American Superheroes</li></ol></nav>
+
+  <div class="wrap page-content" style="padding-bottom:0">
+    <section class="page-hero">
+      <p class="kicker">Anglais · 2nde and 1re of the baccalauréat professionnel</p>
+      <h1>American Superheroes: images of a nation</h1>
+      <p class="lede">Six short lessons, built around genuine public-domain Golden Age comic pages. Description first. Two levels: A2/B1 in 2nde, B1 in 1re.</p>
+    </section>
+  </div>
+
+  <nav class="tabs" aria-label="Lessons">
+    <div class="wrap">
+      <div class="row" role="tablist" id="tablist">
+        <a href="#introduction" id="tab-introduction">Introduction</a>
+        <a href="#lesson-1" id="tab-lesson-1">Lesson 1</a>
+        <a href="#lesson-2" id="tab-lesson-2">Lesson 2</a>
+        <a href="#lesson-3" id="tab-lesson-3">Lesson 3</a>
+        <a href="#lesson-4" id="tab-lesson-4">Lesson 4</a>
+        <a href="#lesson-5" id="tab-lesson-5">Lesson 5</a>
+        <a href="#lesson-6" id="tab-lesson-6">Lesson 6</a>
+        <a href="#telechargements" id="tab-telechargements">Downloads</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap page-content" id="main">
+    <p class="nojs-note">Without JavaScript, every lesson is on this page, one after another. The tabs above jump to each lesson.</p>
+
+    <section class="panel" id="introduction" data-tab="introduction" aria-labelledby="introduction-title">
+      <h2 id="introduction-title">Introduction</h2>
+
+      <figure class="comic cover-art">
+        <img src="img/man-the-guns-1942.jpg" width="1369" height="2000" alt="McClelland Barclay, Man the Guns, Join the Navy, 1942: two muscular sailors at a naval gun, one in a white cap carrying a large shell across his shoulder, with the words Man the Guns, Join the Navy." />
+        <figcaption>McClelland Barclay, <cite>Man the Guns, Join the Navy</cite>, 1942, United States Navy recruiting poster. National Archives (NARA) 513519; Library of Congress, Prints and Photographs Division, reproduction number LC-USZC4-2009. Public domain (United States government work). Image via Wikimedia Commons.</figcaption>
+      </figure>
+
+      <aside class="pourquoi-box">
+        <p><strong>Guiding question.</strong> What do American superheroes reveal about the United States, its fears, its ideals and the images it makes of itself?</p>
+      </aside>
+
+      <h3>Aim of the sequence</h3>
+      <ul>
+        <li>Look at real public-domain Golden Age comic pages.</li>
+        <li>Describe what we see, before we interpret.</li>
+        <li>Ask what these images reveal about the United States, and what they cannot prove.</li>
+      </ul>
+
+      <h3>Fiche d'identité</h3>
+      <div class="tbl-scroll">
+        <table class="timeline">
+          <thead><tr><th>Rubrique</th><th>Contenu</th></tr></thead>
+          <tbody>
+            <tr><td>Title</td><td>American Superheroes: images of a nation</td></tr>
+            <tr><td>Level</td><td>2nde (A2/B1) and 1re (B1), baccalauréat professionnel</td></tr>
+            <tr><td>Thématique</td><td>Grands événements historiques; grandes œuvres; médias; personnalités (BO spécial n° 5, 11 April 2019)</td></tr>
+            <tr><td>Duration</td><td>Six lessons of 55 minutes, timed on 52</td></tr>
+            <tr><td>Method</td><td>Spirale de Gorse, six turns</td></tr>
+            <tr><td>Final task</td><td>Lesson 6: a careful description and a two-minute oral, towards the CCF at class level</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Objectives: the five activités langagières</h3>
+      <p>These are the five official activities of the Bulletin officiel for langues vivantes in the baccalauréat professionnel.</p>
+      <ul class="obj-list">
+        <li><strong>Compréhension de l'écrit.</strong> Read a real comic page. Find panels, gutters, balloons and captions, and follow the reading path. (Lessons 1 to 3.)</li>
+        <li><strong>Compréhension de l'oral.</strong> Listen to a short description, or a balloon read aloud. Point to the right place on the page. (Lessons 1, 2 and 5.)</li>
+        <li><strong>Expression écrite.</strong> Write short sentences, then a careful paragraph, with prepositions, movement verbs, <em>may</em> and <em>cannot prove</em>. (Lessons 1 to 4 and 6.)</li>
+        <li><strong>Expression orale en continu.</strong> Speak for about two minutes: describe one page, then say what it may reveal and what it cannot prove. (Lesson 6.)</li>
+        <li><strong>Interaction orale.</strong> Work in a small team: ask, answer, and restore a careful label in the escape game. (Lesson 5.)</li>
+      </ul>
+
+      <h3>The spirale de Gorse</h3>
+      <p>Six turns. The French name of the method is kept. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</p>
+      <ol>
+        <li>What do we see on this page?</li>
+        <li>How does the page show movement?</li>
+        <li>What kind of hero does a country invent in wartime?</li>
+        <li>Who is in the picture, and who is left out?</li>
+        <li>Can we restore a careful description?</li>
+        <li>What do these images reveal, and what can they not prove?</li>
+      </ol>
+      <p class="starters"><strong>The tip.</strong> When a society tells its story through images of invincible heroes, what happens to ordinary courage, to the enemy it invents, and to those it leaves out of the picture?</p>
+
+      <h3>Rights (short)</h3>
+      <ul>
+        <li>The comic pages here are genuine public-domain Golden Age pages (copyright not renewed).</li>
+        <li>Marvel and DC pages are <strong>not</strong> printed. We only describe them, if we mention them.</li>
+        <li>Lev Gleason’s Daredevil (1941) is <strong>not</strong> Marvel’s Daredevil (1964).</li>
+        <li>Lichtenstein’s <cite>Drowning Girl</cite> is not printed. We use the MoMA page.</li>
+      </ul>
+    </section>
+
+    <section class="panel" id="lesson-1" data-tab="lesson-1" aria-labelledby="l1-title">
+      <h2 id="l1-title">Lesson 1. What do we see on this page?</h2>
+      <p><strong>Look first. Do not interpret yet.</strong> This is a real comic page from 1945. We may print it because it is in the public domain.</p>
+      <figure class="comic">
+        <img src="img/bt11-p4-panels.jpg" width="715" height="944" alt="A seven-panel comic page from The Black Terror no. 11, August 1945: a drugstore, speech balloons, yellow captions, then an airport, with a boy in a red shirt and a woman in a red coat." />
+        <figcaption><cite>The Black Terror</cite> no. 11, August 1945, page 4. Nedor / Better Publications. Art: Ed Moritz. Public domain (United States, 1945; copyright not renewed). Wikimedia Commons, File: BlackTerror1104.jpg.</figcaption>
+      </figure>
+
+      <h3>Look closer (real details)</h3>
+      <p>These are crops from the same 1945 page, not drawings.</p>
+      <div class="crops">
+        <figure>
+          <img src="img/crop-p4-on-the-left.jpg" width="372" height="307" alt="In the first panel, on the left: a boy in a red shirt, in a drugstore. Detail from The Black Terror no. 11, page 4." />
+          <figcaption><strong>On the left.</strong> In the first panel, a boy in a red shirt is sitting.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/crop-p4-balloons.jpg" width="295" height="222" alt="Speech balloons at the top right, including What’s up? Detail from The Black Terror no. 11, page 4." />
+          <figcaption><strong>A speech balloon.</strong> At the top right, a character is speaking.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/crop-p4-on-the-right.jpg" width="295" height="295" alt="On the right, a woman in a red coat walks at an airport. Detail from The Black Terror no. 11, page 4." />
+          <figcaption><strong>On the right.</strong> A woman in a red coat is walking.</figcaption>
+        </figure>
+      </div>
+      <h3>Building your vocabulary</h3>
+      <div class="tbl-scroll">
+        <table class="vocab">
+          <thead><tr><th>Word</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>panel (or frame)</td><td>one picture on the page, in a box</td></tr>
+            <tr><td>gutter</td><td>the space between two panels</td></tr>
+            <tr><td>speech balloon</td><td>what a character says</td></tr>
+            <tr><td>caption</td><td>a box of narration (often yellow here)</td></tr>
+            <tr><td>reading path</td><td>the order we read: usually left to right, then down</td></tr>
+            <tr><td>in the first panel / on the left / on the right</td><td>prepositions of place</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Your tasks (short)</h3>
+      <p><strong>A.</strong> How many panels do you count? Number them along the reading path.</p>
+      <p><strong>B.</strong> Find a gutter, a speech balloon, a caption. Say where each one is.</p>
+      <p><strong>C. Listen.</strong> The teacher reads one balloon, or one caption. Point to it on the page. Say what you heard.</p>
+      <p><strong>C.</strong> Complete: <em>In the first panel, on the left, I can see... The boy in the red shirt is... A woman in a red coat is... The caption at the top says...</em></p>
+      <p><strong>2nde.</strong> Six short sentences, with four prepositions and three words from the table. <strong>1re.</strong> Eight sentences, then: <em>This page cannot prove...</em></p>
+      <p class="starters"><strong>Sentence starters.</strong> In the first panel... / On the right... / Between the two panels (in the gutter)... / The balloon in the top right says...</p>
+      <p><strong>Homework.</strong> Five sentences about this page. Do not search for a Marvel or DC image.</p>
+    </section>
+
+    <section class="panel" id="lesson-2" data-tab="lesson-2" aria-labelledby="l2-title">
+      <h2 id="l2-title">Lesson 2. How does the page show movement?</h2>
+      <p>Two more real pages from the same issue. Describe the movement.</p>
+      <figure class="comic">
+        <img src="img/bt11-p3-splash.jpg" width="715" height="944" alt="Splash page from The Black Terror no. 11: a large title, a plane with circular motion lines around the propeller, the hero in a black costume punching a man, a caption at the bottom." />
+        <figcaption><cite>The Black Terror</cite> no. 11, August 1945, page 3. A <strong>splash</strong>: one large image. Nedor / Better Publications. Art: Ed Moritz. Public domain. Wikimedia Commons, File: BlackTerror1103.jpg.</figcaption>
+      </figure>
+      <figure class="comic">
+        <img src="img/bt11-p6-action.jpg" width="715" height="944" alt="Action page from The Black Terror no. 11, page 6, with onomatopoeia such as WUMP, OOF, OW and RAT-A-TAT-TAT, a hero leaping onto a plane, and a body falling diagonally." />
+        <figcaption><cite>The Black Terror</cite> no. 11, August 1945, page 6. Onomatopoeia and motion. Nedor / Better Publications. Art: Ed Moritz. Public domain. Wikimedia Commons, File: BlackTerror1106.jpg.</figcaption>
+      </figure>
+
+      <h3>Look closer (real details)</h3>
+      <p>Crops from page 6 of the same issue. No drawings.</p>
+      <div class="crops">
+        <figure>
+          <img src="img/crop-p6-leap.jpg" width="398" height="343" alt="The hero is leaping onto a plane, with the onomatopoeia WHIRRR and motion lines. Detail from The Black Terror no. 11, page 6." />
+          <figcaption><strong>Movement.</strong> The hero is leaping. The letters <em>WHIRRR</em> give the sound.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/crop-p6-wump.jpg" width="370" height="380" alt="A body falls diagonally. The word WUMP is in the bottom right. Detail from The Black Terror no. 11, page 6." />
+          <figcaption><strong>Onomatopoeia, bottom right.</strong> A body is falling diagonally. The word <em>WUMP!</em> is in the bottom right.</figcaption>
+        </figure>
+      </div>
+      <h3>Expanding your vocabulary</h3>
+      <div class="tbl-scroll">
+        <table class="vocab">
+          <thead><tr><th>Word</th><th>Meaning</th><th>On these pages</th></tr></thead>
+          <tbody>
+            <tr><td>splash page</td><td>a page with one large image</td><td>Page 3 is a splash.</td></tr>
+            <tr><td>motion lines</td><td>lines that show speed</td><td>Around the propeller; around the plane.</td></tr>
+            <tr><td>onomatopoeia</td><td>a sound written as a word</td><td><em>WUMP!</em>, <em>OOF!</em>, <em>OW!</em>, <em>RAT-A-TAT-TAT</em>, <em>WHIRRR</em></td></tr>
+            <tr><td>to leap / to fall / to zoom / to punch</td><td>verbs of movement</td><td>The hero leaps. A body is falling.</td></tr>
+            <tr><td>diagonally</td><td>in a slanted line</td><td>A body falls diagonally across the panel.</td></tr>
+            <tr><td>dynamic / static</td><td>full of movement / still</td><td>Page 6 looks dynamic.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>A. The splash.</strong> Where is the plane? Where is the hero? What is he doing? What are the circular lines around the propeller?</p>
+      <p><strong>B. Page 6.</strong> Find at least four onomatopoeias. For each, say <strong>where</strong> it is and <strong>what sound</strong> it gives. Find a body in the air.</p>
+      <p><strong>C.</strong> Five sentences in the present continuous: <em>The hero is leaping... The plane is zooming... A man is falling...</em></p>
+      <p><strong>2nde.</strong> Eight short sentences. <strong>1re.</strong> Ten sentences, then: <em>The page looks dynamic because...</em></p>
+      <p><strong>Homework.</strong> Six sentences: three with an onomatopoeia and a preposition, three with a verb of movement.</p>
+    </section>
+
+    <section class="panel" id="lesson-3" data-tab="lesson-3" aria-labelledby="l3-title">
+      <h2 id="l3-title">Lesson 3. What kind of hero in wartime?</h2>
+      <p>A real comic from <strong>July 1941</strong>. We may print it. It is Lev Gleason’s Daredevil (1941), <strong>not</strong> Marvel’s Daredevil. The United States entered the Second World War in <strong>December 1941</strong>. This comic appeared <strong>before</strong> that.</p>
+      <figure class="comic">
+        <img src="img/dd1-p3-splash.jpg" width="1284" height="1800" alt="Splash page: Daredevil Battles Hitler, July 1941, a newspaper-style page with a shocked figure in the centre and heroes in motion." />
+        <figcaption><cite>Daredevil Comics</cite> no. 1, July 1941 (<cite>Daredevil Battles Hitler</cite>), splash page. Lev Gleason / Your Guide Publications. Public domain (United States, 1941; copyright not renewed). Internet Archive and Wikimedia Commons. Not the Marvel character.</figcaption>
+      </figure>
+
+      <div class="crops">
+        <figure>
+          <img src="img/crop-dd3-in-the-air.jpg" width="580" height="660" alt="A costumed figure flies in from the top right. Detail from Daredevil Comics no. 1, July 1941, splash page." />
+          <figcaption><strong>In the air, at the top right.</strong> A costumed figure is flying into the page. Detail from the splash above. Public domain. Not the Marvel character.</figcaption>
+        </figure>
+      </div>
+
+      <figure class="comic">
+        <img src="img/dd1-p4-panels.jpg" width="1239" height="1800" alt="Interior page from Daredevil Comics no. 1, July 1941: a large establishing panel with a house on a hill and a red figure among trees, then three smaller panels." />
+        <figcaption><cite>Daredevil Comics</cite> no. 1, July 1941, an interior page. Lev Gleason / Your Guide Publications. Public domain. Internet Archive and Wikimedia Commons.</figcaption>
+      </figure>
+      <h3>A short timeline (facts)</h3>
+      <div class="tbl-scroll">
+        <table class="timeline">
+          <thead><tr><th>Date</th><th>Fact</th></tr></thead>
+          <tbody>
+            <tr><td>June 1938</td><td>Superman first appears in <cite>Action Comics</cite> no. 1. The cover is protected. We do not print it.</td></tr>
+            <tr><td>March 1941</td><td>Captain America first appears. The cover (a punch at Hitler) is protected. We do not print it. We describe it only.</td></tr>
+            <tr><td><strong>July 1941</strong></td><td><strong>This</strong> comic: <cite>Daredevil Comics</cite> no. 1. We may print it.</td></tr>
+            <tr><td>December 1941</td><td>The United States enters the war. Wonder Woman appears in <cite>All Star Comics</cite> no. 8.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>A. The splash.</strong> What is in the centre? Who is in the air, and where? What words are at the top? Use prepositions and a verb of movement.</p>
+      <p><strong>B. The panel page.</strong> In the large panel: where is the house? Where is the red figure? Follow the reading path down to the three small panels.</p>
+      <p><strong>C. F, I or U?</strong> (1) This comic appeared in July 1941, before the United States entered the war. (2) Every American wanted this hero to punch the enemy. (3) The splash may want the reader to see a clear enemy and a fast, powerful hero. Answers, in the correction sheet: 1 F; 2 U; 3 I.</p>
+      <p><strong>2nde.</strong> Eight sentences: description, then one <em>may</em> and one <em>cannot prove</em>. <strong>1re.</strong> About 120 words. What enemy does this page invent? What does it not show?</p>
+      <p><strong>Homework.</strong> The four dates, each with one fact. Two sentences about the splash.</p>
+    </section>
+
+    <section class="panel" id="lesson-4" data-tab="lesson-4" aria-labelledby="l4-title">
+      <h2 id="l4-title">Lesson 4. Colour, and who is left out</h2>
+      <p><strong>A. Colour.</strong> Look again at a <cite>Black Terror</cite> page from Lesson 1 or 2. Name the main colours, and <strong>where</strong> they are. Do not jump to a symbol. Then: <em>The yellow captions may... but I cannot reduce the whole page to one colour meaning, because...</em></p>
+      <h3>B. Pop Art: a painting we do not print</h3>
+      <p>Roy Lichtenstein, <cite>Drowning Girl</cite>, 1963. The Museum of Modern Art, New York, object number 80249. The work is still protected. Madame Carole Paoli Pompougnac has asked the Estate for permission and is awaiting a reply.</p>
+      <p>Open the official page and describe what you see there: <a href="https://www.moma.org/collection/works/80249">https://www.moma.org/collection/works/80249</a></p>
+      <!-- LICHTENSTEIN SWAP: replace lichtenstein-placeholder.png with lichtenstein-drowning-girl.jpg when permission arrives. Do not add the file before that. Keep the MoMA link and the required credit. The task does not change. -->
+      <figure class="lichtenstein-frame">
+        <img src="img/lichtenstein-placeholder.png" width="1600" height="900" alt="Image not reproduced. Roy Lichtenstein, Drowning Girl, 1963, MoMA 80249. Open the official museum page to describe the work." />
+        <figcaption>Roy Lichtenstein, <cite>Drowning Girl</cite>, 1963, MoMA 80249. The image is not reproduced. If permission is granted, the authorised image will be inserted in this frame.</figcaption>
+      </figure>
+      <p>Write: title, date, museum, 80249. Then six short sentences (who, how much of the body, posture, water, words if you see a balloon, colours and dots). Then: <em>This may... It is close to a comic panel because... It is no longer a comic page because...</em></p>
+      <p><strong>C. Who is left out?</strong> On the 1941 and 1945 pages, who is visible? Who is not? Four careful sentences, with <em>may</em>. No slogan. 2nde: tasks A and B. 1re: A, B and C.</p>
+      <p><strong>Homework.</strong> A museum label of 8 lines, with the MoMA link.</p>
+    </section>
+
+    <section class="panel" id="lesson-5" data-tab="lesson-5" aria-labelledby="l5-title">
+      <h2 id="l5-title">Lesson 5. Escape game: The Museum of Unfinished Heroes</h2>
+      <p>A short, serious game. Teams of three or four. If you miss a clue, ask for a hint; you can still finish. Restore accurate labels. Do not mislead the visitor.</p>
+      <h3>Envelope 1. The page</h3>
+      <p>Look at <cite>The Black Terror</cite> no. 11, page 4 (Lesson 1). How many panels? What is in the gutter? What is in the first caption? The <strong>code</strong> is the number of panels.</p>
+      <h3>Envelope 2. The damaged label</h3>
+      <p>A visitor has written: “This is the 1938 Superman cover, a Marvel still from 2011, in the public domain. Lev Gleason’s Daredevil is the same character as Marvel’s Daredevil.” Rewrite a correct label for <cite>Daredevil Comics</cite> no. 1, July 1941. The <strong>code word</strong> is the month of publication, in English, in lower case.</p>
+      <h3>Envelope 3. Sounds</h3>
+      <p>On <cite>The Black Terror</cite> no. 11, page 6, find three onomatopoeias. For each, write the word and where it is. The <strong>code</strong> is the onomatopoeia in the bottom right.</p>
+      <h3>Final statement</h3>
+      <p>Choose the careful option, or rewrite it carefully:</p>
+      <ol type="A">
+        <li>“These comics prove that the United States was always united and fair to everyone.”</li>
+        <li>“These public-domain pages show how a 1940s comic pictured heroes, enemies and movement. They may reveal fears and ideals. They cannot prove what every American believed, or that a hero on a page is the same as ordinary courage.”</li>
+        <li>“Comics are only for children, so they have nothing to say.”</li>
+      </ol>
+      <p>Write six to eight lines. Use two dates and four terms from the vocabulary. Solutions are on the correction sheet. <strong>Homework.</strong> Eight lines: what you can now describe; one date; one protected work you will not copy.</p>
+    </section>
+
+    <section class="panel" id="lesson-6" data-tab="lesson-6" aria-labelledby="l6-title">
+      <h2 id="l6-title">Lesson 6. Final task: images of a nation</h2>
+      <p>This hour trains towards the CCF (Situation A and Situation B) at class level. It is not the official examination.</p>
+      <p><strong>1. Describe.</strong> The teacher gives you one printed page from this sequence. Write a full description: panels or splash, reading path, places, movement, balloons, captions, onomatopoeia, colour.</p>
+      <p><strong>2. A careful reading.</strong> What may this page want the reader to feel? Use <em>may</em>. Then two things it cannot prove.</p>
+      <p><strong>3. The guiding question.</strong> What do American superheroes reveal about the United States, its fears, its ideals and the images it makes of itself? End at the tip of the spiral: ordinary courage, the enemy a society invents, those it leaves out.</p>
+      <p><strong>2nde (A2/B1).</strong> About 140-180 words. At least two dates. <strong>1re (B1).</strong> About 180-220 words. At least three dates. A last short paragraph on one path: existential, political, or civilisational.</p>
+      <p><strong>4. Short oral (about two minutes).</strong> Choose one printed page. Describe it. Then: <em>This may reveal... It cannot prove...</em></p>
+      <p class="starters"><strong>Sentence starters.</strong> I am going to describe a public-domain page from... / In the first panel / On this splash... / The hero is (verb+ing)... / This may... / I would not say “every American”, because...</p>
+      <p><strong>Self-correction</strong> (after the work comes back). What went wrong: ... My improved sentence: ... One word I now use more precisely: ...</p>
+    </section>
+
+    <section class="panel" id="telechargements" data-tab="telechargements" aria-labelledby="telechargements-titre">
+      <h2 id="telechargements-titre">Downloads</h2>
+      <p>Four documents, each in PDF, Word and LibreOffice. You may use and adapt these documents, with credit to their author, without commercial use, and share your versions under the same conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a>.</p>
+      <ul class="downloads">
+        <li>
+          <span class="doc-title">Student sequence (16 pages)</span>
+          <span class="doc-links">
+            <a href="Sequence-American-Superheroes.pdf">PDF</a>
+            <a href="Sequence-American-Superheroes.docx">Word (.docx)</a>
+            <a href="Sequence-American-Superheroes.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <span class="doc-title">Teacher’s sheet (4 pages)</span>
+          <span class="doc-links">
+            <a href="Fiche-prof-American-Superheroes.pdf">PDF</a>
+            <a href="Fiche-prof-American-Superheroes.docx">Word (.docx)</a>
+            <a href="Fiche-prof-American-Superheroes.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <span class="doc-title">Correction sheet (8 pages)</span>
+          <span class="doc-links">
+            <a href="Fiche-correction-American-Superheroes.pdf">PDF</a>
+            <a href="Fiche-correction-American-Superheroes.docx">Word (.docx)</a>
+            <a href="Fiche-correction-American-Superheroes.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <span class="doc-title">Accessible version (14 pages)</span>
+          <span class="doc-links">
+            <a href="Version-dys-American-Superheroes.pdf">PDF</a>
+            <a href="Version-dys-American-Superheroes.docx">Word (.docx)</a>
+            <a href="Version-dys-American-Superheroes.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+      </ul>
+      <h3>Cover</h3>
+      <p>McClelland Barclay, <cite>Man the Guns, Join the Navy</cite>, 1942, United States Navy recruiting poster. National Archives (NARA) 513519; Library of Congress, Prints and Photographs Division, reproduction number LC-USZC4-2009. Public domain (United States government work). Image via Wikimedia Commons.</p>
+      <h3>The comics we print</h3>
+      <p><cite>The Black Terror</cite> no. 11, August 1945, Nedor / Better Publications, art by Ed Moritz: pages 3, 4 and 6. Public domain (United States, 1945; copyright not renewed). Wikimedia Commons.</p>
+      <p><cite>Daredevil Comics</cite> no. 1, July 1941, Lev Gleason / Your Guide Publications: splash and an interior page. Public domain (United States, 1941; copyright not renewed). Internet Archive and Wikimedia Commons. Not Marvel’s Daredevil. The original cover is not reprinted (racist caricature of the Claw).</p>
+      <p class="pourquoi-sign">Madame Carole Paoli Pompougnac</p>
+      <p class="illu-credit">conçu par Madame Carole Paoli Pompougnac, mis en page par Grok. Comic pages: public domain, full credits above and in the documents. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</p>
+      <p style="margin:1.4rem 0 0"><a class="work-link" href="../lycee-pro/anglais.html">Back to English, lycée professionnel</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a></strong></p>
+        <p class="muted" style="margin:0.4rem 0 0">Catalogue pédagogique · Itinéraires et destinations</p>
+      </div>
+      <div class="licence">
+        <p style="margin:0">Creative Commons licence BY-NC-SA 4.0</p>
+        <p style="margin:0.35rem 0 0">You may use and adapt these documents, with credit to their author, without commercial use, and share your versions under the same conditions.
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">Licence details</a>.</p>
+        <p class="photo-credits-foot">McClelland Barclay, Man the Guns, Join the Navy, 1942, NARA 513519, public domain. Daredevil Comics no. 1, July 1941, Lev Gleason, public domain. The Black Terror no. 11, August 1945, Nedor, public domain. Full credits in the documents. © 2026 Madame Carole Paoli Pompougnac.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js" defer></script>
+  <script>
+  (function () {
+    var list = document.getElementById('tablist');
+    if (!list) return;
+    document.documentElement.classList.add('js-tabs');
+    function setHeaderH() {
+      var h = document.querySelector('.site-header');
+      if (h) document.documentElement.style.setProperty('--header-h', h.getBoundingClientRect().height + 'px');
+    }
+    setHeaderH();
+    window.addEventListener('resize', setHeaderH);
+    var links = [].slice.call(list.querySelectorAll('a'));
+    var panels = [].slice.call(document.querySelectorAll('section.panel'));
+    function show(id) {
+      if (!document.getElementById(id)) id = 'introduction';
+      panels.forEach(function (p) {
+        var on = p.id === id;
+        p.classList.toggle('is-active', on);
+        if (on) p.removeAttribute('hidden');
+        else p.setAttribute('hidden', '');
+      });
+      links.forEach(function (a) {
+        var on = a.getAttribute('href') === '#' + id;
+        a.setAttribute('aria-current', on ? 'true' : 'false');
+        a.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+    }
+    function current() {
+      var id = (location.hash || '#introduction').slice(1);
+      show(id);
+    }
+    window.addEventListener('hashchange', current);
+    if (!location.hash) {
+      history.replaceState(null, '', '#introduction');
+    }
+    current();
+    list.addEventListener('keydown', function (e) {
+      var i = links.indexOf(document.activeElement);
+      if (i < 0) return;
+      var next = -1;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (i + 1) % links.length;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (i - 1 + links.length) % links.length;
+      if (e.key === 'Home') next = 0;
+      if (e.key === 'End') next = links.length - 1;
+      if (next < 0) return;
+      e.preventDefault();
+      links[next].focus();
+      links[next].click();
+    });
+    links.forEach(function (a) { a.setAttribute('role', 'tab'); a.setAttribute('tabindex', '0'); });
+    list.setAttribute('role', 'tablist');
+    panels.forEach(function (p) { p.setAttribute('role', 'tabpanel'); });
+  })();
+  </script>
+</body>
+</html>

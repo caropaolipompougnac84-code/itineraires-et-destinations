@@ -160,6 +160,27 @@
   ],
   "resources": [
     {
+      "id": "lp-anglais-american-superheroes",
+      "title": "Anglais · 2nde et 1re bac pro · American Superheroes: images of a nation",
+      "summary": "Six short lessons in English, built around genuine public-domain Golden Age comic pages, for 2nde and 1re of the baccalauréat professionnel. Description first: panels, gutters, balloons, onomatopoeia. A short escape game and a final task.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "2nde et 1re · baccalauréat professionnel",
+      "collection": "lp-anglais",
+      "themes": [
+        "culture",
+        "medias",
+        "citoyennete",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/american-superheroes/",
+      "date": "2026-11-11",
+      "image": "american-superheroes.jpg",
+      "credit": "McClelland Barclay, Man the Guns, Join the Navy, 1942, United States Navy recruiting poster. National Archives (NARA) 513519; Library of Congress, Prints and Photographs Division, reproduction number LC-USZC4-2009. Public domain (United States government work). Image via Wikimedia Commons."
+    },
+    {
       "id": "lg-option-passing-the-flame",
       "title": "Anglais · Tle spécialité LLCER · Passing the Flame",
       "summary": "Othello, or the trap of theatrical illusion: a C1 sequence in English, towards hypokhâgne and Licence LLCER.",

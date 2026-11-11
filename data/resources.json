@@ -160,6 +160,22 @@
   ],
   "resources": [
     {
+      "id": "meth-dissertation-et-essai",
+      "title": "Lettres · Méthode · Dissertation et essai : les épreuves du bac en marche",
+      "summary": "Huit séances pour construire une réponse personnelle : ancrer, éprouver, déplacer. Dissertation pour la voie générale, contraction et essai pour la voie technologique, avec la spirale de Gorse.",
+      "section": "methodologie",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première du lycée général et technologique",
+      "collection": "methodologie",
+      "themes": [
+        "ecrit",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/dissertation-et-essai/",
+      "date": "2026-11-11"
+    },
+    {
       "id": "lg-anglais-tle-hijacking-the-grid",
       "title": "Anglais · Tle · Hijacking the Grid",
       "summary": "Le marathon de New York comme disruptor urbain et social.",
@@ -380,6 +396,22 @@
       "url": "https://itineraires-destinations.fr/cahier-de-douai/",
       "date": "2026-11-11",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122121235155490243&set=a.122119041117490243"
+    },
+    {
+      "id": "lg-lettres-1re-dissertation-essai",
+      "title": "Lettres · 1re · Dissertation et essai : les épreuves du bac en marche",
+      "summary": "Huit séances pour construire une réponse personnelle : ancrer, éprouver, déplacer. Dissertation pour la voie générale, contraction et essai pour la voie technologique, avec la spirale de Gorse.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "ecrit",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/dissertation-et-essai/",
+      "date": "2026-11-11"
     },
     {
       "id": "lg-lettres-enjolras-barricade",

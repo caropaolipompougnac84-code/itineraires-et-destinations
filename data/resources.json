@@ -939,6 +939,21 @@
       "facebookUrl": "https://www.facebook.com/profile.php?id=61594707303557"
     },
     {
+      "id": "meth-signaux-de-classe",
+      "title": "Méthodologie · Les signaux de classe",
+      "summary": "Un code couleur pour participer sans s'exposer : trois ardoises sur pique, un classeur noté, et une sortie de cours prévue avec la vie scolaire.",
+      "section": "methodologie",
+      "subject": "transversal",
+      "level": "tous",
+      "levelLabel": "Cours d'anglais, toutes classes",
+      "collection": "methodologie",
+      "themes": [
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/signaux-de-classe/",
+      "date": "2026-11-11"
+    },
+    {
       "id": "meth-gerex-pepite",
       "title": "Méthodologie · GEREX, une pépite à redécouvrir",
       "summary": "Présentation de GEREX pour retrouver des outils utiles en classe.",

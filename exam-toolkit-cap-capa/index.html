@@ -79,6 +79,8 @@ body.eleve .toolkit .prof{display:none}
 }
 
   </style>
+<link rel="stylesheet" href="/css/plan-de-route.css">
+
 </head>
 <body data-section="lycee-pro">
   <header class="site-header">
@@ -109,10 +111,11 @@ body.eleve .toolkit .prof{display:none}
   <header class="tk-header">
     <h1 id="title">Exam Toolkit</h1>
     <div class="sub" id="subtitle">English · CAP et CAPA · A2 · My Working Day</div>
-    <p class="downloads" lang="fr">Télécharger cette séquence :
-      <a href="exam-toolkit-cap-cuisine.pdf">PDF</a> ·
-      <a href="exam-toolkit-cap-cuisine.docx">Word (.docx)</a> ·
-      <a href="exam-toolkit-cap-cuisine.odt">LibreOffice (.odt)</a>. Les fichiers proposés au téléchargement reprennent la version CAP Cuisine.
+    <p class="downloads" lang="fr">Télécharger le toolkit complet (les huit métiers, CAP et CAPA) :
+      <a href="exam-toolkit-cap-capa.pdf">PDF</a> ·
+      <a href="exam-toolkit-cap-capa.docx">Word (.docx)</a> ·
+      <a href="exam-toolkit-cap-capa.odt">LibreOffice (.odt)</a>.
+      Chaque métier est aussi disponible à part, plus bas sur cette page.
       Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>
     </p>
@@ -124,6 +127,20 @@ body.eleve .toolkit .prof{display:none}
     <div class="bar" id="trades-cap"></div>
     <h3>CAPA · lycée agricole</h3>
     <div class="bar" id="trades-capa"></div>
+  </div>
+  <div class="card" lang="fr" id="telechargements-metiers">
+    <h3>Télécharger un métier</h3>
+    <p>Chaque fichier reprend la séquence complète pour le diplôme indiqué (PDF, Word et LibreOffice).</p>
+    <ul id="dl-metiers">
+      <li>CAP Cuisine : <a href="exam-toolkit-cap-cuisine.pdf">PDF</a> · <a href="exam-toolkit-cap-cuisine.docx">Word (.docx)</a> · <a href="exam-toolkit-cap-cuisine.odt">LibreOffice (.odt)</a></li>
+      <li>CAP Équipier polyvalent du commerce : <a href="exam-toolkit-cap-epc.pdf">PDF</a> · <a href="exam-toolkit-cap-epc.docx">Word (.docx)</a> · <a href="exam-toolkit-cap-epc.odt">LibreOffice (.odt)</a></li>
+      <li>CAP Menuisier fabricant : <a href="exam-toolkit-cap-menuisier.pdf">PDF</a> · <a href="exam-toolkit-cap-menuisier.docx">Word (.docx)</a> · <a href="exam-toolkit-cap-menuisier.odt">LibreOffice (.odt)</a></li>
+      <li>CAP Réalisations industrielles en chaudronnerie ou soudage : <a href="exam-toolkit-cap-rics.pdf">PDF</a> · <a href="exam-toolkit-cap-rics.docx">Word (.docx)</a> · <a href="exam-toolkit-cap-rics.odt">LibreOffice (.odt)</a></li>
+      <li>CAP Accompagnant éducatif petite enfance : <a href="exam-toolkit-cap-aepe.pdf">PDF</a> · <a href="exam-toolkit-cap-aepe.docx">Word (.docx)</a> · <a href="exam-toolkit-cap-aepe.odt">LibreOffice (.odt)</a></li>
+      <li>CAPA Métiers de l’agriculture : <a href="exam-toolkit-capa-agriculture.pdf">PDF</a> · <a href="exam-toolkit-capa-agriculture.docx">Word (.docx)</a> · <a href="exam-toolkit-capa-agriculture.odt">LibreOffice (.odt)</a></li>
+      <li>CAPA Jardinier paysagiste : <a href="exam-toolkit-capa-jardinier.pdf">PDF</a> · <a href="exam-toolkit-capa-jardinier.docx">Word (.docx)</a> · <a href="exam-toolkit-capa-jardinier.odt">LibreOffice (.odt)</a></li>
+      <li>CAPA Services aux personnes et vente en espace rural : <a href="exam-toolkit-capa-sapver.pdf">PDF</a> · <a href="exam-toolkit-capa-sapver.docx">Word (.docx)</a> · <a href="exam-toolkit-capa-sapver.odt">LibreOffice (.odt)</a></li>
+    </ul>
   </div>
 
   <div class="bar">
@@ -332,6 +349,10 @@ sapver:{
 
 
 let cur = "cuisine";
+{
+ const h=(location.hash||"").replace(/^#/,"");
+ if (TRADES[h]) cur=h;
+}
 const TABS = [["ov","Overview"],["s1","Session 1"],["s2","Session 2"],["s3","Session 3"],["s4","Session 4"],["s5","Session 5"],["fc","Flashcards"],["ev","Assessment"],["secours","Issue de secours"],["key","Answer key"]];
 
 function tbl(rows, h1="English", h2="Français"){return `<div class="tbl-scroll"><table><tr><th>${h1}</th><th>${h2}</th></tr>${rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table></div>`}
@@ -345,6 +366,16 @@ function bilan(n,items){return `<div class="card bilan"><h3>Bilan écrit · note
 
 function render(){
  const T = TRADES[cur];
+ if (!T.client){
+  T.client = [
+   `Good evening! Welcome to ${T.place}.`,
+   "How can I help you today?",
+   `I am a ${T.job}. I can explain what I do.`,
+   "It is ready in 15 minutes.",
+   "Is everything OK? Can I...?",
+   "Thank you. Have a nice day!"
+  ];
+ }
  document.getElementById("title").textContent = "Exam Toolkit: " + T.dip;
  document.getElementById("subtitle").textContent = "English · " + T.dip + " · A2 · My Working Day";
  document.title = "Exam Toolkit: " + T.dip;
@@ -376,8 +407,8 @@ function render(){
  <tr><td>3. Safety First</td><td>I explain the rules with must and mustn't.</td><td>Bilan 3 : 4 safety rules</td></tr>
  <tr><td>4. The Jury's Questions</td><td>I answer tricky questions.</td><td>Bilan 4 : my answers to 2 questions</td></tr>
  <tr><td>5. Exam Simulation</td><td>I present my job to a jury.</td><td>Note de synthèse finale, sur 20</td></tr></table></div>
- <div class="card prof feuille-route"><h3>Feuille de route · ${T.dip}</h3>
- <p><b>Volume :</b> 6 heures (cinq séances de 55 minutes, la séance 5 en deux heures).</p>
+ <div class="card prof feuille-route plan-de-route" lang="fr"><h3>Plan de route · ${T.dip}</h3>
+ <p><b>Volume :</b> 6 heures : quatre séances de 55 minutes, calibrées sur 52, et la séance 5 en deux périodes de 52 minutes (oral, puis écrit).</p>
  <p><b>Fil rouge :</b> parler à un client anglais comme on aimerait qu'on nous parle, poliment, lentement, clairement.</p>
  <div class="tbl-scroll"><table>
  <tr><th>Séance</th><th>Objectif</th><th>Supports</th><th>Trace écrite</th><th>Évaluation</th><th>Date</th><th>Fait</th></tr>
@@ -400,12 +431,24 @@ function render(){
  </div>`;
 
  P.s1 = `
- <div class="card prof"><h3>Déroulé · 55 min</h3>
- <p><span class="time">5 min</span> Le tableau projeté, sans titre. Question : What job is it? Les élèves proposent.</p>
- <p><span class="time">15 min</span> Description guidée du tableau (cadre ci-dessous). On compare avec le métier d'aujourd'hui.</p>
- <p><span class="time">15 min</span> Vocabulaire : lecture, répétition, exercice d'appariement.</p>
- <p><span class="time">10 min</span> Carte mentale : le métier au centre, cinq branches (Places, Tools, Actions, Times, Rules). On remplit les trois premières.</p>
- <p><span class="time">10 min</span> Bilan écrit 1.</p></div>
+ <div class="card prof plan-de-route" lang="fr">
+<h3>Plan de route</h3>
+<p class="pdr-lead">Séance de 55 minutes, calibrée sur 52 minutes. 5 séances (la séance 5 en deux périodes de 52 minutes).</p>
+<ol class="pdr-steps">
+<li>Le tableau projeté, sans titre. Question : What job is it? Les élèves proposent. <span class="pdr-time">5 min</span></li>
+<li>Description guidée du tableau (cadre ci-dessous). On compare avec le métier d’aujourd’hui. <span class="pdr-time">14 min</span></li>
+<li>Vocabulaire : lecture, répétition, exercice d’appariement. <span class="pdr-time">14 min</span></li>
+<li>Carte mentale : le métier au centre, cinq branches (Places, Tools, Actions, Times, Rules). On remplit les trois premières. <span class="pdr-time">10 min</span></li>
+<li>Bilan écrit 1. <span class="pdr-time">9 min</span></li>
+</ol>
+<ul class="pdr-end">
+<li><b>Trace écrite.</b> Carte mentale (trois branches) et le bilan écrit 1 (my workplace in 3 sentences).</li>
+<li><b>Participation.</b> Chacun parle au moins une fois : une proposition de métier sur le tableau, ou une phrase de description.</li>
+<li><b>Travail pour la séance suivante.</b> Apprendre huit mots du métier ; relire la carte mentale.</li>
+</ul>
+<p class="pdr-stop"><b>Point d’arrêt.</b> Fin de cette séance.</p>
+<p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d’arrêt, on condense : on dicte une trace courte (I am a … I work in …) ; un tour de classe, une phrase chacun sur le tableau, pour que chacun ait parlé au moins une fois ; le travail (apprendre huit mots du métier) est écrit au tableau.</p>
+</div>
  <div class="card"><h2>Session 1 · My Workplace</h2>${fig}<p class="then-now">${I.linkCap}</p>${photo}
  <h3>Look and answer</h3><ol>${T.artQ.map(q=>`<li>${q}${lines(1)}</li>`).join("")}</ol>
  <h3>Useful phrases</h3><p>In the painting, I can see... · The person is ...ing. · In the background, there is... · Today, a ${T.job} uses...</p></div>
@@ -417,13 +460,25 @@ function render(){
  ${bilan(1,[`I am a ${T.job}. I work in ...`,"In my workplace, there is a ... and a ...","I use a ... to ..."])}`;
 
  P.s2 = `
- <div class="card prof"><h3>Déroulé · 55 min</h3>
- <p><span class="time">5 min</span> Rappel : cinq mots de la séance 1, à l'oral, tour de classe.</p>
- <p><span class="time">10 min</span> L'heure et la journée type : lecture, puis exercice 3.</p>
- <p><span class="time">5 min</span> Question à la classe, en français : « Vous êtes anglais, un ${T.job} français vient chez vous ou vous accueille. Qu'est-ce que vous avez envie qu'il vous dise ? » On note les idées au tableau.</p>
- <p><span class="time">10 min</span> On compare avec les sept règles d'or et le dialogue en six étapes. Lecture à deux voix.</p>
- <p><span class="time">15 min</span> Jeu de rôle par deux avec les cartes : l'un est le client anglais, l'autre le professionnel. Le client coche les règles d'or respectées.</p>
- <p><span class="time">10 min</span> Bilan écrit 2.</p></div>
+ <div class="card prof plan-de-route" lang="fr">
+<h3>Plan de route</h3>
+<p class="pdr-lead">Séance de 55 minutes, calibrée sur 52 minutes. 5 séances (la séance 5 en deux périodes de 52 minutes).</p>
+<ol class="pdr-steps">
+<li>Rappel : cinq mots de la séance 1, à l’oral, tour de classe. <span class="pdr-time">5 min</span></li>
+<li>L’heure et la journée type : lecture, puis exercice 3. <span class="pdr-time">10 min</span></li>
+<li>Question à la classe, en français : « Vous êtes anglais, un ${T.job} français vient chez vous ou vous accueille. Qu’est-ce que vous avez envie qu’il vous dise ? » On note les idées au tableau. <span class="pdr-time">5 min</span></li>
+<li>On compare avec les sept règles d’or et le dialogue en six étapes. Lecture à deux voix. <span class="pdr-time">9 min</span></li>
+<li>Jeu de rôle par deux avec les cartes : l’un est le client anglais, l’autre le professionnel. Le client coche les règles d’or respectées. <span class="pdr-time">14 min</span></li>
+<li>Bilan écrit 2. <span class="pdr-time">9 min</span></li>
+</ol>
+<ul class="pdr-end">
+<li><b>Trace écrite.</b> Branche Times, dialogue recopié, et le bilan écrit 2 (my day in 4 sentences).</li>
+<li><b>Participation.</b> Chacun parle au moins une fois : une réplique du jeu de rôle, ou un mot de la séance 1 au tour de classe.</li>
+<li><b>Travail pour la séance suivante.</b> Relire les sept règles d’or et le dialogue en six étapes.</li>
+</ul>
+<p class="pdr-stop"><b>Point d’arrêt.</b> Fin de cette séance.</p>
+<p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d’arrêt, on condense : on dicte une trace courte (I start at … I always …) ; un tour de classe, une réplique du dialogue chacun, pour que chacun ait parlé au moins une fois ; le travail (relire les sept règles d’or et le dialogue) est écrit au tableau.</p>
+</div>
  <div class="card"><h2>Session 2 · My Working Day and My Customer</h2>
  <div class="illu-row">${photo}</div>
  <h3>A day in ${T.place}</h3>${tbl(T.day,"Time","What I do")}
@@ -460,12 +515,24 @@ function render(){
  ${bilan(2,"I start at ... and I ...|At ..., I usually ...|In the afternoon, I ...|I never ...".split("|"))}`;
 
  P.s3 = `
- <div class="card prof"><h3>Déroulé · 55 min</h3>
- <p><span class="time">5 min</span> Rappel : ma journée en deux phrases.</p>
- <p><span class="time">15 min</span> Les règles de sécurité : must et mustn't, avec des pictogrammes dessinés au tableau.</p>
- <p><span class="time">10 min</span> Exercice 5.</p>
- <p><span class="time">15 min</span> Jeu « Supervisor Says » : un élève donne une consigne, la classe mime seulement si la phrase commence par « Supervisor says ».</p>
- <p><span class="time">10 min</span> Bilan écrit 3. On complète la branche Rules de la carte mentale.</p></div>
+ <div class="card prof plan-de-route" lang="fr">
+<h3>Plan de route</h3>
+<p class="pdr-lead">Séance de 55 minutes, calibrée sur 52 minutes. 5 séances (la séance 5 en deux périodes de 52 minutes).</p>
+<ol class="pdr-steps">
+<li>Rappel : ma journée en deux phrases. <span class="pdr-time">5 min</span></li>
+<li>Les règles de sécurité : must et mustn’t, avec des pictogrammes dessinés au tableau. <span class="pdr-time">14 min</span></li>
+<li>Exercice 5. <span class="pdr-time">10 min</span></li>
+<li>Jeu « Supervisor Says » : un élève donne une consigne, la classe mime seulement si la phrase commence par « Supervisor says ». <span class="pdr-time">14 min</span></li>
+<li>Bilan écrit 3. On complète la branche Rules de la carte mentale. <span class="pdr-time">9 min</span></li>
+</ol>
+<ul class="pdr-end">
+<li><b>Trace écrite.</b> Branche Rules et le bilan écrit 3 (4 safety rules).</li>
+<li><b>Participation.</b> Chacun parle au moins une fois : une phrase avec must ou mustn’t, ou un tour au jeu Supervisor Says.</li>
+<li><b>Travail pour la séance suivante.</b> Relire les quatre règles de sécurité.</li>
+</ul>
+<p class="pdr-stop"><b>Point d’arrêt.</b> Fin de cette séance.</p>
+<p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d’arrêt, on condense : on dicte une trace courte (In my job, you must … You mustn’t …) ; un tour de classe, une règle chacun, pour que chacun ait parlé au moins une fois ; le travail (relire les quatre règles de sécurité) est écrit au tableau.</p>
+</div>
  <div class="card"><h2>Session 3 · Safety First</h2>
  <p><b>You must</b> = c'est obligatoire. <b>You mustn't</b> = c'est interdit.</p>
  <h3>Exercise 5 · Must or mustn't?</h3><ol>${T.rules.map(r=>`<li>You .............. ${r[0]}.</li>`).join("")}</ol></div>
@@ -473,11 +540,23 @@ function render(){
  ${bilan(3,["In my job, you must ...","You must also ...","You mustn't ...","It is important because ..."])}`;
 
  P.s4 = `
- <div class="card prof"><h3>Déroulé · 55 min</h3>
- <p><span class="time">5 min</span> Rappel : deux règles de sécurité.</p>
- <p><span class="time">15 min</span> Les questions du jury : lecture, puis on cherche des réponses ensemble. Les modèles ne sont donnés qu'après.</p>
- <p><span class="time">25 min</span> Hot seat : un élève sur la chaise, trois élèves posent les questions, une minute par élève.</p>
- <p><span class="time">10 min</span> Bilan écrit 4.</p></div>
+ <div class="card prof plan-de-route" lang="fr">
+<h3>Plan de route</h3>
+<p class="pdr-lead">Séance de 55 minutes, calibrée sur 52 minutes. 5 séances (la séance 5 en deux périodes de 52 minutes).</p>
+<ol class="pdr-steps">
+<li>Rappel : deux règles de sécurité. <span class="pdr-time">5 min</span></li>
+<li>Les questions du jury : lecture, puis on cherche des réponses ensemble. Les modèles ne sont donnés qu’après. <span class="pdr-time">14 min</span></li>
+<li>Hot seat : un élève sur la chaise, trois élèves posent les questions, une minute par élève. <span class="pdr-time">24 min</span></li>
+<li>Bilan écrit 4. <span class="pdr-time">9 min</span></li>
+</ol>
+<ul class="pdr-end">
+<li><b>Trace écrite.</b> Bilan écrit 4 (réponses à deux questions du jury).</li>
+<li><b>Participation.</b> Chacun parle au moins une fois : une question ou une réponse au hot seat.</li>
+<li><b>Travail pour la séance suivante.</b> Préparer le plan de présentation en cinq étapes.</li>
+</ul>
+<p class="pdr-stop"><b>Point d’arrêt.</b> Fin de cette séance.</p>
+<p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d’arrêt, on condense : on dicte une trace courte (I chose this job because …) ; un tour de classe, une question ou une réponse chacun, pour que chacun ait parlé au moins une fois ; le travail (préparer le plan de présentation en cinq étapes) est écrit au tableau.</p>
+</div>
  <div class="card"><h2>Session 4 · The Jury's Tricky Questions</h2>
  <ol><li>Can you introduce yourself?</li><li>Why did you choose this job?</li>${T.jury.map(j=>`<li>${j[0]}</li>`).join("")}<li>An English customer arrives. What do you say?</li><li>Tell me about your work placement.</li></ol>
  <h3>Help</h3><p>If you don't understand: <b>Can you repeat, please?</b> · <b>Can you speak slowly, please?</b> · If you need time: <b>Let me think...</b></p></div>
@@ -486,11 +565,36 @@ function render(){
 
  const D = T.docs;
  P.s5 = `
- <div class="card prof"><h3>Déroulé · 2 heures (oral, puis écrit)</h3>
- <p><span class="time">10 min</span> Préparation de l'oral avec le plan en cinq étapes.</p>
- <p><span class="time">40 min</span> Simulation par groupes de trois : un candidat, deux membres du jury qui notent avec la grille. On tourne.</p>
- <p><span class="time">5 min</span> Retour collectif.</p>
- <p><span class="time">50 min</span> Note de synthèse finale, en temps limité, sans dictionnaire.</p></div>
+ <div class="card prof plan-de-route" lang="fr">
+<h3>Plan de route</h3>
+<p class="pdr-lead">Séance 5 en deux périodes de 52 minutes (oral, puis écrit), chacune issue d’une séance de 55 minutes, calibrée sur 52 minutes.</p>
+<p><b>Période A · oral (52 min).</b></p>
+<ol class="pdr-steps">
+<li>Préparation de l’oral avec le plan en cinq étapes. <span class="pdr-time">8 min</span></li>
+<li>Simulation par groupes de trois : un candidat, deux membres du jury qui notent avec la grille. On tourne. <span class="pdr-time">38 min</span></li>
+<li>Retour collectif. <span class="pdr-time">6 min</span></li>
+</ol>
+<ul class="pdr-end">
+<li><b>Trace écrite.</b> Le plan de présentation complété.</li>
+<li><b>Participation.</b> Chacun parle au moins une fois : un passage comme candidat ou comme juré.</li>
+<li><b>Travail pour la séance suivante.</b> Revoir le plan avant la note de synthèse (période B).</li>
+</ul>
+<p class="pdr-stop"><b>Point d’arrêt.</b> Fin de la période A.</p>
+<p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d’arrêt, on condense : on dicte le plan en cinq points ; un tour de classe, une phrase du plan chacun, pour que chacun ait parlé au moins une fois ; le travail (revoir le plan avant la période B) est écrit au tableau.</p>
+<p><b>Période B · écrit (52 min).</b></p>
+<ol class="pdr-steps">
+<li>Rappel et consignes de la note de synthèse. <span class="pdr-time">5 min</span></li>
+<li>Rédaction en temps limité, sans dictionnaire. <span class="pdr-time">42 min</span></li>
+<li>Relecture. <span class="pdr-time">5 min</span></li>
+</ol>
+<ul class="pdr-end">
+<li><b>Trace écrite.</b> La note de synthèse finale (60 à 80 mots).</li>
+<li><b>Participation.</b> Chacun parle au moins une fois : une phrase de rappel sur l’un des trois documents, avant l’écrit.</li>
+<li><b>Travail pour la séance suivante.</b> Fin de la séquence ; relire sa note si le professeur le demande.</li>
+</ul>
+<p class="pdr-stop"><b>Point d’arrêt.</b> Fin de la période B.</p>
+<p class="pdr-exit"><b>Issue de secours · 8 min.</b> Si le temps manque à ce point d’arrêt, on dicte une note courte (40 mots : le métier, une règle, ce qu’il faut faire demain) ; on demande une phrase chacun sur un document, pour que chacun ait parlé au moins une fois ; la consigne est écrite au tableau.</p>
+</div>
  <div class="card"><h2>Session 5 · Exam Simulation</h2>
  <h3>My presentation plan (2 minutes)</h3>
  <ol><li><b>Me:</b> Hello, my name is ... I am ... years old. I am a student in ${T.dip}.</li>
@@ -659,6 +763,8 @@ bE.onclick=()=>{document.body.classList.add("eleve");bE.classList.add("on");bP.c
 document.getElementById("bDys").onclick=e=>{document.body.classList.toggle("dys");e.target.classList.toggle("on");};
 document.getElementById("bPrint").onclick=()=>window.print();
 buildTrades();render();
+window.addEventListener("hashchange",()=>{const h=(location.hash||"").replace(/^#/,""); if(TRADES[h]){cur=h;render();}});
+
 
   </script>
 </body>

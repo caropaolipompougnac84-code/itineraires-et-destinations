@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rimbaud, Cahier de Douai · Itinéraires et destinations</title>
+  <meta name="description" content="Séquence de français, Première du lycée général et technologique : Rimbaud, Cahier de Douai, parcours émancipations créatrices, programme 2026-2027. Cinq poèmes, la spirale de Gorse, les figures de style." />
+  <meta name="author" content="Madame Carole Paoli Pompougnac" />
+  <link rel="canonical" href="https://itineraires-destinations.fr/cahier-de-douai/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    body,
+    body[data-section="lycee-general"] {
+      --burgundy: #7B1E3A;
+      --burgundy-deep: #541428;
+    }
+    .page-content { padding-bottom: 3rem; max-width: 46rem; }
+    .page-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 2.1rem 0 0.75rem;
+    }
+    .page-content h3 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.3rem 0 0.45rem;
+    }
+    .page-content p { margin: 0 0 1rem; }
+    .page-content ul, .page-content ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+    .page-content li { margin: 0.35rem 0; }
+    .programme {
+      margin: 0 0 1.2rem;
+      font-size: 0.98rem;
+      color: var(--ink-soft);
+    }
+    .hero-illu {
+      margin: 0.4rem 0 1.6rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .hero-illu img { width: 100%; height: auto; display: block; background: #fff; padding: 0.9rem 0.6rem 0.4rem; }
+    .hero-illu figcaption {
+      padding: 0.5rem 0.9rem 0.8rem;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+    .pourquoi-box {
+      margin: 1.2rem 0 1.8rem;
+      padding: 1rem 1.1rem 1.05rem 1.15rem;
+      background: var(--paper-3);
+      border: 1px solid var(--rule);
+      border-left: 5px solid var(--burgundy);
+    }
+    .pourquoi-box p { margin: 0; font-size: 1.08rem; line-height: 1.7; }
+    .pourquoi-box strong { color: var(--burgundy); font-weight: 700; }
+    .poemes {
+      list-style: none;
+      margin: 0 0 1.2rem;
+      padding: 0;
+    }
+    .poemes li {
+      margin: 0;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .poemes li:last-child { border-bottom: 0; }
+    .poemes strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 0 0 0.15rem;
+    }
+    .poemes span { color: var(--ink-soft); }
+    .spirale-fig {
+      margin: 1rem 0 1.3rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .spirale-fig img {
+      width: min(100%, 26rem);
+      height: auto;
+      display: block;
+      margin: 0.8rem auto 0.2rem;
+      background: #fff;
+    }
+    .spirale-fig figcaption {
+      padding: 0.55rem 0.9rem 0.85rem;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+    .tours { list-style: none; margin: 0 0 1rem; padding: 0; }
+    .tours li {
+      margin: 0;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .tours li:last-child { border-bottom: 0; }
+    .tours .n {
+      display: inline-block;
+      min-width: 1.4rem;
+      font-weight: 700;
+      color: var(--burgundy);
+      margin-right: 0.25rem;
+    }
+    .tours q, .tours .q {
+      font-weight: 600;
+    }
+    .tours .r {
+      display: block;
+      color: var(--ink-soft);
+      margin: 0.2rem 0 0;
+      padding-left: 1.7rem;
+    }
+    .pointe {
+      margin: 0.8rem 0 1.2rem;
+      font-size: 1.05rem;
+    }
+    .figures { list-style: none; margin: 0 0 1rem; padding: 0; }
+    .figures li {
+      margin: 0;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .figures li:last-child { border-bottom: 0; }
+    .figures strong { color: var(--ink); }
+    .figures em { font-style: italic; color: var(--ink-soft); }
+    .seances { list-style: none; margin: 0 0 1rem; padding: 0; counter-reset: seance; }
+    .seances li {
+      margin: 0;
+      padding: 0.75rem 0 0.75rem 2.4rem;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+    .seances li:last-child { border-bottom: 0; }
+    .seances li::before {
+      counter-increment: seance;
+      content: counter(seance);
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      font-weight: 700;
+      color: var(--burgundy);
+      font-variant-numeric: tabular-nums;
+    }
+    .seances strong { display: block; margin: 0 0 0.15rem; }
+    .seances span { color: var(--ink-soft); font-size: 0.95rem; }
+    .downloads { margin: 0.4rem 0 0; padding: 0; list-style: none; }
+    .downloads li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.7rem;
+      align-items: baseline;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--rule);
+      margin: 0;
+    }
+    .downloads li:last-child { border-bottom: 0; }
+    .downloads .doc-title { flex: 1 1 12rem; font-weight: 600; margin: 0; }
+    .downloads .doc-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .downloads a { min-height: 2.75rem; display: inline-flex; align-items: center; }
+    .illu-credit { font-size: 0.88rem; color: var(--ink-soft); margin: 1.2rem 0 0; }
+    @media (max-width: 600px) {
+      .tours .r { padding-left: 0; }
+      .seances li { padding-left: 2rem; }
+    }
+  </style>
+</head>
+<body data-section="lycee-general">
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a class="brand-mark" href="../index.html">Itinéraires et destinations</a>
+        <span class="brand-tag">Séquences prêtes à l'emploi · Français, anglais · Tous niveaux</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger"><span class="sr-only">Menu</span></label>
+      <nav class="nav-main" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../lycee-pro/index.html">Lycée professionnel</a>
+        <a href="../lycee-general/index.html" aria-current="page">Lycée général</a>
+        <a href="../lycee-agricole/index.html">Lycée agricole</a>
+        <a href="../cfa/index.html">CFA</a>
+        <a href="../segpa/index.html">6e à 3e · SEGPA</a>
+        <a href="../methodologie/index.html">Méthodologie</a>
+        <a href="../themes.html">Thèmes</a>
+        <a href="../nouveautes.html">Nouveautés</a>
+        <a href="../a-propos.html">À propos</a>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../lycee-general/index.html">Lycée général et technologique</a></li><li><a href="../lycee-general/lettres.html">Lettres</a></li><li aria-current="page">Cahier de Douai</li></ol></nav>
+
+  <main class="wrap page-content">
+    <section class="page-hero">
+      <p class="kicker">Lettres · Première · Lycée général et technologique</p>
+      <h1>Rimbaud, Cahier de Douai</h1>
+      <p class="lede">Partir à seize ans. Huit séances pour lire cinq poèmes, suivre la spirale de Gorse, et préparer le bac de français.</p>
+    </section>
+
+    <p class="programme">Valable pour le programme 2026-2027 : œuvre au programme, parcours « émancipations créatrices », objet d'étude « La poésie du XIXe siècle au XXIe siècle ».</p>
+
+    <figure class="hero-illu">
+      <img src="img/bandeau-cahier-de-douai.webp" width="2007" height="590" alt="Dessin au trait : une route de campagne sous la lune et la Grande Ourse, un cabaret au bout du chemin." />
+      <figcaption>La route, le cabaret, et le ciel de « Ma Bohème » : la Grande Ourse comme auberge.</figcaption>
+    </figure>
+
+    <section aria-labelledby="presentation">
+      <h2 id="presentation">Présentation</h2>
+      <p>Arthur Rimbaud copie, en 1870, vingt-deux poèmes dans le Cahier de Douai, dit aussi Recueil Demeny. La séquence s'arrête sur cinq d'entre eux, reproduits en entier d'après l'édition Vanier de 1895 : « Sensation », « Roman », « Le Dormeur du val », « Au Cabaret-Vert » et « Ma Bohème ».</p>
+      <p>Huit séances de 55 minutes, prévues sur 52, mènent à une introduction et une partie de dissertation, puis à un oral blanc. Chaque élève construit un classeur, une pochette par poème. Les signaux de classe servent tout au long : un code couleur, rien n'est écrit sur l'ardoise.</p>
+      <p>On part d'une question simple : qu'est-ce qui donne envie de partir ? On évite deux pièges : lire le recueil comme une biographie, et faire de Rimbaud un poète qui casse tout. Les formes sont tenues. La liberté se joue à l'intérieur.</p>
+    </section>
+
+    <aside class="pourquoi-box" aria-labelledby="problematique-titre">
+      <p id="problematique-titre"><strong>Problématique.</strong> Peut-on se libérer par la poésie quand le monde, lui, reste en guerre et en manque ?</p>
+    </aside>
+
+    <section aria-labelledby="corpus">
+      <h2 id="corpus">Les cinq poèmes</h2>
+      <ul class="poemes">
+        <li>
+          <strong>Sensation</strong>
+          <span>Le départ est promis, au futur : « j'irai loin, bien loin ».</span>
+        </li>
+        <li>
+          <strong>Roman</strong>
+          <span>Qui parle : un adolescent, ou un poète qui joue à l'adolescent ?</span>
+        </li>
+        <li>
+          <strong>Au Cabaret-Vert</strong>
+          <span>Un sonnet peut-il être libre ? Le quotidien entre dans la forme fixe.</span>
+        </li>
+        <li>
+          <strong>Le Dormeur du val</strong>
+          <span>La douceur du val mène aux « deux trous rouges » : la guerre de 1870 entre dans le recueil.</span>
+        </li>
+        <li>
+          <strong>Ma Bohème</strong>
+          <span>La pauvreté devient poésie. Le ciel se fait auberge, à la Grande Ourse.</span>
+        </li>
+      </ul>
+      <p>Les cinq textes sont dans la séquence, prêts à imprimer, un poème par page. Les élèves sont aussi interrogés sur l'œuvre entière.</p>
+    </section>
+
+    <section aria-labelledby="spirale">
+      <h2 id="spirale">La spirale de Gorse</h2>
+      <p>Elle lance la séquence. Ce n'est pas tout le cours. Six tours mènent d'une question générale à un vrai problème. La question est à l'extérieur, la réponse attendue à l'intérieur. À la pointe, un problème : politique, civilisationnel ou existentiel. Ensuite, chaque séance suit son propre déroulé.</p>
+      <figure class="spirale-fig">
+        <img src="img/spirale-compacte.webp" width="1015" height="1251" alt="Schéma de la spirale de Gorse : six tours descendent vers une pointe, qui s'ouvre en trois voies, politique, civilisationnelle et existentielle." />
+        <figcaption>Six tours, puis la pointe. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</figcaption>
+      </figure>
+      <ol class="tours">
+        <li><span class="n">1</span> <span class="q">Qu'est-ce qui donne envie de partir ?</span> <span class="r">Sentir, marcher, ne plus être tenu. Pas forcément fuir.</span></li>
+        <li><span class="n">2</span> <span class="q">Pourquoi « Sensation » est-il écrit au futur ?</span> <span class="r">Le départ est d'abord rêvé : « j'irai ». Une promesse.</span></li>
+        <li><span class="n">3</span> <span class="q">Qui parle : un adolescent, ou un poète qui joue à l'adolescent ?</span> <span class="r">Un « je » qui se met en scène, avec humour et distance.</span></li>
+        <li><span class="n">4</span> <span class="q">Comment un sonnet peut-il sembler si libre ?</span> <span class="r">Rejets, mots familiers : la forme fixe tient, mais elle est bousculée.</span></li>
+        <li><span class="n">5</span> <span class="q">« Le Dormeur du val » chante-t-il la paix de la nature ?</span> <span class="r">Non : la douceur mène aux « deux trous rouges ».</span></li>
+        <li><span class="n">6</span> <span class="q">Écrire, est-ce déjà être libre ?</span> <span class="r">La pauvreté devient rime : la liberté passe par les mots.</span></li>
+      </ol>
+      <p class="pointe"><strong>À la pointe.</strong> Peut-on se libérer par la poésie quand le monde, lui, reste en guerre et en manque ?</p>
+    </section>
+
+    <section aria-labelledby="figures">
+      <h2 id="figures">Les figures de style</h2>
+      <p>Une fiche de onze figures prises dans le corpus, une figure du jour à chaque séance, des exercices corrigés et des amorces pour les commenter. Règle commune : nommer, citer, dire l'effet.</p>
+      <ul class="figures">
+        <li><strong>Comparaison</strong> : « comme un bohémien » (« Sensation »).</li>
+        <li><strong>Métaphore</strong> : « Mon auberge était à la Grande-Ourse » (« Ma Bohème »).</li>
+        <li><strong>Personnification</strong> : « où chante une rivière » (« Le Dormeur du val »).</li>
+        <li><strong>Apostrophe</strong> : « Nature, berce-le chaudement » (« Le Dormeur du val »).</li>
+        <li><strong>Euphémisme</strong> : « il fait un somme » (« Le Dormeur du val »).</li>
+        <li><strong>Antithèse</strong> : « chaudement » / « il a froid » (« Le Dormeur du val »).</li>
+        <li><strong>Hyperbole</strong> : « la chope immense » (« Au Cabaret-Vert »).</li>
+        <li><strong>Anaphore</strong> : « Vous êtes amoureux. » (« Roman »).</li>
+        <li><strong>Énumération</strong> : « Un soldat jeune, bouche ouverte, tête nue » (« Le Dormeur du val »).</li>
+        <li><strong>Hypallage</strong> : « mes souliers blessés » (« Ma Bohème »).</li>
+        <li><strong>Allitération</strong> : « Les parfums ne font pas frissonner sa narine » (« Le Dormeur du val »).</li>
+      </ul>
+      <p>Pour commenter : « En comparant… à…, le poète suggère que… » « La métaphore “…” transforme… en… » « Cette figure n'est pas un ornement : elle permet au lecteur de… »</p>
+    </section>
+
+    <section aria-labelledby="seances">
+      <h2 id="seances">Les huit séances</h2>
+      <ol class="seances">
+        <li><strong>Pourquoi partir ?</strong> <span>« Sensation » · la négation · évaluation diagnostique</span></li>
+        <li><strong>Qui parle : un adolescent, ou un poète qui joue à l'adolescent ?</strong> <span>« Roman » · la phrase non verbale</span></li>
+        <li><strong>Un sonnet peut-il être libre ?</strong> <span>« Au Cabaret-Vert » · la relative</span></li>
+        <li><strong>« Le Dormeur du val » chante-t-il la paix de la nature ?</strong> <span>« Le Dormeur du val » · relative et inversion · évaluation intermédiaire</span></li>
+        <li><strong>La pauvreté est-elle une misère, ou une richesse de poète ?</strong> <span>« Ma Bohème » · l'apposition</span></li>
+        <li><strong>De quoi se libère-t-on ?</strong> <span>Les cinq poèmes · la question</span></li>
+        <li><strong>Lire, expliquer, analyser : l'oral</strong> <span>Un poème au choix · la proposition · oral blanc en binôme</span></li>
+        <li><strong>La liberté, est-ce seulement partir ?</strong> <span>Les cinq poèmes · leur, leurs · évaluation sommative</span></li>
+      </ol>
+    </section>
+
+    <section id="telechargements" aria-labelledby="telechargements-titre">
+      <h2 id="telechargements-titre">Téléchargements</h2>
+      <p>Trois documents, chacun en PDF, Word et LibreOffice. Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>.</p>
+      <ul class="downloads">
+        <li>
+          <p class="doc-title">Séquence (95 pages)</p>
+          <span class="doc-links">
+            <a href="Sequence-Cahier-de-Douai-Rimbaud.pdf">PDF</a>
+            <a href="Sequence-Cahier-de-Douai-Rimbaud.docx">Word (.docx)</a>
+            <a href="Sequence-Cahier-de-Douai-Rimbaud.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <p class="doc-title">Fiche professeur (2 pages)</p>
+          <span class="doc-links">
+            <a href="Fiche-prof-Cahier-de-Douai.pdf">PDF</a>
+            <a href="Fiche-prof-Cahier-de-Douai.docx">Word (.docx)</a>
+            <a href="Fiche-prof-Cahier-de-Douai.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+        <li>
+          <p class="doc-title">Fiche de correction (6 pages)</p>
+          <span class="doc-links">
+            <a href="Fiche-correction-Cahier-de-Douai.pdf">PDF</a>
+            <a href="Fiche-correction-Cahier-de-Douai.docx">Word (.docx)</a>
+            <a href="Fiche-correction-Cahier-de-Douai.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <p class="pourquoi-sign">Madame Carole Paoli Pompougnac</p>
+    <p class="illu-credit">Illustrations originales.</p>
+    <p style="margin:1.4rem 0 0"><a class="work-link" href="../lycee-general/lettres.html">Retour aux lettres</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></strong></p>
+        <p class="muted" style="margin:0.4rem 0 0">Catalogue pédagogique · Itinéraires et destinations</p>
+      </div>
+      <div class="licence">
+        <p style="margin:0">Licence Creative Commons BY-NC-SA 4.0</p>
+        <p style="margin:0.35rem 0 0">Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">Détails de la licence</a>.</p>
+        <p class="photo-credits-foot">Illustrations originales. © 2026 Madame Carole Paoli Pompougnac.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

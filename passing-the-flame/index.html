@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Itinéraires et destinations" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="Passing the Flame · Othello, or the trap of theatrical illusion" />
-  <meta property="og:description" content="A C1 sequence in English on Shakespeare’s Othello: ten lessons, the spirale de Gorse, a midpoint commentary and a summative assessment. Madame Carole Paoli Pompougnac." />
+  <meta property="og:description" content="A C1 sequence in English on Shakespeare’s Othello: ten lessons in tabs, the spirale de Gorse, a midpoint commentary and a summative assessment. Madame Carole Paoli Pompougnac." />
   <meta property="og:url" content="https://itineraires-destinations.fr/passing-the-flame/" />
   <meta property="og:image" content="https://itineraires-destinations.fr/passing-the-flame/img/chasseriau-othello-desdemona-venice.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -25,172 +25,60 @@
     body[data-section="lycee-general"] {
       --navy: #1A3658;
       --navy-deep: #0F2340;
+      --navy-mid: #2A4A73;
       --burgundy: #1A3658;
       --burgundy-deep: #0F2340;
       --lg: #1A3658;
+      --pale: #EEF2F7;
+      --line: #B8C4D4;
+      --f-ui: "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
     }
-    .page-content { padding-bottom: 3rem; max-width: 46rem; }
+    html { scroll-padding-top: calc(var(--header-h, 7.2rem) + 4.6rem); }
+    .page-hero h1, .page-content h1, .page-content h2, .page-content h3,
+    .kicker, .page-hero .kicker, .brand-mark { color: #1A3658; }
+    .page-content { padding-bottom: 3rem; max-width: 48rem; }
     .page-content h2 {
-      font-family: var(--serif);
+      font-family: var(--serif, "Playfair Display", Georgia, serif);
       font-size: clamp(1.35rem, 3.2vw, 1.75rem);
       font-weight: 600;
-      letter-spacing: -0.02em;
-      margin: 2.1rem 0 0.75rem;
+      margin: 0 0 0.7rem;
+      color: #1A3658;
     }
-    .page-content h3 {
-      font-family: var(--serif);
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin: 1.3rem 0 0.45rem;
+    .page-content h3 { font-size: 1.12rem; font-weight: 700; margin: 1.1rem 0 0.4rem; color: #1A3658; }
+    .page-content p { margin: 0 0 0.75rem; }
+    .page-content ul, .page-content ol { margin: 0 0 0.85rem; padding-left: 1.2rem; }
+    .page-content li { margin: 0.28rem 0; }
+    .programme { font-size: 0.95rem; color: var(--ink-soft, #555); margin: 0 0 1rem; }
+    .pourquoi-box, .prompt-box {
+      margin: 1rem 0 1.2rem;
+      padding: 0.9rem 1.05rem;
+      background: var(--pale);
+      border: 1px solid var(--line);
+      border-left: 5px solid #1A3658;
     }
-    .page-content p { margin: 0 0 1rem; }
-    .page-content ul, .page-content ol { margin: 0 0 1rem; padding-left: 1.2rem; }
-    .page-content li { margin: 0.35rem 0; }
-    .programme {
-      margin: 0 0 1.2rem;
-      font-size: 0.98rem;
-      color: var(--ink-soft);
+    .pourquoi-box p, .prompt-box p { margin: 0; font-size: 1.06rem; }
+    .pourquoi-box strong, .prompt-box strong { color: #1A3658; }
+    .quote-box {
+      margin: 0.8rem 0 1rem;
+      padding: 0.85rem 1.05rem;
+      background: #f7f4ee;
+      border: 1px solid var(--line);
+      border-left: 5px solid #1A3658;
     }
-    .hero-illu {
-      margin: 0.4rem 0 1.6rem;
-      background: #fff;
-      border: 1px solid var(--rule);
+    .quote-box p { margin: 0 0 0.45rem; }
+    .quote-box p:last-child { margin-bottom: 0; }
+    .quote-box .who { font-weight: 700; color: #1A3658; margin: 0 0 0.45rem; }
+    .quote-box .verse { font-style: italic; }
+    .gloss-box {
+      margin: 0.4rem 0 1.1rem;
+      padding: 0.7rem 0.95rem;
+      background: #f3f0ea;
       border-radius: 10px;
-      overflow: hidden;
-    }
-    .hero-illu img { width: 100%; height: auto; display: block; background: #1a1410; }
-    .hero-illu figcaption {
-      padding: 0.5rem 0.9rem 0.8rem;
-      font-size: 0.88rem;
-      color: var(--ink-soft);
-      line-height: 1.45;
-    }
-    .pourquoi-box {
-      margin: 1.2rem 0 1.8rem;
-      padding: 1rem 1.1rem 1.05rem 1.15rem;
-      background: var(--paper-3);
-      border: 1px solid var(--rule);
-      border-left: 5px solid var(--navy);
-    }
-    .pourquoi-box p { margin: 0; font-size: 1.08rem; line-height: 1.7; }
-    .pourquoi-box strong { color: var(--navy); font-weight: 700; }
-    .corpus { list-style: none; margin: 0 0 1.2rem; padding: 0; }
-    .corpus li {
-      margin: 0;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .corpus li:last-child { border-bottom: 0; }
-    .corpus strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 1.08rem;
-      font-weight: 600;
-      margin: 0 0 0.15rem;
-    }
-    .corpus span { color: var(--ink-soft); }
-    .spirale-fig {
-      margin: 1rem 0 1.3rem;
-      background: #fff;
-      border: 1px solid var(--rule);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .spirale-fig img {
-      width: min(100%, 22rem);
-      height: auto;
-      display: block;
-      margin: 0.8rem auto 0.2rem;
-      background: #fff;
-    }
-    .spirale-fig figcaption {
-      padding: 0.55rem 0.9rem 0.85rem;
-      font-size: 0.88rem;
-      color: var(--ink-soft);
-      line-height: 1.45;
-    }
-    .tours { list-style: none; margin: 0 0 1rem; padding: 0; }
-    .tours li {
-      margin: 0;
-      padding: 0.7rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .tours li:last-child { border-bottom: 0; }
-    .tours .n {
-      display: inline-block;
-      min-width: 1.4rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-right: 0.25rem;
-    }
-    .tours .q { font-weight: 600; }
-    .tours .r {
-      display: block;
-      color: var(--ink-soft);
-      margin: 0.2rem 0 0;
-      padding-left: 1.7rem;
-    }
-    .pointe { margin: 0.8rem 0 1.2rem; font-size: 1.05rem; }
-    .penseurs { list-style: none; margin: 0 0 1rem; padding: 0; }
-    .penseurs li {
-      margin: 0;
-      padding: 0.55rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .penseurs li:last-child { border-bottom: 0; }
-    .seances { list-style: none; margin: 0 0 1rem; padding: 0; counter-reset: seance; }
-    .seances li {
-      margin: 0;
-      padding: 0.75rem 0 0.75rem 2.4rem;
-      border-bottom: 1px solid var(--rule);
-      position: relative;
-    }
-    .seances li:last-child { border-bottom: 0; }
-    .seances li::before {
-      counter-increment: seance;
-      content: counter(seance);
-      position: absolute;
-      left: 0;
-      top: 0.75rem;
-      font-weight: 700;
-      color: var(--navy);
-      font-variant-numeric: tabular-nums;
-    }
-    .seances strong { display: block; margin: 0 0 0.15rem; }
-    .seances span { color: var(--ink-soft); font-size: 0.95rem; }
-    .downloads { margin: 0.4rem 0 0; padding: 0; list-style: none; }
-    .downloads li {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem 0.7rem;
-      align-items: baseline;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--rule);
-      margin: 0;
-    }
-    .downloads li:last-child { border-bottom: 0; }
-    .downloads .doc-title { flex: 1 1 12rem; font-weight: 600; margin: 0; }
-    .downloads .doc-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
-    .downloads a { min-height: 2.75rem; display: inline-flex; align-items: center; }
-    .illu-credit { font-size: 0.88rem; color: var(--ink-soft); margin: 1.2rem 0 0; }
-    .manque {
-      margin: 0.35rem 0 0.2rem;
-      padding: 0.65rem 0.8rem;
-      background: var(--paper-3);
-      border-left: 4px solid var(--navy);
       font-size: 0.95rem;
     }
-    .deesses { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.4rem 0 1.4rem; }
-    .deesses figure { margin: 0; background: #fff; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
-    .deesses img { width: 100%; height: 15rem; object-fit: cover; display: block; }
-    .deesses figcaption { padding: 0.45rem 0.7rem 0.65rem; font-size: 0.84rem; color: var(--ink-soft); line-height: 1.4; }
-    @media (max-width: 600px) {
-      .tours .r { padding-left: 0; }
-      .seances li { padding-left: 2rem; }
-      .deesses { grid-template-columns: 1fr; }
-      .deesses img { height: 13rem; }
-    }
-  
+    .gloss-box p { margin: 0; }
+    .gloss-box em { font-style: italic; }
+    .turn { font-weight: 600; margin: 0 0 0.7rem; }
     .dedicace, .note-intention {
       font-family: var(--serif);
       font-size: 1.02rem;
@@ -199,9 +87,65 @@
     }
     .note-label, .ded-label {
       font-weight: 700;
-      color: var(--navy);
+      color: #1A3658;
       margin: 1.1rem 0 0.4rem;
     }
+    .hero-illu {
+      margin: 0.4rem 0 1.6rem;
+      background: #fff;
+      border: 1px solid var(--rule, var(--line));
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .hero-illu img { width: 100%; height: auto; display: block; background: #1a1410; }
+    .hero-illu figcaption {
+      padding: 0.5rem 0.9rem 0.8rem;
+      font-size: 0.88rem;
+      color: var(--ink-soft, #555);
+      line-height: 1.45;
+    }
+    .obj-list { list-style: none; padding: 0; margin: 0 0 1rem; }
+    .obj-list li {
+      margin: 0 0 0.55rem;
+      padding: 0.55rem 0.75rem;
+      background: var(--pale);
+      border-left: 4px solid #1A3658;
+    }
+    .obj-list strong { color: #1A3658; }
+    .corpus { list-style: none; margin: 0 0 1.2rem; padding: 0; }
+    .corpus li { margin: 0; padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+    .corpus li:last-child { border-bottom: 0; }
+    .corpus strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 0 0 0.15rem;
+    }
+    .corpus span { color: var(--ink-soft, #555); }
+    .spirale-fig {
+      margin: 1rem 0 1.3rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .spirale-fig img {
+      width: min(100%, 36rem);
+      height: auto;
+      display: block;
+      margin: 0.8rem auto 0.2rem;
+      background: #fff;
+    }
+    .spirale-fig figcaption {
+      padding: 0.55rem 0.9rem 0.85rem;
+      font-size: 0.88rem;
+      color: var(--ink-soft, #555);
+      line-height: 1.45;
+    }
+    .tours { list-style: none; margin: 0 0 1rem; padding: 0; }
+    .tours li { margin: 0; padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
+    .tours li:last-child { border-bottom: 0; }
     .video-wrap {
       margin: 1rem 0 1.4rem;
       background: #0F2340;
@@ -215,19 +159,75 @@
       max-height: 70vh;
       background: #0F2340;
     }
-    .spirale-fig img {
-      width: min(100%, 36rem);
+    .tabs {
+      position: sticky;
+      top: var(--header-h, 7.2rem);
+      z-index: 30;
+      background: #1A3658;
+      box-shadow: 0 2px 8px rgba(15, 35, 64, 0.25);
+    }
+    .tabs .row {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 0;
+      scrollbar-width: thin;
+    }
+    .tabs a {
+      flex: 0 0 auto;
+      font-family: var(--f-ui);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      background: transparent;
+      border: 2px solid #6f8fc4;
+      border-radius: 999px;
+      padding: 8px 14px;
+      min-height: 44px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      box-sizing: border-box;
+      white-space: nowrap;
+    }
+    .tabs a:hover, .tabs a:focus-visible {
+      background: #2A4A73;
+      border-color: #fff;
+    }
+    .tabs a:focus-visible { outline: 3px solid #F5E66B; outline-offset: 2px; }
+    .tabs a[aria-current="true"] {
+      background: #fff;
+      color: #1A3658;
+      border-color: #fff;
+    }
+    section.panel { display: block; padding: 1.2rem 0 2rem; min-width: 0; }
+    html.js-tabs section.panel { display: none; }
+    html.js-tabs section.panel.is-active { display: block; }
+    @media print {
+      .tabs { display: none; }
+      html.js-tabs section.panel { display: block !important; }
+    }
+    .downloads { margin: 0.4rem 0 0; padding: 0; list-style: none; }
+    .downloads li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.9rem;
+      align-items: center;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .downloads .doc-title { flex: 1 1 12rem; font-weight: 600; margin: 0; }
+    .downloads .doc-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .downloads a { min-height: 2.75rem; display: inline-flex; align-items: center; }
+    .illu-credit { font-size: 0.88rem; color: #555; margin: 1.2rem 0 0; }
+    .nojs-note { display: none; font-size: 0.9rem; color: #555; }
+    html:not(.js-tabs) .nojs-note { display: block; }
+    @media (max-width: 40rem) {
+      .tabs .row { padding: 8px 4px; }
+      .downloads a { min-height: 2.85rem; }
     }
 
-    html { scroll-padding-top: 5.5rem; }
-    .page-content h2, .page-hero h1 { scroll-margin-top: 5.5rem; }
-    .page-hero h1, .page-content h1, .page-content h2, .page-content h3 {
-      color: #1A3658;
-    }
-    .page-hero .kicker, .kicker {
-      color: #1A3658 !important;
-    }
-    .brand-mark { color: #1A3658; }
   </style>
 </head>
 <body data-section="lycee-general">
@@ -255,22 +255,62 @@
   </header>
   <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../lycee-general/index.html">Lycée général et technologique</a></li><li><a href="../lycee-general/anglais.html">Anglais</a></li><li>Passing the Flame</li></ol></nav>
 
-  <main class="wrap page-content">
+  <div class="wrap page-content" style="padding-bottom:0">
     <section class="page-hero">
       <p class="kicker">Anglais · Terminale · Spécialité LLCER · Lycée général et technologique</p>
       <h1>Passing the Flame</h1>
       <p class="lede">Othello, or the trap of theatrical illusion. A C1 sequence in English: ten lessons, the spirale de Gorse, a midpoint commentary and a summative assessment.</p>
     </section>
+  </div>
 
-    <p class="programme">Spécialité Langues, littératures et cultures étrangères et régionales, anglais, Terminale. Programme of the Bulletin officiel spécial n° 8 of 25 July 2019: thematic areas « Arts et débats d’idées » and « Expression et construction de soi » (mise en scène de soi). Level C1, for a strong Terminale class and for students heading to hypokhâgne or the first year of a Licence LLCER. The play is offered as a demanding object, not as a text presented as a programme limitatif.</p>
+  <nav class="tabs" aria-label="Lessons">
+    <div class="wrap">
+      <div class="row" role="tablist" id="tablist">
+        <a href="#introduction" id="tab-introduction">Introduction</a>
+        <a href="#lesson-1" id="tab-lesson-1">Lesson 1</a>
+        <a href="#lesson-2" id="tab-lesson-2">Lesson 2</a>
+        <a href="#lesson-3" id="tab-lesson-3">Lesson 3</a>
+        <a href="#lesson-4" id="tab-lesson-4">Lesson 4</a>
+        <a href="#lesson-5" id="tab-lesson-5">Lesson 5</a>
+        <a href="#lesson-6" id="tab-lesson-6">Lesson 6</a>
+        <a href="#lesson-7" id="tab-lesson-7">Lesson 7</a>
+        <a href="#lesson-8" id="tab-lesson-8">Lesson 8</a>
+        <a href="#lesson-9" id="tab-lesson-9">Lesson 9</a>
+        <a href="#lesson-10" id="tab-lesson-10">Lesson 10</a>
+        <a href="#telechargements" id="tab-telechargements">Downloads</a>
+      </div>
+    </div>
+  </nav>
 
-    <figure class="hero-illu">
-      <img src="img/chasseriau-othello-desdemona-venice.jpg" width="1280" height="1668" alt="Théodore Chassériau, Othello et Desdémone à Venise: a man and a woman in a Venetian interior, close together and already slightly uneasy." />
-      <figcaption>Théodore Chassériau, <cite>Othello et Desdémone à Venise</cite>, 1849-1850, oil on wood, Musée du Louvre, Paris, RF 3897, public domain.</figcaption>
-    </figure>
+  <main class="wrap page-content" id="main">
+    <p class="nojs-note">Without JavaScript, every lesson is on this page, one after another. The tabs above jump to each lesson.</p>
 
-    <section aria-labelledby="presentation">
-      <h2 id="presentation">Presentation</h2>
+    <section class="panel" id="introduction" data-tab="introduction" aria-labelledby="introduction-title">
+      <h2 id="introduction-title">Introduction</h2>
+      <p class="programme">Spécialité Langues, littératures et cultures étrangères et régionales, anglais, Terminale. Programme of the Bulletin officiel spécial n° 8 of 25 July 2019: « Arts et débats d’idées » and « Expression et construction de soi » (mise en scène de soi). Level C1.</p>
+
+      <figure class="hero-illu">
+        <img src="img/chasseriau-othello-desdemona-venice.jpg" width="1280" height="1668" alt="Théodore Chassériau, Othello et Desdémone à Venise: a man and a woman in a Venetian interior, close together and already slightly uneasy." />
+        <figcaption>Théodore Chassériau, <cite>Othello et Desdémone à Venise</cite>, 1849-1850, oil on wood, Musée du Louvre, Paris, RF 3897, public domain.</figcaption>
+      </figure>
+
+      <h3 id="aim-title">Aim of the sequence</h3>
+      <p><strong>Aim.</strong> To read Shakespeare’s <cite>Othello</cite> at C1 as a play about the trap of theatrical illusion.</p>
+      <p>The work asks how language, objects and staged looking can be made to mean what a speaker has already decided they mean. It prepares students for hypokhâgne and the first year of a Licence LLCER. It does not pretend to be those courses.</p>
+      <aside class="pourquoi-box" aria-labelledby="problematique-titre">
+        <p id="problematique-titre"><strong>Guiding question.</strong> How does Shakespeare turn theatre itself into a trap of perception in <cite>Othello</cite>, and what does that trap still teach us about language, jealousy and the courage to read between the lines?</p>
+      </aside>
+
+      <h3>Objectives, by the five activités langagières</h3>
+      <ul class="obj-list">
+        <li><strong>Compréhension de l’écrit.</strong> Read complete speeches in verse, with line numbers, and say what each movement does. Track dramatic irony, aside, metaphor, and the meaning forced onto an object. Read short public-domain critics and answer them from the play.</li>
+        <li><strong>Compréhension de l’oral.</strong> Follow the five-minute video essay. Listen to verse spoken aloud and test one staging choice against the line.</li>
+        <li><strong>Expression écrite.</strong> Write short, accurate records, then a midpoint commentary and a summative commentary, with a precise thesis and quotations. Compare one passage with François-Victor Hugo’s public-domain French, in English.</li>
+        <li><strong>Expression orale en continu.</strong> Present a short close-reading claim (40 to 60 seconds) with one quotation. Deliver a short director’s commentary in Lesson 10.</li>
+        <li><strong>Interaction orale.</strong> Direct a fragment in pairs. Justify one decision from the verse. Debate a critic or a hypothesis without leaving the text.</li>
+      </ul>
+      <p><strong>Level.</strong> C1 throughout. The demand is not divided into a lower tier and a later extension.</p>
+
       <p class="ded-label">Dédicace</p>
       <p class="dedicace">« À la mémoire du Professeur Pierre Spriet,<br />
 et à tous mes maîtres des classes préparatoires et de l’Université Bordeaux III,<br />
@@ -281,76 +321,214 @@ Aux élèves de Terminale qui s’apprêtent à entrer en Hypokhâgne ou en Lice
 puisse cette flamme devenir la vôtre. »</p>
       <p class="ded-label">Note d’intention</p>
       <p>Ce dossier est né d’un élan de gratitude. Il ne prétend à aucun titre académique : il est le témoignage d’une amoureuse des mots, de la langue anglaise et de la langue française, dont toute la vie intérieure a été éclairée par des passeurs généreux. À travers une étude approfondie du piège théâtral dans Othello et quatre explications de texte modèles (dont la scène d’espionnage de l’Acte IV, scène 1), il invite les futurs étudiants à découvrir que la littérature n’est jamais un savoir mort, mais une école de lucidité et d’humanité.</p>
-      <p>The sequence is written in British English throughout, including the teacher’s notes. The dédicace and the note d’intention remain in this exact French. A five-minute video essay opens the work: an homage to Professor Pierre Spriet and to Bordeaux III, and to the Royal Shakespeare Company at Stratford-upon-Avon in 1984-85, including Ben Kingsley’s <cite>Othello</cite>.</p>
-    </section>
+      <p>The sequence is written in British English throughout, including the teacher’s notes. The dédicace and the note d’intention remain in this exact French.</p>
 
-    <div class="video-wrap">
-      <video controls preload="metadata" poster="img/chasseriau-othello-desdemona-venice.jpg" title="Passing the Flame, a video essay by Madame Carole Paoli Pompougnac">
-        <source src="video/passing-the-flame.mp4" type="video/mp4" />
-        The video essay is in the folder <code>video/passing-the-flame.mp4</code>.
-      </video>
-    </div>
+      <div class="video-wrap">
+        <video controls preload="metadata" poster="img/chasseriau-othello-desdemona-venice.jpg" title="Passing the Flame, a video essay by Madame Carole Paoli Pompougnac">
+          <source src="video/passing-the-flame.mp4" type="video/mp4" />
+          The video essay is in the folder <code>video/passing-the-flame.mp4</code>.
+        </video>
+      </div>
 
-    <aside class="pourquoi-box" aria-labelledby="problematique-titre">
-      <p id="problematique-titre"><strong>Guiding question.</strong> How does Shakespeare turn theatre itself into a trap of perception in <cite>Othello</cite>, and what does that trap still teach us about language, jealousy and the courage to read between the lines?</p>
-    </aside>
-
-    <section aria-labelledby="corpus">
-      <h2 id="corpus">The corpus</h2>
+      <h3 id="corpus">The corpus</h3>
       <ul class="corpus">
-        <li><strong>William Shakespeare, <cite>Othello</cite></strong> <span>Public-domain English text (Project Gutenberg ebook 1531). In class, line numbers may be aligned with the Folger Shakespeare Library Digital Text. Close readings of I.1, I.3, III.3, III.4, IV.1 and V.2.</span></li>
-        <li><strong>François-Victor Hugo, <cite>Othello ou le More de Venise</cite></strong> <span>The only French translation used, public domain. A comparative exercise in Lesson 9. Yves Bonnefoy and Jean-Michel Déprats are not used.</span></li>
-        <li><strong>Public-domain critics</strong> <span>Thomas Rymer (1693), Samuel Johnson (1765), S. T. Coleridge, William Hazlitt (1817), A. C. Bradley (1904). Students answer the critic. Modern critics may be named, not quoted at length.</span></li>
+        <li><strong>William Shakespeare, <cite>Othello</cite></strong> <span>Public-domain English text (Project Gutenberg ebook 1531). In class, line numbers may be aligned with the Folger Shakespeare Library Digital Text.</span></li>
+        <li><strong>François-Victor Hugo, <cite>Othello ou le More de Venise</cite></strong> <span>The only French translation used, public domain. Yves Bonnefoy and Jean-Michel Déprats are not used.</span></li>
+        <li><strong>Public-domain critics</strong> <span>Thomas Rymer (1693), Samuel Johnson (1765), S. T. Coleridge, William Hazlitt (1817), A. C. Bradley (1904).</span></li>
         <li><strong>Théodore Chassériau, <cite>Othello et Desdémone à Venise</cite>, 1849-1850</strong> <span>Louvre, RF 3897, public domain. A first exercise in looking, not a plot illustration.</span></li>
-        <li><strong>The video essay</strong> <span>About five minutes, by Madame Carole Paoli Pompougnac, on transmission, humility, and the theatrical trap.</span></li>
+        <li><strong>The video essay</strong> <span>About five minutes, by Madame Carole Paoli Pompougnac.</span></li>
       </ul>
-    </section>
 
-    <section aria-labelledby="spirale">
-      <h2 id="spirale">The spirale de Gorse</h2>
+      <h3 id="spirale">The spirale de Gorse</h3>
       <p>Ten turns tighten towards a tip. The tip then opens into three paths: existential, political and civilisational. The French name of the method is kept. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</p>
       <figure class="spirale-fig">
         <img src="img/spirale-othello.png" width="1866" height="2598" alt="Diagram of the spirale de Gorse: ten turns, a tip, and three paths, existential, political and civilisational." />
         <figcaption>Diagram of the spirale de Gorse: ten turns tighten towards a tip, which opens into three paths. Méthode de la spirale de Gorse conçue par Madame Carole Paoli Pompougnac.</figcaption>
       </figure>
-      <ol class="tours">
-        <li><strong>Can we trust what we see?</strong> <span>Seeing and knowing.</span></li>
-        <li><strong>Why tell an audience you are not what you seem?</strong> <span>Appearance and profession. I.1, « I am not what I am ».</span></li>
-        <li><strong>How does a story about oneself win a hearing?</strong> <span>Testimony and self-fashioning. The Senate, I.3.</span></li>
-        <li><strong>When does a demand for proof become a wish to be confirmed?</strong> <span>Evidence and confirmation. III.3, ocular proof.</span></li>
-        <li><strong>Who decides what a gift is allowed to mean?</strong> <span>Object and narrative. III.4, the handkerchief and the test of trust.</span></li>
-        <li><strong>How can a scene be directed before anyone speaks?</strong> <span>Staging and interpretation. IV.1.</span></li>
-        <li><strong>Can two people share a conversation and not share its meaning?</strong> <span>Referent and assigned story. Bianca and the handkerchief.</span></li>
-        <li><strong>How can murder be made to sound like justice?</strong> <span>Rhetoric and justification. V.2, « Put out the light », « Speak of me as I am ».</span></li>
-        <li><strong>Does literature educate judgement, or only show its limits?</strong> <span>Critique and responsibility. Public-domain critics and Hugo.</span></li>
-        <li><strong>Can we explain the trap without being trapped by our own reading?</strong> <span>Explanation and humility. Summative commentary.</span></li>
-      </ol>
-      <p><strong>The tip.</strong> When a society believes images and rumours rather than facts and persons, who becomes the victim, and why?</p>
+      <p>Each lesson lasts 55 minutes and is timed on 52, with a stopping point at about minute 44 and an eight-minute emergency exit. The midpoint commentary is sat after Lesson 5. Lesson 10 is the summative hour. The Shakespeare extracts are printed whole in the booklet, with line numbers, short glosses, a guiding question before reading, then numbered steps.</p>
+
     </section>
 
-    <section aria-labelledby="seances">
-      <h2 id="seances">The ten lessons</h2>
-      <p>Each lesson lasts 55 minutes and is timed on 52, with a stopping point at about minute 44 and an eight-minute emergency exit. The midpoint commentary is sat after Lesson 5. Lesson 10 is the summative hour.</p>
-      <ol class="seances">
-        <li><strong>Inheriting a way of reading</strong> <span>The video essay, the dedication, Chassériau, the spiral, a diagnostic.</span></li>
-        <li><strong>Iago’s invitation</strong> <span>« I am not what I am » (I.1). A contract with the spectator.</span></li>
-        <li><strong>The Senate: a story that wins a hearing</strong> <span>I.3. « Her father lov’d me »; « I saw Othello’s visage in his mind »; « Look to her, Moor »; « My life upon her faith ».</span></li>
-        <li><strong>The desire for proof</strong> <span>III.3. The green-eyed monster; « Haply, for I am black »; ocular proof.</span></li>
-        <li><strong>The handkerchief and the test of trust</strong> <span>III.4, a mandatory close reading: Emilia’s silence, the moist-hand speech, the history of the handkerchief, Desdemona’s change of subject. Midpoint assessment.</span></li>
-        <li><strong>Directing the spectator</strong> <span>IV.1. Othello made to watch a scene whose meaning has been prepared for him.</span></li>
-        <li><strong>One conversation, two meanings</strong> <span>Bianca, the handkerchief, and the assignment of a story.</span></li>
-        <li><strong>The language of justification</strong> <span>V.2. « Put out the light »; « Speak of me as I am. »</span></li>
-        <li><strong>What can literature teach?</strong> <span>Public-domain critics, a translation exercise from François-Victor Hugo, a debate on judgement.</span></li>
-        <li><strong>Explaining the trap</strong> <span>Summative commentary: « How does Shakespeare make Othello a spectator of his own deception? » A short director’s commentary.</span></li>
+    <section class="panel" id="lesson-1" data-tab="lesson-1" aria-labelledby="l1-title">
+      <h2 id="l1-title">Lesson 1. Inheriting a way of reading</h2>
+      <p class="turn"><strong>Turn.</strong> Can we trust what we see?</p>
+      <p>Today’s aim. Look carefully first. Then interpret. Do not invent a story the picture does not give.</p>
+      <div class="prompt-box"><p><strong>Before you look.</strong> What can you actually see, and what are you already tempted to add?</p></div>
+      <p>The painting is Théodore Chassériau, <cite>Othello et Desdémone à Venise</cite>, 1849-1850, Musée du Louvre, RF 3897, public domain. The video essay and the dedication also open this lesson. The full looking exercise is in the booklet.</p>
+      <ol>
+        <li>Name three visible facts (gesture, distance, light) before you interpret them.</li>
+        <li>Where does unease begin, if it begins at all, in what you can actually see?</li>
+        <li>What way of reading does the video essay ask us to inherit?</li>
+      </ol>
+      <p>A short diagnostic closes the hour. The stopping point is at about minute 44.</p>
+    </section>
+    <section class="panel" id="lesson-2" data-tab="lesson-2" aria-labelledby="l2-title">
+      <h2 id="l2-title">Lesson 2. Iago’s invitation: « I am not what I am »</h2>
+      <p class="turn"><strong>Turn.</strong> Why tell an audience you are not what you seem?</p>
+      <p>A first contract with the spectator, in I.1. The complete speech is printed in the booklet, with line numbers and glosses.</p>
+      <div class="prompt-box"><p><strong>Before you read.</strong> If a character tells us he is not what he is, what kind of listener have we already agreed to be?</p></div>
+      <div class="quote-box">
+        <p class="who">I.1, Iago</p>
+        <p class="verse">I follow him to serve my turn upon him.</p>
+        <p class="verse">[…]</p>
+        <p class="verse">I am not what I am.</p>
+      </div>
+      <div class="gloss-box"><p><strong>Glosses.</strong> <em>Serve my turn:</em> use him for my own purpose. <em>I am not what I am:</em> a refusal of being, and an invitation to watch with him.</p></div>
+      <ol>
+        <li>What does Iago offer the audience, besides information?</li>
+        <li>Where does the line « I am not what I am » turn against honesty itself?</li>
+        <li>If we accept the invitation, what do we risk as spectators?</li>
+      </ol>
+    </section>
+    <section class="panel" id="lesson-3" data-tab="lesson-3" aria-labelledby="l3-title">
+      <h2 id="l3-title">Lesson 3. The Senate: a story that wins a hearing</h2>
+      <p class="turn"><strong>Turn.</strong> How does a story about oneself win a hearing?</p>
+      <p>I.3: Othello before the Senate; Desdemona’s « I saw Othello’s visage in his mind »; Brabantio’s warning; « My life upon her faith ». The main speeches are printed whole in the booklet.</p>
+      <div class="prompt-box"><p><strong>Before you read.</strong> In a formal hearing, what must a story do in order to be believed?</p></div>
+      <div class="quote-box">
+        <p class="who">I.3, Desdemona</p>
+        <p class="verse">I saw Othello’s visage in his mind,</p>
+        <p class="verse">And to his honours and his valiant parts</p>
+        <p class="verse">Did I my soul and fortunes consecrate.</p>
+      </div>
+      <div class="gloss-box"><p><strong>Glosses.</strong> <em>Visage in his mind:</em> she claims to have seen his face through his inner life, not first through his appearance. <em>Consecrate:</em> dedicate wholly.</p></div>
+      <ol>
+        <li>How does Othello’s tale of his life work as a defence?</li>
+        <li>What exactly does Desdemona say she has seen?</li>
+        <li>Why is Brabantio’s « Look to her, Moor » already a seed of later reading?</li>
+      </ol>
+    </section>
+    <section class="panel" id="lesson-4" data-tab="lesson-4" aria-labelledby="l4-title">
+      <h2 id="l4-title">Lesson 4. The desire for proof</h2>
+      <p class="turn"><strong>Turn.</strong> When does a demand for proof become a wish to be confirmed?</p>
+      <p>III.3: the green-eyed monster, « Haply, for I am black », and the demand for ocular proof. The complete movements are in the booklet.</p>
+      <div class="prompt-box"><p><strong>Before you read.</strong> What is the difference between wanting to know, and wanting to have one’s suspicion proved?</p></div>
+      <div class="quote-box">
+        <p class="who">III.3, Iago, then Othello</p>
+        <p class="verse">O, beware, my lord, of jealousy;</p>
+        <p class="verse">It is the green-ey’d monster, which doth mock</p>
+        <p class="verse">The meat it feeds on.</p>
+        <p class="verse">[…]</p>
+        <p class="verse">Villain, be sure thou prove my love a whore;</p>
+        <p class="verse">Be sure of it; give me the ocular proof.</p>
+      </div>
+      <div class="gloss-box"><p><strong>Glosses.</strong> <em>Green-ey’d monster:</em> jealousy that feeds on the person it torments. <em>Ocular proof:</em> proof that can be seen, as if seeing were enough.</p></div>
+      <ol>
+        <li>What kind of « proof » is Iago teaching Othello to want?</li>
+        <li>How does « Haply, for I am black » change the ground of the demand?</li>
+        <li>Why will no visible object quite satisfy a wish already formed?</li>
+      </ol>
+      <p>Keep today’s vocabulary (<em>ocular proof</em>, <em>probation</em>, <em>to over-read</em>) ready for Lesson 5.</p>
+    </section>
+    <section class="panel" id="lesson-5" data-tab="lesson-5" aria-labelledby="l5-title">
+      <h2 id="l5-title">Lesson 5. The handkerchief and the test of trust</h2>
+      <p class="turn"><strong>Turn.</strong> Who decides what a gift is allowed to mean?</p>
+      <p>A mandatory close reading of III.4. The main speeches are printed whole in the booklet: Emilia’s lie, the moist hand, the history of the gift, « what and if it were? », the self-begotten monster.</p>
+      <div class="prompt-box"><p><strong>Before you read.</strong> The audience already knows that Emilia has taken the handkerchief. What kind of listening does that force on us now?</p></div>
+      <div class="quote-box">
+        <p class="who">III.4, Desdemona, then Othello</p>
+        <p class="verse">It is not lost, but what and if it were?</p>
+        <p class="verse">A liberal hand. The hearts of old gave hands,</p>
+        <p class="verse">But our new heraldry is hands, not hearts.</p>
+      </div>
+      <div class="gloss-box"><p><strong>Glosses.</strong> <em>Heraldry:</em> signs that claim to guarantee honour. <em>What and if it were?:</em> a hypothetical, innocent in grammar, dangerous in this scene.</p></div>
+      <ol>
+        <li>What does the audience know, when Emilia says « I know not, madam »?</li>
+        <li>How is a moist hand turned into a verdict?</li>
+        <li>Who, in the Egyptian tale, decides what the gift is allowed to mean?</li>
+        <li>Why is Desdemona’s hypothetical fatal here?</li>
+      </ol>
+      <p>A midpoint commentary on III.4 follows this lesson. The question and the grid are in the booklet.</p>
+    </section>
+    <section class="panel" id="lesson-6" data-tab="lesson-6" aria-labelledby="l6-title">
+      <h2 id="l6-title">Lesson 6. Directing the spectator</h2>
+      <p class="turn"><strong>Turn.</strong> How can a scene be directed before anyone speaks?</p>
+      <p>IV.1: Othello is made to watch a scene whose meaning has already been prepared for him. The extract, including the asides, is printed whole in the booklet.</p>
+      <div class="prompt-box"><p><strong>Before you read.</strong> If we already know what we are supposed to see, can we still watch?</p></div>
+      <div class="quote-box">
+        <p class="who">IV.1, Iago, then Othello</p>
+        <p class="verse">Stand you awhile apart;</p>
+        <p class="verse">Confine yourself but in a patient list.</p>
+        <p class="verse">[…]</p>
+        <p class="verse">[Aside.] Now will I question Cassio of Bianca.</p>
+      </div>
+      <div class="gloss-box"><p><strong>Glosses.</strong> <em>Patient list:</em> a place from which to listen, as if in a theatre. <em>[Aside.]:</em> a stage direction: Iago speaks to us, not to Othello.</p></div>
+      <ol>
+        <li>What has Iago already told Othello to see, before Cassio speaks?</li>
+        <li>How does an aside split the audience from the on-stage spectator?</li>
+        <li>Where does the trap become a piece of staging, not only a lie?</li>
+      </ol>
+      <p>Lesson 7 returns to the same conversation, now mapped for meaning.</p>
+    </section>
+    <section class="panel" id="lesson-7" data-tab="lesson-7" aria-labelledby="l7-title">
+      <h2 id="l7-title">Lesson 7. One conversation, two meanings</h2>
+      <p class="turn"><strong>Turn.</strong> Can two people share a conversation and not share its meaning?</p>
+      <p>The extract is the same complete passage as in Lesson 6. Keep it open. Today the work is not the first shock of watching, but a careful map of meaning: Bianca, the handkerchief, and the story assigned to her.</p>
+      <div class="prompt-box"><p><strong>Before you re-read.</strong> Who, in this exchange, shares a referent, and who only shares words?</p></div>
+      <div class="quote-box">
+        <p class="who">IV.1, Cassio, of Bianca</p>
+        <p class="verse">She was here even now; she haunts me in every place.</p>
+        <p class="verse">[…] I was the other day talking on the sea-bank with certain Venetians,</p>
+        <p class="verse">and thither comes the bauble, and falls me thus about my neck.</p>
+      </div>
+      <div class="gloss-box"><p><strong>Glosses.</strong> <em>Bauble:</em> a plaything, here a contemptuous name for Bianca. <em>Falls me thus about my neck:</em> a gesture Othello is forced to misread.</p></div>
+      <ol>
+        <li>What does Cassio think he is talking about?</li>
+        <li>What does Othello think he is seeing?</li>
+        <li>Where does the handkerchief change owner, and where does it change meaning?</li>
+      </ol>
+    </section>
+    <section class="panel" id="lesson-8" data-tab="lesson-8" aria-labelledby="l8-title">
+      <h2 id="l8-title">Lesson 8. The language of justification</h2>
+      <p class="turn"><strong>Turn.</strong> How can murder be made to sound like justice?</p>
+      <p>V.2: « Put out the light », and later « Speak of me as I am ». The speeches are printed whole in the booklet.</p>
+      <div class="prompt-box"><p><strong>Before you read.</strong> What must a language do, if it is to make a killing sound like a duty?</p></div>
+      <div class="quote-box">
+        <p class="who">V.2, Othello</p>
+        <p class="verse">Put out the light, and then put out the light.</p>
+        <p class="verse">[…]</p>
+        <p class="verse">Speak of me as I am; nothing extenuate,</p>
+        <p class="verse">Nor set down aught in malice.</p>
+      </div>
+      <div class="gloss-box"><p><strong>Glosses.</strong> <em>Put out the light:</em> first a candle, then a life, on the same verb. <em>Nothing extenuate:</em> do not soften what I have done.</p></div>
+      <ol>
+        <li>How does the repeated verb turn a gesture into a sentence?</li>
+        <li>What justice does Othello claim to be performing?</li>
+        <li>In « Speak of me as I am », who is now being staged, and for whom?</li>
+      </ol>
+    </section>
+    <section class="panel" id="lesson-9" data-tab="lesson-9" aria-labelledby="l9-title">
+      <h2 id="l9-title">Lesson 9. What can literature teach?</h2>
+      <p class="turn"><strong>Turn.</strong> Does literature educate judgement, or only show its limits?</p>
+      <p>Public-domain critics (Rymer, Johnson, Coleridge, Hazlitt, Bradley), and a short comparison with François-Victor Hugo’s public-domain French. Modern critics may be named, not quoted at length. Yves Bonnefoy and Jean-Michel Déprats are not used.</p>
+      <div class="prompt-box"><p><strong>Before you read.</strong> A useful question: can we describe Iago’s intelligence without being seduced into admiring it?</p></div>
+      <p>A C1 response does not simply call Rymer unkind. It asks what he has seen (the apparent disproportion between a piece of cloth and a murder) and what he has refused to see (that the cloth is not the cause, but the object onto which a method of reading has been forced). Lesson 5 is the best preparation for answering him.</p>
+      <ol>
+        <li>What did Rymer actually see about the handkerchief?</li>
+        <li>What does Lesson 5 give you to reply?</li>
+        <li>In one sentence, what changes when the same speech is read in Hugo’s French?</li>
+      </ol>
+      <p>Prepare Lesson 10. Revise the model close readings (I.1, I.3, III.4, IV.1, V.2). The commentary question and the director’s oral task are in the booklet.</p>
+    </section>
+    <section class="panel" id="lesson-10" data-tab="lesson-10" aria-labelledby="l10-title">
+      <h2 id="l10-title">Lesson 10. Explaining the trap</h2>
+      <p class="turn"><strong>Turn.</strong> Can we explain the trap without being trapped by our own reading?</p>
+      <p>The summative hour. A commentary and a short director’s commentary. The question, the timing and the grids are in the booklet.</p>
+      <div class="prompt-box"><p><strong>The commentary question.</strong> How does Shakespeare make Othello a spectator of his own deception?</p></div>
+      <p>Write a precise thesis. Quote briefly. Keep the demand at C1. The last eight minutes can finish the written task, or open the short director’s oral if the commentary is already closed.</p>
+      <ol>
+        <li>Where, in the play, is Othello placed as a spectator?</li>
+        <li>What must your thesis say about theatre itself, not only about jealousy?</li>
+        <li>In the director’s commentary, which one staging choice would you justify from the verse?</li>
       </ol>
     </section>
 
-    <section id="telechargements" aria-labelledby="telechargements-titre">
+    <section class="panel" id="telechargements" data-tab="telechargements" aria-labelledby="telechargements-titre">
       <h2 id="telechargements-titre">Downloads</h2>
       <p>Four documents, each in PDF, Word and LibreOffice. You may use and adapt these documents, with credit to their author, without commercial use, and share your versions under the same conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a>.</p>
       <ul class="downloads">
         <li>
-          <p class="doc-title">Student sequence (29 pages)</p>
+          <p class="doc-title">Student sequence (35 pages)</p>
           <span class="doc-links">
             <a href="Sequence-Othello-Passing-the-Flame.pdf">PDF</a>
             <a href="Sequence-Othello-Passing-the-Flame.docx">Word (.docx)</a>
@@ -358,7 +536,7 @@ puisse cette flamme devenir la vôtre. »</p>
           </span>
         </li>
         <li>
-          <p class="doc-title">Teacher’s sheet (5 pages)</p>
+          <p class="doc-title">Teacher’s sheet (4 pages)</p>
           <span class="doc-links">
             <a href="Fiche-prof-Othello-Passing-the-Flame.pdf">PDF</a>
             <a href="Fiche-prof-Othello-Passing-the-Flame.docx">Word (.docx)</a>
@@ -366,7 +544,7 @@ puisse cette flamme devenir la vôtre. »</p>
           </span>
         </li>
         <li>
-          <p class="doc-title">Correction sheet (12 pages)</p>
+          <p class="doc-title">Correction sheet (11 pages)</p>
           <span class="doc-links">
             <a href="Fiche-correction-Othello-Passing-the-Flame.pdf">PDF</a>
             <a href="Fiche-correction-Othello-Passing-the-Flame.docx">Word (.docx)</a>
@@ -374,7 +552,7 @@ puisse cette flamme devenir la vôtre. »</p>
           </span>
         </li>
         <li>
-          <p class="doc-title">Accessible version: ten autonomous fiches (16 pages)</p>
+          <p class="doc-title">Accessible version: ten autonomous fiches (18 pages)</p>
           <span class="doc-links">
             <a href="Version-dys-Othello-Passing-the-Flame.pdf">PDF</a>
             <a href="Version-dys-Othello-Passing-the-Flame.docx">Word (.docx)</a>
@@ -382,6 +560,7 @@ puisse cette flamme devenir la vôtre. »</p>
           </span>
         </li>
       </ul>
+
     </section>
 
     <p class="pourquoi-sign">Madame Carole Paoli Pompougnac</p>
@@ -404,5 +583,62 @@ puisse cette flamme devenir la vôtre. »</p>
     </div>
   </footer>
   <script src="../js/main.js" defer></script>
+  <script>
+
+  (function () {
+    var list = document.getElementById('tablist');
+    if (!list) return;
+    document.documentElement.classList.add('js-tabs');
+    function setHeaderH() {
+      var h = document.querySelector('.site-header');
+      if (h) document.documentElement.style.setProperty('--header-h', h.getBoundingClientRect().height + 'px');
+    }
+    setHeaderH();
+    window.addEventListener('resize', setHeaderH);
+    var links = [].slice.call(list.querySelectorAll('a'));
+    var panels = [].slice.call(document.querySelectorAll('section.panel'));
+    function show(id) {
+      if (!document.getElementById(id)) id = 'introduction';
+      panels.forEach(function (p) {
+        var on = p.id === id;
+        p.classList.toggle('is-active', on);
+        if (on) p.removeAttribute('hidden');
+        else p.setAttribute('hidden', '');
+      });
+      links.forEach(function (a) {
+        var on = a.getAttribute('href') === '#' + id;
+        a.setAttribute('aria-current', on ? 'true' : 'false');
+        a.setAttribute('aria-selected', on ? 'true' : 'false');
+        if (on) a.scrollIntoView({ inline: 'center', block: 'nearest' });
+      });
+    }
+    function current() {
+      var id = (location.hash || '#introduction').slice(1);
+      show(id);
+    }
+    window.addEventListener('hashchange', current);
+    if (!location.hash) {
+      history.replaceState(null, '', '#introduction');
+    }
+    current();
+    list.addEventListener('keydown', function (e) {
+      var i = links.indexOf(document.activeElement);
+      if (i < 0) return;
+      var next = -1;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (i + 1) % links.length;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (i - 1 + links.length) % links.length;
+      if (e.key === 'Home') next = 0;
+      if (e.key === 'End') next = links.length - 1;
+      if (next < 0) return;
+      e.preventDefault();
+      links[next].focus();
+      links[next].click();
+    });
+    links.forEach(function (a) { a.setAttribute('role', 'tab'); a.setAttribute('tabindex', '0'); });
+    list.setAttribute('role', 'tablist');
+    panels.forEach(function (p) { p.setAttribute('role', 'tabpanel'); });
+  })();
+
+  </script>
 </body>
 </html>

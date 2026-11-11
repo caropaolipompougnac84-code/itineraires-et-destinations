@@ -160,6 +160,27 @@
   ],
   "resources": [
     {
+      "id": "lg-option-passing-the-flame",
+      "title": "Anglais · Tle spécialité LLCER · Passing the Flame",
+      "summary": "Othello, or the trap of theatrical illusion: a C1 sequence in English, ten lessons in tabs, towards hypokhâgne and Licence LLCER.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Tle spécialité LLCER",
+      "collection": "lg-anglais",
+      "themes": [
+        "litterature",
+        "culture",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/passing-the-flame/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120774223490243&set=a.122104658121490243",
+      "image": "passing-the-flame.jpg",
+      "credit": "Théodore Chassériau, Othello et Desdémone à Venise, 1849-1850, oil on wood, Musée du Louvre, Paris, RF 3897. Public domain."
+    },
+    {
       "id": "lp-anglais-american-superheroes",
       "title": "Anglais · 2nde et 1re bac pro · American Superheroes: images of a nation",
       "summary": "Six short lessons in English, built around genuine public-domain Golden Age comic pages, for 2nde and 1re of the baccalauréat professionnel. Description first: panels, gutters, balloons, onomatopoeia. A short escape game and a final task.",
@@ -179,27 +200,6 @@
       "date": "2026-11-11",
       "image": "american-superheroes.jpg",
       "credit": "McClelland Barclay, Man the Guns, Join the Navy, 1942, United States Navy recruiting poster. National Archives (NARA) 513519; Library of Congress, Prints and Photographs Division, reproduction number LC-USZC4-2009. Public domain (United States government work). Image via Wikimedia Commons."
-    },
-    {
-      "id": "lg-option-passing-the-flame",
-      "title": "Anglais · Tle spécialité LLCER · Passing the Flame",
-      "summary": "Othello, or the trap of theatrical illusion: a C1 sequence in English, towards hypokhâgne and Licence LLCER.",
-      "section": "lycee-general",
-      "subject": "anglais",
-      "level": "tle",
-      "levelLabel": "Tle spécialité LLCER",
-      "collection": "lg-anglais",
-      "themes": [
-        "litterature",
-        "culture",
-        "oral",
-        "ecrit"
-      ],
-      "url": "https://itineraires-destinations.fr/passing-the-flame/",
-      "date": "2026-11-11",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120774223490243&set=a.122104658121490243",
-      "image": "passing-the-flame.jpg",
-      "credit": "Théodore Chassériau, Othello et Desdémone à Venise, 1849-1850, oil on wood, Musée du Louvre, Paris, RF 3897. Public domain."
     },
     {
       "id": "meth-preparer-examens-francais",

@@ -264,17 +264,17 @@
     {
       "id": "lg-anglais-portrait-queen",
       "title": "Anglais · Portrait of a Queen: Elizabeth II",
-      "summary": "Portrait d'Elizabeth II pour travailler la culture britannique.",
+      "summary": "Portrait d’Elizabeth II, de The Crown à la toile : neuf leçons calibrées sur 52 minutes, pour la Première et la Terminale générales.",
       "section": "lycee-general",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "Lycée général",
+      "levelLabel": "1re / Tle · tronc commun B1+ vers B2 · LLCER vers C1",
       "collection": "lg-anglais",
       "themes": [
         "culture"
       ],
-      "url": "https://portrait-of-a-queen-elizabeth-ii.netlify.app/",
-      "date": "2026-11-07",
+      "url": "https://itineraires-destinations.fr/portrait-of-a-queen/",
+      "date": "2026-11-11",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120578791490243&set=a.122119039767490243"
     },
     {

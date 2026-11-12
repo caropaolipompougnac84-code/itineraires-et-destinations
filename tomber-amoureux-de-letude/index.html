@@ -575,7 +575,103 @@
       color: #7B1E3A;
       font-weight: 600;
     }
-  
+
+    .etude .preview-banner {
+      margin: 12px auto 0;
+      width: min(1040px, calc(100% - 32px));
+      background: #f8eee9;
+      border: 1px solid #e4d0c8;
+      border-radius: 12px;
+      padding: 10px 16px;
+      color: #7B1E3A;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .etude .enrich {
+      margin-top: 1.35rem;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 18px 14px;
+    }
+    .etude .enrich h3 {
+      margin: 0 0 8px;
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 560;
+      font-size: 1.25rem;
+      color: #7B1E3A;
+    }
+    .etude .enrich p { margin: 0 0 8px; max-width: 42rem; }
+    .etude .enrich ol, .etude .enrich ul.plain {
+      margin: 0;
+      padding-left: 1.25rem;
+      max-width: 42rem;
+    }
+    .etude .enrich li { margin: 0.22rem 0; line-height: 1.45; }
+    .etude .enrich .syms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: 10px 0 8px;
+      padding: 0;
+      list-style: none;
+    }
+    .etude .enrich .syms li {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.92rem;
+    }
+    .etude .enrich .syms b { color: #7B1E3A; font-weight: 600; }
+    .etude .enrich .src { margin: 10px 0 0; font-size: 0.92rem; color: var(--muted); }
+    .etude .choices { display: grid; gap: 10px; margin-top: 8px; }
+    @media (min-width: 800px) {
+      .etude .choices { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .etude .choices article {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    .etude .choices h4 {
+      margin: 0 0 6px;
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 560;
+      font-size: 1.05rem;
+      color: #7B1E3A;
+    }
+    .etude .choices p { margin: 0; font-size: 0.95rem; line-height: 1.4; }
+
+    .etude .top-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .etude #dys-toggle { margin-left: 0; }
+
+    .etude #dys-toggle[aria-pressed="true"] {
+      background: #7B1E3A;
+      color: var(--cream);
+      border-color: #7B1E3A;
+    }
+    html.dys .etude {
+      font-size: 1.12rem;
+      line-height: 1.7;
+      letter-spacing: 0.015em;
+      word-spacing: 0.06em;
+    }
+    html.dys .etude h1, html.dys .etude h2, html.dys .etude h3 {
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+    html.dys .etude .measure, html.dys .etude .enrich p, html.dys .etude .enrich ol {
+      max-width: 38rem;
+    }
+    html.dys .etude textarea, html.dys .etude input[type="text"] {
+      font-size: 1.1rem;
+      line-height: 1.55;
+    }
   </style>
 </head>
 <body data-section="methodologie">
@@ -610,7 +706,10 @@
     <div class="bar" aria-hidden="true"><span id="readbar"></span></div>
     <div class="wrap top-row">
       <a class="brand" href="#ouverture">Tomber amoureux de l’étude</a>
-      <button type="button" id="project" aria-pressed="false">Projeter</button>
+      <div class="top-actions">
+        <button type="button" id="project" aria-pressed="false">Projeter</button>
+        <button type="button" id="dys-toggle" aria-pressed="false">Version adaptée</button>
+      </div>
     </div>
     <nav class="wrap nav" aria-label="Méthodes">
       <a href="#deroule">Déroulé</a>
@@ -626,6 +725,7 @@
   </header>
 
   <main id="contenu">
+    <p class="preview-banner">Aperçu des enrichissements, pour relecture. Cette version n’est pas encore en ligne.</p>
     <section class="hero wrap" id="ouverture" data-station>
       <p class="eyebrow">Animation pédagogique</p>
       <h1>Tomber amoureux<br>de l’étude</h1>
@@ -780,6 +880,31 @@
           </label>
         </div>
       </div>
+
+      <aside class="enrich" id="abreviations">
+        <h3>Abréviations et symboles</h3>
+        <p>Pour écrire assez vite pendant un cours qui ne s’arrête pas, et pendant un sprint Pomodoro. La légende se fixe une fois, en haut de la page.</p>
+        <ol>
+          <li>Écris ta légende en haut de la feuille, dès le début.</li>
+          <li>Garde un code stable : qd (quand), pcq (parce que), cad (c’est-à-dire), cf. (voir).</li>
+          <li>Si un mot manque, laisse-le en toutes lettres : on n’invente pas un signe au milieu du cours.</li>
+        </ol>
+        <ul class="syms" aria-label="Symboles utiles">
+          <li><b>→</b> donc</li>
+          <li><b>≠</b> contraire</li>
+          <li><b>∅</b> rien, absence</li>
+          <li><b>+</b> et, aussi</li>
+          <li><b>=</b> équivaut à</li>
+          <li><b>?</b> à revoir</li>
+          <li><b>!</b> important</li>
+        </ul>
+        <ul class="gorse-dl">
+          <li><a class="btn-forest" href="fiches/fiche-abreviations.pdf">Fiche PDF</a></li>
+          <li><a href="fiches/fiche-abreviations.docx">Fiche .docx</a></li>
+          <li><a href="fiches/fiche-abreviations.odt">Fiche .odt</a></li>
+        </ul>
+        <p class="src">D’après « Écouter, noter, retenir », méthode 2. <a href="https://theatre-classique-ecouter-noter-memoriser.netlify.app/methodes.html">Voir le support</a>.</p>
+      </aside>
     </section>
 
     <section class="wrap" id="rappel" data-station>
@@ -829,6 +954,17 @@
           <textarea data-store="fey-gaps" placeholder="Le mot, l’étape, l’exemple qui manque."></textarea>
         </label>
       </div>
+
+      <aside class="enrich" id="reviser-ia">
+        <h3>Réviser avec l’IA</h3>
+        <p>Prolongement du rappel actif et de Feynman, après la séance, surtout en CAP, en CFA et en voie professionnelle. Cela ne remplace pas le déroulé en salle.</p>
+        <ol>
+          <li>L’IA interroge : elle ne fait pas le travail à ta place.</li>
+          <li>Trois gestes : comprendre, vérifier, progresser.</li>
+          <li>Règle d’or : on ne saisit que son cours, jamais d’informations personnelles. Le cours fait foi.</li>
+        </ol>
+        <p class="src">Atelier complet : <a href="https://reviser-avec-ia.netlify.app/">Réviser avec l’IA</a>.</p>
+      </aside>
     </section>
 
     <section class="wrap" id="memoire" data-station>
@@ -861,9 +997,62 @@
         </div>
       </div>
 
+      <aside class="enrich" id="leitner">
+        <h3>Cartes de mémoire et boîte de Leitner</h3>
+        <p>La répétition espacée devient un geste : une carte, une question, une réponse cachée au verso.</p>
+        <ol>
+          <li>Une boîte à quatre ou cinq cases, ou simplement des piles.</li>
+          <li>Carte réussie : elle avance d’une case.</li>
+          <li>Carte ratée : elle revient en case 1.</li>
+          <li>Planning : le jour même, le lendemain, une semaine, un mois. Note le score à chaque session.</li>
+        </ol>
+        <ul class="gorse-dl">
+          <li><a class="btn-forest" href="fiches/fiche-leitner.pdf">Fiche PDF</a></li>
+          <li><a href="fiches/fiche-leitner.docx">Fiche .docx</a></li>
+          <li><a href="fiches/fiche-leitner.odt">Fiche .odt</a></li>
+        </ul>
+        <p class="src">D’après « Écouter, noter, retenir » (onglets Cartes et Rappels) et les cartes bristol de <a href="https://itineraires-destinations.fr/expanding-your-vocabulary/">Expanding your vocabulary</a>.</p>
+      </aside>
+      <aside class="enrich" id="palais">
+        <h3>Palais de mémoire</h3>
+        <p>Complément de la carte mentale, pour retenir un cours ou les tours d’une spirale déjà remplie.</p>
+        <ol>
+          <li>Imagine un lieu connu : une salle, un théâtre, un trajet.</li>
+          <li>Place chaque idée à un endroit précis, avec une image drôle ou étrange.</li>
+          <li>Pour réviser, refais le trajet à voix haute, sans regarder tes notes.</li>
+        </ol>
+        <p class="src">D’après l’onglet Palais de « Écouter, noter, retenir ». <a href="https://theatre-classique-ecouter-noter-memoriser.netlify.app/">Voir le support</a>.</p>
+      </aside>
+      <aside class="enrich" id="vocabulaire">
+        <h3>Carnet de vocabulaire et cartes bristol</h3>
+        <p>Un geste propre à l’anglais, du côté de la répétition espacée, pour la Première et la Terminale du lycée général et technologique.</p>
+        <ol>
+          <li>Tiens un carnet de mots par axe du programme.</li>
+          <li>Cinq procédés : collocations, registre, formation des mots, articulateurs, langue métaphorique.</li>
+          <li>Fabrique des cartes bristol, puis fais-les avancer dans la boîte de Leitner.</li>
+        </ol>
+        <p class="src">Modèles et deux voies (générale et technologique) : <a href="https://itineraires-destinations.fr/expanding-your-vocabulary/">Expanding your vocabulary</a>.</p>
+      </aside>
+
     <section class="wrap" id="spirale" data-station>
       <p class="kicker"><span>07</span> Spirale de Gorse</p>
       <h2>Partir de ce qui saute aux yeux</h2>
+
+      <aside class="enrich" id="avant-spirale">
+        <h3>Avant « Je remarque »</h3>
+        <p>Deux gestes selon le support. Ils préparent le premier tour, ils ne le remplacent pas.</p>
+        <p><strong>Quand c’est un texte.</strong></p>
+        <ol>
+          <li>Lis-le une première fois à voix haute. Ce qui saute aux oreilles prépare ce qui sautera aux yeux.</li>
+          <li>Tu peux t’appuyer sur la séance 3 de <a href="https://itineraires-destinations.fr/oral-du-bac/">l’oral du bac</a> (routine, grille, fiche élève).</li>
+        </ol>
+        <p><strong>Quand c’est un cours.</strong></p>
+        <ol>
+          <li>Avant l’écoute : ce que je sais déjà, mes questions.</li>
+          <li>Puis « Je remarque » ce qui saute aux yeux ou aux oreilles, pendant l’écoute.</li>
+        </ol>
+        <p class="src">Parcours en cinq temps, méthode Munro et fiche déjà reliée à cette séquence : <a href="https://theatre-classique-ecouter-noter-memoriser.netlify.app/">Écouter, noter, retenir</a>.</p>
+      </aside>
       <p class="measure">Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à la grand-mère de son mari. On part toujours de ce qui saute aux yeux, puis chaque tour s’enfonce vers ce qui est moins visible, prise après prise, jusqu’à « Je trouve le sens » : le problème précis, ce que l’on peut défendre, et sa limite.</p>
       <div class="gorse-layout">
         <figure class="gorse-fig">
@@ -893,6 +1082,10 @@
               <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse-courte.pdf">Fiche PDF, version courte</a></li>
               <li><a href="fiches/fiche-spirale-de-gorse-courte.docx">Fiche .docx</a></li>
               <li><a href="fiches/fiche-spirale-de-gorse-courte.odt">Fiche .odt</a></li>
+
+              <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse-courte-adaptee.pdf">Fiche adaptée, version courte, PDF</a></li>
+              <li><a href="fiches/fiche-spirale-de-gorse-courte-adaptee.docx">Fiche adaptée .docx</a></li>
+              <li><a href="fiches/fiche-spirale-de-gorse-courte-adaptee.odt">Fiche adaptée .odt</a></li>
             </ul>
           </div>
         </div>
@@ -934,9 +1127,30 @@
           <li><strong>Rejets, enjambements.</strong> « d’argent » (v. 2 et 3) ; v. 7 et 8 ; chute aux v. 13 et 14.</li>
           <li><strong>Contraste de couleurs.</strong> Vert et lumière, contre « deux trous rouges » (v. 14).</li>
           <li><strong>Euphémisme, reprise.</strong> « il dort » (v. 7, 9 et 13) ; champ lexical du sommeil.</li>
+          <li class="src" style="grid-column: 1 / -1; list-style: none; margin-top: 6px;">Pour aller plus loin, définitions et exercices : <a href="https://figures-de-style-lycee.netlify.app/">Figures de style au lycée</a>.</li>
         </ul>
       </aside>
       <p class="credit">Arthur Rimbaud, « Le Dormeur du val », Poésies complètes, édition Vanier, 1895. Texte du domaine public. Courtes citations dans la spirale.</p>
+
+      <aside class="enrich" id="second-exemple">
+        <h3>Un second exemple, à choisir</h3>
+        <p>Le Dormeur reste l’exemple rempli. Avant d’en écrire un second, pour la dissertation ou l’anglais, voici trois textes courts du domaine public. Rien n’est rédigé tant que le texte n’est pas choisi.</p>
+        <div class="choices">
+          <article>
+            <h4>1. La Boétie</h4>
+            <p>Ouverture du <cite>Discours de la servitude volontaire</cite> (1576). Déjà dans <a href="https://itineraires-destinations.fr/dissertation-et-essai/">Dissertation et essai</a>. Bon pour ancrer, éprouver, déplacer un sujet d’argumentation.</p>
+          </article>
+          <article>
+            <h4>2. La Fontaine</h4>
+            <p>« Le Loup et l’Agneau » (1668). Court, complet. Utile pour un commentaire, ou une dissertation sur la force et le droit.</p>
+          </article>
+          <article>
+            <h4>3. William Blake</h4>
+            <p>« The Tyger », <cite>Songs of Experience</cite> (1794). Court poème anglais, du premier regard à la pointe, dans la langue du lycée général et technologique.</p>
+          </article>
+        </div>
+      </aside>
+
 
       <p class="kicker" style="margin-top:2.2rem">Quatre usages</p>
       <ul class="gorse-uses">
@@ -967,6 +1181,10 @@
         <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse.pdf">Fiche PDF</a></li>
         <li><a href="fiches/fiche-spirale-de-gorse.docx">Fiche .docx</a></li>
         <li><a href="fiches/fiche-spirale-de-gorse.odt">Fiche .odt</a></li>
+
+        <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse-adaptee.pdf">Fiche adaptée (dys), PDF</a></li>
+        <li><a href="fiches/fiche-spirale-de-gorse-adaptee.docx">Fiche adaptée .docx</a></li>
+        <li><a href="fiches/fiche-spirale-de-gorse-adaptee.odt">Fiche adaptée .odt</a></li>
       </ul>
       <p class="gorse-ground">Un rapprochement limité est possible avec le curriculum en spirale de Jerome Bruner : revenir n’est pas répéter à l’identique. La spirale de Gorse n’en est pas une application, et aucune validation expérimentale n’est affirmée ici.</p>
     </section>
@@ -1257,6 +1475,23 @@
           });
         }, { root: root, threshold: 0.45 });
         stations.forEach(function (s) { io.observe(s); });
+      }
+
+      const dysBtn = document.getElementById("dys-toggle");
+      const DYS_KEY = KEY + "dys";
+      function applyDys(on) {
+        document.documentElement.classList.toggle("dys", on);
+        if (dysBtn) {
+          dysBtn.setAttribute("aria-pressed", on ? "true" : "false");
+        }
+      }
+      applyDys(lsGet(DYS_KEY) === "1");
+      if (dysBtn) {
+        dysBtn.addEventListener("click", function () {
+          const on = document.documentElement.classList.contains("dys") === false;
+          try { localStorage.setItem(DYS_KEY, on ? "1" : "0"); } catch (e) {}
+          applyDys(on);
+        });
       }
     })();
   </script>

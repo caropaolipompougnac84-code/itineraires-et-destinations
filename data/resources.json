@@ -384,7 +384,7 @@
     {
       "id": "meth-oral-du-bac",
       "title": "Lettres · Méthode · L’oral du bac de français : présenter une œuvre et dialoguer",
-      "summary": "Huit séances pour lire, expliquer, présenter une œuvre et dialoguer avec l’examinateur. La Boétie et Sarraute, oraux modèles en dialogue, grilles d’oral blanc renseignées, avec la spirale de Gorse.",
+      "summary": "Neuf séances pour la lecture à voix haute, l’explication, la présentation d’une œuvre et l’entretien. Une partie complémentaire pour le chef-d’œuvre au CAP et le projet au baccalauréat professionnel. La Boétie et Sarraute, oraux modèles en dialogue, avec la spirale de Gorse.",
       "section": "methodologie",
       "subject": "lettres",
       "level": "1re",
@@ -396,7 +396,7 @@
         "examen"
       ],
       "url": "https://itineraires-destinations.fr/oral-du-bac/",
-      "date": "2026-11-11"
+      "date": "2026-11-12"
     },
     {
       "id": "meth-dissertation-et-essai",
@@ -640,7 +640,7 @@
     {
       "id": "lg-lettres-1re-oral-du-bac",
       "title": "Lettres · 1re · L’oral du bac de français : présenter une œuvre et dialoguer",
-      "summary": "Huit séances pour lire, expliquer, présenter une œuvre et dialoguer avec l’examinateur. La Boétie et Sarraute, oraux modèles en dialogue, grilles d’oral blanc renseignées, avec la spirale de Gorse.",
+      "summary": "Neuf séances pour la lecture à voix haute, l’explication, la présentation d’une œuvre et l’entretien. Une partie complémentaire pour le chef-d’œuvre au CAP et le projet au baccalauréat professionnel. La Boétie et Sarraute, oraux modèles en dialogue, avec la spirale de Gorse.",
       "section": "lycee-general",
       "subject": "lettres",
       "level": "1re",
@@ -651,7 +651,7 @@
         "examen"
       ],
       "url": "https://itineraires-destinations.fr/oral-du-bac/",
-      "date": "2026-11-11"
+      "date": "2026-11-12"
     },
     {
       "id": "lg-lettres-1re-dissertation-essai",

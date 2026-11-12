@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>L’oral du bac de français : présenter une œuvre et dialoguer · Itinéraires et destinations</title>
-  <meta name="description" content="Séquence de français, Première du lycée général et technologique : huit séances pour préparer l’oral du bac, explication linéaire, grammaire, présentation d’une œuvre et entretien, avec La Boétie, Sarraute et la spirale de Gorse." />
+  <meta name="description" content="Séquence de français, Première du lycée général et technologique : l’oral du bac, la lecture à voix haute, l’explication linéaire, la grammaire, la présentation d’une œuvre et l’entretien, avec La Boétie, Sarraute et la spirale de Gorse." />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Itinéraires et destinations" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="L’oral du bac de français : présenter une œuvre et dialoguer · Itinéraires et destinations" />
-  <meta property="og:description" content="Séquence de français, Première du lycée général et technologique : huit séances pour préparer l’oral du bac, explication linéaire, grammaire, présentation d’une œuvre et entretien, avec La Boétie, Sarraute et la spirale de Gorse." />
+  <meta property="og:description" content="Séquence de français, Première du lycée général et technologique : l’oral du bac, la lecture à voix haute, l’explication linéaire, la grammaire, la présentation d’une œuvre et l’entretien, avec La Boétie, Sarraute et la spirale de Gorse." />
   <meta property="og:url" content="https://itineraires-destinations.fr/oral-du-bac/" />
   <meta property="og:image" content="https://itineraires-destinations.fr/oral-du-bac/img/lautrec-examen-1901.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -117,6 +117,136 @@
     .dialogue p:last-child { margin-bottom: 0; }
     .dialogue .who { font-weight: 700; }
     .dialogue .exam .who { color: var(--burgundy); }
+
+    .lecture-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.6rem;
+      margin: 0.4rem 0 1.3rem;
+      padding: 0;
+    }
+    .lecture-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.5rem;
+      padding: 0.3rem 0.85rem;
+      border: 1px solid var(--burgundy);
+      border-radius: 999px;
+      color: var(--burgundy);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      background: #fff;
+    }
+    .lecture-nav a:hover, .lecture-nav a:focus-visible {
+      background: var(--burgundy);
+      color: #fff;
+    }
+    .lecture-illu { margin-top: 0.2rem; }
+    .page-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.12rem, 2.6vw, 1.35rem);
+      font-weight: 600;
+      color: var(--burgundy);
+      margin: 1.7rem 0 0.65rem;
+    }
+    .page-content h4 {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+    }
+    .cite-officielle {
+      margin: 1rem 0 1.3rem;
+      padding: 1rem 1.1rem 1.05rem;
+      background: var(--paper-3, #f7eff2);
+      border: 1px solid var(--rule);
+      border-left: 5px solid var(--burgundy);
+    }
+    .cite-officielle p { margin: 0 0 0.7rem; font-style: italic; font-size: 1.05rem; line-height: 1.65; }
+    .cite-officielle footer { font-size: 0.9rem; color: var(--ink-soft); font-style: normal; }
+    .lecture-steps {
+      margin: 0.4rem 0 1.2rem;
+      padding: 0;
+      list-style: none;
+      counter-reset: lec;
+    }
+    .lecture-steps li {
+      counter-increment: lec;
+      position: relative;
+      margin: 0;
+      padding: 0.7rem 0 0.7rem 2.6rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .lecture-steps li:last-child { border-bottom: 0; }
+    .lecture-steps li::before {
+      content: counter(lec);
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 50%;
+      background: var(--burgundy);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .exemple-box {
+      margin: 1rem 0 1.4rem;
+      padding: 1rem 1.05rem 0.4rem;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: #fff;
+    }
+    .annot {
+      margin: 0.6rem 0 0.9rem;
+      padding: 0.85rem 1rem;
+      background: #f8f3ea;
+      border-radius: 8px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+    .annot p { margin: 0 0 0.35rem; }
+    .annot p:last-child { margin-bottom: 0; }
+    .table-wrap {
+      margin: 0.8rem 0 1.2rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+    }
+    table.grille {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 28rem;
+      font-size: 0.98rem;
+    }
+    table.grille th, table.grille td {
+      padding: 0.65rem 0.7rem;
+      text-align: left;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+    }
+    table.grille th {
+      background: var(--burgundy);
+      color: #fff;
+      font-weight: 600;
+    }
+    table.grille th:not(:first-child),
+    table.grille td:not(:first-child) {
+      text-align: center;
+      width: 6rem;
+      white-space: nowrap;
+    }
+    table.grille tbody tr:nth-child(even) { background: #f7eff2; }
+    table.grille tbody tr:last-child td { border-bottom: 0; }
+    table.grille td:not(:first-child) { min-width: 4.5rem; }
   </style>
 </head>
 <body data-section="lycee-general">
@@ -148,10 +278,10 @@
     <section class="page-hero">
       <p class="kicker">Lettres · Première · Lycée général et technologique</p>
       <h1>L’oral du bac de français : présenter une œuvre et dialoguer</h1>
-      <p class="lede">Huit séances pour lire, expliquer, présenter une œuvre qui a compté et dialoguer avec l’examinateur, sans réciter.</p>
+      <p class="lede">Huit séances pour lire, expliquer, présenter une œuvre qui a compté et dialoguer avec l’examinateur, sans réciter. Une rubrique à part reprend la lecture à voix haute, qui ouvre l’épreuve.</p>
     </section>
 
-    <p class="programme">Épreuve anticipée de français, épreuve orale : 30 minutes de préparation, 20 minutes de passage. Première partie : lecture, explication linéaire et question de grammaire, sur 12 points. Seconde partie : présentation de l’œuvre choisie, puis entretien, sur 8 points. La séquence s’appuie sur La Boétie, <em>Discours de la servitude volontaire</em>, et Nathalie Sarraute, <em>Pour un oui ou pour un non</em>, au programme 2026-2027 des voies générale et technologique.</p>
+    <p class="programme">Épreuve anticipée de français, épreuve orale : 30 minutes de préparation, 20 minutes de passage. Première partie : lecture à voix haute (2 points), explication linéaire (8 points) et question de grammaire (2 points). Seconde partie : présentation de l’œuvre choisie, puis entretien, sur 8 points. La lecture fait l’objet d’une <a href="#lecture">rubrique plus bas</a>, avec une fiche à télécharger. La séquence s’appuie sur La Boétie, <em>Discours de la servitude volontaire</em>, et Nathalie Sarraute, <em>Pour un oui ou pour un non</em>, au programme 2026-2027 des voies générale et technologique.</p>
 
     <figure class="hero-illu">
       <picture>
@@ -179,6 +309,7 @@
         <p><span class="who">L’élève :</span> Il peut être lu comme une interpellation très forte. Mais je ne voudrais pas en faire un jugement simple contre les victimes. Je distingue la recherche des mécanismes qui soutiennent la domination et la désignation d’une culpabilité individuelle.</p>
       </div>
       <p>La fiche de correction réunit les corrigés des exercices de langue et des grilles d’oral blanc renseignées. On y suit le chemin complet : prestation, note, conseil, reprise.</p>
+      <p>La lecture à voix haute, qui ouvre l’épreuve et vaut 2 points, est reprise à part, plus bas, avec une routine, deux exemples annotés, une grille et une fiche à télécharger. <a href="#lecture">Aller à la lecture à voix haute</a>.</p>
     </section>
 
     <section aria-labelledby="spirale">
@@ -194,10 +325,148 @@
       <p class="pointe"><strong>À la pointe.</strong> Défendre un jugement sans empêcher le dialogue.</p>
     </section>
 
+    <section id="lecture" aria-labelledby="lecture-titre">
+      <h2 id="lecture-titre">La lecture à voix haute</h2>
+      <p>Elle ouvre l’épreuve, et elle est notée sur 2 points. Ce n’est pas un simple déchiffrage : on situe d’abord le texte, brièvement, puis on le lit tout entier, de manière juste, pertinente et expressive.</p>
+
+      <nav class="lecture-nav" aria-label="Dans cette rubrique">
+        <a href="#lecture-officiel">Le texte officiel</a>
+        <a href="#lecture-attendus">Les attendus</a>
+        <a href="#lecture-ecueils">Les écueils</a>
+        <a href="#lecture-routine">La routine</a>
+        <a href="#lecture-exemples">Les exemples</a>
+        <a href="#lecture-grille">La grille</a>
+      </nav>
+
+      <figure class="hero-illu lecture-illu">
+        <picture>
+          <source type="image/webp" srcset="img/fantin-latour-la-lecture-1877.webp" />
+          <img src="img/fantin-latour-la-lecture-1877.jpg" width="1800" height="1343" alt="Tableau de Fantin-Latour : deux femmes assises, l’une écoute, l’autre a posé un livre ouvert sur ses genoux." />
+        </picture>
+        <figcaption>Henri Fantin-Latour, « La Lecture », 1877, huile sur toile, musée des Beaux-Arts de Lyon, inv. B 628, domaine public. Photographie : Romainbehar, <a href="https://commons.wikimedia.org/wiki/File:Lyon_1er_-_Mus%C3%A9e_des_Beaux-Arts_-_Exposition_Connecter_les_mondes_-_La_Lecture_(Henri_Fantin-Latour).jpg" rel="noopener">Wikimedia Commons</a>, CC0.</figcaption>
+      </figure>
+
+      <h3 id="lecture-officiel">Ce que dit le texte officiel</h3>
+      <p>La lecture commence dès la fin des 30 minutes de préparation. On situe le texte dans l’œuvre ou le parcours associé, en une ou deux phrases, puis on lit le texte choisi par l’examinateur, pas seulement le passage retenu pour l’explication si le texte est plus long.</p>
+      <blockquote class="cite-officielle">
+        <p>« le candidat propose d’abord une lecture à voix haute juste, pertinente et expressive du texte choisi par l’examinateur, après l’avoir situé brièvement dans l’œuvre ou le parcours associé. Cette partie est notée sur 2 points. »</p>
+        <footer>Note de service du 11 septembre 2026, NOR MENE2622658N, <a href="https://www.education.gouv.fr/bo/2026/Special4/MENE2622658N">Bulletin officiel spécial n° 4 du 17 septembre 2026</a>. Elle entre en vigueur à compter de l’année scolaire 2026-2027, pour les épreuves présentées au titre de la session 2028.</footer>
+      </blockquote>
+      <p>La première partie de l’épreuve dure 12 minutes : lecture (2 points), explication linéaire (8 points), question de grammaire (2 points). La seconde partie, présentation de l’œuvre et entretien, est notée sur 8 points.</p>
+      <p>Pour la première partie, la copie des textes doit rester vierge de toute annotation. On s’entraîne donc à porter les pauses et les appuis dans la tête, pas sur la feuille du jour de l’épreuve.</p>
+
+      <h3 id="lecture-attendus">Ce que l’examinateur attend</h3>
+      <p>Les trois adjectifs de la note de service se laissent préciser ainsi. L’outil d’aide à l’évaluation figure en annexe II de cette même note.</p>
+      <ul class="mouvements lecture-attendus">
+        <li><strong>Juste.</strong> On lit les mots du texte, sans en sauter, sans en ajouter. On articule, y compris les noms propres. Les liaisons nécessaires sont faites ; les liaisons interdites sont évitées. En poésie, le e muet et, le cas échéant, la diérèse respectent le vers : <em>nation</em> se dit souvent na-ti-on, trois syllabes.</li>
+        <li><strong>Pertinente.</strong> La lecture convient au genre (poème, scène de théâtre, prose narrative ou argumentative) et à la situation du passage. La ponctuation guide le souffle et le sens. Le débit permet de tout suivre, sans précipitation et sans lenteur solennelle.</li>
+        <li><strong>Expressive.</strong> L’intonation montre que le texte a été compris. On appuie certains mots, on baisse parfois le ton, souvent vers la fin d’un poème ou d’une scène. On lève les yeux de temps en temps, pour adresser la lecture. Ce n’est pas un numéro de théâtre, sauf à faire entendre, avec mesure, une réplique vraiment exclamative.</li>
+      </ul>
+      <p>Une lecture préparée se reconnaît en quelques secondes : on sait où respirer, sur quel mot s’arrêter, où la voix peut descendre. Une lecture découverte le jour même se reconnaît aussi.</p>
+
+      <h3 id="lecture-ecueils">Écueils fréquents</h3>
+      <ul>
+        <li>Découvrir le texte à voix haute le jour de l’épreuve, sans l’avoir lu debout, une fois au moins, pendant l’année.</li>
+        <li>Situer le texte trop longuement, ou oublier de le situer.</li>
+        <li>Ne lire que le passage de l’explication, alors que la note de service demande la lecture du texte choisi.</li>
+        <li>Avaler les virgules et les points, ou s’arrêter à chaque bout de vers sans respecter les enjambements.</li>
+        <li>Lire tout à la même intensité, ou au contraire jouer le texte, gémir, crier.</li>
+        <li>Faire une liaison interdite (entre <em>les</em> et <em>haricots</em>, ou entre <em>et</em> et <em>ainsi</em>) ou oublier une liaison nécessaire (<em>vous êtes</em>, <em>les parfums</em>).</li>
+        <li>En poésie, compter mal le vers : e muet sauté au milieu de l’alexandrin, ou diérèse oubliée.</li>
+        <li>Bâcler la dernière phrase, ou frapper le dernier vers sans raison. La fin d’un texte demande souvent un léger abaissement du ton, sauf si le sens exige autre chose, comme la révélation finale du <cite>Dormeur du val</cite>.</li>
+        <li>Rester le nez sur la feuille, sans jamais adresser la lecture.</li>
+      </ul>
+
+      <h3 id="lecture-routine">Une routine quotidienne, une dizaine de minutes</h3>
+      <p>Mieux vaut une lecture attentive, deux fois, qu’une récitation mécanique apprise vingt fois.</p>
+      <ol class="lecture-steps">
+        <li>Lire le texte une première fois, des yeux, et repérer la ponctuation, les mots difficiles, les noms propres.</li>
+        <li>Marquer, sur une copie de travail (pas sur celle de l’épreuve), les liaisons nécessaires. En poésie, compter le vers : e muet, diérèse éventuelle, enjambements.</li>
+        <li>Choisir deux ou trois appuis de sens, et l’endroit où la voix peut descendre, souvent vers la fin.</li>
+        <li>Se lever. Situer le texte en une ou deux phrases, puis le lire à voix haute, jusqu’au bout, sans s’arrêter.</li>
+        <li>S’enregistrer, ou lire devant un camarade. Écouter : où a-t-on précipité, avalé une virgule, oublié de lever les yeux&nbsp;?</li>
+        <li>Relire une seconde fois, en ne corrigeant que ces points.</li>
+        <li>Refermer la feuille annotée et relire une dernière fois sur une copie vierge, comme le jour de l’épreuve.</li>
+      </ol>
+
+      <h3 id="lecture-exemples">Deux exemples annotés</h3>
+      <p>Les signes : le signe = marque une liaison, / une pause brève, // une pause plus nette. Les points médians séparent les syllabes du vers. On n’écrit rien de tout cela sur la copie de l’examen.</p>
+
+      <article class="exemple-box" aria-labelledby="ex-rimbaud">
+        <h4 id="ex-rimbaud">Un quatrain : Arthur Rimbaud, « Le Dormeur du val », 1870</h4>
+        <p>Dernier quatrain du poème, recueil dit Cahier de Douai. Texte du domaine public. Vers de douze syllabes (alexandrins).</p>
+        <div class="annot" role="figure" aria-label="Texte annoté du dernier quatrain">
+          <p>Les=parfums ne font pas frissonner sa narine /</p>
+          <p>Il dort dans le soleil, la main sur sa poi·tri·ne</p>
+          <p>Tran·quil·le. // Il a deux trous roug’ au cô·té droit.</p>
+        </div>
+        <ul>
+          <li>Liaison : les=parfums. Pas de liaison après <em>dort</em> (le t ne se prononce pas).</li>
+          <li>Point-virgule après <em>narine</em> : une pause, plus légère qu’un point.</li>
+          <li>Enjambement : on ne s’arrête pas à <em>poitrine</em>, on enchaîne jusqu’à <em>Tranquille</em>, puis l’on pose la voix.</li>
+          <li>Dernier vers, douze syllabes : Tran·quil·le (le e se prononce) Il a deux // trous roug’ au cô·té droit. Le e de <em>rouges</em> s’élide devant <em>au</em>.</li>
+          <li>Le point après <em>Tranquille</em> est la grande pause du poème. On laisse un silence, sans le dramatiser.</li>
+          <li>La dernière phrase n’est ni criée ni avalée. Le choc est dans le fait, « deux trous rouges », dit clairement, un peu plus bas.</li>
+        </ul>
+      </article>
+
+      <article class="exemple-box" aria-labelledby="ex-boetie">
+        <h4 id="ex-boetie">Une phrase de prose : Étienne de La Boétie, <cite>Discours de la servitude volontaire</cite></h4>
+        <p>Texte du domaine public, seizième siècle. La phrase est courte, mais tout y tient : l’adresse, la virgule, la chute.</p>
+        <div class="annot" role="figure" aria-label="Phrase annotée de La Boétie">
+          <p>« Soyez=résolus de ne servir plus, / et vous voilà libres. // »</p>
+        </div>
+        <ul>
+          <li>Liaison : Soyez=résolus. On ne force pas d’autres liaisons.</li>
+          <li>La virgule après <em>plus</em> coupe le geste en deux : d’abord la résolution, puis le résultat.</li>
+          <li>Ce n’est pas un cri de ralliement. C’est une adresse, presque simple. La voix peut s’abaisser légèrement sur <em>libres</em>, et l’on laisse le point exister.</li>
+          <li>On articule <em>résolus</em>, <em>servir</em>, <em>libres</em>, sans précipiter la fin de phrase.</li>
+        </ul>
+      </article>
+      <p>Même démarche pour un poème, une scène ou un extrait d’idées de votre récapitulatif : situer, lire le texte entier, faire entendre la ponctuation et le sens.</p>
+
+      <h3 id="lecture-grille">Grille d’auto-évaluation</h3>
+      <p>Après une lecture, on coche une colonne, et l’on note ce que l’on retravaille. La grille peut aussi servir à un camarade qui vous écoute. Elle figure également dans la fiche à télécharger.</p>
+      <div class="table-wrap" tabindex="0">
+        <table class="grille">
+          <thead>
+            <tr>
+              <th scope="col">Critère</th>
+              <th scope="col">Oui</th>
+              <th scope="col">En partie</th>
+              <th scope="col">Pas encore</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>J’ai situé le texte en une ou deux phrases, avant de lire.</td><td></td><td></td><td></td></tr>
+            <tr><td>J’ai lu le texte entier, sans sauter de mots, sans en ajouter.</td><td></td><td></td><td></td></tr>
+            <tr><td>L’articulation et le débit permettent de tout suivre.</td><td></td><td></td><td></td></tr>
+            <tr><td>Les liaisons nécessaires sont faites, sans liaisons interdites.</td><td></td><td></td><td></td></tr>
+            <tr><td>En poésie : le e muet et les diérèses respectent le vers.</td><td></td><td></td><td></td></tr>
+            <tr><td>La ponctuation s’entend : pauses, questions, exclamations.</td><td></td><td></td><td></td></tr>
+            <tr><td>L’intonation montre que j’ai compris le texte.</td><td></td><td></td><td></td></tr>
+            <tr><td>Je lève les yeux de temps en temps, j’adresse la lecture.</td><td></td><td></td><td></td></tr>
+            <tr><td>La fin n’est ni bâclée ni surjouée.</td><td></td><td></td><td></td></tr>
+            <tr><td>Je n’ai pas joué une scène : j’ai fait entendre le sens.</td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pointe"><strong>Pour se souvenir, le jour de l’épreuve.</strong> Situer le texte, brièvement. Lire le texte choisi, jusqu’au bout. Faire entendre le sens, sans le jouer.</p>
+    </section>
+
+
     <section id="telechargements" aria-labelledby="telechargements-titre">
       <h2 id="telechargements-titre">Téléchargements</h2>
-      <p>Cinq documents, chacun en PDF, Word et LibreOffice. Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>.</p>
+      <p>Six documents, chacun en PDF, Word et LibreOffice. Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>.</p>
       <ul class="downloads">
+        <li>
+          <p class="doc-title">Fiche élève : la lecture à voix haute (4 pages)</p>
+          <span class="doc-links">
+            <a href="Fiche-Lecture-a-voix-haute.pdf">PDF</a>
+            <a href="Fiche-Lecture-a-voix-haute.docx">Word (.docx)</a>
+            <a href="Fiche-Lecture-a-voix-haute.odt">LibreOffice (.odt)</a>
+          </span>
+        </li>
         <li>
           <p class="doc-title">Séquence (55 pages)</p>
           <span class="doc-links">
@@ -243,8 +512,8 @@
 
     <p>Pour l’écrit, voir aussi <a href="../dissertation-et-essai/">Dissertation et essai : les épreuves du bac en marche</a>.</p>
 
-    <p class="pourquoi-sign">Conçu par Madame Carole Paoli Pompougnac</p>
-    <p class="illu-credit">Henri de Toulouse-Lautrec, « Un examen à la faculté de médecine de Paris », 1901, huile sur toile, musée Toulouse-Lautrec, Albi, domaine public. Photographie : Didier Descouens, <a href="https://commons.wikimedia.org/wiki/File:(Albi)_Un_examen_%C3%A0_la_facult%C3%A9_de_M%C3%A9decine_de_Paris_-_Toulouse-Lautrec_1901_MTL.216.jpg" rel="noopener">Wikimedia Commons</a>, domaine public. Schéma de la spirale de Gorse : illustration originale, conçue par Madame Carole Paoli Pompougnac.</p>
+    <p class="pourquoi-sign">conçu par Madame Carole Paoli Pompougnac, mis en page par Grok</p>
+    <p class="illu-credit">Henri de Toulouse-Lautrec, « Un examen à la faculté de médecine de Paris », 1901, huile sur toile, musée Toulouse-Lautrec, Albi, domaine public. Photographie : Didier Descouens, <a href="https://commons.wikimedia.org/wiki/File:(Albi)_Un_examen_%C3%A0_la_facult%C3%A9_de_M%C3%A9decine_de_Paris_-_Toulouse-Lautrec_1901_MTL.216.jpg" rel="noopener">Wikimedia Commons</a>, domaine public. Henri Fantin-Latour, « La Lecture », 1877, huile sur toile, musée des Beaux-Arts de Lyon, inv. B 628, domaine public. Photographie : Romainbehar, Wikimedia Commons, CC0. Schéma de la spirale de Gorse : illustration originale, conçue par Madame Carole Paoli Pompougnac.</p>
     <p style="margin:1.4rem 0 0"><a class="work-link" href="../methodologie/index.html">Retour à la méthodologie</a> · <a class="work-link" href="../lycee-general/lettres.html">Retour aux lettres</a></p>
   </main>
 
@@ -258,7 +527,7 @@
         <p style="margin:0">Licence Creative Commons BY-NC-SA 4.0</p>
         <p style="margin:0.35rem 0 0">Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions.
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">Détails de la licence</a>.</p>
-        <p class="photo-credits-foot">Henri de Toulouse-Lautrec, « Un examen à la faculté de médecine de Paris », 1901, musée Toulouse-Lautrec, Albi, domaine public ; photographie Didier Descouens, Wikimedia Commons, domaine public. Schéma de la spirale de Gorse : illustration originale. © 2026 Madame Carole Paoli Pompougnac.</p>
+        <p class="photo-credits-foot">Henri de Toulouse-Lautrec, « Un examen à la faculté de médecine de Paris », 1901, musée Toulouse-Lautrec, Albi, domaine public ; photographie Didier Descouens, Wikimedia Commons, domaine public. Henri Fantin-Latour, « La Lecture », 1877, musée des Beaux-Arts de Lyon, domaine public ; photographie Romainbehar, Wikimedia Commons, CC0. Schéma de la spirale de Gorse : illustration originale. © 2026 Madame Carole Paoli Pompougnac.</p>
       </div>
     </div>
   </footer>

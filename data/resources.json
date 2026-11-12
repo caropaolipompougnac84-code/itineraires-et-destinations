@@ -1128,6 +1128,26 @@
       "credit": "Daniel Léon Saubès, d'après Léon Bonnat, Portrait de Victor Hugo, 1879, huile sur toile, Maison de Victor Hugo, Paris. Domaine public, via Wikimedia Commons."
     },
     {
+      "id": "lp-lettres-compte-rendu-pfmp-motocycles",
+      "title": "Lettres · Bac professionnel · Rendre compte d'une PFMP, option motocycles",
+      "summary": "Modèle pédagogique pour aider un élève de baccalauréat professionnel Maintenance des véhicules, option motocycles, à rendre compte d'une PFMP : cadre officiel, consignes, passage à l'oral, grille et exemple fictif dans une concession Triumph.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "tle",
+      "levelLabel": "Bac professionnel · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "ecrit",
+        "oral",
+        "travail",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/compte-rendu-pfmp-motocycles/",
+      "date": "2026-11-12",
+      "image": "compte-rendu-pfmp-motocycles.jpg",
+      "credit": "Triumph Bonneville T120, 2021. Vauxford, CC BY-SA 4.0, via Wikimedia Commons."
+    },
+    {
       "id": "cfa-anglais-production",
       "title": "Anglais / Français · CFA · Ressources CFA Production",
       "summary": "Ressources pour apprentis en filière Production.",

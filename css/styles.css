@@ -406,3 +406,7 @@ body[data-section="option"] { --burgundy: var(--opt); }
 .work:has(a[href*="/american-superheroes/"]) { border-left: 5px solid #1A3658; padding-left: 1rem; }
 .work:has(a[href*="/american-superheroes/"]) h3 { color: #1A3658; }
 .work:has(a[href*="/preparer-aux-examens/francais/"]) h3 { color: #7B1E3A; }
+.work:has(a[href*="/from-fault-to-quote/"]) { border-left: 5px solid #1A3658; padding-left: 1rem; }
+.work:has(a[href*="/from-fault-to-quote/"]) h3 { color: #1A3658; }
+.work:has(a[href*="/compte-rendu-pfmp-motocycles/"]) { border-left: 5px solid #7B1E3A; padding-left: 1rem; }
+.work:has(a[href*="/compte-rendu-pfmp-motocycles/"]) h3 { color: #7B1E3A; }

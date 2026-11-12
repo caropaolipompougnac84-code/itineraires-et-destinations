@@ -799,7 +799,7 @@
     {
       "id": "lg-option-deux-deesses",
       "title": "Lettres · Tle option littérature · Deux déesses pour ouvrir la modernité",
-      "summary": "Barthes et Baudrillard : ouvrir la modernité vers la prépa littéraire.",
+      "summary": "Le mythe chez Barthes, le simulacre chez Baudrillard, Perec et Warhol. Treize séances, un oral sommatif sur un mythe contemporain.",
       "section": "lycee-general",
       "subject": "lettres",
       "level": "tle-option",
@@ -807,11 +807,14 @@
       "collection": "lg-option-litterature",
       "themes": [
         "litterature",
-        "culture"
+        "culture",
+        "oral"
       ],
-      "url": "https://barthes-baudrillard-signes-terminale.netlify.app/",
-      "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120765163490243&set=a.122104658121490243"
+      "url": "https://itineraires-destinations.fr/deux-deesses/",
+      "date": "2026-11-12",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120765163490243&set=a.122104658121490243",
+      "image": "deux-deesses.jpg",
+      "credit": "Andy Warhol, Marilyn, affiche de l'exposition Warhol, Tate Gallery, 1971, © The Andy Warhol Foundation for the Visual Arts / ADAGP, reproduction en attente d'autorisation."
     },
     {
       "id": "lp-anglais-cap-coiffure",

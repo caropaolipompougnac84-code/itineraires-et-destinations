@@ -160,6 +160,25 @@
   ],
   "resources": [
     {
+      "id": "lp-anglais-from-fault-to-quote",
+      "title": "Anglais · Bac pro motocycles · From fault to quote",
+      "summary": "Volet anglais d’un travail transversal avec le compte rendu de PFMP : décrire une panne sur une Bonneville T120, établir un budget prévisionnel, puis contacter Triumph, à Hinckley, par mail et par téléphone. Niveau A2-B1.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Bac pro · Maintenance des véhicules, option motocycles · A2-B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/from-fault-to-quote/",
+      "date": "2026-11-12",
+      "image": "from-fault-to-quote.jpg",
+      "credit": "Fernand Léger (1881-1955), Le Mécanicien, 1920. Huile sur toile. National Gallery of Canada, Ottawa. Domaine public. Image via Wikimedia Commons."
+    },
+    {
       "id": "lg-lettres-1re-hiroshima-duras",
       "title": "Lettres · 1re · Hiroshima mon amour, Marguerite Duras : préparer l’oral",
       "summary": "Fiche pour préparer l’oral sur le livre de 1960 : exposé, présentation brève pour l’EAF, explication linéaire du prologue, entretien, liens et lexique.",

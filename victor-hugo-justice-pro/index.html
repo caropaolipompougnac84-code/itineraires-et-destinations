@@ -71,18 +71,47 @@
     .extract-box li { margin: 0.12rem 0; }
     .ref { font-size: 0.9rem; color: #555; }
     .turn { font-weight: 600; margin: 0 0 0.7rem; }
+    .page-content ul.chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.5rem;
+      list-style: none;
+      margin: 0.85rem 0 0;
+      padding: 0;
+    }
+    .page-content ul.chips li {
+      font-family: var(--f-ui);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #7B1E3A;
+      background: var(--pale);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.28rem 0.8rem;
+      margin: 0;
+    }
     .hero-illu, .lesson-illu {
-      margin: 0.4rem 0 1.6rem;
+      display: table;
+      margin: 0.3rem auto 1.3rem;
+      max-width: 100%;
       background: #fff;
       border: 1px solid var(--rule, var(--line));
       border-radius: 10px;
       overflow: hidden;
     }
-    .hero-illu img, .lesson-illu img { width: 100%; height: auto; display: block; background: #1a1410; }
-    .hero-illu { background: #fff; }
-    .hero-illu img { width: auto; max-width: 100%; max-height: min(58vh, 560px); margin: 0 auto; object-fit: contain; background: #fff; }
+    .hero-illu img, .lesson-illu img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: min(58vh, 520px);
+      margin: 0 auto;
+      object-fit: contain;
+      background: #fff;
+    }
     .hero-illu figcaption, .lesson-illu figcaption {
-      padding: 0.5rem 0.9rem 0.8rem;
+      display: table-caption;
+      caption-side: bottom;
+      padding: 0.5rem 0.9rem 0.75rem;
       font-size: 0.88rem;
       color: var(--ink-soft, #555);
       line-height: 1.45;
@@ -322,7 +351,7 @@
         <a href="#evaluations" id="tab-evaluations">Évaluations</a>
         <a href="#telechargements" id="tab-telechargements">Téléchargements</a>
       </nav>
-    <section class="panel" id="panel-intro" aria-labelledby="tab-intro">
+    <section class="panel" id="intro" aria-labelledby="tab-intro">
       <h2 id="intro-title">Entrer dans la séquence</h2>
       <p><a class="work-link" href="presentation.html">Fiche de présentation, à afficher ou à imprimer</a> (objectifs, épreuves, déroulé, évaluations, téléchargements).</p>
       <p class="note">Une version de cette séquence, pour le baccalauréat technologique du <a href="../victor-hugo-justice-techno/presentation.html">lycée général et technologique</a>, est également disponible.</p>
@@ -355,7 +384,7 @@
       <h3>Édition de référence</h3>
       <p>Les textes sont cités d'après les <cite>Œuvres complètes</cite> de Victor Hugo, texte établi par Gustave Simon, Imprimerie nationale, Ollendorff, 1910, sur <a href="https://fr.wikisource.org/wiki/Le_Dernier_Jour_d%27un_condamné" rel="noopener">Wikisource, Le Dernier Jour d'un condamné</a> et <a href="https://fr.wikisource.org/wiki/Claude_Gueux" rel="noopener">Claude Gueux</a>. Hugo est dans le domaine public : les extraits sont donnés largement, avec le chapitre.</p>
       <p>Les images de Daumier et de Piranèse aident à regarder une représentation de la justice ou de la prison. Elles ne prouvent pas le récit de Hugo.</p>
-    </section>    <section class="panel" id="panel-s1" aria-labelledby="tab-s1">
+    </section>    <section class="panel" id="s1" aria-labelledby="tab-s1">
 
       <h2 id="s1-title">Séance 1. Peut-on juger sans entendre une voix&nbsp;?</h2>
       <p class="turn">Tour 1 de la spirale de Gorse.</p>
@@ -387,7 +416,7 @@
         <p>Recopiez la première phrase de A et la phrase « L'homme vola. » Soulignez qui parle. Dites une différence, en une phrase. La version accessible complète est dans le livret.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s2" aria-labelledby="tab-s2">
+    </section>    <section class="panel" id="s2" aria-labelledby="tab-s2">
 
       <h2 id="s2-title">Séance 2. Comment une idée devient-elle une prison&nbsp;?</h2>
       <p class="turn">Tour 2 de la spirale de Gorse.</p>
@@ -419,7 +448,7 @@
         <p>Remplissez trois étapes seulement : Je remarque, Je repère, Je comprends. Une idée courte à l'extérieur, une preuve à l'intérieur.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s3" aria-labelledby="tab-s3">
+    </section>    <section class="panel" id="s3" aria-labelledby="tab-s3">
 
       <h2 id="s3-title">Séance 3. Une lecture peut-elle faire éprouver l'enfermement&nbsp;?</h2>
       <p class="turn">Tour 3 de la spirale de Gorse.</p>
@@ -451,7 +480,7 @@
         <p>Recopiez une phrase du texte. Puis répondez, en une phrase, à propos de l'image : voit-on une sortie&nbsp;?</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s4" aria-labelledby="tab-s4">
+    </section>    <section class="panel" id="s4" aria-labelledby="tab-s4">
 
       <h2 id="s4-title">Séance 4. Raconter des faits suffit-il à être neutre&nbsp;?</h2>
       <p class="turn">Tour 4 de la spirale de Gorse.</p>
@@ -486,7 +515,7 @@
         <p>Recopiez « L'homme vola. » Puis « trois jours » et « cinq ans ». Dites, en une phrase, ce que ce rapprochement vous fait penser, sans effacer le vol.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s5" aria-labelledby="tab-s5">
+    </section>    <section class="panel" id="s5" aria-labelledby="tab-s5">
 
       <h2 id="s5-title">Séance 5. Que représente Albin pour Claude&nbsp;?</h2>
       <p class="turn">Tour 5 de la spirale de Gorse.</p>
@@ -518,7 +547,7 @@
         <p>Soulignez « même » dans le passage. Recopiez « l'univers pour l'autre ». Dites, en une phrase, ce qu'Albin apporte à Claude.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s6" aria-labelledby="tab-s6">
+    </section>    <section class="panel" id="s6" aria-labelledby="tab-s6">
 
       <h2 id="s6-title">Séance 6. Qui le récit met-il en accusation&nbsp;?</h2>
       <p class="turn">Tour 6 de la spirale de Gorse.</p>
@@ -555,7 +584,7 @@
         <p>Soulignez « lui » et « nous ». Complétez : « Ces questions déplacent la réflexion de… vers… »</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s7" aria-labelledby="tab-s7">
+    </section>    <section class="panel" id="s7" aria-labelledby="tab-s7">
 
       <h2 id="s7-title">Séance 7. Qui regarde qui&nbsp;?</h2>
       <p class="turn">Tour 7 de la spirale de Gorse.</p>
@@ -583,7 +612,7 @@
         <p>Relevez une phrase où la foule apparaît, et une phrase où le « je » se voit comme un spectacle possible. Dites, en une phrase, ce que cela change.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s8" aria-labelledby="tab-s8">
+    </section>    <section class="panel" id="s8" aria-labelledby="tab-s8">
 
       <h2 id="s8-title">Séance 8. Pourquoi cultiver une tête plutôt que la couper&nbsp;?</h2>
       <p class="turn">Tour 8 de la spirale de Gorse.</p>
@@ -618,7 +647,7 @@
         <p>Recopiez la phrase. Soulignez les impératifs. Entourez « la couper ». Dites, en deux phrases, ce que le narrateur demande.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s9" aria-labelledby="tab-s9">
+    </section>    <section class="panel" id="s9" aria-labelledby="tab-s9">
 
       <h2 id="s9-title">Séance 9. Comment passer du résumé à l'interprétation&nbsp;?</h2>
       <p class="turn">Tour 9 de la spirale de Gorse, appliquée au choix d'une œuvre.</p>
@@ -650,7 +679,7 @@
         <p>Remplissez le cadre : œuvre choisie ; pourquoi elle compte, en une phrase ; une courte citation ; une limite.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-s10" aria-labelledby="tab-s10">
+    </section>    <section class="panel" id="s10" aria-labelledby="tab-s10">
 
       <h2 id="s10-title">Séance 10. Comment répondre sans réciter&nbsp;?</h2>
       <p class="turn">Tour 10 de la spirale de Gorse.</p>
@@ -682,7 +711,7 @@
         <p>Choisissez une question. Complétez : « Je comprends l'objection ; elle m'oblige à distinguer… » Ajoutez une courte citation.</p>
       </details>
 
-    </section>    <section class="panel" id="panel-evaluations" aria-labelledby="tab-evaluations">
+    </section>    <section class="panel" id="evaluations" aria-labelledby="tab-evaluations">
       <h2 id="eval-title">Évaluations</h2>
       <h3>Diagnostique, séance 1</h3>
       <p>Deux ouvertures, la voix, un procédé, une première comparaison. Sans note lourde. On valorise une observation précise et une courte citation.</p>
@@ -692,7 +721,7 @@
       <p>Oral pédagogique : présentation de cinq minutes au maximum, puis entretien. Écrit argumentatif associé. Titre à inscrire : « Évaluation orale pédagogique : Victor Hugo et la justice. » Sous-titre : « Entraînement aux compétences de présentation et d'entretien. Ce travail n'est pas une épreuve certificative du baccalauréat professionnel. »</p>
       <p>Le cadre temporel peut emprunter la note de service du 31 décembre 2021 (15 et 15 minutes, exposé initial de cinq minutes au maximum). Le contenu reste distinct du programme limitatif de terminale. Les passages individuels exigent des créneaux complémentaires.</p>
       <p>Les corrigés et les grilles sont dans la fiche de correction et sur cet onglet, à afficher ou à masquer selon le moment du travail.</p>
-    </section>    <section class="panel" id="panel-telechargements" aria-labelledby="tab-telechargements">
+    </section>    <section class="panel" id="telechargements" aria-labelledby="tab-telechargements">
       <h2 id="dl-title">Téléchargements</h2>
       <ul class="downloads">
         <li>
@@ -773,7 +802,7 @@
     var links = [].slice.call(list.querySelectorAll('a'));
     var panels = [].slice.call(document.querySelectorAll('section.panel'));
     function show(id) {
-      if (!document.getElementById(id)) id = 'introduction';
+      if (!document.getElementById(id)) id = 'intro';
       panels.forEach(function (p) {
         var on = p.id === id;
         p.classList.toggle('is-active', on);
@@ -788,30 +817,30 @@
       });
     }
     function current() {
-      var id = (location.hash || '#introduction').slice(1);
+      var id = (location.hash || '#intro').slice(1);
       show(id);
-      if (id === 'introduction' || !id) {
+      if (id === 'intro' || !id) {
         window.scrollTo(0, 0);
       }
     }
     window.addEventListener('hashchange', current);
     links.forEach(function (a) {
       a.addEventListener('click', function (e) {
-        if (a.getAttribute('href') !== '#introduction') return;
+        if (a.getAttribute('href') !== '#intro') return;
         e.preventDefault();
-        if (location.hash !== '#introduction') {
-          history.replaceState(null, '', '#introduction');
+        if (location.hash !== '#intro') {
+          history.replaceState(null, '', '#intro');
         }
-        show('introduction');
+        show('intro');
         window.scrollTo(0, 0);
       });
     });
     if (!location.hash) {
-      history.replaceState(null, '', '#introduction');
+      history.replaceState(null, '', '#intro');
     }
     current();
     window.addEventListener('load', function () {
-      if ((location.hash || '#introduction') === '#introduction') window.scrollTo(0, 0);
+      if ((location.hash || '#intro') === '#intro') window.scrollTo(0, 0);
     });
     list.addEventListener('keydown', function (e) {
       var i = links.indexOf(document.activeElement);

@@ -71,18 +71,47 @@
     .extract-box li { margin: 0.12rem 0; }
     .ref { font-size: 0.9rem; color: #555; }
     .turn { font-weight: 600; margin: 0 0 0.7rem; }
+    .page-content ul.chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.5rem;
+      list-style: none;
+      margin: 0.85rem 0 0;
+      padding: 0;
+    }
+    .page-content ul.chips li {
+      font-family: var(--f-ui);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #7B1E3A;
+      background: var(--pale);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.28rem 0.8rem;
+      margin: 0;
+    }
     .hero-illu, .lesson-illu {
-      margin: 0.4rem 0 1.6rem;
+      display: table;
+      margin: 0.3rem auto 1.3rem;
+      max-width: 100%;
       background: #fff;
       border: 1px solid var(--rule, var(--line));
       border-radius: 10px;
       overflow: hidden;
     }
-    .hero-illu img, .lesson-illu img { width: 100%; height: auto; display: block; background: #1a1410; }
-    .hero-illu { background: #fff; }
-    .hero-illu img { width: auto; max-width: 100%; max-height: min(58vh, 560px); margin: 0 auto; object-fit: contain; background: #fff; }
+    .hero-illu img, .lesson-illu img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: min(58vh, 520px);
+      margin: 0 auto;
+      object-fit: contain;
+      background: #fff;
+    }
     .hero-illu figcaption, .lesson-illu figcaption {
-      padding: 0.5rem 0.9rem 0.8rem;
+      display: table-caption;
+      caption-side: bottom;
+      padding: 0.5rem 0.9rem 0.75rem;
       font-size: 0.88rem;
       color: var(--ink-soft, #555);
       line-height: 1.45;
@@ -304,8 +333,8 @@
       <p class="kicker">Bac professionnel · Première professionnelle · Français · Lycée professionnel</p>
       <h1>Victor Hugo et la justice</h1>
       <p class="lede"><cite>Le Dernier Jour d'un condamné</cite> (1829), <cite>Claude Gueux</cite> (1834). Fiche de présentation de la séquence.</p>
-      <p><strong>Madame Carole Paoli Pompougnac</strong></p>
-      <ul>
+      <p class="byline">Madame Carole Paoli Pompougnac</p>
+      <ul class="chips">
         <li>Bac professionnel</li>
         <li>Première professionnelle</li>
         <li>Français</li>

@@ -767,6 +767,25 @@
       "credit": "Caspar David Friedrich, Der Mönch am Meer (Le Moine au bord de la mer), 1808-1810, huile sur toile, Alte Nationalgalerie, Staatliche Museen zu Berlin. Domaine public, via Wikimedia Commons (Google Art Project)."
     },
     {
+      "id": "lg-lettres-hugo-justice-techno",
+      "title": "Lettres · Bac technologique · Victor Hugo et la justice",
+      "summary": "Le Dernier Jour d'un condamné et Claude Gueux : dix séances, la spirale de Gorse, l'épreuve anticipée de français et le Grand Oral.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Bac technologique · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/victor-hugo-justice-techno/presentation.html",
+      "date": "2026-11-12",
+      "image": "victor-hugo-justice-techno.jpg",
+      "credit": "Vincent van Gogh, La Ronde des prisonniers (Prisoners Exercising, The Prison Courtyard), d'après Gustave Doré, février 1890, huile sur toile, 80 x 64 cm, musée Pouchkine, Moscou. Domaine public, via Wikimedia Commons."
+    },
+    {
       "id": "lg-lettres-2de-1re-sapproprier-textes",
       "title": "Lettres · 2de / 1re · S'approprier des textes, préparer l'épreuve",
       "summary": "Préparation au Bac de français : s'approprier les textes.",
@@ -1049,6 +1068,25 @@
       "url": "https://chef-doeuvre-carnet.netlify.app/",
       "date": "2026-11-07",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120576025490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-lettres-hugo-justice-pro",
+      "title": "Lettres · Bac professionnel · Victor Hugo et la justice",
+      "summary": "Le Dernier Jour d'un condamné et Claude Gueux : dix séances, la spirale de Gorse, un oral pédagogique et un écrit associé.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Bac professionnel · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/victor-hugo-justice-pro/presentation.html",
+      "date": "2026-11-12",
+      "image": "victor-hugo-justice-pro.jpg",
+      "credit": "Daniel Léon Saubès, d'après Léon Bonnat, Portrait de Victor Hugo, 1879, huile sur toile, Maison de Victor Hugo, Paris. Domaine public, via Wikimedia Commons."
     },
     {
       "id": "cfa-anglais-production",

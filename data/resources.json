@@ -748,7 +748,7 @@
     {
       "id": "lg-lettres-1re-gracq",
       "title": "Lettres · 1re · En lisant en écrivant : Julien Gracq",
-      "summary": "Julien Gracq : lire pour écrire.",
+      "summary": "Lecture, écriture et littérature d'idées. Douze séances, la spirale de Gorse, le lecteur metteur en scène, la chaîne des écrivains, trois évaluations dont un oral.",
       "section": "lycee-general",
       "subject": "lettres",
       "level": "1re",
@@ -756,10 +756,12 @@
       "collection": "lg-lettres",
       "themes": [
         "litterature",
-        "ecrit"
+        "ecrit",
+        "oral",
+        "methodologie"
       ],
-      "url": "https://gracq-en-lisant-en-ecrivant-premiere.netlify.app/",
-      "date": "2026-11-07",
+      "url": "en-lisant-en-ecrivant/",
+      "date": "2026-11-12",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120595483490243&set=a.122104658121490243"
     },
     {

@@ -160,6 +160,45 @@
   ],
   "resources": [
     {
+      "id": "lg-lettres-1re-hiroshima-duras",
+      "title": "Lettres · 1re · Hiroshima mon amour, Marguerite Duras : préparer l’oral",
+      "summary": "Fiche pour préparer l’oral sur le livre de 1960 : exposé, présentation brève pour l’EAF, explication linéaire du prologue, entretien, liens et lexique.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/hiroshima-mon-amour-duras/",
+      "date": "2026-11-12",
+      "image": "hiroshima-mon-amour-duras.jpg",
+      "credit": "Couverture de l’édition Folio de Hiroshima mon amour, Marguerite Duras, Gallimard."
+    },
+    {
+      "id": "lg-hlp-tle-hiroshima-duras",
+      "title": "HLP · Terminale · Hiroshima mon amour, Marguerite Duras : préparer l’oral",
+      "summary": "Bibliographie indicative, entrée « L’humain et ses limites ». Fiche pour préparer un oral sur le livre de 1960 : exposé, explication linéaire, entretien, liens et lexique.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "hlp",
+      "levelLabel": "Tle HLP",
+      "collection": "lg-hlp",
+      "themes": [
+        "litterature",
+        "oral",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/hiroshima-mon-amour-duras/",
+      "date": "2026-11-12",
+      "image": "hiroshima-mon-amour-duras.jpg",
+      "credit": "Couverture de l’édition Folio de Hiroshima mon amour, Marguerite Duras, Gallimard.",
+      "hideInNouveautes": true
+    },
+    {
       "id": "lg-hlp-tle-je-est-un-autre",
       "title": "HLP · Terminale · Je est un autre ? Les métamorphoses du moi",
       "summary": "Huit séances en onglets, la spirale de Gorse, un tableau des approches du moi, un devoir en quatre heures.",

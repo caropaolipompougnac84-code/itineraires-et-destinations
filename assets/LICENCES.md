@@ -17,3 +17,5 @@ Illustrations 4e et 3e (domaine public), d'après les crédits des cartes :
 - brevet/en-4e.jpg : Thomas Moran, The Grand Canyon of the Yellowstone, 1872. Smithsonian American Art Museum.
 - brevet/en-3e.jpg : J. M. W. Turner, The Fighting Temeraire, 1839. National Gallery, Londres.
 - brevet/brevet.jpg : Jean Siméon Chardin, Un philosophe occupé de sa lecture, 1734. Musée du Louvre, Paris.
+
+- hiroshima-mon-amour-duras.jpg : couverture de l’édition Folio de Hiroshima mon amour, Marguerite Duras, Gallimard. Reproduction de la couverture de l’édition de travail, pour présenter la fiche.

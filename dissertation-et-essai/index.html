@@ -112,6 +112,166 @@
     .downloads a { min-height: 2.75rem; display: inline-flex; align-items: center; }
     .illu-credit { font-size: 0.88rem; color: var(--ink-soft); margin: 1.2rem 0 0; }
     .pourquoi-sign { margin: 1.4rem 0 0; }
+
+    .page-content h3 {
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--burgundy);
+      margin: 1.25rem 0 0.5rem;
+    }
+    .page-content ul.chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.5rem;
+      list-style: none;
+      margin: 0.35rem 0 0.9rem;
+      padding: 0;
+    }
+    .page-content ul.chips li {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--burgundy);
+      background: #F7EFF2;
+      border: 1px solid #D4B3BE;
+      border-radius: 999px;
+      padding: 0.28rem 0.8rem;
+      margin: 0;
+    }
+    .piege-box {
+      margin: 0.9rem 0 1.2rem;
+      padding: 0.9rem 1.05rem 1rem;
+      background: #F7EFF2;
+      border: 1px solid #D4B3BE;
+      border-left: 5px solid var(--burgundy);
+    }
+    .piege-box p { margin: 0 0 0.5rem; }
+    .piege-box p:last-child { margin-bottom: 0; }
+    .piege-box strong { color: var(--burgundy); }
+    table.grid {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.95rem;
+      margin: 0.5rem 0 1rem;
+    }
+    table.grid th, table.grid td {
+      border: 1px solid #D4B3BE;
+      padding: 0.45rem 0.6rem;
+      vertical-align: top;
+      text-align: left;
+    }
+    table.grid th {
+      background: #F7EFF2;
+      color: var(--burgundy);
+      font-family: var(--serif);
+      font-weight: 600;
+    }
+    .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .ex-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin: 0.5rem 0 1.2rem;
+      padding: 0;
+      list-style: none;
+    }
+    .ex-card {
+      margin: 0;
+      padding: 0.75rem 0.85rem 0.85rem;
+      background: #fff;
+      border: 1px solid #D4B3BE;
+      border-radius: 10px;
+    }
+    .ex-card .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      background: #F7EFF2;
+      border: 1px solid #D4B3BE;
+      border-radius: 999px;
+      padding: 0.15rem 0.65rem;
+      margin: 0 0 0.5rem;
+    }
+    .ex-card .sujet {
+      font-family: var(--serif);
+      font-style: italic;
+      margin: 0 0 0.5rem;
+    }
+    .ex-card p { margin: 0 0 0.4rem; }
+    .ex-card p:last-child { margin-bottom: 0; }
+    .gorse-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.1rem;
+      align-items: start;
+      margin: 1rem 0 1.2rem;
+    }
+    .gorse-fig {
+      margin: 0;
+      background: #fffdf8;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .gorse-fig img, .gorse-fig svg { width: 100%; height: auto; display: block; }
+    .gorse-fig figcaption {
+      padding: 0.5rem 0.9rem 0.8rem;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+    .gorse-steps { list-style: none; margin: 0; padding: 0; }
+    .gorse-steps li {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 0.6rem;
+      margin: 0;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .gorse-steps li:first-child { border-top: 1px solid var(--rule); }
+    .gorse-steps .n {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+      color: var(--burgundy);
+    }
+    .gorse-steps p { margin: 0; }
+    .gorse-worked { margin: 1.2rem 0 1.5rem; }
+    .gorse-worked .sujet-box {
+      margin: 0 0 0.8rem;
+      padding: 0.75rem 1rem;
+      background: #F7EFF2;
+      border: 1px solid #D4B3BE;
+      border-left: 5px solid var(--burgundy);
+    }
+    .gorse-worked .sujet-box p { margin: 0; }
+    .gorse-worked .gorse-fig { margin: 0 0 0.9rem; }
+    details.ans { margin: 0.55rem 0 0.9rem; }
+    details.ans summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--burgundy);
+      min-height: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    details.ans .a {
+      margin-top: 0.45rem;
+      padding: 0.7rem 0.85rem;
+      background: #F7EFF2;
+      border-radius: 8px;
+    }
+    details.ans .a p { margin: 0 0 0.45rem; }
+    details.ans .a p:last-child { margin-bottom: 0; }
+    .ex-exo { margin: 0 0 0.7rem; padding-left: 1.2rem; }
+    .ex-exo li { margin: 0.45rem 0; }
+    @media (max-width: 40rem) {
+      .ex-grid, .gorse-layout { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body data-section="lycee-general">
@@ -170,11 +330,226 @@
         <li><strong>Déplacer :</strong> découvrir la distinction ou la perspective qui permet d’aller plus loin.</li>
       </ul>
       <p>Pour la voie générale, la dissertation part d’une question littéraire sur une œuvre et son parcours. Pour la voie technologique, la contraction d’un texte d’idées est suivie d’un essai. Les copies modèles sont des exemples pour inspirer, non des textes à apprendre par cœur.</p>
+      <p>Les trois mouvements conviennent lorsqu’il faut discuter une proposition. Tous les sujets ne le demandent pas. On commence donc par lire la question.</p>
+    </section>
+
+    <section id="plan-thematique-ou-dialectique" aria-labelledby="plans-titre">
+      <h2 id="plans-titre">Plan thématique ou plan dialectique&nbsp;: comment le savoir dès la question&nbsp;?</h2>
+      <p>Avant d’écrire, il faut entendre ce que la question demande vraiment. Le plan ne se choisit pas par habitude. Il se lit dans les mots du sujet.</p>
+
+      <h3>Deux familles de sujets</h3>
+      <p>Le plan <strong>dialectique</strong> discute une proposition, en mesure la justesse, puis en déplace les limites. On y retrouve les trois mouvements déjà nommés&nbsp;: ancrer, éprouver, déplacer.</p>
+      <p>Le plan <strong>thématique</strong>, et son proche parent le plan <strong>analytique</strong>, éclairent des aspects, des formes, une construction. Ils n’opposent pas d’abord un oui et un non.</p>
+
+      <h3>Ce que la formulation fait déjà voir</h3>
+      <p>Indices fréquents d’un plan dialectique&nbsp;:</p>
+      <ul class="chips">
+        <li>Question fermée, oui ou non</li>
+        <li>Pensez-vous que</li>
+        <li>Faut-il, peut-on, doit-on</li>
+        <li>Dans quelle mesure, jusqu’où</li>
+        <li>Une citation à discuter</li>
+      </ul>
+      <p>Indices fréquents d’un plan thématique ou analytique&nbsp;:</p>
+      <ul class="chips">
+        <li>Question ouverte</li>
+        <li>Comment</li>
+        <li>Quelles formes, quels enjeux</li>
+        <li>De quelle manière</li>
+        <li>En quoi, souvent</li>
+      </ul>
+
+      <div class="piege-box">
+        <p><strong>Deux pièges fréquents.</strong></p>
+        <p><strong>En quoi</strong> peut cacher une discussion. Si la phrase porte un jugement ou une affirmation à éprouver («&nbsp;En quoi peut-on dire que la servitude est volontaire&nbsp;?&nbsp;»), le sujet n’attend pas un catalogue de thèmes. Il attend que l’on discute la proposition.</p>
+        <p><strong>Dans quelle mesure</strong> n’appelle pas un oui, puis un non. Il invite à nuancer&nbsp;: jusqu’où la proposition est juste, et où elle cesse de l’être.</p>
+      </div>
+
+      <h3>Pour comparer</h3>
+      <div class="scroll">
+        <table class="grid">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Plan dialectique</th>
+              <th>Plan thématique ou analytique</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Ce que la question demande</th>
+              <td>Jusqu’où une proposition est-elle juste&nbsp;?</td>
+              <td>Quelles dimensions, quelles formes, comment un phénomène se construit-il&nbsp;?</td>
+            </tr>
+            <tr>
+              <th>Indices fréquents</th>
+              <td>Oui ou non, «&nbsp;Pensez-vous que&nbsp;», «&nbsp;Dans quelle mesure&nbsp;», une citation à discuter</td>
+              <td>«&nbsp;Comment&nbsp;», «&nbsp;Quelles formes&nbsp;», «&nbsp;Quels enjeux&nbsp;», souvent «&nbsp;En quoi&nbsp;»</td>
+            </tr>
+            <tr>
+              <th>Mouvement du devoir</th>
+              <td>Ancrer, éprouver, déplacer</td>
+              <td>Organiser des aspects complémentaires, ou suivre une construction et ses effets</td>
+            </tr>
+            <tr>
+              <th>Écueil</th>
+              <td>Transformer le devoir en oui puis non, ou conclure trop tôt par un compromis</td>
+              <td>Plaquer un plan dialectique sur une question qui n’en demande pas, ou aligner un catalogue sans enjeu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Plusieurs sujets dialectiques</h3>
+      <p>Œuvres au programme 2026-2027. Ce sont des propositions pédagogiques, non des sujets officiels. Pour chacun&nbsp;: les indices dans la question, puis une esquisse de plan.</p>
+      <ul class="ex-grid">
+        <li class="ex-card">
+          <p class="tag">Dialectique</p>
+          <p class="sujet">«&nbsp;Dans le <em>Cahier de Douai</em>, s’émanciper consiste-t-il à rejeter tout héritage&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> Question fermée («&nbsp;consiste-t-il&nbsp;»). Le mot «&nbsp;tout&nbsp;» radicalise une proposition à éprouver.</p>
+          <p><strong>Esquisse.</strong> I. Ancrer&nbsp;: le recueil multiplie les gestes de rupture. II. Éprouver&nbsp;: Rimbaud hérite pourtant de formes, de figures, d’une langue poétique. III. Déplacer&nbsp;: s’émanciper, ici, c’est transformer ce que l’on reçoit, non tout effacer.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Dialectique</p>
+          <p class="sujet">«&nbsp;Dans quelle mesure le <em>Discours de la servitude volontaire</em> de La Boétie montre-t-il que la liberté se défend d’abord par le refus d’obéir&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;Dans quelle mesure&nbsp;» invite à nuancer, non à trancher par un simple oui.</p>
+          <p><strong>Esquisse.</strong> I. Ancrer&nbsp;: la servitude tient au consentement&nbsp;; le refus d’obéir est déjà un acte de liberté. II. Éprouver&nbsp;: refuser ne suffit pas toujours à «&nbsp;entretenir&nbsp;» la liberté. III. Déplacer&nbsp;: défendre la liberté, c’est aussi en prendre soin, pas seulement s’opposer.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Dialectique</p>
+          <p class="sujet">«&nbsp;Pensez-vous que, dans <em>Le Menteur</em> de Corneille, le mensonge soit seulement un ressort comique&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;Pensez-vous que&nbsp;» demande une prise de position. «&nbsp;Seulement&nbsp;» restreint le jugement et appelle un examen de ses limites.</p>
+          <p><strong>Esquisse.</strong> I. Ancrer&nbsp;: le mensonge fait rire, il nourrit la comédie. II. Éprouver&nbsp;: il met aussi en jeu l’identité, le désir, le crédit de la parole. III. Déplacer&nbsp;: le mensonge est un ressort comique, et un révélateur des relations.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Dialectique</p>
+          <p class="sujet">«&nbsp;Faut-il voir dans les <em>Entretiens sur la pluralité des mondes</em> de Fontenelle une simple leçon de science&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;Faut-il&nbsp;» ouvre un débat. «&nbsp;Simple&nbsp;» porte un jugement à discuter.</p>
+          <p><strong>Esquisse.</strong> I. Ancrer&nbsp;: l’ouvrage transmet des savoirs, avec clarté. II. Éprouver&nbsp;: le dialogue, le badinage, l’adresse à la Marquise déplacent la leçon. III. Déplacer&nbsp;: la science s’y donne comme un goût à partager, non comme un cours seulement.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Dialectique</p>
+          <p class="sujet">«&nbsp;«&nbsp;C’est un extrême malheur d’être sujet à un maître.&nbsp;» Dans quelle mesure cette affirmation de La Boétie éclaire-t-elle le <em>Discours de la servitude volontaire</em>&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> Une citation à discuter, puis «&nbsp;Dans quelle mesure&nbsp;».</p>
+          <p><strong>Esquisse.</strong> I. Ancrer&nbsp;: un maître suffit déjà à faire le malheur, même avant la tyrannie. II. Éprouver&nbsp;: le texte insiste moins sur le maître seul que sur le consentement de beaucoup. III. Déplacer&nbsp;: le malheur vient aussi de la servitude que l’on entretient.</p>
+        </li>
+      </ul>
+
+      <h3>Plusieurs sujets thématiques ou analytiques</h3>
+      <ul class="ex-grid">
+        <li class="ex-card">
+          <p class="tag">Thématique</p>
+          <p class="sujet">«&nbsp;Quelles formes prend l’émancipation dans le <em>Cahier de Douai</em>&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;Quelles formes&nbsp;» ouvre une enquête. Pas de oui ou de non préalable.</p>
+          <p><strong>Esquisse.</strong> I. L’émancipation du voyage et du dénuement. II. L’émancipation des formes poétiques. III. L’émancipation du regard, de la sensation, de l’image de soi.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Analytique</p>
+          <p class="sujet">«&nbsp;Comment le voyage devient-il une expérience de création dans le <em>Cahier de Douai</em>&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;Comment&nbsp;» demande de suivre une construction et ses effets.</p>
+          <p><strong>Esquisse.</strong> I. Le départ et la route comme rupture. II. Les sensations du chemin qui deviennent matière poétique. III. Une voix qui se crée en marchant.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Thématique</p>
+          <p class="sujet">«&nbsp;De quelle manière <em>On ne badine pas avec l’amour</em> de Musset fait-il jouer le cœur et la parole&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;De quelle manière&nbsp;» interroge des procédés, non une thèse à défendre ou à recuser.</p>
+          <p><strong>Esquisse.</strong> I. Les jeux de la parole&nbsp;: badinage, défi, quiproquo. II. Les mouvements du cœur qu’ils révèlent ou déguisent. III. Le moment où le jeu cesse d’être un jeu.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Thématique</p>
+          <p class="sujet">«&nbsp;Quels enjeux la parole de Zilia, dans les <em>Lettres d’une Péruvienne</em> de Graffigny, donne-t-elle à la découverte d’un nouvel univers&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;Quels enjeux&nbsp;» demande des dimensions complémentaires.</p>
+          <p><strong>Esquisse.</strong> I. Découvrir un monde, c’est aussi en éprouver la violence. II. La lettre construit une voix et un regard. III. Un nouvel univers devient un lieu d’où juger le nôtre.</p>
+        </li>
+        <li class="ex-card">
+          <p class="tag">Thématique</p>
+          <p class="sujet">«&nbsp;En quoi <em>Pluie et vent sur Télumée Miracle</em> de Simone Schwarz-Bart tisse-t-il les mémoires pour habiter le monde&nbsp;?&nbsp;»</p>
+          <p><strong>Indices.</strong> «&nbsp;En quoi&nbsp;» oriente vers des aspects. Le parcours donne l’enjeu. Il faudra veiller à ne pas en faire un simple catalogue.</p>
+          <p><strong>Esquisse.</strong> I. Tisser les voix et les mémoires d’une lignée. II. Habiter une terre, une langue, une épreuve. III. Faire de la mémoire une manière d’être au monde.</p>
+        </li>
+      </ul>
+
+      <div class="piege-box">
+        <p><strong>Un «&nbsp;en quoi&nbsp;» qui n’est pas thématique.</strong> «&nbsp;En quoi peut-on dire, à propos du <em>Discours de la servitude volontaire</em>, que le peuple est l’auteur de sa propre servitude&nbsp;?&nbsp;» L’ouverture «&nbsp;en quoi&nbsp;» semble thématique, mais «&nbsp;peut-on dire que&nbsp;» porte un jugement. Le plan est dialectique&nbsp;: ancrer le consentement qui fait la servitude, éprouver ce que cette formule a de trop absolu, déplacer vers une liberté qu’il faut aussi entretenir.</p>
+      </div>
+
+      <h3>Lire le sujet avec la spirale de Gorse</h3>
+      <p>Méthode conçue par Madame Carole Paoli Pompougnac. On part toujours de ce qui saute aux yeux, puis chaque tour s’enfonce vers ce qui est moins visible, jusqu’à «&nbsp;Je trouve le sens&nbsp;».</p>
+      <div class="gorse-layout">
+        <figure class="gorse-fig">
+          <img src="../tomber-amoureux-de-letude/img/spirale-gorse-modele.svg" width="920" height="700" alt="Spirale lisse en quatre tours, large au départ, qui se resserre jusqu’à « Je trouve le sens » : je remarque, ce qui saute aux yeux ; je repère ; je comprends ; j’anticipe. L’idée s’écrit du côté extérieur, les appuis du côté intérieur." />
+          <figcaption>Quatre tours, puis «&nbsp;Je trouve le sens&nbsp;». On part de ce qui saute aux yeux. Côté extérieur&nbsp;: l’idée. Côté intérieur&nbsp;: les appuis.</figcaption>
+        </figure>
+        <ol class="gorse-steps">
+          <li><span class="n">1</span><p><strong>Je remarque.</strong> Ce qui saute aux yeux dans le sujet&nbsp;: un mot fort, une tournure, une citation.</p></li>
+          <li><span class="n">2</span><p><strong>Je repère.</strong> Les termes clés, et le type de question&nbsp;: fermée ou ouverte, jugement ou enquête.</p></li>
+          <li><span class="n">3</span><p><strong>Je comprends.</strong> Ce que la question demande vraiment, au-delà de la première impression.</p></li>
+          <li><span class="n">4</span><p><strong>J’anticipe.</strong> Le type de plan&nbsp;: thématique, analytique, ou dialectique.</p></li>
+          <li><span class="n">5</span><p><strong>Je trouve le sens.</strong> La problématique, et l’esquisse du plan. C’est la pointe.</p></li>
+        </ol>
+      </div>
+      <p>À chaque tour, l’idée s’écrit à l’extérieur, et à l’intérieur ce qui la soutient. Si un mot du sujet résiste à votre idée, revenez en arrière et reformulez.</p>
+
+      <h3>Un sujet dialectique, lu pas à pas</h3>
+      <div class="gorse-worked">
+        <div class="sujet-box">
+          <p><strong>Sujet.</strong> «&nbsp;Dans le <em>Cahier de Douai</em>, s’émanciper consiste-t-il à rejeter tout héritage&nbsp;?&nbsp;»</p>
+        </div>
+        <figure class="gorse-fig">
+          <img src="img/spirale-gorse-sujet-dia.svg" width="1980" height="1520" alt="Spirale remplie des cinq étapes pour lire le sujet dialectique sur le Cahier de Douai. Je remarque une question fermée et le mot tout. Je repère les termes clés et un oui ou un non. Je comprends qu’il s’agit d’éprouver une proposition. J’anticipe un plan dialectique. Je trouve le sens : s’émanciper, est-ce tout rejeter, ou transformer ?" />
+          <figcaption>Spirale remplie. Côté extérieur&nbsp;: l’idée. Côté intérieur&nbsp;: les appuis. Pointe&nbsp;: la problématique et le plan.</figcaption>
+        </figure>
+        <ol class="gorse-steps">
+          <li><span class="n">1</span><p><strong>Je remarque.</strong> Une question fermée, et le mot «&nbsp;tout&nbsp;», qui saute aux yeux.</p></li>
+          <li><span class="n">2</span><p><strong>Je repère.</strong> Les termes «&nbsp;s’émanciper&nbsp;», «&nbsp;rejeter&nbsp;», «&nbsp;héritage&nbsp;». On pourrait d’abord répondre par oui ou par non.</p></li>
+          <li><span class="n">3</span><p><strong>Je comprends.</strong> Le sujet demande si l’émancipation exige de n’en rien garder, pas seulement si l’on peut rompre.</p></li>
+          <li><span class="n">4</span><p><strong>J’anticipe.</strong> Un plan dialectique&nbsp;: ancrer, éprouver, déplacer.</p></li>
+          <li><span class="n">5</span><p><strong>Je trouve le sens.</strong> Problématique&nbsp;: s’émanciper, est-ce tout rejeter, ou transformer&nbsp;? Plan&nbsp;: I. la rupture est réelle dans le recueil&nbsp;; II. l’héritage poétique demeure&nbsp;; III. l’émancipation se joue dans une transformation, non dans un effacement total.</p></li>
+        </ol>
+      </div>
+
+      <h3>Un sujet thématique, lu pas à pas</h3>
+      <div class="gorse-worked">
+        <div class="sujet-box">
+          <p><strong>Sujet.</strong> «&nbsp;Quelles formes prend l’émancipation dans le <em>Cahier de Douai</em>&nbsp;?&nbsp;»</p>
+        </div>
+        <figure class="gorse-fig">
+          <img src="img/spirale-gorse-sujet-the.svg" width="1980" height="1520" alt="Spirale remplie des cinq étapes pour lire le sujet thématique sur le Cahier de Douai. Je remarque l’ouverture Quelles formes. Je repère les termes formes et émancipation. Je comprends que l’on demande des aspects, pas un verdict. J’anticipe un plan thématique. Je trouve le sens : sous quelles figures l’émancipation apparaît-elle ?" />
+          <figcaption>Spirale remplie. Même méthode, autre type de plan&nbsp;: des formes complémentaires, sans oui puis non.</figcaption>
+        </figure>
+        <ol class="gorse-steps">
+          <li><span class="n">1</span><p><strong>Je remarque.</strong> «&nbsp;Quelles formes&nbsp;» ouvre la question. Rien n’y demande un verdict.</p></li>
+          <li><span class="n">2</span><p><strong>Je repère.</strong> Les termes «&nbsp;formes&nbsp;» et «&nbsp;émancipation&nbsp;». La question est ouverte.</p></li>
+          <li><span class="n">3</span><p><strong>Je comprends.</strong> On demande des dimensions, des figures de l’émancipation, pas de décider si Rimbaud est libre ou non.</p></li>
+          <li><span class="n">4</span><p><strong>J’anticipe.</strong> Un plan thématique, par aspects complémentaires.</p></li>
+          <li><span class="n">5</span><p><strong>Je trouve le sens.</strong> Problématique&nbsp;: sous quelles figures l’émancipation apparaît-elle dans le recueil&nbsp;? Plan&nbsp;: I. le voyage et le dénuement&nbsp;; II. les formes poétiques&nbsp;; III. le regard et l’image de soi. Sans forcer un oui, puis un non.</p></li>
+        </ol>
+      </div>
+
+      <h3>Un exercice</h3>
+      <p>Pour chacun de ces sujets, dites le type de plan, relevez l’indice qui vous guide, et proposez une esquisse en trois parties. Ce sont encore des propositions pédagogiques, sur des œuvres au programme 2026-2027.</p>
+      <ol class="ex-exo">
+        <li>«&nbsp;Comment, dans <em>La rage de l’expression</em> de Ponge, le poème se cherche-t-il dans l’atelier de l’écriture&nbsp;?&nbsp;»</li>
+        <li>«&nbsp;Pensez-vous que le chevalier, dans <em>Le Chevalier de la charrette</em> de Chrétien de Troyes, n’agisse que par amour&nbsp;?&nbsp;»</li>
+        <li>«&nbsp;Quelles voies <em>Mes forêts</em> d’Hélène Dorion ouvre-t-elle entre la nature et l’intime&nbsp;?&nbsp;»</li>
+        <li>«&nbsp;En quoi peut-on affirmer que, dans <em>Pour un oui ou pour un non</em> de Sarraute, la dispute naît de presque rien&nbsp;?&nbsp;»</li>
+      </ol>
+      <details class="ans">
+        <summary>Voir le corrigé</summary>
+        <div class="a">
+          <p><strong>1. Analytique.</strong> «&nbsp;Comment&nbsp;» demande de suivre une construction et ses effets. Esquisse&nbsp;: I. l’atelier comme lieu d’un travail visible&nbsp;; II. les reprises, ratures et tentatives qui font le poème&nbsp;; III. le poème aboutit en montrant sa propre recherche.</p>
+          <p><strong>2. Dialectique.</strong> «&nbsp;Pensez-vous que&nbsp;» et «&nbsp;n’agisse que&nbsp;» portent un jugement à éprouver. Esquisse&nbsp;: I. ancrer l’amour comme moteur de la quête&nbsp;; II. éprouver ce que cette seule explication laisse de côté (honneur, prouesse, parole donnée)&nbsp;; III. déplacer&nbsp;: l’amour invente aussi une conduite, il ne l’épuise pas à lui seul.</p>
+          <p><strong>3. Thématique.</strong> «&nbsp;Quelles voies&nbsp;» ouvre une enquête sur des dimensions, sans oui ou non. Esquisse&nbsp;: I. la forêt comme paysage&nbsp;; II. la forêt comme mémoire et langage&nbsp;; III. la forêt comme espace de l’intime.</p>
+          <p><strong>4. Dialectique, c’est un piège.</strong> «&nbsp;En quoi&nbsp;» semble thématique, mais «&nbsp;peut-on affirmer que&nbsp;» et «&nbsp;presque rien&nbsp;» portent un jugement. Esquisse&nbsp;: I. ancrer l’apparence d’un rien (un mot, un ton)&nbsp;; II. éprouver la gravité réelle du conflit&nbsp;; III. déplacer&nbsp;: la dispute naît de presque rien, et ce presque rien dit tout de la relation.</p>
+        </div>
+      </details>
+
+      <p>La même lecture du sujet vaut pour l’essai de la voie technologique, après la contraction, et, pour une large part, pour un essai en HLP ou en bac professionnel&nbsp;: on interroge d’abord les mots de la question, avant de choisir un plan.</p>
     </section>
 
     <section aria-labelledby="spirale">
       <h2 id="spirale">La spirale de Gorse</h2>
-      <p>La spirale de Gorse conduit du vaste au décisif. Les premières boucles sont larges. À chaque tour, le tracé se resserre. Il s’achève par une pointe, non par un centre. Huit questions mènent ainsi à un problème que l’on peut enfin traiter.</p>
+      <p>Dans cette séquence, la spirale de Gorse oriente aussi le parcours des huit séances. Les premières boucles sont larges. À chaque tour, le tracé se resserre. Il s’achève par une pointe, non par un centre. Huit questions mènent ainsi à un problème que l’on peut enfin traiter. Pour lire un sujet dès la question, on revient aux cinq étapes ci-dessus.</p>
       <figure class="spirale-fig">
         <picture>
           <source type="image/webp" srcset="img/spirale-dissertation.webp" />
@@ -190,7 +565,7 @@
       <p>Quatre documents, chacun en PDF, Word et LibreOffice. Vous pouvez utiliser et adapter ces documents en citant leur autrice, sans usage commercial, et en partageant vos versions dans les mêmes conditions. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a>.</p>
       <ul class="downloads">
         <li>
-          <p class="doc-title">Séquence (31 pages)</p>
+          <p class="doc-title">Séquence (35 pages)</p>
           <span class="doc-links">
             <a href="Sequence-Dissertation-et-essai.pdf">PDF</a>
             <a href="Sequence-Dissertation-et-essai.docx">Word (.docx)</a>
@@ -206,7 +581,7 @@
           </span>
         </li>
         <li>
-          <p class="doc-title">Fiche de correction (9 pages)</p>
+          <p class="doc-title">Fiche de correction (10 pages)</p>
           <span class="doc-links">
             <a href="Fiche-correction-Dissertation-et-essai.pdf">PDF</a>
             <a href="Fiche-correction-Dissertation-et-essai.docx">Word (.docx)</a>
@@ -214,7 +589,7 @@
           </span>
         </li>
         <li>
-          <p class="doc-title">Version dys (7 pages)</p>
+          <p class="doc-title">Version dys (8 pages)</p>
           <span class="doc-links">
             <a href="Version-dys-Dissertation-et-essai.pdf">PDF</a>
             <a href="Version-dys-Dissertation-et-essai.docx">Word (.docx)</a>

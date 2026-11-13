@@ -160,6 +160,26 @@
   ],
   "resources": [
     {
+      "id": "lp-anglais-s-exprimer-sur-le-lieu-de-travail",
+      "title": "Anglais · CAP et bac pro · S'exprimer sur le lieu de travail",
+      "summary": "Huit leçons d'anglais pour le CAP (A2) et le baccalauréat professionnel (B1), toutes filières : s'exprimer dans l'atelier, auprès du tuteur de PFMP et auprès d'un visiteur. Tâche finale Welcome to the workshop, grille CCF sur 20. Fil visuel : une œuvre de Laurent Proux. BO spécial n° 5 du 11 avril 2019.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "CAP et bac pro · toutes filières · A2-B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral",
+        "ecrit",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/s-exprimer-sur-le-lieu-de-travail/",
+      "date": "2026-11-13",
+      "image": "s-exprimer-sur-le-lieu-de-travail.jpg",
+      "credit": "Tableau : Laurent Proux"
+    },
+    {
       "id": "lp-anglais-dolly-parton-american-legacy",
       "title": "Anglais · Première bac pro · Dolly Parton: An American Legacy",
       "summary": "Nine lessons in English, Première bac pro, level B1, on Dolly Parton's life, work, generosity and the rumours that followed her death. BO spécial n° 5 du 11 avril 2019. One progression, with Help boxes and Going further boxes inside each lesson.",

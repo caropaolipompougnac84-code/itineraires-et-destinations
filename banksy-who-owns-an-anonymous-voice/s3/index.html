@@ -241,8 +241,28 @@
     }
     .track h4 { margin-top: 0; }
     .track p:last-child, .track ul:last-child, .track ol:last-child { margin-bottom: 0; }
-    figure.artwork { margin: 1rem 0 1.3rem; }
-    figure.artwork img { width: 100%; max-width: 40rem; height: auto; display: block; }
+    figure.artwork { margin: 1.2rem 0 1.6rem; }
+    figure.artwork img { width: 100%; max-width: 50rem; height: auto; display: block; }
+    .bo-box, .slogan-box {
+      border: 1px solid #1A3658;
+      padding: 0.85rem 1rem;
+      margin: 1.1rem 0 1.3rem;
+      background: #F4F7FB;
+    }
+    .bo-box { border-left: 5px solid #1A3658; }
+    .slogan-box { border-left: 5px solid #2B6CB0; background: #F7FAFC; }
+    .bo-box .box-label, .slogan-box .box-label {
+      font-weight: 700; color: #1A3658; letter-spacing: 0.02em;
+      text-transform: uppercase; font-size: 0.78rem; margin: 0 0 0.4rem;
+    }
+    .bo-box ul, .slogan-box ul { margin: 0.3rem 0 0.5rem; padding-left: 1.15rem; }
+    .bo-box li, .slogan-box li { margin: 0.25rem 0; }
+    .bo-box .tracks { margin-top: 0.6rem; }
+    .bo-box table { margin: 0.4rem 0 0.6rem; }
+    figure.pair-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1.2rem 0;
+    }
+    @media (max-width: 700px) { figure.pair-grid { grid-template-columns: 1fr; } }
     .cover-art img { width: min(100%, 28rem); height: auto; display: block; margin: 0 auto; }
     .src-note { font-size: 0.9rem; color: #444; }
     .credit-line { font-size: 0.92rem; color: #333; }
@@ -307,9 +327,10 @@
 
     <p class="kicker">Anglais · Seconde bac pro · A2 and B1 · Lesson 3 of 6</p>
     <h1>Lesson 3. If you own the wall, do you own the art?</h1>
-    <p>Question of the day: <strong>Can someone own the object without owning every right connected to it?</strong></p>
+    <p>Question of the day: <strong>Can someone own the object without owning every right connected to that public voice?</strong></p>
+    <aside class="bo-box" aria-label="Activités langagières and CECRL descriptors"><p class="box-label">Activités langagières · BO spécial n° 5 du 11 avril 2019</p><ul><li><strong>Réception écrite.</strong> An educational paraphrase of a High Court case, and captions of murals read as visual slogans</li><li><strong>Réception orale.</strong> A short teacher-read text about Pest Control, with a compte rendu, training for compréhension de l'oral</li><li><strong>Production orale en continu and interaction orale.</strong> Mid-point oral assessment: continuous speech then a partner's objection, Situation B practice, not the CCF itself</li><li><strong>Production écrite.</strong> A short professional note to a café owner, training for expression écrite</li></ul><p><strong>Descripteurs CECRL visés dans cette lesson.</strong></p><div class="tracks"><div class="track"><h4>A2</h4><p>Can explain, in simple terms, the difference between a wall, an image and public access, and give a short recommendation with <em>should</em>.</p></div><div class="track"><h4>B1</h4><p>Can apply a documented case without inventing a universal rule, give reasons, and respond to a partner's objection.</p></div></div></aside>
 
-    <details class="teacher"><summary>For the teacher: timing (52 minutes)</summary><table><thead><tr><th>Time</th><th>Activity</th></tr></thead><tbody><tr><td>00 to 05</td><td>Retrieval: author, source, confirmation</td></tr><tr><td>05 to 12</td><td>Read the Art Buff case and sequence the events</td></tr><tr><td>12 to 20</td><td>Three kinds of rights, with No Ball Games and Season's Greetings</td></tr><tr><td>20 to 28</td><td>Passive-form workshop and Pest Control</td></tr><tr><td>28 to 38</td><td>Mid-point paired oral assessment</td></tr><tr><td>38 to 44</td><td>Teacher feedback and student self-correction</td></tr><tr><td>44 to 49</td><td>Written record and flashcards</td></tr><tr><td>49 to 52</td><td>Exit recommendation and homework</td></tr></tbody></table><p><strong>Checkpoint at minute 44.</strong> Every student distinguishes the physical wall from rights in the image, and from public access.</p><p><strong>Eight-minute essential closing route</strong> (replaces the last eight minutes if the class needs more time; it does not add time): 44 to 46: complete the three-rights chart. 46 to 49: each student gives one recommendation. 49 to 51: copy the legal distinction. 51 to 52: note homework.</p></details>
+    <details class="teacher"><summary>For the teacher: timing (52 minutes)</summary><table><thead><tr><th>Time</th><th>Activity</th></tr></thead><tbody><tr><td>00 to 05</td><td>Retrieval: author, source, confirmation</td></tr><tr><td>05 to 12</td><td>Read the Art Buff case and sequence the events</td></tr><tr><td>12 to 20</td><td>Three kinds of rights, with No Ball Games and Season's Greetings</td></tr><tr><td>20 to 28</td><td>Passive-form workshop and Pest Control</td></tr><tr><td>28 to 38</td><td>Mid-point paired oral assessment (Situation B practice: continuous speaking, then interaction)</td></tr><tr><td>38 to 44</td><td>Teacher feedback and student self-correction</td></tr><tr><td>44 to 49</td><td>Written record and flashcards</td></tr><tr><td>49 to 52</td><td>Exit recommendation and homework</td></tr></tbody></table><p><strong>Checkpoint at minute 44.</strong> Every student distinguishes the physical wall from rights in the image, and from public access.</p><p><strong>Eight-minute essential closing route</strong> (replaces the last eight minutes if the class needs more time; it does not add time): 44 to 46: complete the three-rights chart. 46 to 49: each student gives one recommendation. 49 to 51: copy the legal distinction. 51 to 52: note homework.</p></details>
 
     <div class="tracks">
       <div class="track"><h4>A2 outcome</h4><p>Explain, in simple terms, the difference between a wall, an image and public access.</p></div>
@@ -354,6 +375,9 @@
     <p>Look at two photographs that show these questions in a different way. The first shows <cite>No Ball Games</cite> on a wall in Tottenham, in 2009. The mural was later removed and sold in sections. The second shows <cite>Season's Greetings</cite>, first painted on a garage in Port Talbot in 2018, and later displayed behind glass, away from its original wall.</p>
     <figure class="artwork"><img src="../img/no-ball-games.jpg" width="1800" height="1350" alt="Two stencilled children on a yellow wall throw a red rectangular sign that says No Ball Games, as if it were a ball, above a yellow kerb." /><figcaption>A mural attributed to Banksy, <cite>No Ball Games</cite>, Tottenham, London, 2009. Two children throw a red sign that reads No Ball Games, instead of a ball. Photograph by GualdimG, <a href="https://commons.wikimedia.org/wiki/File:Proibido_Jogos_de_Bola_2009_Banksy_Tottenham_01.jpg">Wikimedia Commons</a>, CC BY-SA 4.0. The photograph is shared under that licence. The artwork itself remains protected. The mural was later removed from its wall and sold in sections.</figcaption></figure>
     <figure class="artwork"><img src="../img/seasons-greetings-port-talbot.jpg" width="900" height="675" alt="A shop-front display with a large window: behind the glass, a mural of a child with a sledge, seen as if in falling snow, installed away from its original garage wall." /><figcaption>A mural attributed to Banksy, <cite>Season's Greetings</cite>, first painted on a garage in Port Talbot, Wales, in 2018. This photograph shows the work on display behind glass, no longer on its original wall. Photograph by Sionk, <a href="https://commons.wikimedia.org/wiki/File:Banksy_on_display,_Port_Talbot.jpg">Wikimedia Commons</a>, CC BY-SA 4.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
+    <aside class="slogan-box"><p class="box-label">A visual slogan: four questions</p><p>Every work in this sequence is read as a speech act, a slogan in the form of a picture. For each image, answer:</p><ol><li><strong>What does it say?</strong> Write one sentence, as if it were a slogan.</li><li><strong>To whom?</strong> Who is the image speaking to?</li><li><strong>In what tone?</strong> Ironic, angry, playful, bitter, hopeful, warning, mocking, or another tone you can justify.</li><li><strong>How does it speak?</strong> Name the visual devices: stencil, written words, official look, placement, contrast, a real object next to the painting, a contradiction between the words and the place.</li></ol></aside>
+    <p><strong>Read them as visual slogans.</strong> <cite>No Ball Games</cite> turns an official prohibition into a scene of play: children use a "no ball games" sign as part of the game. <cite>Season's Greetings</cite> looks like a Christmas picture; the place, a steel town, may change the tone. For each image, write the slogan sentence, the audience, the tone, and one visual device.</p>
+    <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete, for each mural: <em>The image says... It is speaking to... The tone is... because...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Write a short paragraph for each work. How does the official look, or the place, help the picture speak? What happens to that sentence if the mural is removed and sold, or placed behind glass?</p></div></div>
 
     <p>A third photograph shows what "removing a mural" can look like. In May 2023, the section of wall that carried the Irpin gymnast was cut out. The figure left the building. The mural was later moved to another site on the same street. Protection and loss can be close to each other.</p>
     <figure class="artwork"><img src="../img/gymnast-dismantled.jpg" width="1800" height="1268" alt="A section of a damaged grey wall, now empty, standing in a metal frame after a mural has been cut out and taken away." /><figcaption>The Irpin mural of the gymnast with a ribbon after the section of wall was cut out, 14 May 2023. The figure has left the building. Photograph by Rasal Hague, <a href="https://commons.wikimedia.org/wiki/File:%D0%94%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9_%D0%91%D0%B5%D0%BD%D0%BA%D1%81%D1%96_20230514.jpg">Wikimedia Commons</a>, CC BY-SA 4.0. The photograph is shared under that licence. The artwork itself remains protected. The mural was later moved to another site on the same street.</figcaption></figure>
@@ -402,8 +426,8 @@
       <tbody>
         <tr><td>Task: positions and a recommendation</td><td>The task is incomplete</td><td>Positions are stated, with a simple recommendation</td><td>Clear positions, a recommendation and a reason</td></tr>
         <tr><td>Ownership distinction</td><td>Wall, image and access are mixed</td><td>At least two of the three questions are kept apart</td><td>The three questions are used simply and correctly</td></tr>
-        <tr><td>Language: vocabulary and syntax</td><td>Little language from the sequence</td><td><em>should</em>, <em>because</em>, some passive attempts</td><td>Vocabulary reused; <em>was painted / was removed</em> used intelligibly</td></tr>
-        <tr><td>Interaction</td><td>Little response to the partner</td><td>A question or a short reaction</td><td>A real exchange, with a joint or reasoned conclusion</td></tr>
+        <tr><td>Correction and lexical range</td><td>Little language from the sequence</td><td><em>should</em>, <em>because</em>, some passive attempts</td><td>Vocabulary reused; <em>was painted / was removed</em> used intelligibly</td></tr>
+        <tr><td>Interaction (comprendre, réagir, maintenir l'échange)</td><td>Little response to the partner</td><td>A question or a short reaction</td><td>A real exchange, with a joint or reasoned conclusion</td></tr>
       </tbody>
     </table>
 
@@ -411,13 +435,18 @@
     <table>
       <thead><tr><th>Criterion</th><th>0 to 2</th><th>3 to 4</th><th>5</th></tr></thead>
       <tbody>
-        <tr><td>Task and argument</td><td>The task is incomplete</td><td>A position is defended, with one limitation</td><td>A clear recommendation, an opposing view, a reasoned conclusion</td></tr>
+        <tr><td>Réalisation de la tâche (task and argument)</td><td>The task is incomplete</td><td>A position is defended, with one limitation</td><td>A clear recommendation, an opposing view, a reasoned conclusion</td></tr>
         <tr><td>Use of the case and of Pest Control</td><td>No source, or a universal rule invented</td><td>The case or Pest Control is mentioned, with some accuracy</td><td>The case is used as a particular example, not as a general law</td></tr>
-        <tr><td>Language: vocabulary and syntax</td><td>Limited control</td><td>Passive forms and <em>however</em> attempted</td><td>Accurate attribution, passive forms, <em>however</em>, sequence vocabulary</td></tr>
-        <tr><td>Interaction</td><td>Little response</td><td>A relevant reaction</td><td>The partner's objection is taken up and answered</td></tr>
+        <tr><td>Correction and lexical range</td><td>Limited control</td><td>Passive forms and <em>however</em> attempted</td><td>Accurate attribution, passive forms, <em>however</em>, sequence vocabulary</td></tr>
+        <tr><td>Interaction (comprendre, réagir, maintenir l'échange)</td><td>Little response</td><td>A relevant reaction</td><td>The partner's objection is taken up and answered</td></tr>
       </tbody>
     </table>
     <p>Self-correction: look at the criterion you missed, write what went wrong, and write a better version of one sentence. The improved sentence is part of the work.</p>
+
+    <h2>Step 5b. When a public slogan is covered, or cut from its wall</h2>
+    <p>Look again at the photograph of the Irpin gymnast after the wall was cut, above. Then look at this photograph: a work attributed to Banksy, hidden behind metal sheets at the Royal Courts of Justice. If a slogan speaks in public, who may cover it, and what remains when the wall leaves the street?</p>
+    <figure class="artwork"><img src="../img/guards-rcj.jpg" width="1800" height="1350" alt="Two security officers standing in front of grey metal sheets that hide the lower corner of a stone building, beside a black iron gate." /><figcaption>Security staff and metal sheets hiding a work attributed to Banksy at the Royal Courts of Justice, London. Photograph by Matt Brown, 8 September 2025, <a href="https://commons.wikimedia.org/wiki/File:Security_guard_at_the_Royal_Courts_of_Justice_hiding_Banksy_artwork_2025-09-08.jpg">Wikimedia Commons</a>, CC BY 4.0. The photograph is shared under that licence. The artwork itself remains protected. The image shows who may decide whether a public slogan stays visible.</figcaption></figure>
+    <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete: <em>The work is hidden by... The gymnast was... I think the public should / should not still see the slogan, because...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Write six to eight sentences. Compare a slogan that is hidden with a slogan that is cut from its wall. Use the three-rights distinction (the object, the image, public access) and <em>however</em>. Do not invent a legal rule for every city.</p></div></div>
 
     <h2>Step 6. Written record and homework</h2>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete: <em>The wall was... The image is not the same as... The public should / should not... because...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Write a short professional note (90 to 110 words) to the café owner, explaining the three questions and giving a recommendation. Do not invent a legal rule that the Art Buff case did not decide.</p></div></div>

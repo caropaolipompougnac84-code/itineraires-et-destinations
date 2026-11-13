@@ -241,8 +241,28 @@
     }
     .track h4 { margin-top: 0; }
     .track p:last-child, .track ul:last-child, .track ol:last-child { margin-bottom: 0; }
-    figure.artwork { margin: 1rem 0 1.3rem; }
-    figure.artwork img { width: 100%; max-width: 40rem; height: auto; display: block; }
+    figure.artwork { margin: 1.2rem 0 1.6rem; }
+    figure.artwork img { width: 100%; max-width: 50rem; height: auto; display: block; }
+    .bo-box, .slogan-box {
+      border: 1px solid #1A3658;
+      padding: 0.85rem 1rem;
+      margin: 1.1rem 0 1.3rem;
+      background: #F4F7FB;
+    }
+    .bo-box { border-left: 5px solid #1A3658; }
+    .slogan-box { border-left: 5px solid #2B6CB0; background: #F7FAFC; }
+    .bo-box .box-label, .slogan-box .box-label {
+      font-weight: 700; color: #1A3658; letter-spacing: 0.02em;
+      text-transform: uppercase; font-size: 0.78rem; margin: 0 0 0.4rem;
+    }
+    .bo-box ul, .slogan-box ul { margin: 0.3rem 0 0.5rem; padding-left: 1.15rem; }
+    .bo-box li, .slogan-box li { margin: 0.25rem 0; }
+    .bo-box .tracks { margin-top: 0.6rem; }
+    .bo-box table { margin: 0.4rem 0 0.6rem; }
+    figure.pair-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1.2rem 0;
+    }
+    @media (max-width: 700px) { figure.pair-grid { grid-template-columns: 1fr; } }
     .cover-art img { width: min(100%, 28rem); height: auto; display: block; margin: 0 auto; }
     .src-note { font-size: 0.9rem; color: #444; }
     .credit-line { font-size: 0.92rem; color: #333; }
@@ -308,6 +328,7 @@
     <p class="kicker">Anglais · Seconde bac pro · A2 and B1 · Lesson 2 of 6</p>
     <h1>Lesson 2. Should the public know who Banksy is?</h1>
     <p>Question of the day: <strong>When does reporting an identity serve the public, and when does it intrude on a private life?</strong></p>
+    <aside class="bo-box" aria-label="Activités langagières and CECRL descriptors"><p class="box-label">Activités langagières · BO spécial n° 5 du 11 avril 2019</p><ul><li><strong>Réception écrite.</strong> Source cards: a Reuters investigation, an earlier press claim, a fact-check, and a caution from NPR</li><li><strong>Médiation.</strong> Paraphrasing a press claim so that it stays a claim: students convey the information without adding a confirmation the source does not give</li><li><strong>Production écrite.</strong> Corrected headlines and a short news brief, training for expression écrite</li><li><strong>Interaction orale.</strong> A newsroom role-play: reporter and editor, or reporter, editor and lawyer</li><li><strong>Production orale en continu.</strong> A short oral verdict on the ethics of publication</li></ul><p><strong>Descripteurs CECRL visés dans cette lesson.</strong></p><div class="tracks"><div class="track"><h4>A2</h4><p>Can identify the source of a short written text, and convey its main point in simple language, with <em>according to</em>.</p></div><div class="track"><h4>B1</h4><p>Can understand a short report, paraphrase it accurately, evaluate how strong a claim is, and defend a position on publication, with reasons.</p></div></div></aside>
 
     <details class="teacher"><summary>For the teacher: timing (52 minutes)</summary><table><thead><tr><th>Time</th><th>Activity</th></tr></thead><tbody><tr><td>00 to 05</td><td>Flashcard retrieval from Lesson 1</td></tr><tr><td>05 to 12</td><td>Read the source cards, silently and then in pairs</td></tr><tr><td>12 to 20</td><td>Fact, claim, rumour and interpretation: sorting</td></tr><tr><td>20 to 28</td><td>Attribution grammar and exercises</td></tr><tr><td>28 to 37</td><td>Newsroom ethics role-play, A2 and B1 pathways</td></tr><tr><td>37 to 42</td><td>Paired oral verdict</td></tr><tr><td>42 to 44</td><td>Two new flashcards</td></tr><tr><td>44 to 49</td><td>Written record: a corrected headline</td></tr><tr><td>49 to 52</td><td>Exit question and homework</td></tr></tbody></table><p><strong>Checkpoint at minute 44.</strong> Every student can say who made the identity claim, and can avoid presenting it as Banksy's own confirmation.</p><p><strong>Eight-minute essential closing route</strong> (replaces the last eight minutes if the class needs more time; it does not add time): 44 to 46: correct an overconfident headline. 46 to 49: each student gives a 20-second ethical judgement. 49 to 51: copy the accurate reporting sentence. 51 to 52: note homework.</p></details>
 
@@ -317,7 +338,19 @@
     </div>
 
     <h2>Step 1. Retrieval</h2>
-    <p>In pairs, use yesterday's cards. One student says a word or a structure; the other gives the example sentence. Then swap.</p>
+    <p>In pairs, use yesterday's cards. One student says a word or a structure; the other gives the example sentence. Then swap. Recycle one slogan sentence from Lesson 1: what did one mural "say", to whom, and in what tone?</p>
+
+    <h2>Step 1b. The public name, without a civil face</h2>
+    <p>Before we read the press cards, look at how the public already meets the name Banksy. In these photographs, the artist is not present as a private person. The public follows a word on the ground, gathers in front of a wall, or reads a sentence about artists who "steal". The public name is itself a kind of slogan. It is not a confirmed civil identity.</p>
+    <figure class="artwork"><img src="../img/dismaland-stencil.jpg" width="1331" height="1800" alt="White paint on a tarmac path: an arrow and the word BANKSY, with visitors standing on a lawn behind barriers." /><figcaption>A painted arrow and the name BANKSY on a path leading visitors towards Dismaland, Weston-super-Mare, in 2015. The public name itself becomes a sign: people follow the word, not a face. Photograph by Neil Owen, Geograph, <a href="https://commons.wikimedia.org/wiki/File:Stencil_for_Banksy_-_geograph.org.uk_-_4671883.jpg">Wikimedia Commons</a>, CC BY-SA 2.0. The photograph is shared under that licence.</figcaption></figure>
+    <figure class="artwork"><img src="../img/hammer-boy-crowd.jpg" width="1800" height="1192" alt="A dense crowd of people on a New York pavement, many holding cameras and phones, looking at a street mural on a dark corner wall." /><figcaption>A crowd gathered in front of a mural widely attributed to Banksy, <cite>Hammer Boy</cite>, on the Upper West Side of New York, during the artist's 2013 residency Better Out Than In. The artist is not in the photograph: the public meets the work, not a civil face. Photograph by Charley Lhasa, October 2013, <a href="https://commons.wikimedia.org/wiki/File:Crowd_gathered_at_%22Hammer_Boy%22_Banksy_in_Upper_West_Side_October_2013.jpg">Wikimedia Commons</a>, CC BY-SA 2.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
+    <figure class="artwork"><img src="../img/rat-brady.jpg" width="1600" height="1070" alt="A small black rat stencil on a weathered brick wall, near a drainpipe and a padlocked metal door." /><figcaption>A rat stencil widely attributed to Banksy, on Brady Street, Bethnal Green, London. Photograph by Maggie Jones, 12 January 2008, <a href="https://commons.wikimedia.org/wiki/File:Banksy_rat_57_Brady_Street_Bethnal_Green_2008-01-12.jpg">Wikimedia Commons</a>, public domain as a photograph. The artwork itself remains protected.</figcaption></figure>
+    <figure class="artwork"><img src="../img/origami-crane.jpg" width="1800" height="1344" alt="A large white origami crane stencilled on a harbour wall, above a wet slipway, with a hillside town and a cloudy sky behind." /><figcaption>A mural widely attributed to Banksy, <cite>Origami Crane</cite>, painted in May 2012 on a wall beside the River Lym in Lyme Regis. Photograph by Kenlar88, <a href="https://commons.wikimedia.org/wiki/File:Banksy_Origami_Crane.jpg">Wikimedia Commons</a>, CC BY-SA 4.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
+    <figure class="artwork"><img src="../img/moco-steal-slogan.jpg" width="1800" height="1350" alt="A large tan stone on a wooden stand, carved with the sentence THE BAD ARTISTS IMITATE, THE GREAT ARTISTS STEAL, the name Pablo Picasso crossed out, and the name Banksy carved underneath, in front of a window." /><figcaption>A carved stone exhibited at the Moco Museum, London, photographed by Matt Brown on 14 August 2024. The sentence reads: THE BAD ARTISTS IMITATE, THE GREAT ARTISTS STEAL. The name Pablo Picasso is crossed out, and the name Banksy is carved below. The saying is often attributed to Picasso; the display puts Banksy's name in its place. <a href="https://commons.wikimedia.org/wiki/File:Banksy_tablet_in_Moco_Museum_2024-08-14.jpg">Wikimedia Commons</a>, CC BY 2.0. The photograph is shared under that licence. The artwork itself remains protected. A museum display is not a certificate from Pest Control.</figcaption></figure>
+    <aside class="slogan-box"><p class="box-label">A visual slogan: four questions</p><p>Every work in this sequence is read as a speech act, a slogan in the form of a picture. For each image, answer:</p><ol><li><strong>What does it say?</strong> Write one sentence, as if it were a slogan.</li><li><strong>To whom?</strong> Who is the image speaking to?</li><li><strong>In what tone?</strong> Ironic, angry, playful, bitter, hopeful, warning, mocking, or another tone you can justify.</li><li><strong>How does it speak?</strong> Name the visual devices: stencil, written words, official look, placement, contrast, a real object next to the painting, a contradiction between the words and the place.</li></ol></aside>
+    <p><strong>Exercise A. The name as a visual slogan.</strong> For the path that says BANKSY, and for the carved stone at the Moco Museum, answer the four slogan questions. Then answer this: is "Banksy" already an author the public can meet, without a private name?</p>
+    <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete: <em>The path says... People are... The stone says... The name Picasso is... I think the public name is / is not enough, because...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Write a short paragraph (eight to ten lines). Compare the crowd in front of <cite>Hammer Boy</cite> (the public meets the work, not a face) with the Moco stone (a famous saying, a crossed-out name, and the name Banksy carved below). What does each image say about authorship? Keep a museum display in the category of a display, not a certificate from Pest Control.</p></div></div>
+    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c0" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c0" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. The path says BANKSY and points visitors towards a temporary park: people follow a public name, not a face. The tone may be playful or practical, like a wayfinding sign. The crowd at Hammer Boy meets a mural on a New York corner; the artist is not in the picture. The stone exhibits a well-known sentence often attributed to Picasso; Picasso's name is crossed out and Banksy's name is carved below. It may say, ironically, that a great artist steals, or that a name can replace another name. A museum display is not a confirmation of civil identity, and it is not a Pest Control certificate. The public name Banksy is already a kind of author; a civil name is a different question, which the next cards will treat carefully.</p></div></div>
 
     <h2>Step 2. Source cards</h2>
     <p>These cards are educational paraphrases, not copied articles. They exist so that you can practise a distinction. Read them carefully. Then, for each card, write: is this a documented fact, an attributed claim, a rumour, or an interpretation?</p>
@@ -395,7 +428,7 @@
     </ol>
     <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 According to. 2 reported that (or alleged that). 3 reported that / stated that. 4 did not confirm. 5 may.</p></div></div>
 
-    <h2>Step 5. Newsroom role-play</h2>
+    <h2>Step 5. Newsroom role-play (interaction, and médiation of a claim)</h2>
     <p>You work on the news desk of a school magazine. A major agency has just published an investigation into Banksy's civil identity. You must decide what to print, and how to print it. You are not asked to find a private address or to contact a private person.</p>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>In pairs: one student is a reporter, the other is the editor. The reporter has 40 seconds to say what the agency reported, using <em>according to</em>. The editor has 40 seconds to decide: print the name with a cautious headline, print the story without the civil name, or wait. Use <em>I think we should... because...</em></p></div><div class="track"><h4>B1 pathway</h4><p>In groups of three: reporter, editor, and a lawyer for the magazine. In three minutes, reach a decision. You must: attribute the claim; mention that Banksy did not confirm it; mention NPR's caution; and answer this objection: 'The public has a right to know everything about a famous person.' Use <em>although</em>, <em>may</em> and <em>public interest</em>.</p></div></div>
 

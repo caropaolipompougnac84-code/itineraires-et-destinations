@@ -241,8 +241,28 @@
     }
     .track h4 { margin-top: 0; }
     .track p:last-child, .track ul:last-child, .track ol:last-child { margin-bottom: 0; }
-    figure.artwork { margin: 1rem 0 1.3rem; }
-    figure.artwork img { width: 100%; max-width: 40rem; height: auto; display: block; }
+    figure.artwork { margin: 1.2rem 0 1.6rem; }
+    figure.artwork img { width: 100%; max-width: 50rem; height: auto; display: block; }
+    .bo-box, .slogan-box {
+      border: 1px solid #1A3658;
+      padding: 0.85rem 1rem;
+      margin: 1.1rem 0 1.3rem;
+      background: #F4F7FB;
+    }
+    .bo-box { border-left: 5px solid #1A3658; }
+    .slogan-box { border-left: 5px solid #2B6CB0; background: #F7FAFC; }
+    .bo-box .box-label, .slogan-box .box-label {
+      font-weight: 700; color: #1A3658; letter-spacing: 0.02em;
+      text-transform: uppercase; font-size: 0.78rem; margin: 0 0 0.4rem;
+    }
+    .bo-box ul, .slogan-box ul { margin: 0.3rem 0 0.5rem; padding-left: 1.15rem; }
+    .bo-box li, .slogan-box li { margin: 0.25rem 0; }
+    .bo-box .tracks { margin-top: 0.6rem; }
+    .bo-box table { margin: 0.4rem 0 0.6rem; }
+    figure.pair-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1.2rem 0;
+    }
+    @media (max-width: 700px) { figure.pair-grid { grid-template-columns: 1fr; } }
     .cover-art img { width: min(100%, 28rem); height: auto; display: block; margin: 0 auto; }
     .src-note { font-size: 0.9rem; color: #444; }
     .credit-line { font-size: 0.92rem; color: #333; }
@@ -307,15 +327,24 @@
 
     <p class="kicker">Anglais · Seconde bac pro · A2 and B1 · Lesson 6 of 6</p>
     <h1>Lesson 6. Exhibiting Banksy without owning the name</h1>
-    <p>Question of the day: <strong>How can a cultural mediator inform the public without overstating evidence or erasing the street?</strong></p>
+    <p>Question of the day: <strong>How can a mediator present a visual slogan without overstating evidence or erasing the street?</strong></p>
+    <aside class="bo-box" aria-label="Activités langagières and CECRL descriptors"><p class="box-label">Activités langagières · BO spécial n° 5 du 11 avril 2019</p><ul><li><strong>Médiation.</strong> The central professional task: explaining a visual slogan and its place to a visitor, without adding facts that are not in the sources</li><li><strong>Production écrite.</strong> An ethical exhibition label and a recommendation, training for the expression écrite of Situation A (a connected text in English)</li><li><strong>Production orale en continu and interaction orale.</strong> Final oral: a presentation then a visitor's question, Situation B practice, not the CCF itself</li><li><strong>Réception écrite.</strong> The brief, the criteria, and labels that must be repaired</li></ul><p><strong>Descripteurs CECRL visés dans cette lesson.</strong></p><div class="tracks"><div class="track"><h4>A2</h4><p>Can present a work in simple terms, write a short accurate label, and answer a visitor's question with <em>should</em> and <em>according to</em>.</p></div><div class="track"><h4>B1</h4><p>Can give a prepared presentation, distinguish fact from claim, recommend with reasons, and respond to an objection, in a professional tone.</p></div></div></aside>
 
     <details class="teacher"><summary>For the teacher: timing (52 minutes)</summary><table><thead><tr><th>Time</th><th>Activity</th></tr></thead><tbody><tr><td>00 to 05</td><td>Vocabulary retrieval and a quick language correction</td></tr><tr><td>05 to 10</td><td>Read the final brief and the criteria</td></tr><tr><td>10 to 25</td><td>Individual written assessment: label and recommendation</td></tr><tr><td>25 to 40</td><td>Paired oral assessment, recorded when possible</td></tr><tr><td>40 to 44</td><td>Self-assessment and an improved sentence</td></tr><tr><td>44 to 49</td><td>Written record of the ethical principle, and flashcards</td></tr><tr><td>49 to 52</td><td>Individual oral exit and homework for revision</td></tr></tbody></table><p><strong>Checkpoint at minute 44.</strong> Every student has completed a written response and both oral components (continuous speaking and interaction).</p><p><strong>Eight-minute essential closing route</strong> (replaces the last eight minutes if the class needs more time; it does not add time): 44 to 46: identify one error from the grid. 46 to 49: produce and say an improved version. 49 to 51: record the final ethical principle. 51 to 52: note revision homework.</p></details>
     <p>If thirty individual presentations cannot be assessed live in fifteen minutes, students record in pairs on school-approved equipment and submit the recording privately. The teacher assesses the recordings after class. If recording is unavailable, written work is collected in this lesson and additional oral time is scheduled. Do not pretend that a single teacher can hear thirty full performances in a quarter of an hour.</p>
 
     <h2>The final brief</h2>
-    <p>Your class is a cultural mediation team advising a local exhibition entitled <strong>Banksy: Public Walls, Private Names</strong>. The organisers want to show photographs of murals, and to discuss a fictional proposal: a mural on a privately owned warehouse would be removed and shown indoors. Each student must:</p>
+    <p>Your class is a cultural mediation team advising a local exhibition entitled <strong>Banksy: Public Walls, Private Names</strong>. The organisers want to show photographs of murals, and to discuss a fictional proposal: a mural on a privately owned warehouse would be removed and shown indoors. Look first at how a slogan changes when it enters an exhibition, a shop, or a queue of visitors.</p>
+    <figure class="artwork"><img src="../img/exhibition-amsterdam.jpg" width="1800" height="1350" alt="Large black stencil capital letters on a pale museum wall: WHAT ARE YOU LOOKING AT?" /><figcaption>The words WHAT ARE YOU LOOKING AT? displayed on a wall at an exhibition of work associated with Banksy, in Amsterdam, 2018. This is an exhibition presentation of a slogan, not the original street work near Hyde Park (that original is shown in Lesson 1). Photograph by MMLDND, <a href="https://commons.wikimedia.org/wiki/File:Exposici%C3%B3n_de_Banksy_en_Amsterdam,_2018..jpg">Wikimedia Commons</a>, CC BY-SA 4.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
+    <figure class="artwork"><img src="../img/not-a-photo-opportunity.jpg" width="1544" height="1024" alt="Brown stencil letters on a stone monument, This is not a photo opportunity, with the blurred clock tower of Big Ben in the background." /><figcaption>A stencil widely attributed to Banksy, on a stone plinth near the Palace of Westminster: This is not a photo opportunity, with the clock tower of Big Ben out of focus behind it. Photograph by Kris Krug, <a href="https://commons.wikimedia.org/wiki/File:Banksy_Love_@_Big_Ben_-_Flickr_-_Kris_Krug.jpg">Wikimedia Commons</a>, CC BY-SA 2.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
+    <figure class="artwork"><img src="../img/museum-gift-shop.jpg" width="1800" height="1355" alt="The interior of a museum shop, with framed prints of a girl reaching for a red balloon, stacks of books, racks of keyrings, and two visitors further down the aisle." /><figcaption>The gift shop of the Banksy Museum in Krakow: framed prints, books and souvenirs of famous motifs, including the girl with a balloon. Photograph by Sdkb, <a href="https://commons.wikimedia.org/wiki/File:Banksy_Museum_gift_shop.jpg">Wikimedia Commons</a>, CC BY-SA 4.0. The photograph is shared under that licence. The artworks reproduced in the shop remain protected. A commercial museum is not Pest Control, and a print in a shop is not the original wall.</figcaption></figure>
+    <figure class="artwork"><img src="../img/dismaland-facade.jpg" width="1366" height="910" alt="The entrance front of a seaside building marked Dismaland, with fencing and a pale sky." /><figcaption>The facade of Dismaland, the temporary 'bemusement park' organised in the old Tropicana lido at Weston-super-Mare in the summer of 2015. Photograph by Geof Sheppard, <a href="https://commons.wikimedia.org/wiki/File:Dismaland_facade.JPG">Wikimedia Commons</a>, CC BY-SA 3.0. The photograph is shared under that licence. The site was a multi-artist project.</figcaption></figure>
+    <figure class="artwork"><img src="../img/dismaland-queues.jpg" width="1366" height="910" alt="A long queue of visitors behind metal barriers on a seaside lawn, with a Ferris wheel and a WALK INS sign." /><figcaption>Crowds queuing on the Beach Lawns in Weston-super-Mare to visit Dismaland in 2015. Photograph by Geof Sheppard, <a href="https://commons.wikimedia.org/wiki/File:Dismaland_queues_1.JPG">Wikimedia Commons</a>, CC BY-SA 3.0. The photograph is shared under that licence.</figcaption></figure>
+    <aside class="slogan-box"><p class="box-label">A visual slogan: four questions</p><p>Every work in this sequence is read as a speech act, a slogan in the form of a picture. For each image, answer:</p><ol><li><strong>What does it say?</strong> Write one sentence, as if it were a slogan.</li><li><strong>To whom?</strong> Who is the image speaking to?</li><li><strong>In what tone?</strong> Ironic, angry, playful, bitter, hopeful, warning, mocking, or another tone you can justify.</li><li><strong>How does it speak?</strong> Name the visual devices: stencil, written words, official look, placement, contrast, a real object next to the painting, a contradiction between the words and the place.</li></ol></aside>
+    <p>The Amsterdam wall shows <em>WHAT ARE YOU LOOKING AT?</em> as an exhibition display, not as the original street work of Lesson 1. The stencil near Big Ben says <em>This is not a photo opportunity</em>, on a tourist site. The Krakow shop sells framed prints of famous motifs. Dismaland's facade and queues show how a public is invited to visit. Before you write a label, say what each of these images "says" about looking, visiting and selling.</p>
+    <p>Each student must:</p>
     <ol>
-      <li>Present one artwork from the sequence (place, date, what is visible, why the location matters).</li>
+      <li>Present one artwork from the sequence first as a visual slogan (what it says, to whom, in what tone, and with which devices), then give the place, the date, what is visible, and why the location is part of the sentence.</li>
       <li>Distinguish a documented event from an attributed identity claim. The civil name, if you mention it, stays a claim, with its source.</li>
       <li>Recommend what should happen to the fictional warehouse mural, with a reason.</li>
       <li>Answer a visitor's question (your partner asks it).</li>
@@ -339,11 +368,11 @@
     <p>You work alone. You may use your observation card from Lesson 5, and the classroom sentence about Reuters from Lesson 2. You may not search the web for a private name.</p>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p><strong>A2 written task /20.</strong></p>
         <ol>
-          <li>Write an exhibition label of four to six short sentences for one work: what we can see, where it was, why the place matters, and one accurate sentence about identity (you may write that the artist's civil name is not confirmed).</li>
+          <li>Write an exhibition label of four to six short sentences for one work: the slogan sentence (what it says, to whom, in what tone), what we can see, where it was, why the place matters, and one accurate sentence about identity (you may write that the artist's civil name is not confirmed).</li>
           <li>Write three sentences recommending what should happen to the fictional warehouse mural, with <em>should</em> and <em>because</em>.</li>
         </ol></div><div class="track"><h4>B1 pathway</h4><p><strong>B1 written task /20.</strong></p>
         <ol>
-          <li>Write an exhibition label of eight to ten sentences: description, location, one documented event, one attributed claim clearly marked as a claim, and a sentence about photographic licences and remaining rights in the artwork.</li>
+          <li>Write an exhibition label of eight to ten sentences: the work as a visual slogan (what it says, to whom, in what tone, and which devices), description, location, one documented event, one attributed claim clearly marked as a claim, and a sentence about photographic licences and remaining rights in the artwork.</li>
           <li>Write a short professional recommendation (90 to 120 words) on the fictional warehouse mural, using the three-rights distinction and a conditional. Qualify anything that is not a fact.</li>
         </ol></div></div>
 
@@ -351,7 +380,7 @@
     <table>
       <thead><tr><th>Criterion</th><th>0 to 3</th><th>4 to 6</th><th>7</th></tr></thead>
       <tbody>
-        <tr><td>Label: work, place, what is visible</td><td>Incomplete or confused</td><td>The work and the place are identified, with some description</td><td>Clear description, and the place is given a simple role</td></tr>
+        <tr><td>Réalisation de la tâche: label (slogan, work, place, what is visible)</td><td>Incomplete or confused</td><td>The work and the place are identified, with some description</td><td>Clear description, and the place is given a simple role</td></tr>
         <tr><td>Identity and accuracy</td><td>A civil name is presented as a fact, or the issue is ignored in a misleading way</td><td>The text avoids a false certainty</td><td>An accurate cautious sentence, with or without a named source</td></tr>
         <tr><td>Recommendation</td><td>No clear advice</td><td>A recommendation with a simple reason</td><td>A clear <em>should</em>, with <em>because</em>, that a visitor can follow</td></tr>
       </tbody>
@@ -370,13 +399,13 @@
     <p>Plus 0 to 6 for language, as above, with expected control of <em>although</em>, <em>whereas</em>, the passive, and accurate attribution.</p>
 
     <h2>Step 3. Oral assessment (about 15 minutes, in simultaneous pairs)</h2>
-    <div class="tracks"><div class="track"><h4>A2 pathway</h4><p><strong>A2 oral, /20.</strong> Continuous speaking, 40 to 50 seconds: present your work (what you can see, where it is, why the place matters). Interaction, about 40 seconds: your partner is a visitor and asks one of these questions: "Who is Banksy, really?" or "Can we just cut this wall and show it here?" You answer without presenting a civil name as a fact, and you give a simple recommendation.</p></div><div class="track"><h4>B1 pathway</h4><p><strong>B1 oral, /20.</strong> Continuous speaking, about 90 seconds: present your work, explain the role of the site, and include one documented fact and one attributed claim, clearly distinguished. Interaction, about one minute: your partner plays a visitor who wants a sure name and a sure legal answer. You qualify, you attribute, and you recommend. You respond to a follow-up objection.</p></div></div>
+    <div class="tracks"><div class="track"><h4>A2 pathway</h4><p><strong>A2 oral, /20.</strong> Continuous speaking, 40 to 50 seconds: present your work as a visual slogan (what it says, to whom, in what tone), then what you can see, where it is, and why the place matters. Interaction, about 40 seconds: your partner is a visitor and asks one of these questions: "Who is Banksy, really?" or "Can we just cut this wall and show it here?" You answer without presenting a civil name as a fact, and you give a simple recommendation.</p></div><div class="track"><h4>B1 pathway</h4><p><strong>B1 oral, /20.</strong> Continuous speaking, about 90 seconds: present your work as a visual slogan (what it says, to whom, in what tone, and with which devices), explain the role of the site, and include one documented fact and one attributed claim, clearly distinguished. Interaction, about one minute: your partner plays a visitor who wants a sure name and a sure legal answer. You qualify, you attribute, and you recommend. You respond to a follow-up objection.</p></div></div>
 
     <h3>A2 oral grid, summative /20</h3>
     <table>
       <thead><tr><th>Criterion</th><th>0 to 2</th><th>3 to 4</th><th>5</th></tr></thead>
       <tbody>
-        <tr><td>Continuous speaking: the work and the place</td><td>Too little, or the work is not identified</td><td>A description, with a simple mention of place</td><td>Visible details, the place, and a reason why the place matters</td></tr>
+        <tr><td>Production orale en continu: the slogan, the work and the place</td><td>Too little, or the work is not identified</td><td>A description, with a simple mention of place</td><td>Visible details, the place, and a reason why the place matters</td></tr>
         <tr><td>Identity and honesty</td><td>A civil name is given as a fact</td><td>The student avoids a false certainty</td><td>A clear cautious formulation, if the question arises</td></tr>
         <tr><td>Language</td><td>Little language from the sequence</td><td>Frames are used, with some errors that do not block meaning</td><td>Vocabulary reused; <em>there is</em>, <em>may</em>, <em>should</em>, <em>according to</em> used intelligibly</td></tr>
         <tr><td>Interaction</td><td>The question is not really answered</td><td>A relevant short answer</td><td>A clear answer to the visitor, with a recommendation</td></tr>
@@ -387,7 +416,7 @@
     <table>
       <thead><tr><th>Criterion</th><th>0 to 2</th><th>3 to 4</th><th>5</th></tr></thead>
       <tbody>
-        <tr><td>Continuous speaking: work, site, evidence</td><td>Incomplete</td><td>A connected presentation, with some distinction of categories</td><td>A clear presentation; fact and claim are kept apart; the site has a role</td></tr>
+        <tr><td>Production orale en continu: slogan, work, site, evidence</td><td>Incomplete</td><td>A connected presentation, with some distinction of categories</td><td>A clear presentation; fact and claim are kept apart; the site has a role</td></tr>
         <tr><td>Ethics of the name and of the wall</td><td>Overstatement, or no recommendation</td><td>A cautious position, with a reason</td><td>Accurate attribution, a qualified recommendation, no investigation of a private person</td></tr>
         <tr><td>Language</td><td>Limited control</td><td>Sequence language attempted, with slips</td><td>Secure reuse; qualification (<em>according to, may, although</em>); intelligible syntax</td></tr>
         <tr><td>Interaction</td><td>Little response to the visitor</td><td>A relevant reply</td><td>The objection is taken up; the answer stays accurate and professional</td></tr>
@@ -410,7 +439,7 @@
     </blockquote>
 
     <h2>Step 6. Homework</h2>
-    <p>Revise your flashcards from the six lessons. A2: be ready to present your work again in 40 seconds, with the improved sentence included. B1: polish your exhibition label and be ready to read it aloud. This work can be used later in a CCF or in an oral practice, if the teacher so decides. It is not, by itself, the examination.</p>
+    <p>Revise your flashcards from the six lessons. A2: be ready to present your work again in 40 seconds, with the improved sentence included. B1: polish your exhibition label and be ready to read it aloud. This work trains Situation B (continuous speaking and interaction) and the expression écrite of Situation A. It can be reused later in CCF practice, if the teacher so decides. It is not, by itself, the examination. The CCF takes place in the last year of the cycle; this is Seconde.</p>
 
     <nav class="pager" aria-label="Previous and next"><a href="../s5/">Previous: Lesson 5</a><a href="../dys/">Next: Dys version</a></nav>
   </main>

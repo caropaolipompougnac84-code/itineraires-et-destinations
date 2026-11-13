@@ -333,6 +333,41 @@
       .proux-frame { max-width: 100%; }
       .btn-toggle { width: 100%; }
     }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    @media (min-width: 700px) {
+      .photo-row { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    }
+    .photo-work { margin: 0.9rem 0 1.3rem; }
+    .photo-row .photo-work { margin: 0; }
+    .photo-frame {
+      background: #1A3658;
+      padding: 8px;
+      box-shadow: 0 6px 20px rgba(15, 35, 64, 0.2);
+    }
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #EEF2F7;
+    }
+    .photo-work figcaption, .photo-row figcaption {
+      font-size: 0.82rem;
+      color: #444;
+      margin-top: 0.4rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+    .photo-work-solo { max-width: 40rem; }
+    @media (max-width: 640px) {
+      .photo-frame { padding: 6px; }
+    }
+
     @media print {
       .site-header, .lesson-nav, .nav-main, .nav-burger, .skip-link,
       .btn-toggle, .pager, .nav-toggle { display: none !important; }
@@ -406,6 +441,7 @@
 <p><strong>Langue de la leçon.</strong> <em>Good morning, Hello, Hi, Nice to meet you, This is..., I am..., I work in..., I'm a PFMP student, Please, Thank you, Could you...?, See you tomorrow.</em> Présent simple pour l'identité (<em>I'm Samir. I work in the workshop.</em>).</p>
 <p><strong>Phonologie.</strong> Intonation chaleureuse des salutations. <em>Nice to MEET you.</em> Forme polie <em>Could you</em> (/kʊd juː/).</p>
 </div>
+    <figure class="photo-work photo-work-solo"><div class="photo-frame"><img src="../../img/cornfeld-tuteur.jpg" alt="Une apprentie mécanicienne et son tuteur, accroupis devant un engin, consultent ensemble un manuel technique." /></div><figcaption>Une apprentie mécanicienne et son tuteur consultent un manuel technique. Photo : B. A. Cornfeld, Department of Defense (États-Unis), domaine public, Wikimedia Commons.</figcaption></figure>
     <h3>Amorce (5 min)</h3>
 <aside class="box box-teacher" lang="fr"><p class="box-label">Pour l&#x27;enseignant</p><p>Réprojeter l'œuvre. Pointer deux personnes, une jeune personne et un adulte, sans inventer leurs noms comme s'ils étaient officiels : ce sont des noms que la classe leur donne pour le jeu de rôle.</p></aside>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves</p><div class="student-text"><p>Look at the painting. Imagine two people are talking, a young person and an adult. It is the beginning of the day. What do they say to greet each other? With your partner, say two lines.</p></div>

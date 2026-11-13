@@ -333,6 +333,41 @@
       .proux-frame { max-width: 100%; }
       .btn-toggle { width: 100%; }
     }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    @media (min-width: 700px) {
+      .photo-row { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    }
+    .photo-work { margin: 0.9rem 0 1.3rem; }
+    .photo-row .photo-work { margin: 0; }
+    .photo-frame {
+      background: #1A3658;
+      padding: 8px;
+      box-shadow: 0 6px 20px rgba(15, 35, 64, 0.2);
+    }
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #EEF2F7;
+    }
+    .photo-work figcaption, .photo-row figcaption {
+      font-size: 0.82rem;
+      color: #444;
+      margin-top: 0.4rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+    .photo-work-solo { max-width: 40rem; }
+    @media (max-width: 640px) {
+      .photo-frame { padding: 6px; }
+    }
+
     @media print {
       .site-header, .lesson-nav, .nav-main, .nav-burger, .skip-link,
       .btn-toggle, .pager, .nav-toggle { display: none !important; }
@@ -405,6 +440,7 @@
 <p><strong>Langue de la leçon.</strong> Impératif (<em>Put on your gloves. Don't touch the machine.</em>). Demandes : <em>Can you show me how to... ? Could you say that again, please? What do I do first?</em> Enchaînement : <em>First, Then, Next, After that, Finally.</em></p>
 <p><strong>Phonologie.</strong> Impératif : attaque nette du verbe (<em>Put, Check, Switch</em>). <em>Don't</em> bien audible. Intonation montante de <em>Can you show me how?</em></p>
 </div>
+    <figure class="photo-work photo-work-solo"><div class="photo-frame"><img src="../img/bgreiner-avioniker.jpg" alt="Un élève en formation mesure un circuit électrique avec un multimètre, à l'intérieur d'un appareil." /></div><figcaption>Un élève en formation d'avionique mesure un circuit avec un multimètre. Photo : Bgreiner, CC BY-SA 3.0, Wikimedia Commons.</figcaption></figure>
     <p><a href="../dys/s4/">Version adaptée dys de la Lesson 4</a>.</p>
     <h3>Amorce (5 min)</h3>
 <aside class="box box-teacher" lang="fr"><p class="box-label">Pour l&#x27;enseignant</p><p>Revenir à l'œuvre. Imaginer qu'un tuteur, dans cet atelier, donne une première consigne du jour.</p></aside>

@@ -333,6 +333,41 @@
       .proux-frame { max-width: 100%; }
       .btn-toggle { width: 100%; }
     }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    @media (min-width: 700px) {
+      .photo-row { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    }
+    .photo-work { margin: 0.9rem 0 1.3rem; }
+    .photo-row .photo-work { margin: 0; }
+    .photo-frame {
+      background: #1A3658;
+      padding: 8px;
+      box-shadow: 0 6px 20px rgba(15, 35, 64, 0.2);
+    }
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #EEF2F7;
+    }
+    .photo-work figcaption, .photo-row figcaption {
+      font-size: 0.82rem;
+      color: #444;
+      margin-top: 0.4rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+    .photo-work-solo { max-width: 40rem; }
+    @media (max-width: 640px) {
+      .photo-frame { padding: 6px; }
+    }
+
     @media print {
       .site-header, .lesson-nav, .nav-main, .nav-burger, .skip-link,
       .btn-toggle, .pager, .nav-toggle { display: none !important; }
@@ -405,6 +440,7 @@
 <p><strong>Langue de la leçon.</strong> <em>past simple</em> régulier et irrégulier fréquent : <em>arrived, damaged, checked, called, told, had, was, were, went, came, broke, found, left, said, replaced, happened</em>. Formules : <em>There's a problem. I'm sorry about that. I'm afraid... We can replace it. I'll check with my tutor.</em></p>
 <p><strong>Phonologie.</strong> Terminaisons du <em>past simple</em> : /t/ (<em>checked, packed</em>), /d/ (<em>arrived, opened</em>), /ɪd/ (<em>wanted, needed, damaged</em> se prononce avec /dʒd/). Faire répéter <em>happened, damaged, replaced, told, said</em>.</p>
 </div>
+    <figure class="photo-work photo-work-solo"><div class="photo-frame"><img src="../../img/simonk-cartons.jpg" alt="Dans un entrepôt, une palette de cartons avance sur un convoyeur, parmi d'autres piles de cartons." /></div><figcaption>Des cartons palettisés, prêts à être expédiés, dans un entrepôt. Photo : SimónK, CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure>
     <h3>Amorce (5 min)</h3>
 <aside class="box box-teacher" lang="fr"><p class="box-label">Pour l&#x27;enseignant</p><p>Revenir à l'œuvre, cette fois sur les cartons. La consigne ouvre clairement le champ de l'hypothèse.</p></aside>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves</p><div class="student-text"><p>Look at the painting, and look at the cardboard boxes. Imagine there is a problem with an order. What happened? Use the past simple, and start with <em>I think...</em>. Tell your partner in two sentences, for example: <em>I think a box arrived damaged. The customer was not happy.</em></p></div></div>

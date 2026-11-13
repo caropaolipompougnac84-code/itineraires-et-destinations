@@ -333,6 +333,41 @@
       .proux-frame { max-width: 100%; }
       .btn-toggle { width: 100%; }
     }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    @media (min-width: 700px) {
+      .photo-row { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    }
+    .photo-work { margin: 0.9rem 0 1.3rem; }
+    .photo-row .photo-work { margin: 0; }
+    .photo-frame {
+      background: #1A3658;
+      padding: 8px;
+      box-shadow: 0 6px 20px rgba(15, 35, 64, 0.2);
+    }
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #EEF2F7;
+    }
+    .photo-work figcaption, .photo-row figcaption {
+      font-size: 0.82rem;
+      color: #444;
+      margin-top: 0.4rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+    .photo-work-solo { max-width: 40rem; }
+    @media (max-width: 640px) {
+      .photo-frame { padding: 6px; }
+    }
+
     @media print {
       .site-header, .lesson-nav, .nav-main, .nav-burger, .skip-link,
       .btn-toggle, .pager, .nav-toggle { display: none !important; }
@@ -406,6 +441,7 @@
 <p><strong>Langue de la leçon.</strong> Lexique de la scène. <em>present continuous</em> (<em>I can see... They are working. What are they making?</em>). Formules d'hypothèse : <em>I think..., Maybe..., They might be...</em></p>
 <p><strong>Phonologie.</strong> Prononciation de <em>workshop</em>, <em>workbench</em>, <em>window</em>, <em>cardboard</em>. Accent de mot sur la première syllabe de <em>WORK-shop</em>, <em>WORK-bench</em>, <em>CAR-d-board</em>.</p>
 </div>
+    <figure class="photo-work photo-work-solo"><div class="photo-frame"><img src="../img/yasser-atelier.jpg" alt="Un atelier de menuiserie : de grandes fenêtres, des machines, des planches, et des personnes au travail." /></div><figcaption>Un atelier de menuiserie, avec de grandes fenêtres, des machines et des personnes au travail. Photo : Yasser.mahmoud, CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure>
     <p><a href="../dys/s1/">Version adaptée dys de la Lesson 1</a>.</p>
     <h3>Amorce (5 min)</h3>
 <aside class="box box-teacher" lang="fr"><p class="box-label">Pour l&#x27;enseignant</p><p>Projeter l'œuvre, en grand, sans donner de titre et sans commentaire préalable. Laisser une minute de silence. Puis donner la consigne suivante, oralement et à l'écrit au tableau.</p></aside>

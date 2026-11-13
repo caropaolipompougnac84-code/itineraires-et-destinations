@@ -333,6 +333,41 @@
       .proux-frame { max-width: 100%; }
       .btn-toggle { width: 100%; }
     }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    @media (min-width: 700px) {
+      .photo-row { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    }
+    .photo-work { margin: 0.9rem 0 1.3rem; }
+    .photo-row .photo-work { margin: 0; }
+    .photo-frame {
+      background: #1A3658;
+      padding: 8px;
+      box-shadow: 0 6px 20px rgba(15, 35, 64, 0.2);
+    }
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #EEF2F7;
+    }
+    .photo-work figcaption, .photo-row figcaption {
+      font-size: 0.82rem;
+      color: #444;
+      margin-top: 0.4rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+    .photo-work-solo { max-width: 40rem; }
+    @media (max-width: 640px) {
+      .photo-frame { padding: 6px; }
+    }
+
     @media print {
       .site-header, .lesson-nav, .nav-main, .nav-burger, .skip-link,
       .btn-toggle, .pager, .nav-toggle { display: none !important; }
@@ -406,6 +441,7 @@
 <p><strong>Langue de la leçon.</strong> <em>present continuous</em> (affirmative, négative, interrogative). Contraste bref avec le présent simple (<em>I work in this workshop. At the moment, I am checking an order.</em>). Lexique des outils.</p>
 <p><strong>Phonologie.</strong> <em>-ing</em> : <em>working, checking, preparing, standing, making</em>. Ne pas réduire <em>they are</em> au point de le rendre inaudible en A2 ; en B1, on peut faire entendre <em>they're</em>.</p>
 </div>
+    <figure class="photo-work photo-work-solo"><div class="photo-frame"><img src="../../img/iicd-mecanique-chawama.jpg" alt="Deux personnes travaillent sur un moteur, le capot ouvert : l'une agit sur les pièces, l'autre observe." /></div><figcaption>Dans un centre de formation, un élève et un formateur travaillent sur un moteur. Photo : IICD, CC BY 2.0, Wikimedia Commons.</figcaption></figure>
     <h3>Amorce (6 min)</h3>
 <aside class="box box-teacher" lang="fr"><p class="box-label">Pour l&#x27;enseignant</p><p>L'œuvre est au tableau. Pointer successivement plusieurs zones (un établi, un carton, une fenêtre, un groupe de personnes) sans parler. Les élèves proposent une phrase au <em>present continuous</em>.</p></aside>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves</p><div class="student-text"><p>Look at the painting. I will point to a part of the picture. Say one sentence with the present continuous, for example: <em>They are working near the workbenches.</em> Use <em>I think</em> if you are not sure.</p></div></div>

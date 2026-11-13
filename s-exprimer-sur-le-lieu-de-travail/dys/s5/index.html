@@ -333,6 +333,41 @@
       .proux-frame { max-width: 100%; }
       .btn-toggle { width: 100%; }
     }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    @media (min-width: 700px) {
+      .photo-row { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    }
+    .photo-work { margin: 0.9rem 0 1.3rem; }
+    .photo-row .photo-work { margin: 0; }
+    .photo-frame {
+      background: #1A3658;
+      padding: 8px;
+      box-shadow: 0 6px 20px rgba(15, 35, 64, 0.2);
+    }
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #EEF2F7;
+    }
+    .photo-work figcaption, .photo-row figcaption {
+      font-size: 0.82rem;
+      color: #444;
+      margin-top: 0.4rem;
+      text-align: left;
+      line-height: 1.35;
+    }
+    .photo-work-solo { max-width: 40rem; }
+    @media (max-width: 640px) {
+      .photo-frame { padding: 6px; }
+    }
+
     @media print {
       .site-header, .lesson-nav, .nav-main, .nav-burger, .skip-link,
       .btn-toggle, .pager, .nav-toggle { display: none !important; }
@@ -405,6 +440,7 @@
 <p><strong>Langue de la leçon.</strong> <em>You must wear safety glasses. You have to switch off the machine. You should ask your tutor. You can leave your bag in the locker. You can't go through this area. You mustn't run in the workshop.</em> Nuance : <em>must / have to</em> (obligation), <em>should</em> (conseil), <em>can / can't</em> (permission ou capacité, interdiction pour <em>can't</em> et <em>mustn't</em>).</p>
 <p><strong>Phonologie.</strong> <em>mustn't</em> (/ˈmʌsnt/), sans faire sonner le premier <em>t</em> de manière lourde, mais en gardant le mot reconnaissable. <em>have to</em> (/hæftə/). Opposition <em>can</em> faible / <em>can't</em> plein.</p>
 </div>
+    <figure class="photo-work photo-work-solo"><div class="photo-frame"><img src="../../img/mishin-securite.jpg" alt="Deux ouvriers accroupis sur un chantier, avec un casque, un gilet de visibilité et des chaussures de sécurité, utilisent une perceuse." /></div><figcaption>Sur un chantier, deux ouvriers portent le casque, le gilet de visibilité et des chaussures de sécurité. Photo : M. Mishin, service de presse du maire et du gouvernement de Moscou, CC BY 4.0, Wikimedia Commons.</figcaption></figure>
     <h3>Amorce (5 min)</h3>
 <aside class="box box-teacher" lang="fr"><p class="box-label">Pour l&#x27;enseignant</p><p>L'œuvre au tableau. Question orale, sans encore enseigner les modaux de manière formelle : on recueille des propositions, on les reformule.</p></aside>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves</p><div class="student-text"><p>Look at the painting. This is a school workshop, with workbenches and cardboard boxes. A visitor is coming. What safety rules should these people follow? Say one rule with your partner, in English. You can start with <em>You must...</em> or <em>Don't...</em></p></div></div>

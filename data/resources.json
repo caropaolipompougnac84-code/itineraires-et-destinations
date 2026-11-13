@@ -1817,6 +1817,27 @@
       "date": "2026-11-13",
       "image": "dune-who-speaks-for-the-desert.jpg",
       "credit": "Giles Laurent, Dune 45 in Sossusvlei at sunrise, Namibia. Wikimedia Commons, CC BY-SA 4.0."
+    },
+    {
+      "id": "lg-lettres-1re-ravage-quand-la-machine-sarrete",
+      "title": "Lettres · 1re technologique · Quand la machine s'arrête",
+      "summary": "Séquence de Lettres sur Ravage de René Barjavel (1943), Première technologique, lycée général et technologique. Lecture cursive, pour la seconde partie de l'oral et l'entraînement au commentaire. Objet d'étude : le roman et le récit du Moyen Âge au XXIe siècle. Huit séances, la spirale de Gorse, trois explications linéaires, un commentaire guidé et un oral blanc. Dans le fil des fictions d'avertissement, avec la séquence Orwell en Terminale et la séquence d'anglais Who Speaks for the Desert?",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première technologique · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "culture",
+        "oral",
+        "ecrit",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/quand-la-machine-sarrete/",
+      "date": "2026-11-13",
+      "image": "quand-la-machine-sarrete.jpg",
+      "credit": "Hubert Robert, Vue imaginaire de la Grande Galerie du Louvre en ruines, 1796, musée du Louvre. Domaine public, via Wikimedia Commons."
     }
   ]
 }

@@ -31,6 +31,8 @@ Chaque entrée dans `resources` :
 | lycee-general | anglais, lettres | 2de, 1re, tle, spe (anglais) ; tle-option (option littérature) |
 | cfa | anglais, lettres | cap, bacpro, bp |
 
+Le champ `level` est une chaîne (`"2de"`) ou, si la séquence appartient à plusieurs onglets, un tableau (`["2de", "1re"]`). L'onglet « Tous niveaux » correspond à la valeur `tous`. Une entrée peut combiner `tous` et un niveau précis, par exemple `["tous", "2de"]`.
+
 ## Déduplication
 
 Clé : `title + section + subject + level` (insensible à la casse). Les doublons sont ignorés au chargement.

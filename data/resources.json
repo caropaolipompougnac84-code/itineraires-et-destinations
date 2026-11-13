@@ -165,7 +165,7 @@
       "summary": "Huit leçons d'anglais pour le CAP (A2) et le baccalauréat professionnel (B1), toutes filières : s'exprimer dans l'atelier, auprès du tuteur de PFMP et auprès d'un visiteur. Tâche finale Welcome to the workshop, grille CCF sur 20. Fil visuel : une œuvre de Laurent Proux. BO spécial n° 5 du 11 avril 2019.",
       "section": "lycee-pro",
       "subject": "anglais",
-      "level": "tous",
+      "level": ["tous", "2de"],
       "levelLabel": "CAP et bac pro · toutes filières · A2-B1",
       "collection": "lp-anglais",
       "themes": [
@@ -306,7 +306,7 @@
       "summary": "Six short lessons in English, built around genuine public-domain Golden Age comic pages, for 2nde and 1re of the baccalauréat professionnel. Description first: panels, gutters, balloons, onomatopoeia. A short escape game and a final task.",
       "section": "lycee-pro",
       "subject": "anglais",
-      "level": "tous",
+      "level": ["2de", "1re"],
       "levelLabel": "2nde et 1re · baccalauréat professionnel",
       "collection": "lp-anglais",
       "themes": [
@@ -555,7 +555,7 @@
       "summary": "La plus grande ville n’est pas toujours la capitale : sept leçons de B1 sur la carte des États-Unis, un road trip et une carte postale.",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": "tous",
+      "level": ["2de", "1re"],
       "levelLabel": "2de / 1re · tronc commun B1 / B1+",
       "collection": "lg-anglais",
       "themes": [
@@ -572,7 +572,7 @@
       "summary": "Des États-Unis au Commonwealth : capitales, compromis et débat, sept leçons de seconde LVA B1+.",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": "tous",
+      "level": "2de",
       "levelLabel": "2de · LVA B1+",
       "collection": "lg-anglais",
       "themes": [
@@ -589,7 +589,7 @@
       "summary": "MI5, MI6 et le monde de James Bond : six leçons de 55 minutes, calibrées sur 52 minutes, jusqu’à un entretien de recrutement fictif. Tronc B1, progression vers B1+ (LVA).",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": "tous",
+      "level": ["2de", "1re"],
       "levelLabel": "2de / 1re · LVA : B1 vers B1+ · général et technologique / pro",
       "collection": "lg-anglais",
       "themes": [
@@ -691,7 +691,7 @@
       "summary": "Une journée à Londres pour travailler la langue et la culture.",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": "tous",
+      "level": ["tous", "2de"],
       "levelLabel": "A1 vers B1",
       "collection": "lg-anglais",
       "themes": [
@@ -709,7 +709,7 @@
       "summary": "Se déplacer à Londres : transports et langage utile.",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": "tous",
+      "level": ["tous", "2de"],
       "levelLabel": "Bac pro · lycée général et technologique · adapté",
       "collection": "lg-anglais",
       "themes": [

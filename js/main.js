@@ -15,11 +15,22 @@
       : "assets/";
   }
 
+  // A catalogue entry may have one level (string) or several (array),
+  // so the same sequence can appear in more than one onglet (2de and 1re, for example).
+  function levelsOf(r) {
+    const raw = r.level;
+    if (Array.isArray(raw)) {
+      return raw.map((x) => String(x || "").trim()).filter(Boolean);
+    }
+    if (raw == null || raw === "") return [];
+    return [String(raw).trim()];
+  }
+
   function dedupe(resources) {
     const seen = new Map();
     const out = [];
     for (const r of resources) {
-      const key = [r.title, r.section, r.subject, r.level]
+      const key = [r.title, r.section, r.subject, levelsOf(r).slice().sort().join(",")]
         .map((x) => String(x || "").trim().toLowerCase())
         .join("|");
       if (seen.has(key)) continue;
@@ -32,12 +43,12 @@
   function matches(r, opts) {
     if (opts.section && r.section !== opts.section) return false;
     if (opts.subject && r.subject !== opts.subject) return false;
-    if (opts.level && r.level !== opts.level) return false;
+    if (opts.level && !levelsOf(r).includes(opts.level)) return false;
     if (opts.collection && r.collection !== opts.collection) return false;
     if (opts.group && r.group !== opts.group) return false;
     if (opts.theme && !(r.themes || []).includes(opts.theme)) return false;
     if (opts.q) {
-      const hay = [r.title, r.summary, r.levelLabel || r.level, ...(r.themes || [])]
+      const hay = [r.title, r.summary, r.levelLabel || levelsOf(r).join(" "), ...(r.themes || [])]
         .join(" ")
         .toLowerCase();
       if (!hay.includes(opts.q.toLowerCase())) return false;
@@ -72,7 +83,7 @@
     const themes = (r.themes || [])
       .map((id) => `<li class="theme">${escapeHtml(themeLabel(themesCatalog, id))}</li>`)
       .join("");
-    const level = r.levelLabel || r.level || "";
+    const level = r.levelLabel || levelsOf(r).join(" · ") || "";
     const hasUrl = r.url && r.url !== "#";
     const img = r.image
       ? `<img class="work-thumb" src="${escapeAttr(prefix + r.image)}" alt="" />`

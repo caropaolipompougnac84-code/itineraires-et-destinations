@@ -160,6 +160,28 @@
   ],
   "resources": [
     {
+      "id": "lp-anglais-dolly-parton-american-legacy",
+      "title": "Anglais · Première bac pro · Dolly Parton: An American Legacy",
+      "summary": "Nine lessons in English, Première bac pro, level B1, on Dolly Parton's life, work, generosity and the rumours that followed her death. BO spécial n° 5 du 11 avril 2019. One progression, with Help boxes and Going further boxes inside each lesson.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "Première bac pro · toutes voies · B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "culture",
+        "travail",
+        "medias",
+        "citoyennete",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/dolly-parton-american-legacy/",
+      "date": "2026-11-13",
+      "image": "dolly-parton-american-legacy.jpg",
+      "credit": "Andy Warhol, Dolly Parton, 1985. Poster of the Andy Warhol retrospective, Museum Ludwig, Cologne, 1989-1990. © The Andy Warhol Foundation for the Visual Arts. Reproduced as a one-off exception for teaching purposes, from Madame Carole Paoli Pompougnac's own copy of the poster."
+    },
+    {
       "id": "lp-anglais-from-fault-to-quote",
       "title": "Anglais · Bac pro motocycles · From fault to quote",
       "summary": "Volet anglais d’un travail transversal avec le compte rendu de PFMP : décrire une panne sur une Bonneville T120, établir un budget prévisionnel, puis contacter Triumph, à Hinckley, par mail et par téléphone. Niveau A2-B1.",

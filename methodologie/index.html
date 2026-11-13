@@ -18,7 +18,121 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
-  
+
+  <style>
+    .gorse-methodo {
+      --gorse: #7B1E3A;
+      margin: 0 0 2.4rem;
+      padding: 1.6rem 1.4rem 1.7rem;
+      background: var(--paper-3, #f8f3ea);
+      border: 1px solid var(--rule, rgba(29, 21, 17, 0.14));
+      border-left: 6px solid var(--gorse);
+      scroll-margin-top: 8.5rem;
+    }
+    .gorse-methodo > .kicker { color: var(--gorse); }
+    .gorse-methodo h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.55rem, 3.2vw, 2.15rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--gorse);
+      margin: 0 0 0.7rem;
+    }
+    .gorse-methodo .gorse-intro {
+      max-width: 44rem;
+      margin: 0 0 1.2rem;
+      color: var(--ink);
+    }
+    .gorse-methodo .gorse-intro p { margin: 0 0 0.6rem; }
+    .gorse-methodo .gorse-intro p:last-child { margin-bottom: 0; }
+    .gorse-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 1.3rem 1.6rem;
+      align-items: center;
+      margin: 0 0 1.4rem;
+    }
+    .gorse-methodo .gorse-fig {
+      margin: 0;
+      background: #fffdf8;
+      padding: 0.6rem 0.4rem 0.5rem;
+    }
+    .gorse-methodo .gorse-fig img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-inline: auto;
+    }
+    .gorse-methodo .gorse-fig figcaption {
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+      text-align: center;
+      padding: 0.35rem 0.4rem 0.15rem;
+    }
+    .gorse-methodo .gorse-steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+    .gorse-methodo .gorse-steps li {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 0.7rem;
+      align-items: start;
+    }
+    .gorse-methodo .gorse-steps .n {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--gorse);
+      color: #fffdf8;
+      font-weight: 700;
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .gorse-methodo .gorse-steps p { margin: 0; }
+    .gorse-methodo .gorse-steps strong { color: var(--gorse); }
+    .gorse-methodo h3 {
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--gorse);
+      margin: 0 0 0.45rem;
+    }
+    .gorse-methodo .gorse-block { margin: 0 0 1.15rem; }
+    .gorse-methodo .gorse-block:last-child { margin-bottom: 0; }
+    .gorse-methodo .gorse-dls,
+    .gorse-methodo .gorse-seqs {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.55rem;
+    }
+    .gorse-methodo .gorse-dls li,
+    .gorse-methodo .gorse-seqs li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.85rem;
+      align-items: baseline;
+    }
+    .gorse-methodo .gorse-dls .lab {
+      flex: 0 0 auto;
+      min-width: 11rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    @media (max-width: 800px) {
+      .gorse-methodo { padding: 1.25rem 1rem 1.35rem; }
+      .gorse-layout { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body data-section="methodologie">
   <header class="site-header">
@@ -50,10 +164,73 @@
     <div class="band-body">
       <p class="kicker">Collection</p>
       <h1 style="font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);margin:0 0 0.5rem">Méthodologie et pédagogie</h1>
-      <p class="lede">Outils transversaux : méthode, progression annuelle, évaluation, GEREX, à tous les niveaux.</p>
+      <p class="lede">Outils transversaux : <a href="#spirale-de-gorse">la spirale de Gorse</a>, méthode, progression annuelle, évaluation, GEREX, à tous les niveaux.</p>
     </div>
   </div>
   <main class="wrap" style="padding-top:1.5rem;padding-bottom:3rem">
+    <section class="gorse-methodo" id="spirale-de-gorse" aria-labelledby="gorse-title">
+      <p class="kicker">Méthode</p>
+      <h2 id="gorse-title">Un principe d’apprentissage innovant : la spirale de Gorse</h2>
+      <div class="gorse-intro">
+        <p>Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à la grand-mère de son mari.</p>
+        <p>On gravit un texte comme on gravit une pente : chaque tour est une prise plus haute. On part de ce qui saute aux yeux, puis l’attention se resserre, jusqu’à la pointe, le sommet où l’essentiel se laisse voir.</p>
+      </div>
+      <div class="gorse-layout">
+        <figure class="gorse-fig">
+          <img src="../tomber-amoureux-de-letude/img/spirale-gorse-modele.svg" width="920" height="700" alt="Spirale de Gorse en quatre tours, large au départ, qui se resserre jusqu’à la pointe « Je trouve le sens » : Je remarque, Je repère, Je comprends, J’anticipe.">
+          <figcaption>Quatre tours, puis la pointe. À l’extérieur, l’idée. À l’intérieur, les appuis.</figcaption>
+        </figure>
+        <ol class="gorse-steps">
+          <li><span class="n" aria-hidden="true">1</span><p><strong>Je remarque.</strong> La première prise : ce qui saute aux yeux, la première impression.</p></li>
+          <li><span class="n" aria-hidden="true">2</span><p><strong>Je repère.</strong> Un tour plus haut : un détail, un passage, un élément plus net.</p></li>
+          <li><span class="n" aria-hidden="true">3</span><p><strong>Je comprends.</strong> Une prise plus ferme : ce que ces éléments me permettent de comprendre.</p></li>
+          <li><span class="n" aria-hidden="true">4</span><p><strong>J’anticipe.</strong> Je me fie à mon intuition pour percer le texte à jour et anticiper sa finalité.</p></li>
+          <li><span class="n" aria-hidden="true">5</span><p><strong>Je trouve le sens.</strong> La pointe, le sommet : le problème précis, l’essentiel que l’on peut défendre, et sa limite.</p></li>
+        </ol>
+      </div>
+      <div class="gorse-block">
+        <h3>Les fiches à télécharger</h3>
+        <ul class="gorse-dls">
+          <li>
+            <span class="lab">Fiche courte</span>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-courte.pdf">pdf</a>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-courte.docx">docx</a>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-courte.odt">odt</a>
+          </li>
+          <li>
+            <span class="lab">Fiche adaptée</span>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-adaptee.pdf">pdf</a>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-adaptee.docx">docx</a>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-adaptee.odt">odt</a>
+          </li>
+          <li>
+            <span class="lab">Fiche courte adaptée</span>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-courte-adaptee.pdf">pdf</a>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-courte-adaptee.docx">docx</a>
+            <a class="work-link" href="../tomber-amoureux-de-letude/fiches/fiche-spirale-de-gorse-courte-adaptee.odt">odt</a>
+          </li>
+        </ul>
+      </div>
+      <div class="gorse-block">
+        <h3>Séquences qui la mettent en œuvre</h3>
+        <ul class="gorse-seqs">
+          <li>
+            <a class="work-link" href="../tomber-amoureux-de-letude/">Tomber amoureux de l’étude</a>
+            <span class="muted">avec deux exemples,</span>
+            <a class="work-link" href="../tomber-amoureux-de-letude/#discours-de-la-servitude-volontaire">La Boétie, Discours de la servitude volontaire</a>
+            <span class="muted">et</span>
+            <a class="work-link" href="../tomber-amoureux-de-letude/#spirale">« Le Dormeur du val »</a>
+          </li>
+          <li><a class="work-link" href="../dissertation-et-essai/">Dissertation et essai : les épreuves du bac en marche</a></li>
+          <li><a class="work-link" href="../en-lisant-en-ecrivant/">En lisant en écrivant, Julien Gracq</a></li>
+          <li><a class="work-link" href="../cahier-de-douai/">Rimbaud, Cahier de Douai</a></li>
+          <li><a class="work-link" href="../oral-du-bac/">L’oral du bac de français : présenter une œuvre et dialoguer</a></li>
+          <li><a class="work-link" href="../hlp-je-est-un-autre/">HLP, Je est un autre ? Les métamorphoses du moi</a></li>
+          <li><a class="work-link" href="../passing-the-flame/">Passing the Flame · Othello</a></li>
+          <li><a class="work-link" href="../deux-deesses/">Deux déesses : déchiffrer les signes de la modernité</a></li>
+        </ul>
+      </div>
+    </section>
     <div class="filters" data-filters aria-label="Filtres par thème"></div>
     <p class="muted">Supports recensés : <strong data-count>0</strong></p>
     <div data-catalogue data-section="methodologie" data-collection="methodologie" data-groups="dissertation:La dissertation|commentaire:Le commentaire|oral:L’oral du bac">

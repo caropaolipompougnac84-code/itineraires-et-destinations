@@ -1656,8 +1656,8 @@
     },
     {
       "id": "segpa-lettres-4e-annee-brevet",
-      "title": "Français · 4e · Toute l'année, avec préparation au brevet",
-      "summary": "Parcours de français pour la quatrième, dans la progression du cycle 4, avec une préparation au brevet.",
+      "title": "Français 4e : toute l'année · Vers le brevet : les capacités travaillées dès la 4e",
+      "summary": "La 4e comme année tournant : les cinq questionnements du programme, cours complets, traces écrites, travail à la maison, langue, oral, exposés, évaluations et grilles, et des premiers pas vers la 3e.",
       "section": "segpa",
       "subject": "lettres",
       "level": "4e",
@@ -1670,10 +1670,10 @@
         "ecrit",
         "oral"
       ],
-      "url": "https://quatrieme-francais-annee.netlify.app/",
+      "url": "https://itineraires-destinations.fr/francais-4e/",
       "image": "brevet/fr-4e.jpg",
-      "credit": "Gustave Caillebotte, Rue de Paris, temps de pluie, 1877. Huile sur toile, Art Institute of Chicago. Domaine public.",
-      "date": "2026-11-10"
+      "credit": "Marie Bashkirtseff, Un meeting, 1884. Huile sur toile, musée d'Orsay, Paris. Domaine public.",
+      "date": "2026-11-14"
     },
     {
       "id": "segpa-lettres-3e-annee-dnb",

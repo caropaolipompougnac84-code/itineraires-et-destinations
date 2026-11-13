@@ -1838,6 +1838,28 @@
       "date": "2026-11-13",
       "image": "quand-la-machine-sarrete.jpg",
       "credit": "Hubert Robert, Vue imaginaire de la Grande Galerie du Louvre en ruines, 1796, musée du Louvre. Domaine public, via Wikimedia Commons."
+    },
+
+    {
+      "id": "lg-lettres-1re-dune-ravage-celui-qui-sauve",
+      "title": "Lettres · 1re technologique · Celui qui sauve, celui qui règne",
+      "summary": "Séquence croisée de littérature comparée, Première technologique, lycée général et technologique, sur Dune de Frank Herbert (1965) et Ravage de René Barjavel (1943). Question directrice : la dystopie a-t-elle une origine, ou est-elle devenue un genre, voire un sous-genre littéraire ? Problématique comparative : quand un monde perd ce dont il dépend, celui qui le sauve devient-il son maître ? Huit séances, la spirale de Gorse, un fil anglais, des exercices, une évaluation sommative écrite sur 20 avec grille, une présentation orale sur 20, et une séance pour s'approprier d'autres œuvres afin de classer les deux romans. Après Who Speaks for the Desert? et Quand la machine s'arrête.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première technologique · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "culture",
+        "oral",
+        "ecrit",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/celui-qui-sauve-celui-qui-regne/",
+      "date": "2026-11-13",
+      "image": "celui-qui-sauve-celui-qui-regne.jpg",
+      "credit": "Vue d'une cité idéale, dite La Cité idéale d'Urbino, vers 1480-1490, Galleria Nazionale delle Marche, Urbino. Domaine public, via Wikimedia Commons."
     }
   ]
 }

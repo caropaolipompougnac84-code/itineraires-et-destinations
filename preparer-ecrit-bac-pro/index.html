@@ -156,12 +156,18 @@
       line-height: 1.45;
     }
     .downloads .racc-line {
-      display: block;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.35em;
       margin: 0.28rem 0;
-      padding-left: 1.35em;
-      text-indent: -1.35em;
     }
-    .downloads .fleche { color: #7B1E3A; font-weight: 700; margin-right: 0.2em; }
+    .downloads .fleche {
+      color: #7B1E3A;
+      font-weight: 700;
+      flex: 0 0 auto;
+      line-height: 1.45;
+    }
+    .downloads .racc-text { flex: 1 1 auto; min-width: 0; }
     .downloads mark {
       background: #FFF176;
       color: inherit;
@@ -421,9 +427,9 @@
             <a href="modules/00-Guide-de-lannee.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span></span>
           </p>
         </li>
         <li>
@@ -434,8 +440,8 @@
             <a href="modules/01-Module-Lire-un-document.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
           </p>
         </li>
         <li>
@@ -446,8 +452,8 @@
             <a href="modules/02-Module-Confronter-des-documents.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
           </p>
         </li>
         <li>
@@ -458,8 +464,8 @@
             <a href="modules/03-Module-Lire-les-mots-du-sujet.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
           </p>
         </li>
         <li>
@@ -470,9 +476,9 @@
             <a href="modules/04-Module-Construire-un-plan.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span></span>
           </p>
         </li>
         <li>
@@ -483,8 +489,8 @@
             <a href="modules/05-Module-Lart-de-citer.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
           </p>
         </li>
         <li>
@@ -495,9 +501,9 @@
             <a href="modules/06-Module-La-ponctuation.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span></span>
           </p>
         </li>
         <li>
@@ -508,9 +514,9 @@
             <a href="modules/07-Module-Rediger-et-relire.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span></span>
           </p>
         </li>
         <li>
@@ -521,7 +527,7 @@
             <a href="modules/08-Module-Le-sujet-blanc.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
           </p>
         </li>
         <li>
@@ -532,9 +538,9 @@
             <a href="modules/09-Fiche-professeur-montage-de-lannee.odt">LibreOffice (.odt)</a>
           </span>
           <p class="raccrocher-page">
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span>
-            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../mangez-le-si-vous-voulez/">Mangez-le si vous voulez</a></mark>, Terminale, objet d’étude « Vivre aujourd’hui ».</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../victor-hugo-justice-pro/">Victor Hugo et la justice</a></mark>, Première.</span></span>
+            <span class="racc-line"><span class="fleche" aria-hidden="true">→</span> <span class="racc-text"><mark><a href="../compte-rendu-pfmp-motocycles/">Rendre compte d’une PFMP, option motocycles</a></mark>, Terminale.</span></span>
           </p>
         </li>
       </ul>

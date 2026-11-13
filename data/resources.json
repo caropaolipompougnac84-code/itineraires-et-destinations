@@ -1795,6 +1795,28 @@
       "date": "2026-11-13",
       "image": "banksy-who-owns-an-anonymous-voice.jpg",
       "credit": "A mural widely attributed to Banksy, Gymnast with a Ribbon, Irpin, Ukraine, 2022. Photograph by Rasal Hague, 18 November 2022, Wikimedia Commons, CC BY-SA 4.0. The photograph is shared under that licence. The artwork itself remains protected."
+    },
+    {
+      "id": "lg-anglais-dune-who-speaks-for-the-desert",
+      "title": "Anglais · 1re technologique · Who Speaks for the Desert?",
+      "summary": "Séquence d'anglais sur le premier roman de Frank Herbert, Dune (1965), Première technologique, lycée général et technologique, LVA et LVB, B1-B2. Axe principal : Art et pouvoir (BO n° 22 du 29 mai 2025). Dans le fil des fictions d'avertissement, avec la séquence Orwell en Terminale. Une étude de Ravage et une séquence croisée suivront.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "Première technologique · lycée général et technologique · LVA et LVB · B1-B2",
+      "collection": "lg-anglais",
+      "themes": [
+        "litterature",
+        "environnement",
+        "culture",
+        "citoyennete",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/",
+      "date": "2026-11-13",
+      "image": "dune-who-speaks-for-the-desert.jpg",
+      "credit": "Giles Laurent, Dune 45 in Sossusvlei at sunrise, Namibia. Wikimedia Commons, CC BY-SA 4.0."
     }
   ]
 }

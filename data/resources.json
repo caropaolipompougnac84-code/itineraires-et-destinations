@@ -1861,5 +1861,52 @@
       "image": "celui-qui-sauve-celui-qui-regne.jpg",
       "credit": "Vue d'une cité idéale, dite La Cité idéale d'Urbino, vers 1480-1490, Galleria Nazionale delle Marche, Urbino. Domaine public, via Wikimedia Commons."
     }
+,
+    {
+      "id": "lp-lettres-tle-preparer-ecrit-bac-pro",
+      "title": "Lettres · Tle Bac pro · Préparer l’écrit du bac professionnel",
+      "summary": "Huit séances pour préparer l’écrit de français du baccalauréat professionnel : lire un corpus, construire un écrit argumentatif, avec la spirale de Gorse, autour du programme limitatif « Rythmes et cadences de la vie moderne : quel temps pour soi ? ».",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": ["tle", "bac"],
+      "levelLabel": "Tle Bac pro · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": ["ecrit", "examen"],
+      "url": "https://itineraires-destinations.fr/preparer-ecrit-bac-pro/",
+      "date": "2026-11-13",
+      "image": "preparer-ecrit-bac-pro.jpg",
+      "credit": "Adolph von Menzel, Eisenwalzwerk (moderne Cyklopen), en français La Forge (Cyclopes modernes), 1872-1875, huile sur toile, Alte Nationalgalerie, Berlin. Domaine public, via Wikimedia Commons (Google Art Project)."
+    },
+    {
+      "id": "meth-preparer-ecrit-bac-pro",
+      "title": "Lettres · Méthode · Préparer l’écrit du bac professionnel",
+      "summary": "Huit séances pour préparer l’écrit de français du baccalauréat professionnel : lecture d’un corpus et écrit argumentatif, avec la spirale de Gorse, les mots du sujet, l’art de citer et la ponctuation.",
+      "section": "methodologie",
+      "subject": "lettres",
+      "level": "tle",
+      "levelLabel": "Terminale du baccalauréat professionnel",
+      "collection": "methodologie",
+      "methodGroup": "ecrit-pro",
+      "themes": ["ecrit", "examen"],
+      "url": "https://itineraires-destinations.fr/preparer-ecrit-bac-pro/",
+      "date": "2026-11-13",
+      "image": "preparer-ecrit-bac-pro.jpg",
+      "credit": "Adolph von Menzel, Eisenwalzwerk (moderne Cyklopen), 1872-1875, Alte Nationalgalerie, Berlin. Domaine public, via Wikimedia Commons (Google Art Project)."
+    },
+    {
+      "id": "cfa-lettres-preparer-ecrit-bac-pro",
+      "title": "Lettres · CFA · Préparer l’écrit du bac professionnel",
+      "summary": "Huit séances pour préparer l’écrit de français du baccalauréat professionnel, pour les apprentis en CFA comme pour les élèves sous statut scolaire : lecture d’un corpus et écrit argumentatif, avec la spirale de Gorse.",
+      "section": "cfa",
+      "subject": "lettres",
+      "level": "bacpro",
+      "levelLabel": "Bac pro · CFA",
+      "collection": "cfa-lettres",
+      "themes": ["ecrit", "examen"],
+      "url": "https://itineraires-destinations.fr/preparer-ecrit-bac-pro/",
+      "date": "2026-11-13",
+      "image": "preparer-ecrit-bac-pro.jpg",
+      "credit": "Adolph von Menzel, Eisenwalzwerk (moderne Cyklopen), 1872-1875, Alte Nationalgalerie, Berlin. Domaine public, via Wikimedia Commons (Google Art Project)."
+    }
   ]
 }

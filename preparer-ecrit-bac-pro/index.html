@@ -155,13 +155,20 @@
       font-size: 1.05rem;
       line-height: 1.45;
     }
-    .downloads .racc-line { display: block; margin: 0.28rem 0; }
+    .downloads .racc-line {
+      display: block;
+      margin: 0.28rem 0;
+      padding-left: 1.35em;
+      text-indent: -1.35em;
+    }
     .downloads .fleche { color: #7B1E3A; font-weight: 700; margin-right: 0.2em; }
     .downloads mark {
       background: #FFF176;
       color: inherit;
       padding: 0.05em 0.28em;
       font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
     .downloads .raccrocher-page a { color: inherit; }
     @media (max-width: 640px) {

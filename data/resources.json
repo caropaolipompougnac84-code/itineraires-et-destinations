@@ -160,6 +160,26 @@
   ],
   "resources": [
     {
+      "id": "lp-lettres-2de-devenir-soi-etranger",
+      "title": "Lettres · 2de Bac pro · Devenir soi quand on se sent étranger",
+      "summary": "Séquence de français, Seconde baccalauréat professionnel, objet d'étude « Devenir soi : écritures autobiographiques ». Œuvre : Vallès, L'Enfant. 18 séances de 52 minutes, à onglets, avec fiches, grilles, méthode pour prendre une correction, et évaluations fréquentes.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de Bac pro · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "identite",
+        "litterature",
+        "ecrit",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/devenir-soi-etranger/",
+      "date": "2026-11-14",
+      "image": "devenir-soi-etranger.jpg",
+      "credit": "Diego Velázquez, Portrait de Juan de Pareja, 1650, Metropolitan Museum of Art, New York. Domaine public."
+    },
+    {
       "id": "lp-anglais-trades-in-english",
       "title": "Anglais · CAP, bac pro et CFA · Trades in English",
       "summary": "Vingt dialogues en anglais, entre un professionnel et un client, pour le CAP, le bac professionnel et le CFA. Chaque vidéo a sa fiche élève et son corrigé, en pdf, docx et odt.",

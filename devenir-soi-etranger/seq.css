@@ -1,0 +1,178 @@
+/* Devenir soi quand on se sent étranger · Lettres · bordeaux #7B1E3A */
+:root{
+  --bg:#f7f3ef;
+  --paper:#fff;
+  --ink:#1a1214;
+  --soft:#4a3a3e;
+  --line:#e4d6d0;
+  --bordeaux:#7B1E3A;
+  --prof:#7B1E3A;
+  --prof-bg:#f7eff2;
+  --stud:#6b3a16;
+  --stud-bg:#fff8ef;
+  --more:#f4eee8;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:5.5rem}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:22px/1.65 "Atkinson Hyperlegible",Verdana,Arial,sans-serif;
+  overflow-wrap:break-word;
+}
+main{max-width:900px;margin:0 auto;padding:28px 20px 64px}
+.site-nav{background:var(--bordeaux);color:#fff}
+.site-nav .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;padding:.7rem 1rem;max-width:1100px;margin:0 auto}
+.site-nav a{color:#fff;font-weight:700;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.site-nav a:hover,.site-nav a:focus{text-decoration:underline}
+.seq-bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.seq-nav{
+  display:flex;flex-wrap:wrap;gap:8px;
+  padding:10px 20px 12px;margin:0 auto;max-width:1100px;
+}
+.seq-nav a{
+  color:var(--bordeaux);text-decoration:none;
+  border:1px solid var(--line);background:#fff;
+  border-radius:999px;padding:8px 12px;min-height:40px;
+  display:inline-flex;align-items:center;font-size:1rem;font-weight:700;
+}
+.seq-nav a.on,.seq-nav a[aria-current="page"]{background:var(--bordeaux);color:#fff;border-color:var(--bordeaux)}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.22;color:var(--bordeaux);margin:0 0 .6rem}
+h1{font-size:clamp(1.85rem,4.4vw,2.6rem);margin:.2rem 0 1rem}
+h2{font-size:1.45rem;margin:2.2rem 0 .8rem}
+h3{font-size:1.18rem;margin:0 0 .5rem}
+.kicker{font-size:1rem;letter-spacing:.03em;color:var(--soft);margin:0 0 .35rem;font-weight:700}
+.exergue{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:1.25rem;color:var(--bordeaux);margin:0 0 1.4rem}
+p{margin:0 0 1rem}
+p,li{max-width:62ch}
+.hero{margin:0 0 2rem}
+.hero img,.figure img{width:100%;height:auto;border-radius:14px;display:block}
+.caption,.credit{font-size:1rem;color:var(--soft);margin:.5rem 0 0;max-width:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.4rem 0 2rem}
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:16px;
+  padding:1.15rem 1.2rem 1.2rem;
+}
+.card h2,.card h3{margin-top:0}
+.lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:1rem 0 2.2rem}
+.lessons a{
+  display:block;background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:14px 14px 16px;text-decoration:none;color:var(--ink);min-height:96px;
+}
+.lessons a:hover,.lessons a:focus{border-color:var(--bordeaux);box-shadow:0 0 0 2px rgba(123,30,58,.15)}
+.lessons strong{display:block;color:var(--bordeaux);font-size:1rem;letter-spacing:.04em;margin-bottom:.35rem}
+.box-prof,.box-stud{
+  border-radius:16px;padding:1.2rem 1.25rem 1.3rem;margin:1.2rem 0 1.6rem;
+}
+.box-prof{background:var(--prof-bg);border:2px solid var(--prof)}
+.box-stud{background:var(--stud-bg);border:2px solid var(--stud)}
+.box-prof > h3,.box-stud > h3{
+  font-family:"Atkinson Hyperlegible",Verdana,sans-serif;
+  font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;margin:0 0 .8rem;
+}
+.box-prof > h3{color:var(--prof)}
+.box-stud > h3{color:var(--stud)}
+.box-stud ol,.box-prof ol,.box-stud ul,.box-prof ul{margin:.2rem 0 .4rem;padding-left:1.3rem}
+.box-stud li,.box-prof li{margin:0 0 .55rem;max-width:none}
+.timing{font-weight:700;color:var(--bordeaux);margin:0 0 .6rem}
+.lines{
+  min-height:7.5rem;border:1px solid #d7cbb8;border-radius:10px;
+  background:repeating-linear-gradient(#fffdf8,#fffdf8 1.85rem,#efe6d6 1.85rem,#efe6d6 1.9rem);
+  margin:.7rem 0 .2rem;
+}
+.trace,.homework{
+  background:#fff;border-radius:16px;padding:1.1rem 1.2rem;margin:1.6rem 0;
+}
+.trace{border:1px solid #e0c8cf}
+.homework{border:1px dashed var(--bordeaux)}
+details.more,details.reading{
+  background:var(--more);border:1px solid #e0d3cc;border-radius:14px;
+  padding:.7rem 1rem;margin:1.2rem 0 1.6rem;
+}
+details.reading{background:#fff;border-color:var(--line)}
+details > summary{cursor:pointer;font-weight:700;color:var(--bordeaux);padding:.25rem 0}
+details[open] > summary{margin-bottom:.7rem}
+blockquote.texte{
+  background:#fff;border-left:4px solid var(--bordeaux);margin:1.2rem 0 1.6rem;
+  padding:1rem 1.2rem;font-size:1.05em;line-height:1.7;
+}
+blockquote.texte p{max-width:none;margin:0 0 .7rem}
+blockquote.texte .ref{font-size:1rem;color:var(--soft);font-style:normal;margin:0}
+table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:1rem}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top;text-align:left}
+th{background:#f7eff2;color:var(--bordeaux)}
+.dl{display:flex;flex-wrap:wrap;gap:10px;margin:1rem 0 2rem}
+.dl a{
+  display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;
+  background:var(--bordeaux);color:#fff;text-decoration:none;border-radius:999px;font-weight:700;
+}
+.dl a.sec{background:#fff;color:var(--bordeaux);border:2px solid var(--bordeaux)}
+.dl-label{font-weight:700;color:var(--bordeaux);margin:0 0 .4rem}
+.switch{display:flex;gap:8px;margin:0 0 1rem}
+.switch button{min-height:44px;padding:8px 14px;border:1px solid var(--bordeaux);border-radius:8px;background:#fff;color:var(--bordeaux);font-weight:700;cursor:pointer;font-size:1rem}
+a{color:#7B1E3A}
+.notice{font-size:1rem;color:var(--soft)}
+footer{margin-top:3rem;padding:20px 14px 32px;border-top:1px solid var(--line);font-size:1rem;color:var(--soft);text-align:center}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.4rem .8rem;z-index:9}
+body.dys{font-size:1.25rem;line-height:1.8;letter-spacing:.02em;background:#fffaf2}
+body.dys em,body.dys i{font-style:normal;font-weight:700}
+body.dys main{max-width:760px}
+.lisible-note{font-size:1rem;color:var(--soft)}
+.note-vie-scolaire{
+  background:#fff;border:2px solid var(--bordeaux);border-radius:14px;
+  padding:1rem 1.15rem;margin:1.2rem 0;
+}
+.objectifs{
+  background:#fff8ef;border:2px solid #6b3a16;border-radius:14px;
+  padding:1rem 1.15rem;margin:1.2rem 0;
+}
+.objectifs h3{color:#6b3a16;margin-top:0}
+.codes{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:1rem 0}
+.codes p{margin:0;max-width:none}
+.qcm .item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin:0 0 1rem}
+.qcm button{
+  display:block;width:100%;text-align:left;margin:.35rem 0;padding:10px 12px;
+  border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;cursor:pointer;
+}
+.qcm button:hover{border-color:var(--bordeaux)}
+.qcm button.ok{background:#e8f5ec;border-color:#2d6a4f}
+.qcm button.ko{background:#fdeeee;border-color:#9b2335}
+.qcm .feedback{margin:.5rem 0 0;font-weight:700}
+.lesson-tabs{margin:1.2rem 0 1rem}
+.lesson-tabs .row{
+  display:flex;flex-wrap:wrap;gap:6px;
+  padding:0;margin:0;
+}
+.lesson-tabs a{
+  color:var(--bordeaux);text-decoration:none;border:1px solid var(--line);background:#fff;
+  border-radius:999px;padding:8px 12px;min-height:40px;display:inline-flex;align-items:center;
+  font-size:1rem;font-weight:700;
+}
+.lesson-tabs a[aria-selected="true"]{background:var(--bordeaux);color:#fff;border-color:var(--bordeaux)}
+.nojs-note{display:none;font-size:1rem;color:var(--soft)}
+html:not(.js-tabs) .nojs-note{display:block}
+section.panel{display:block;padding:.4rem 0 1.4rem}
+html.js-tabs section.panel{display:none}
+html.js-tabs section.panel.is-active{display:block}
+.minutage table{font-size:1rem}
+.cinq-bo{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;margin:1rem 0}
+.secours ul{padding-left:1.2rem}
+@media (max-width:640px){
+  body{font-size:22px}
+  main{padding:20px 14px 48px}
+  h1{font-size:1.7rem}
+  .grid,.lessons{grid-template-columns:1fr}
+  .site-nav .wrap{gap:4px 12px;padding:.45rem .75rem}
+  .seq-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:6px;padding:8px 14px 10px}
+  .seq-nav a{flex:0 0 auto;padding:7px 11px;min-height:36px}
+  .lesson-tabs .row{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .lesson-tabs a{flex:0 0 auto}
+  html{scroll-padding-top:6.5rem}
+}
+@media print{
+  .site-nav,.seq-bar,.seq-nav,.switch,.lesson-tabs{display:none}
+  body{background:#fff;font-size:16pt}
+  .box-prof,.box-stud,section.panel{break-inside:avoid}
+  html.js-tabs section.panel{display:block !important}
+}

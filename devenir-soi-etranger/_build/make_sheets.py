@@ -11,7 +11,7 @@ from docx.shared import Cm, Pt, RGBColor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lessons import LESSONS
-from helpers import FOOT, TITLE, LEVEL, dash_ok
+from helpers import FOOT, TITLE, LEVEL, dash_ok, POINT_INTRO, POINT_QUOTE, POINT_CREDIT, POINT_SUITE
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "downloads"
@@ -279,6 +279,11 @@ def prof_doc():
     setup(doc, 16)
     heading(doc, TITLE, 22)
     para(doc, LEVEL + " · Objet d'étude : Devenir soi, écritures autobiographiques", 16, italic=True)
+    heading(doc, "Point de départ", 18)
+    para(doc, POINT_INTRO, 16)
+    para(doc, "« " + POINT_QUOTE + " »", 16, italic=True)
+    para(doc, POINT_CREDIT, 14, italic=True)
+    para(doc, POINT_SUITE, 16)
     para(doc, "BO spécial n° 5 du 11 avril 2019. 18 séances de 52 minutes. Œuvre : Jules Vallès, L'Enfant (1879). Groupement : Montaigne, Rousseau, Montesquieu, et quatre voix du manuel.", 16)
     heading(doc, "Parti pris", 18)
     para(doc, "Le sentiment d'être étranger est pris au sens large. Personne n'est obligé de raconter un souvenir douloureux. On peut inventer. Les textes de migration ou de milieu sont lus de façon neutre, sans prendre parti.", 16)

@@ -60,6 +60,31 @@ CODES = """
 </div>
 """
 
+
+POINT_INTRO = "Cette séquence est née d'une publication trouvée sur LinkedIn, qui m'a interrogée."
+POINT_QUOTE = (
+    "Notre rapport aux autres reste profondément marqué par l'histoire coloniale européenne. "
+    "Ce passé continue de façonner notre regard sur les personnes racisées, parce que nous ne l'avons pas véritablement déconstruit ni critiqué. "
+    "Et cet héritage reste actif aujourd'hui, comme le montre le retour de discours racistes de plus en plus explicites."
+)
+POINT_CREDIT = "Michel Agier, France Culture, Questions du soir : l'idée (« Qu'est-ce que l'impensé raciste ? »)"
+POINT_SUITE = (
+    "Cette citation est un point de départ, pour interroger la façon dont on regarde les autres, et dont on se regarde soi-même. "
+    "Ce n'est pas un débat politique. En classe, elle sert de déclencheur sur le regard. "
+    "Chacun peut répondre, sans avoir à raconter son histoire."
+)
+POINT_DE_DEPART = f"""
+<aside class="point-depart" aria-label="Point de départ">
+<h2>Point de départ</h2>
+<p>{POINT_INTRO}</p>
+<blockquote>
+<p>« {POINT_QUOTE} »</p>
+<p class="ref">{POINT_CREDIT}</p>
+</blockquote>
+<p>{POINT_SUITE}</p>
+</aside>
+"""
+
 def dash_ok(s):
     if "—" in s or "–" in s:
         raise ValueError("long dash found: " + s[max(0,s.find("—")-30):s.find("—")+30] if "—" in s else s[max(0,s.find("–")-30):s.find("–")+30])

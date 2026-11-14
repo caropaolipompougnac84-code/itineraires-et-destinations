@@ -8,7 +8,7 @@ from helpers import (
     BASE, TITLE, LEVEL, FOOT,
     head, footer, site_nav, seq_nav, lesson_tabs,
     timing_table, five_al, grids, gestion_panel, secours_panel,
-    figure, dl_eleve, VIE_NOTE, OBJECTIFS_BOX, CODES, dash_ok,
+    figure, dl_eleve, VIE_NOTE, OBJECTIFS_BOX, CODES, POINT_DE_DEPART, dash_ok,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -129,6 +129,7 @@ def accueil():
     inner = f'''
 <p class="kicker">Lettres · Seconde baccalauréat professionnel</p>
 <h1>{TITLE}</h1>
+{POINT_DE_DEPART}
 <p class="exergue">Comment devient-on soi-même quand on se sent étranger, ailleurs ou même parmi les siens ?</p>
 {figure("velazquez-juan-de-pareja.jpg",
     "Diego Velázquez, Portrait de Juan de Pareja, 1650 : un homme en habit sombre, col de dentelle, nous regarde.",

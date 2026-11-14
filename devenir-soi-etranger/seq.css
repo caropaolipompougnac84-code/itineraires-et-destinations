@@ -158,6 +158,26 @@ html.js-tabs section.panel.is-active{display:block}
 .minutage table{font-size:1rem}
 .cinq-bo{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;margin:1rem 0}
 .secours ul{padding-left:1.2rem}
+
+.point-depart{
+  background:#fff;
+  border:2px solid var(--bordeaux);
+  border-radius:16px;
+  padding:1.15rem 1.25rem 1.3rem;
+  margin:.4rem 0 1.6rem;
+  font-size:22px;
+}
+.point-depart h2{margin-top:0;font-size:1.35rem}
+.point-depart blockquote{
+  margin:1rem 0;
+  padding:.2rem 0 .2rem 1rem;
+  border-left:4px solid var(--bordeaux);
+  background:transparent;
+  font-size:22px;
+}
+.point-depart blockquote p{max-width:none;margin:0 0 .7rem}
+.point-depart .ref{font-size:22px;color:var(--soft);font-style:normal;margin:0}
+
 @media (max-width:640px){
   body{font-size:22px}
   main{padding:20px 14px 48px}

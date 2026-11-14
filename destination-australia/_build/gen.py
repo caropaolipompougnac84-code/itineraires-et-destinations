@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 """Classroom-first rebuild of Heading Off to Australia."""
 from pathlib import Path
+import json
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "/destination-australia"
 TITLE = "Heading Off to Australia"
 FOOT = "© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0"
-LEVEL = "Lycée professionnel, lycée général et technologique · B1, B2"
+LEVEL = "Terminale bac pro · Première bac pro (adaptable)"
 OG = "https://itineraires-destinations.fr/destination-australia/images/roberts-coogee.jpg"
 COVER = "roberts-coogee.jpg"
 
@@ -116,6 +117,62 @@ def homework(todo, nxt):
 <div class="lines" aria-hidden="true"></div>
 </section>'''
 
+FIVE = [
+    ("CO", "Compréhension de l'oral"),
+    ("CE", "Compréhension de l'écrit"),
+    ("EE", "Expression écrite"),
+    ("EOC", "Expression orale en continu"),
+    ("EOI", "Interaction orale"),
+]
+
+def cadre(actives, rows, solo):
+    """Five official language activities, 52-minute timing, fallback box."""
+    lis = []
+    for code, name in FIVE:
+        active = code in actives
+        cls = ' class="on"' if active else ""
+        etat = "Travaillée aujourd'hui." if active else "Pas le cœur de cette séance."
+        lis.append(
+            f"<li{cls}><strong>{code}</strong> · {name}. "
+            f'<span class="notice">{etat}</span></li>'
+        )
+    rows_html = "".join(f"<tr><th>{a}</th><td>{b}</td></tr>" for a, b in rows)
+    return (
+        '<aside class="cinq-bo" aria-label="Les cinq directives du Bulletin officiel">'
+        "<h3>Les cinq directives du Bulletin officiel</h3>"
+        '<p class="notice">Les cinq activités langagières du programme de la voie professionnelle '
+        "(BO spécial n° 5 du 11 avril 2019). Chacune compte pour un cinquième de l'épreuve.</p>"
+        f"<ul>{''.join(lis)}</ul>"
+        "</aside>\n"
+        '<section class="minutage" aria-label="Minutage de la séance">'
+        "<h3>Minutage · 52 minutes</h3>"
+        "<table><thead><tr><th>Temps</th><th>Activité</th></tr></thead>"
+        f"<tbody>{rows_html}</tbody></table>"
+        "</section>\n"
+        '<aside class="secours" aria-label="Issue de secours">'
+        "<h3>Issue de secours</h3><ul>"
+        "<li><strong>La classe s'agite.</strong> On arrête deux minutes, on revient à une tâche courte et orale, chacun dit une phrase, puis on reprend le minutage.</li>"
+        "<li><strong>Vous avez fini trop tôt.</strong> On allonge l'oral : un second exemple, une phrase de plus, ou une carte bristol.</li>"
+        "<li><strong>Le matériel tombe en panne.</strong> On passe à la fiche papier, au tableau, ou à une dictée de la trace. La séance continue sans écran.</li>"
+        "<li><strong>Tempête émotionnelle.</strong> Si un élève met vraiment le bazar, on l'écarte un moment selon le règlement de l'établissement (vie scolaire, autre salle, lieu surveillé), on lui confie une tâche courte liée à la séance ("
+        + solo
+        + "), puis on le réintègre calmement. Le cours minuté continue pour les autres.</li>"
+        "</ul></aside>"
+    )
+
+ADAPTER = '''<details class="more" id="adapter-premiere">
+<summary>Adapter en Première bac pro</summary>
+<ul>
+<li>Ne prenez pas les 13 séances d'affilée : choisissez un parcours plus court, par exemple S1 (tableaux), S4 (animaux), S5 (transports et FIFO), S6 (visa), S8 (budget), une vidéo de Listening, puis l'entretien.</li>
+<li>Au budget (S8), guidez davantage le calcul : donnez les figures, faites calculer seulement le reste à vivre, et gardez le calculateur pour une démonstration collective.</li>
+<li>Étayez les lectures les plus longues : lisez-les ensemble, ou donnez d'abord le texte court, puis deux questions seulement du texte plus long.</li>
+<li>Gardez en priorité les mini-tâches concrètes : le sac de Léa (S7), le calculateur (S8), le CV et l'entretien (S9), une vidéo de Listening.</li>
+<li>Les cinq directives, le minutage et l'issue de secours restent les mêmes. En Première, serrez le minutage et allongez le temps d'étayage, sans enlever ce cadre : c'est lui qui permet de tenir la classe.</li>
+</ul>
+</details>
+'''
+
+
 def build_index():
     lessons = [
         ("S1", "Paintings", f"{BASE}/s1/", "Look, speak"),
@@ -152,7 +209,7 @@ def build_index():
 <article class="card"><h3>Scenario</h3><p>You are 19. You want to live in Australia for at least one year.</p><p>Before you buy your ticket, you prepare papers, money, a job and daily life.</p></article>
 <article class="card"><h3>Big question</h3><p>Is Australia really the land of opportunity for a young French person?</p></article>
 <article class="card"><h3>Final task</h3><p>You build an application file: letter, resume, forms, visa, budget, contacts.</p><p>Then you pass a phone interview.</p></article>
-<article class="card"><h3>Levels</h3><p>★ B1 · lycée professionnel (and voie technologique): shorter texts, guided tasks.</p><p>★★ B2 · lycée général et technologique: longer texts, more personal answers.</p></article>
+<article class="card"><h3>Niveaux</h3><p>Terminale bac pro · Première bac pro (adaptable).</p><p>★ textes plus courts, tâches guidées. ★★ textes plus longs, réponses plus personnelles. En Première, étayez le parcours ★★ ou gardez le parcours ★.</p></article>
 </div>
 
 <h2>The 13 lessons, then the test</h2>
@@ -237,28 +294,35 @@ Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">E
 
 {more("Présentation pour les collègues", f'''
 <p>Chère collègue, cher collègue,</p>
-<p>Séquence d'anglais pour le lycée professionnel et le lycée général et technologique, B1 et B2.</p>
+<p>Séquence d'anglais pour la Terminale bac pro, adaptable en Première bac pro.</p>
 <p>Projet : un an en Australie, le plus souvent avec un visa vacances-travail 417, parfois un visa étudiant.</p>
-<p>Les cinq activités du CECRL et la médiation sont travaillées. Chaque séance a une trace écrite et un devoir court, corrigé à la séance suivante.</p>
+<p>Chaque séance affiche les cinq directives du Bulletin officiel, un minutage de 52 minutes et une issue de secours. Les cinq activités langagières et la médiation sont travaillées. Chaque séance a une trace écrite et un devoir court, corrigé à la séance suivante.</p>
 <p>Deux passages ajoutés au texte de départ : les animaux qui font peur, et les transports, y compris le fly-in fly-out (FIFO).</p>
 <p>Chiffres revérifiés en novembre 2026 sur les sites officiels. Faites-les revérifier par les élèves.</p>
-<p>L'ancienne version en huit leçons B1 est en <a href="{BASE}/annexe/">annexe</a>.</p>
+<p>L'ancienne version en huit leçons est en <a href="{BASE}/annexe/">annexe</a>.</p>
 <p>Bien à vous,<br>Madame Carole Paoli Pompougnac</p>
 ''')}
 {more("Cadre officiel", '''
-<p>Voie professionnelle (CAP et bac pro) : arrêté du 3 avril 2019, BO spécial n° 5 du 11 avril 2019. Vie quotidienne, sociale et professionnelle, mobilité.</p>
-<p>Voie générale et technologique : BO n° 22 du 29 mai 2025 (arrêté du 5 mai 2025), rentrée 2026. Seconde, axe 6 « Les pays du Commonwealth », objet d'étude « La culture aborigène dans l'Australie contemporaine ».</p>
-<p>Voie générale : cinq axes sur six, dont l'axe 6. Voie technologique : au moins trois axes, l'axe 6 recommandé.</p>
+<p>Voie professionnelle, Terminale et Première bac pro : arrêté du 3 avril 2019, BO spécial n° 5 du 11 avril 2019. Vie quotidienne, sociale et professionnelle, mobilité. Les cinq activités langagières du programme comptent chacune pour un cinquième de l'épreuve. En Terminale, le niveau attendu à l'examen est B1+ en langue vivante A et B1 en langue vivante B.</p>
+<p>La rubrique Listening: Australian voices peut aussi servir en Première générale et technologique (compréhension de l'oral, B1). Le niveau de cette rubrique reste indiqué sur place.</p>
 ''')}
+{ADAPTER}
 '''
     page("index.html", TITLE,
-         "Heading Off to Australia : séquence d'anglais prête à l'emploi, B1 et B2, lycée professionnel et lycée général et technologique.",
+         "Heading Off to Australia : séquence d'anglais prête à l'emploi, Terminale bac pro et Première bac pro (adaptable).",
          f"{BASE}/", body)
 
 def build_s1():
     body = f'''
 <p class="kicker">Séance 1 · EOC</p>
 <h1>Look at the paintings</h1>
+{cadre(["EOC"], [
+    ("0-5 min", "Accueil, consigne, regard silencieux des quatre tableaux (une minute)."),
+    ("5-25 min", "Description guidée (foreground / background), puis questions sur le travail, la solitude, l'arrivée."),
+    ("25-40 min", "Mise en commun. Pour les plus à l'aise : point de vue colonial, choix d'une affiche."),
+    ("40-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : six à huit lignes sur un tableau, à ramasser séance 2."),
+], "décris un tableau en cinq phrases")}
 {fig("fox-landing-cook.jpg","E. Phillips Fox, Landing of Captain Cook at Botany Bay, 1770, painted in 1902.","Arrival. Who is at the centre? Who is on the side?","E. Phillips Fox, Landing of Captain Cook at Botany Bay, 1770, 1902, National Gallery of Victoria. Domaine public.")}
 {fig("roberts-shearing-rams.jpg","Tom Roberts, Shearing the Rams, 1890: men at work in a woolshed.","Hard work.","Tom Roberts, Shearing the Rams, 1890, National Gallery of Victoria. Domaine public.")}
 {fig("mccubbin-down-on-his-luck.jpg","Frederick McCubbin, Down on His Luck, 1889: a lone man by a small fire.","A lonely man, out of work.","Frederick McCubbin, Down on His Luck, 1889, Art Gallery of Western Australia. Domaine public.")}
@@ -288,8 +352,15 @@ def build_s1():
 
 def build_s2():
     body = f'''
-<p class="kicker">Séances 2 et 3 · CE, EOC</p>
+<p class="kicker">Séance 2 · CE, EOC</p>
 <h1>26 January: one date, two names</h1>
+{cadre(["CE", "EOC"], [
+    ("0-5 min", "Accueil et rappel du devoir."),
+    ("5-25 min", "Lecture du texte, crayon à la main, questions guidées."),
+    ("25-40 min", "Frise orale : trois dates, une phrase chacune."),
+    ("40-48 min", "Trace écrite : Acknowledgement of Country."),
+    ("48-52 min", "Devoir : trois dates, une phrase chacune."),
+], "recopie trois dates de la frise et une phrase pour chacune")}
 {reading("Read this text (CE)", '''
 <p>On 26 January every year, many Australians celebrate Australia Day with barbecues, fireworks and flags.</p>
 <p>But for many Aboriginal people, this date marks the beginning of invasion, the loss of their land and the destruction of their families. Some call it "Invasion Day" or "Survival Day".</p>
@@ -337,6 +408,13 @@ def build_s3():
     body = f'''
 <p class="kicker">Séance 3 · EE, EOC</p>
 <h1>Who lives in Australia today?</h1>
+{cadre(["EE", "EOC", "EOI"], [
+    ("0-5 min", "Accueil et consigne des jeux de rôle."),
+    ("5-20 min", "Préparation en binômes : où vivent les gens, l'outback, les First Nations."),
+    ("20-35 min", "Jeux de rôle, puis mise en commun."),
+    ("35-47 min", "Trace écrite."),
+    ("47-52 min", "Devoir : message de 8 à 10 lignes à un ami en France."),
+], "écris cinq phrases sur qui vit en Australie aujourd'hui")}
 {student(
     "Work in pairs. Student A is a newcomer. Student B is an Australian friend.",
     "Ask and answer: Where do most people live? Why? What is the outback?",
@@ -369,6 +447,13 @@ def build_s4():
     body = f'''
 <p class="kicker">Séance 4 · CE, EOI</p>
 <h1>Animals that scare some people</h1>
+{cadre(["CE", "EOI"], [
+    ("0-5 min", "Accueil, consigne, distribution des textes."),
+    ("5-25 min", "Lecture : quatre animaux, deux règles officielles, comparaison des chiffres."),
+    ("25-40 min", "Échange oral en binômes : ces animaux vous empêcheraient-ils de partir ?"),
+    ("40-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : 8 à 10 lignes, un fait officiel et une raison personnelle."),
+], "recopie deux règles de sécurité officielles et le nom de quatre animaux")}
 {fig("nourlangie-rock-art.jpg",
      "Aboriginal rock art at Nourlangie, Kakadu: a hunter and a kangaroo painted on stone.",
      "Un chasseur et un kangourou, peints sur la roche à Kakadu. Les animaux font partie du pays depuis très longtemps.",
@@ -409,6 +494,13 @@ def build_s5():
     body = f'''
 <p class="kicker">Séance 5 · CE, EE</p>
 <h1>Getting there, getting around, FIFO</h1>
+{cadre(["CE", "EE"], [
+    ("0-5 min", "Accueil et consigne."),
+    ("5-25 min", "Lecture : vol, trains, distances, fly-in fly-out (FIFO)."),
+    ("25-42 min", "Parcours en binômes : un itinéraire France-Australie, un trajet intérieur, une phrase sur le FIFO."),
+    ("42-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : 8 à 10 lignes sur l'itinéraire, plus une phrase sur le FIFO."),
+], "écris ce que signifie FIFO et le temps de vol depuis la France")}
 {fig("streeton-fires-on.jpg",
      "Arthur Streeton, Fire's On, 1891: workers and a cutting in a blue Australian landscape.",
      "Creuser, relier, traverser un pays immense : le travail et les distances.",
@@ -447,6 +539,13 @@ def build_s6():
     body = f'''
 <p class="kicker">Séance 6 · CE, médiation</p>
 <h1>Which visa?</h1>
+{cadre(["CE", "EE"], [
+    ("0-5 min", "Accueil, tableau des visas au tableau."),
+    ("5-30 min", "Lecture du tableau, questions sur le 417 (tarif, fonds, âge, billet)."),
+    ("30-42 min", "Médiation : expliquer le 417 à un parent, en six lignes."),
+    ("42-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : recopier le titre officiel, la date, le tarif, les fonds, l'âge et une règle."),
+], "recopie le prix du visa 417, l'âge et une règle à ne pas oublier")}
 <table>
 <thead><tr><th>Visa</th><th>Who</th><th>Key facts (Nov. 2026)</th></tr></thead>
 <tbody>
@@ -486,6 +585,13 @@ def build_s7():
     body = f'''
 <p class="kicker">Séance 7 · CE, médiation</p>
 <h1>Lea's bag at customs</h1>
+{cadre(["CE", "EE", "EOI"], [
+    ("0-5 min", "Accueil et sac de Léa."),
+    ("5-25 min", "Activité : que déclarer, ce qui pose problème, When in doubt..."),
+    ("25-40 min", "Mise en commun et barème."),
+    ("40-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : liste de 8 objets pour son propre sac, avec ce qu'il faut déclarer."),
+], "dresse la liste de ce que Léa doit déclarer, en cinq lignes")}
 <table>
 <thead><tr><th>What</th><th>Rule (check ABF)</th></tr></thead>
 <tbody>
@@ -520,6 +626,13 @@ def build_s8():
     body = f'''
 <p class="kicker">Séance 8 · CE, calcul</p>
 <h1>Money, wages, a simple budget</h1>
+{cadre(["CE", "EE"], [
+    ("0-5 min", "Accueil, ouverture du calculateur (ou figures au tableau)."),
+    ("5-30 min", "Saisie des chiffres, lecture des résultats, copie de quatre nombres."),
+    ("30-42 min", "Commentaire : ce budget suffit-il à Sydney ou en ville plus petite ?"),
+    ("42-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : recalculer avec 25 heures, puis un loyer à 400 AUD."),
+], "recopie quatre chiffres du calculateur : coût du départ, salaire, reste, réserve")}
 <p>Use the calculator. Figures are from November 2026. Always check again on official sites.</p>
 <form class="calc" id="budget-calc" action="#" onsubmit="return false;">
 <p><strong>Before you leave</strong></p>
@@ -576,6 +689,13 @@ def build_s9():
     body = f'''
 <p class="kicker">Séance 9 · EE, EOI</p>
 <h1>Jobs, resume, interview</h1>
+{cadre(["EE", "EOI"], [
+    ("0-5 min", "Accueil et choix du métier."),
+    ("5-20 min", "Rédaction du CV d'une page."),
+    ("20-38 min", "Entretien téléphonique en binômes, deux minutes, trois questions."),
+    ("38-47 min", "Trace écrite : why this job, when you can start."),
+    ("47-52 min", "Devoir : finir le CV et préparer les trois réponses."),
+], "écris cinq lignes : pourquoi ce travail, et quand tu peux commencer")}
 {student(
     "Choose one job: café, farm, hotel, warehouse, or (★★) a FIFO mine role.",
     "Write a one-page resume: name, contacts, skills, two experiences, availability.",
@@ -599,6 +719,13 @@ def build_s10():
     body = f'''
 <p class="kicker">Séance 10 · CE, EE</p>
 <h1>Studying in Australia</h1>
+{cadre(["CE", "EE"], [
+    ("0-5 min", "Accueil et tableau France / Australie."),
+    ("5-25 min", "Comparaison : années scolaires, cursus, frais, visa 500."),
+    ("25-40 min", "Écrit : travailler un an, ou étudier ?"),
+    ("40-47 min", "Trace écrite."),
+    ("47-52 min", "Devoir : 8 lignes, un chiffre officiel."),
+], "recopie le tarif du visa 500 et une différence entre la France et l'Australie")}
 {student(
     "Complete the table in your notebook: France / Australia, for school years, a typical tertiary course, and fees.",
     "If you chose a student visa 500, what is the fee in AUD (November 2026)?",
@@ -627,6 +754,13 @@ def build_s11():
     body = f'''
 <p class="kicker">Séance 11 · EE, médiation</p>
 <h1>Who to contact, and how to fill in a form</h1>
+{cadre(["CE", "EE"], [
+    ("0-5 min", "Accueil, ouverture d'un lien officiel."),
+    ("5-25 min", "Copie du titre et de la date, formulaire d'entraînement."),
+    ("25-42 min", "Courriel à l'ambassade (passeport perdu) ; pour les plus à l'aise, courriel à Fair Work."),
+    ("42-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : reprendre le courriel en six phrases courtes."),
+], "recopie le titre exact d'une page officielle et la date du jour")}
 <ul>
 <li><a href="https://www.diplomatie.gouv.fr/fr/information-par-pays/australie/dernieres-minutes-et-alertes">France Diplomatie · Australie</a></li>
 <li><a href="https://au.ambafrance.org/">Ambassade de France en Australie</a></li>
@@ -666,6 +800,13 @@ def build_s12():
     body = f'''
 <p class="kicker">Séance 12 · CO, EOC</p>
 <h1>Aussie English</h1>
+{cadre(["CO", "EOC", "EOI"], [
+    ("0-5 min", "Accueil et lexique au tableau."),
+    ("5-22 min", "Écoute d'un court extrait, mots cochés."),
+    ("22-40 min", "Dialogue en binômes (arvo, servo, brekkie)."),
+    ("40-47 min", "Trace écrite."),
+    ("47-52 min", "Devoir : six mots, dialogue de six lignes au café."),
+], "apprends six mots du tableau et écris un mini-dialogue de quatre répliques")}
 <table>
 <thead><tr><th>You may hear</th><th>It often means</th></tr></thead>
 <tbody>
@@ -703,6 +844,13 @@ def build_s13():
     body = f'''
 <p class="kicker">Séance 13 · EOI, EE</p>
 <h1>Living there: rent, health, the big question</h1>
+{cadre(["EOI", "EE"], [
+    ("0-5 min", "Accueil et consignes du débat."),
+    ("5-18 min", "Préparation : un coût trouvé sur un site sérieux, avec la source."),
+    ("18-40 min", "Débat de deux minutes : l'Australie est-elle vraiment le pays des opportunités ?"),
+    ("40-48 min", "Trace écrite."),
+    ("48-52 min", "Devoir : 12 à 15 lignes, à apporter pour l'évaluation."),
+], "écris cinq lignes : un argument pour, un argument contre, et ton avis")}
 {student(
     "In groups of three, share one cost (rent, food, or a doctor's visit) that you found on an official or serious site. Give the source.",
     "Prepare a 2-minute debate: Is Australia really the land of opportunity for a young French person?",
@@ -725,6 +873,11 @@ def build_assessment():
     body = f'''
 <p class="kicker">Évaluation</p>
 <h1>Your file and your phone interview</h1>
+{cadre(["EOI", "EE", "EOC"], [
+    ("0-8 min", "Remise des dossiers, vérification de la composition."),
+    ("8-50 min", "Entretiens individuels (3 à 4 minutes). Le reste de la classe prépare silencieusement les réponses, puis relit le dossier."),
+    ("50-52 min", "Rappel : dossier complet, une figure officielle au moins une fois."),
+], "prépare par écrit tes réponses aux trois questions de l'entretien")}
 <p>You hand in a file. Then you pass a short phone interview.</p>
 <div class="grid">
 <article class="card"><h3>The file</h3>
@@ -840,18 +993,59 @@ def build_downloads():
          f"{BASE}/downloads/", body)
 
 def patch_listings():
-    for rel in ("../lycee-general/index.html", "../index.html", "../lycee-pro/index.html"):
+    old_title = "Anglais · Lycée professionnel, lycée général et technologique · Heading Off to Australia"
+    new_title = "Anglais · Terminale bac pro · Première bac pro · Heading Off to Australia"
+    old_meta = "Lycée professionnel, lycée général et technologique · B1, B2"
+    new_meta = "Terminale bac pro · Première bac pro (adaptable)"
+    old_sum = "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances de B1 et B2, plus l'évaluation, avec une présentation pour les collègues."
+    new_sum = "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro, adaptables en Première bac pro, plus l'évaluation."
+    for rel in ("../index.html", "../lycee-pro/index.html", "../lycee-general/index.html"):
         p = (ROOT / rel).resolve()
         if not p.exists():
             continue
-        t = p.read_text(encoding="utf-8")
-        t2 = t.replace("conder-departure-orient.jpg", COVER)
-        t2 = t2.replace("Charles Conder, Holiday sketch at Coogee", "Tom Roberts, Holiday sketch at Coogee")
-        t2 = t2.replace("Charles Conder, Departure of the Orient, Circular Quay, 1888.", "Tom Roberts, Holiday sketch at Coogee, 1888.")
-        t2 = t2.replace("Departure of the Orient, Circular Quay", "Holiday sketch at Coogee")
-        if t2 != t:
-            p.write_text(t2, encoding="utf-8")
-            print("patched listing", p)
+        txt = p.read_text(encoding="utf-8")
+        txt = txt.replace("conder-departure-orient.jpg", COVER)
+        txt = txt.replace("Charles Conder, Holiday sketch at Coogee", "Tom Roberts, Holiday sketch at Coogee")
+        txt = txt.replace("Charles Conder, Departure of the Orient, Circular Quay, 1888.", "Tom Roberts, Holiday sketch at Coogee, 1888.")
+        txt = txt.replace("Departure of the Orient, Circular Quay", "Holiday sketch at Coogee")
+        if p.name and "lycee-general" in str(p):
+            start = txt.find(old_title)
+            if start != -1:
+                art = txt.rfind("<article", 0, start)
+                end = txt.find("</article>", start)
+                if art != -1 and end != -1:
+                    txt = txt[:art] + txt[end + len("</article>"):]
+                    print("removed LGT card")
+        else:
+            txt = txt.replace(old_title, new_title)
+            txt = txt.replace(old_meta, new_meta)
+            txt = txt.replace(old_sum, new_sum)
+        p.write_text(txt, encoding="utf-8")
+        print("patched listing", p)
+    res = (ROOT.parent / "data/resources.json").resolve()
+    if not res.exists():
+        res = Path("/workspace/site-down-under/data/resources.json")
+    data = json.loads(res.read_text(encoding="utf-8"))
+    changed = False
+    def walk(o):
+        nonlocal changed
+        if isinstance(o, dict):
+            if o.get("id") == "lp-anglais-destination-australia":
+                o["title"] = new_title
+                o["summary"] = new_sum
+                o["level"] = ["1re", "tle"]
+                o["levelLabel"] = new_meta
+                o["section"] = "lycee-pro"
+                changed = True
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(data)
+    if changed:
+        res.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print("patched resources.json")
 
 def main():
     build_index()

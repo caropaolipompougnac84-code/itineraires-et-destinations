@@ -1041,12 +1041,15 @@
     },
     {
       "id": "lp-anglais-destination-australia",
-      "title": "Anglais · Lycée professionnel, lycée général et technologique · Heading Off to Australia",
-      "summary": "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances de B1 et B2, plus l'évaluation, avec une présentation pour les collègues.",
+      "title": "Anglais · Terminale bac pro · Première bac pro · Heading Off to Australia",
+      "summary": "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro, adaptables en Première bac pro, plus l'évaluation.",
       "section": "lycee-pro",
       "subject": "anglais",
-      "level": "tous",
-      "levelLabel": "Lycée professionnel, lycée général et technologique · B1, B2",
+      "level": [
+        "1re",
+        "tle"
+      ],
+      "levelLabel": "Terminale bac pro · Première bac pro (adaptable)",
       "collection": "lp-anglais",
       "themes": [
         "voyage",

@@ -1,5 +1,5 @@
 /* Stupeur et tremblements : tableau numérique, bordeaux #7B1E3A */
-:root{--b:#7B1E3A;--b-deep:#541428;--pale:#F8F0F3;--line:#D9BCC6;--ink:#1a1214;--soft:#4a3a3e;--f-ui:"Atkinson Hyperlegible",Verdana,Arial,sans-serif;--f-t:"EB Garamond",Georgia,serif}
+:root{--b:#7B1E3A;--b-deep:#541428;--pale:#F8F0F3;--line:#D9BCC6;--ink:#1a1214;--soft:#4a3a3e;--f-ui:"Source Sans 3",Verdana,Arial,sans-serif;--f-t:"EB Garamond",Georgia,serif}
 body{background:#fff;color:var(--ink);font-family:var(--f-ui)}
 .skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.4rem .8rem;z-index:99}
 .stp-head{padding-top:.6rem}

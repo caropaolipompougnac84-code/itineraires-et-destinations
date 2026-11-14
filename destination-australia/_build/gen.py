@@ -65,7 +65,7 @@ def page(out_rel, title, description, current, body, og=OG, lisible="lesson"):
 <link rel="canonical" href="https://itineraires-destinations.fr{current}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Atkinson+Hyperlegible:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Source+Sans+3:wght@400;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{BASE}/seq.css">
 <script src="{BASE}/script.js" defer></script>
 </head>

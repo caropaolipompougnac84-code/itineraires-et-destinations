@@ -8,7 +8,7 @@
   --ink: #1a1214;
   --ink-soft: #3a2a2e;
   --gold: #7B1E3A;
-  --f-ui: "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
+  --f-ui: "Source Sans 3", Verdana, Arial, sans-serif;
 }
 body { color: #1a1214; background: #fbf6f2; font-family: var(--f-ui); font-size: 1.12rem; line-height: 1.55; }
 .page-hero h1, .page-content h1, .page-content h2, .page-content h3,

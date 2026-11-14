@@ -41,7 +41,7 @@ body.lettres-look{
   --ko-bg:#F3EDEF;
   background:var(--bg)!important;
   color:var(--ink)!important;
-  font-family:"Atkinson Hyperlegible", "Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
+  font-family:"Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
   font-size:22px!important;
   line-height:1.55!important;
   text-shadow:none!important;
@@ -152,7 +152,7 @@ body.lettres-look .skills-legend{
 }
 body.lettres-look h2 .skill-tag,
 body.lettres-look h3 .skill-tag{
-  font-family:"Atkinson Hyperlegible", "Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
+  font-family:"Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
   font-size:1rem!important;
   margin-right:.55em!important;
   vertical-align:middle!important;

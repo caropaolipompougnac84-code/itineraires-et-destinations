@@ -1,6 +1,6 @@
 /* © 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0 */
 :root{--navy:#10264a;--red:#c8102e;--blue:#1f6fb2;--teal:#0f766e;--violet:#5b3fa0;--gold:#e0a100;--ink:#17202f;--muted:#4a5568;--line:#d3dbe8;--bg:#fff;--tint:#eaf1fb;--paper:#fff;
---f-display:"Playfair Display",Georgia,serif;--f-body:"Source Serif 4",Georgia,serif;--f-ui:"Atkinson Hyperlegible",Verdana,Arial,sans-serif}
+--f-display:"Playfair Display",Georgia,serif;--f-body:"Source Serif 4",Georgia,serif;--f-ui:"Source Sans 3",Verdana,Arial,sans-serif}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:#fff;color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden}

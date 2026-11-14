@@ -64,7 +64,7 @@ button,.check,.resume,#stepbar button{background:var(--h-navy)!important;color:v
 .gap{border:1px solid var(--h-umber)!important;background:#fffdf8!important}
 /* adapted (dys): same palette, high contrast, sans serif kept */
 body.ad{background:var(--h-paper)!important;color:#2a2622!important}
-.ad h1,.ad h2,.ad h3{font-family:'Atkinson Hyperlegible',Verdana,sans-serif!important;font-variant:normal}
+.ad h1,.ad h2,.ad h3{font-family:"Source Sans 3",Verdana,sans-serif!important;font-variant:normal}
 .ad .level{font-variant:normal;letter-spacing:.02em}
 .ad .gl{font-variant:normal}
 .ad .grp a,.ad .box,.ad .ws,.ad .q,.ad details,.ad .ans,.ad .card,.ad .links a{background:var(--h-ivory)!important;color:#2a2622!important}

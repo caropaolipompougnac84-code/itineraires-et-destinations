@@ -14,7 +14,7 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font:20px/1.65 "Atkinson Hyperlegible",Verdana,Arial,sans-serif;
+  font:20px/1.65 "Source Sans 3",Verdana,Arial,sans-serif;
 }
 body.plus-lisible{font-size:22px}
 .skip{

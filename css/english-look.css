@@ -24,7 +24,7 @@ body.english-look{
   --ko-bg:#F2F4F6;
   background:var(--bg)!important;
   color:var(--ink)!important;
-  font-family:"Atkinson Hyperlegible", "Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
+  font-family:"Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
   font-size:22px!important;
   line-height:1.55!important;
   text-shadow:none!important;
@@ -135,7 +135,7 @@ body.english-look .skills-legend{
 }
 body.english-look h2 .skill-tag,
 body.english-look h3 .skill-tag{
-  font-family:"Atkinson Hyperlegible", "Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
+  font-family:"Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
   font-size:1rem!important;
   margin-right:.55em!important;
   vertical-align:middle!important;

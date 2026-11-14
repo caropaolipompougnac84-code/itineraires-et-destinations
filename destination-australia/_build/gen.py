@@ -19,6 +19,7 @@ NAV = [
     ("S10", f"{BASE}/s10/"), ("S11", f"{BASE}/s11/"), ("S12", f"{BASE}/s12/"),
     ("S13", f"{BASE}/s13/"),
     ("Éval.", f"{BASE}/assessment/"),
+    ("Listening", f"{BASE}/#australian-voices"),
     ("Docs", f"{BASE}/downloads/"),
     ("Annexe", f"{BASE}/annexe/"),
 ]
@@ -163,6 +164,76 @@ def build_index():
 <a class="sec" href="{BASE}/teacher/">Corrigés</a>
 <a class="sec" href="{BASE}/annexe/">Ancienne version</a>
 </p>
+
+
+<section class="voices" id="australian-voices" lang="fr">
+<h2>Listening: Australian voices</h2>
+<p class="voices-chip">Terminale bac pro · Première générale et technologique · B1</p>
+<p class="voices-modulaire">Chaque vidéo et sa fiche s’utilisent seules ou ensemble, dans l’ordre que vous choisissez, selon votre classe.</p>
+<p class="voices-dl">
+<a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">Fiches élèves (PDF)</a>
+<a class="sec" href="{BASE}/downloads/fiches-eleves-australian-voices.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/fiches-eleves-australian-voices.odt">LibreOffice</a>
+</p>
+<article class="voice-card" id="voice-sam">
+<h3>Sam. A café supervisor in Melbourne</h3>
+<video controls preload="metadata" playsinline controlslist="nodownload" title="Sam. A café supervisor in Melbourne">
+<source src="{BASE}/videos/sam.mp4" type="video/mp4">
+Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/sam.mp4">Sam</a>.
+</video>
+<details>
+<summary>Afficher le script</summary>
+<p class="script">G'day, I'm Sam. I run the morning shift at a café in Melbourne. If you apply, I'll ask about your experience, your Working Holiday visa, and your availability. Casual work includes casual loading, instead of paid leave. Ask which award applies, what the weekend rates are, and whether this role needs a Victorian RSA.</p>
+</details>
+<p class="downloads">Fiche élève : <a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">PDF</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.docx">Word</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.odt">LibreOffice</a>.</p>
+</article>
+<article class="voice-card" id="voice-malik">
+<h3>Malik. A hostel receptionist in Sydney</h3>
+<video controls preload="metadata" playsinline controlslist="nodownload" title="Malik. A hostel receptionist in Sydney">
+<source src="{BASE}/videos/malik.mp4" type="video/mp4">
+Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/malik.mp4">Malik</a>.
+</video>
+<details>
+<summary>Afficher le script</summary>
+<p class="script">Hi, how's it going? I'm Malik, and I work on reception at a hostel near Central Station. Book one or two weeks first, then look for a longer place. In your first days, do the Big Four: a local SIM or eSIM, a bank account, your TFN on the official ATO page, and private insurance. If you're unsure at the airport, ask an officer.</p>
+</details>
+<p class="downloads">Fiche élève : <a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">PDF</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.docx">Word</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.odt">LibreOffice</a>.</p>
+</article>
+<article class="voice-card" id="voice-jordan">
+<h3>Jordan. A packing-shed supervisor near Mildura</h3>
+<video controls preload="metadata" playsinline controlslist="nodownload" title="Jordan. A packing-shed supervisor near Mildura">
+<source src="{BASE}/videos/jordan.mp4" type="video/mp4">
+Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/jordan.mp4">Jordan</a>.
+</video>
+<details>
+<summary>Afficher le script</summary>
+<p class="script">Hello, I'm Jordan. I supervise packing here near Mildura. If you want this work to count as specified work, check first. Not every farm job, location or day automatically qualifies for a second visa. The usual rule is three months, normally at least 88 calendar days of eligible full-time-equivalent work. Keep your payslips, and check the industry, the postcode and the official counting rules before you accept a job.</p>
+</details>
+<p class="downloads">Fiche élève : <a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">PDF</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.docx">Word</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.odt">LibreOffice</a>.</p>
+</article>
+<article class="voice-card" id="voice-elena">
+<h3>Elena. A neighbour at a patrolled beach in Sydney</h3>
+<video controls preload="metadata" playsinline controlslist="nodownload" title="Elena. A neighbour at a patrolled beach in Sydney">
+<source src="{BASE}/videos/elena.mp4" type="video/mp4">
+Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">Elena</a>.
+</video>
+<details>
+<summary>Afficher le script</summary>
+<p class="script">G'day, I'm Elena. Put on your sunnies and some sunscreen, and swim between the red and yellow flags. Follow the lifeguards, and check the local warnings, because conditions change. On Saturday arvo, some of my mates are organising a barbie in the park. You're welcome to come, and to bring something to share. How's it going so far?</p>
+</details>
+<p class="downloads">Fiche élève : <a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">PDF</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.docx">Word</a> · <a href="{BASE}/downloads/fiches-eleves-australian-voices.odt">LibreOffice</a>.</p>
+</article>
+<aside class="voices-teacher">
+<h3>Pour le professeur</h3>
+<p>Le corrigé se télécharge à part, il n’est pas sur la fiche élève.</p>
+<p class="voices-dl">
+<a href="{BASE}/downloads/corriges-australian-voices.pdf">Corrigé (PDF)</a>
+<a class="sec" href="{BASE}/downloads/corriges-australian-voices.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/corriges-australian-voices.odt">LibreOffice</a>
+</p>
+</aside>
+</section>
+
 
 {more("Présentation pour les collègues", f'''
 <p>Chère collègue, cher collègue,</p>
@@ -747,6 +818,19 @@ def build_downloads():
 <a href="{BASE}/downloads/heading-off-to-australia-corriges.pdf">PDF</a>
 <a class="sec" href="{BASE}/downloads/heading-off-to-australia-corriges.docx">Word</a>
 <a class="sec" href="{BASE}/downloads/heading-off-to-australia-corriges.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Listening: Australian voices · fiches élèves</h3>
+<p class="voices-chip">Terminale bac pro · Première générale et technologique · B1</p>
+<p class="dl">
+<a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/fiches-eleves-australian-voices.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/fiches-eleves-australian-voices.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Listening: Australian voices · corrigé (professeur)</h3>
+<p class="dl">
+<a href="{BASE}/downloads/corriges-australian-voices.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/corriges-australian-voices.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/corriges-australian-voices.odt">LibreOffice</a>
 </p></article>
 </div>
 <p><a href="{BASE}/annexe/">Ancienne version en annexe</a></p>

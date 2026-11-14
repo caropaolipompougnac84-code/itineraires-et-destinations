@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Classroom-first rebuild of Heading Off to Australia."""
+"""Classroom-first rebuild of Head off to Australia."""
 from pathlib import Path
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "/destination-australia"
-TITLE = "Heading Off to Australia"
+TITLE = "Head off to Australia"
 FOOT = "© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0"
 LEVEL = "Terminale bac pro · Première bac pro (adaptable)"
 OG = "https://itineraires-destinations.fr/destination-australia/images/roberts-coogee.jpg"
@@ -334,7 +334,7 @@ Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">E
 {ADAPTER}
 '''
     page("index.html", TITLE,
-         "Heading Off to Australia : séquence d'anglais prête à l'emploi, Terminale bac pro et Première bac pro (adaptable).",
+         "Head off to Australia : séquence d'anglais prête à l'emploi, Terminale bac pro et Première bac pro (adaptable).",
          f"{BASE}/", body, lisible="home")
 
 def build_s1():
@@ -372,7 +372,7 @@ def build_s1():
 {more("Repères pour la classe", "<p>Ces peintres appartiennent à l'école de Heidelberg. Pour l'art aborigène contemporain (Namatjira, Kngwarreye), montrez les œuvres depuis les sites des musées, sans les reproduire : elles sont encore protégées.</p>")}
 '''
     page("s1/index.html", f"{TITLE} · Séance 1",
-         "Heading Off to Australia, séance 1 : regarder et parler à partir de quatre tableaux.",
+         "Head off to Australia, séance 1 : regarder et parler à partir de quatre tableaux.",
          f"{BASE}/s1/", body)
 
 def build_s2():
@@ -426,7 +426,7 @@ def build_s2():
 {homework("Learn three dates from the timeline. For each one, write one sentence: what happened, and why it still matters today.", "3")}
 '''
     page("s2/index.html", f"{TITLE} · Séance 2",
-         "Heading Off to Australia, séance 2 : le 26 janvier et une courte frise historique.",
+         "Head off to Australia, séance 2 : le 26 janvier et une courte frise historique.",
          f"{BASE}/s2/", body)
 
 def build_s3():
@@ -465,7 +465,7 @@ def build_s3():
 {homework("Write a short message (8 to 10 lines) to a friend in France: three things about Australian society that surprise you.", "4")}
 '''
     page("s3/index.html", f"{TITLE} · Séance 3",
-         "Heading Off to Australia, séance 3 : qui vit en Australie aujourd'hui.",
+         "Head off to Australia, séance 3 : qui vit en Australie aujourd'hui.",
          f"{BASE}/s3/", body)
 
 def build_s4():
@@ -512,7 +512,7 @@ def build_s4():
 {more("Chiffres et gestes officiels", "<p>Morsures de serpent : 1 à 4 décès par an (healthdirect). Premiers secours : 000, bandage compressif, ne pas laver, couper ou sucer la plaie. Funnel-web : urgence. Queensland : « Croc Country », saison des méduses novembre à mai, nager entre les drapeaux. Routes : plus de 1 300 décès en 2025, bien plus que requins ou serpents.</p>")}
 '''
     page("s4/index.html", f"{TITLE} · Séance 4",
-         "Heading Off to Australia, séance 4 : les animaux qui font peur, faits officiels et discussion.",
+         "Head off to Australia, séance 4 : les animaux qui font peur, faits officiels et discussion.",
          f"{BASE}/s4/", body)
 
 def build_s5():
@@ -557,7 +557,7 @@ def build_s5():
 {more("Chiffres à revérifier", "<p>Paris-Sydney : environ 17 000 km, 22 à 24 h, une escale. Traitement du visa : souvent 3 mois, ne pas réserver avant l'accord. The Ghan : 2 979 km, environ 48 h. Indian Pacific : 4 352 km, environ 68 h (Journey Beyond). FIFO : Pilbara, charters souvent depuis Perth, cycles 8/6 ou 2/1, postes de 12 à 12,5 h (Fortescue, WA Transport).</p>")}
 '''
     page("s5/index.html", f"{TITLE} · Séance 5",
-         "Heading Off to Australia, séance 5 : le vol, les distances et le fly-in fly-out.",
+         "Head off to Australia, séance 5 : le vol, les distances et le fly-in fly-out.",
          f"{BASE}/s5/", body)
 
 def build_s6():
@@ -603,7 +603,7 @@ def build_s6():
 ''')}
 '''
     page("s6/index.html", f"{TITLE} · Séance 6",
-         "Heading Off to Australia, séance 6 : choisir et vérifier un visa.",
+         "Head off to Australia, séance 6 : choisir et vérifier un visa.",
          f"{BASE}/s6/", body)
 
 def build_s7():
@@ -644,7 +644,7 @@ def build_s7():
 {more("Site officiel", '<p><a href="https://www.abf.gov.au/entering-and-leaving-australia/going-through-border-control/what-can-i-bring">Australian Border Force · What can I bring?</a></p>')}
 '''
     page("s7/index.html", f"{TITLE} · Séance 7",
-         "Heading Off to Australia, séance 7 : le sac de Léa à la douane.",
+         "Head off to Australia, séance 7 : le sac de Léa à la douane.",
          f"{BASE}/s7/", body)
 
 def build_s8():
@@ -707,7 +707,7 @@ def build_s8():
 ''')}
 '''
     page("s8/index.html", f"{TITLE} · Séance 8",
-         "Heading Off to Australia, séance 8 : argent, salaire et calculateur de budget.",
+         "Head off to Australia, séance 8 : argent, salaire et calculateur de budget.",
          f"{BASE}/s8/", body)
 
 def build_s9():
@@ -737,7 +737,7 @@ def build_s9():
 {homework("Finish your resume at home. Write the answers to these three questions: Why Australia? Why this job? When can you start?", "10")}
 '''
     page("s9/index.html", f"{TITLE} · Séance 9",
-         "Heading Off to Australia, séance 9 : emplois, CV et entretien.",
+         "Head off to Australia, séance 9 : emplois, CV et entretien.",
          f"{BASE}/s9/", body)
 
 def build_s10():
@@ -772,7 +772,7 @@ def build_s10():
 {homework("Write 8 lines: work for a year, or study? Use one official figure.", "11")}
 '''
     page("s10/index.html", f"{TITLE} · Séance 10",
-         "Heading Off to Australia, séance 10 : étudier en Australie.",
+         "Head off to Australia, séance 10 : étudier en Australie.",
          f"{BASE}/s10/", body)
 
 def build_s11():
@@ -818,7 +818,7 @@ def build_s11():
 {homework("Write the embassy email again, this time in 6 short sentences, no drafts left on the desk.", "12")}
 '''
     page("s11/index.html", f"{TITLE} · Séance 11",
-         "Heading Off to Australia, séance 11 : contacts officiels et formulaires.",
+         "Head off to Australia, séance 11 : contacts officiels et formulaires.",
          f"{BASE}/s11/", body)
 
 def build_s12():
@@ -873,7 +873,7 @@ Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">E
 {homework("Learn 6 words from the table. Write a 6-line dialogue at a café.", "13")}
 '''
     page("s12/index.html", f"{TITLE} · Séance 12",
-         "Heading Off to Australia, séance 12 : Aussie English.",
+         "Head off to Australia, séance 12 : Aussie English.",
          f"{BASE}/s12/", body)
 
 def build_s13():
@@ -902,7 +902,7 @@ def build_s13():
 {homework("Write 12 to 15 lines: your answer to the big question. Bring it to the assessment lesson.", "d'évaluation")}
 '''
     page("s13/index.html", f"{TITLE} · Séance 13",
-         "Heading Off to Australia, séance 13 : vivre là-bas et la question finale.",
+         "Head off to Australia, séance 13 : vivre là-bas et la question finale.",
          f"{BASE}/s13/", body)
 
 def build_assessment():
@@ -964,7 +964,7 @@ def build_assessment():
 </p>
 '''
     page("assessment/index.html", f"{TITLE} · Évaluation",
-         "Heading Off to Australia : dossier et entretien téléphonique.",
+         "Head off to Australia : dossier et entretien téléphonique.",
          f"{BASE}/assessment/", body)
 
 def build_teacher():
@@ -997,7 +997,7 @@ def build_teacher():
 </p>
 '''
     page("teacher/index.html", f"{TITLE} · Corrigés",
-         "Corrigés et grilles pour Heading Off to Australia.",
+         "Corrigés et grilles pour Head off to Australia.",
          f"{BASE}/teacher/", body)
 
 def build_downloads():
@@ -1041,12 +1041,12 @@ def build_downloads():
 <p><a href="{BASE}/annexe/">Ancienne version en annexe</a></p>
 '''
     page("downloads/index.html", f"{TITLE} · Téléchargements",
-         "Téléchargements de la séquence Heading Off to Australia.",
+         "Téléchargements de la séquence Head off to Australia.",
          f"{BASE}/downloads/", body)
 
 def patch_listings():
-    old_title = "Anglais · Lycée professionnel, lycée général et technologique · Heading Off to Australia"
-    new_title = "Anglais · Terminale bac pro · Première bac pro · Heading Off to Australia"
+    old_title = "Anglais · Lycée professionnel, lycée général et technologique · Head off to Australia"
+    new_title = "Anglais · Terminale bac pro · Première bac pro · Head off to Australia"
     old_meta = "Lycée professionnel, lycée général et technologique · B1, B2"
     new_meta = "Terminale bac pro · Première bac pro (adaptable)"
     old_sum = "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances de B1 et B2, plus l'évaluation, avec une présentation pour les collègues."

@@ -10,3 +10,5 @@
 - `grand-ole-opry-banners.jpg` : File:Grand Ole Opry (97057178).jpg. Grand Ole Opry, Nashville. Photo: Ken Lund. CC BY-SA 2.0, Wikimedia Commons.
 - `grand-ole-opry-2007.jpg` : File:101207-Nashville-GrandOleOpry-001.JPG. Grand Ole Opry, Nashville, December 2007. Photo: Bobak Ha'Eri. CC BY 3.0, Wikimedia Commons.
 - `cades-cove-methodist-church.jpg` : File:Cades Cove Methodist Church.jpg. Methodist church, Cades Cove, Great Smoky Mountains National Park. Photo: Vicpeters. CC BY-SA 3.0, Wikimedia Commons.
+- `fabric-stall.jpg` : File:2012-02-25 Chatuchak Fabric.jpg. A fabric stall. Photo: Mark Fischer. CC BY-SA 2.0, Wikimedia Commons.
+- `barber-shop-interior.jpg` : File:Barber shop (4682858271).jpg. A barber shop. Photo: jimmyweee. CC BY 2.0, Wikimedia Commons.

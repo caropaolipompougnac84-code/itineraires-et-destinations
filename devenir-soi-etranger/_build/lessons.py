@@ -68,7 +68,7 @@ def L(**kw):
 L(
     slug="s1", nav="s1/", num="Séance 1",
     title="Un regard, un nom",
-    kicker="Séance 1 · EOC et EOI",
+    kicker="Séance 1 · Échange oral",
     desc="Se sentir étranger : observer un portrait, le regard et le nom.",
     image="velazquez-juan-de-pareja.jpg",
     alt="Diego Velázquez, Portrait de Juan de Pareja, 1650 : un homme en habit sombre, col de dentelle, nous regarde calmement.",
@@ -129,7 +129,7 @@ L(
 L(
     slug="s2", nav="s2/", num="Séance 2",
     title="Comment peut-on être Persan ?",
-    kicker="Séance 2 · CE, EE, et savoir prendre une correction",
+    kicker="Séance 2 · Lecture, échange écrit, et savoir prendre une correction",
     desc="Montesquieu, le regard des autres, un premier écrit, et la méthode pour prendre une correction.",
     image="egg-travelling-companions.jpg",
     alt="Augustus Egg, Les Compagnes de voyage, 1862 : deux jeunes femmes en robe grise dans un compartiment de train, l'une lit, l'autre repose les yeux, un paysage de mer à la fenêtre.",

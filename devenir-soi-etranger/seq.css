@@ -13,7 +13,7 @@
   --more:#f4eee8;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:5.5rem}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:5.5rem;font-size:22px}
 body{
   margin:0;
   background:var(--bg);
@@ -118,7 +118,7 @@ footer{margin-top:3rem;padding:20px 14px 32px;border-top:1px solid var(--line);f
 body.dys{font-size:1.25rem;line-height:1.8;letter-spacing:.02em;background:#fffaf2}
 body.dys em,body.dys i{font-style:normal;font-weight:700}
 body.dys main{max-width:760px}
-.lisible-note{font-size:1rem;color:var(--soft)}
+.lisible-note{font-size:22px;color:var(--soft)}
 .note-vie-scolaire{
   background:#fff;border:2px solid var(--bordeaux);border-radius:14px;
   padding:1rem 1.15rem;margin:1.2rem 0;

@@ -19,3 +19,5 @@ Illustrations 4e et 3e (domaine public), d'après les crédits des cartes :
 - brevet/brevet.jpg : Jean Siméon Chardin, Un philosophe occupé de sa lecture, 1734. Musée du Louvre, Paris.
 
 - hiroshima-mon-amour-duras.jpg : couverture de l’édition Folio de Hiroshima mon amour, Marguerite Duras, Gallimard. Reproduction de la couverture de l’édition de travail, pour présenter la fiche.
+
+- se-preparer-test-positionnement.jpg : Jan Ekels le Jeune, Un écrivain taillant sa plume, 1784, huile sur bois. Rijksmuseum, Amsterdam, inv. SK-A-690. Domaine public.

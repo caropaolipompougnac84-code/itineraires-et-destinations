@@ -2020,6 +2020,45 @@
       "date": "2026-11-13",
       "image": "preparer-ecrit-bac-pro.jpg",
       "credit": "Cyril Power, The Exam Room, 1934, linogravure en couleurs. Grosvenor School of Modern Art. Domaine public (l’artiste est mort en 1951)."
+    },
+    {
+      "id": "lp-lettres-2de-test-positionnement",
+      "title": "Lettres · 2de Bac pro · Se préparer au test de positionnement",
+      "summary": "Séance de français, 52 minutes, pour préparer le test de positionnement en début de Seconde professionnelle et de Seconde générale et technologique : format du QCM, entraînement à l’écrit, à l’oral et en langue, grille d’auto-révision.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de Bac pro · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "examen",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/se-preparer-test-positionnement/",
+      "date": "2026-11-14",
+      "image": "se-preparer-test-positionnement.jpg",
+      "credit": "Jan Ekels le Jeune, Un écrivain taillant sa plume, 1784, huile sur bois. Rijksmuseum, Amsterdam, inv. SK-A-690. Domaine public."
+    },
+    {
+      "id": "lg-lettres-2de-test-positionnement",
+      "title": "Lettres · 2de · Se préparer au test de positionnement",
+      "summary": "Séance de français, 52 minutes, pour préparer le test de positionnement en début de Seconde professionnelle et de Seconde générale et technologique : format du QCM, entraînement à l’écrit, à l’oral et en langue, grille d’auto-révision.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "examen",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/se-preparer-test-positionnement/",
+      "date": "2026-11-14",
+      "hideInNouveautes": true,
+      "image": "se-preparer-test-positionnement.jpg",
+      "credit": "Jan Ekels le Jeune, Un écrivain taillant sa plume, 1784, huile sur bois. Rijksmuseum, Amsterdam, inv. SK-A-690. Domaine public."
     }
   ]
 }

@@ -12,7 +12,8 @@ from docx.shared import Cm, Pt, RGBColor
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lessons import LESSONS
 from helpers import (FOOT, TITLE, LEVEL, dash_ok,
-    POINT_INTRO_AVANT, POINT_LIVRE, POINT_INTRO_APRES, POINT_SUITE, POINT_CREDIT, PROBLEMATIQUE, FIL_QUESTION)
+    POINT_INTRO_AVANT, POINT_LIVRE, POINT_INTRO_APRES, POINT_SUITE, POINT_CREDIT,
+    PROBLEMATIQUE, FIL_QUESTION, POINT_IMAGE, POINT_ALT)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "downloads"
@@ -281,6 +282,14 @@ def prof_doc():
     heading(doc, TITLE, 22)
     para(doc, LEVEL + " · Objet d'étude : Devenir soi, écritures autobiographiques", 16, italic=True)
     heading(doc, "Point de départ", 18)
+    img_path = ROOT / "images" / POINT_IMAGE
+    if img_path.exists():
+        pimg = doc.add_paragraph()
+        pimg.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        pimg.paragraph_format.space_after = Pt(8)
+        run = pimg.add_run()
+        run.add_picture(str(img_path), width=Cm(14.5))
+        para(doc, POINT_ALT, 12, italic=True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(8)
     p.paragraph_format.line_spacing = 1.3

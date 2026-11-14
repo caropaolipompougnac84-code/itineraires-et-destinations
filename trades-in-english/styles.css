@@ -99,3 +99,11 @@ footer p{margin:0;max-width:none}
   .trade{grid-template-columns:1fr;padding:1.05rem 1rem 1.2rem}
   .trade video{max-width:100%}
 }
+
+.vid-label{
+  font-weight:700;
+  color:#1A3658;
+  margin:0.7rem 0 0.35rem;
+  font-size:1.15rem;
+}
+.trade .vid-label:first-child{margin-top:0;}

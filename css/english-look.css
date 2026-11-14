@@ -589,18 +589,19 @@ body.english-look nav.tabs a{
   border:2px solid var(--navy-line)!important;
   border-radius:999px!important;
 }
-body.english-look .lesson-nav a[aria-current],
+body.english-look .lesson-nav a[aria-current="true"],
 body.english-look .lesson-nav a[aria-current="page"],
 body.english-look .lesson-nav a.on,
 body.english-look .lesson-nav a.is-active,
 body.english-look .lesson-nav .on a,
-body.english-look nav.tabs a[aria-current]{
+body.english-look nav.tabs a[aria-current="true"],
+body.english-look nav.tabs a[aria-current="page"]{
   background:var(--navy)!important;
   color:#fff!important;
   border-color:var(--navy)!important;
 }
 body.english-look .seq-nav a.on,
-body.english-look .seq-nav a[aria-current],
+body.english-look .seq-nav a[aria-current="true"],
 body.english-look .seq-nav a[aria-current="page"]{
   background:var(--navy)!important;
   color:#fff!important;
@@ -634,3 +635,21 @@ body.english-look .page-hero .lede,
 body.english-look .lede{color:var(--soft)!important;}
 body.english-look nav.sn{background:var(--paper)!important;border-bottom:1px solid var(--navy-line)!important;}
 body.english-look nav.sn a{color:var(--navy)!important;}
+
+/* Lesson tabs on a navy bar (American Superheroes, Passing the Flame, etc.) */
+body.english-look nav.tabs{
+  background:var(--navy)!important;
+  border:0!important;
+}
+body.english-look nav.tabs a{
+  color:#fff!important;
+  background:transparent!important;
+  border:2px solid #8aa4c2!important;
+  border-radius:999px!important;
+}
+body.english-look nav.tabs a[aria-current="true"],
+body.english-look nav.tabs a[aria-current="page"]{
+  background:#fff!important;
+  color:var(--navy)!important;
+  border-color:#fff!important;
+}

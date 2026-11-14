@@ -160,6 +160,88 @@
   ],
   "resources": [
     {
+      "id": "lp-anglais-trades-in-english",
+      "title": "Anglais · CAP, bac pro et CFA · Trades in English",
+      "summary": "Vingt dialogues en anglais, entre un professionnel et un client, pour le CAP, le bac professionnel et le CFA. Chaque vidéo a sa fiche élève et son corrigé, en pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": [
+        "tous",
+        "cap",
+        "2de",
+        "1re",
+        "tle"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · A2-B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/",
+      "date": "2026-11-14",
+      "image": "trades-in-english.jpg",
+      "credit": "Dialogue filmé en classe, électricien en Dordogne"
+    },
+    {
+      "id": "cfa-anglais-trades-in-english",
+      "title": "Anglais · CAP, bac pro et CFA · Trades in English",
+      "summary": "Vingt dialogues en anglais, entre un professionnel et un client, pour le CAP, le bac professionnel et le CFA. Chaque vidéo a sa fiche élève et son corrigé, en pdf, docx et odt.",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": [
+        "tous",
+        "cap",
+        "bacpro"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · A2-B1",
+      "collection": "cfa-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/",
+      "date": "2026-11-14",
+      "image": "trades-in-english.jpg",
+      "credit": "Dialogue filmé en classe, électricien en Dordogne"
+    },
+    {
+      "id": "agri-anglais-trades-in-english",
+      "title": "Anglais · CAP Jardinier-paysagiste · Trades in English",
+      "summary": "Parmi vingt dialogues en anglais au travail : Arthur, paysagiste près de Beynac, parle avec un client dans le jardin. La page réunit aussi d’autres métiers du CAP, du bac professionnel et du CFA.",
+      "section": "lycee-agricole",
+      "subject": "anglais",
+      "level": "cap",
+      "levelLabel": "CAP Jardinier-paysagiste · A2",
+      "collection": "agri-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/#paysagiste",
+      "date": "2026-11-14",
+      "image": "trades-in-english.jpg",
+      "credit": "Dialogue filmé en classe, électricien en Dordogne"
+    },
+    {
+      "id": "segpa-anglais-trades-in-english",
+      "title": "Anglais · 3e SEGPA · Trades in English",
+      "summary": "Cinq dialogues en anglais très simples, entre un professionnel et un visiteur. Langue claire, métiers présentés avec dignité. Chaque vidéo a sa fiche élève et son corrigé, en pdf, docx et odt.",
+      "section": "segpa",
+      "subject": "anglais",
+      "level": "3e",
+      "levelLabel": "3e SEGPA · A1",
+      "collection": "segpa-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english-segpa/",
+      "date": "2026-11-14",
+      "image": "trades-in-english-segpa.jpg",
+      "credit": "Dialogue filmé en classe, horticulture à Limeuil"
+    },
+    {
       "id": "lp-anglais-s-exprimer-sur-le-lieu-de-travail",
       "title": "Anglais · CAP et bac pro · S'exprimer en anglais sur le lieu de travail",
       "summary": "Huit leçons d'anglais pour le CAP (A2) et le baccalauréat professionnel (B1), toutes filières : s'exprimer dans l'atelier, auprès du tuteur de PFMP et auprès d'un visiteur. Tâche finale Welcome to the workshop, grille CCF sur 20. Fil visuel : une œuvre de Laurent Proux. BO spécial n° 5 du 11 avril 2019.",

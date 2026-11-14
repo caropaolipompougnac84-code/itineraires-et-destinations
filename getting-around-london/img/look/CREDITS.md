@@ -2,44 +2,58 @@
 
 All images are hosted locally in this folder. They are not used elsewhere on the site.
 Licences and attributions (Wikimedia Commons):
-
-- marylebone-high-street-2015.jpg: Marylebone High Street, London, 12 September 2015. Photo: Philafrenzy. CC BY-SA 4.0. Source: Wikimedia Commons, File:Marylebone High Street 12 Sept. 2015.JPG.
-- rathbone-place-sign.jpg: Street sign, Rathbone Place W1, City of Westminster, with a stone plaque dated 1718. Photo: Jim Osley. CC BY-SA 2.0, via Geograph Britain and Ireland. Source: Wikimedia Commons, File:Street sign, Rathbone Place - geograph.org.uk - 4365378.jpg.
-- look-right.jpg: Look Right and Look Left, painted on a London crossing. Photo: Clemensfranz. CC BY-SA 3.0. Source: Wikimedia Commons, File:London Look Right.jpg.
-- bus-lane-sign.jpg: A bus lane sign (buses, bicycles and taxis), with a camera warning. Photo: Andrew Nash. CC BY-SA 2.0. Source: Wikimedia Commons, File:Bus Lane sign.jpg.
-- british-museum-facade.jpg: Facade of the British Museum, seen from the north-east. Photo: Ham. CC BY-SA 3.0. Source: Wikimedia Commons, File:British Museum from NE 2.JPG.
-- natural-history-museum-facade.jpg: Front facade of the Natural History Museum, Cromwell Road, a Victorian design by Alfred Waterhouse, photographed in 2025. Photo: Daniel Lu (dllu). CC BY-SA 4.0. Source: Wikimedia Commons, File:Natural History Museum London front facade 2025 dllu.jpg.
-- k6-telephone-box-va.jpg: A K6 telephone box outside the Victoria and Albert Museum, August 2021. Photo: No Swan So Fine. CC BY-SA 4.0. Source: Wikimedia Commons, File:K6 telephone box outside the V&A (right), August 2021.jpg.
-- black-cab-april-2007.jpg: A London black cab passing a hotel, April 2007. Photo: Diliff (David Iliff). CC BY 2.5. Source: Wikimedia Commons, File:London Black Cab - April 2007.jpg.
-- primrose-hill-june-2013.jpg: A wide view of London from Primrose Hill on a sunny day, with trees, grass and the city in the distance. Photo: Chmee2. CC BY-SA 3.0, Wikimedia Commons. Source: Wikimedia Commons, File:View from Primrose Hill in London, June 2013 (3).jpg.
-- bus-9-high-street-kensington.jpg: A red number 9 bus approaching a bus stop on High Street Kensington, with the words Bus Stop painted on the road. Photo: PAUL FARMER. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Number 9 bus at High Street Kensington (geograph 3846994).jpg.
-- canary-wharf-underground.jpg: The entrance to Canary Wharf station on the London Underground. Photo: Road Engineer. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Canary Wharf Station, London Underground - geograph.org.uk - 4947107.jpg.
-- finsbury-town-hall-exmouth-2025.jpg: Finsbury Town Hall seen from Exmouth Market on a summer day. Photo: Gazamp. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:Finsbury Town Hall from Exmouth Market, London, July 2025.jpg.
-- farringdon-station-train.jpg: A London Underground train arriving at Farringdon station, with passengers waiting on the platform under a glass roof. Photo: Paul the Archivist. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:Farringdon Station, London 4.jpg.
-- leicester-square-escalator.jpg: An escalator at Leicester Square Underground station. Photo: Rossographer. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Escalator, Leicester Square Underground Station - geograph.org.uk - 6066794.jpg.
-- oakwood-platforms.jpg: The platforms at Oakwood station on the London Underground. Photo: The wub. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:Oakwood London Underground station platforms - 2023-01-29 - 2023-01-29.jpg.
-- richmond-riverside.jpg: Richmond riverside on a sunny day, with boats on the Thames, trees and people sitting on the bank. Photo: Lauren. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Richmond Riverside - geograph.org.uk - 7110711.jpg.
-- mind-the-gap-bank.jpg: The words Mind the Gap painted on the platform edge at Bank station, beside a train. Photo: Juergen Rosskamp, wiki+spam@eindruckschinderdomain.de. CC BY-SA 2.5, Wikimedia Commons. Source: Wikimedia Commons, File:Mind-The-Gap-Bank.jpg.
-- covent-garden-underground.jpg: The entrance to Covent Garden Underground station. Photo: Nigel Thompson. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Covent Garden Underground station, London - geograph.org.uk - 7312651.jpg.
-- routemaster-jermyn-street.jpg: A red Routemaster bus, route 14, in Jermyn Street. Photo: Metro Centric. CC BY 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Routemaster in Jermyn Street on route 14.jpg.
-- farringdon-station-geograph.jpg: Farringdon station in London. Photo: Dr Neil Clifton. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:London, Farringdon Station - geograph.org.uk - 4219548.jpg.
-- clapham-common-escalator.jpg: An escalator at Clapham Common Underground station. Photo: Christopher Hilton. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Escalator, Clapham Common Underground Station - geograph.org.uk - 3739488.jpg.
-- whitechapel-platform.jpg: The eastbound platform at Whitechapel Underground station. Photo: Richard Vince. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Eastbound platform, Whitechapel London Underground station - geograph.org.uk - 7640847.jpg.
-- cutty-sark-greenwich.jpg: The Cutty Sark seen from outside the Old Royal Naval College in Greenwich. Photo: Robert Lamb. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:View of the Cutty Sark from outside the Old Royal Naval College - geograph.org.uk - 3353641.jpg.
-- mind-the-gap-bank-central.jpg: Passengers and the Mind the gap warning at Bank station, on the Central line. Photo: David Hawgood. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Passengers have to "Mind the gap" at Bank Central Line station - geograph.org.uk - 5807590.jpg.
-- london-bridge-tube-entrance.jpg: The London Underground entrance in the concourse at London Bridge station. Photo: Rexogamer. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:London Bridge station concourse - London Underground entrance.jpg.
-- columbia-road-2025.jpg: Columbia Road in London, on a summer day. Photo: Matt Brown. CC BY 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:Columbia Road, London 2025-07-03.jpg.
-- farringdon-july-2023.jpg: Farringdon station in July 2023. Photo: Bastian Greshake Tzovaras. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:London - Farringdon station, July 2023.jpg.
-- underground-escalator.jpg: An escalator on the London Underground. Photo: No machine-readable author provided. Martin Leng~commonswiki assumed (based on copyright claims).. Public domain, Wikimedia Commons. Source: Wikimedia Commons, File:London Underground Escalator.jpg.
-- northwood-hills-station.jpg: Northwood Hills station on the Metropolitan line. Photo: Jim Osley. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Northwood Hills Metropolitan Line Station - geograph.org.uk - 8047682.jpg.
-- national-gallery-trafalgar.jpg: The National Gallery, on Trafalgar Square. Photo: . Ray in Manila. CC BY 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:The National Gallery, Trafalgar Square, London (53158780828).jpg.
-- mind-the-gap-platform.jpg: Mind the Gap written on a London Underground platform. Photo: Hameed Mohammed. CC BY-SA 3.0, Wikimedia Commons. Source: Wikimedia Commons, File:Mind The Gap (69294499).jpeg.
-- st-pancras-barlow-shed.jpg: The iron and glass roof of St Pancras station, with trains at the platforms. Photo: Rept0n1x. CC BY-SA 3.0, Wikimedia Commons. Source: Wikimedia Commons, File:Barlow train shed, St Pancras railway station - DSC08182.JPG.
-- marylebone-station.jpg: The concourse and roof of London Marylebone station. Photo: Oxyman. CC BY 2.5, Wikimedia Commons. Source: Wikimedia Commons, File:Marylebone station 01.jpg.
-- eurostar-st-pancras.jpg: Eurostar trains under the roof of St Pancras station. Photo: Loco Steve from Bromley , UK. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Eurostar trains at St Pancras station London.jpg.
-- liverpool-street-concourse.jpg: The concourse at Liverpool Street station, in the City of London. Photo: Acabashi. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:Liverpool Street Station concourse City of London England 03.jpg.
-- heathrow-t5-a320.jpg: A British Airways aircraft on stand at London Heathrow Terminal 5, under a blue sky with white clouds. Photo: Mertbiol. CC0, Wikimedia Commons. Source: Wikimedia Commons, File:G-EUUV - British Airways A320 on stand at London Heathrow Terminal 5.jpg.
-- science-museum-interior.jpg: Inside the Science Museum, London. Photo: Mat Fascione. CC BY-SA 2.0, Wikimedia Commons. Source: Wikimedia Commons, File:Inside the Science Museum, London - geograph.org.uk - 8307367.jpg.
-- raf-museum-se5a.jpg: A historic aircraft on display at the RAF Museum in Hendon. Photo: Ad Meskens. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:London RAF Museum Hendon Royal Aircraft Factory S.E.5A 01.jpg.
-- raf-museum-be2.jpg: A historic aircraft on display at the RAF Museum in Hendon. Photo: Ad Meskens. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:London RAF Museum Hendon Royal Aircraft Factory B.E.2 03.jpg.
-- raf-museum-fe2b.jpg: A historic aircraft on display at the RAF Museum in Hendon. Photo: Ad Meskens. CC BY-SA 4.0, Wikimedia Commons. Source: Wikimedia Commons, File:London RAF Museum Hendon Royal Aircraft Factory F.E.2b 02.jpg.
+- marylebone-high-street-2015.jpg: Marylebone High Street, 12 September 2015. Photo: Philafrenzy. CC BY‑SA 4.0, Wikimedia Commons.
+- rathbone-place-sign.jpg: Rathbone Place W1, City of Westminster, with a stone plaque from 1718. Photo: Jim Osley. CC BY‑SA 2.0, Wikimedia Commons.
+- look-right.jpg: Look Right and Look Left, painted on a London crossing. Photo: Clemensfranz. CC BY‑SA 3.0, Wikimedia Commons.
+- bus-lane-sign.jpg: A bus lane sign in London: buses, bicycles and taxis. Photo: Andrew Nash. CC BY‑SA 2.0, Wikimedia Commons.
+- black-cab-april-2007.jpg: A London black cab, April 2007. Photo: Diliff (David Iliff). CC BY 2.5, Wikimedia Commons.
+- k6-telephone-box-va.jpg: A K6 telephone box outside the Victoria and Albert Museum, August 2021. Photo: No Swan So Fine. CC BY‑SA 4.0, Wikimedia Commons.
+- british-museum-facade.jpg: The British Museum, seen from the north-east. Photo: Ham. CC BY‑SA 3.0, Wikimedia Commons.
+- natural-history-museum-facade.jpg: The Natural History Museum, Cromwell Road, designed by Alfred Waterhouse. Photo: Daniel Lu, 2025. CC BY‑SA 4.0, Wikimedia Commons.
+- london-bridge-tube-entrance.jpg: The London Underground entrance in the concourse at London Bridge station. Photo: Rexogamer. CC BY-SA 4.0, Wikimedia Commons.
+- columbia-road-2025.jpg: Columbia Road in London, on a summer day. Photo: Matt Brown. CC BY 4.0, Wikimedia Commons.
+- farringdon-july-2023.jpg: Farringdon station in July 2023. Photo: Bastian Greshake Tzovaras. CC BY-SA 2.0, Wikimedia Commons.
+- underground-escalator.jpg: An escalator on the London Underground. Photo: Martin Leng. Public domain, Wikimedia Commons.
+- northwood-hills-station.jpg: Northwood Hills station on the Metropolitan line. Photo: Jim Osley. CC BY-SA 2.0, Wikimedia Commons.
+- national-gallery-trafalgar.jpg: The National Gallery, on Trafalgar Square. Photo: Ray in Manila. CC BY 2.0, Wikimedia Commons.
+- mind-the-gap-platform.jpg: Mind the Gap written on a London Underground platform. Photo: Hameed Mohammed. CC BY-SA 3.0, Wikimedia Commons.
+- covent-garden-underground.jpg: The entrance to Covent Garden Underground station. Photo: Nigel Thompson. CC BY-SA 2.0, Wikimedia Commons.
+- routemaster-jermyn-street.jpg: A red Routemaster bus, route 14, in Jermyn Street. Photo: Metro Centric. CC BY 2.0, Wikimedia Commons.
+- farringdon-station-geograph.jpg: Farringdon station in London. Photo: Dr Neil Clifton. CC BY-SA 2.0, Wikimedia Commons.
+- clapham-common-escalator.jpg: An escalator at Clapham Common Underground station. Photo: Christopher Hilton. CC BY-SA 2.0, Wikimedia Commons.
+- whitechapel-platform.jpg: The eastbound platform at Whitechapel Underground station. Photo: Richard Vince. CC BY-SA 2.0, Wikimedia Commons.
+- cutty-sark-greenwich.jpg: The Cutty Sark seen from outside the Old Royal Naval College in Greenwich. Photo: Robert Lamb. CC BY-SA 2.0, Wikimedia Commons.
+- mind-the-gap-bank-central.jpg: Passengers and the Mind the gap warning at Bank station, on the Central line. Photo: David Hawgood. CC BY-SA 2.0, Wikimedia Commons.
+- bus-9-high-street-kensington.jpg: A red number 9 bus approaching a bus stop on High Street Kensington, with the words Bus Stop painted on the road. Photo: PAUL FARMER. CC BY-SA 2.0, Wikimedia Commons.
+- friend-street-bus-stop.jpg: A London bus stop flag at Friend Street, towards the Barbican, route 153, under a blue sky. Photo: JonChanLondon. CC BY 2.0, Wikimedia Commons.
+- london-city-airport-2024.jpg: An aircraft at London City Airport, in 2024. Photo: Hotolmo22. CC0, Wikimedia Commons.
+- heathrow-t3-a320.jpg: A British Airways aircraft on stand at London Heathrow Terminal 3, with the control tower in the distance. Photo: Mertbiol. CC0, Wikimedia Commons.
+- raf-museum-be2.jpg: A historic aircraft on display at the RAF Museum in Hendon. Photo: Ad Meskens. CC BY-SA 4.0, Wikimedia Commons.
+- science-museum-interior.jpg: Inside the Science Museum, London. Photo: Mat Fascione. CC BY-SA 2.0, Wikimedia Commons.
+- gloucester-avenue-sign.jpg: A street sign for Gloucester Avenue NW1, in Camden, on a brick wall. Photo: DiscoA340. CC BY-SA 4.0, Wikimedia Commons.
+- st-pancras-euston-road.jpg: The front of St Pancras International station, on Euston Road. Photo: Elliott Brown from Birmingham, United Kingdom. CC BY-SA 2.0, Wikimedia Commons.
+- london-city-airport-walkway.jpg: A walkway at London City Airport. Photo: mattbuck. CC BY-SA 3.0, Wikimedia Commons.
+- paddington-heathrow-express.jpg: Trains at Paddington station, including a Heathrow Express service. Photo: mattbuck. CC BY-SA 3.0, Wikimedia Commons.
+- little-venice-canal.jpg: The Grand Union Canal at Little Venice. Photo: Ian S. CC BY-SA 2.0, Wikimedia Commons.
+- waterloo-concourse.jpg: The concourse at Waterloo station. Photo: Christine Matthews. CC BY-SA 2.0, Wikimedia Commons.
+- heathrow-t5-a320.jpg: A British Airways aircraft on stand at London Heathrow Terminal 5, under a blue sky with white clouds. Photo: Mertbiol. CC0, Wikimedia Commons.
+- raf-museum-se5a.jpg: A historic aircraft on display at the RAF Museum in Hendon. Photo: Ad Meskens. CC BY-SA 4.0, Wikimedia Commons.
+- raf-museum-fe2b.jpg: A historic aircraft on display at the RAF Museum in Hendon. Photo: Ad Meskens. CC BY-SA 4.0, Wikimedia Commons.
+- k2-telephone-embankment.jpg: A K2 telephone box on Victoria Embankment, in the City of London. Photo: Jim Osley. CC BY-SA 2.0, Wikimedia Commons.
+- st-pancras-eurostar-2019.jpg: Eurostar trains at St Pancras station, a link between Britain and France. Photo: Someone Not Awful. CC BY-SA 4.0, Wikimedia Commons.
+- heathrow-t5-a320neo.jpg: A British Airways aircraft on stand at London Heathrow Terminal 5. Photo: Mertbiol. CC0, Wikimedia Commons.
+- imperial-war-museum-facade.jpg: The facade of the Imperial War Museum in London. Photo: Aviation-fan. CC BY-SA 3.0, Wikimedia Commons.
+- regent-canal-granary-square.jpg: The Regent's Canal near Granary Square, with the towpath and the water. Photo: DS Pugh. CC BY-SA 2.0, Wikimedia Commons.
+- richmond-riverside-bridge.jpg: The riverside at Richmond, with the Thames and trees. Photo: Mark Percy. CC BY-SA 2.0, Wikimedia Commons.
+- canary-wharf-underground.jpg: The entrance to Canary Wharf station on the London Underground. Photo: Road Engineer. CC BY-SA 2.0, Wikimedia Commons.
+- finsbury-town-hall-exmouth-2025.jpg: Finsbury Town Hall seen from Exmouth Market on a summer day. Photo: Gazamp. CC BY-SA 4.0, Wikimedia Commons.
+- farringdon-station-train.jpg: A London Underground train arriving at Farringdon station, with passengers waiting on the platform under a glass roof. Photo: Paul the Archivist. CC BY-SA 4.0, Wikimedia Commons.
+- leicester-square-escalator.jpg: An escalator at Leicester Square Underground station. Photo: Rossographer. CC BY-SA 2.0, Wikimedia Commons.
+- oakwood-platforms.jpg: The platforms at Oakwood station on the London Underground. Photo: The wub. CC BY-SA 4.0, Wikimedia Commons.
+- richmond-riverside.jpg: Richmond riverside on a sunny day, with boats on the Thames, trees and people sitting on the bank. Photo: Lauren. CC BY-SA 2.0, Wikimedia Commons.
+- mind-the-gap-bank.jpg: The words Mind the Gap painted on the platform edge at Bank station, beside a train. Photo: Juergen Rosskamp. CC BY-SA 2.5, Wikimedia Commons.
+- primrose-hill-june-2013.jpg: A wide view of London from Primrose Hill on a sunny day, with trees, grass and the city in the distance. Photo: Chmee2. CC BY-SA 3.0, Wikimedia Commons.
+- liverpool-street-concourse.jpg: The concourse at Liverpool Street station, in the City of London. Photo: Acabashi. CC BY-SA 4.0, Wikimedia Commons.
+- eurostar-st-pancras.jpg: Eurostar trains under the roof of St Pancras station. Photo: Loco Steve from Bromley , UK. CC BY-SA 2.0, Wikimedia Commons.
+- marylebone-station.jpg: The concourse and roof of London Marylebone station. Photo: Oxyman. CC BY 2.5, Wikimedia Commons.
+- st-pancras-barlow-shed.jpg: The iron and glass roof of St Pancras station, with trains at the platforms. Photo: Rept0n1x. CC BY-SA 3.0, Wikimedia Commons.

@@ -61,29 +61,53 @@ CODES = """
 """
 
 
-POINT_INTRO = "Cette séquence est née d'une publication trouvée sur LinkedIn, qui m'a interrogée."
-POINT_QUOTE = (
-    "Notre rapport aux autres reste profondément marqué par l'histoire coloniale européenne. "
-    "Ce passé continue de façonner notre regard sur les personnes racisées, parce que nous ne l'avons pas véritablement déconstruit ni critiqué. "
-    "Et cet héritage reste actif aujourd'hui, comme le montre le retour de discours racistes de plus en plus explicites."
+POINT_INTRO_AVANT = (
+    "Cette séquence est née d'une publication de France Culture trouvée sur LinkedIn, qui m'a interrogée. "
+    "L'anthropologue Michel Agier y parle de notre regard sur les autres, encore marqué par l'histoire ("
 )
-POINT_CREDIT = "Michel Agier, France Culture, Questions du soir : l'idée (« Qu'est-ce que l'impensé raciste ? »)"
+POINT_LIVRE = "Racisme et culture. Explorations transnationales"
+POINT_INTRO_APRES = ", Seuil, 2025)."
 POINT_SUITE = (
-    "Cette citation est un point de départ, pour interroger la façon dont on regarde les autres, et dont on se regarde soi-même. "
-    "Ce n'est pas un débat politique. En classe, elle sert de déclencheur sur le regard. "
-    "Chacun peut répondre, sans avoir à raconter son histoire."
+    "En classe, cette citation sert seulement à réfléchir à la façon dont on regarde les autres, et dont on se regarde soi-même. "
+    "Chacun peut répondre sans avoir à raconter son histoire."
 )
-POINT_DE_DEPART = f"""
-<aside class="point-depart" aria-label="Point de départ">
-<h2>Point de départ</h2>
-<p>{POINT_INTRO}</p>
-<blockquote>
-<p>« {POINT_QUOTE} »</p>
-<p class="ref">{POINT_CREDIT}</p>
-</blockquote>
-<p>{POINT_SUITE}</p>
-</aside>
-"""
+POINT_CREDIT = "Crédit image : France Culture, Questions du soir : l'idée."
+PROBLEMATIQUE = "Peut-on devenir soi sans être enraciné dans sa culture d'origine ?"
+FIL_QUESTION = "Comment devient-on soi-même quand on se sent étranger, ailleurs ou même parmi les siens ?"
+POINT_IMAGE = "france-culture-questions-du-soir.jpg"
+POINT_ALT = (
+    "Carte de France Culture, Questions du soir : l'idée : une citation de Michel Agier, "
+    "sur fond de l'affiche de l'Exposition coloniale de 1931."
+)
+
+def point_de_depart_html(with_image=True):
+    from pathlib import Path as _P
+    img = ''
+    credit_p = ''
+    src = _P(__file__).resolve().parents[1] / 'images' / POINT_IMAGE
+    if with_image and src.exists():
+        img = (
+            '<figure class="figure">'
+            f'<img src="{BASE}/images/{POINT_IMAGE}" alt="{POINT_ALT}">'
+            f'<figcaption class="caption"><span class="credit">{POINT_CREDIT}</span></figcaption>'
+            '</figure>'
+        )
+    else:
+        credit_p = f'<p class="credit">{POINT_CREDIT}</p>'
+    html = (
+        '<aside class="point-depart" aria-label="Point de départ">\n'
+        '<h2>Point de départ</h2>\n'
+        + img + ('\n' if img else '')
+        + f'<p>{POINT_INTRO_AVANT}<i>{POINT_LIVRE}</i>{POINT_INTRO_APRES}</p>\n'
+        + f'<p>{POINT_SUITE}</p>\n'
+        + (credit_p + '\n' if credit_p else '')
+        + '</aside>\n'
+        + f'<p class="exergue problematique"><span class="prob-label">Problématique :</span> {PROBLEMATIQUE}</p>\n'
+    )
+    return html
+
+POINT_DE_DEPART = point_de_depart_html()
+
 
 def dash_ok(s):
     if "—" in s or "–" in s:

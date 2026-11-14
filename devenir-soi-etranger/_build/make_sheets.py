@@ -11,7 +11,8 @@ from docx.shared import Cm, Pt, RGBColor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lessons import LESSONS
-from helpers import FOOT, TITLE, LEVEL, dash_ok, POINT_INTRO, POINT_QUOTE, POINT_CREDIT, POINT_SUITE
+from helpers import (FOOT, TITLE, LEVEL, dash_ok,
+    POINT_INTRO_AVANT, POINT_LIVRE, POINT_INTRO_APRES, POINT_SUITE, POINT_CREDIT, PROBLEMATIQUE, FIL_QUESTION)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "downloads"
@@ -280,10 +281,20 @@ def prof_doc():
     heading(doc, TITLE, 22)
     para(doc, LEVEL + " · Objet d'étude : Devenir soi, écritures autobiographiques", 16, italic=True)
     heading(doc, "Point de départ", 18)
-    para(doc, POINT_INTRO, 16)
-    para(doc, "« " + POINT_QUOTE + " »", 16, italic=True)
-    para(doc, POINT_CREDIT, 14, italic=True)
+    p = doc.add_paragraph()
+    p.paragraph_format.space_after = Pt(8)
+    p.paragraph_format.line_spacing = 1.3
+    run = p.add_run(POINT_INTRO_AVANT)
+    set_run(run, size=16)
+    run = p.add_run(POINT_LIVRE)
+    set_run(run, size=16, italic=True)
+    run = p.add_run(POINT_INTRO_APRES)
+    set_run(run, size=16)
     para(doc, POINT_SUITE, 16)
+    para(doc, POINT_CREDIT, 14, italic=True)
+    heading(doc, "Problématique", 18)
+    para(doc, PROBLEMATIQUE, 18, bold=True)
+    para(doc, "Fil de la séquence : " + FIL_QUESTION, 16, italic=True)
     para(doc, "BO spécial n° 5 du 11 avril 2019. 18 séances de 52 minutes. Œuvre : Jules Vallès, L'Enfant (1879). Groupement : Montaigne, Rousseau, Montesquieu, et quatre voix du manuel.", 16)
     heading(doc, "Parti pris", 18)
     para(doc, "Le sentiment d'être étranger est pris au sens large. Personne n'est obligé de raconter un souvenir douloureux. On peut inventer. Les textes de migration ou de milieu sont lus de façon neutre, sans prendre parti.", 16)

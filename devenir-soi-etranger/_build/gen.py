@@ -130,13 +130,13 @@ def accueil():
 <p class="kicker">Lettres · Seconde baccalauréat professionnel</p>
 <h1>{TITLE}</h1>
 {POINT_DE_DEPART}
-<p class="exergue">Comment devient-on soi-même quand on se sent étranger, ailleurs ou même parmi les siens ?</p>
 {figure("velazquez-juan-de-pareja.jpg",
     "Diego Velázquez, Portrait de Juan de Pareja, 1650 : un homme en habit sombre, col de dentelle, nous regarde.",
     "Il nous regarde. Il a un nom : Juan de Pareja.",
     "Diego Velázquez, Portrait de Juan de Pareja, 1650, Metropolitan Museum of Art, New York. Domaine public.")}
 
 <h2>Le fil de la séquence</h2>
+<p>Un fil traverse les séances : comment devient-on soi-même quand on se sent étranger, ailleurs ou même parmi les siens ?</p>
 <p>On peut se sentir étranger de mille façons : en arrivant dans un nouveau pays, une nouvelle ville, un nouveau lycée, en stage, ou même dans sa propre famille quand on change.</p>
 <p>Les écrivains qui racontent leur vie ont souvent connu ce sentiment. Ils nous montrent que ce décalage peut devenir une force : c'est parfois en se sentant différent que l'on découvre qui l'on est.</p>
 <p>Dans ce travail, personne n'est obligé de raconter un souvenir douloureux ni de révéler sa vie privée. On peut transformer une situation, déplacer les faits ou inventer un personnage. Ce sont la lecture, l'écriture, la langue et la réflexion qui sont évaluées, jamais l'intimité.</p>

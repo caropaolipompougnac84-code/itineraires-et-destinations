@@ -1123,15 +1123,15 @@
     },
     {
       "id": "lp-anglais-destination-australia",
-      "title": "Anglais · Terminale bac pro · Première bac pro · Head off to Australia",
-      "summary": "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro, adaptables en Première bac pro, plus l'évaluation.",
+      "title": "Anglais · Terminale bac pro et Terminale générale et technologique · Head off to Australia",
+      "summary": "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro et la Terminale générale et technologique, plus l'évaluation.",
       "section": "lycee-pro",
       "subject": "anglais",
       "level": [
         "1re",
         "tle"
       ],
-      "levelLabel": "Terminale bac pro · Première bac pro (adaptable)",
+      "levelLabel": "Terminale bac pro et Terminale générale et technologique",
       "collection": "lp-anglais",
       "themes": [
         "voyage",

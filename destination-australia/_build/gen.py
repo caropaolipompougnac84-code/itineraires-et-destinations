@@ -3,12 +3,15 @@
 """Classroom-first rebuild of Head off to Australia."""
 from pathlib import Path
 import json
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from tabs import wrap_lesson, slang_card_html
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "/destination-australia"
 TITLE = "Head off to Australia"
 FOOT = "© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0"
-LEVEL = "Terminale bac pro · Première bac pro (adaptable)"
+LEVEL = "Terminale bac pro et Terminale générale et technologique"
 OG = "https://itineraires-destinations.fr/destination-australia/images/roberts-coogee.jpg"
 COVER = "roberts-coogee.jpg"
 
@@ -26,7 +29,7 @@ NAV = [
 ]
 
 LISIBLE_HOME = (
-    '<p class="lisible-note">Terminale bac pro, aussi adaptable en Première bac pro. '
+    '<p class="lisible-note">Terminale bac pro et Terminale générale et technologique. '
     "Les objectifs et les activités langagières restent ceux du programme. "
     "La version plus lisible change seulement la mise en page. "
     "Pour un étayage plus léger, en Première ou au quotidien, prenez le parcours ★ : "
@@ -175,14 +178,14 @@ def cadre(actives, rows, solo, mediation=False):
         "<li><strong>La classe s'agite.</strong> On arrête deux minutes, on revient à une tâche courte et orale, chacun dit une phrase, puis on reprend le minutage.</li>"
         "<li><strong>Vous avez fini trop tôt.</strong> On allonge l'oral : un second exemple, une phrase de plus, ou une carte bristol.</li>"
         "<li><strong>Le matériel tombe en panne.</strong> On passe à la fiche papier, au tableau, ou à une dictée de la trace. La séance continue sans écran.</li>"
-        "<li><strong>Tempête émotionnelle.</strong> Si un élève met vraiment le bazar, on l'écarte un moment selon le règlement de l'établissement (vie scolaire, autre salle, lieu surveillé), on lui confie une tâche courte liée à la séance ("
+        "<li><strong>Tempête émotionnelle.</strong> Restez calme, parlez à part, sans juger. Proposez un coin plus calme, ou la fiche à emporter, sous la surveillance d'un autre adulte (voir l'onglet Gestion de classe). Tâche courte liée à la séance : "
         + solo
         + "), puis on le réintègre calmement. Le cours minuté continue pour les autres.</li>"
         "</ul></aside>"
     )
 
 ADAPTER = '''<details class="more" id="adapter-premiere">
-<summary>Adapter en Première bac pro</summary>
+<summary>Adapter l'étayage</summary>
 <ul>
 <li>Ne prenez pas les 13 séances d'affilée : choisissez un parcours plus court, par exemple S1 (tableaux), S4 (animaux), S5 (transports et FIFO), S6 (visa), S8 (budget), S12 (Aussie English, vidéo d'Elena), puis l'entretien.</li>
 <li>Au budget (S8), guidez davantage le calcul : donnez les figures, faites calculer seulement le reste à vivre, et gardez le calculateur pour une démonstration collective.</li>
@@ -233,7 +236,7 @@ def build_index():
 </div>
 <article class="card card-wide" id="niveaux">
 <h3>Niveaux</h3>
-<p>Terminale bac pro, aussi adaptable en Première bac pro. Les objectifs et les activités langagières restent ceux du programme. La version plus lisible change seulement la mise en page. Pour un étayage plus léger, en Première ou au quotidien, prenez le parcours ★ : mêmes tâches, consignes plus guidées, textes plus courts. Le parcours ★★ reste disponible.</p>
+<p>Terminale bac pro et Terminale générale et technologique. Les objectifs et les activités langagières restent ceux du programme. La version plus lisible change seulement la mise en page. Pour un étayage plus léger, en Première ou au quotidien, prenez le parcours ★ : mêmes tâches, consignes plus guidées, textes plus courts. Le parcours ★★ reste disponible.</p>
 </article>
 
 <h2>The 13 lessons, then the test</h2>
@@ -245,6 +248,10 @@ def build_index():
 <a class="sec" href="{BASE}/teacher/">Corrigés</a>
 <a class="sec" href="{BASE}/annexe/">Ancienne version</a>
 </p>
+
+<h2>Aussie slang guide</h2>
+{slang_card_html()}
+
 
 
 <section class="voices" id="australian-voices" lang="fr">
@@ -318,7 +325,7 @@ Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">E
 
 {more("Présentation pour les collègues", f'''
 <p>Chère collègue, cher collègue,</p>
-<p>Séquence d'anglais pour la Terminale bac pro, adaptable en Première bac pro.</p>
+<p>Séquence d'anglais pour la Terminale bac pro et la Terminale générale et technologique.</p>
 <p>Projet : un an en Australie, le plus souvent avec un visa vacances-travail 417, parfois un visa étudiant.</p>
 <p>Chaque séance affiche les cinq activités langagières du programme, un minutage de 52 minutes et une issue de secours. Les cinq activités langagières et la médiation sont travaillées. Chaque séance a une trace écrite et un devoir court, corrigé à la séance suivante.</p>
 <p>Deux passages ajoutés au texte de départ : les animaux qui font peur, et les transports, y compris le fly-in fly-out (FIFO).</p>
@@ -329,12 +336,13 @@ Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">E
 <section class="cadre-officiel" id="cadre-officiel" aria-label="Cadre officiel">
 <h2>Cadre officiel</h2>
 <p>Voie professionnelle, Terminale et Première bac pro. Programme : arrêté du 3 avril 2019, BO spécial n° 5 du 11 avril 2019. Deux contextes, non limitatifs : la vie quotidienne, personnelle, sociale et citoyenne ; la vie professionnelle. La mobilité entre dans ces contextes. Les cinq activités langagières sont la compréhension de l'oral, la compréhension de l'écrit, l'expression écrite, l'expression orale en continu et l'expression orale en interaction. La médiation figure aussi dans le programme, en plus de ces cinq activités. Épreuve (arrêté du 17 juin 2020, BO n° 30 du 23 juillet 2020, annexe V) : chaque activité compte pour un cinquième de la note. CCF en terminale : situation A (compréhension de l'oral, de l'écrit et expression écrite, 1 heure au maximum, 12 points) et situation B (expression orale en continu puis interaction, 10 minutes, 8 points). Niveaux attendus à l'examen : B1+ en langue vivante A, A2+ en langue vivante B. Niveaux visés en fin d'études : B2 en langue vivante A, B1 en langue vivante B.</p>
+<p>La séquence est aussi proposable en Terminale générale et technologique.</p>
 <p>La rubrique Listening: Australian voices peut aussi servir en Première générale et technologique (compréhension de l'oral). En Terminale bac pro, langue vivante A, le niveau visé pour cette écoute est B1+.</p>
 </section>
 {ADAPTER}
 '''
     page("index.html", TITLE,
-         "Head off to Australia : séquence d'anglais prête à l'emploi, Terminale bac pro et Première bac pro (adaptable).",
+         "Head off to Australia : séquence d'anglais prête à l'emploi, Terminale bac pro et Terminale générale et technologique.",
          f"{BASE}/", body, lisible="home")
 
 def build_s1():
@@ -371,6 +379,7 @@ def build_s1():
 {homework("Choose one painting. Write 6 to 8 lines: what you see, and what it tells us about Australia.", "2")}
 {more("Repères pour la classe", "<p>Ces peintres appartiennent à l'école de Heidelberg. Pour l'art aborigène contemporain (Namatjira, Kngwarreye), montrez les œuvres depuis les sites des musées, sans les reproduire : elles sont encore protégées.</p>")}
 '''
+    body = wrap_lesson(body, "s1")
     page("s1/index.html", f"{TITLE} · Séance 1",
          "Head off to Australia, séance 1 : regarder et parler à partir de quatre tableaux.",
          f"{BASE}/s1/", body)
@@ -425,6 +434,7 @@ def build_s2():
 {trace("26 January is Australia Day for some people, and Invasion Day or Survival Day for others.")}
 {homework("Learn three dates from the timeline. For each one, write one sentence: what happened, and why it still matters today.", "3")}
 '''
+    body = wrap_lesson(body, "s2")
     page("s2/index.html", f"{TITLE} · Séance 2",
          "Head off to Australia, séance 2 : le 26 janvier et une courte frise historique.",
          f"{BASE}/s2/", body)
@@ -464,6 +474,7 @@ def build_s3():
 {trace("Most Australians live on the coast. The outback is huge and dry. First Nations history is still part of daily life.")}
 {homework("Write a short message (8 to 10 lines) to a friend in France: three things about Australian society that surprise you.", "4")}
 '''
+    body = wrap_lesson(body, "s3")
     page("s3/index.html", f"{TITLE} · Séance 3",
          "Head off to Australia, séance 3 : qui vit en Australie aujourd'hui.",
          f"{BASE}/s3/", body)
@@ -511,6 +522,7 @@ def build_s4():
 {homework("Write 8 to 10 lines: Would these animals stop you from going to Australia? Use one official fact and one personal reason.", "5")}
 {more("Chiffres et gestes officiels", "<p>Morsures de serpent : 1 à 4 décès par an (healthdirect). Premiers secours : 000, bandage compressif, ne pas laver, couper ou sucer la plaie. Funnel-web : urgence. Queensland : « Croc Country », saison des méduses novembre à mai, nager entre les drapeaux. Routes : plus de 1 300 décès en 2025, bien plus que requins ou serpents.</p>")}
 '''
+    body = wrap_lesson(body, "s4")
     page("s4/index.html", f"{TITLE} · Séance 4",
          "Head off to Australia, séance 4 : les animaux qui font peur, faits officiels et discussion.",
          f"{BASE}/s4/", body)
@@ -556,6 +568,7 @@ def build_s5():
 {homework("Write 8 to 10 lines: your route from France to one Australian city, then one trip inside the country. Add one sentence about FIFO.", "6")}
 {more("Chiffres à revérifier", "<p>Paris-Sydney : environ 17 000 km, 22 à 24 h, une escale. Traitement du visa : souvent 3 mois, ne pas réserver avant l'accord. The Ghan : 2 979 km, environ 48 h. Indian Pacific : 4 352 km, environ 68 h (Journey Beyond). FIFO : Pilbara, charters souvent depuis Perth, cycles 8/6 ou 2/1, postes de 12 à 12,5 h (Fortescue, WA Transport).</p>")}
 '''
+    body = wrap_lesson(body, "s5")
     page("s5/index.html", f"{TITLE} · Séance 5",
          "Head off to Australia, séance 5 : le vol, les distances et le fly-in fly-out.",
          f"{BASE}/s5/", body)
@@ -602,6 +615,7 @@ def build_s6():
 </ul>
 ''')}
 '''
+    body = wrap_lesson(body, "s6")
     page("s6/index.html", f"{TITLE} · Séance 6",
          "Head off to Australia, séance 6 : choisir et vérifier un visa.",
          f"{BASE}/s6/", body)
@@ -643,6 +657,7 @@ def build_s7():
 {homework("Make a checklist of 8 items for your own bag. Tick what you must declare.", "8")}
 {more("Site officiel", '<p><a href="https://www.abf.gov.au/entering-and-leaving-australia/going-through-border-control/what-can-i-bring">Australian Border Force · What can I bring?</a></p>')}
 '''
+    body = wrap_lesson(body, "s7")
     page("s7/index.html", f"{TITLE} · Séance 7",
          "Head off to Australia, séance 7 : le sac de Léa à la douane.",
          f"{BASE}/s7/", body)
@@ -706,6 +721,7 @@ def build_s8():
 </ul>
 ''')}
 '''
+    body = wrap_lesson(body, "s8")
     page("s8/index.html", f"{TITLE} · Séance 8",
          "Head off to Australia, séance 8 : argent, salaire et calculateur de budget.",
          f"{BASE}/s8/", body)
@@ -736,6 +752,7 @@ def build_s9():
 {trace("A short, clear resume helps. In the interview, answer in full sentences and give one example.")}
 {homework("Finish your resume at home. Write the answers to these three questions: Why Australia? Why this job? When can you start?", "10")}
 '''
+    body = wrap_lesson(body, "s9")
     page("s9/index.html", f"{TITLE} · Séance 9",
          "Head off to Australia, séance 9 : emplois, CV et entretien.",
          f"{BASE}/s9/", body)
@@ -771,6 +788,7 @@ def build_s10():
 {trace("If you want to study, check the course, the dates, the fees, and visa 500 on official sites. It is not the same path as a Working Holiday year.")}
 {homework("Write 8 lines: work for a year, or study? Use one official figure.", "11")}
 '''
+    body = wrap_lesson(body, "s10")
     page("s10/index.html", f"{TITLE} · Séance 10",
          "Head off to Australia, séance 10 : étudier en Australie.",
          f"{BASE}/s10/", body)
@@ -817,6 +835,7 @@ def build_s11():
 {trace("Keep official contacts at hand. On a form, write clearly, use the date format asked, and check every box before you send.")}
 {homework("Write the embassy email again, this time in 6 short sentences, no drafts left on the desk.", "12")}
 '''
+    body = wrap_lesson(body, "s11")
     page("s11/index.html", f"{TITLE} · Séance 11",
          "Head off to Australia, séance 11 : contacts officiels et formulaires.",
          f"{BASE}/s11/", body)
@@ -872,6 +891,7 @@ Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">E
 {trace("Australian English uses short, friendly words. You can still answer in standard English, and people will understand you.")}
 {homework("Learn 6 words from the table. Write a 6-line dialogue at a café.", "13")}
 '''
+    body = wrap_lesson(body, "s12")
     page("s12/index.html", f"{TITLE} · Séance 12",
          "Head off to Australia, séance 12 : Aussie English.",
          f"{BASE}/s12/", body)
@@ -901,6 +921,7 @@ def build_s13():
 {trace("Opportunity depends on your visa, your money, your job, and what you can accept (distance, fear, isolation). Official figures help you decide.")}
 {homework("Write 12 to 15 lines: your answer to the big question. Bring it to the assessment lesson.", "d'évaluation")}
 '''
+    body = wrap_lesson(body, "s13")
     page("s13/index.html", f"{TITLE} · Séance 13",
          "Head off to Australia, séance 13 : vivre là-bas et la question finale.",
          f"{BASE}/s13/", body)
@@ -963,6 +984,7 @@ def build_assessment():
 <a class="sec" href="{BASE}/teacher/">Corrigés</a>
 </p>
 '''
+    body = wrap_lesson(body, "assessment")
     page("assessment/index.html", f"{TITLE} · Évaluation",
          "Head off to Australia : dossier et entretien téléphonique.",
          f"{BASE}/assessment/", body)
@@ -1004,8 +1026,178 @@ def build_downloads():
     body = f'''
 <p class="kicker">Documents</p>
 <h1>Téléchargements</h1>
-<p>Trois formats pour chaque fichier : PDF, Word et LibreOffice. Présentation professeur en 16 points.</p>
+<p>Trois formats pour chaque fichier : PDF, Word et LibreOffice. Présentation professeur en 16 points. Les fiches de séance sont en gros caractères, format A4, à photocopier.</p>
+{slang_card_html()}
 <div class="grid">
+<article class="card"><h3>Séance 1 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s1-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s1-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s1-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s1-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s1-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s1-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 2 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s2-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s2-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s2-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s2-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s2-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s2-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 3 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s3-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s3-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s3-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s3-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s3-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s3-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 4 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s4-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s4-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s4-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s4-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s4-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s4-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 5 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s5-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s5-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s5-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s5-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s5-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s5-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 6 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s6-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s6-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s6-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s6-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s6-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s6-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 7 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s7-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s7-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s7-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s7-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s7-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s7-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 8 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s8-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s8-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s8-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s8-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s8-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s8-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 9 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s9-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s9-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s9-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s9-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s9-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s9-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 10 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s10-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s10-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s10-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s10-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s10-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s10-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 11 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s11-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s11-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s11-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s11-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s11-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s11-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 12 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s12-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s12-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s12-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s12-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s12-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s12-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Séance 13 · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/s13-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s13-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s13-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/s13-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/s13-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/s13-grille-eleve.odt">LibreOffice</a>
+</p></article>
+<article class="card"><h3>Évaluation · fiche élève</h3>
+<p class="dl">
+<a href="{BASE}/downloads/assessment-fiche-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/assessment-fiche-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/assessment-fiche-eleve.odt">LibreOffice</a>
+</p>
+<p>Grille élève</p>
+<p class="dl">
+<a href="{BASE}/downloads/assessment-grille-eleve.pdf">PDF</a>
+<a class="sec" href="{BASE}/downloads/assessment-grille-eleve.docx">Word</a>
+<a class="sec" href="{BASE}/downloads/assessment-grille-eleve.odt">LibreOffice</a>
+</p></article>
+
 <article class="card"><h3>Présentation pour les collègues</h3>
 <p class="dl">
 <a href="{BASE}/downloads/presentation-heading-off-to-australia.pdf">PDF</a>
@@ -1045,12 +1237,12 @@ def build_downloads():
          f"{BASE}/downloads/", body)
 
 def patch_listings():
-    old_title = "Anglais · Lycée professionnel, lycée général et technologique · Head off to Australia"
-    new_title = "Anglais · Terminale bac pro · Première bac pro · Head off to Australia"
-    old_meta = "Lycée professionnel, lycée général et technologique · B1, B2"
-    new_meta = "Terminale bac pro · Première bac pro (adaptable)"
-    old_sum = "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances de B1 et B2, plus l'évaluation, avec une présentation pour les collègues."
-    new_sum = "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro, adaptables en Première bac pro, plus l'évaluation."
+    old_title = "Anglais · Terminale bac pro · Première bac pro · Head off to Australia"
+    new_title = "Anglais · Terminale bac pro et Terminale générale et technologique · Head off to Australia"
+    old_meta = "Terminale bac pro · Première bac pro (adaptable)"
+    new_meta = "Terminale bac pro et Terminale générale et technologique"
+    old_sum = "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro, adaptables en Première bac pro, plus l'évaluation."
+    new_sum = "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro et la Terminale générale et technologique, plus l'évaluation."
     for rel in ("../index.html", "../lycee-pro/index.html", "../lycee-general/index.html"):
         p = (ROOT / rel).resolve()
         if not p.exists():
@@ -1076,7 +1268,7 @@ def patch_listings():
         print("patched listing", p)
     res = (ROOT.parent / "data/resources.json").resolve()
     if not res.exists():
-        res = Path("/workspace/site-down-under/data/resources.json")
+        raise SystemExit("data/resources.json not found")
     data = json.loads(res.read_text(encoding="utf-8"))
     changed = False
     def walk(o):

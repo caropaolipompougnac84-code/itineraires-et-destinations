@@ -172,3 +172,23 @@ body.dys main{max-width:740px}
 #adapter-premiere{margin:1.2rem 0 1.5rem}
 #adapter-premiere ul{margin:.4rem 0 0;padding-left:1.2rem;max-width:68ch}
 #adapter-premiere li{margin:0 0 .45rem}
+
+.lisible-note{font-size:.95rem;color:var(--soft);max-width:70ch;margin:0 0 1.2rem}
+.mediation-line{
+  color:var(--navy);font-weight:700;margin:.2rem 0 1.2rem;
+  padding:.7rem 1rem;background:#fff;border:1px solid var(--navy);
+  border-radius:12px;max-width:70ch;
+}
+.cadre-officiel{
+  background:var(--prof-bg);border:2px solid var(--navy);
+  border-radius:16px;padding:1.15rem 1.2rem 1.25rem;margin:1.4rem 0 2rem;
+}
+.cadre-officiel h2{margin:0 0 .7rem}
+.cadre-officiel p{max-width:70ch}
+.back-standard{
+  display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;
+  border:1px solid var(--navy);border-radius:8px;background:#fff;color:var(--navy);
+  font-weight:700;text-decoration:none;
+}
+.card-wide{margin:0 0 2rem}
+.card-wide p{max-width:70ch}

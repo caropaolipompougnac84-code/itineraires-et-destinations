@@ -25,7 +25,20 @@ NAV = [
     ("Annexe", f"{BASE}/annexe/"),
 ]
 
-def page(out_rel, title, description, current, body, og=OG):
+LISIBLE_HOME = (
+    '<p class="lisible-note">Terminale bac pro, aussi adaptable en Première bac pro. '
+    "Les objectifs et les activités langagières restent ceux du programme. "
+    "La version plus lisible change seulement la mise en page. "
+    "Pour un étayage plus léger, en Première ou au quotidien, prenez le parcours ★ : "
+    "mêmes tâches, consignes plus guidées, textes plus courts. "
+    "Le parcours ★★ reste disponible.</p>"
+)
+LISIBLE_LESSON = (
+    '<p class="lisible-note">Seul l\'étayage change : les objectifs et les activités langagières '
+    "restent ceux du programme. La version plus lisible change seulement la mise en page.</p>"
+)
+
+def page(out_rel, title, description, current, body, og=OG, lisible="lesson"):
     nav = []
     for label, href in NAV:
         on = " on" if href == current else ""
@@ -64,6 +77,7 @@ def page(out_rel, title, description, current, body, og=OG):
 <div class="seq-bar"><nav class="seq-nav" aria-label="Séances">{''.join(nav)}</nav></div>
 <main id="main">
 <p class="switch"><button type="button" data-dys-toggle>Version plus lisible</button></p>
+{LISIBLE_HOME if lisible=="home" else LISIBLE_LESSON if lisible=="lesson" else ""}
 {body}
 </main>
 <footer><div class="wrap"><p>{FOOT}</p></div></footer>
@@ -125,7 +139,7 @@ FIVE = [
     ("EOI", "Interaction orale"),
 ]
 
-def cadre(actives, rows, solo):
+def cadre(actives, rows, solo, mediation=False):
     """Five official language activities, 52-minute timing, fallback box."""
     lis = []
     for code, name in FIVE:
@@ -137,14 +151,21 @@ def cadre(actives, rows, solo):
             f'<span class="notice">{etat}</span></li>'
         )
     rows_html = "".join(f"<tr><th>{a}</th><td>{b}</td></tr>" for a, b in rows)
+    mediation_html = ""
+    if mediation:
+        mediation_html = (
+            '<p class="mediation-line">Médiation · travaillée aujourd\'hui, '
+            "en plus des cinq activités de l'épreuve.</p>\n"
+        )
     return (
-        '<aside class="cinq-bo" aria-label="Les cinq directives du Bulletin officiel">'
-        "<h3>Les cinq directives du Bulletin officiel</h3>"
+        '<aside class="cinq-bo" aria-label="Les cinq activités langagières du programme">'
+        "<h3>Les cinq activités langagières du programme</h3>"
         '<p class="notice">Les cinq activités langagières du programme de la voie professionnelle '
         "(BO spécial n° 5 du 11 avril 2019). Chacune compte pour un cinquième de l'épreuve.</p>"
         f"<ul>{''.join(lis)}</ul>"
         "</aside>\n"
-        '<section class="minutage" aria-label="Minutage de la séance">'
+        + mediation_html
+        + '<section class="minutage" aria-label="Minutage de la séance">'
         "<h3>Minutage · 52 minutes</h3>"
         "<table><thead><tr><th>Temps</th><th>Activité</th></tr></thead>"
         f"<tbody>{rows_html}</tbody></table>"
@@ -163,11 +184,11 @@ def cadre(actives, rows, solo):
 ADAPTER = '''<details class="more" id="adapter-premiere">
 <summary>Adapter en Première bac pro</summary>
 <ul>
-<li>Ne prenez pas les 13 séances d'affilée : choisissez un parcours plus court, par exemple S1 (tableaux), S4 (animaux), S5 (transports et FIFO), S6 (visa), S8 (budget), une vidéo de Listening, puis l'entretien.</li>
+<li>Ne prenez pas les 13 séances d'affilée : choisissez un parcours plus court, par exemple S1 (tableaux), S4 (animaux), S5 (transports et FIFO), S6 (visa), S8 (budget), S12 (Aussie English, vidéo d'Elena), puis l'entretien.</li>
 <li>Au budget (S8), guidez davantage le calcul : donnez les figures, faites calculer seulement le reste à vivre, et gardez le calculateur pour une démonstration collective.</li>
 <li>Étayez les lectures les plus longues : lisez-les ensemble, ou donnez d'abord le texte court, puis deux questions seulement du texte plus long.</li>
-<li>Gardez en priorité les mini-tâches concrètes : le sac de Léa (S7), le calculateur (S8), le CV et l'entretien (S9), une vidéo de Listening.</li>
-<li>Les cinq directives, le minutage et l'issue de secours restent les mêmes. En Première, serrez le minutage et allongez le temps d'étayage, sans enlever ce cadre : c'est lui qui permet de tenir la classe.</li>
+<li>Gardez en priorité les mini-tâches du projet : le sac de Léa (S7), le calculateur (S8), le CV et l'entretien (S9), et la compréhension de l'oral en S12.</li>
+<li>Les cinq activités langagières du programme, le minutage et l'issue de secours restent les mêmes. En Première, serrez le minutage et allongez le temps d'étayage, sans enlever ce cadre : c'est lui qui permet de tenir la classe.</li>
 </ul>
 </details>
 '''
@@ -209,8 +230,11 @@ def build_index():
 <article class="card"><h3>Scenario</h3><p>You are 19. You want to live in Australia for at least one year.</p><p>Before you buy your ticket, you prepare papers, money, a job and daily life.</p></article>
 <article class="card"><h3>Big question</h3><p>Is Australia really the land of opportunity for a young French person?</p></article>
 <article class="card"><h3>Final task</h3><p>You build an application file: letter, resume, forms, visa, budget, contacts.</p><p>Then you pass a phone interview.</p></article>
-<article class="card"><h3>Niveaux</h3><p>Terminale bac pro · Première bac pro (adaptable).</p><p>★ textes plus courts, tâches guidées. ★★ textes plus longs, réponses plus personnelles. En Première, étayez le parcours ★★ ou gardez le parcours ★.</p></article>
 </div>
+<article class="card card-wide" id="niveaux">
+<h3>Niveaux</h3>
+<p>Terminale bac pro, aussi adaptable en Première bac pro. Les objectifs et les activités langagières restent ceux du programme. La version plus lisible change seulement la mise en page. Pour un étayage plus léger, en Première ou au quotidien, prenez le parcours ★ : mêmes tâches, consignes plus guidées, textes plus courts. Le parcours ★★ reste disponible.</p>
+</article>
 
 <h2>The 13 lessons, then the test</h2>
 <p>Click a card. Each lesson starts with the activity.</p>
@@ -225,7 +249,7 @@ def build_index():
 
 <section class="voices" id="australian-voices" lang="fr">
 <h2>Listening: Australian voices</h2>
-<p class="voices-chip">Terminale bac pro · Première générale et technologique · B1</p>
+<p class="voices-chip">Terminale bac pro (LVA : B1+) · Première générale et technologique (B1 possible)</p>
 <p class="voices-modulaire">Chaque vidéo et sa fiche s’utilisent seules ou ensemble, dans l’ordre que vous choisissez, selon votre classe.</p>
 <p class="voices-dl">
 <a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">Fiches élèves (PDF)</a>
@@ -296,21 +320,22 @@ Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">E
 <p>Chère collègue, cher collègue,</p>
 <p>Séquence d'anglais pour la Terminale bac pro, adaptable en Première bac pro.</p>
 <p>Projet : un an en Australie, le plus souvent avec un visa vacances-travail 417, parfois un visa étudiant.</p>
-<p>Chaque séance affiche les cinq directives du Bulletin officiel, un minutage de 52 minutes et une issue de secours. Les cinq activités langagières et la médiation sont travaillées. Chaque séance a une trace écrite et un devoir court, corrigé à la séance suivante.</p>
+<p>Chaque séance affiche les cinq activités langagières du programme, un minutage de 52 minutes et une issue de secours. Les cinq activités langagières et la médiation sont travaillées. Chaque séance a une trace écrite et un devoir court, corrigé à la séance suivante.</p>
 <p>Deux passages ajoutés au texte de départ : les animaux qui font peur, et les transports, y compris le fly-in fly-out (FIFO).</p>
 <p>Chiffres revérifiés en novembre 2026 sur les sites officiels. Faites-les revérifier par les élèves.</p>
 <p>L'ancienne version en huit leçons est en <a href="{BASE}/annexe/">annexe</a>.</p>
 <p>Bien à vous,<br>Madame Carole Paoli Pompougnac</p>
 ''')}
-{more("Cadre officiel", '''
-<p>Voie professionnelle, Terminale et Première bac pro : arrêté du 3 avril 2019, BO spécial n° 5 du 11 avril 2019. Vie quotidienne, sociale et professionnelle, mobilité. Les cinq activités langagières du programme comptent chacune pour un cinquième de l'épreuve. En Terminale, le niveau attendu à l'examen est B1+ en langue vivante A et B1 en langue vivante B.</p>
-<p>La rubrique Listening: Australian voices peut aussi servir en Première générale et technologique (compréhension de l'oral, B1). Le niveau de cette rubrique reste indiqué sur place.</p>
-''')}
+<section class="cadre-officiel" id="cadre-officiel" aria-label="Cadre officiel">
+<h2>Cadre officiel</h2>
+<p>Voie professionnelle, Terminale et Première bac pro. Programme : arrêté du 3 avril 2019, BO spécial n° 5 du 11 avril 2019. Deux contextes, non limitatifs : la vie quotidienne, personnelle, sociale et citoyenne ; la vie professionnelle. La mobilité entre dans ces contextes. Les cinq activités langagières sont la compréhension de l'oral, la compréhension de l'écrit, l'expression écrite, l'expression orale en continu et l'expression orale en interaction. La médiation figure aussi dans le programme, en plus de ces cinq activités. Épreuve (arrêté du 17 juin 2020, BO n° 30 du 23 juillet 2020, annexe V) : chaque activité compte pour un cinquième de la note. CCF en terminale : situation A (compréhension de l'oral, de l'écrit et expression écrite, 1 heure au maximum, 12 points) et situation B (expression orale en continu puis interaction, 10 minutes, 8 points). Niveaux attendus à l'examen : B1+ en langue vivante A, A2+ en langue vivante B. Niveaux visés en fin d'études : B2 en langue vivante A, B1 en langue vivante B.</p>
+<p>La rubrique Listening: Australian voices peut aussi servir en Première générale et technologique (compréhension de l'oral). En Terminale bac pro, langue vivante A, le niveau visé pour cette écoute est B1+.</p>
+</section>
 {ADAPTER}
 '''
     page("index.html", TITLE,
          "Heading Off to Australia : séquence d'anglais prête à l'emploi, Terminale bac pro et Première bac pro (adaptable).",
-         f"{BASE}/", body)
+         f"{BASE}/", body, lisible="home")
 
 def build_s1():
     body = f'''
@@ -406,7 +431,7 @@ def build_s2():
 
 def build_s3():
     body = f'''
-<p class="kicker">Séance 3 · EE, EOC</p>
+<p class="kicker">Séance 3 · EE, EOC, EOI</p>
 <h1>Who lives in Australia today?</h1>
 {cadre(["EE", "EOC", "EOI"], [
     ("0-5 min", "Accueil et consigne des jeux de rôle."),
@@ -459,7 +484,7 @@ def build_s4():
      "Un chasseur et un kangourou, peints sur la roche à Kakadu. Les animaux font partie du pays depuis très longtemps.",
      "Photo Ianperegian, Anbangbang / Burrunggui (Nourlangie), Kakadu, 4 juillet 2009, CC BY-SA 4.0, via Wikimedia Commons.")}
 
-{reading("★ B1 · Read this text", '''
+{reading("★ · Read this text", '''
 <p>Many people think of Australia as a dangerous country because of its animals: snakes, spiders, crocodiles, sharks and jellyfish. Films and social media often show only the scary side.</p>
 <p>Official health advice gives a calmer picture. In Australia, only about one to four people die from snake bites each year. Shark attacks and crocodile attacks are also rare. Far more people die on the roads.</p>
 <p>You can still stay safe. Never walk in long grass in bare feet. Do not put your hands into holes. In the north, respect Croc Country signs. In Queensland, in stinger season (November to May), swim between the flags and wear a stinger suit if needed. If a snake bites you, call 000, keep still, and use a pressure bandage. Do not wash, cut or suck the wound.</p>
@@ -506,7 +531,7 @@ def build_s5():
      "Creuser, relier, traverser un pays immense : le travail et les distances.",
      "Arthur Streeton, Fire's On, 1891, Art Gallery of New South Wales. Domaine public.")}
 
-{reading("★ B1 · Read this text", '''
+{reading("★ · Read this text", '''
 <p>There is no regular direct flight from Paris to Sydney. The trip is about 17,000 kilometres. With one stop, it usually takes 22 to 24 hours. Book your ticket only after your visa is granted. Home Affairs often needs about three months to process a Working Holiday visa.</p>
 <p>Australia is a huge country. People use domestic flights, long-distance coaches, cars, and two famous trains: The Ghan (Adelaide to Darwin, 2,979 km, about 48 hours) and the Indian Pacific (Sydney to Perth, 4,352 km, about 68 hours).</p>
 <p>In the mining regions, especially in the Pilbara in Western Australia, many workers are FIFO: fly-in fly-out. Small planes, often charter flights from Perth, take them to the mine for a roster such as 8 days on and 6 days off, or 2 weeks on and 1 week off. Shifts can last 12 to 12.5 hours.</p>
@@ -537,7 +562,7 @@ def build_s5():
 
 def build_s6():
     body = f'''
-<p class="kicker">Séance 6 · CE, médiation</p>
+<p class="kicker">Séance 6 · CE, EE</p>
 <h1>Which visa?</h1>
 {cadre(["CE", "EE"], [
     ("0-5 min", "Accueil, tableau des visas au tableau."),
@@ -545,7 +570,7 @@ def build_s6():
     ("30-42 min", "Médiation : expliquer le 417 à un parent, en six lignes."),
     ("42-48 min", "Trace écrite."),
     ("48-52 min", "Devoir : recopier le titre officiel, la date, le tarif, les fonds, l'âge et une règle."),
-], "recopie le prix du visa 417, l'âge et une règle à ne pas oublier")}
+], "recopie le prix du visa 417, l'âge et une règle à ne pas oublier", mediation=True)}
 <table>
 <thead><tr><th>Visa</th><th>Who</th><th>Key facts (Nov. 2026)</th></tr></thead>
 <tbody>
@@ -583,7 +608,7 @@ def build_s6():
 
 def build_s7():
     body = f'''
-<p class="kicker">Séance 7 · CE, médiation</p>
+<p class="kicker">Séance 7 · CE, EE, EOI</p>
 <h1>Lea's bag at customs</h1>
 {cadre(["CE", "EE", "EOI"], [
     ("0-5 min", "Accueil et sac de Léa."),
@@ -591,7 +616,7 @@ def build_s7():
     ("25-40 min", "Mise en commun et barème."),
     ("40-48 min", "Trace écrite."),
     ("48-52 min", "Devoir : liste de 8 objets pour son propre sac, avec ce qu'il faut déclarer."),
-], "dresse la liste de ce que Léa doit déclarer, en cinq lignes")}
+], "dresse la liste de ce que Léa doit déclarer, en cinq lignes", mediation=True)}
 <table>
 <thead><tr><th>What</th><th>Rule (check ABF)</th></tr></thead>
 <tbody>
@@ -624,7 +649,7 @@ def build_s7():
 
 def build_s8():
     body = f'''
-<p class="kicker">Séance 8 · CE, calcul</p>
+<p class="kicker">Séance 8 · CE, EE</p>
 <h1>Money, wages, a simple budget</h1>
 {cadre(["CE", "EE"], [
     ("0-5 min", "Accueil, ouverture du calculateur (ou figures au tableau)."),
@@ -752,7 +777,7 @@ def build_s10():
 
 def build_s11():
     body = f'''
-<p class="kicker">Séance 11 · EE, médiation</p>
+<p class="kicker">Séance 11 · CE, EE</p>
 <h1>Who to contact, and how to fill in a form</h1>
 {cadre(["CE", "EE"], [
     ("0-5 min", "Accueil, ouverture d'un lien officiel."),
@@ -760,7 +785,7 @@ def build_s11():
     ("25-42 min", "Courriel à l'ambassade (passeport perdu) ; pour les plus à l'aise, courriel à Fair Work."),
     ("42-48 min", "Trace écrite."),
     ("48-52 min", "Devoir : reprendre le courriel en six phrases courtes."),
-], "recopie le titre exact d'une page officielle et la date du jour")}
+], "recopie le titre exact d'une page officielle et la date du jour", mediation=True)}
 <ul>
 <li><a href="https://www.diplomatie.gouv.fr/fr/information-par-pays/australie/dernieres-minutes-et-alertes">France Diplomatie · Australie</a></li>
 <li><a href="https://au.ambafrance.org/">Ambassade de France en Australie</a></li>
@@ -798,12 +823,12 @@ def build_s11():
 
 def build_s12():
     body = f'''
-<p class="kicker">Séance 12 · CO, EOC</p>
+<p class="kicker">Séance 12 · CO, EOC, EOI</p>
 <h1>Aussie English</h1>
 {cadre(["CO", "EOC", "EOI"], [
-    ("0-5 min", "Accueil et lexique au tableau."),
-    ("5-22 min", "Écoute d'un court extrait, mots cochés."),
-    ("22-40 min", "Dialogue en binômes (arvo, servo, brekkie)."),
+    ("0-5 min", "Accueil et lexique au tableau (y compris sunnies, barbie, mates)."),
+    ("5-22 min", "Écoute de la vidéo d'Elena (une voisine à une plage surveillée, Sydney). Trois écoutes possibles, mots cochés."),
+    ("22-40 min", "Dialogue en binômes (arvo, servo, brekkie, barbie)."),
     ("40-47 min", "Trace écrite."),
     ("47-52 min", "Devoir : six mots, dialogue de six lignes au café."),
 ], "apprends six mots du tableau et écris un mini-dialogue de quatre répliques")}
@@ -820,18 +845,29 @@ def build_s12():
 <tr><td>No worries</td><td>That's fine / you're welcome</td></tr>
 <tr><td>Fair dinkum</td><td>Genuine, true</td></tr>
 <tr><td>TA</td><td>Thank you</td></tr>
+<tr><td>Sunnies</td><td>Sunglasses</td></tr>
+<tr><td>Barbie</td><td>Barbecue</td></tr>
+<tr><td>Mates</td><td>Friends</td></tr>
 </tbody>
 </table>
+<article class="voice-card" id="voice-elena-s12">
+<h3>Listen: Elena. A neighbour at a patrolled beach in Sydney</h3>
+<video controls preload="metadata" playsinline controlslist="nodownload" title="Elena. A neighbour at a patrolled beach in Sydney">
+<source src="{BASE}/videos/elena.mp4" type="video/mp4">
+Cette vidéo peut être téléchargée ici : <a href="{BASE}/videos/elena.mp4">Elena</a>.
+</video>
+<p class="notice">This video is one of the Australian voices. You may listen three times. The other voices stay on the home page, in Listening.</p>
+</article>
 {student(
-    "Listen to a short Australian clip chosen by your teacher (news, a job video, or a travel vlog).",
-    "Tick the words you hear.",
+    "Watch Elena's video. You may listen three times.",
+    "Tick the words you hear: G'day, sunnies, arvo, barbie, mates, How's it going.",
     "In pairs, say this dialogue: meeting at 3 pm, going to the servo, then brekkie tomorrow.",
     "★★ Write 4 lines in Aussie English, then rewrite them in standard English.",
 )}
-{prof("15 minutes d'écoute, 15 minutes de dialogue.",
-    "Choisissez un extrait court, sous-titres possibles la première fois, puis sans.",
-    "Le tableau n'est pas un cours de slang : 8 à 10 mots suffisent.",
-    answers="<p>Sample: G'day, see you this arvo at the servo. No worries. Let's have brekkie tomorrow before uni.</p>"
+{prof("15 minutes d'écoute de la vidéo d'Elena, 15 minutes de dialogue.",
+    "La vidéo d'Elena (environ 23 secondes) est dans cette séance : c'est une des Australian voices. Les trois autres restent sur la page d'accueil, à Listening.",
+    "Première écoute sans script, puis avec le script si besoin, puis sans. Le tableau n'est pas un cours de slang : 8 à 10 mots suffisent.",
+    answers="<p>Elena says: G'day, sunnies, sunscreen, swim between the red and yellow flags, Saturday arvo, mates, barbie, How's it going so far? Sample dialogue: G'day, see you this arvo at the servo. No worries. Let's have brekkie tomorrow before uni.</p>"
 )}
 {trace("Australian English uses short, friendly words. You can still answer in standard English, and people will understand you.")}
 {homework("Learn 6 words from the table. Write a 6-line dialogue at a café.", "13")}
@@ -878,6 +914,8 @@ def build_assessment():
     ("8-50 min", "Entretiens individuels (3 à 4 minutes). Le reste de la classe prépare silencieusement les réponses, puis relit le dossier."),
     ("50-52 min", "Rappel : dossier complet, une figure officielle au moins une fois."),
 ], "prépare par écrit tes réponses aux trois questions de l'entretien")}
+<p>Le dossier et l'entretien ci-dessous sont la tâche de fin de séquence. Ils constituent un entraînement utile à la situation B du CCF, mais ce n'est pas le CCF lui-même.</p>
+<h2>Tâche de fin de séquence</h2>
 <p>You hand in a file. Then you pass a short phone interview.</p>
 <div class="grid">
 <article class="card"><h3>The file</h3>
@@ -890,22 +928,36 @@ def build_assessment():
 <li>Two official contacts</li>
 </ul></article>
 <article class="card"><h3>The interview</h3>
-<p>★ B1: 5 minutes, 4 questions.</p>
-<p>★★ B2: 8 minutes, 6 questions, including one on FIFO or on animals and safety.</p>
+<p>★ parcours guidé : 5 minutes, 4 questions.</p>
+<p>★★ parcours plus ouvert : 8 minutes, 6 questions, including one on FIFO or on animals and safety. This track may aim at B2, the level targeted at the end of studies in langue vivante A.</p>
 <p>Phone or classroom, standing away from notes.</p>
+<p class="notice">En Terminale, langue vivante A, le niveau attendu à l'examen est B1+, et non B1. Langue vivante B : A2+.</p>
 </article>
 </div>
 {student(
     "Check that every document is in the file.",
-    "Write your name, class and level (B1 or B2) on the first page.",
+    "Write your name, class and track (★ or ★★) on the first page.",
     "In the interview, answer in full sentences. If you do not understand, ask: Could you repeat, please?",
     "Use one official figure at least once.",
 )}
 {prof("Remise des dossiers en début d'heure, puis entretiens individuels.",
     "Cinq grilles sont dans les téléchargements et sur la page des corrigés : dossier, lettre, CV, entretien, langue.",
-    "Critères : tâche réussie, clarté, chiffres justes, politesse, langue (B1 ou B2).",
-    answers="<p>Grilles : voir la page Corrigés et les fichiers dans Téléchargements. Pas de barème surprise : montrez les critères avant l'épreuve.</p>"
+    "Critères : tâche réussie, clarté, chiffres justes, politesse, langue. En Terminale, langue vivante A, le niveau attendu à l'examen est B1+, et non B1. Langue vivante B : A2+.",
+    answers="<p>Grilles : voir la page Corrigés et les fichiers dans Téléchargements. Pas de barème surprise : montrez les critères avant l'épreuve. Le dossier et l'entretien entraînent à la situation B, sans la remplacer.</p>"
 )}
+<h2>Entraînement au format de l'épreuve</h2>
+<p>Ces deux situations suivent l'annexe V de l'arrêté du 17 juin 2020 (BO n° 30 du 23 juillet 2020). Elles peuvent se faire après la tâche de fin de séquence, ou à la place d'une partie de celle-ci.</p>
+<div class="grid">
+<article class="card"><h3>Situation B · oral, 10 minutes</h3>
+<p>Expression orale en continu, puis interaction. Niveau attendu : B1+ en langue vivante A, A2+ en langue vivante B.</p>
+<p>5 minutes d'exposé sur le projet : une année en Australie (visa, budget, travail, vie quotidienne). Puis 5 minutes d'interaction avec le professeur.</p>
+</article>
+<article class="card"><h3>Situation A · 1 heure au maximum</h3>
+<p>Compréhension de l'oral, compréhension de l'écrit et expression écrite. Niveau attendu : B1+ en langue vivante A, A2+ en langue vivante B.</p>
+<p>Document oral d'une durée maximale de 1 minute 30 (vous pouvez prendre une des vidéos Australian voices : Elena, Sam, Malik ou Jordan, chacune dure moins de 30 secondes). Trois écoutes, puis un compte rendu en français.</p>
+<p>Ensuite, un écrit de 100 à 120 mots : l'élève choisit entre deux sujets, l'un relevant de la vie quotidienne, personnelle, sociale et citoyenne, l'autre de la vie professionnelle.</p>
+</article>
+</div>
 <p class="dl">
 <a href="{BASE}/downloads/">Fiches et grilles</a>
 <a class="sec" href="{BASE}/teacher/">Corrigés</a>
@@ -935,8 +987,8 @@ def build_teacher():
 </tbody>
 </table>
 {more("Cinq grilles de l'oral et du dossier (résumé)", '''
-<p>1. Dossier complet (6 pièces). 2. Lettre : objet, structure, ton. 3. CV : clarté, honnêteté. 4. Entretien : compréhension, réponses, politesse. 5. Langue : B1 (phrases simples justes) ou B2 (justification, chiffres, nuances).</p>
-<p>Les grilles détaillées sont dans les fichiers à télécharger, en gros caractères.</p>
+<p>1. Dossier complet (6 pièces). 2. Lettre : objet, structure, ton. 3. CV : clarté, honnêteté. 4. Entretien : compréhension, réponses, politesse. 5. Langue : en Terminale, langue vivante A, le niveau attendu à l'examen est B1+ (et non B1) ; langue vivante B : A2+. Le parcours ★★ peut viser le B2, objectif de fin d'études en langue vivante A.</p>
+<p>Le dossier et l'entretien sont une tâche de fin de séquence, utile pour s'entraîner à la situation B, mais ce n'est pas le CCF lui-même. Les grilles détaillées sont dans les fichiers à télécharger, en gros caractères.</p>
 ''')}
 <p class="dl">
 <a href="{BASE}/downloads/heading-off-to-australia-corriges.pdf">Corrigés (PDF)</a>
@@ -973,7 +1025,7 @@ def build_downloads():
 <a class="sec" href="{BASE}/downloads/heading-off-to-australia-corriges.odt">LibreOffice</a>
 </p></article>
 <article class="card"><h3>Listening: Australian voices · fiches élèves</h3>
-<p class="voices-chip">Terminale bac pro · Première générale et technologique · B1</p>
+<p class="voices-chip">Terminale bac pro (LVA : B1+) · Première générale et technologique (B1 possible)</p>
 <p class="dl">
 <a href="{BASE}/downloads/fiches-eleves-australian-voices.pdf">PDF</a>
 <a class="sec" href="{BASE}/downloads/fiches-eleves-australian-voices.docx">Word</a>
@@ -1047,12 +1099,95 @@ def patch_listings():
         res.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print("patched resources.json")
 
+
+def build_dys():
+    """Accessible typography copies at /destination-australia/dys/, same objectives."""
+    import re
+    src_pages = (
+        ["index.html", "assessment/index.html", "teacher/index.html", "downloads/index.html"]
+        + [f"s{i}/index.html" for i in range(1, 14)]
+    )
+    protect_re = re.compile(
+        r"/destination-australia/(?:seq\.css|script\.js|images/|videos/|annexe/|downloads/[^\"'\s]+)"
+    )
+
+    def rewrite(html: str) -> str:
+        held = []
+
+        def keep(m):
+            held.append(m.group(0))
+            return f"@@P{len(held)-1}@@"
+
+        html = protect_re.sub(keep, html)
+        html = html.replace("/destination-australia/", "/destination-australia/dys/")
+        for i, val in enumerate(held):
+            html = html.replace(f"@@P{i}@@", val)
+        html = html.replace("<body>", '<body class="dys">', 1)
+        # Point the typography button back to the standard pages as well
+        html = html.replace(
+            '<p class="switch"><button type="button" data-dys-toggle>Version plus lisible</button></p>',
+            '<p class="switch"><button type="button" data-dys-toggle>Version plus lisible</button> '
+            '<a class="back-standard" href="STD">Mise en page habituelle</a></p>',
+            1,
+        )
+        return html
+
+    for rel in src_pages:
+        src = ROOT / rel
+        html = src.read_text(encoding="utf-8")
+        html = rewrite(html)
+        std = f"{BASE}/" if rel == "index.html" else f"{BASE}/{rel[:-10]}/" if rel.endswith("/index.html") else f"{BASE}/{rel}"
+        # rel 's1/index.html' -> /destination-australia/s1/
+        if rel == "index.html":
+            std = f"{BASE}/"
+        elif rel.endswith("/index.html"):
+            std = f"{BASE}/{rel[:-len('index.html')]}"
+        else:
+            std = f"{BASE}/{rel}"
+        html = html.replace('href="STD"', f'href="{std}"', 1)
+        dest = ROOT / "dys" / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(html, encoding="utf-8")
+        print("wrote", dest.relative_to(ROOT), dest.stat().st_size)
+
+
+def update_sitemap():
+    sm = ROOT.parent / "sitemap.xml"
+    text = sm.read_text(encoding="utf-8")
+    start = text.find("  <url><loc>https://itineraires-destinations.fr/destination-australia/</loc>")
+    end = text.find("  <url><loc>https://itineraires-destinations.fr/deux-deesses/</loc>")
+    if start < 0 or end < 0:
+        raise SystemExit("sitemap australia block not found")
+    today = "2026-11-14"
+    urls = [
+        "https://itineraires-destinations.fr/destination-australia/",
+        "https://itineraires-destinations.fr/destination-australia/assessment/",
+        "https://itineraires-destinations.fr/destination-australia/downloads/",
+        "https://itineraires-destinations.fr/destination-australia/teacher/",
+    ]
+    urls += [f"https://itineraires-destinations.fr/destination-australia/s{i}/" for i in range(1, 14)]
+    urls += [
+        "https://itineraires-destinations.fr/destination-australia/dys/",
+        "https://itineraires-destinations.fr/destination-australia/dys/assessment/",
+        "https://itineraires-destinations.fr/destination-australia/dys/downloads/",
+        "https://itineraires-destinations.fr/destination-australia/dys/teacher/",
+    ]
+    urls += [f"https://itineraires-destinations.fr/destination-australia/dys/s{i}/" for i in range(1, 14)]
+    block = "".join(
+        f"  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls
+    )
+    sm.write_text(text[:start] + block + text[end:], encoding="utf-8")
+    print("updated sitemap.xml", len(urls), "australia urls")
+
+
 def main():
     build_index()
     build_s1(); build_s2(); build_s3(); build_s4(); build_s5()
     build_s6(); build_s7(); build_s8(); build_s9(); build_s10()
     build_s11(); build_s12(); build_s13()
     build_assessment(); build_teacher(); build_downloads()
+    build_dys()
+    update_sitemap()
     patch_listings()
     print("done")
 

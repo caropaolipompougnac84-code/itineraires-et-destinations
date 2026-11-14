@@ -520,3 +520,117 @@ body.english-look.bus .panel{
   border-radius:18px!important;
   color:var(--ink)!important;
 }
+
+/* Other English sequences: site header, lesson tabs, title banners.
+   Getting around London has none of these classes, so its pages stay as they are.
+   The more specific body.english-look.bus header.top rules above keep priority on the bus page. */
+body.english-look h1{
+  border-left:0!important;
+  padding-left:0!important;
+}
+body.english-look .site-header,
+body.english-look .site-nav,
+body.english-look .topnav,
+body.english-look .seq-bar{
+  background:var(--navy)!important;
+  border-bottom:0!important;
+  color:#fff!important;
+}
+body.english-look .site-header a,
+body.english-look .site-nav a,
+body.english-look .topnav a,
+body.english-look .seq-bar a,
+body.english-look .seq-bar .seq-nav a,
+body.english-look .brand-mark,
+body.english-look .nav-main a{
+  color:#fff!important;
+}
+body.english-look .brand-mark:hover,
+body.english-look .nav-main a:hover,
+body.english-look .site-header a:hover,
+body.english-look .site-nav a:hover,
+body.english-look .topnav a:hover{
+  color:#fff!important;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+body.english-look .brand-tag{color:var(--navy-wash)!important;}
+body.english-look .site-header .wrap,
+body.english-look .site-nav .wrap,
+body.english-look .topnav .wrap,
+body.english-look header.top .wrap,
+body.english-look nav.sn .wrap,
+body.english-look .breadcrumb.wrap,
+body.english-look .lesson-nav .wrap,
+body.english-look nav.tabs .wrap,
+body.english-look footer .wrap,
+body.english-look .seq-bar .wrap{
+  padding-top:.7rem!important;
+  padding-bottom:.7rem!important;
+  padding-left:22px!important;
+  padding-right:22px!important;
+  max-width:1080px;
+}
+body.english-look .kicker,
+body.english-look .page-hero .kicker,
+body.english-look .section-label{
+  color:var(--navy)!important;
+}
+body.english-look .section-stripe{background:var(--navy)!important;}
+body.english-look .lesson-nav,
+body.english-look nav.tabs:not(.bus nav.tabs){
+  background:var(--navy-wash2)!important;
+  border-color:var(--navy-line)!important;
+}
+body.english-look .lesson-nav a,
+body.english-look nav.tabs a{
+  color:var(--navy)!important;
+  background:var(--paper)!important;
+  border:2px solid var(--navy-line)!important;
+  border-radius:999px!important;
+}
+body.english-look .lesson-nav a[aria-current],
+body.english-look .lesson-nav a[aria-current="page"],
+body.english-look .lesson-nav a.on,
+body.english-look .lesson-nav a.is-active,
+body.english-look .lesson-nav .on a,
+body.english-look nav.tabs a[aria-current]{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+body.english-look .seq-nav a.on,
+body.english-look .seq-nav a[aria-current],
+body.english-look .seq-nav a[aria-current="page"]{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+body.english-look span.level,
+body.english-look .level.alt{
+  display:inline-block!important;
+  padding:.25em .75em!important;
+  font-size:1rem!important;
+  border-radius:999px!important;
+  background:var(--navy)!important;
+  color:#fff!important;
+  text-align:center;
+}
+body.english-look header.top{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border:0!important;
+}
+body.english-look header.top h1,
+body.english-look header.top a,
+body.english-look header.top p{color:#fff!important;}
+body.english-look header.top .lvl{
+  background:#fff!important;
+  color:var(--navy)!important;
+}
+body.english-look .breadcrumb{color:var(--soft)!important;}
+body.english-look .breadcrumb a{color:var(--navy)!important;}
+body.english-look .page-hero .lede,
+body.english-look .lede{color:var(--soft)!important;}
+body.english-look nav.sn{background:var(--paper)!important;border-bottom:1px solid var(--navy-line)!important;}
+body.english-look nav.sn a{color:var(--navy)!important;}

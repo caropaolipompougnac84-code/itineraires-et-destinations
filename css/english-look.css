@@ -455,3 +455,68 @@ body.english-look .look-aside .look-card{margin:0;}
   body.english-look .look-gallery,
   body.english-look .look-aside{break-inside:avoid;}
 }
+
+/* London Buses page (body.bus) */
+body.english-look.bus .herit,
+body.english-look .herit{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:12px 18px!important;
+  font-size:1rem!important;
+  text-align:center;
+}
+body.english-look.bus .herit a,
+body.english-look .herit a{color:#fff!important;text-decoration:underline;}
+body.english-look.bus header.top{
+  background:var(--bg)!important;
+  border:0!important;
+  border-bottom:0!important;
+  color:var(--ink)!important;
+  padding:1rem 0 .2rem!important;
+}
+body.english-look.bus .eyebrow,
+body.english-look.bus header.top .eyebrow{
+  color:var(--navy)!important;
+  font-family:inherit!important;
+  font-weight:700!important;
+  letter-spacing:.04em!important;
+  font-size:1rem!important;
+}
+body.english-look.bus header.top .sub,
+body.english-look.bus .sub{
+  color:var(--soft)!important;
+  font-size:1.05rem!important;
+  margin:0 0 1rem!important;
+}
+body.english-look.bus nav.tabs{
+  background:var(--paper)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:16px!important;
+  padding:8px!important;
+}
+body.english-look.bus nav.tabs button{
+  background:transparent!important;
+  color:var(--navy)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:999px!important;
+  font:inherit!important;
+  font-weight:700!important;
+}
+body.english-look.bus nav.tabs button[aria-selected=true]{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+body.english-look h1{border-bottom:0!important;}
+body.english-look .look-gallery:has(.look-card:only-child){
+  grid-template-columns:minmax(240px, 420px);
+}
+body.english-look.bus .plan-de-route,
+body.english-look.bus .panel{
+  background:var(--paper)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:18px!important;
+  color:var(--ink)!important;
+}

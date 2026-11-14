@@ -165,7 +165,10 @@
       "summary": "Huit leçons d'anglais pour le CAP (A2) et le baccalauréat professionnel (B1), toutes filières : s'exprimer dans l'atelier, auprès du tuteur de PFMP et auprès d'un visiteur. Tâche finale Welcome to the workshop, grille CCF sur 20. Fil visuel : une œuvre de Laurent Proux. BO spécial n° 5 du 11 avril 2019.",
       "section": "lycee-pro",
       "subject": "anglais",
-      "level": ["tous", "2de"],
+      "level": [
+        "tous",
+        "2de"
+      ],
       "levelLabel": "CAP et bac pro · toutes filières · A2-B1",
       "collection": "lp-anglais",
       "themes": [
@@ -306,7 +309,10 @@
       "summary": "Six short lessons in English, built around genuine public-domain Golden Age comic pages, for 2nde and 1re of the baccalauréat professionnel. Description first: panels, gutters, balloons, onomatopoeia. A short escape game and a final task.",
       "section": "lycee-pro",
       "subject": "anglais",
-      "level": ["2de", "1re"],
+      "level": [
+        "2de",
+        "1re"
+      ],
       "levelLabel": "2nde et 1re · baccalauréat professionnel",
       "collection": "lp-anglais",
       "themes": [
@@ -555,7 +561,10 @@
       "summary": "La plus grande ville n’est pas toujours la capitale : sept leçons de B1 sur la carte des États-Unis, un road trip et une carte postale.",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": ["2de", "1re"],
+      "level": [
+        "2de",
+        "1re"
+      ],
       "levelLabel": "2de / 1re · tronc commun B1 / B1+",
       "collection": "lg-anglais",
       "themes": [
@@ -589,7 +598,10 @@
       "summary": "MI5, MI6 et le monde de James Bond : six leçons de 55 minutes, calibrées sur 52 minutes, jusqu’à un entretien de recrutement fictif. Tronc B1, progression vers B1+ (LVA).",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": ["2de", "1re"],
+      "level": [
+        "2de",
+        "1re"
+      ],
       "levelLabel": "2de / 1re · LVA : B1 vers B1+ · général et technologique / pro",
       "collection": "lg-anglais",
       "themes": [
@@ -691,7 +703,10 @@
       "summary": "Une journée à Londres pour travailler la langue et la culture.",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": ["tous", "2de"],
+      "level": [
+        "tous",
+        "2de"
+      ],
       "levelLabel": "A1 vers B1",
       "collection": "lg-anglais",
       "themes": [
@@ -709,7 +724,10 @@
       "summary": "Se déplacer à Londres : transports et langage utile.",
       "section": "lycee-general",
       "subject": "anglais",
-      "level": ["tous", "2de"],
+      "level": [
+        "tous",
+        "2de"
+      ],
       "levelLabel": "Bac pro · lycée général et technologique · adapté",
       "collection": "lg-anglais",
       "themes": [
@@ -1023,19 +1041,19 @@
     },
     {
       "id": "lp-anglais-destination-australia",
-      "title": "Anglais · Bac pro / CFA · Destination Australia",
-      "summary": "PVT, budget et emploi : partir en Australie, huit leçons de B1 calibrées sur 52 minutes (Bac pro / CFA).",
+      "title": "Anglais · Lycée professionnel, lycée général et technologique · Heading Off to Australia",
+      "summary": "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances de B1 et B2, plus l'évaluation, avec une présentation pour les collègues.",
       "section": "lycee-pro",
       "subject": "anglais",
       "level": "tous",
-      "levelLabel": "Bac pro / CFA : B1",
+      "levelLabel": "Lycée professionnel, lycée général et technologique · B1, B2",
       "collection": "lp-anglais",
       "themes": [
         "voyage",
         "travail"
       ],
       "url": "https://itineraires-destinations.fr/destination-australia/",
-      "date": "2026-11-11",
+      "date": "2026-11-14",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120573079490243&set=a.122120557935490243"
     },
     {
@@ -1839,7 +1857,6 @@
       "image": "quand-la-machine-sarrete.jpg",
       "credit": "Hubert Robert, Vue imaginaire de la Grande Galerie du Louvre en ruines, 1796, musée du Louvre. Domaine public, via Wikimedia Commons."
     },
-
     {
       "id": "lg-lettres-1re-dune-ravage-celui-qui-sauve",
       "title": "Lettres · 1re technologique · Celui qui sauve, celui qui règne",
@@ -1860,18 +1877,23 @@
       "date": "2026-11-13",
       "image": "celui-qui-sauve-celui-qui-regne.jpg",
       "credit": "Vue d'une cité idéale, dite La Cité idéale d'Urbino, vers 1480-1490, Galleria Nazionale delle Marche, Urbino. Domaine public, via Wikimedia Commons."
-    }
-,
+    },
     {
       "id": "lp-lettres-tle-preparer-ecrit-bac-pro",
       "title": "Lettres · Tle Bac pro · Préparer l’écrit du bac professionnel",
       "summary": "Modules pour préparer l’écrit de français du baccalauréat professionnel, à répartir sur la Première et la Terminale : lire un corpus, construire un écrit argumentatif, avec la spirale de Gorse, autour du programme limitatif « Rythmes et cadences de la vie moderne : quel temps pour soi ? ».",
       "section": "lycee-pro",
       "subject": "lettres",
-      "level": ["tle", "bac"],
+      "level": [
+        "tle",
+        "bac"
+      ],
       "levelLabel": "Tle Bac pro · lycée professionnel",
       "collection": "lp-lettres",
-      "themes": ["ecrit", "examen"],
+      "themes": [
+        "ecrit",
+        "examen"
+      ],
       "url": "https://itineraires-destinations.fr/preparer-ecrit-bac-pro/",
       "date": "2026-11-13",
       "image": "preparer-ecrit-bac-pro.jpg",
@@ -1887,7 +1909,10 @@
       "levelLabel": "Terminale du baccalauréat professionnel",
       "collection": "methodologie",
       "methodGroup": "ecrit-pro",
-      "themes": ["ecrit", "examen"],
+      "themes": [
+        "ecrit",
+        "examen"
+      ],
       "url": "https://itineraires-destinations.fr/preparer-ecrit-bac-pro/",
       "date": "2026-11-13",
       "image": "preparer-ecrit-bac-pro.jpg",
@@ -1902,7 +1927,10 @@
       "level": "bacpro",
       "levelLabel": "Bac pro · CFA",
       "collection": "cfa-lettres",
-      "themes": ["ecrit", "examen"],
+      "themes": [
+        "ecrit",
+        "examen"
+      ],
       "url": "https://itineraires-destinations.fr/preparer-ecrit-bac-pro/",
       "date": "2026-11-13",
       "image": "preparer-ecrit-bac-pro.jpg",

@@ -24,3 +24,4 @@ Illustrations 4e et 3e (domaine public), d'après les crédits des cartes :
 - stupeur-et-tremblements.jpg : Utagawa Kuniyoshi, Kotobuki kōjō (annonce sur scène), estampe. Domaine public.
 - devenir-soi-etranger.jpg : Diego Velázquez, Portrait de Juan de Pareja, 1650. Metropolitan Museum of Art, New York. Domaine public.
 - france-culture-questions-du-soir.jpg (séquence Devenir soi) : © France Culture, Questions du soir : l'idée, reproduit à titre de citation.
+- adrian-mole.jpg (séquences Adrian Mole, seconde générale et technologique et seconde bac pro) : Iša Ondráček, Portrait of Boudewijn, tempera et huile sur toile, https://www.isaondracek.nl. Affichée à titre provisoire, avec le nom de l'artiste, en attendant son autorisation écrite ; retirée immédiatement en cas de refus.

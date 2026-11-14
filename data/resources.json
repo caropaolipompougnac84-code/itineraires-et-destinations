@@ -201,6 +201,29 @@
       "credit": "Diego Velázquez, Portrait de Juan de Pareja, 1650, Metropolitan Museum of Art, New York. Domaine public."
     },
     {
+      "id": "lp-anglais-2de-adrian-mole",
+      "title": "Anglais · 2de Bac pro · The Secret Diary of Adrian Mole, Aged 13¾",
+      "summary": "Sue Townsend, 1982 : comment le journal secret d’un adolescent révèle-t-il la famille et la société britannique des années 1980 ? Dix lessons en onglets pour le tableau numérique, avec des liens vers le métier et la PFMP, CO, CE, PO et PE avec minuteur, quatre vidéos, un contrôle de lecture interactif, une tâche finale et une évaluation. Version élève, version prof, version dys.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "2de Bac pro · lycée professionnel · de A2 vers B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "litterature",
+        "travail",
+        "identite",
+        "oral",
+        "ecrit"
+      ],
+      "duration": "10 lessons de 55 minutes",
+      "materials": "Tableau numérique, fiches imprimables, version dys, le roman",
+      "url": "https://itineraires-destinations.fr/adrian-mole-seconde-pro/",
+      "date": "2026-11-14",
+      "image": "adrian-mole.jpg",
+      "credit": "Iša Ondráček, Portrait of Boudewijn, tempera et huile sur toile."
+    },
+    {
       "id": "lp-anglais-trades-in-english",
       "title": "Anglais · CAP, bac pro et CFA · Trades in English",
       "summary": "Vingt dialogues en anglais, entre un professionnel et un client, pour le CAP, le bac professionnel et le CFA. Chaque vidéo a sa fiche élève et son corrigé, en pdf, docx et odt.",
@@ -404,6 +427,29 @@
       "date": "2026-11-12",
       "image": "hlp-je-est-un-autre.jpg",
       "credit": "Gustave Courbet, Le Désespéré, vers 1843-1845, collection particulière, domaine public."
+    },
+    {
+      "id": "lg-anglais-2de-adrian-mole",
+      "title": "Anglais · 2de · The Secret Diary of Adrian Mole, Aged 13¾",
+      "summary": "Sue Townsend, 1982 : comment le journal secret d’un adolescent révèle-t-il la famille et la société britannique des années 1980 ? Dix lessons en onglets pour le tableau numérique, CO, CE, PO et PE avec minuteur, cinq vidéos, un contrôle de lecture interactif, une tâche finale et une évaluation. Version élève, version prof, version dys.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique · LVA B1+",
+      "collection": "lg-anglais",
+      "themes": [
+        "litterature",
+        "identite",
+        "culture",
+        "oral",
+        "ecrit"
+      ],
+      "duration": "10 lessons de 55 minutes",
+      "materials": "Tableau numérique, fiches imprimables, version dys, le roman",
+      "url": "https://itineraires-destinations.fr/adrian-mole-seconde-gt/",
+      "date": "2026-11-14",
+      "image": "adrian-mole.jpg",
+      "credit": "Iša Ondráček, Portrait of Boudewijn, tempera et huile sur toile."
     },
     {
       "id": "lg-option-passing-the-flame",

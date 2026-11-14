@@ -372,8 +372,16 @@ body.english-look figcaption{
 }
 
 /* New London photographs */
+body.english-look figure.look-hero,
 body.english-look .look-hero{
   margin:1.1rem 0 1.3rem;
+  max-width:none !important;
+  width:100%;
+  float:none !important;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
 }
 body.english-look .look-hero img{
   width:100%;

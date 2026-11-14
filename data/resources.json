@@ -160,6 +160,27 @@
   ],
   "resources": [
     {
+      "id": "lg-lettres-2de-stupeur-et-tremblements",
+      "title": "Lettres · 2de · Stupeur et tremblements, Amélie Nothomb",
+      "summary": "Amélie Nothomb, 1999 : comment le récit d’une humiliation devient-il, par l’humour et l’écriture, une revanche ? Huit séances en onglets pour le tableau numérique, quatre explications de texte, le film d’Alain Corneau, un oral, un contrôle de lecture et un commentaire. Version élève, version prof, version dys.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "duration": "8 séances et 2 h 20 d’évaluation",
+      "materials": "Tableau numérique, fiches élèves, édition du roman",
+      "url": "https://itineraires-destinations.fr/stupeur-et-tremblements/",
+      "date": "2026-11-14",
+      "image": "stupeur-et-tremblements.jpg",
+      "credit": "Utagawa Kuniyoshi, Kotobuki kōjō (annonce sur scène), estampe. Domaine public."
+    },
+    {
       "id": "lp-lettres-2de-devenir-soi-etranger",
       "title": "Lettres · 2de Bac pro · Devenir soi quand on se sent étranger",
       "summary": "Séquence de français, Seconde baccalauréat professionnel, objet d'étude « Devenir soi : écritures autobiographiques ». Œuvre : Vallès, L'Enfant. 18 séances de 52 minutes, à onglets, avec fiches, grilles, méthode pour prendre une correction, et évaluations fréquentes.",

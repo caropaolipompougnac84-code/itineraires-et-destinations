@@ -21,5 +21,6 @@ Illustrations 4e et 3e (domaine public), d'après les crédits des cartes :
 - hiroshima-mon-amour-duras.jpg : couverture de l’édition Folio de Hiroshima mon amour, Marguerite Duras, Gallimard. Reproduction de la couverture de l’édition de travail, pour présenter la fiche.
 
 - se-preparer-test-positionnement.jpg : Jan Ekels le Jeune, Un écrivain taillant sa plume, 1784, huile sur bois. Rijksmuseum, Amsterdam, inv. SK-A-690. Domaine public.
+- stupeur-et-tremblements.jpg : Utagawa Kuniyoshi, Kotobuki kōjō (annonce sur scène), estampe. Domaine public.
 - devenir-soi-etranger.jpg : Diego Velázquez, Portrait de Juan de Pareja, 1650. Metropolitan Museum of Art, New York. Domaine public.
 - france-culture-questions-du-soir.jpg (séquence Devenir soi) : © France Culture, Questions du soir : l'idée, reproduit à titre de citation.

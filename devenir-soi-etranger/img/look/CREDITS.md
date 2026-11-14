@@ -1,0 +1,19 @@
+# Photographic credits
+
+- `pont-des-arts-paris.jpg` : File:Pont des Arts, Paris.jpg. Le pont des Arts et l'Institut de France, à Paris, sous un ciel clair. Auteur: Benh LIEU SONG. CC BY-SA 3.0, Wikimedia Commons.
+- `plaques-de-rues-paris.jpg` : File:Plaque de nom de rue Paris 19e siècle porcelaine.JPG. Une plaque de rue parisienne émaillée, bleue à lettres blanches, sur une façade de pierre. Auteur: Vanoostjoost. Domaine public, Wikimedia Commons.
+- `place-naghshe-jahan-ispahan.jpg` : File:Naghshe Jahan Square Isfahan modified.jpg. La place Naghsh-e Jahan à Ispahan, vaste esplanade claire bordée de monuments et d'arcades. Auteur: en:User:Arad. CC BY-SA 3.0, Wikimedia Commons.
+- `chateau-de-montaigne.jpg` : File:Château de Montaigne - tower - bust of Montaigne (26927245915).jpg. Le château de Montaigne et sa tour, parmi les arbres, un jour ensoleillé. Auteur: Jacques Bodin. CC BY 2.0, Wikimedia Commons.
+- `saint-michel-de-montaigne-chateau.jpg` : File:St Michel de Montaigne Château01.jpg. Le château de Montaigne à Saint-Michel-de-Montaigne, façade de pierre et toits, parmi les arbres. Auteur: Henry SALOMÉ. CC BY-SA 4.0, Wikimedia Commons.
+- `jardin-du-luxembourg.jpg` : File:Paris (Jardin du) Luxembourg (perspective d'une allée avec au premier plan un bassin) - btv1b6920937j.jpg. Le jardin du Luxembourg à Paris, allées, arbres et bassin, un jour ensoleillé. Auteur: Agence Rol. Agence photographique (commanditaire). Domaine public, Wikimedia Commons.
+- `marche-aligre-paris.jpg` : File:Marché d'Aligre 2.jpg. Un marché parisien en plein air, étals de fruits et de légumes sous un ciel clair. Auteur: Jesús Gorriti. CC BY-SA 2.0, Wikimedia Commons.
+- `librairie-quais-seine.jpg` : File:Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg. Les bouquinistes des quais de Seine à Paris, boîtes vertes ouvertes le long du parapet. Auteur: Benh LIEU SONG. CC BY-SA 3.0, Wikimedia Commons.
+- `vieux-port-marseille.jpg` : File:Vieux-Port de Marseille, France.jpg. Le Vieux-Port de Marseille, bateaux et quais ensoleillés, avec la ville au fond. Auteur: Clément Bardot. CC BY-SA 4.0, Wikimedia Commons.
+- `carrefour-jardin-tuileries.jpg` : File:Grand bassin octogonal Jardin des Tuileries 003.jpg. Le grand bassin du jardin des Tuileries à Paris, allées d'arbres et ciel clair. Auteur: Moonik. CC BY-SA 3.0, Wikimedia Commons.
+- `pont-neuf-paris.jpg` : File:Pont Neuf - Paris - France.jpg. Le Pont Neuf et l'île de la Cité à Paris, pierre claire au-dessus de la Seine. Auteur: Sumit Surai. CC BY-SA 4.0, Wikimedia Commons.
+- `ecritoire-bibliotheque.jpg` : File:Bibliothèque impériale, salle de lecture des Imprimés. 52 Première rangée des étagères du pourtour - btv1b53013383b.jpg. Une table de lecture dans une bibliothèque, cahiers et lumière du jour sur le bois. Auteur: Labrouste, Henri (1801-1875). Dessinateur. Domaine public, Wikimedia Commons.
+- `imprimerie-caractere.jpg` : File:Metal movable type.jpg. Des caractères typographiques en métal, lettres rangées prêtes à composer une page. Auteur: Willi Heidelbach. CC BY 2.5, Wikimedia Commons.
+- `rayonnages-bibliotheque.jpg` : File:Bibliothèque Carnegie (6207854773).jpg. De hauts rayonnages de livres anciens dans une bibliothèque éclairée. Auteur: Clelie Mascaret. CC BY-SA 2.0, Wikimedia Commons.
+- `terrasse-cafe-paris.jpg` : File:Terrasse du café, Paris July 30, 2010.jpg. Une terrasse de café parisien, tables et chaises en bord de rue, un jour clair. Auteur: zoetnet. CC BY 2.0, Wikimedia Commons.
+- `salle-musee-orsay.jpg` : File:Musée d'Orsay - salle des fêtes 01.jpg. La salle des fêtes du musée d'Orsay, stucs clairs, lustres et parquet, une salle lumineuse. Auteur: Chatsam. CC BY-SA 3.0, Wikimedia Commons.
+- `galerie-petit-palais.jpg` : File:Bassin central cour intérieure Petit Palais Paris.jpg. La cour intérieure du Petit Palais à Paris, bassin, colonnes et jardinières, un jour clair. Auteur: Pierrette13. CC BY-SA 4.0, Wikimedia Commons.

@@ -1330,9 +1330,9 @@
       "credit": "Eugène Trutat, Foire aux cochons, Bélesta (Tarn), octobre 1897. Photographie, Bibliothèque nationale de France. Domaine public, via Wikimedia Commons."
     },
     {
-      "id": "lp-lettres-2de-sinformer",
-      "title": "Lettres · 2de Bac pro · S'informer, informer : les circuits de l'information",
-      "summary": "Les circuits de l'information en Seconde Bac pro.",
+      "id": "lp-lettres-2de-une-information",
+      "title": "Lettres · 2de Bac pro · Une information, plusieurs récits",
+      "summary": "La montagne Pelée en 1902 : la première note, deux journaux et deux récits, les images, le prisonnier miraculé, les sources scientifiques d'aujourd'hui. Dix séances de 52 minutes pour vérifier, comparer et écrire une brève puis un article sourcé ; langue évaluée à chaque séance, version dys.",
       "section": "lycee-pro",
       "subject": "lettres",
       "level": "2de",
@@ -1340,11 +1340,13 @@
       "collection": "lp-lettres",
       "themes": [
         "medias",
-        "citoyennete"
+        "citoyennete",
+        "ecrit"
       ],
-      "url": "https://s-informer-informer-seconde-bacpro.netlify.app/",
-      "date": "2026-11-07",
-      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120582349490243&set=a.122104658121490243"
+      "url": "https://itineraires-destinations.fr/une-information-plusieurs-recits/",
+      "date": "2026-11-15",
+      "image": "une-information-plusieurs-recits.jpg",
+      "credit": "Saint-Pierre et la montagne Pelée, 2021. Photo Sapakagadewmoinjadiw, CC BY-SA 4.0, recadrage."
     },
     {
       "id": "lp-lettres-chef-doeuvre-hesperides",

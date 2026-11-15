@@ -108,6 +108,10 @@ figcaption{font-size:18px;color:var(--soft);font-style:italic;margin-top:.5rem;l
   .video-card,.video-embed{display:none}
 }
 
+.lf-part{border-top:1px solid var(--line);padding-top:.4rem;margin-top:.6rem}
+.lf-part h4{margin:.2rem 0 .3rem;color:var(--b);font-size:21px}
+.doc-fig{margin:.8rem 0}.doc-fig img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+.doc-fig figcaption{font-size:18px;color:var(--soft);margin-top:.3rem}
 .pill-time::before{content:none}
 .write{margin:.4rem 0 1rem}.write .wl{display:block;border-bottom:1.5px dotted #9a7b85;height:2.1em}
 .texte{border:2px solid var(--line);border-radius:14px;padding:.8rem 1.1rem;margin:1rem 0;background:#FFFCFA}

@@ -107,3 +107,11 @@ footer p{margin:0;max-width:none}
   font-size:1.15rem;
 }
 .trade .vid-label:first-child{margin-top:0;}
+
+.oral-set{margin:1.4rem 0 0;padding:1rem 1.1rem 1.2rem;border:2px solid #1A3658;border-radius:14px;background:#F4F7FB}
+.oral-set h4{font-family:inherit;font-size:1.1em;font-weight:700;color:#1A3658;margin:0 0 .3rem}
+.oral-set h4.prof{margin-top:1.3rem;padding-top:1rem;border-top:1px solid #C9D3E0}
+.oral-set .oral-note{margin:0 0 .4rem;font-size:1em}
+.dl.dl-big{margin:.6rem 0 0}
+.dl.dl-big a{font-size:1em;min-height:54px;padding:10px 20px}
+body.english-look .dl a:not(.sec){color:#fff!important}

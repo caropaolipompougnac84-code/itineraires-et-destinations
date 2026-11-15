@@ -2128,6 +2128,27 @@
       "credit": "Jan Ekels le Jeune, Un écrivain taillant sa plume, 1784, huile sur bois. Rijksmuseum, Amsterdam, inv. SK-A-690. Domaine public."
     },
     {
+      "id": "lp-lettres-2de-la-parole-qui-agit",
+      "title": "Lettres · 2de Bac pro · La parole qui agit",
+      "summary": "Les Fourberies de Scapin, La Fontaine, Cyrano et Jaurès : peut-on tout obtenir avec des mots ? Dix séances de 52 minutes, oral et plaidoyer, langue notée, version dys.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de Bac pro · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/la-parole-qui-agit/",
+      "date": "2026-11-15",
+      "image": "la-parole-qui-agit.jpg",
+      "credit": "Photo : Jean-Pol GRANDMONT, CC BY 4.0, Wikimedia Commons.",
+      "duration": "10 séances de 52 minutes",
+      "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
+    },
+    {
       "id": "lg-lettres-2de-test-positionnement",
       "title": "Lettres · 2de · Se préparer au test de positionnement",
       "summary": "Séance de français, 52 minutes, pour préparer le test de positionnement en début de Seconde professionnelle et de Seconde générale et technologique : format du QCM, entraînement à l’écrit, à l’oral et en langue, grille d’auto-révision.",

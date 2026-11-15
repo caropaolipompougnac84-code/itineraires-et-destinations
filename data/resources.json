@@ -1987,6 +1987,28 @@
       "credit": "A mural widely attributed to Banksy, Gymnast with a Ribbon, Irpin, Ukraine, 2022. Photograph by Rasal Hague, 18 November 2022, Wikimedia Commons, CC BY-SA 4.0. The photograph is shared under that licence. The artwork itself remains protected."
     },
     {
+      "id": "lp-anglais-2de-my-place-my-job-my-voice",
+      "title": "Anglais · 2de Bac pro · My Place, My Job, My Voice",
+      "summary": "Does my job define me, or can I make it my own? Mon métier me définit-il, ou puis-je en faire le mien ? Huit lessons de 52 minutes en onglets avec de jeunes professionnels anglais (vidéos du National Careers Service), CO, CE, PO et PE dans chaque lesson, grammaire, lexique et prononciation pratiqués et évalués, deux évaluations, version élève, version prof, version dys.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "2de Bac pro · lycée professionnel · de A2 vers B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "identite",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/my-place-my-job-my-voice/",
+      "date": "2026-11-15",
+      "image": "my-place-my-job-my-voice.jpg",
+      "credit": "Photo : BauerCornelia, apprenti charpentier, CC BY-SA 4.0, Wikimedia Commons.",
+      "duration": "8 lessons de 52 minutes",
+      "materials": "Tableau numérique, fiches imprimables, version dys"
+    },
+    {
       "id": "lg-anglais-dune-who-speaks-for-the-desert",
       "title": "Anglais · 1re technologique · Who Speaks for the Desert?",
       "summary": "Séquence d'anglais sur le premier roman de Frank Herbert, Dune (1965), Première technologique, lycée général et technologique, LVA et LVB, B1-B2. Axe principal : Art et pouvoir (BO n° 22 du 29 mai 2025). Dans le fil des fictions d'avertissement, avec la séquence Orwell en Terminale. Une étude de Ravage et une séquence croisée suivront.",

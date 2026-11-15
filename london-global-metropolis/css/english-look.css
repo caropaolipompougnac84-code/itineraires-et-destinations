@@ -1,0 +1,663 @@
+/* English sequence look (navy #1A3658, tints of navy only).
+   Reuse on another English page:
+   1. Add the class "english-look" to the <body> element.
+   2. Link /css/english-look.css after the page styles (and after heritage.css if that file is present).
+   3. Optional markup, all of it optional:
+      - figure.look-hero: a wide photograph under the navigation, with a figcaption for the credit.
+      - .look-gallery: a row of photographs (signs, plaques, places).
+      - .look-split: a lesson block next to an aside of photographs (.look-aside).
+      - figure.look-card: a rounded photograph with its credit.
+   Text stays at least 22px. The only accent colour is navy and its tints.
+*/
+body.english-look{
+  --navy:#1A3658;
+  --navy-mid:#2C4A70;
+  --navy-soft:#4A6280;
+  --navy-line:#C5D0DE;
+  --navy-wash:#E8EEF5;
+  --navy-wash2:#F3F6FA;
+  --ink:#1A2332;
+  --soft:#3D4A5C;
+  --paper:#FFFFFF;
+  --bg:#F4F6F9;
+  --ok-bg:#E8EEF5;
+  --ko-bg:#F2F4F6;
+  background:var(--bg)!important;
+  color:var(--ink)!important;
+  font-family:"Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
+  font-size:22px!important;
+  line-height:1.55!important;
+  text-shadow:none!important;
+}
+body.english-look .wrap{
+  max-width:1080px;
+  padding:20px 22px 64px;
+}
+body.english-look h1,
+body.english-look h2,
+body.english-look h3,
+body.english-look h4,
+body.english-look .level,
+body.english-look .card b,
+body.english-look .seq-sub{
+  font-family:"Cormorant Garamond", Fraunces, Georgia, serif!important;
+  color:var(--navy)!important;
+  text-shadow:none!important;
+  border-color:var(--navy-line)!important;
+}
+body.english-look h1{
+  font-size:clamp(2rem, 4.5vw, 2.7rem)!important;
+  font-weight:700;
+  margin:.4em 0 .35em!important;
+  line-height:1.15;
+  letter-spacing:.01em;
+}
+body.english-look h2{
+  font-size:1.55rem!important;
+  font-weight:700;
+  margin:1.8em 0 .7em!important;
+  padding-bottom:.3em!important;
+  border-bottom:2px solid var(--navy-line)!important;
+}
+body.english-look h3{
+  font-size:1.25rem!important;
+  margin:1.2em 0 .5em!important;
+}
+body.english-look a{color:var(--navy)!important;}
+body.english-look a:hover,body.english-look a:focus-visible{text-decoration-thickness:2px;}
+
+/* Banner and navigation */
+body.english-look .level{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border:0!important;
+  border-radius:16px!important;
+  box-shadow:none!important;
+  font-variant:normal!important;
+  letter-spacing:.02em!important;
+  font-size:1.05rem!important;
+  line-height:1.4!important;
+  padding:14px 18px!important;
+  text-align:center;
+}
+body.english-look .gnav{margin:1rem 0 1.2rem;gap:10px;}
+body.english-look .gl{
+  color:var(--navy)!important;
+  font-weight:700;
+  font-size:1rem;
+  min-width:7em;
+}
+body.english-look .grp a,
+body.english-look .grp a.c0,
+body.english-look .grp a.c1,
+body.english-look .grp a.c2,
+body.english-look .grp a.c3,
+body.english-look .grp a.c4,
+body.english-look .grp a.c5,
+body.english-look .grp a.c6,
+body.english-look .grp a.c7{
+  background:var(--paper)!important;
+  color:var(--navy)!important;
+  border:2px solid var(--navy-line)!important;
+  border-radius:999px!important;
+  padding:.35em .9em!important;
+  font-size:1rem!important;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+}
+body.english-look .grp a:hover,
+body.english-look .grp a:focus-visible{
+  background:var(--navy-wash)!important;
+  border-color:var(--navy)!important;
+}
+
+/* Skill tags: larger navy pills */
+body.english-look .skill-tag{
+  display:inline-block!important;
+  background:var(--navy)!important;
+  color:#fff!important;
+  font-family:inherit!important;
+  font-weight:700!important;
+  font-size:1rem!important;
+  letter-spacing:.06em!important;
+  line-height:1.2!important;
+  padding:.22em .7em!important;
+  border-radius:999px!important;
+  margin:0 .45em .15em 0!important;
+  vertical-align:.12em!important;
+}
+body.english-look .skills-legend{
+  margin:.2em 0 1.1em!important;
+  font-size:1.05rem!important;
+  color:var(--navy)!important;
+  line-height:1.7;
+}
+body.english-look h2 .skill-tag,
+body.english-look h3 .skill-tag{
+  font-family:"Source Sans 3", "Segoe UI", Verdana, sans-serif!important;
+  font-size:1rem!important;
+  margin-right:.55em!important;
+  vertical-align:middle!important;
+}
+
+/* Airy cards and boxes */
+body.english-look .box,
+body.english-look .intro,
+body.english-look .recap,
+body.english-look .starters,
+body.english-look .grammar,
+body.english-look .ws,
+body.english-look .q,
+body.english-look details,
+body.english-look .ans,
+body.english-look .card,
+body.english-look .task,
+body.english-look .teacher,
+body.english-look .ext,
+body.english-look .film,
+body.english-look .lp-box,
+body.english-look .corrige,
+body.english-look .safe,
+body.english-look .c1x,
+body.english-look .fr{
+  background:var(--paper)!important;
+  color:var(--ink)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:18px!important;
+  box-shadow:0 8px 24px rgba(26,54,88,.06)!important;
+  padding:1rem 1.15rem!important;
+}
+body.english-look .intro{
+  border:2px solid var(--navy-line)!important;
+  background:linear-gradient(180deg, var(--navy-wash2), var(--paper))!important;
+  margin:1rem 0 1.4rem!important;
+}
+body.english-look .intro .tag{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border:0!important;
+  border-radius:999px!important;
+  padding:.25em .75em!important;
+  font-size:1rem!important;
+  font-weight:700!important;
+  margin:0 .4em .45em 0!important;
+}
+body.english-look .recap{
+  border:2px solid var(--navy)!important;
+  background:var(--paper)!important;
+  border-top-width:6px!important;
+}
+body.english-look .lp-box{
+  background:var(--navy-wash)!important;
+  border:2px solid var(--navy-line)!important;
+  border-top:6px solid var(--navy)!important;
+}
+body.english-look .lp-bar{
+  display:block;
+  color:var(--navy)!important;
+  font-weight:700;
+  letter-spacing:.03em;
+  margin-bottom:.4em;
+}
+body.english-look .starters,
+body.english-look .grammar{
+  background:var(--navy-wash2)!important;
+  border:1px dashed var(--navy-soft)!important;
+  box-shadow:none!important;
+}
+body.english-look .corrige{
+  background:var(--navy-wash2)!important;
+  border-left:6px solid var(--navy)!important;
+  box-shadow:none!important;
+}
+body.english-look .card{
+  border-left:6px solid var(--navy)!important;
+}
+body.english-look .card b,
+body.english-look .ad .card b{color:var(--navy)!important;}
+body.english-look .card small,
+body.english-look .hint,
+body.english-look .gloss,
+body.english-look .seq-sub{color:var(--soft)!important;}
+body.english-look .quote{
+  background:var(--navy-wash2)!important;
+  color:var(--ink)!important;
+  border-left:6px solid var(--navy)!important;
+  box-shadow:none!important;
+  border-radius:0 14px 14px 0;
+}
+
+/* Questions, buttons, forms */
+body.english-look .q{
+  box-shadow:none!important;
+  background:var(--navy-wash2)!important;
+  padding:1rem 1.1rem!important;
+}
+body.english-look .qt{font-size:1.05rem;margin:.15em 0 .55em;}
+body.english-look .opt,
+body.english-look .mw,
+body.english-look .md,
+body.english-look .chip,
+body.english-look .tool,
+body.english-look button,
+body.english-look .check,
+body.english-look .resume,
+body.english-look #stepbar button,
+body.english-look .say{
+  font:inherit!important;
+  font-size:1rem!important;
+  min-height:48px;
+  border-radius:14px!important;
+  border:2px solid var(--navy-line)!important;
+  background:var(--paper)!important;
+  color:var(--ink)!important;
+  padding:.45em .9em!important;
+}
+body.english-look button.check,
+body.english-look .check,
+body.english-look .resume,
+body.english-look #stepbar button{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+  font-weight:700;
+}
+body.english-look .opt:hover,
+body.english-look .mw:hover,
+body.english-look .md:hover,
+body.english-look .chip:hover,
+body.english-look .opt:focus-visible,
+body.english-look .mw:focus-visible,
+body.english-look .md:focus-visible{
+  border-color:var(--navy)!important;
+  outline:3px solid var(--navy-wash);
+  outline-offset:2px;
+}
+body.english-look .opt.right,
+body.english-look .mw.right,
+body.english-look .md.right,
+body.english-look .ad .opt.right{
+  background:var(--navy)!important;
+  border-color:var(--navy)!important;
+  color:#fff!important;
+}
+body.english-look .opt.wrong,
+body.english-look .mw.wrong,
+body.english-look .md.wrong,
+body.english-look .ad .opt.wrong{
+  background:var(--ko-bg)!important;
+  border-color:var(--navy-soft)!important;
+  border-style:dashed!important;
+  color:var(--ink)!important;
+}
+body.english-look .mw.sel,
+body.english-look .tool[aria-pressed=true]{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+body.english-look .fb.ok{color:var(--navy)!important;font-weight:700;}
+body.english-look .fb.ko{color:var(--navy-soft)!important;font-weight:700;}
+body.english-look .score,
+body.english-look .grand{
+  background:var(--navy-wash)!important;
+  color:var(--navy)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:999px!important;
+  font-size:1.05rem;
+  padding:.4em 1em!important;
+}
+body.english-look input,
+body.english-look textarea,
+body.english-look select{
+  font:inherit;
+  font-size:1rem!important;
+  border:2px solid var(--navy-line)!important;
+  background:#fff!important;
+  color:var(--ink)!important;
+  border-radius:10px!important;
+  min-height:44px;
+}
+body.english-look .gapfill input.right{border-color:var(--navy)!important;background:var(--ok-bg)!important;}
+body.english-look .gapfill input.wrong{border-color:var(--navy-soft)!important;background:var(--ko-bg)!important;}
+body.english-look table td,
+body.english-look table th{border:1px solid var(--navy-line)!important;padding:.55em .7em;font-size:1rem;}
+body.english-look table th{background:var(--navy-wash)!important;color:var(--navy)!important;}
+body.english-look table td{background:var(--paper)!important;}
+body.english-look summary{color:var(--navy)!important;font-size:1.05rem;}
+body.english-look .tc{color:var(--navy)!important;}
+body.english-look .label-home,
+body.english-look .label-class,
+body.english-look .opt-name{
+  background:var(--navy-wash)!important;
+  color:var(--navy)!important;
+  border-radius:999px!important;
+}
+body.english-look footer{
+  background:transparent!important;
+  color:var(--soft)!important;
+  border:0!important;
+  border-top:1px solid var(--navy-line)!important;
+  border-radius:0!important;
+  margin-top:3rem;
+  padding:1.4rem .2rem 2rem!important;
+  font-size:1rem!important;
+  text-align:center;
+}
+
+/* Existing art figures, video frames */
+body.english-look .art,
+body.english-look figure.art{
+  margin:1.3rem 0;
+  text-align:center;
+}
+body.english-look .art img,
+body.english-look .poster,
+body.english-look .vq,
+body.english-look .yt{
+  border:1px solid var(--navy-line)!important;
+  border-radius:16px!important;
+  box-shadow:0 10px 28px rgba(26,54,88,.1)!important;
+  background:var(--paper);
+  padding:0;
+}
+body.english-look .art figcaption,
+body.english-look figcaption{
+  color:var(--soft)!important;
+  font-size:1rem!important;
+  margin-top:.55rem;
+  line-height:1.45;
+  text-align:left;
+}
+
+/* New London photographs */
+body.english-look figure.look-hero,
+body.english-look .look-hero{
+  margin:1.1rem 0 1.3rem;
+  max-width:none !important;
+  width:100%;
+  float:none !important;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+body.english-look .look-hero img{
+  width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center 45%;
+  display:block;
+  border-radius:22px;
+  border:1px solid var(--navy-line);
+  box-shadow:0 14px 36px rgba(26,54,88,.14);
+}
+body.english-look .look-hero figcaption,
+body.english-look .look-card figcaption,
+body.english-look .look-aside figcaption{
+  font-size:1rem;
+  color:var(--soft);
+  margin:.5rem 2px 0;
+  line-height:1.4;
+  text-align:left;
+}
+body.english-look .look-gallery{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+  margin:1.1rem 0 1.6rem;
+  align-items:start;
+}
+body.english-look .look-gallery--places{
+  grid-template-columns:repeat(2, 1fr);
+}
+body.english-look .look-card{
+  margin:0;
+  background:var(--paper);
+  border:1px solid var(--navy-line);
+  border-radius:18px;
+  padding:.55rem .55rem .8rem;
+  box-shadow:0 8px 22px rgba(26,54,88,.06);
+}
+body.english-look .look-card img{
+  width:100%;
+  height:auto;
+  max-height:380px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  border-radius:12px;
+  background:var(--navy-wash2);
+}
+body.english-look .look-gallery--places .look-card img{max-height:480px;}
+body.english-look .look-card.look-card--tall img{max-height:440px;object-fit:contain;background:var(--navy-wash2);}
+body.english-look .look-split{
+  display:grid;
+  grid-template-columns:minmax(0, 1.35fr) minmax(220px, .85fr);
+  gap:22px;
+  align-items:start;
+  margin:0 0 1.4rem;
+}
+body.english-look .look-split > .box,
+body.english-look .look-split > .recap{margin-top:0;}
+body.english-look .look-aside{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+body.english-look .look-aside .look-card{margin:0;}
+@media (max-width:860px){
+  body.english-look .look-gallery,
+  body.english-look .look-gallery--places,
+  body.english-look .look-split{
+    grid-template-columns:1fr;
+  }
+  body.english-look .look-hero img{aspect-ratio:4/3;}
+}
+@media print{
+  body.english-look{background:#fff!important;color:#000!important;font-size:12pt!important;}
+  body.english-look .look-hero,
+  body.english-look .look-gallery,
+  body.english-look .look-aside{break-inside:avoid;}
+}
+
+/* London Buses page (body.bus) */
+body.english-look.bus .herit,
+body.english-look .herit{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:12px 18px!important;
+  font-size:1rem!important;
+  text-align:center;
+}
+body.english-look.bus .herit a,
+body.english-look .herit a{color:#fff!important;text-decoration:underline;}
+body.english-look.bus header.top{
+  background:var(--bg)!important;
+  border:0!important;
+  border-bottom:0!important;
+  color:var(--ink)!important;
+  padding:1rem 0 .2rem!important;
+}
+body.english-look.bus .eyebrow,
+body.english-look.bus header.top .eyebrow{
+  color:var(--navy)!important;
+  font-family:inherit!important;
+  font-weight:700!important;
+  letter-spacing:.04em!important;
+  font-size:1rem!important;
+}
+body.english-look.bus header.top .sub,
+body.english-look.bus .sub{
+  color:var(--soft)!important;
+  font-size:1.05rem!important;
+  margin:0 0 1rem!important;
+}
+body.english-look.bus nav.tabs{
+  background:var(--paper)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:16px!important;
+  padding:8px!important;
+}
+body.english-look.bus nav.tabs button{
+  background:transparent!important;
+  color:var(--navy)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:999px!important;
+  font:inherit!important;
+  font-weight:700!important;
+}
+body.english-look.bus nav.tabs button[aria-selected=true]{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+body.english-look h1{border-bottom:0!important;}
+body.english-look .look-gallery:has(.look-card:only-child){
+  grid-template-columns:minmax(240px, 420px);
+}
+body.english-look.bus .plan-de-route,
+body.english-look.bus .panel{
+  background:var(--paper)!important;
+  border:1px solid var(--navy-line)!important;
+  border-radius:18px!important;
+  color:var(--ink)!important;
+}
+
+/* Other English sequences: site header, lesson tabs, title banners.
+   Getting around London has none of these classes, so its pages stay as they are.
+   The more specific body.english-look.bus header.top rules above keep priority on the bus page. */
+body.english-look h1{
+  border-left:0!important;
+  padding-left:0!important;
+}
+body.english-look .site-header,
+body.english-look .site-nav,
+body.english-look .topnav,
+body.english-look .seq-bar{
+  background:var(--navy)!important;
+  border-bottom:0!important;
+  color:#fff!important;
+}
+body.english-look .site-header a,
+body.english-look .site-nav a,
+body.english-look .topnav a,
+body.english-look .seq-bar a,
+body.english-look .seq-bar .seq-nav a,
+body.english-look .brand-mark,
+body.english-look .nav-main a{
+  color:#fff!important;
+}
+body.english-look .brand-mark:hover,
+body.english-look .nav-main a:hover,
+body.english-look .site-header a:hover,
+body.english-look .site-nav a:hover,
+body.english-look .topnav a:hover{
+  color:#fff!important;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+body.english-look .brand-tag{color:var(--navy-wash)!important;}
+body.english-look .site-header .wrap,
+body.english-look .site-nav .wrap,
+body.english-look .topnav .wrap,
+body.english-look header.top .wrap,
+body.english-look nav.sn .wrap,
+body.english-look .breadcrumb.wrap,
+body.english-look .lesson-nav .wrap,
+body.english-look nav.tabs .wrap,
+body.english-look footer .wrap,
+body.english-look .seq-bar .wrap{
+  padding-top:.7rem!important;
+  padding-bottom:.7rem!important;
+  padding-left:22px!important;
+  padding-right:22px!important;
+  max-width:1080px;
+}
+body.english-look .kicker,
+body.english-look .page-hero .kicker,
+body.english-look .section-label{
+  color:var(--navy)!important;
+}
+body.english-look .section-stripe{background:var(--navy)!important;}
+body.english-look .lesson-nav,
+body.english-look nav.tabs:not(.bus nav.tabs){
+  background:var(--navy-wash2)!important;
+  border-color:var(--navy-line)!important;
+}
+body.english-look .lesson-nav a,
+body.english-look nav.tabs a{
+  color:var(--navy)!important;
+  background:var(--paper)!important;
+  border:2px solid var(--navy-line)!important;
+  border-radius:999px!important;
+}
+body.english-look .lesson-nav a[aria-current="true"],
+body.english-look .lesson-nav a[aria-current="page"],
+body.english-look .lesson-nav a.on,
+body.english-look .lesson-nav a.is-active,
+body.english-look .lesson-nav .on a,
+body.english-look nav.tabs a[aria-current="true"],
+body.english-look nav.tabs a[aria-current="page"]{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+body.english-look .seq-nav a.on,
+body.english-look .seq-nav a[aria-current="true"],
+body.english-look .seq-nav a[aria-current="page"]{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:var(--navy)!important;
+}
+body.english-look span.level,
+body.english-look .level.alt{
+  display:inline-block!important;
+  padding:.25em .75em!important;
+  font-size:1rem!important;
+  border-radius:999px!important;
+  background:var(--navy)!important;
+  color:#fff!important;
+  text-align:center;
+}
+body.english-look header.top{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border:0!important;
+}
+body.english-look header.top h1,
+body.english-look header.top a,
+body.english-look header.top p{color:#fff!important;}
+body.english-look header.top .lvl{
+  background:#fff!important;
+  color:var(--navy)!important;
+}
+body.english-look .breadcrumb{color:var(--soft)!important;}
+body.english-look .breadcrumb a{color:var(--navy)!important;}
+body.english-look .page-hero .lede,
+body.english-look .lede{color:var(--soft)!important;}
+body.english-look nav.sn{background:var(--paper)!important;border-bottom:1px solid var(--navy-line)!important;}
+body.english-look nav.sn a{color:var(--navy)!important;}
+
+/* Lesson tabs on a navy bar (American Superheroes, Passing the Flame, etc.) */
+body.english-look nav.tabs{
+  background:var(--navy)!important;
+  border:0!important;
+}
+body.english-look nav.tabs a{
+  color:#fff!important;
+  background:transparent!important;
+  border:2px solid #8aa4c2!important;
+  border-radius:999px!important;
+}
+body.english-look nav.tabs a[aria-current="true"],
+body.english-look nav.tabs a[aria-current="page"]{
+  background:#fff!important;
+  color:var(--navy)!important;
+  border-color:#fff!important;
+}

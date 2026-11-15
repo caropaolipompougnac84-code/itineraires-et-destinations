@@ -2355,9 +2355,10 @@
       "collection": "lp-lettres",
       "themes": [
         "litterature",
-        "metiers",
+        "travail",
         "oral",
-        "ecrit"
+        "ecrit",
+        "identite"
       ],
       "url": "https://itineraires-destinations.fr/dire-mon-metier/",
       "date": "2026-11-15",

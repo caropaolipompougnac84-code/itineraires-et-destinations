@@ -2254,6 +2254,27 @@
       "credit": "Victor Adam, Lecture du Moniteur, 1830. Musée Carnavalet, CC0.",
       "duration": "10 séances de 52 minutes",
       "materials": "Tableau numérique, fiches élèves, version dys"
+    },
+    {
+      "id": "lg-lettres-2de-rire-suffit-il-a-penser",
+      "title": "Lettres · 2de · Le rire suffit-il à penser ? (Voltaire, Candide)",
+      "summary": "Candide en lecture intégrale : l'ironie de l'incipit, la « boucherie héroïque », Lisbonne et « tout est bien », l'Eldorado, l'esclave de Surinam, le jardin. Dix séances de 52 minutes, commentaire guidé, chapitre inédit à la manière de Voltaire, réponse argumentée, langue évaluée à chaque séance, version dys.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/rire-suffit-il-a-penser/",
+      "date": "2026-11-15",
+      "image": "rire-suffit-il-a-penser.jpg",
+      "credit": "Le parc du château de Voltaire à Ferney. Photo Brücke-Osteuropa, CC0.",
+      "duration": "10 séances de 52 minutes",
+      "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
     }
   ]
 }

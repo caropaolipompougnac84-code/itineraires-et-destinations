@@ -2320,6 +2320,29 @@
       "credit": "La salle du trône du palais royal de Madrid (postérieure à l'action). Photo Jose Luis Filpo Cabana, CC BY 3.0.",
       "duration": "10 séances de 52 minutes",
       "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
+    },
+    {
+      "id": "lg-anglais-2de-many-voices-one-commonwealth",
+      "title": "Anglais · 2de · Many Voices, One Commonwealth?",
+      "summary": "Une langue peut-elle porter des histoires différentes ? Huit lessons de 52 minutes en onglets sur la littérature anglophone du Commonwealth (axe 6 du programme de 2025) : Tagore, Sarojini Naidu, Katherine Mansfield, Chimamanda Ngozi Adichie, Claude McKay, Henry Lawson, Stephen Leacock et la Charte du Commonwealth, un débat structuré, une anthologie de classe et une présentation orale de deux minutes. CO, CE, PO et PE dans chaque lesson, grammaire, lexique et prononciation évalués, grille de relecture comptée dans la note, version élève, version prof, version dys.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "2de générale et technologique · de A2+ vers B1+",
+      "collection": "lg-anglais",
+      "themes": [
+        "litterature",
+        "culture",
+        "identite",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/many-voices-one-commonwealth/",
+      "date": "2026-11-15",
+      "image": "many-voices-one-commonwealth.jpg",
+      "credit": "Photo : Timothy Herbert, le poète Omar Musa au Jaipur Literature Festival de Melbourne, 2017, CC BY-SA 4.0, Wikimedia Commons.",
+      "duration": "8 lessons de 52 minutes",
+      "materials": "Tableau numérique, fiches imprimables, version dys"
     }
   ]
 }

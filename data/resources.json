@@ -2167,6 +2167,27 @@
       "hideInNouveautes": true,
       "image": "se-preparer-test-positionnement.jpg",
       "credit": "Jan Ekels le Jeune, Un écrivain taillant sa plume, 1784, huile sur bois. Rijksmuseum, Amsterdam, inv. SK-A-690. Domaine public."
+    },
+    {
+      "id": "lg-lettres-2de-posseder-les-autres",
+      "title": "Lettres · 2de · Posséder les autres ?",
+      "summary": "L'Avare de Molière : peut-on aimer quelqu'un que l'on veut posséder ? Dix séances de 52 minutes, explication linéaire, commentaire, note d'intention, deux mises en scène, langue évaluée, version dys.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/posseder-les-autres/",
+      "date": "2026-11-15",
+      "image": "posseder-les-autres.jpg",
+      "credit": "Farceurs français et italiens, 1670, auteur inconnu. Domaine public.",
+      "duration": "10 séances de 52 minutes",
+      "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
     }
   ]
 }

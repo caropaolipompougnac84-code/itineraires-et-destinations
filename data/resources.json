@@ -2210,6 +2210,28 @@
       "credit": "Farceurs français et italiens, 1670, auteur inconnu. Domaine public.",
       "duration": "10 séances de 52 minutes",
       "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
+    },
+    {
+      "id": "lg-lettres-2de-informer-prendre-parti",
+      "title": "Lettres · 2de · Informer, est-ce déjà prendre parti ?",
+      "summary": "Hugo à l'Assemblée (1849), Zola dans L'Aurore (1898), Albert Londres au bagne (1923) : peut-on défendre une cause sans faire dire aux faits ce que l'on veut ? Dix séances de 52 minutes, une et caricature, contraction, CDI, débat réglé, article sourcé, langue évaluée à chaque séance, version dys.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "medias",
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/informer-prendre-parti/",
+      "date": "2026-11-15",
+      "image": "informer-prendre-parti.jpg",
+      "credit": "Victor Adam, Lecture du Moniteur, 1830. Musée Carnavalet, CC0.",
+      "duration": "10 séances de 52 minutes",
+      "materials": "Tableau numérique, fiches élèves, version dys"
     }
   ]
 }

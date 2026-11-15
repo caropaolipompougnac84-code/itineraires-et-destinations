@@ -2343,6 +2343,28 @@
       "credit": "Photo : Timothy Herbert, le poète Omar Musa au Jaipur Literature Festival de Melbourne, 2017, CC BY-SA 4.0, Wikimedia Commons.",
       "duration": "8 lessons de 52 minutes",
       "materials": "Tableau numérique, fiches imprimables, version dys"
+    },
+    {
+      "id": "lp-lettres-2de-dire-mon-metier",
+      "title": "Lettres · 2de pro · Dire mon métier",
+      "summary": "Se présenter sans tout raconter, lire une fiche Onisep et Germinal, écrire un message qui fait avancer le travail, passer du récit au compte rendu, puis présenter un savoir-faire en trois minutes. Six séances de 52 minutes, toutes filières, langue évaluée à chaque séance, version dys.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "metiers",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/dire-mon-metier/",
+      "date": "2026-11-15",
+      "image": "dire-mon-metier.jpg",
+      "credit": "Une menuisière au travail. Photo Rein Sikk, 2014, CC BY-SA 3.0, recadrage.",
+      "duration": "6 séances de 52 minutes",
+      "materials": "Tableau numérique, fiches imprimables, version dys, appareils d'enregistrement"
     }
   ]
 }

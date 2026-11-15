@@ -2299,6 +2299,27 @@
       "credit": "Photo : équipe australienne de goalball, Atlanta 1996, John Sherwell, Australian Paralympic Committee, CC BY-SA 3.0, Wikimedia Commons.",
       "duration": "8 lessons de 52 minutes",
       "materials": "Tableau numérique, fiches imprimables, version dys"
+    },
+    {
+      "id": "lg-lettres-2de-un-valet-sur-le-trone",
+      "title": "Lettres · 2de · Un valet sur le trône ? (Victor Hugo, Ruy Blas)",
+      "summary": "Un laquais devenu duc et ministre peut-il échapper à sa condition ? Ruy Blas en œuvre intégrale, deux mises en scène de la tirade, une tirade écrite puis jouée, Ubu roi en lecture cursive. Dix séances minutées, langue, évaluations et corrigés.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/un-valet-sur-le-trone/",
+      "date": "2026-11-15",
+      "image": "un-valet-sur-le-trone.jpg",
+      "credit": "La salle du trône du palais royal de Madrid (postérieure à l'action). Photo Jose Luis Filpo Cabana, CC BY 3.0.",
+      "duration": "10 séances de 52 minutes",
+      "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
     }
   ]
 }

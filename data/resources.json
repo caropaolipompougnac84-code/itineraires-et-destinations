@@ -2277,6 +2277,28 @@
       "credit": "Le parc du château de Voltaire à Ferney. Photo Brücke-Osteuropa, CC0.",
       "duration": "10 séances de 52 minutes",
       "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
+    },
+    {
+      "id": "lp-anglais-2de-team-spirit",
+      "title": "Anglais · 2de Bac pro · Team Spirit: Sport, Fair Play and Working Together",
+      "summary": "Rules or trust: what makes a real team? Règles ou confiance : qu'est-ce qui fait une vraie équipe ? Huit lessons de 52 minutes en onglets : fair-play à Rio, règles du netball, une équipe de pompiers, Margaret Maughan et la naissance des Jeux paralympiques, une journée sportive à organiser, la pétanque expliquée à un correspondant, puis un pitch d'équipe et une charte de fair-play. CO, CE, PO et PE dans chaque lesson, langue évaluée, version dys.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "2de Bac pro · lycée professionnel · de A2 vers B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "citoyennete",
+        "travail",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/team-spirit/",
+      "date": "2026-11-15",
+      "image": "team-spirit.jpg",
+      "credit": "Photo : équipe australienne de goalball, Atlanta 1996, John Sherwell, Australian Paralympic Committee, CC BY-SA 3.0, Wikimedia Commons.",
+      "duration": "8 lessons de 52 minutes",
+      "materials": "Tableau numérique, fiches imprimables, version dys"
     }
   ]
 }

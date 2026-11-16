@@ -2496,6 +2496,27 @@
       "date": "2026-11-16",
       "image": "francais-seconde-pro-progressions.jpg",
       "credit": "Jean Siméon Chardin, L'Enfant au toton, 1738, Paris, musée du Louvre, domaine public."
+    },
+    {
+      "id": "lp-lettres-1re-poete-artisan-des-mots",
+      "hubOrder": 1,
+      "title": "Lettres · Première professionnelle · Le poète, artisan des mots",
+      "summary": "Séquence de français, Première professionnelle, objet d’étude « Créer, fabriquer : l’invention et l’imaginaire », autour d’Apollinaire, Calligrammes, 1918. Six séances de 55 minutes en onglets, spirale de Gorse, versions professeur, élève, dys et élève absent, étude de la langue par paliers, évaluations et flashcards.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première professionnelle · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit",
+        "travail"
+      ],
+      "url": "https://itineraires-destinations.fr/le-poete-artisan-des-mots-premiere-pro/",
+      "date": "2026-11-16",
+      "image": "le-poete-artisan-des-mots-premiere-pro.jpg",
+      "credit": "Johannes Vermeer, L’Art de la peinture, vers 1666-1668, Kunsthistorisches Museum, Vienne. Domaine public."
     }
   ]
 }

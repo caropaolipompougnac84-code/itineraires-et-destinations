@@ -1175,6 +1175,26 @@
       "credit": "Caspar David Friedrich, Der Mönch am Meer (Le Moine au bord de la mer), 1808-1810, huile sur toile, Alte Nationalgalerie, Staatliche Museen zu Berlin. Domaine public, via Wikimedia Commons (Google Art Project)."
     },
     {
+      "id": "lg-lettres-1re-therese-raquin",
+      "hubOrder": 1,
+      "title": "Lettres · Première technologique · Thérèse Raquin",
+      "summary": "Séquence de français pour la Première technologique, baccalauréat 2027, objet d’étude « Le roman et le récit du Moyen Âge au XXIe siècle », parcours « Anatomie des passions », autour de Thérèse Raquin, Émile Zola, 1867. Huit séances de 55 minutes, minutées sur 52 minutes, spirale de Gorse, versions professeur, élève, dys et élève absent, étude de la langue par paliers, trois évaluations.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/therese-raquin-premiere-technologique/",
+      "date": "2026-11-16",
+      "image": "therese-raquin-premiere-technologique.jpg",
+      "credit": "Degas"
+    },
+    {
       "id": "lg-lettres-hugo-justice-techno",
       "title": "Lettres · Bac technologique · Victor Hugo et la justice",
       "summary": "Le Dernier Jour d'un condamné et Claude Gueux : dix séances, la spirale de Gorse, l'épreuve anticipée de français et le Grand Oral.",

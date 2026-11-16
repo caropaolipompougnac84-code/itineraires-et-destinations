@@ -1,0 +1,25 @@
+/* Thérèse Raquin : textes en prose numérotés (complète sequence.css) */
+.poeme .texte-num{border-left:4px solid #7B1E3A}
+.poeme .texte-num li{display:flex;gap:.6rem;align-items:baseline;line-height:1.6}
+.prose .texte-num li{margin-bottom:.7rem;text-align:left}
+.prose .texte-num li.resume{color:#5A4F49;border-top:1px dashed #c9b8b0;padding-top:.5rem}
+.poeme .texte-num .num{flex:none;min-width:2em;font-size:.85em;color:#7B1E3A;opacity:.85}
+.poeme .texte-num .v{flex:1;min-width:0;overflow-wrap:anywhere}
+.poeme .source,.blk-texte .source{font-size:.9rem}
+.fig-spirale img,.blk-spirale .prof img,.sub .prof img{max-width:640px;width:100%;height:auto;display:block;margin:0 auto}
+.couv-legende-texte{max-width:46rem;margin:.8rem auto 0;text-align:center}
+.couv-label{text-align:center;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem;color:#7B1E3A;margin:1.2rem 0 .4rem}
+.couv-peinture .cadre{max-width:900px;margin:0 auto}
+.couv-peinture .cadre img{width:100%;height:auto;display:block}
+.dys-texte{border-left:4px solid #7B1E3A;padding-left:1rem;margin:1rem 0}
+@media (max-width:600px){.poeme .texte-num{padding-left:.6rem}}
+
+/* Téléphone : les tableaux à deux colonnes passent à la ligne au lieu de défiler */
+@media (max-width:640px){
+  .tscroll table:not(:has(th:nth-child(3))){min-width:0;table-layout:fixed}
+  .tscroll table:not(:has(th:nth-child(3))) td:first-child,.tscroll table:not(:has(th:nth-child(3))) th:first-child{width:42%;font-size:.9em;hyphens:auto;overflow-wrap:normal}
+  .tscroll table:not(:has(th:nth-child(3))) td{overflow-wrap:break-word;word-break:normal;hyphens:auto}
+}
+.blk-title .muted{color:inherit!important;opacity:.9;font-weight:500;text-transform:none;letter-spacing:0}
+.blk-title{border-radius:14px}
+.couv-peinture{max-width:900px}

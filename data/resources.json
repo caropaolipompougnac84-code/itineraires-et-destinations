@@ -203,6 +203,27 @@
       "credit": "Diego Velázquez, Portrait de Juan de Pareja, 1650, Metropolitan Museum of Art, New York. Domaine public."
     },
     {
+      "id": "lp-lettres-2de-entre-deux-pays",
+      "hubOrder": 2,
+      "title": "Lettres · 2de Bac pro · Entre deux pays",
+      "summary": "Séquence de français, Seconde baccalauréat professionnel, objet d'étude « Devenir soi : écritures autobiographiques ». Cinq séances de 55 minutes en onglets, spirale de Gorse, version professeur, élève et dys, étude de la langue par paliers, évaluations et flashcards.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de Bac pro · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "identite",
+        "litterature",
+        "ecrit",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/entre-deux-pays-seconde-pro/",
+      "date": "2026-11-16",
+      "image": "entre-deux-pays-seconde-pro.jpg",
+      "credit": "Raffaello Gambogi, Les Émigrants (Gli emigranti), 1894, Museo civico Giovanni Fattori, Livorno. Domaine public."
+    },
+    {
       "id": "lp-anglais-2de-adrian-mole",
       "title": "Anglais · 2de Bac pro · The Secret Diary of Adrian Mole, Aged 13¾",
       "summary": "Sue Townsend, 1982 : comment le journal secret d’un adolescent révèle-t-il la famille et la société britannique des années 1980 ? Dix lessons en onglets pour le tableau numérique, avec des liens vers le métier et la PFMP, CO, CE, PO et PE avec minuteur, quatre vidéos, un contrôle de lecture interactif, une tâche finale et une évaluation. Version élève, version prof, version dys.",
@@ -1333,7 +1354,7 @@
     },
     {
       "id": "lp-lettres-2de-une-information",
-      "hubOrder": 3,
+      "hubOrder": 4,
       "title": "Lettres · 2de Bac pro · Une information, plusieurs récits",
       "summary": "La montagne Pelée en 1902 : la première note, deux journaux et deux récits, les images, le prisonnier miraculé, les sources scientifiques d'aujourd'hui. Dix séances de 52 minutes pour vérifier, comparer et écrire une brève puis un article sourcé ; langue évaluée à chaque séance, version dys.",
       "section": "lycee-pro",
@@ -2159,7 +2180,7 @@
     },
     {
       "id": "lp-lettres-2de-test-positionnement",
-      "hubOrder": 5,
+      "hubOrder": 6,
       "title": "Lettres · 2de Bac pro · Se préparer au test de positionnement",
       "summary": "Séance de français, 52 minutes, pour préparer le test de positionnement en début de Seconde professionnelle et de Seconde générale et technologique : format du QCM, entraînement à l’écrit, à l’oral et en langue, grille d’auto-révision.",
       "section": "lycee-pro",
@@ -2179,7 +2200,7 @@
     },
     {
       "id": "lp-lettres-2de-la-parole-qui-agit",
-      "hubOrder": 2,
+      "hubOrder": 3,
       "title": "Lettres · 2de Bac pro · La parole qui agit",
       "summary": "Les Fourberies de Scapin, La Fontaine, Cyrano et Jaurès : peut-on tout obtenir avec des mots ? Dix séances de 52 minutes, oral et plaidoyer, langue notée, version dys.",
       "section": "lycee-pro",
@@ -2348,7 +2369,7 @@
     },
     {
       "id": "lp-lettres-2de-dire-mon-metier",
-      "hubOrder": 4,
+      "hubOrder": 5,
       "title": "Lettres · 2de pro · Dire mon métier",
       "summary": "Se présenter sans tout raconter, lire une fiche Onisep et Germinal, écrire un message qui fait avancer le travail, passer du récit au compte rendu, puis présenter un savoir-faire en trois minutes. Six séances de 52 minutes, toutes filières, langue évaluée à chaque séance, version dys.",
       "section": "lycee-pro",

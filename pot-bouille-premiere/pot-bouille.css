@@ -1,0 +1,5 @@
+/* Pot-Bouille, Zola : textes en prose numérotés (complète sequence.css) */
+.blk-texte .prose{border-left:4px solid #7B1E3A;margin:.2rem 0;padding:.25rem 0 .25rem .9rem;line-height:1.6;overflow-wrap:anywhere}
+.blk-texte .prose .repere{color:#7B1E3A;font-weight:700;font-size:.85em;margin-right:.2rem}
+.blk-texte .prose.coupe{border-left-color:transparent;color:#5A4F49}
+.blk-texte .source{font-size:.9rem}

@@ -413,6 +413,26 @@
       "credit": "Fernand Léger (1881-1955), Le Mécanicien, 1920. Huile sur toile. National Gallery of Canada, Ottawa. Domaine public. Image via Wikimedia Commons."
     },
     {
+      "id": "lg-lettres-1re-pot-bouille",
+      "hubOrder": 1,
+      "title": "Lettres · Première générale · Pot-Bouille",
+      "summary": "Séquence de français pour la Première générale, objet d’étude « Le roman et le récit du Moyen Âge au XXIe siècle », parcours « Dévoiler les rouages de la société », autour de Pot-Bouille, Émile Zola, 1882. Huit séances de 55 minutes, minutées sur 52 minutes, spirale de Gorse, versions professeur, élève, dys et élève absent, étude de la langue par paliers, trois évaluations.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première générale",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/pot-bouille-premiere/",
+      "date": "2026-11-16",
+      "image": "pot-bouille-premiere.jpg",
+      "credit": "Gustave Caillebotte, Rue Halévy, vue d’un sixième étage, 1878, huile sur toile, musée Barberini, Potsdam. Domaine public."
+    },
+    {
       "id": "lg-lettres-1re-on-ne-badine-pas-avec-l-amour",
       "hubOrder": 1,
       "title": "Lettres · 1re · On ne badine pas avec l’amour",

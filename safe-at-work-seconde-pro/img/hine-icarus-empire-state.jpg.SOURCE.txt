@@ -1,0 +1,10 @@
+File: Icarus,_Empire_State_Building_MET_DP106525.jpg
+URL: https://upload.wikimedia.org/wikipedia/commons/1/19/Icarus%2C_Empire_State_Building_MET_DP106525.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+Downloaded: https://upload.wikimedia.org/wikipedia/commons/1/19/Icarus%2C_Empire_State_Building_MET_DP106525.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+Artist: <bdi><a href="https://en.wikipedia.org/wiki/en:Lewis_Hine" class="extiw" title="w:en:Lewis Hine"><span title="American sociologist and photographer (1874–1940)">Lewis Hine</span></a></bdi>
+Credit: This file was donated to Wikimedia Commons as part of a project by the <a href="//commons.wikimedia.org/wiki/Commons:Met" title="Commons:Met">Metropolitan Museum of Art</a>. See the <a rel="nofollow" class="external text" href="https://metmuseum.org/about-the-met/policies-and-documents/image-resources">Image and Data Resources Open Access Policy</a>
+License: CC0
+LicenseUrl: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Date: 1930<div style="display: none;">date QS:P571,+1930-00-00T00:00:00Z/9</div>
+ObjectName: <div class="fn">
+Icarus, Empire State Building</div>

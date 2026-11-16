@@ -2517,6 +2517,43 @@
       "date": "2026-11-16",
       "image": "le-poete-artisan-des-mots-premiere-pro.jpg",
       "credit": "Johannes Vermeer, L’Art de la peinture, vers 1666-1668, Kunsthistorisches Museum, Vienne. Domaine public."
+    },
+    {
+      "id": "cfa-anglais-bp-green-at-work",
+      "hubOrder": 1,
+      "title": "Anglais · CFA / BP · Green at Work",
+      "summary": "Séquence d’anglais pour la Seconde professionnelle, également utilisable en CFA et pour un brevet professionnel. Six leçons de 55 minutes, minutées sur 52 minutes. Un travailleur peut-il vraiment faire une différence pour la planète ? Étude de la langue, évaluations, version dys et version pour l’élève qui ne peut pas venir en classe.",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": "bp",
+      "levelLabel": "CFA · brevet professionnel · de A2 vers B1",
+      "collection": "cfa-anglais",
+      "themes": [
+        "travail",
+        "environnement"
+      ],
+      "url": "https://itineraires-destinations.fr/green-at-work-seconde-pro/",
+      "date": "2026-11-16",
+      "image": "green-at-work-seconde-pro.jpg",
+      "credit": "Jean-François Millet, The Gleaners (Des glaneuses), 1857, oil on canvas, Musée d'Orsay, Paris. Public domain."
+    },
+    {
+      "id": "cfa-anglais-bp-safe-at-work",
+      "hubOrder": 2,
+      "title": "Anglais · CFA / BP · Safe at Work",
+      "summary": "Séquence d’anglais pour la Seconde professionnelle, également utilisable en CFA et pour un brevet professionnel. Six leçons de 55 minutes, minutées sur 52 minutes. La sécurité au travail : à qui la tâche ? Étude de la langue, évaluations, version dys et version pour l’élève qui ne peut pas venir en classe.",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": "bp",
+      "levelLabel": "CFA · brevet professionnel · de A2 vers B1",
+      "collection": "cfa-anglais",
+      "themes": [
+        "travail"
+      ],
+      "url": "https://itineraires-destinations.fr/safe-at-work-seconde-pro/",
+      "date": "2026-11-16",
+      "image": "safe-at-work-seconde-pro.jpg",
+      "credit": "Lewis Hine, Icarus, Empire State Building, 1930, The Metropolitan Museum of Art, New York. CC0 (Open Access)."
     }
   ]
 }

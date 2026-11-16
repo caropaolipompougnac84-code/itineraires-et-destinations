@@ -153,9 +153,15 @@ body.english-look .kicker{
   margin:.6rem 0 .2rem!important;
 }
 body.english-look h1{
-  font-size:clamp(2.4rem,6vw,3.2rem)!important;
-  line-height:1.05!important;
-  margin:.2rem 0 .4rem!important;
+  font-size:clamp(1.7rem,4.4vw,2.5rem)!important;
+  line-height:1.2!important;
+  margin:.2rem 0 .55rem!important;
+  text-wrap:pretty;
+  overflow-wrap:break-word;
+  hyphens:manual;
+}
+body.english-look h1 .title-break{
+  display:block;
 }
 body.english-look .exergue{
   font-family:"Cormorant Garamond",Fraunces,Georgia,serif;
@@ -201,5 +207,9 @@ body.english-look figure.fig-cover figcaption{
   text-align:center;
 }
 @media (max-width:700px){
+  body.english-look h1{
+    font-size:1.7rem!important;
+    line-height:1.2!important;
+  }
   body.english-look figure.fig-cover img{max-width:100%}
 }

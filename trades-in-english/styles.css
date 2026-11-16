@@ -127,3 +127,79 @@ body.english-look figure.look-hero.look-hero-tableau img{
   height:auto;
   margin:0 auto;
 }
+
+
+/* Haut de page sur le modèle Adrian Mole (Seconde bac pro, sweat bleu flashy) :
+   titre et présentation d'abord, tableau encadré ensuite.
+   Le bandeau seq-bar, rendu marine par english-look.css, laissait le lien
+   « 3e SEGPA » en blanc sur fond blanc (rectangle vide). */
+body.english-look .seq-bar .seq-nav a{
+  background:transparent!important;
+  color:#fff!important;
+  border:2px solid #8aa4c2!important;
+  border-radius:999px!important;
+}
+body.english-look .seq-bar .seq-nav a.on,
+body.english-look .seq-bar .seq-nav a[aria-current="page"]{
+  background:#fff!important;
+  color:#1A3658!important;
+  border-color:#fff!important;
+}
+
+body.english-look .kicker{
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  font-size:1rem!important;
+  margin:.6rem 0 .2rem!important;
+}
+body.english-look h1{
+  font-size:clamp(2.4rem,6vw,3.2rem)!important;
+  line-height:1.05!important;
+  margin:.2rem 0 .4rem!important;
+}
+body.english-look .exergue{
+  font-family:"Cormorant Garamond",Fraunces,Georgia,serif;
+  font-style:italic;
+  font-size:clamp(1.25rem,2.6vw,1.55rem);
+  color:var(--soft);
+  margin:0 0 1rem;
+  max-width:42rem;
+}
+body.english-look .switch{margin:0 0 .6rem}
+
+/* Tableau encadré, comme .fig-cover sur Adrian Mole, sans le recadrage 16:9. */
+body.english-look figure.fig-cover{
+  margin:1.6rem auto 2rem;
+  text-align:center;
+  max-width:46rem;
+  float:none;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+body.english-look figure.fig-cover img{
+  display:block;
+  margin:0 auto;
+  width:auto;
+  height:auto;
+  max-width:60%;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  border-radius:6px;
+  border:1px solid var(--navy-line,#C5D0DE);
+  background:transparent;
+  box-shadow:none;
+}
+body.english-look figure.fig-cover figcaption{
+  font-size:1rem;
+  color:var(--soft);
+  font-style:italic;
+  margin-top:.5rem;
+  line-height:1.45;
+  text-align:center;
+}
+@media (max-width:700px){
+  body.english-look figure.fig-cover img{max-width:100%}
+}

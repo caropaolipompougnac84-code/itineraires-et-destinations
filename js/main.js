@@ -158,6 +158,27 @@
       })
     );
 
+    // Lycée général et lycée pro : la carte « Progression de l'année » d'abord,
+    // puis les séquences dans l'ordre de l'année (2de, 1re, Tle), puis les outils transversaux.
+    if (/^lycee-(general|pro)$/.test(baseOpts.section)) {
+      const rank = { "2de": 1, "1re": 2, tle: 3, "tle-option": 3, hlp: 3, spe: 3, bac: 3, cap: 4 };
+      const keyOf = (r, i) => {
+        const lv = levelsOf(r).map((l) => (l in rank ? rank[l] : 5));
+        const url = String(r.url || "");
+        const isProg = /-progressions\/?$/.test(url) ? 0 : 1;
+        const isTool = /\/preparer-aux-examens\//.test(url) ? 1 : 0;
+        const order = typeof r.hubOrder === "number" ? r.hubOrder : 99;
+        return [isTool, lv.length ? Math.min(...lv) : 5, isProg, order, i];
+      };
+      pool = pool
+        .map((r, i) => ({ r, k: keyOf(r, i) }))
+        .sort((a, b) => {
+          for (let j = 0; j < a.k.length; j++) if (a.k[j] !== b.k[j]) return a.k[j] - b.k[j];
+          return 0;
+        })
+        .map((x) => x.r);
+    }
+
     const listEl = root.querySelector("[data-cards]") || root;
     const filtersEl = root.querySelector("[data-filters]") || document.querySelector("[data-filters]");
     const countEl = root.querySelector("[data-count]") || document.querySelector("[data-count]");

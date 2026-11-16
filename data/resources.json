@@ -161,6 +161,7 @@
   "resources": [
     {
       "id": "lg-lettres-2de-stupeur-et-tremblements",
+      "hubOrder": 6,
       "title": "Lettres · 2de · Stupeur et tremblements, Amélie Nothomb",
       "summary": "Amélie Nothomb, 1999 : comment le récit d’une humiliation devient-il, par l’humour et l’écriture, une revanche ? Huit séances en onglets pour le tableau numérique, quatre explications de texte, le film d’Alain Corneau, un oral, un contrôle de lecture et un commentaire. Version élève, version prof, version dys.",
       "section": "lycee-general",
@@ -182,6 +183,7 @@
     },
     {
       "id": "lp-lettres-2de-devenir-soi-etranger",
+      "hubOrder": 1,
       "title": "Lettres · 2de Bac pro · Devenir soi quand on se sent étranger",
       "summary": "Séquence de français, Seconde baccalauréat professionnel, objet d'étude « Devenir soi : écritures autobiographiques ». Œuvre : Vallès, L'Enfant. 18 séances de 52 minutes, à onglets, avec fiches, grilles, méthode pour prendre une correction, et évaluations fréquentes.",
       "section": "lycee-pro",
@@ -1331,6 +1333,7 @@
     },
     {
       "id": "lp-lettres-2de-une-information",
+      "hubOrder": 3,
       "title": "Lettres · 2de Bac pro · Une information, plusieurs récits",
       "summary": "La montagne Pelée en 1902 : la première note, deux journaux et deux récits, les images, le prisonnier miraculé, les sources scientifiques d'aujourd'hui. Dix séances de 52 minutes pour vérifier, comparer et écrire une brève puis un article sourcé ; langue évaluée à chaque séance, version dys.",
       "section": "lycee-pro",
@@ -2156,6 +2159,7 @@
     },
     {
       "id": "lp-lettres-2de-test-positionnement",
+      "hubOrder": 5,
       "title": "Lettres · 2de Bac pro · Se préparer au test de positionnement",
       "summary": "Séance de français, 52 minutes, pour préparer le test de positionnement en début de Seconde professionnelle et de Seconde générale et technologique : format du QCM, entraînement à l’écrit, à l’oral et en langue, grille d’auto-révision.",
       "section": "lycee-pro",
@@ -2175,6 +2179,7 @@
     },
     {
       "id": "lp-lettres-2de-la-parole-qui-agit",
+      "hubOrder": 2,
       "title": "Lettres · 2de Bac pro · La parole qui agit",
       "summary": "Les Fourberies de Scapin, La Fontaine, Cyrano et Jaurès : peut-on tout obtenir avec des mots ? Dix séances de 52 minutes, oral et plaidoyer, langue notée, version dys.",
       "section": "lycee-pro",
@@ -2196,6 +2201,7 @@
     },
     {
       "id": "lg-lettres-2de-test-positionnement",
+      "hubOrder": 7,
       "title": "Lettres · 2de · Se préparer au test de positionnement",
       "summary": "Séance de français, 52 minutes, pour préparer le test de positionnement en début de Seconde professionnelle et de Seconde générale et technologique : format du QCM, entraînement à l’écrit, à l’oral et en langue, grille d’auto-révision.",
       "section": "lycee-general",
@@ -2216,6 +2222,7 @@
     },
     {
       "id": "lg-lettres-2de-posseder-les-autres",
+      "hubOrder": 2,
       "title": "Lettres · 2de · Posséder les autres ?",
       "summary": "L'Avare de Molière : peut-on aimer quelqu'un que l'on veut posséder ? Dix séances de 52 minutes, explication linéaire, commentaire, note d'intention, deux mises en scène, langue évaluée, version dys.",
       "section": "lycee-general",
@@ -2237,6 +2244,7 @@
     },
     {
       "id": "lg-lettres-2de-informer-prendre-parti",
+      "hubOrder": 3,
       "title": "Lettres · 2de · Informer, est-ce déjà prendre parti ?",
       "summary": "Hugo à l'Assemblée (1849), Zola dans L'Aurore (1898), Albert Londres au bagne (1923) : peut-on défendre une cause sans faire dire aux faits ce que l'on veut ? Dix séances de 52 minutes, une et caricature, contraction, CDI, débat réglé, article sourcé, langue évaluée à chaque séance, version dys.",
       "section": "lycee-general",
@@ -2259,6 +2267,7 @@
     },
     {
       "id": "lg-lettres-2de-rire-suffit-il-a-penser",
+      "hubOrder": 4,
       "title": "Lettres · 2de · Le rire suffit-il à penser ? (Voltaire, Candide)",
       "summary": "Candide en lecture intégrale : l'ironie de l'incipit, la « boucherie héroïque », Lisbonne et « tout est bien », l'Eldorado, l'esclave de Surinam, le jardin. Dix séances de 52 minutes, commentaire guidé, chapitre inédit à la manière de Voltaire, réponse argumentée, langue évaluée à chaque séance, version dys.",
       "section": "lycee-general",
@@ -2302,6 +2311,7 @@
     },
     {
       "id": "lg-lettres-2de-un-valet-sur-le-trone",
+      "hubOrder": 5,
       "title": "Lettres · 2de · Un valet sur le trône ? (Victor Hugo, Ruy Blas)",
       "summary": "Un laquais devenu duc et ministre peut-il échapper à sa condition ? Ruy Blas en œuvre intégrale, deux mises en scène de la tirade, une tirade écrite puis jouée, Ubu roi en lecture cursive. Dix séances minutées, langue, évaluations et corrigés.",
       "section": "lycee-general",
@@ -2346,6 +2356,7 @@
     },
     {
       "id": "lp-lettres-2de-dire-mon-metier",
+      "hubOrder": 4,
       "title": "Lettres · 2de pro · Dire mon métier",
       "summary": "Se présenter sans tout raconter, lire une fiche Onisep et Germinal, écrire un message qui fait avancer le travail, passer du récit au compte rendu, puis présenter un savoir-faire en trois minutes. Six séances de 52 minutes, toutes filières, langue évaluée à chaque séance, version dys.",
       "section": "lycee-pro",

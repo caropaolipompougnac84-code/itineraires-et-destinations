@@ -1,0 +1,16 @@
+/* Pages lycée général et lycée pro : toutes les cartes au même format.
+   Même vignette (72 x 92, 64 x 82 sur téléphone) ; une carte sans image garde un cadre vide de même taille. */
+.work { grid-template-columns: 72px 1fr; }
+.work:not(:has(.work-thumb)) { grid-template-columns: 72px 1fr; }
+.work:not(:has(.work-thumb))::before {
+  content: ""; display: block; width: 72px; height: 92px;
+  background: var(--paper-2); border-top: 3px solid var(--burgundy);
+  box-sizing: border-box;
+}
+.work:has(a[href*="/preparer-aux-examens/francais/"]),
+.work:has(a[href*="/preparer-aux-examens/anglais/"]) { border-left: 0; padding-left: 0; }
+.work:has(a[href*="/preparer-aux-examens/anglais/"]) h3 { color: inherit; }
+@media (max-width: 640px) {
+  .work, .work:not(:has(.work-thumb)) { grid-template-columns: 64px 1fr; }
+  .work:not(:has(.work-thumb))::before { width: 64px; height: 82px; }
+}

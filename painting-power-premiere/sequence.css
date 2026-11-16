@@ -191,3 +191,14 @@ img,video{max-width:100%;height:auto}
   .paliers-nav,.new-tag{display:none!important}
   .palier{display:block!important}
 }
+
+/* En-têtes de tableaux lisibles : fond #1A3658, texte blanc */
+.panel table th,.tscroll th,table thead th{background:#1A3658!important;color:#fff!important}
+.panel table th *,.tscroll th *{color:#fff!important}
+
+/* Téléphone : les tableaux à deux colonnes passent à la ligne au lieu de défiler */
+@media (max-width:640px){
+  .tscroll table:not(:has(th:nth-child(3))){min-width:0;table-layout:fixed}
+  .tscroll table:not(:has(th:nth-child(3))) td:first-child,.tscroll table:not(:has(th:nth-child(3))) th:first-child{width:42%;font-size:.9em;hyphens:auto;overflow-wrap:normal}
+  .tscroll table:not(:has(th:nth-child(3))) td{overflow-wrap:break-word;word-break:normal;hyphens:auto}
+}

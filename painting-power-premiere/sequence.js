@@ -46,7 +46,7 @@
     [].forEach.call(box.querySelectorAll('.palier-btn'),function(b){var on=b.getAttribute('data-palier')===String(k);b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');});
     [].forEach.call(box.querySelectorAll('.palier'),function(s){s.hidden=!(k===0||s.getAttribute('data-p')===String(k));});}
   [].forEach.call(d.querySelectorAll('.sub-langue'),function(b){setPalier(b,1);});
-  function setMode(mode){d.body.classList.toggle('mode-eleve',mode==='eleve');d.body.classList.toggle('mode-prof',mode!=='eleve');
+  function setMode(mode){if(mode!=='prof')mode='eleve';d.body.classList.toggle('mode-eleve',mode==='eleve');d.body.classList.toggle('mode-prof',mode!=='eleve');
     [].forEach.call(d.querySelectorAll('.mode-btn[data-mode]'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-mode')===mode?'true':'false');});
     if(mode==='eleve'){[].forEach.call(d.querySelectorAll('.subtab.on.prof-only'),function(on){var p=scopeOf(on);var el=p&&p.querySelector('.subtab[data-sub="eleves"], .subtab[data-sub="eleve"]');if(el){el.click();}});
       var h=(location.hash||'#accueil').slice(1);var pel=d.getElementById(h);if(pel&&pel.classList.contains('prof-only')){history.replaceState(null,'','#accueil');show('accueil');}}

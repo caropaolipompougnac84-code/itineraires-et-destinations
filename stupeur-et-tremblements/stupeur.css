@@ -107,3 +107,8 @@ figcaption{font-size:18px;color:var(--soft);font-style:italic;margin-top:.5rem;l
   .blk-activite,.blk-trace,.blk-devoirs{break-before:page}
   .video-card,.video-embed{display:none}
 }
+
+.encadre-progression{border:3px solid var(--b);border-radius:14px;background:var(--pale);padding:.8rem 1.15rem 1rem;margin:1.2rem 0 1.6rem}
+.encadre-progression h3{display:block;margin:.15rem 0 .5rem;padding:0;border:0;font-family:var(--f-t);font-size:clamp(1.35rem,3vw,1.7rem);font-weight:600;color:var(--b);line-height:1.25}
+.encadre-progression p{margin:.55rem 0 0}
+.encadre-progression p:last-child{margin-bottom:0}

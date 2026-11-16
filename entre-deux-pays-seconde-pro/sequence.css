@@ -280,3 +280,9 @@ h4.h-step{color:var(--b-deep)}
 .tab-presentation .stp-head h1{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .tab-presentation .stp-head{padding-top:.5rem;padding-bottom:.3rem}
 .tab-presentation .stp-head .modes{margin-top:0}
+
+/* Lien visible vers le test de positionnement de Seconde */
+.lien-positionnement{max-width:46rem;margin:0 auto 2rem;padding:1rem 1.15rem;background:#FAF3F5;border-left:6px solid var(--b);border-radius:8px}
+.lien-positionnement p{margin:0}
+.lien-positionnement a{font-weight:700;color:var(--b);font-size:1.2rem;text-decoration:underline}
+.lien-positionnement .lien-pos-texte{margin-top:.35rem;font-size:1.05rem}

@@ -161,8 +161,8 @@
   "resources": [
     {
       "id": "lg-lettres-2de-stupeur-et-tremblements",
-      "hubOrder": 6,
-      "title": "Lettres · 2de · Stupeur et tremblements, Amélie Nothomb",
+      "hubOrder": 5,
+      "title": "Lettres · 2de · Séquence 5 · Stupeur et tremblements, Amélie Nothomb",
       "summary": "Amélie Nothomb, 1999 : comment le récit d’une humiliation devient-il, par l’humour et l’écriture, une revanche ? Huit séances en onglets pour le tableau numérique, quatre explications de texte, le film d’Alain Corneau, un oral, un contrôle de lecture et un commentaire. Version élève, version prof, version dys.",
       "section": "lycee-general",
       "subject": "lettres",
@@ -2222,12 +2222,10 @@
     },
     {
       "id": "lg-lettres-2de-posseder-les-autres",
-      "hubOrder": 2,
       "title": "Lettres · 2de · Posséder les autres ?",
       "summary": "L'Avare de Molière : peut-on aimer quelqu'un que l'on veut posséder ? Dix séances de 52 minutes, explication linéaire, commentaire, note d'intention, deux mises en scène, langue évaluée, version dys.",
       "section": "lycee-general",
       "subject": "lettres",
-      "level": "2de",
       "levelLabel": "2de · lycée général et technologique",
       "collection": "lg-lettres",
       "themes": [
@@ -2244,12 +2242,10 @@
     },
     {
       "id": "lg-lettres-2de-informer-prendre-parti",
-      "hubOrder": 3,
       "title": "Lettres · 2de · Informer, est-ce déjà prendre parti ?",
       "summary": "Hugo à l'Assemblée (1849), Zola dans L'Aurore (1898), Albert Londres au bagne (1923) : peut-on défendre une cause sans faire dire aux faits ce que l'on veut ? Dix séances de 52 minutes, une et caricature, contraction, CDI, débat réglé, article sourcé, langue évaluée à chaque séance, version dys.",
       "section": "lycee-general",
       "subject": "lettres",
-      "level": "2de",
       "levelLabel": "2de · lycée général et technologique",
       "collection": "lg-lettres",
       "themes": [
@@ -2267,12 +2263,10 @@
     },
     {
       "id": "lg-lettres-2de-rire-suffit-il-a-penser",
-      "hubOrder": 4,
       "title": "Lettres · 2de · Le rire suffit-il à penser ? (Voltaire, Candide)",
       "summary": "Candide en lecture intégrale : l'ironie de l'incipit, la « boucherie héroïque », Lisbonne et « tout est bien », l'Eldorado, l'esclave de Surinam, le jardin. Dix séances de 52 minutes, commentaire guidé, chapitre inédit à la manière de Voltaire, réponse argumentée, langue évaluée à chaque séance, version dys.",
       "section": "lycee-general",
       "subject": "lettres",
-      "level": "2de",
       "levelLabel": "2de · lycée général et technologique",
       "collection": "lg-lettres",
       "themes": [
@@ -2311,12 +2305,10 @@
     },
     {
       "id": "lg-lettres-2de-un-valet-sur-le-trone",
-      "hubOrder": 5,
       "title": "Lettres · 2de · Un valet sur le trône ? (Victor Hugo, Ruy Blas)",
       "summary": "Un laquais devenu duc et ministre peut-il échapper à sa condition ? Ruy Blas en œuvre intégrale, deux mises en scène de la tirade, une tirade écrite puis jouée, Ubu roi en lecture cursive. Dix séances minutées, langue, évaluations et corrigés.",
       "section": "lycee-general",
       "subject": "lettres",
-      "level": "2de",
       "levelLabel": "2de · lycée général et technologique",
       "collection": "lg-lettres",
       "themes": [
@@ -2380,6 +2372,7 @@
     },
     {
       "id": "lg-lettres-2de-francais-seconde-progressions",
+      "hubOrder": 0,
       "title": "Lettres · 2de générale et technologique · Le français en Seconde : les progressions de l'année",
       "summary": "Le parcours de l'année en six séquences, chacune ouverte par un tableau de maître, avec la spirale de Gorse, des leçons de 52 minutes, le calendrier 2026-2027 et la fiche en gros caractères en pdf, docx et odt.",
       "section": "lycee-general",
@@ -2397,6 +2390,50 @@
       "date": "2026-11-16",
       "image": "francais-seconde-gt-progressions.jpg",
       "credit": "Pieter Janssens Elinga, Femme lisant, vers 1668 à 1670, Munich, Alte Pinakothek, domaine public."
+    },
+    {
+      "id": "lg-lettres-2de-le-droit-d-aimer",
+      "hubOrder": 1,
+      "title": "Lettres · 2de · Séquence 1 · Le droit d’aimer, le droit de souffrir",
+      "summary": "La poésie du Moyen Âge au XVIIIe siècle : comment des femmes poètes ont-elles osé dire « je » pour dire l’amour et la douleur ? Marie de France, Christine de Pizan, Louise Labé, Pernette du Guillet. Neuf leçons en onglets, spirale de Gorse, fiche professeur, corrigé, fiches élèves et version dys.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "duration": "9 leçons en onglets",
+      "materials": "Tableau numérique, fiche professeur, corrigé, fiches élèves, version dys",
+      "url": "https://itineraires-destinations.fr/le-droit-d-aimer-le-droit-de-souffrir/",
+      "date": "2026-11-16",
+      "image": "le-droit-d-aimer-le-droit-de-souffrir.jpg",
+      "credit": "Maître de la Cité des Dames, Christine de Pizan dans son étude, vers 1410-1414, British Library, ms Harley 4431. Domaine public."
+    },
+    {
+      "id": "lg-lettres-2de-rire-de-ce-qui-fait-peur",
+      "hubOrder": 4,
+      "title": "Lettres · 2de · Séquence 4 · Rire de ce qui fait peur",
+      "summary": "Molière, Le Malade imaginaire, 1673 : peut-on rire de la maladie et de la peur de mourir ? Dix leçons de 52 minutes en onglets, spirale de Gorse, évaluations. Le théâtre du XVIIe au XXIe siècle.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "duration": "10 leçons de 52 minutes",
+      "materials": "Tableau numérique, onglets de la séquence, évaluations",
+      "url": "https://itineraires-destinations.fr/rire-de-ce-qui-fait-peur/",
+      "date": "2026-11-16",
+      "image": "rire-de-ce-qui-fait-peur.jpg",
+      "credit": "Abraham Solomon, Le Malade imaginaire, 1861. Wellcome Collection, Londres. Photo CC BY 4.0."
     },
     {
       "id": "lp-lettres-2de-francais-seconde-progressions",

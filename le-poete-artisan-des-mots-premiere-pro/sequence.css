@@ -297,6 +297,7 @@ h4.h-step{color:var(--b-deep)}
 .marque .m-k{grid-row:span 2;font:700 20px/1 var(--f-ui);color:#fff;background:var(--b);border-radius:8px;padding:.45rem .5rem;min-width:2.6rem;text-align:center}
 .marque .m-lab{font-weight:700;color:var(--b-deep)}
 .marque .m-min{font-size:.95rem;color:var(--ink)}
+.m-pi .m-k{background:#5A1229}
 .m-co,.m-po{background:#F6F0F2}
 .m-pe .m-k,.m-po .m-k{background:#5A1229}
 .grille .gc{text-align:center;font-size:1.3rem}

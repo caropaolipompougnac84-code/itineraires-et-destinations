@@ -2366,6 +2366,47 @@
       "credit": "Une menuisière au travail. Photo Rein Sikk, 2014, CC BY-SA 3.0, recadrage.",
       "duration": "6 séances de 52 minutes",
       "materials": "Tableau numérique, fiches imprimables, version dys, appareils d'enregistrement"
+    },
+    {
+      "id": "lg-lettres-2de-francais-seconde-progressions",
+      "title": "Lettres · 2de générale et technologique · Le français en Seconde : les progressions de l'année",
+      "summary": "Le parcours de l'année en six séquences, chacune ouverte par un tableau de maître, avec la spirale de Gorse, des leçons de 52 minutes, le calendrier 2026-2027 et la fiche en gros caractères en pdf, docx et odt.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "culture"
+      ],
+      "duration": "Année complète, leçons de 52 minutes",
+      "materials": "Tableau numérique, fiche en gros caractères, pdf, docx, odt",
+      "url": "https://itineraires-destinations.fr/francais-seconde-gt-progressions/",
+      "date": "2026-11-16",
+      "image": "francais-seconde-gt-progressions.jpg",
+      "credit": "Pieter Janssens Elinga, Femme lisant, vers 1668 à 1670, Munich, Alte Pinakothek, domaine public."
+    },
+    {
+      "id": "lp-lettres-2de-francais-seconde-progressions",
+      "title": "Lettres · 2de Bac pro · Le français en Seconde : les progressions de l'année",
+      "summary": "Le parcours de l'année en quatre séquences, chacune ouverte par un tableau de maître, avec la spirale de Gorse, des leçons de 52 minutes, le calendrier 2026-2027 qui place la PFMP et la fiche en gros caractères en pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "travail",
+        "culture"
+      ],
+      "duration": "Année complète, leçons de 52 minutes",
+      "materials": "Tableau numérique, fiche en gros caractères, pdf, docx, odt",
+      "url": "https://itineraires-destinations.fr/francais-seconde-pro-progressions/",
+      "date": "2026-11-16",
+      "image": "francais-seconde-pro-progressions.jpg",
+      "credit": "Jean Siméon Chardin, L'Enfant au toton, 1738, Paris, musée du Louvre, domaine public."
     }
   ]
 }

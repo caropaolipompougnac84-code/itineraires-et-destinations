@@ -2,6 +2,7 @@ Crédits des tableaux (domaine public, via Wikimedia Commons)
 
 Seconde professionnelle
 - Couverture de la progression : assets/pro0-chardin-toton.jpg : Jean Siméon Chardin, L'Enfant au toton, Huile sur toile, 1738, Paris, musée du Louvre. https://commons.wikimedia.org/wiki/File:L%27Enfant_au_toton_-_Jean_Baptiste_Sim%C3%A9on_Chardin_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1705.jpg
+- Image de partage : assets/chardin-enfant-au-toton-partage.jpg : Jean Siméon Chardin, L'Enfant au toton, Huile sur toile, 1738, Paris, musée du Louvre, RF 1705. Domaine public, via Wikimedia Commons (photographie Shonagon, 21 juin 2022, domaine public). https://commons.wikimedia.org/wiki/File:L%27Enfant_au_toton_-_Jean_Baptiste_Sim%C3%A9on_Chardin_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1705.jpg
 - Séquence 1 : assets/pro1-rembrandt-63-ans.jpg : Rembrandt van Rijn, Autoportrait à l'âge de 63 ans, Huile sur toile, 1669, Londres, National Gallery. https://commons.wikimedia.org/wiki/File:Rembrandt,_Self_Portrait_at_the_Age_of_63.jpg
 - Séquence 2 : assets/pro2-hasenclever-lesekabinett.jpg : Johann Peter Hasenclever, Le Cabinet de lecture, Huile sur toile, 1843, Berlin, Alte Nationalgalerie. https://commons.wikimedia.org/wiki/File:Johann_Peter_Hasenclever_-_Das_Lesekabinett_-_Google_Art_ProjectFXD.jpg
 - Séquence 3 : assets/pro3-hals-cavalier.jpg : Frans Hals, Le Cavalier riant, Huile sur toile, 1624, Londres, Wallace Collection. https://commons.wikimedia.org/wiki/File:Frans_Hals_%E2%80%93_The_Laughing_Cavalier.jpg

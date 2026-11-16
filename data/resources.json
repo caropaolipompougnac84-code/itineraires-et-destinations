@@ -2391,11 +2391,11 @@
       "id": "lp-lettres-2de-dire-mon-metier",
       "hubOrder": 5,
       "title": "Lettres · 2de pro · Dire mon métier",
-      "summary": "Se présenter sans tout raconter, lire une fiche Onisep et Germinal, écrire un message qui fait avancer le travail, passer du récit au compte rendu, puis présenter un savoir-faire en trois minutes. Six séances de 52 minutes, toutes filières, langue évaluée à chaque séance, version dys.",
+      "summary": "Séquence de français, Seconde professionnelle, perspective « Dire, écrire, lire le métier ». Six séances de 55 minutes en onglets, spirale de Gorse, versions professeur, élève, dys et élève absent, étude de la langue par paliers, évaluations et flashcards.",
       "section": "lycee-pro",
       "subject": "lettres",
       "level": "2de",
-      "levelLabel": "2de · lycée professionnel",
+      "levelLabel": "2de Bac pro · lycée professionnel",
       "collection": "lp-lettres",
       "themes": [
         "litterature",
@@ -2404,11 +2404,11 @@
         "ecrit",
         "identite"
       ],
-      "url": "https://itineraires-destinations.fr/dire-mon-metier/",
-      "date": "2026-11-15",
-      "image": "dire-mon-metier.jpg",
-      "credit": "Une menuisière au travail. Photo Rein Sikk, 2014, CC BY-SA 3.0, recadrage.",
-      "duration": "6 séances de 52 minutes",
+      "url": "https://itineraires-destinations.fr/dire-mon-metier-seconde-pro/",
+      "date": "2026-11-16",
+      "image": "dire-mon-metier-seconde-pro.jpg",
+      "credit": "Camille Pissarro, La Récolte des pommes à Éragny, 1888, Dallas Museum of Art. Domaine public.",
+      "duration": "6 séances de 55 minutes, minutées sur 52",
       "materials": "Tableau numérique, fiches imprimables, version dys, appareils d'enregistrement"
     },
     {

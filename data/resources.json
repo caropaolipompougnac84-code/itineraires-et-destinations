@@ -182,6 +182,26 @@
       "credit": "Utagawa Kuniyoshi, Kotobuki kōjō (annonce sur scène), estampe. Domaine public."
     },
     {
+      "id": "lg-lettres-2de-devenir-soi-quand-on-est-etranger",
+      "hubOrder": 6,
+      "title": "Lettres · 2de · Devenir soi quand on est étranger",
+      "summary": "Séquence de français, Seconde générale et technologique : Amélie Nothomb, Stupeur et tremblements, et Jules Vallès, L'Enfant. Dix séances de 55 minutes, minutées sur 52 minutes. Page de présentation.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "2de · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/devenir-soi-quand-on-est-etranger/",
+      "date": "2026-11-16",
+      "image": "devenir-soi-quand-on-est-etranger.jpg",
+      "credit": "Claude Monet, La Japonaise (Camille Monet en costume japonais), 1876, Museum of Fine Arts, Boston. Domaine public."
+    },
+    {
       "id": "lp-lettres-2de-devenir-soi-etranger",
       "hubOrder": 1,
       "title": "Lettres · 2de Bac pro · Devenir soi quand on se sent étranger",

@@ -413,6 +413,26 @@
       "credit": "Fernand Léger (1881-1955), Le Mécanicien, 1920. Huile sur toile. National Gallery of Canada, Ottawa. Domaine public. Image via Wikimedia Commons."
     },
     {
+      "id": "lg-lettres-1re-on-ne-badine-pas-avec-l-amour",
+      "hubOrder": 1,
+      "title": "Lettres · 1re · On ne badine pas avec l’amour",
+      "summary": "Séquence de français pour la Première, lycée général et technologique. On ne badine pas avec l’amour, Alfred de Musset, 1834. Six séances de 55 minutes, minutées sur 52 minutes. Parcours « Les jeux du cœur et de la parole ».",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/on-ne-badine-pas-avec-l-amour-premiere/",
+      "date": "2026-11-16",
+      "image": "on-ne-badine-pas-avec-l-amour-premiere.jpg",
+      "credit": "Francesco Hayez, Le Baiser, 1859, huile sur toile, Pinacoteca di Brera, Milan. Domaine public."
+    },
+    {
       "id": "lg-lettres-1re-lancelot-chevalier-charrette",
       "hubOrder": 1,
       "title": "Lettres · 1re · Lancelot ou le Chevalier de la charrette",
@@ -911,6 +931,24 @@
       ],
       "url": "https://itineraires-destinations.fr/who-rules-britain/",
       "date": "2026-11-11"
+    },
+    {
+      "id": "lg-anglais-1re-painting-power",
+      "hubOrder": 1,
+      "title": "Anglais · 1re · Painting Power: Can a Picture Change History?",
+      "summary": "Séquence d’anglais pour la Première, lycée général et technologique, axe Art and Power, B1 vers B2. Six leçons de 55 minutes, minutées sur 52 minutes, avec lecture, écoute, écrit et oral, étude de la langue, évaluations, version dys et version pour l’élève qui ne peut pas venir en classe.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique",
+      "collection": "lg-anglais",
+      "themes": [
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/painting-power-premiere/",
+      "date": "2026-11-16",
+      "image": "painting-power-premiere.jpg",
+      "credit": "Unknown English artist, Elizabeth I (The Armada Portrait), about 1588, oil on panel, Royal Museums Greenwich, Queen’s House, London. Public domain."
     },
     {
       "id": "lg-anglais-1re-whose-land",

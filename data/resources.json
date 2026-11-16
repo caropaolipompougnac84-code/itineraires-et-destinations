@@ -2576,6 +2576,26 @@
       "credit": "Jean Siméon Chardin, L'Enfant au toton, 1738, Paris, musée du Louvre, domaine public."
     },
     {
+      "id": "lp-lettres-1re-dame-aux-camelias",
+      "hubOrder": 1,
+      "title": "Lettres · Première professionnelle · La Dame aux camélias",
+      "summary": "Séquence de français pour la Première bac pro, objet d’étude « Lire et suivre un personnage : itinéraires romanesques », autour de La Dame aux camélias, Alexandre Dumas fils, 1848. Huit séances de 55 minutes, minutées sur 52 minutes, spirale de Gorse, versions professeur, élève, dys et élève absent, étude de la langue par paliers, évaluations.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première professionnelle · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/la-dame-aux-camelias-premiere-pro/",
+      "date": "2026-11-16",
+      "image": "la-dame-aux-camelias-premiere-pro.jpg",
+      "credit": "Giuseppe Tominz (Jožef Tominc), Dame au camélia, vers 1850, huile sur toile, Galerie nationale de Slovénie, Ljubljana. Domaine public."
+    },
+    {
       "id": "lp-lettres-1re-vipere-au-poing",
       "hubOrder": 1,
       "title": "Lettres · Première professionnelle · Vipère au poing",

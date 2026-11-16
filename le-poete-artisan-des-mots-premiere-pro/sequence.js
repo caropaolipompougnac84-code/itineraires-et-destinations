@@ -45,7 +45,7 @@
     if(mode==='eleve'){[].forEach.call(d.querySelectorAll('.panel'),function(p){var on=p.querySelector('.subtab.on');if(on&&on.classList.contains('prof-only')){var el=p.querySelector('.subtab[data-sub="eleve"]');if(el)selectSub(el);}});
       var h=(location.hash||'#'+FIRST).slice(1);var pel=d.getElementById(h);if(pel&&pel.classList.contains('prof-only')){history.replaceState(null,'','#'+FIRST);show(FIRST);}}
     try{localStorage.setItem(MKEY,mode);}catch(x){}}
-  var saved='prof';try{saved=localStorage.getItem(MKEY)||'prof';}catch(x){}
+  var saved='eleve';try{saved=localStorage.getItem(MKEY)||'eleve';}catch(x){}
   setMode(saved);
   var FONTS={arial:'Arial, Helvetica, sans-serif',opendyslexic:'"OpenDyslexic", Arial, sans-serif'};
   function setFont(k){if(!FONTS[k])k='arial';root.style.setProperty('--dys-font',FONTS[k]);

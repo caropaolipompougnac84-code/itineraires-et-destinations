@@ -2556,6 +2556,26 @@
       "credit": "Jean Siméon Chardin, L'Enfant au toton, 1738, Paris, musée du Louvre, domaine public."
     },
     {
+      "id": "lp-lettres-1re-vipere-au-poing",
+      "hubOrder": 1,
+      "title": "Lettres · Première professionnelle · Vipère au poing",
+      "summary": "Séquence de français pour la Première bac pro, objet d’étude « Lire et suivre un personnage : itinéraires romanesques », autour de Vipère au poing, Hervé Bazin, 1948. Huit séances de 55 minutes, minutées sur 52 minutes, spirale de Gorse, versions professeur, élève, dys et élève absent, étude de la langue par paliers, trois évaluations.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première professionnelle · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/vipere-au-poing-premiere-pro/",
+      "date": "2026-11-16",
+      "image": "vipere-au-poing-premiere-pro.jpg",
+      "credit": "Antonio Mancini, Garçon assis (Ragazzo seduto), 1902, huile sur toile, Philadelphia Museum of Art. Domaine public."
+    },
+    {
       "id": "lp-lettres-1re-poete-artisan-des-mots",
       "hubOrder": 1,
       "title": "Lettres · Première professionnelle · Le poète, artisan des mots",

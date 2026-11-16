@@ -1,0 +1,43 @@
+/* Lancelot ou le Chevalier de la charrette : compléments (Élève DYS, Écouter, règle de lecture, météo) */
+@font-face{font-family:"Lexend";src:url("fonts/lexend-latin.woff2") format("woff2");font-weight:300 700;font-display:swap}
+:root{--dys-font:"Lexend",Arial,sans-serif}
+.mode-prof .eleve-only{display:none!important}
+.vers{font-family:"EB Garamond",Georgia,serif;font-size:1.12em;line-height:1.55;padding:.6rem 1rem;border-left:4px solid #7B1E3A;background:#FBF5F7}
+.blk-texte em,.blk-texte p em{font-style:italic}
+.partie{border-left:6px solid #7B1E3A;padding:.6rem 1rem;margin:0 0 1.2rem;background:#FBF5F7}
+.partie .kicker{margin:0;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;color:#7B1E3A}
+.partie-t{font-family:"EB Garamond",Georgia,serif;font-size:1.5rem;margin:.2rem 0}
+.legende{list-style:none;padding:0}.legende li{margin:.2rem 0}
+.prof-box{border-left:6px solid #7B1E3A}
+.pill-arret{display:inline-block;font-weight:700}
+.spirale-fig img{width:100%;height:auto;max-width:640px;display:block;margin:0 auto}
+.spirale-fig figcaption{text-align:center;font-size:.9rem}
+/* Écouter : visible dans la version dys et en mode Élève DYS */
+.btn-ecouter{display:none;margin:.2rem 0 .6rem;padding:.45rem .9rem;border-radius:999px;border:2px solid #7B1E3A;background:#fff;color:#7B1E3A;font-weight:700;font-size:1rem;cursor:pointer}
+.sub-dys .btn-ecouter,body.dys-on .btn-ecouter{display:inline-block}
+.btn-ecouter[aria-pressed="true"]{background:#7B1E3A;color:#fff}
+
+/* Mode Élève DYS : toute la page */
+body.dys-on .stp-main,body.dys-on .stp-main p,body.dys-on .stp-main li,body.dys-on .stp-main td,body.dys-on .stp-main th,body.dys-on .stp-main legend,body.dys-on .stp-main label,body.dys-on .stp-main h2,body.dys-on .stp-main h3,body.dys-on .stp-main h4{font-family:var(--dys-font)!important;letter-spacing:.03em;word-spacing:.12em}
+body.dys-on .stp-main p,body.dys-on .stp-main li{line-height:1.8;font-size:1.12rem}
+body.dys-on .stp-main em,body.dys-on .stp-main i,.dys-zone em,.dys-zone i{font-style:normal!important}
+.dys-zone p,.dys-zone li{font-style:normal}
+/* lignes alternées pour ne pas sauter de ligne */
+.dys-zone .blk-texte p,body.dys-on .blk-texte p{background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 1.8em,#F4ECDF 1.8em,#F4ECDF 3.6em);line-height:1.8em!important;background-origin:content-box}
+.dys-zone .vers,body.dys-on .vers{border-left:none;padding:.2rem 0;font-family:var(--dys-font)!important}
+/* Règle de lecture */
+.regle-lecture{position:fixed;left:0;right:0;height:2.6em;pointer-events:none;z-index:60;border-top:3px solid #7B1E3A;border-bottom:3px solid #7B1E3A;background:rgba(255,236,170,.28);box-shadow:0 0 0 100vmax rgba(0,0,0,.18)}
+.btn-regle[aria-pressed="true"]{background:#7B1E3A;color:#fff}
+/* Météo */
+.blk-meteo{border:2px solid #E7D7DD;border-radius:12px;padding:.8rem 1rem;margin:1.4rem 0;background:#FFFDF8}
+.m-q{border:none;padding:0;margin:.8rem 0}
+.m-q legend{font-weight:700;padding:0;margin-bottom:.3rem}
+.m-opt{display:inline-flex;align-items:center;gap:.35rem;margin:.2rem .9rem .2rem 0;min-height:44px}
+.m-opt input{width:22px;height:22px}
+.m-msg{background:#FBF5F7;border-left:5px solid #7B1E3A;padding:.6rem .8rem}
+.blk-point .grille td.gc input{width:22px;height:22px}
+.diag li{margin:.5rem 0}
+@media print{.btn-ecouter,.dys-mode-btn,.regle-lecture{display:none!important}}
+.couv-label{font-family:"EB Garamond",Georgia,serif;font-variant:small-caps;letter-spacing:.08em;color:#7B1E3A;margin:.2rem 0 .4rem}
+.couverture .blk-musee>p{max-width:46rem;margin:.8rem auto 0;font-size:1.1rem}
+.couv-peinture .cadre img{max-width:560px;margin:0 auto;display:block}

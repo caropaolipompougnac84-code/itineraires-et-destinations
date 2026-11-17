@@ -64,3 +64,11 @@ table.minutage td:first-child{white-space:nowrap;font-weight:700;color:var(--b)}
 .tab.tab-en.on{background:var(--navy);border-color:var(--navy)}.tab.tab-en.on a{color:#fff!important}
 .fig-spirale a{display:block}
 .codes{display:inline-block;margin-left:.3rem;padding:0 .5rem;border:1px solid var(--b);border-radius:999px;color:var(--b);font-weight:700;white-space:nowrap}
+/* Belle page de présentation : le tableau en grand, sur toute la largeur, dès l'ouverture */
+html,body{overflow-x:clip}
+figure.peinture.belle-page{width:100vw!important;max-width:none!important;margin:0 0 1.2rem calc(50% - 50vw)!important;padding:0!important;background:#0E1626}
+.belle-page .cadre{border:0!important;box-shadow:none!important;margin:0;padding:0;max-width:none;background:none}
+.belle-page .cadre img{display:block;width:100%;height:auto;max-height:none!important;max-width:none}
+.belle-page figcaption{max-width:62rem;margin:0 auto;padding:.6rem 1rem .8rem;color:#F2EEE6;text-align:left;background:#0E1626}
+.belle-page figcaption a{color:#F7D774}
+@media print{.belle-page{width:auto;margin:0 0 1rem}}

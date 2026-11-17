@@ -92,8 +92,9 @@ body.dys main{max-width:720px}
 .box-check li{margin:.35em 0}
 .gap{display:inline-block;min-width:4.5em;border-bottom:1.5px solid var(--ink);margin:0 .2em}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="english-look">
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -102,6 +103,29 @@ body.dys main{max-width:720px}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/">Home</a>
 <a href="/licence-to-learn/s1/">L1</a>
@@ -136,17 +160,17 @@ body.dys main{max-width:720px}
 
 <h2>Lesson 1. Past simple, present perfect, possibility and comparison</h2>
 <p>Use the past simple with a finished past date. Use the present perfect to connect earlier reporting with an unfinished current discussion. Use <i>might</i> or <i>could</i> for possibility, not certainty.</p>
-<div class="ans"><h3>Examples</h3>
+<div class="ans prof-only"><h3>Examples</h3>
 <p>Lowden played a fighter pilot. Several actors have been linked to Bond during the continuing casting discussion. Another actor might get the role. A confirmed announcement is more reliable than a rumour.</p></div>
 
 <h2>Lesson 2. Present continuous, past simple and linkers</h2>
 <p>Present forms can describe the film as a work or an image on screen. Past forms can retell events. Choose one viewpoint and remain consistent. Link ideas with <i>because</i>, <i>although</i> or <i>however</i>.</p>
-<div class="ans"><h3>Examples</h3>
+<div class="ans prof-only"><h3>Examples</h3>
 <p>Bond is speaking to M. Bond returned. Although M is under pressure, she uses humour. The trailer gives clues. However, it does not explain everything.</p></div>
 
 <h2>Lesson 3. Present simple, questions, whereas and who</h2>
 <p>MI5 protects UK national security, whereas MI6 focuses on foreign intelligence. An agent is a person who provides information or assistance.</p>
-<div class="ans"><h3>Examples</h3>
+<div class="ans prof-only"><h3>Examples</h3>
 <p>What does MI5 protect? Where do officers work? Does an agent provide information?</p></div>
 
 <h2>Lesson 4. Comparatives, too/enough and qualified claims</h2>

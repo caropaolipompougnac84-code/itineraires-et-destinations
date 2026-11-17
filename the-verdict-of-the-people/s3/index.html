@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/">Home</a>
 <a href="/the-verdict-of-the-people/s1/">L1</a>
@@ -150,28 +174,28 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 3A</span>
 <h3>Compare</h3>
 <div class="tbl-scroll"><table class="grid"><thead><tr><th>Feature</th><th>Puerto Rico</th><th>Washington, D.C.</th></tr></thead><tbody><tr><td>State, territory or federal district?</td><td class="blank"></td><td class="blank"></td></tr><tr><td>Senators?</td><td class="blank"></td><td class="blank"></td></tr><tr><td>House representation?</td><td class="blank"></td><td class="blank"></td></tr><tr><td>Presidential electors?</td><td class="blank"></td><td class="blank"></td></tr></tbody></table></div>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <div class="tbl-scroll"><table class="grid"><thead><tr><th>Feature</th><th>Puerto Rico</th><th>Washington, D.C.</th></tr></thead><tbody><tr><td>Status</td><td>Territory</td><td>Federal district</td></tr><tr><td>Senators</td><td>None</td><td>None</td></tr><tr><td>House representation</td><td>Resident Commissioner</td><td>Delegate</td></tr><tr><td>Presidential electors</td><td>None</td><td>Three</td></tr></tbody></table></div>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 3B</span>
 <h3>Contrast and concession: choose, then explain</h3>
 <p>Complete with <i>although</i>, <i>whereas</i> or <i>despite</i>.</p><ol><li>Washington, D.C. has presidential electors, <span class="gap"></span> Puerto Rico does not.</li><li><span class="gap"></span> the Resident Commissioner has important responsibilities, the office has limits.</li><li><span class="gap"></span> having House representation, neither place has senators.</li><li>Rewrite with <i>despite</i>: “Although the two places have representatives in the House, they have no senators.”</li></ol><p>Then answer: which sentence compares two arrangements? Which two introduce a contrast between an expectation and a limit?</p>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>whereas.</li><li>Although.</li><li>Despite.</li><li>“Despite having representatives in the House, the two places have no senators.”</li></ol><p>Sentence 1 compares two arrangements. Sentences 2 and 3 introduce a concession.</p>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 3C</span>
 <h3>Repair the explanation (pairs, aloud)</h3>
 <ol><li>Puerto Rico has no representation of any kind in Congress.</li><li>The Resident Commissioner cannot vote anywhere in Congress.</li><li>Anyone of Puerto Rican origin is barred from presidential voting.</li><li>Washington, D.C. and Puerto Rico have identical electoral arrangements.</li></ol>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>It has a Resident Commissioner.</li><li>The Resident Commissioner can vote in committees but not on final passage in the full House.</li><li>The broad claim confuses identity with residence and eligibility.</li><li>Washington, D.C. has presidential electors; Puerto Rico does not.</li></ol>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 3D</span>
 <h3>A balanced paragraph</h3>
 <p>Question: <b>What do Puerto Rico and Washington, D.C. show about different forms of federal representation?</b></p><p><b>Common B1+ route:</b> 110 to 140 words, two accurate comparisons, two connectors (one comparison, one concession), a careful conclusion.</p><p><b>Towards B2:</b> explain why citizenship, residence and representation should not be treated as interchangeable ideas.</p>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <p>Possible answer: “Citizenship does not always lead to the same form of federal representation. Puerto Rico and Washington, D.C. both lack senators, although both have representation in the House. Puerto Rico elects a Resident Commissioner who can take part in committee work but cannot vote on final passage in the full House. Washington, D.C. has three presidential electors, whereas Puerto Rico has none. However, it would be misleading to describe this only as a difference between groups of people. Residence matters: eligible US citizens from Puerto Rico living in a state or in Washington, D.C. can vote there. These examples show that citizenship and electoral arrangements must be kept apart.” (110 words)</p>
 </div>
 </section>
@@ -179,7 +203,7 @@ body.dys p,body.dys li{max-width:38em}
 <div class="tbl-scroll"><table class="grid"><thead><tr><th>Item</th><th>Meaning</th><th>Useful chunk</th></tr></thead><tbody><tr><td>citizen</td><td>a legal member of a country</td><td>a US citizen</td></tr><tr><td>resident</td><td>a person who lives in a place</td><td>residents of Puerto Rico</td></tr><tr><td>territory</td><td>an area that belongs to a country but is not a state</td><td>a US territory</td></tr><tr><td>representative</td><td>a person who speaks or acts for a group</td><td>elect a representative</td></tr><tr><td>delegate</td><td>a representative with a particular role in the House</td><td>a House delegate</td></tr><tr><td>final passage</td><td>the final vote to approve a bill</td><td>vote on final passage</td></tr><tr><td>statehood</td><td>the status of being a state</td><td>debate statehood</td></tr><tr><td>have a say</td><td>take part in a decision</td><td>have a say in legislation</td></tr></tbody></table></div>
 <p><b>Productive core</b> (use these in your own sentences): citizen, resident, territory, representative, whereas, although.</p><p><b>Recognition or extension</b> (understand them; use them if useful): Resident Commissioner, delegate, presidential elector, final passage, statehood (for the extension discussion).</p>
 <p><b>Quick exercise.</b> Explain the difference between “has no representative” and “has no vote on final passage”.</p>
-<div class="ans"><h4>Answer key</h4><p>The first denies representation altogether; the second names a specific limit on the powers of an existing representative.</p></div>
+<div class="ans prof-only"><h4>Answer key</h4><p>The first denies representation altogether; the second names a specific limit on the powers of an existing representative.</p></div>
 </section>
 <section class="record"><span class="tag">Written record</span><p>Puerto Rico and Washington, D.C. have federal representation, but not the same arrangements as states. Neither has senators. Their presidential-elector arrangements differ. We must separate citizenship, residence and the powers attached to a representative’s office.</p></section>
 <section class="exit"><span class="tag">Exit ticket</span><p>Complete: “Citizenship and residence are not the same because…”</p></section>

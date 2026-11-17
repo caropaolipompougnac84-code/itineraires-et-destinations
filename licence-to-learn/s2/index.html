@@ -92,8 +92,9 @@ body.dys main{max-width:720px}
 .box-check li{margin:.35em 0}
 .gap{display:inline-block;min-width:4.5em;border-bottom:1.5px solid var(--ink);margin:0 .2em}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -102,6 +103,29 @@ body.dys main{max-width:720px}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/">Home</a>
 <a href="/licence-to-learn/s1/">L1</a>
@@ -172,7 +196,7 @@ body.dys main{max-width:720px}
 </ol>
 <p>With:</p>
 <p>a. danger &nbsp; b. believed to have died &nbsp; c. to come back &nbsp; d. a violent action against someone or something &nbsp; e. commitment to a person or organisation</p>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>b</li><li>d</li><li>c</li><li>e</li><li>a</li></ol></div>
 
 <h2>Prediction grid</h2>
@@ -191,7 +215,7 @@ body.dys main{max-width:720px}
 <li>Bond and MI6 face a serious crisis.</li>
 <li>Bond is attending an ordinary job interview.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>B.</p></div>
 
 <h3><span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Second listening: retrieve meaning</h3>
@@ -241,7 +265,7 @@ body.dys main{max-width:720px}
 <li>The characters <span class="gap"></span> a crisis. (discuss)</li>
 <li>The trailer <span class="gap"></span> tension. (create)</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>is speaking</li><li>are discussing</li><li>is creating</li></ol></div>
 
 <h3>Exercise 2. From scene description to plot account</h3>
@@ -251,7 +275,7 @@ body.dys main{max-width:720px}
 <li>M reacts.</li>
 <li>The service faces a threat.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>Bond returned.</li><li>M reacted.</li><li>The service faced a threat.</li></ol><p>Present forms describe the film as a work or an image on screen. Past forms can retell events. Choose one viewpoint and remain consistent.</p></div>
 
 <h3>Exercise 3. Link the ideas</h3>
@@ -261,7 +285,7 @@ body.dys main{max-width:720px}
 <li><span class="gap"></span> M is under pressure, she uses humour.</li>
 <li>The trailer gives clues. <span class="gap"></span>, it does not explain everything.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>because</li><li>Although</li><li>However</li></ol></div>
 
 <h2><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Oral restitution</h2>
@@ -301,7 +325,7 @@ body.dys main{max-width:720px}
 <p>The trailer creates tension through dialogue, images and <span class="gap"></span>.</p>
 <p>We must distinguish what we hear from what we <span class="gap"></span>.</p>
 </div>
-<div class="ans"><h3>Possible answers</h3>
+<div class="ans prof-only"><h3>Possible answers</h3>
 <p>Possible answers: Skyfall; crisis; familiarity; tension; sound; infer.</p></div>
 
 </main>

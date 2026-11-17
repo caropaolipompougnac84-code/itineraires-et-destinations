@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/dys/">Start here</a>
 <a href="/the-verdict-of-the-people/dys/s1/">L1</a>
@@ -137,37 +161,37 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise S1</span><h3>Choose</h3>
 <div class="worked"><b>Worked example.</b> “I will improve the bus service” is a promise.</div>
 <p><b>Now you.</b><br>“It has already happened.”<br>A. Yes.<br>B. The text does not say that.</p>
-<div class="ans"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
 <div class="worked"><b>Worked example.</b> “A promise is not a finished result.”</div>
 <p><b>Now you.</b><br>Complete: “We can ask: How will you <span class="gap"></span>?”</p>
-<div class="ans"><h4>Self-check</h4><p>do it.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Ask a question</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>do it.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Ask a question</h3>
 <div class="worked"><b>Worked example.</b> “How much will it cost?”</div>
 <p><b>Now you.</b><br>Write or say one question about the promise.</p>
-<div class="ans"><h4>Self-check</h4><p>Accept: How will you do it? How much will it cost? When will it happen?</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Accept: How will you do it? How much will it cost? When will it happen?</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t4c">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t4c"><p>A fictional candidate promises a better bus service.</p><p>The message sounds positive.</p><p>However, it gives no price and no timetable.</p><p>A careful reader asks for more information.</p><p>A promise may be useful, but it is not evidence that the plan will succeed.</p></div></div>
 <section class="card"><span class="tag">Exercise C1</span><h3>Find missing information</h3>
 <div class="worked"><b>Worked example.</b> Missing information: the price.</div>
 <p><b>Now you.</b><br>Name one other missing detail.</p>
-<div class="ans"><h4>Self-check</h4><p>The timetable.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Choose</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>The timetable.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Choose</h3>
 <div class="worked"><b>Worked example.</b> “Positive language can persuade.” True.</div>
 <p><b>Now you.</b><br>Choose the accurate statement.<br>A. A positive message proves success.<br>B. A positive message can still need evidence.</p>
-<div class="ans"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Write a reply</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Write a reply</h3>
 <div class="worked"><b>Worked example.</b> “The proposal sounds useful. What will it cost?”</div>
 <p><b>Now you.</b><br>Write two sentences: “The proposal sounds <span class="gap"></span>. How <span class="gap"></span>?”</p>
-<div class="ans"><h4>Self-check</h4><p>Your answer should recognise the proposal and ask a relevant question. It must not claim that the plan has already succeeded.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Your answer should recognise the proposal and ask a relevant question. It must not claim that the plan has already succeeded.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t4p">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t4p"><p>A fictional campaign message promises a better evening bus service.</p><p>It gives no budget or timetable.</p><p>The proposal may be useful.</p><p>However, the message does not show that the plan is affordable or effective.</p><p>A reporter should separate the candidate’s promise from an achieved result.</p><p>Attribution helps the audience understand who made the claim.</p></div></div>
 <section class="card"><span class="tag">Exercise P1</span><h3>Report</h3>
 <div class="worked"><b>Worked example.</b> “I support the proposal.” becomes “The candidate said that they supported the proposal.”</div>
 <p><b>Now you.</b><br>Report: “We will publish the cost.” Begin: “The campaigners said…”</p>
-<div class="ans"><h4>Self-check</h4><p>“The campaigners said that they would publish the cost.”</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Correct</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>“The campaigners said that they would publish the cost.”</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Correct</h3>
 <div class="worked"><b>Worked example.</b> “The candidate promised success” is not the same as “The plan succeeded.”</div>
 <p><b>Now you.</b><br>Correct: “The candidate promised a better service, so the service has improved.”</p>
-<div class="ans"><h4>Self-check</h4><p>“The candidate promised a better service, but the promise does not show that an improvement has happened.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write a short fact-check</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>“The candidate promised a better service, but the promise does not show that an improvement has happened.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write a short fact-check</h3>
 <div class="worked"><b>Worked example.</b> Structure: “The message claims… It does not provide… We need…”</div>
 <p><b>Now you.</b><br>Write 60 to 80 words.</p>
-<div class="ans"><h4>Self-check</h4><p>Include the promise, one missing detail and one relevant question. Do not invent costs or outcomes.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Include the promise, one missing detail and one relevant question. Do not invent costs or outcomes.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
 <p>CAP apprentice: use Route C. Bac pro apprentice: use Route P. Do Exercises 1 and 2 of your route, then do this task instead of Exercise 3. Keep the same written record and homework.</p>
-<section class="card"><span class="tag">CFA task</span><h3>Check a service promise</h3><div class="worked"><b>Worked example.</b> Invented workplace message: “Our new delivery service will solve every problem.” Question: “What delivery time do you promise?”</div><p><b>Now you.</b><br>Write two questions before recommending the service.</p><div class="ans"><h4>Self-check</h4><p>Good questions are about price, timing, coverage, evidence or conditions. No invented company information is needed.</p></div></section></section>
+<section class="card"><span class="tag">CFA task</span><h3>Check a service promise</h3><div class="worked"><b>Worked example.</b> Invented workplace message: “Our new delivery service will solve every problem.” Question: “What delivery time do you promise?”</div><p><b>Now you.</b><br>Write two questions before recommending the service.</p><div class="ans prof-only"><h4>Self-check</h4><p>Good questions are about price, timing, coverage, evidence or conditions. No invented company information is needed.</p></div></section></section>
 
 <section class="record"><span class="tag">Written record</span><p><b>S:</b> “A promise is not a result.”</p><p><b>C:</b> “A positive message may still need evidence.”</p><p><b>P:</b> “A reporter must separate promises, evidence and achieved results.”</p></section>
 <section class="card"><p><b>Speaking frame.</b> “The message promises <span class="gap"></span>. I would ask <span class="gap"></span>.”</p><p><b>Emergency sentence.</b> “We need evidence before claiming success.”</p></section>

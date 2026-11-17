@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/dys/">Start here</a>
 <a class="on" href="/the-verdict-of-the-people/dys/s1/">L1</a>
@@ -137,37 +161,37 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise S1</span><h3>Find information</h3>
 <div class="worked"><b>Worked example.</b> Question: What does the picture show? Answer: A crowd.</div>
 <p><b>Now you.</b><br>1. Who painted the picture?<br>2. What results are the people waiting for?</p>
-<div class="ans"><h4>Self-check</h4><p>1. George Caleb Bingham.<br>2. Election results.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. George Caleb Bingham.<br>2. Election results.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
 <div class="worked"><b>Worked example.</b> “The picture shows a crowd.”</div>
 <p><b>Now you.</b><br>Use: happy, unhappy.<br>1. Some people look <span class="gap"></span>.<br>2. Other people look <span class="gap"></span>.</p>
-<div class="ans"><h4>Self-check</h4><p>1. happy.<br>2. unhappy.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Write and speak</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. happy.<br>2. unhappy.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Write and speak</h3>
 <div class="worked"><b>Worked example.</b> “This is a painting. It shows a crowd.”</div>
 <p><b>Now you.</b><br>Complete: “This is a painting by <span class="gap"></span>. It shows <span class="gap"></span>.” Say your answer aloud.</p>
-<div class="ans"><h4>Self-check</h4><p>“This is a painting by George Caleb Bingham. It shows a crowd.”</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>“This is a painting by George Caleb Bingham. It shows a crowd.”</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t1c">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t1c"><p>Bingham painted a crowd waiting for election results.</p><p>People react in different ways.</p><p>Some look pleased.</p><p>Others look disappointed.</p><p>The painting can help us ask questions about democracy.</p><p>However, a painting does not tell us what every person thinks.</p></div></div>
 <section class="card"><span class="tag">Exercise C1</span><h3>True or false</h3>
 <div class="worked"><b>Worked example.</b> “The people are waiting for a football score.” False. They are waiting for election results.</div>
 <p><b>Now you.</b><br>1. Everyone reacts in the same way.<br>2. The painting shows an election event.<br>3. We know exactly what every person thinks.</p>
-<div class="ans"><h4>Self-check</h4><p>1. False. The reactions differ.<br>2. True.<br>3. False.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Fact or possible meaning?</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. False. The reactions differ.<br>2. True.<br>3. False.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Fact or possible meaning?</h3>
 <div class="worked"><b>Worked example.</b> “The picture contains a crowd.” This describes the picture.</div>
 <p><b>Now you.</b><br>1. “Some figures look disappointed.”<br>2. “The picture may suggest that elections divide opinion.”</p>
-<div class="ans"><h4>Self-check</h4><p>1. A description.<br>2. A possible interpretation.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Write and speak</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. A description.<br>2. A possible interpretation.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Write and speak</h3>
 <div class="worked"><b>Worked example.</b> “The painting shows a crowd. Different reactions make the event look lively.”</div>
 <p><b>Now you.</b><br>Write three sentences with: The painting shows… / Some people… / It may suggest…</p>
-<div class="ans"><h4>Self-check</h4><p>Possible answer: “The painting shows an election event. Some people look pleased. It may suggest that an election creates different reactions.” Other accurate answers are accepted.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Possible answer: “The painting shows an election event. Some people look pleased. It may suggest that an election creates different reactions.” Other accurate answers are accepted.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t1p">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t1p"><p>Bingham represents an election result as a public event.</p><p>The crowd does not react as one group.</p><p>Different expressions suggest excitement, disappointment or uncertainty.</p><p>The painting may celebrate participation.</p><p>It also raises a question about exclusion.</p><p>An image can help us interpret the past.</p><p>However, we need context before making claims about people’s rights or intentions.</p></div></div>
 <section class="card"><span class="tag">Exercise P1</span><h3>Identify the main point</h3>
 <div class="worked"><b>Worked example.</b> “The painting is useful only because it is old.” This is not the main point of the text.</div>
 <p><b>Now you.</b><br>Choose the best answer.<br>A. The painting gives complete information about every person.<br>B. The painting allows interpretation, but context is necessary.<br>C. Everyone agrees about the election.</p>
-<div class="ans"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Qualify</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Qualify</h3>
 <div class="worked"><b>Worked example.</b> “Every person is happy.” Improved: “Some people appear happy.”</div>
 <p><b>Now you.</b><br>Improve:<br>1. “The painter definitely supports everything in the scene.”<br>2. “The image tells us exactly what everyone thinks.”</p>
-<div class="ans"><h4>Self-check</h4><p>Possible answers:<br>1. “The painter may be celebrating participation.”<br>2. “The image suggests different reactions, but it does not show every person’s thoughts.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Explain</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Possible answers:<br>1. “The painter may be celebrating participation.”<br>2. “The image suggests different reactions, but it does not show every person’s thoughts.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Explain</h3>
 <div class="worked"><b>Worked example.</b> “A painting is useful evidence, but it needs interpretation.”</div>
 <p><b>Now you.</b><br>Write 50 to 70 words explaining that idea. Include <i>however</i>.</p>
-<div class="ans"><h4>Self-check</h4><p>Your answer should mention one feature of the painting, explain one possible meaning and name one limit.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Your answer should mention one feature of the painting, explain one possible meaning and name one limit.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
 <p>CAP apprentice: use Route C. Bac pro apprentice: use Route P. Do Exercises 1 and 2 of your route, then do this task instead of Exercise 3. Keep the same written record and homework.</p>
-<section class="card"><span class="tag">CFA task</span><h3>Describe without guessing</h3><div class="worked"><b>Worked example.</b> “The visitor looks at the painting.” Not: “The visitor hates the painting.”</div><p><b>Now you.</b><br>Write one description and one cautious interpretation of the election painting. Starter: “I can see <span class="gap"></span>. This may suggest <span class="gap"></span>.”</p><div class="ans"><h4>Self-check</h4><p>The description must be supported by the text. The interpretation must be labelled as possible (may, might).</p></div></section></section>
+<section class="card"><span class="tag">CFA task</span><h3>Describe without guessing</h3><div class="worked"><b>Worked example.</b> “The visitor looks at the painting.” Not: “The visitor hates the painting.”</div><p><b>Now you.</b><br>Write one description and one cautious interpretation of the election painting. Starter: “I can see <span class="gap"></span>. This may suggest <span class="gap"></span>.”</p><div class="ans prof-only"><h4>Self-check</h4><p>The description must be supported by the text. The interpretation must be labelled as possible (may, might).</p></div></section></section>
 
 <section class="record"><span class="tag">Written record</span><p><b>S:</b> “Bingham painted a crowd waiting for election results.”</p><p><b>C:</b> “The painting shows different reactions to an election result.”</p><p><b>P:</b> “The painting supports interpretation, but historical context is necessary.”</p></section>
 <section class="card"><p><b>Speaking frame.</b> “The painting shows <span class="gap"></span>. It may suggest <span class="gap"></span>.”</p><p><b>Emergency sentence.</b> “The painting shows different reactions to an election.”</p></section>

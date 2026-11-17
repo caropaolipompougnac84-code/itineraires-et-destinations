@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/the-capital-trap/">The Capital Trap</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-capital-trap/dys/">Home</a>
 <a href="/the-capital-trap/dys/s1/">L1</a>
@@ -151,7 +175,7 @@ body.dys main{max-width:720px}
 <figure><img src="/the-capital-trap/img/niagara.jpg" alt="Niagara Falls, a wide curtain of water seen from the United States side." loading="lazy" width="1400"><figcaption>Niagara Falls are on the border between New York State and Canada. Water, once again, explains a famous place. <span class="credit">Nandaro, Wikimedia Commons, CC BY-SA 3.0.</span></figcaption></figure>
 <figure><img src="/the-capital-trap/img/mississippi.jpg" alt="The wide Mississippi River seen from the levee at Algiers, New Orleans, with grass and a service road in the foreground." loading="lazy" width="1400"><figcaption>This is the Mississippi at New Orleans, near the mouth of the river, just before it flows into the Gulf of Mexico. <span class="credit">Infrogmation, Wikimedia Commons, CC BY-SA 4.0.</span></figcaption></figure>
 </div>
-<div class="ans"><p class="tag">Model sentence</p>
+<div class="ans prof-only"><p class="tag">Model sentence</p>
 <p>It’s the Rio Grande. It’s in the south, between Texas and Mexico.</p></div>
 
 <h2>Expanding your vocabulary · 16 min</h2>
@@ -183,7 +207,7 @@ body.dys main{max-width:720px}
 <li>Hawaii is a group of ______ in the Pacific Ocean.</li>
 <li>Denver is ______, far from the coast.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>1. flows · 2. borders · 3. separated · 4. between · 5. islands · 6. inland</p></div>
 
 <h3>Exercise 2. <em>In the north of</em> or <em>north of</em>?</h3>
@@ -193,7 +217,7 @@ body.dys main{max-width:720px}
 <li>Mexico is ______ Texas.</li>
 <li>Miami is ______ Florida.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>1. north of · 2. in the north of · 3. south of · 4. in the south of</p></div>
 
 <h2>Map search · 10 min</h2>

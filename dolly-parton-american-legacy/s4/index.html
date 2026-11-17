@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,11 +250,34 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/country-music-hall-of-fame-exterior.jpg" alt="The Country Music Hall of Fame in Nashville, with its lawn and tower, on a sunny day." width="1600" height="1067"><figcaption>Country Music Hall of Fame, Nashville, 2022. Photo: Antony-22. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><h1>Lesson 4. 9 to 5: working women</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
 <p><strong>Debatable question:</strong> Can a pop song change the way people see work?<br />
 <strong>By the end of this lesson, I can:</strong> describe a working day, say what is fair and unfair at work, explain rules and give advice.</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -315,7 +339,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>Make it polite: <em>Give me the wig.</em> 2. Complete: <em>... I add more volume?</em> (offer) 3. Give one compliment.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Could you give me the wig, please? · 2 Shall · 3 I love the way it shines. / You look fabulous!</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Could you give me the wig, please? · 2 Shall · 3 I love the way it shines. / You look fabulous!</li>
 </ol>
 <h2>Step 2. The question of the day</h2>
 <p>Ask: Name a song about work, school or money. Do songs change anything, or are they just entertainment?</p></details>
@@ -326,16 +350,16 @@
 <p>Dolly wrote the song during the shooting. She used her long acrylic nails to imitate the sound of a typewriter. The song reached number one in the pop and country charts, was nominated for an Oscar (Best Original Song) and won two Grammy Awards.</p>
 <p><strong>Reading task.</strong> True or false? Justify.<br />
 1. Dolly played the boss. 2. The boss is fair. 3. The song won an Oscar. 4. Dolly used her nails as an instrument.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 False: she played Doralee, a secretary. 2 False: he steals their ideas and refuses a promotion. 3 False: it was nominated for an Oscar; it won two Grammys. 4 True: she imitated the sound of a typewriter.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 False: she played Doralee, a secretary. 2 False: he steals their ideas and refuses a promotion. 3 False: it was nominated for an Oscar; it won two Grammys. 4 True: she imitated the sound of a typewriter.</p></details>
 <h3><span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Video. 9 to 5 (Official Video)</h3>
 <p><strong>Watch or listen:</strong> Dolly Parton, <em>9 To 5</em> (Official Video), Dolly Parton channel: <a href="https://www.youtube.com/watch?v=UbxUSsFXYo4">https://www.youtube.com/watch?v=UbxUSsFXYo4</a><br />
 <strong>Play from 0:00 to 2:34</strong> (the whole clip). Watch twice.</p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/UbxUSsFXYo4" title="YouTube video UbxUSsFXYo4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><p class="video-link">Exact link, to keep unchanged: <a href="https://www.youtube.com/watch?v=UbxUSsFXYo4">https://www.youtube.com/watch?v=UbxUSsFXYo4</a></p></div>
 <p><strong>Task 1 (first viewing, 0:00 to 0:33).</strong> Tick the verbs you hear: <em>tumble, stumble, pour, yawn, stretch, cook, jump, drive</em>.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> tumble, stumble, pour, yawn, stretch, jump. Not cook, not drive.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> tumble, stumble, pour, yawn, stretch, jump. Not cook, not drive.</p></details>
 <p><strong>Task 2 (second viewing, 0:33 to 1:25).</strong> Note three complaints of the worker.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> she is barely getting by (not enough money); they never give her credit; she deserves a promotion; the boss seems to be out to get her.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> she is barely getting by (not enough money); they never give her credit; she deserves a promotion; the boss seems to be out to get her.</p></details>
 <p><strong>Task 3 (1:25 to 2:34).</strong> What changes in the last part?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> she says “the tide’s gonna turn”: things will change; workers are “in the same boat” and can act together.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> she says “the tide’s gonna turn”: things will change; workers are “in the same boat” and can act together.</p></details>
 <p>(Teacher’s note: lyrics are protected by copyright. Quote one line at most; never hand out the full lyrics.)</p>
 <h2>Step 4. Expanding your vocabulary</h2>
 <h3>A. Work and rights</h3>
@@ -434,13 +458,13 @@
 </table>
 <h3>Exercises on vocabulary</h3>
 <p><strong>Exercise D1. Fair or unfair?</strong> 1 equal pay · 2 unpaid overtime · 3 a boss who steals ideas · 4 a promotion for good work · 5 harassment</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> fair: 1, 4 · unfair: 2, 3, 5.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> fair: 1, 4 · unfair: 2, 3, 5.</p></details>
 <p><strong>Exercise D2. Fill in the gaps:</strong> credit · shift · overtime · union · colleague<br />
 I work the night (1) <strong><em>_</em>_. Last week I did ten hours of (2) </strong><strong><em>_, but they were not paid. My (3) </em></strong><strong><em> told me to contact the (4) </em></strong><strong><em>. I also want to get (5) </em></strong>___ for my ideas.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 shift · 2 overtime · 3 colleague · 4 union · 5 credit.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 shift · 2 overtime · 3 colleague · 4 union · 5 credit.</p></details>
 <p><strong>Exercise D3. Reformulate</strong> with <em>Moreover</em> or <em>To sum up</em>.<br />
 1. The boss is rude. He steals ideas. → 2. Women are underpaid, harassed and never promoted: the office is unfair. →</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The boss is rude. Moreover, he steals ideas. 2 Women are underpaid, harassed and never promoted. To sum up, the office is unfair.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The boss is rude. Moreover, he steals ideas. 2 Women are underpaid, harassed and never promoted. To sum up, the office is unfair.</p></details>
 <h3>Flashcards</h3>
 <table>
 <thead>
@@ -511,17 +535,17 @@ I work the night (1) <strong><em>_</em>_. Last week I did ten hours of (2) </str
 <h2>Step 6. Exercises</h2>
 <p><strong>Exercise 1. Where does the adverb go?</strong><br />
 1. Doralee arrives on time. (always) 2. The boss says thank you. (never) 3. Violet is tired. (often) 4. They work late. (sometimes)</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Doralee always arrives on time. 2 The boss never says thank you. 3 Violet is often tired. 4 They sometimes work late.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Doralee always arrives on time. 2 The boss never says thank you. 3 Violet is often tired. 4 They sometimes work late.</p></details>
 <p><strong>Exercise 2. Rules at work:</strong> have to · don’t have to · mustn’t · should<br />
 1. You ... wear safety shoes in a workshop. 2. A boss ... steal his employees’ ideas. 3. You ... come in early, but it is appreciated. 4. If you have a problem, you ... talk to your tutor.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 have to · 2 mustn’t · 3 don’t have to · 4 should.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 have to · 2 mustn’t · 3 don’t have to · 4 should.</p></details>
 <p><strong>Exercise 3. Match the situation and the rule.</strong><br />
 1. Using your phone near a machine · 2. Wearing a uniform in a hotel · 3. Working on your day off · 4. Feeling stressed<br />
 a. You should talk to your manager. b. You don’t have to. c. You mustn’t. d. You have to.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1c, 2d, 3b, 4a.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1c, 2d, 3b, 4a.</p></details>
 <p><strong>Exercise 4. Transform</strong> with the word in brackets.<br />
 1. It is forbidden to shout at customers. (mustn’t) 2. It is not necessary to bring lunch. (don’t have to) 3. It’s a good idea to ask questions. (should)</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 You mustn’t shout at customers. 2 You don’t have to bring lunch. 3 You should ask questions.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 You mustn’t shout at customers. 2 You don’t have to bring lunch. 3 You should ask questions.</p></details>
 <p><strong>Exercise 5. My working day (70 words)</strong> in your pathway with five frequency adverbs, then three rules for a fair workplace (have to, mustn’t, should).<br />
 <strong>Model answer:</strong> I am a sales assistant. I usually start at nine. I always check the shelves first, then I often help customers. I sometimes work late on Saturdays and I rarely have lunch before two. My tutor is never rude. Rules: Employees have to respect customers. A manager mustn’t shout at the staff. Everybody should get credit for good ideas.</p>
 <p class="help-box"><strong>Help box.</strong> Frame: <em>I am a... I always... I usually... I sometimes... I never... You have to... You mustn’t... You should...</em><br />

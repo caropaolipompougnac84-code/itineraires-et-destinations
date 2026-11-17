@@ -110,8 +110,9 @@ body.dys main{max-width:720px}
 .grid-wrap{overflow-x:auto}
 table.grid td,table.grid th{font-size:.92rem}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look" style="--c:#1f4fd1">
+<body class="dys english-look mode-eleve" style="--c:#1f4fd1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -121,6 +122,29 @@ table.grid td,table.grid th{font-size:.92rem}
 <a href="/who-rules-britain/">Who Rules Britain?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/portrait-of-a-queen/dys/">Home</a>
 <a href="/portrait-of-a-queen/dys/s1/">L1</a>
@@ -166,7 +190,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>Why does the Queen quote a correspondent?</li>
 <li>How does the 1992 speech adapt dignified power to a media age?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>“Not … with undiluted pleasure”: an understatement that admits a crisis without a display of feeling.</li>
 <li>To create distance: the judgement is borrowed, then accepted.</li>
@@ -182,7 +206,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li><b>2020.</b> Anaphora, and the echo of Vera Lynn’s wartime song “We’ll Meet Again”. Why recall the Second World War?</li>
 <li><b>Mediation in French, 100 words,</b> for a French newspaper: why were these two short speeches so important? This is a mediation task, clearly labelled: write in French, for a French reader, and do not translate the speeches word for word.</li>
 </ul>
-<div class="ans"><h3>Answer key · key points</h3>
+<div class="ans prof-only"><h3>Answer key · key points</h3>
 <p>In 1997 the Queen is forced to show emotion, which she usually avoided: the institution adapts under pressure. The double identity answers the charge of coldness without abandoning the role of Queen. In 2020 she uses collective memory to unite the country; the monarch becomes the voice of national continuity. Anaphora and the wartime song make the promise feel shared and familiar.</p>
 </div>
 <section class="exit"><span class="tag">Exit ticket</span>
@@ -190,7 +214,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>What does “Queen and grandmother” do that “Queen” alone would not do?</li>
 <li>Name the device in the 2020 ending and its effect.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>It shows feeling and family, answering the charge of silence and coldness, while she still speaks as Queen.</li>
 <li>Anaphora (“we will… we will… we will…”), plus the echo of a wartime song: a shared promise of reunion.</li>

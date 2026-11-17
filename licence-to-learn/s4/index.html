@@ -92,8 +92,9 @@ body.dys main{max-width:720px}
 .box-check li{margin:.35em 0}
 .gap{display:inline-block;min-width:4.5em;border-bottom:1.5px solid var(--ink);margin:0 .2em}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -102,6 +103,29 @@ body.dys main{max-width:720px}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/">Home</a>
 <a href="/licence-to-learn/s1/">L1</a>
@@ -174,7 +198,7 @@ body.dys main{max-width:720px}
 <li>Does the performance serve the film’s story?</li>
 <li>Can the person cooperate with colleagues?</li>
 </ol>
-<div class="ans"><h3>Possible answers</h3>
+<div class="ans prof-only"><h3>Possible answers</h3>
 <ol><li>Casting.</li><li>Professional recruitment.</li><li>Both.</li><li>Casting.</li><li>Both, although assessed in different contexts.</li></ol></div>
 
 <h2>Worksheet 4B. Claim and evidence</h2>
@@ -184,7 +208,7 @@ body.dys main{max-width:720px}
 <tr><td>Careers pages prove everyone enjoys the job.</td><td class="blank"></td><td class="blank"></td></tr>
 </tbody></table></div>
 
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ul><li>First: no; official material describes collaboration.</li><li>Second: yes; “MI5 presents teamwork as important.”</li><li>Third: no; “Careers pages present the organisation’s account of the job.”</li></ul></div>
 
 <h2>Building your vocabulary: grammar practice</h2>
@@ -194,7 +218,7 @@ body.dys main{max-width:720px}
 <li>This claim is <span class="gap"></span> careful than the first claim.</li>
 <li>“Some officers” is <span class="gap"></span> absolute than “all officers”.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>more</li><li>more</li><li>less</li></ol></div>
 
 <h3>Exercise 2. Too or enough?</h3>
@@ -203,7 +227,7 @@ body.dys main{max-width:720px}
 <li>We do not have <span class="gap"></span> evidence to confirm it.</li>
 <li>The explanation is <span class="gap"></span> clear to follow.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>too</li><li>enough</li><li>enough</li></ol></div>
 
 <h3>Exercise 3. Qualify the claim</h3>
@@ -213,7 +237,7 @@ body.dys main{max-width:720px}
 <li>Officers enjoy dangerous situations.</li>
 <li>Confidence proves competence.</li>
 </ol>
-<div class="ans"><h3>Possible answers</h3>
+<div class="ans prof-only"><h3>Possible answers</h3>
 <ol><li>Screen heroes are not necessarily good employees.</li><li>Some fictional officers may enjoy dangerous situations.</li><li>Confidence does not necessarily prove competence.</li></ol></div>
 
 <h3>Exercise 4. Link an argument</h3>
@@ -222,7 +246,7 @@ body.dys main{max-width:720px}
 <li>Teamwork matters <span class="gap"></span> one person cannot do every task.</li>
 <li><span class="gap"></span> a careers page is useful, it has a recruitment purpose.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>because</li><li>Although</li></ol></div>
 
 <h2><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Protected oral intervention</h2>
@@ -258,7 +282,7 @@ body.dys main{max-width:720px}
 <p>Official careers documents provide information, but they also aim to <span class="gap"></span> applicants.</p>
 <p>A careful argument uses evidence and avoids <span class="gap"></span> claims.</p>
 </div>
-<div class="ans"><h3>Possible answers</h3>
+<div class="ans prof-only"><h3>Possible answers</h3>
 <p>Possible answers: purposes; suitability; attract; absolute.</p></div>
 
 <p class="offlink">Public source: <a href="https://www.mi5.gov.uk/" target="_blank" rel="noopener">MI5</a> careers and opportunities pages.</p>

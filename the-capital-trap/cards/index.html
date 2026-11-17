@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="english-look">
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/the-capital-trap/">The Capital Trap</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-capital-trap/">Home</a>
 <a href="/the-capital-trap/s1/">L1</a>
@@ -196,7 +220,7 @@ body.dys main{max-width:720px}
 <div class="card-face"><span class="tag">Detective 9</span><span>Name a state that borders Mexico.</span></div>
 <div class="card-face"><span class="tag">Detective 10</span><span>Which lake is near Salt Lake City?</span></div>
 </div>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>1. Rio Grande · 2. Mississippi · 3. Russia · 4. Between New York State and Canada · 5. Key West · 6. Hawaii · 7. Pacific · 8. Washington, Montana, Michigan, Maine… · 9. California, Arizona, New Mexico, Texas · 10. The Great Salt Lake</p></div>
 
 <h2>Cards E. Road-trip challenges</h2>

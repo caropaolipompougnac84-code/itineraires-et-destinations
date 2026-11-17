@@ -200,8 +200,9 @@
 
   </style>
   
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-pro" class="english-look">
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,12 +250,35 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/fabric-stall.jpg" alt="Rolls of brightly coloured fabric stacked on a stall, ready to be chosen and cut." width="1600" height="640"><figcaption>A fabric stall. Photo: Mark Fischer. CC BY-SA 2.0, Wikimedia Commons.</figcaption></figure><h1>Appendix B. Couture pathway: the dresser's card</h1>
 <p><strong>For:</strong> students of the CAP Métiers de la mode, vêtement flou, the bac pro Métiers de la couture et de la confection, and any bac pro class working on the world of shows.<br />
 <strong>How to use it:</strong> after Lessons 2 (the Dolly look, Coat of Many Colors) and 3 (backstage). One lesson of 55 minutes (planned over 52).<br />
 <strong>Debatable question:</strong> Is a stage costume a piece of art or a technical tool?</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -306,7 +330,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>What did Dolly’s mother use to make the coat? 2. Three words for bling. 3. Make it polite: <em>Make it shorter.</em></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 scraps of fabric (patchwork) · 2 rhinestones, sequins, beads · 3 Could you make it a bit shorter, please?</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 scraps of fabric (patchwork) · 2 rhinestones, sequins, beads · 3 Could you make it a bit shorter, please?</li>
 </ol>
 <h2>Step 2. Expanding your vocabulary</h2>
 <table>
@@ -374,7 +398,7 @@
 <strong>Answer key:</strong> 1c, 2a, 3d, 4b.</p></details>
 <p><strong>Exercise 2. Fill in the gaps:</strong> zip · fitting · rack · rhinestones<br />
 At the (1) <strong><em>_</em>_, Dolly tries the pink suit. It is covered in (2) </strong><strong><em>_. For the quick change, we use a (3) </em></strong><strong><em>. After the show, the costumes go back on the (4) </em></strong>___.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 fitting · 2 rhinestones · 3 zip · 4 rack.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 fitting · 2 rhinestones · 3 zip · 4 rack.</p></details>
 <p><strong>Flashcards (model).</strong> <strong>to take in</strong> · reprendre (resserrer) · <em>Can you take it in at the waist?</em> / <strong>is made of + material</strong> (red) · <em>The jacket is made of satin.</em></p>
 <h2>Step 3. The teacher’s point: the present passive</h2>
 <table>
@@ -402,9 +426,9 @@ At the (1) <strong><em>_</em>_, Dolly tries the pink suit. It is covered in (2) 
 <p><strong>Quick check.</strong> Make it passive: <em>We sew the sequins by hand.</em> → <strong>The sequins are sewn by hand.</strong></p>
 <h2>Step 4. Exercises</h2>
 <p><strong>Exercise 3. Transform into the passive.</strong> 1 We close the jacket with a hidden zip. 2 We decorate the sleeves with fringe. 3 They line the trousers with silk.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The jacket is closed with a hidden zip. 2 The sleeves are decorated with fringe. 3 The trousers are lined with silk.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The jacket is closed with a hidden zip. 2 The sleeves are decorated with fringe. 3 The trousers are lined with silk.</p></details>
 <p><strong>Exercise 4. Adjective order.</strong> 1 a (satin / pink / beautiful) jacket 2 (long / white / silk) fringe</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 a beautiful pink satin jacket · 2 long white silk fringe.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 a beautiful pink satin jacket · 2 long white silk fringe.</p></details>
 <h2>Step 5. The dresser scene</h2>
 <p>Use Scene 1 of Lesson 3 (role cards, starters, professional words and model dialogue). Add one constraint: the dresser must explain one alteration in the passive (<em>The hem will be shortened by two centimetres.</em>).</p>
 <h2>Step 6. Productions</h2>

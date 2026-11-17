@@ -92,8 +92,9 @@ body.dys main{max-width:720px}
 .box-check li{margin:.35em 0}
 .gap{display:inline-block;min-width:4.5em;border-bottom:1.5px solid var(--ink);margin:0 .2em}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -102,6 +103,29 @@ body.dys main{max-width:720px}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/">Home</a>
 <a href="/licence-to-learn/s1/">L1</a>
@@ -186,7 +210,7 @@ body.dys main{max-width:720px}
 <li>You don’t have to wear a suit.</li>
 <li>She has to ask.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>necessary</li><li>forbidden</li><li>not necessary</li><li>necessary</li></ol></div>
 
 <h2>Worksheet 5B. Grammar practice</h2>
@@ -197,7 +221,7 @@ body.dys main{max-width:720px}
 <li>You <span class="gap"></span> wear a suit. It is optional.</li>
 <li>A trainee <span class="gap"></span> ask for help. It is necessary.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>mustn’t</li><li>must / have to</li><li>don’t have to</li><li>must / has to</li></ol></div>
 
 <h3>Exercise 2. Correct the errors</h3>
@@ -207,7 +231,7 @@ body.dys main{max-width:720px}
 <li>You mustn’t to share passwords.</li>
 <li>An officer have to be responsible.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>She must check.</li><li>He doesn’t have to travel.</li><li>You mustn’t share passwords.</li><li>An officer has to be responsible.</li></ol></div>
 
 <h3>Exercise 3. Keep the meaning</h3>
@@ -216,7 +240,7 @@ body.dys main{max-width:720px}
 <li>Wearing a suit is not necessary. You <span class="gap"></span>.</li>
 <li>Checking the source is necessary. You <span class="gap"></span>.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>mustn’t invent evidence.</li><li>don’t have to wear a suit.</li><li>must / have to check the source.</li></ol></div>
 
 <h2>Worksheet 5C. Resolve the scenario</h2>
@@ -226,7 +250,7 @@ body.dys main{max-width:720px}
 <p>I mustn’t <span class="gap"></span>.</p>
 <p>This matters because <span class="gap"></span>.</p>
 </div>
-<div class="ans"><h3>Model</h3>
+<div class="ans prof-only"><h3>Model</h3>
 <p>The problem is an unsupported claim. First, I have to ask for its source. I mustn’t present it as a confirmed fact. This matters because other people may act on the report.</p></div>
 
 <h2><span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Worksheet 5D. Write five rules</h2>
@@ -239,7 +263,7 @@ body.dys main{max-width:720px}
 </tbody></table></div>
 
 <p>Minimum: explain two rules.</p>
-<div class="ans"><h3>Model answer</h3>
+<div class="ans prof-only"><h3>Model answer</h3>
 <p>An officer must check sources because decisions depend on reliable information.</p>
 <p>An officer has to ask for help when unsure.</p>
 <p>An officer mustn’t invent evidence because it can mislead others.</p>
@@ -287,7 +311,7 @@ body.dys main{max-width:720px}
 <p>Don’t have to means <span class="gap"></span>.</p>
 <p>A responsible officer must <span class="gap"></span> because <span class="gap"></span>.</p>
 </div>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>obligation; prohibition; not necessary; open responsible example.</p></div>
 
 </main>

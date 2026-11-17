@@ -78,8 +78,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="">
+<body class="mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -88,6 +89,29 @@ body.dys main{max-width:720px}
 <a href="/destination-australia/annexe/ancienne-version.html">Destination Australia</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/destination-australia/annexe/ancienne-version.html">Home</a>
 <a href="/destination-australia/annexe/s1/">L1</a>
@@ -129,7 +153,7 @@ body.dys main{max-width:720px}
 <li>Give one difference between the 1886 voyage and a journey today.</li>
 <li>Name one document you need before you fly.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>A job interview for a Melbourne café (experience, visa, pay and shifts).</li>
 <li>Accept: a flight instead of a long sea voyage; official visas; faster travel; still the need for money and a plan.</li>
@@ -164,7 +188,7 @@ body.dys main{max-width:720px}
 <tr><td>First hostel nights, food and transport</td><td>Research your own amount</td><td>Keep an emergency reserve.</td></tr>
 </table></div>
 <p><b>Your task.</b> Estimate a visa and flight subtotal using the budget range and a flight costing AUD 1,200. Explain why savings are not a visa charge. List three costs still missing from your plan.</p>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>Planning subtotal: about AUD 1,850 to 2,050. Confirm the actual visa fee before using your budget. The AUD 5,000 is available money for living costs, not a payment to Home Affairs. Possible extra costs: insurance, hostel accommodation, food, onward travel, transport and document costs.</p>
 </div>
 <section class="exit"><span class="tag">Exit ticket</span>
@@ -172,7 +196,7 @@ body.dys main{max-width:720px}
 <li>Name the five items of the departure checklist.</li>
 <li>Why is the AUD 5,000 not a visa fee?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Passport, visa, available funds, flight, private insurance.</li>
 <li>It is money you must have available for living costs (and a way to leave), not a payment to the government.</li>

@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/">Home</a>
 <a href="/the-verdict-of-the-people/s1/">L1</a>
@@ -142,35 +166,35 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 4A</span>
 <h3>Midpoint check · six points</h3>
 <p>One point each.</p><ol><li>Give the artist of <i>The Verdict of the People</i>.</li><li>Name the two chambers of Congress.</li><li>Which chamber considers many presidential nominations?</li><li>Give one power of Puerto Rico’s Resident Commissioner.</li><li>Which has presidential electors: Puerto Rico or Washington, D.C.?</li><li>Complete: “The bill must <span class="gap"></span> approved by both chambers.”</li></ol>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>George Caleb Bingham.</li><li>The House of Representatives and the Senate.</li><li>The Senate.</li><li>Introduce bills, take part in debate, or serve and vote on committees.</li><li>Washington, D.C.</li><li>be.</li></ol>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 4B</span>
 <h3>Classify the statement, not just its tone</h3>
 <p><b>V</b>: verifiable institutional statement. <b>J</b>: judgement. <b>P</b>: prediction or promise. <b>A</b>: attributed interpretation. Some statements may need a different label: say why.</p><ol><li>The House has 435 voting seats.</li><li>This is the only candidate who cares about ordinary people.</li><li>The proposal will solve the problem.</li><li>According to the museum, Bingham intended a broader celebration of elections.</li><li>The painting contains several figures listening to a speaker.</li><li>The election result proves that every voter supports the winning party’s entire programme.</li></ol><p>Then repair statement 6 without inventing a result.</p>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>V.</li><li>J.</li><li>P.</li><li>A.</li><li>A visual description that anyone can check in the painting.</li><li>An unsupported interpretation.</li></ol><p>Possible repair: “The result identifies the winner under the election rules. It does not by itself show agreement with every policy.”</p>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 4C</span>
 <h3>Reported speech</h3>
 <p>These are invented classroom statements, not historical quotations.</p><p><b>Common B1+ route</b></p><ol><li>A fictional candidate says: “I support the proposal.” Begin: <i>Yesterday, the candidate said…</i></li><li>Two fictional campaigners say: “We will publish the cost.” Begin: <i>They told the audience…</i></li></ol><p><b>Towards B2</b></p><ol><li>A fictional reporter asks me: “Did you check the source?” Begin: <i>The reporter asked me…</i></li><li>A fictional student says: “The source is incomplete.” Begin: <i>The student explained…</i></li><li>Explain why a reporter might keep the present tense when describing a claim that is still current.</li></ol>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>“…that they supported the proposal.”</li><li>“…that they would publish the cost.”</li><li>“…if (or whether) I had checked the source.”</li><li>“…that the source was incomplete.”</li><li>A present-tense report can be justified when the reporter deliberately presents the statement as still true. The choice should keep the intended meaning.</li></ol><p>Accept a suitable pronoun (he, she, they). Discuss justified alternatives without backshift rather than marking them wrong automatically.</p>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 4D</span>
 <h3><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Candidate and reporter (pairs)</h3>
 <p><b>Partner A</b> gives a 30-second fictional school-council message with one proposal, one reason and one promise.</p><p><b>Partner B</b> reports it and asks: “What evidence would help us evaluate that promise?” Swap roles.</p><p>Do not impersonate a real politician or invent historical speech.</p>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ul><li>The report keeps the original meaning.</li><li>A promise is not presented as an achieved result.</li><li>The follow-up question asks for relevant evidence.</li><li>Both students take both roles.</li></ul>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 4E · main production</span>
 <h3>Accurate and persuasive?</h3>
 <p>Can a message contain accurate information and still try to persuade? Explain with one classroom example.</p><p><b>Common B1+ route:</b> four connected sentences.</p><p><b>Towards B2:</b> explain how selection or emphasis can shape interpretation even when the stated information is accurate.</p>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <p>Possible answer: “A message can give accurate information and still try to persuade. It may select the most favourable details and leave other relevant information out. For example, a campaign message may describe a proposal without explaining its cost. We therefore need to examine both accuracy and selection.”</p>
 </div>
 </section>
@@ -178,7 +202,7 @@ body.dys p,body.dys li{max-width:38em}
 <div class="tbl-scroll"><table class="grid"><thead><tr><th>Item</th><th>Meaning</th><th>Useful chunk</th></tr></thead><tbody><tr><td>claim</td><td>a statement presented as true</td><td>make a claim</td></tr><tr><td>promise</td><td>a commitment about future action</td><td>make a promise</td></tr><tr><td>evidence</td><td>information that supports or challenges a claim</td><td>evidence for a claim</td></tr><tr><td>according to</td><td>as stated by</td><td>according to the museum</td></tr><tr><td>persuade</td><td>make someone believe or do something</td><td>try to persuade voters</td></tr><tr><td>verify</td><td>check accuracy</td><td>verify a statement</td></tr><tr><td>framing</td><td>the way an issue is presented</td><td>examine the framing</td></tr></tbody></table></div>
 <p><b>Productive core</b> (use these in your own sentences): claim, promise, evidence, according to, persuade, verify.</p><p><b>Recognition or extension</b> (understand them; use them if useful): attribution, framing, soundbite, spin.</p>
 <p><b>Quick exercise.</b> Choose the best verb: “We should <i>describe / verify</i> whether the figure matches the original source.”</p>
-<div class="ans"><h4>Answer key</h4><p>verify.</p></div>
+<div class="ans prof-only"><h4>Answer key</h4><p>verify.</p></div>
 </section>
 <section class="record"><span class="tag">Written record</span><p>Images and messages can inform and persuade at the same time. We must identify who makes a claim and what supports it. A promise is not an outcome. A cautious rewrite must not introduce new, unverified facts.</p></section>
 <section class="exit"><span class="tag">Exit ticket</span><p>Write one attributed statement about <i>Stump Speaking</i>, starting with “According to the museum,…”.</p></section>

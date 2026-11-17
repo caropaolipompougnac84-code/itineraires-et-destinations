@@ -78,8 +78,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="">
+<body class="mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -88,6 +89,29 @@ body.dys main{max-width:720px}
 <a href="/destination-australia/annexe/ancienne-version.html">Destination Australia</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/destination-australia/annexe/ancienne-version.html">Home</a>
 <a href="/destination-australia/annexe/s1/">L1</a>
@@ -129,7 +153,7 @@ body.dys main{max-width:720px}
 <li>Where do you apply for a TFN, and should you pay an intermediary?</li>
 <li>What should you do if you are unsure about an item at the airport?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>SIM or eSIM, bank account, TFN, private insurance.</li>
 <li>On the official ATO page, at no cost; no, do not pay an intermediary.</li>
@@ -149,7 +173,7 @@ body.dys main{max-width:720px}
 <p>Check: <a href="https://www.fairwork.gov.au/newsroom/media-releases/2026-media-releases/july-2026/20260701-minimum-wage-increase-media-release" target="_blank" rel="noopener">Fair Work, minimum wage from 1 July 2026</a> · <a href="https://www.ato.gov.au/tax-rates-and-codes/schedule-15-tax-table-for-working-holiday-makers" target="_blank" rel="noopener">ATO, Working Holiday Maker tax table</a>.</p>
 </div>
 <p><b>Your task.</b> Before accepting an offer, prepare five questions about pay, shifts, safety, accommodation and specified-work eligibility.</p>
-<div class="ans"><h3>Answer key · examples</h3>
+<div class="ans prof-only"><h3>Answer key · examples</h3>
 <p>“Which award and classification apply?” “What is my casual hourly rate?” “What are the weekend rates?” “Are accommodation deductions explained in writing?” “Does this postcode and role count as specified work?”</p>
 </div>
 <h2>Expanding your vocabulary</h2>
@@ -167,7 +191,7 @@ body.dys main{max-width:720px}
 <li>What is casual loading, in one sentence?</li>
 <li>Is a Victorian RSA valid in every Australian state?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Extra pay (here 25% on the adult National Minimum Wage, when that rate applies) for a casual employee, instead of paid leave.</li>
 <li>No. Check the rules in the state where you will work.</li>

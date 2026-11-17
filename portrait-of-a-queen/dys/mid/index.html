@@ -110,8 +110,9 @@ body.dys main{max-width:720px}
 .grid-wrap{overflow-x:auto}
 table.grid td,table.grid th{font-size:.92rem}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look" style="--c:#1f4fd1">
+<body class="dys english-look mode-eleve" style="--c:#1f4fd1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -121,6 +122,29 @@ table.grid td,table.grid th{font-size:.92rem}
 <a href="/who-rules-britain/">Who Rules Britain?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/portrait-of-a-queen/dys/">Home</a>
 <a href="/portrait-of-a-queen/dys/s1/">L1</a>
@@ -170,7 +194,7 @@ table.grid td,table.grid th{font-size:.92rem}
 </ol>
 <h2>Part B · Short argument (/10)</h2>
 <p>150 to 180 words: “Elizabeth II’s vow of 1947 was a political act, not a personal one.” Quote the speech accurately, with quotation marks. Official text: <a href="https://www.royal.uk/21st-birthday-speech-21-april-1947" target="_blank" rel="noopener">royal.uk</a>.</p>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Three-quarter view, rich dress, pearls; her hand on a globe; a crown beside her.</li>
 <li>On one side the English fleet in sunlight, on the other the Spanish Armada wrecked in a storm: victory as divine favour.</li>

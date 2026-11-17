@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/dys/">Start here</a>
 <a href="/whose-land-whose-water/dys/#presentation">Présentation</a>
@@ -186,11 +210,11 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <section class="card"><span class="tag">Exercise 1</span><h3>Complete the sentences</h3><div class="worked"><b>Worked example.</b><br>A dam holds back <span class="gap"></span>.<br>Answer: water.</div>
 <p>Now complete:</p>
 <ol><li>A reservoir stores <span class="gap"></span>.</li><li>The project produced <span class="gap"></span>.</li><li>The agreement was signed in <span class="gap"></span>.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Water; electricity; 1975.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Water; electricity; 1975.</p></div></section>
 <section class="card"><span class="tag">Exercise 2</span><h3>Sort words</h3><div class="worked"><b>Worked example.</b><br>Improved public services : possible benefit.</div>
 <p>Now sort:</p>
 <ol><li>Compensation: benefit / loss.</li><li>Flooded hunting grounds: benefit / loss.</li><li>New institutions: benefit / loss.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Benefit; loss; benefit.</p><p>A benefit does not cancel a loss.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Benefit; loss; benefit.</p><p>A benefit does not cancel a loss.</p></div></section>
 <section class="card"><span class="tag">Exercise 3</span><h3>Listen to the main report</h3><div class="offlink"><p><b>Listening document.</b> How one deal led to the biggest project in Quebec history, but left a conflicted legacy. CBC News · YouTube, 11 November 2025 · 4 min 02. Listen first without reading. If the video does not work, use the support account and write “Reading-support route”. <a href="https://www.youtube.com/watch?v=pn6LQRoNOpo" target="_blank" rel="noopener">Open on YouTube</a>.</p></div>
 <p>Use 0:00 to 2:08 first.</p>
 <div class="worked"><b>Worked example of a note.</b><br>Project: James Bay.</div>
@@ -199,23 +223,23 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>Then use 2:08 to the end:</p>
 <ol start="3"><li>One benefit: <span class="gap"></span>.</li><li>One cost: <span class="gap"></span>.</li></ol>
 <div class="source"><span class="tag">Support account</span><p>The project was announced in 1971. Cree and Inuit opposition included legal action. Negotiations brought compensation and greater autonomy in some areas. The project also transformed land.</p><p><i>Use it only if you cannot listen. Label your answer “Reading-support route”.</i></p></div>
-<div class="ans"><h3>Self-check</h3><p>1971; Cree and Inuit; compensation or greater autonomy; changed or flooded land.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>1971; Cree and Inuit; compensation or greater autonomy; changed or flooded land.</p></div></section>
 <section class="card"><span class="tag">Exercise 4</span><h3>Compare another report</h3><div class="offlink"><p><b>Listening document.</b> 50 years since James Bay and Northern Quebec Agreement, mixed reaction to historic signing persists. CBC News North · YouTube, 11 November 2025 · 2 min 49. Listen first without reading. If the video does not work, use the support account and write “Reading-support route”. <a href="https://www.youtube.com/watch?v=ul-G5AYHVf0" target="_blank" rel="noopener">Open on YouTube</a>.</p></div>
 <div class="worked"><b>Worked example.</b><br>One speaker mentions a benefit. Another speaker stresses a concern.</div>
 <p>Listen and write:</p>
 <ol><li>One benefit or positive assessment I heard: <span class="gap"></span>.</li><li>One concern I heard: <span class="gap"></span>.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Your notes must come from the report. If you cannot identify a detail, write “I need another listening”, not an invented answer. The support text above permits a reading-route answer about benefits and losses, but not a claim to have heard a particular speaker.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Your notes must come from the report. If you cannot identify a detail, write “I need another listening”, not an invented answer. The support text above permits a reading-route answer about benefits and losses, but not a claim to have heard a particular speaker.</p></div></section>
 <section class="card"><span class="tag">Exercise 5</span><h3>Talk about the past</h3><div class="worked"><b>Worked example.</b><br>Families travelled along the river in the past.<br>Families used to travel along the river.</div>
 <p>Complete:</p>
 <ol><li>Families used to <span class="gap"></span> on the land.<br>Choose: hunt / hunted.</li><li>The agreement <span class="gap"></span> signed in 1975.<br>Choose: was / were.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Hunt; was.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Hunt; was.</p></div></section>
 <section class="route"><h2>Speaking: your route</h2><div class="worked"><b>Worked example.</b><br>The project produced electricity, but it also changed land.</div><h3>Route S · SEGPA</h3><p>Use the Route C sentences below. Say the first sentence aloud. Then say the second one. You may read them from the page, one at a time.</p><h3>Route C · CAP or CFA</h3><p>Say:</p>
 <div class="script"><p>The dam produces electricity.<br>It also changes the land.</p></div><h3>Route P · Bac pro or CFA</h3><p>Prepare a project briefing:</p>
-<div class="script"><p>Main benefit:…<br>Main risk or loss:…<br>Question before approval:…</p></div><h3>Route G · Lycée général et technologique, LVA</h3><p>Give a five-sentence explanation including a benefit, a loss and a source.</p><h3>Route G · Lycée général et technologique, LVB</h3><p>Give three linked sentences with <i>but</i> and <i>because</i>.</p><div class="ans"><h3>Self-check</h3><p>Include both an outcome presented as useful and an outcome involving loss or change.</p></div></section>
+<div class="script"><p>Main benefit:…<br>Main risk or loss:…<br>Question before approval:…</p></div><h3>Route G · Lycée général et technologique, LVA</h3><p>Give a five-sentence explanation including a benefit, a loss and a source.</p><h3>Route G · Lycée général et technologique, LVB</h3><p>Give three linked sentences with <i>but</i> and <i>because</i>.</p><div class="ans prof-only"><h3>Self-check</h3><p>Include both an outcome presented as useful and an outcome involving loss or change.</p></div></section>
 <h2>Written record</h2><div class="record"><div class="plain"><p>A development project can bring benefits and losses. I identify both and say whose view I am reporting.</p></div></div>
 <h2>Homework</h2><div class="card"><div class="worked"><b>Worked example.</b><br>Benefit: electricity. Loss: changed hunting grounds.</div>
 <p>Write one benefit and one loss from this lesson.</p>
-<div class="ans"><h3>Self-check</h3><p>Use examples supported by the text.</p></div></div>
+<div class="ans prof-only"><h3>Self-check</h3><p>Use examples supported by the text.</p></div></div>
 </main>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>

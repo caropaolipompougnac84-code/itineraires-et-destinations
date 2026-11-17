@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,11 +250,34 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/grand-ole-opry-banners.jpg" alt="A white porch and lamp post with Grand Ole Opry banners, in Nashville." width="1600" height="1200"><figcaption>Grand Ole Opry, Nashville. Photo: Ken Lund. CC BY-SA 2.0, Wikimedia Commons.</figcaption></figure><h1>Lesson 7. True or Tale? The inheritance rumour</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
 <p><strong>Debatable question:</strong> Why do we want to believe a rumour, even when there is no evidence?<br />
 <strong>By the end of this lesson, I can:</strong> say if a piece of information is a verified fact, an unverified claim or a fake, explain why, and quote my sources.</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -316,7 +340,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>Report: <em>“I accept.”</em> (Dolly) 2. Two songs Dolly and Miley sang together. 3. What does an heir receive?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Dolly said that she accepted. · 2 Jolene, Rainbowland, Wrecking Ball · 3 money, property or rights from a person who dies.</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Dolly said that she accepted. · 2 Jolene, Rainbowland, Wrecking Ball · 3 money, property or rights from a person who dies.</li>
 </ol>
 <h2>Step 2. The question of the day</h2>
 <p>Write on the board: <strong>“Dolly Parton left her whole fortune to Miley Cyrus.”</strong></p></details>
@@ -356,7 +380,7 @@
 </tbody>
 </table>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> an unknown account, @Celebritynews.m · none: no document, no official statement · Lead Stories: very likely AI-generated; meaww: no evidence for Jolene · a private trust from 1997; no will made public; Miley’s tribute says nothing about money.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> an unknown account, @Celebritynews.m · none: no document, no official statement · Lead Stories: very likely AI-generated; meaww: no evidence for Jolene · a private trust from 1997; no will made public; Miley’s tribute says nothing about money.</p></details>
 <h2>Step 4. Expanding your vocabulary: fake news</h2>
 <table>
 <thead>
@@ -433,9 +457,9 @@
 <h3>Exercises on vocabulary</h3>
 <p><strong>Exercise G1. Fill in the gaps:</strong> evidence · fact-check · reliable · deepfake · will<br />
 The video is a (1) <strong><em>_</em>_. A (2) </strong><strong><em>_ by Lead Stories shows it. There is no (3) </em></strong><strong><em> that Miley inherited everything, and no (4) </em></strong><strong><em> was made public. Always use (5) </em></strong>___ sources.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 deepfake · 2 fact-check · 3 evidence · 4 will · 5 reliable.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 deepfake · 2 fact-check · 3 evidence · 4 will · 5 reliable.</p></details>
 <p><strong>Exercise G2. Correct the mistake.</strong> 1 <em>There are no evidences.</em> 2 <em>According to me, it’s fake.</em></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 There is no evidence (uncountable). 2 In my opinion, it’s fake. (<em>According to</em> is for a source, not for yourself.)</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 There is no evidence (uncountable). 2 In my opinion, it’s fake. (<em>According to</em> is for a source, not for yourself.)</p></details>
 <h3>Flashcards</h3>
 <table>
 <thead>
@@ -506,18 +530,18 @@ The video is a (1) <strong><em>_</em>_. A (2) </strong><strong><em>_ by Lead Sto
 <h2>Step 6. Exercises</h2>
 <p><strong>Exercise 1. Signs of an AI video.</strong> Tick the warning signs mentioned by Lead Stories.<br />
 a monotone voice · lips that don’t match the words · an official account · natural emotion in the voice · no reliable media report the story · a link to a court document</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> monotone voice, lips that don’t match, no reliable media. (No official account, no natural emotion, no court document.)</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> monotone voice, lips that don’t match, no reliable media. (No official account, no natural emotion, no court document.)</p></details>
 <p><strong>Exercise 2. Fact, claim or fake?</strong><br />
 1. Dolly was Miley’s honorary godmother. 2. Dolly left Jolene to Miley. 3. The video shows the real Miley talking about her inheritance. 4. Dolly died on 25 August 2026. 5. Dolly’s will was published. 6. Dolly and Miley sang Jolene together.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 verified fact · 2 unverified claim (no evidence) · 3 fake (very likely AI-generated, according to Lead Stories) · 4 verified fact · 5 false: no will has been made public · 6 verified fact.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 verified fact · 2 unverified claim (no evidence) · 3 fake (very likely AI-generated, according to Lead Stories) · 4 verified fact · 5 false: no will has been made public · 6 verified fact.</p></details>
 <p><strong>Exercise 3. How sure are you?</strong><br />
 1. The voice is robotic. It ... be Miley’s real voice. 2. No journalist reported it. The story ... be fake. 3. The trust is private. Miley ... be one of the people who inherit, but we can’t know.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 can’t · 2 must · 3 might.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 can’t · 2 must · 3 might.</p></details>
 <p><strong>Exercise 4. The method.</strong> Put the questions in a logical order: a. What does the official account say? b. Who posted it? c. Where else is it reported? d. What is the original source?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> b, d, c, a (other logical orders are accepted if justified).</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> b, d, c, a (other logical orders are accepted if justified).</p></details>
 <p><strong>Exercise 5. Transform</strong> with <em>There is no evidence that...</em> or <em>According to...</em><br />
 1. Nobody can prove that Miley inherited the fortune. 2. Lead Stories says the video is AI-generated.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 There is no evidence that Miley inherited the fortune. 2 According to Lead Stories, the video is AI-generated.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 There is no evidence that Miley inherited the fortune. 2 According to Lead Stories, the video is AI-generated.</p></details>
 <p><span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span><strong>Exercise 6. Write a fact-check (80 words):</strong> the claim, your verdict, three pieces of evidence, your sources.<br />
 <strong>Model answer:</strong> Claim: Dolly Parton left her whole fortune to Miley Cyrus. Verdict: unverified, and the viral video is fake. Evidence: 1. According to Lead Stories, the video is very likely AI-generated (99%). 2. No will has been made public: Dolly’s property is managed by a private trust created in 1997. 3. Miley’s real tribute on X says nothing about money. Sources: Lead Stories, The Tennessean, meaww.</p>
 <p class="help-box"><strong>Help box.</strong> Frame: <em>Claim: ... Verdict: ... According to..., the video... There is no evidence that... Miley’s real message...</em><br />

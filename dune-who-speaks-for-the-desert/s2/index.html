@@ -419,8 +419,9 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/siwa-oasis-palms.jpg" alt="A wide green oasis of palm trees at Siwa, seen from a rocky rise." width="1600" height="1200"><figcaption>Siwa Oasis, Egypt. Photo: Moataz EL-Sharaky. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 2 of 8</p>
     <h1>Lesson 2. The Spice: One Resource, One System</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
@@ -521,13 +545,13 @@
         <p>In four sentences, explain why &quot;control of the spice&quot; is &quot;control of the empire&quot;. Use <em>which</em> and <em>so</em>.</p>
       </div>
     </div>
-    <details class="teacher"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
+    <details class="teacher prof-only"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
       <p><span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Read at natural speed, twice. Written for the sequence; not a quotation from the novel.</p>
       <blockquote><p>In the novel, the spice, also called melange, exists only on Arrakis. It extends life. It allows the navigators of the Spacing Guild to see a safe path through space, so without the spice there is no travel between planets. The Emperor gives the planet to noble families as a fief. They extract the spice with huge machines, which attract the giant sandworms of the desert. The Fremen, who live in the deep desert, are treated by the governors as a problem. Whoever controls the spice controls the empire.</p></blockquote>
       <p>A line often attributed to the novel, &quot;The spice must flow&quot;, belongs only to the 1984 film. Do not attribute it to the book, and do not write it on the board as a quotation from Herbert.</p>
     </details>
 
-    <details class="answers"><summary>Key, listening</summary>
+    <details class="answers prof-only"><summary>Key, listening</summary>
       <p>B1, a possible completion: producers, the Fremen (who live on the land); extractors, the noble families (and their machines; the sandworms are a danger to those machines); consumers, the Guild navigators (and anyone who depends on long life or travel); controller, the Emperor (and, in practice, whoever holds the spice); what it makes possible: life, travel, the empire. B2: because the spice exists only on Arrakis, and because the Guild, which cannot travel without it, holds the empire together, so whoever controls the spice controls travel, and therefore the empire.</p>
     </details>
 
@@ -546,7 +570,7 @@
       <li>The Guild is an organisation. Its navigators need the spice.</li>
       <li>The Harkonnens are a family. The Emperor gave them the planet.</li>
     </ol>
-    <details class="answers"><summary>Key, exercise 2</summary>
+    <details class="answers prof-only"><summary>Key, exercise 2</summary>
       <p>a) The Fremen are a people who live in the deep desert. b) Arrakis is a planet where water is rare. c) The Guild is an organisation whose navigators need the spice. d) The Harkonnens are a family (that / which) the Emperor gave the planet to / to whom the Emperor gave the planet. Common error: <em>which</em> for people.</p>
     </details>
 
@@ -565,7 +589,7 @@
     <div class="homework-box">
       <p><strong>Homework.</strong> Read Book I, the chapter of the crysknife (the scene in Arrakeen in which the housekeeper Shadout Mapes shows Jessica the knife). If you do not have the book, the teacher will give you a two-line summary. Learn six flashcards.</p>
     </div>
-    <details class="teacher"><summary>Two-line summary, for students without the book</summary>
+    <details class="teacher prof-only"><summary>Two-line summary, for students without the book</summary>
       <p>In Arrakeen, the Fremen housekeeper Shadout Mapes shows Jessica a crysknife, a sacred blade. Jessica understands that Mapes's words follow a prophecy, and that her own order, the Bene Gesserit, planted such legends long ago. The exact wording is to be read in your edition; this summary is not a quotation.</p>
     </details>
 

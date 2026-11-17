@@ -419,8 +419,9 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/ait-benhaddou.jpg" alt="The earthen ksar of Ait Benhaddou, rising above a dry riverbed and a belt of green trees." width="1200" height="802"><figcaption>Ait Benhaddou, Morocco. Photo: cliff williams. CC BY-SA 2.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 3 of 8</p>
     <h1>Lesson 3. Whose Planet? Empire and the Desert People</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
@@ -493,7 +517,7 @@
 
     <h2><span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Stage 2. A dialogue, written for the lesson</h2>
     <p>Two students read the dialogue aloud (the teacher may read it first). Then listen for: what the knife is; what the housekeeper is waiting for; what Jessica already knows.</p>
-    <details class="teacher"><summary>Dialogue, written for the lesson (not a quotation from the novel)</summary>
+    <details class="teacher prof-only"><summary>Dialogue, written for the lesson (not a quotation from the novel)</summary>
       <p>This paraphrase is for listening and speaking. The exact scene is to be read in your edition (Book I, the crysknife in Arrakeen). Do not present these lines as Herbert's wording.</p>
       <p><strong>Mapes.</strong> My lady, this blade is sacred to my people. It is a crysknife.</p>
       <p><strong>Jessica.</strong> I know what it is. I have been taught something of the desert.</p>
@@ -523,11 +547,11 @@
         <p>Explain, with <em>although</em> and <em>whereas</em>, why the Fremen both believe and are manipulated.</p>
       </div>
     </div>
-    <details class="answers"><summary>Key, Q4 pathways</summary>
+    <details class="answers prof-only"><summary>Key, Q4 pathways</summary>
       <p>B1: 1 the Emperor; 2 the Duke (or a governor); 3 a Fremen; 4 a Bene Gesserit. B2, a possible direction: although the Fremen have a real faith and a real knowledge of the desert, the legend they wait for was partly planted by the Bene Gesserit, whereas the offworld families claim the planet as a fief. Belief and manipulation can occupy the same sentence.</p>
     </details>
 
-    <details class="teacher"><summary>Teacher's note on Q4</summary>
+    <details class="teacher prof-only"><summary>Teacher's note on Q4</summary>
       <p>Quote the exact wording of the Missionaria Protectiva scene from your edition only. Do not invent a sentence and attribute it to Herbert. The key idea for the class: Jessica knows the legend was planted, and she chooses to use it. The religion of the &quot;colonised&quot; people has been partly written by outsiders.</p>
     </details>
 
@@ -558,7 +582,7 @@
       <li>The legend helps Jessica. It was invented by her order.</li>
       <li>The Duke wants peace. The Emperor wants him dead.</li>
     </ol>
-    <details class="answers"><summary>Key, exercise 3</summary>
+    <details class="answers prof-only"><summary>Key, exercise 3</summary>
       <p>a) Although Jessica is a foreigner, the Fremen respect her. b) Even though the legend was invented by her order, it helps Jessica. (Or: The legend helps Jessica, although it was invented by her order.) c) The Duke wants peace, whereas the Emperor wants him dead. Accept <em>however</em> with a new sentence.</p>
     </details>
 

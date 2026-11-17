@@ -419,8 +419,9 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/sossusvlei-dunes.jpg" alt="Smooth orange dunes meeting at Sossusvlei, under a bright sky." width="1600" height="1258"><figcaption>Dunes at Sossusvlei, Namibia. Photo: Diego Delso. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 5 of 8</p>
     <h1>Lesson 5. Mid-Sequence Assessment</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
@@ -500,7 +524,7 @@
       <li>What do they give?</li>
       <li>Explain the last sentence in your own words.</li>
     </ol>
-    <details class="teacher"><summary>Listening text, for the teacher (do not display during the test)</summary>
+    <details class="teacher prof-only"><summary>Listening text, for the teacher (do not display during the test)</summary>
       <p>Read at natural speed, three times. Written for the sequence. It paraphrases a widely reported idea; it does not quote Herbert.</p>
       <blockquote><p>Many readers finish Dune and think Paul is simply a hero. Herbert did not agree. In interviews, he said he wanted to show the danger of charismatic leaders. In the novel, the people who believe in Paul gain courage and unity. But they also give him the right to speak for them. When one man speaks for a whole people, the people may stop speaking for themselves.</p></blockquote>
       <p>If you wish to quote Herbert himself, check an interview source before you do so (see the bibliography). Do not present this listening text as his wording.</p>
@@ -553,7 +577,7 @@
       </tbody>
     </table>
 
-    <details class="answers"><summary>Key, mid-sequence assessment</summary>
+    <details class="answers prof-only"><summary>Key, mid-sequence assessment</summary>
       <p><strong>A.</strong> 1. That Paul is simply a hero. 2. The danger of charismatic leaders. 3. Courage and unity. 4. The right to speak for them. 5. If a leader talks for everyone, the people lose their own voice.</p>
       <p><strong>B.</strong> 1. A Bene Gesserit order that plants protective legends and prophecies on worlds like Arrakis, so that a sister can later use them. 2. Warrior and mystic; ogre and saint; the fox and the innocent; chivalrous and ruthless (also: less than a god, more than a man). 3. Paul's legend is written by others: the Bene Gesserit before him, the Princess Irulan after him.</p>
       <p><strong>Expected direction for C.</strong> B1: Paul helps the Fremen to win, but the legend was written by others, so the Fremen do not entirely decide; a hero can be dangerous. B2: Paul is both the voice of the Fremen and the instrument of a legend planted by the Bene Gesserit and written by Irulan; the price may be paid by the people who follow him.</p>

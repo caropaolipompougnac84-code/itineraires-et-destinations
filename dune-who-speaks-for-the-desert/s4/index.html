@@ -419,8 +419,9 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/wadi-rum-camel.jpg" alt="A healthy camel walking along a sandy track in Wadi Rum, with red cliffs in the distance." width="1600" height="1063"><figcaption>A camel in Wadi Rum, Jordan. Photo: Jorge Láscar. CC BY 2.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 4 of 8</p>
     <h1>Lesson 4. Making a Messiah</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
@@ -499,7 +523,7 @@
       <span class="ref">Q3. Book I, first chapter, the test of the gom jabbar. Read the litany, and the half page before it, in the class edition.</span>
     </div>
     <p>Read the litany aloud, with stress and pauses: first the class together, then volunteers. It is a ritual sentence, short, repetitive, with a rhythm. Religious language works by repetition. Why is a sentence you repeat stronger than a sentence you understand?</p>
-    <details class="teacher"><summary>Teacher's note on Q3</summary>
+    <details class="teacher prof-only"><summary>Teacher's note on Q3</summary>
       <p>Check the exact wording, and the lines that follow, in your edition. The two sentences given here are the opening of the litany and are widely attested; if your edition continues with more lines, you may read them aloud, still as a short extract.</p>
     </details>
 
@@ -517,13 +541,13 @@
         <p><span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Write a legend of 60 words, then underline every place where the agent (who did it) is hidden.</p>
       </div>
     </div>
-    <details class="teacher"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
+    <details class="teacher prof-only"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
       <p>Read at natural speed, twice. Written for the sequence.</p>
       <blockquote><p>A prophecy is a story about the future. When people hear the same story for generations, they wait for someone who fits it. On Arrakis, the Fremen wait for a man from outside, the Lisan al-Gaib, the voice from the outer world. When Paul and his mother arrive in the desert, many signs seem to match. Paul knows the legend was planted, and he also sees that he can use it. The question is not whether the signs are true; it is who decided what the signs would be.</p></blockquote>
       <p>&quot;Lisan al-Gaib&quot; and &quot;the voice from the outer world&quot; are terms from the novel; check the spelling in your edition.</p>
     </details>
 
-    <details class="answers"><summary>Key, B1 legend</summary>
+    <details class="answers prof-only"><summary>Key, B1 legend</summary>
       <p>The prophecy was written long ago. A legend was planted among the people. A mother and a son were sent from the outer world. Their story was told as a sign. Other correct passives are welcome, if the agent is discussed afterwards.</p>
     </details>
 
@@ -550,7 +574,7 @@
       <li>People are telling his story.</li>
       <li>They have seen the signs.</li>
     </ol>
-    <details class="answers"><summary>Key, exercise 4</summary>
+    <details class="answers prof-only"><summary>Key, exercise 4</summary>
       <p>a) The prophecy was written long ago. b) He will be followed (by the Fremen). c) His story is being told. d) The signs have been seen. Discuss: which agents disappear, and who gains from their disappearance?</p>
     </details>
 

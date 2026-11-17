@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/dys/">Start here</a>
 <a href="/whose-land-whose-water/dys/#presentation">Présentation</a>
@@ -213,14 +237,14 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>It is based on real events. It does not represent every Inuit experience.</p>
 <section class="card"><span class="tag">Exercise 1</span><h3>Check the introduction</h3><div class="worked"><b>Worked example.</b><br>Question: Is this a film or a newspaper article?<br>Answer: It is a film.</div>
 <p>Now answer.</p>
-<ol><li>Who directed the film?<br>Miranda de Pencier / Russ Sheppard</li><li>Where is the story set?<br>Kugluktuk / London</li><li>Can one film show every Inuit experience?<br>Yes / No</li></ol><div class="ans"><h3>Self-check</h3><ol><li>Miranda de Pencier.</li><li>Kugluktuk.</li><li>No.</li></ol></div></section>
+<ol><li>Who directed the film?<br>Miranda de Pencier / Russ Sheppard</li><li>Where is the story set?<br>Kugluktuk / London</li><li>Can one film show every Inuit experience?<br>Yes / No</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>Miranda de Pencier.</li><li>Kugluktuk.</li><li>No.</li></ol></div></section>
 <h3>3. Before you watch</h3>
 <section class="card"><span class="tag">Exercise 2</span><h3>Give a first opinion</h3><div class="worked"><b>Worked example.</b><br>Statement: A team needs people to listen to one another.<br>Answer: I agree because players need to cooperate.</div>
 <p>Choose one statement.</p>
 <p>A. Keeping a promise matters.</p>
 <p>B. A coach does not know everything.</p>
 <p>Complete:</p>
-<div class="script"><p>I agree / partly agree / disagree because <span class="gap"></span>.</p></div><div class="ans"><h3>Self-check</h3><ul><li>I chose one statement.</li><li>I gave my view.</li><li>I used “because”.</li><li>Different views are possible.</li></ul></div></section>
+<div class="script"><p>I agree / partly agree / disagree because <span class="gap"></span>.</p></div><div class="ans prof-only"><h3>Self-check</h3><ul><li>I chose one statement.</li><li>I gave my view.</li><li>I used “because”.</li><li>Different views are possible.</li></ul></div></section>
 <h3>4. Names to recognise</h3><div class="tbl-scroll"><table class="grid"><thead><tr><th>Name</th><th>Who is this?</th></tr></thead><tbody>
 <tr><td>Russ</td><td>The teacher and coach</td></tr>
 <tr><td>Miranda</td><td>A student who helps organise the project</td></tr>
@@ -233,24 +257,24 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <h3>5. Watch Part 1: Russ arrives</h3><p>Stop after Russ decides to try a lacrosse project.</p>
 <section class="card"><span class="tag">Exercise 3</span><h3>Notice the beginning</h3><div class="worked"><b>Worked example.</b><br>Question: Who is the new teacher?<br>Answer: Russ.</div>
 <p>Now answer.</p>
-<ol><li>What subject does Russ teach?<br>History / Music</li><li>Does he understand everything when he arrives?<br>Yes / No</li><li>Choose one difficulty.<br>Poor attendance / A broken spaceship</li></ol><div class="ans"><h3>Self-check</h3><ol><li>History.</li><li>No.</li><li>Poor attendance.</li></ol>
+<ol><li>What subject does Russ teach?<br>History / Music</li><li>Does he understand everything when he arrives?<br>Yes / No</li><li>Choose one difficulty.<br>Poor attendance / A broken spaceship</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>History.</li><li>No.</li><li>Poor attendance.</li></ol>
 <p>The factual choices follow the film’s opening events.</p></div></section>
 <h3>6. Watch Part 2: a team begins</h3><p>Stop when regular practice is developing.</p>
 <section class="card"><span class="tag">Exercise 4</span><h3>Notice who acts</h3><div class="worked"><b>Worked example.</b><br>Question: What sport does Russ introduce?<br>Answer: Lacrosse.</div>
 <p>Now answer.</p>
-<ol><li>Who advises Russ to involve Zach and Adam?<br>Miranda / Janace</li><li>What does Russ offer Zach for an early practice?<br>Money / A car</li><li>Where has Kyle been sleeping?<br>A cargo container / A hotel</li><li>Complete:<br>“Miranda helps the project by <span class="gap"></span>.”</li></ol><div class="ans"><h3>Self-check</h3><ol><li>Miranda.</li><li>Money.</li><li>A cargo container.</li><li>Advising Russ about involving players.</li></ol>
+<ol><li>Who advises Russ to involve Zach and Adam?<br>Miranda / Janace</li><li>What does Russ offer Zach for an early practice?<br>Money / A car</li><li>Where has Kyle been sleeping?<br>A cargo container / A hotel</li><li>Complete:<br>“Miranda helps the project by <span class="gap"></span>.”</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>Miranda.</li><li>Money.</li><li>A cargo container.</li><li>Advising Russ about involving players.</li></ol>
 <p>These answers refer to actions in the film, not to claims about young people in general.</p></div></section>
 <h3>7. Watch Part 3: family, land and money</h3><p>Stop after the council decides to support the trip.</p>
 <section class="card"><span class="tag">Exercise 5</span><h3>Follow the decisions</h3><div class="worked"><b>Worked example.</b><br>Question: Where does the team want to go?<br>Answer: Toronto.</div>
 <p>Now answer.</p>
-<ol><li>Who helps organise fundraising?<br>Miranda / Only Russ</li><li>What are Adam and his grandparents doing when Russ visits them on the land?<br>Hunting seals / Shopping in Toronto</li><li>Why do Adam’s grandparents distrust school?<br>Experiences connected with residential schools / They dislike all learning</li><li>Who helps change the council’s decision?<br>Adam’s grandmother / A visiting television presenter</li></ol><div class="ans"><h3>Self-check</h3><ol><li>Miranda.</li><li>Hunting seals.</li><li>Experiences connected with residential schools.</li><li>Adam’s grandmother.</li></ol>
+<ol><li>Who helps organise fundraising?<br>Miranda / Only Russ</li><li>What are Adam and his grandparents doing when Russ visits them on the land?<br>Hunting seals / Shopping in Toronto</li><li>Why do Adam’s grandparents distrust school?<br>Experiences connected with residential schools / They dislike all learning</li><li>Who helps change the council’s decision?<br>Adam’s grandmother / A visiting television presenter</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>Miranda.</li><li>Hunting seals.</li><li>Experiences connected with residential schools.</li><li>Adam’s grandmother.</li></ol>
 <p>The family’s distrust must not be simplified into opposition to all education.</p></div></section>
 <section class="card"><span class="tag">Exercise 6</span><h3>Think about land and water</h3><div class="worked"><b>Worked example.</b><br>Observation: The family is hunting.<br>Interpretation: This connects the place with obtaining food.</div>
 <p>Choose two possible connections.</p>
 <p>In this scene, land and water are connected with:</p>
 <ul><li>food;</li><li>family knowledge;</li><li>proof that everyone has the same opinion.</li></ul>
 <p>Then complete:</p>
-<div class="script"><p>This scene shows <span class="gap"></span>.</p></div><div class="ans"><h3>Self-check</h3><p>Choose:</p>
+<div class="script"><p>This scene shows <span class="gap"></span>.</p></div><div class="ans prof-only"><h3>Self-check</h3><p>Choose:</p>
 <ul><li>food;</li><li>family knowledge.</li></ul>
 <p>Possible sentence:</p>
 <div class="script"><p>This scene shows knowledge used to obtain food.</p></div>
@@ -259,11 +283,11 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <section class="card"><span class="tag">Exercise 7</span><h3>Notice support</h3><p>You do not need to describe the death shown in this part.</p>
 <div class="worked"><b>Worked example.</b><br>Question: Must I explain a personal experience?<br>Answer: No.</div>
 <p>Now answer.</p>
-<ol><li>Is Russ considering a job elsewhere?<br>Yes / No</li><li>Who challenges him as he prepares to leave?<br>Miranda / An opposing player</li><li>Where are the young people gathered?<br>The gymnasium / An airport café</li></ol><div class="ans"><h3>Self-check</h3><ol><li>Yes.</li><li>Miranda.</li><li>The gymnasium.</li></ol></div></section>
+<ol><li>Is Russ considering a job elsewhere?<br>Yes / No</li><li>Who challenges him as he prepares to leave?<br>Miranda / An opposing player</li><li>Where are the young people gathered?<br>The gymnasium / An airport café</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>Yes.</li><li>Miranda.</li><li>The gymnasium.</li></ol></div></section>
 <h3>9. Watch Part 5: the competition and ending</h3><p>Watch to the end, including the closing material.</p>
 <section class="card"><span class="tag">Exercise 8</span><h3>Check what success means</h3><div class="worked"><b>Worked example.</b><br>Question: Does competing always mean winning?<br>Answer: No.</div>
 <p>Now answer.</p>
-<ol><li>Does the team win the competition?<br>Yes / No</li><li>What matters during the match?<br>Scoring a goal / Winning every game</li><li>Who encourages the team to keep trying?<br>Kyle / A spectator</li><li>Does Russ decide to stay?<br>Yes / No</li><li>Does the closing material connect the story with real people?<br>Yes / No</li></ol><div class="ans"><h3>Self-check</h3><ol><li>No.</li><li>Scoring a goal.</li><li>Kyle.</li><li>Yes.</li><li>Yes.</li></ol></div></section>
+<ol><li>Does the team win the competition?<br>Yes / No</li><li>What matters during the match?<br>Scoring a goal / Winning every game</li><li>Who encourages the team to keep trying?<br>Kyle / A spectator</li><li>Does Russ decide to stay?<br>Yes / No</li><li>Does the closing material connect the story with real people?<br>Yes / No</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>No.</li><li>Scoring a goal.</li><li>Kyle.</li><li>Yes.</li><li>Yes.</li></ol></div></section>
 <h3>10. Building your vocabulary</h3><p>Read one row at a time.</p>
 <div class="tbl-scroll"><table class="grid"><thead><tr><th>Word</th><th>Meaning</th></tr></thead><tbody>
 <tr><td>agency</td><td>being able to act and influence events</td></tr>
@@ -276,21 +300,21 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <section class="card"><span class="tag">Exercise 9</span><h3>Match three words</h3><div class="worked"><b>Worked example.</b><br>support : help</div>
 <p>Now match.</p>
 <ol><li>agency</li><li>belonging</li><li>raise funds</li></ol>
-<ol type="a"><li>collect money</li><li>ability to influence events</li><li>feeling connected</li></ol><div class="ans"><h3>Self-check</h3><p>1b; 2c; 3a.</p></div></section>
+<ol type="a"><li>collect money</li><li>ability to influence events</li><li>feeling connected</li></ol><div class="ans prof-only"><h3>Self-check</h3><p>1b; 2c; 3a.</p></div></section>
 <section class="card"><span class="tag">Exercise 10</span><h3>Complete two sentences</h3><div class="worked"><b>Worked example.</b><br>Word: support<br>Sentence: The players support one another.</div>
 <p>Use: agency, raise funds.</p>
-<ol><li>Miranda helps <span class="gap"></span> for the trip.</li><li>Making decisions shows <span class="gap"></span>.</li></ol><div class="ans"><h3>Self-check</h3><ol><li>raise funds</li><li>agency</li></ol></div></section>
+<ol><li>Miranda helps <span class="gap"></span> for the trip.</li><li>Making decisions shows <span class="gap"></span>.</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>raise funds</li><li>agency</li></ol></div></section>
 <h3>11. Use careful language</h3><p>You are a student discussing a film.</p>
 <p>You are not speaking in place of Inuit people.</p>
 <p>Useful sentences:</p>
 <ul><li>I think …</li><li>In this scene, …</li><li>Miranda’s actions suggest …</li><li>The film presents …</li><li>This may show …</li><li>This does not tell us what everyone thinks.</li></ul>
 <section class="card"><span class="tag">Exercise 11</span><h3>Choose the careful sentence</h3><div class="worked"><b>Worked example.</b><br>A. All Inuit young people think alike.<br>B. The film presents several young characters.<br>Better answer: B. It does not generalise.</div>
 <p>Now choose.</p>
-<ol><li><br>A. Adam’s grandparents are shown as distrusting school.<br>B. All Inuit families reject education.</li><li><br>A. Sport fixes everything.<br>B. Sport can create support.</li><li><br>A. I speak for this community.<br>B. I am giving my interpretation of the film.</li></ol><div class="ans"><h3>Self-check</h3><ol><li>A.</li><li>B.</li><li>B.</li></ol></div></section>
+<ol><li><br>A. Adam’s grandparents are shown as distrusting school.<br>B. All Inuit families reject education.</li><li><br>A. Sport fixes everything.<br>B. Sport can create support.</li><li><br>A. I speak for this community.<br>B. I am giving my interpretation of the film.</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>A.</li><li>B.</li><li>B.</li></ol></div></section>
 <h3>12. Make useful sentences</h3>
 <section class="card"><span class="tag">Exercise 12</span><h3>Use an activity as the subject</h3><div class="worked"><b>Worked example.</b><br>Play together can help.<br>Correct: Playing together can help.</div>
 <p>Choose.</p>
-<ol><li>Playing / Play together can build support.</li><li>Listening / Listen to others can change an opinion.</li><li>Raising / Raise funds takes organisation.</li></ol><div class="ans"><h3>Self-check</h3><ol><li>Playing.</li><li>Listening.</li><li>Raising.</li></ol></div></section>
+<ol><li>Playing / Play together can build support.</li><li>Listening / Listen to others can change an opinion.</li><li>Raising / Raise funds takes organisation.</li></ol><div class="ans prof-only"><h3>Self-check</h3><ol><li>Playing.</li><li>Listening.</li><li>Raising.</li></ol></div></section>
 <section class="card"><span class="tag">Exercise 13</span><h3>Show a contrast</h3><p>“Although” helps you recognise two different facts.</p>
 <div class="worked"><b>Worked example.</b><br>The team loses. The match matters.<br>Although the team loses, the match matters.</div>
 <p>Complete.</p>
@@ -299,14 +323,14 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <ul><li>helps shape it;</li><li>has no role.</li></ul>
 <ol start="2"><li>Although sport creates opportunities, it <span class="gap"></span>.</li></ol>
 <p>Choose:</p>
-<ul><li>removes every difficulty;</li><li>does not remove every difficulty.</li></ul><div class="ans"><h3>Self-check</h3><ol><li>helps shape it.</li><li>does not remove every difficulty.</li></ol></div></section>
+<ul><li>removes every difficulty;</li><li>does not remove every difficulty.</li></ul><div class="ans prof-only"><h3>Self-check</h3><ol><li>helps shape it.</li><li>does not remove every difficulty.</li></ol></div></section>
 <h3>13. Give your response</h3>
 <section class="card"><span class="tag">Exercise 14</span><h3>Choose a meaningful moment</h3><div class="worked"><b>Worked example.</b><br>Moment: Miranda helps organise fundraising.<br>My response: I value this moment because it shows her influence.</div>
 <p>Choose one moment:</p>
 <ul><li>Miranda organises.</li><li>Adam learns with his grandparents.</li><li>The grandmother supports the team.</li><li>Kyle encourages the players.</li></ul>
 <p>Complete:</p>
 <div class="script"><p>I chose the moment when <span class="gap"></span>.</p></div>
-<div class="script"><p>It matters because <span class="gap"></span>.</p></div><div class="ans"><h3>Self-check</h3><ul><li>I named a moment.</li><li>I explained why it matters.</li><li>I did not claim everyone thinks the same thing.</li></ul>
+<div class="script"><p>It matters because <span class="gap"></span>.</p></div><div class="ans prof-only"><h3>Self-check</h3><ul><li>I named a moment.</li><li>I explained why it matters.</li><li>I did not claim everyone thinks the same thing.</li></ul>
 <p>Possible answer:</p>
 <div class="script"><p>I chose the moment when Kyle encourages the players. It matters because he helps define what they want to achieve.</p></div></div></section>
 <h3>14. Prepare for the debate</h3><p>Our question:</p>
@@ -324,7 +348,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>My limit:</p>
 <div class="script"><p>This does not mean <span class="gap"></span>.</p></div>
 <p>My question:</p>
-<div class="script"><p>Who / Why / How <span class="gap"></span>?</p></div><div class="ans"><h3>Self-check</h3><ul><li>My evidence is an action I watched.</li><li>I named the character.</li><li>I included a different contribution or viewpoint.</li><li>I did not speak for Inuit people.</li></ul>
+<div class="script"><p>Who / Why / How <span class="gap"></span>?</p></div><div class="ans prof-only"><h3>Self-check</h3><ul><li>My evidence is an action I watched.</li><li>I named the character.</li><li>I included a different contribution or viewpoint.</li><li>I did not speak for Inuit people.</li></ul>
 <p>Possible answer:</p>
 <div class="script"><p>I think the project depends on several people. In the film, Miranda helps raise funds. However, Russ introduces lacrosse. This does not mean that one person saves everyone. How does the grandmother also influence the project?</p></div></div></section>
 <section class="card"><span class="tag">Exercise 16</span><h3>Connect with the sequence</h3><div class="worked"><b>Worked example.</b><br>Film idea: People should be heard in decisions affecting them.<br>Sequence link: We can ask who is heard in a land or water decision.</div>
@@ -332,7 +356,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>A. This film proves the legal facts of every land dispute.</p>
 <p>B. This film helps us ask whose knowledge and decisions matter.</p>
 <p>Then complete:</p>
-<div class="script"><p>To make a factual claim about a land or water dispute, I need <span class="gap"></span>.</p></div><div class="ans"><h3>Self-check</h3><ul><li>Choose B.</li><li>Possible completion: “a relevant source about that dispute”.</li></ul>
+<div class="script"><p>To make a factual claim about a land or water dispute, I need <span class="gap"></span>.</p></div><div class="ans prof-only"><h3>Self-check</h3><ul><li>Choose B.</li><li>Possible completion: “a relevant source about that dispute”.</li></ul>
 <p>The connection is a question about decision-making. It is not proof of a separate legal claim.</p></div></section>
 <h3>15. Your spoken contribution</h3>
 <section class="card"><span class="tag">Exercise 17</span><h3>Prepare and speak</h3><div class="worked"><b>Worked example.</b><br>I think Miranda shows agency. She helps raise funds. Although Russ starts the team, he does not act alone. I am discussing the film, not speaking for a community.</div>
@@ -355,7 +379,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>SEGPA access route, where relevant:</p>
 <p>Use the CAP sentences.</p>
 <p>Read one sentence at a time.</p>
-<p>You may rehearse each sentence separately before joining them.</p><div class="ans"><h3>Self-check</h3><ul><li>I gave my own view.</li><li>I named a film moment.</li><li>I used “can”, “may” or “although”.</li><li>I avoided “all Inuit people”.</li><li>I spoke aloud, even if I was working alone.</li></ul></div></section>
+<p>You may rehearse each sentence separately before joining them.</p><div class="ans prof-only"><h3>Self-check</h3><ul><li>I gave my own view.</li><li>I named a film moment.</li><li>I used “can”, “may” or “although”.</li><li>I avoided “all Inuit people”.</li><li>I spoke aloud, even if I was working alone.</li></ul></div></section>
 <h3>16. Make two flashcards</h3>
 <section class="card"><span class="tag">Exercise 18</span><h3>Make and review</h3><div class="worked"><b>Worked example.</b><br>Front: agency<br>Back: ability to influence events.<br>Example: Miranda shows agency through organising.</div>
 <p>Now make two cards.</p>
@@ -366,7 +390,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>Card 2:</p>
 <p>Front: <span class="gap"></span></p>
 <p>Meaning: <span class="gap"></span></p>
-<p>Example: <span class="gap"></span></p><div class="ans"><h3>Self-check</h3><ul><li>Each card has a word or useful structure.</li><li>Each card has a meaning.</li><li>Each card has an example.</li><li>I tested myself with the back covered.</li></ul>
+<p>Example: <span class="gap"></span></p><div class="ans prof-only"><h3>Self-check</h3><ul><li>Each card has a word or useful structure.</li><li>Each card has a meaning.</li><li>Each card has an example.</li><li>I tested myself with the back covered.</li></ul>
 <p>Review the cards the next day and before the debate.</p></div></section>
 <h3>17. Keep your written record</h3><div class="script"><p>The team’s story involves several people. Young people make decisions and support one another. Sport can create hope, but it does not remove every difficulty. I discuss named characters and do not speak for Inuit people.</p></div>
 <h3>18. Final independent check</h3>
@@ -384,25 +408,25 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>Write one improvement:</p>
 <div class="script"><p>My first version: <span class="gap"></span>.</p></div>
 <div class="script"><p>What I need to change: <span class="gap"></span>.</p></div>
-<div class="script"><p>My improved version: <span class="gap"></span>.</p></div><div class="ans"><h3>Self-check</h3><p>Your improved version should correct an error, add evidence or make a claim more careful.</p></div></section>
+<div class="script"><p>My improved version: <span class="gap"></span>.</p></div><div class="ans prof-only"><h3>Self-check</h3><p>Your improved version should correct an error, add evidence or make a claim more careful.</p></div></section>
 <h4>Bring to the next lesson</h4><ul><li>Your short viewing notes.</li><li>Your debate card.</li><li>Your improved sentences.</li><li>Your two flashcards.</li></ul>
 <section class="card"><h2>Building your vocabulary</h2><ul><li>team: people working or playing together;</li><li>hope: a feeling that something good is possible;</li><li>give up: stop trying;</li><li>support: help;</li><li>synopsis: a short account of a story;</li><li>trailer: a short video with some moments from a film.</li></ul></section>
 <section class="card"><span class="tag">Exercise 1</span><h3>Read and choose</h3><div class="worked"><b>Worked example.</b><br>What sport is involved?<br>Lacrosse.</div>
 <p>Now choose:</p>
 <ol><li>The story concerns a team / a pipeline.</li><li>A synopsis is a short account / the whole film.</li><li>A trailer shows the whole film. Yes / No.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>A team; a short account; no.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>A team; a short account; no.</p></div></section>
 <section class="card"><span class="tag">Exercise 2</span><h3>Match words</h3><div class="worked"><b>Worked example.</b><br>give up : stop trying.</div>
 <p>Match:</p>
 <ol><li>support;</li><li>hope;</li><li>team.</li></ol>
 <ol type="a"><li>people playing or working together;</li><li>help;</li><li>feeling that something good is possible.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>1b, 2c, 3a.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>1b, 2c, 3a.</p></div></section>
 <section class="card"><span class="tag">Exercise 3</span><h3>Watch the trailer</h3><div class="offlink"><p><b>Viewing document.</b> THE GRIZZLIES Trailer [HD] Mongrel Media. Mongrel Media · YouTube, 19 February 2019 · 2 min 20. Official trailer of the film. Watch from 0:00 to 2:20. <a href="https://www.youtube.com/watch?v=FNrw1UzJoBw" target="_blank" rel="noopener">Open on YouTube</a>.</p></div>
 <p>Watch from 0:00 to 2:20. Watch it twice.</p>
 <div class="worked"><b>Worked example.</b><br>Where is the story?<br>In the Arctic. The trailer says: “Welcome to the edge of the world.”</div>
 <p>Watch for:</p>
 <ol><li>What sport does the teacher propose? Lacrosse / hockey.</li><li>The teacher asks: “You lived up here a long time?” The answer is: “6,000 years.” / “Ten years.”</li><li>A student says to the teacher: “This is not about you.” / “Thank you for saving us.”</li><li>Complete: “We are proud, strong, full of <span class="gap"></span>.”</li></ol>
 <div class="source"><span class="tag">Support account</span><p>The trailer shows a teacher from the south in Kugluktuk. He proposes lacrosse. A parent says: “Family comes first.” A student tells the teacher: “This is not about you.” The team says: “We are proud, strong, full of hope.”</p><p><i>Use it only if you cannot listen. Label your answer “Reading-support route”.</i></p></div>
-<div class="ans"><h3>Self-check</h3><p>Lacrosse; “6,000 years.”; “This is not about you.”; hope.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Lacrosse; “6,000 years.”; “This is not about you.”; hope.</p></div></section>
 <section class="card"><span class="tag">Exercise 4</span><h3>Listen</h3><div class="offlink"><p><b>Listening document.</b> The Grizzlies | Interview with Miranda De Pencier, Anna Lambe and Paul Nutarariaq. Telefilm Canada · YouTube, 8 April 2022 · 5 min 39. Listen first without reading. If the video does not work, use the support account and write “Reading-support route”. <a href="https://www.youtube.com/watch?v=tFpmtT0IVPQ" target="_blank" rel="noopener">Open on YouTube</a>.</p></div>
 <p>Use only:</p>
 <ul><li>0:15 to 0:35;</li><li>1:28 to 2:15;</li><li>4:47 to 5:12.</li></ul>
@@ -411,23 +435,23 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>Listen for:</p>
 <ol><li>Does the teacher say the students changed him? <span class="gap"></span>.</li><li>Does the final extract look towards the future? <span class="gap"></span>.</li></ol>
 <div class="source"><span class="tag">Support account</span><p>The teaching dossier says the teacher felt the young people changed him more than he changed them. The interview also expresses hope for a younger Inuit generation.</p><p><i>Use it only if you cannot listen. Label your answer “Reading-support route”.</i></p></div>
-<div class="ans"><h3>Self-check</h3><p>Yes; yes.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Yes; yes.</p></div></section>
 <section class="card"><span class="tag">Exercise 5</span><h3>Use an activity as a subject</h3><div class="worked"><b>Worked example.</b><br>Play together helps.<br>Playing together helps.</div>
 <p>Complete:</p>
 <ol><li><span class="gap"></span> together can build support.<br>Choose: Playing / Play.</li><li><span class="gap"></span> a trailer gives some information.<br>Choose: Watching / Watch.</li><li>They did not give <span class="gap"></span>.<br>Choose: up / out.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Playing; Watching; up.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Playing; Watching; up.</p></div></section>
 <section class="card"><span class="tag">Exercise 6</span><h3>Say where your idea comes from</h3><div class="worked"><b>Worked example.</b><br>In the film, the students form a team. In the trailer, a student says: “This is not about you.”</div>
 <p>Complete:</p>
 <ol><li>In the film, <span class="gap"></span>.</li><li>The trailer does not show <span class="gap"></span>.</li></ol>
-<div class="ans"><h3>Self-check</h3><ol><li>a true moment from the film, for example: the students form a team;</li><li>the whole story, for example: the end of the film.</li></ol>
+<div class="ans prof-only"><h3>Self-check</h3><ol><li>a true moment from the film, for example: the students form a team;</li><li>the whole story, for example: the end of the film.</li></ol>
 <p>Other true answers are acceptable.</p></div></section>
 <section class="route"><h2>Speaking: your route</h2><div class="worked"><b>Worked example.</b><br>The film is about young people and a team. In the trailer, a student says: “This is not about you.”</div><h3>Route S · SEGPA</h3><p>Use the Route C sentences below. Say the first sentence aloud. Then say the second one. You may read them from the page, one at a time.</p><h3>Route C · CAP or CFA</h3><p>Say:</p>
 <div class="script"><p>The film is about young people and a team.<br>The film gives a message of hope.</p></div><h3>Route P · Bac pro or CFA</h3><p>Prepare a film recommendation for colleagues:</p>
-<div class="script"><p>This film may be useful because…<br>It shows…<br>One voice I remember is…</p></div><h3>Route G · Lycée général et technologique, LVA</h3><p>Give a short introduction and explain why youth agency matters. Use one voice from the film.</p><h3>Route G · Lycée général et technologique, LVB</h3><p>Give three linked sentences: the subject, one voice from the film and the message.</p><div class="ans"><h3>Self-check</h3><p>Say where your idea comes from. Do not claim one story represents all Inuit experiences.</p></div></section>
+<div class="script"><p>This film may be useful because…<br>It shows…<br>One voice I remember is…</p></div><h3>Route G · Lycée général et technologique, LVA</h3><p>Give a short introduction and explain why youth agency matters. Use one voice from the film.</p><h3>Route G · Lycée général et technologique, LVB</h3><p>Give three linked sentences: the subject, one voice from the film and the message.</p><div class="ans prof-only"><h3>Self-check</h3><p>Say where your idea comes from. Do not claim one story represents all Inuit experiences.</p></div></section>
 <h2>Written record</h2><div class="record"><div class="plain"><p>I watched the film at home. A trailer shows only some moments. I say where my idea comes from: the film, the trailer or the interview.</p></div></div>
 <h2>Homework</h2><div class="card"><div class="worked"><b>Worked example.</b><br>One voice: a student tells the teacher, “This is not about you.” This shows that the young people act for themselves.</div>
 <p>Write one voice from the film: who speaks, what they say and what it shows.</p>
-<div class="ans"><h3>Self-check</h3><p>Say who speaks, what they say and what it shows.</p></div></div>
+<div class="ans prof-only"><h3>Self-check</h3><p>Say who speaks, what they say and what it shows.</p></div></div>
 </main>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>

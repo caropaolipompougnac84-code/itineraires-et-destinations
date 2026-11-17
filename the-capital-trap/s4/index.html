@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/the-capital-trap/">The Capital Trap</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-capital-trap/">Home</a>
 <a href="/the-capital-trap/s1/">L1</a>
@@ -163,7 +187,7 @@ body.dys main{max-width:720px}
 <li>Name a state that borders Mexico.</li>
 <li>Which lake is near Salt Lake City?</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>The Rio Grande.</li>
 <li>The Mississippi.</li>
@@ -194,7 +218,7 @@ body.dys main{max-width:720px}
 <p><strong>The hidden meaning.</strong> Detroit comes from French <em>détroit</em> (a strait). Boise comes from <em>boisé</em> (wooded). Baton Rouge: a red stick marked a border. Juneau takes its name from a French-Canadian gold prospector. Los Angeles means “the angels”; Nevada means “snowy”; Florida means “flowery”; Colorado means “red”. Chicago comes from a Native American word for a wild onion. Mississippi means “great river”.</p>
 <p>Many American place names come from French, Spanish or Native American languages. They tell the history of the country.</p>
 </div>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>The table above is already sorted. Juneau is a person’s name (Joe Juneau, a French-Canadian prospector), so it is listed with the French names even though it is not a translated word like Detroit or Boise.</p></div>
 
 <h2>Surprise cards · 5 min</h2>

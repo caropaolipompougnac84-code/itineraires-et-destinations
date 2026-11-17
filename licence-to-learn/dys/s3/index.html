@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/dys/">Start here</a>
 <a href="/licence-to-learn/dys/s1/">L1</a>
@@ -167,7 +191,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 1</span><h3>Match</h3>
 <div class="worked"><b>Worked example.</b> MI5 : UK national security.</div>
 <div><b>Now you.</b><p>Match:</p><ol><li>MI6</li><li>overseas</li><li>MI5 agent</li></ol><p>With:</p><p>a. in another country &nbsp; b. foreign intelligence &nbsp; c. provides information, not an employee</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ol><li>b</li><li>a</li><li>c</li></ol></div>
 
 </section>
@@ -175,7 +199,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 2</span><h3>Grammar</h3>
 <div class="worked"><b>Worked example.</b> They protect. MI5 protects.</div>
 <div><b>Now you.</b><p>Choose:</p><ol><li>MI5 protect / protects UK national security.</li><li>Officers work / works with partners.</li><li>An agent provide / provides information.</li></ol><p>Route P question example: MI5 protects UK national security. What does MI5 protect? Now make a question: MI6 collects foreign intelligence.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ol><li>protects</li><li>work</li><li>provides</li></ol><p>Route P: What does MI6 collect?</p></div>
 
 </section>
@@ -183,7 +207,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 3</span><h3>Correct the statement</h3>
 <div class="worked"><b>Worked example.</b> MI5 only has staff in London. Correction: MI5 also has staff elsewhere.</div>
 <div><b>Now you.</b><p>Now: MI5 never has staff overseas.</p><p>Route P: explain why never is too strong.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <p>MI5 has staff overseas.</p><p>Route P model: Never is too strong because MI5 has staff based around the world.</p></div>
 
 </section>
@@ -203,7 +227,7 @@ body.dys p,body.dys li{max-width:38em}
 <p>MI6 collects <span class="gap"></span> intelligence.</p>
 <p>An MI5 agent is not an <span class="gap"></span>.</p>
 </div>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>UK national security; foreign; employee.</p></div>
 
 </main>

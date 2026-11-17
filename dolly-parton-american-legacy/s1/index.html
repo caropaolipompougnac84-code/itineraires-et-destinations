@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,13 +250,36 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/country-music-hall-of-fame-guitars.jpg" alt="A gallery of guitars and photographs in the Country Music Hall of Fame, Nashville." width="1600" height="1067"><figcaption>Country Music Hall of Fame, Nashville, 2022. Photo: Antony-22. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><h1>Lesson 1. An icon in colour: Warhol's Dolly</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
 <p><strong>Debatable question:</strong> Does a portrait show a person, or the image the public wants?<br />
 <strong>By the end of this lesson, I can:</strong> describe a portrait, say what a person looks like and give my impression, compare two images.</p>
 <p><img loading="lazy" alt="Andy Warhol, Dolly Parton, 1985" src="../img/warhol-dolly-1985.jpg" /><br />
 Andy Warhol, <em>Dolly Parton</em>, 1985. Poster of the Andy Warhol retrospective, Museum Ludwig, Cologne, 1989-1990. © The Andy Warhol Foundation for the Visual Arts. Protected work, reproduced as a one-off teaching exception.</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -444,17 +468,17 @@ Andy Warhol, <em>Dolly Parton</em>, 1985. Poster of the Andy Warhol retrospectiv
 1. her hair · 2. her eyes · 3. her eyeshadow · 4. her lips · 5. her earrings · 6. the background<br />
 a. lilac · b. scarlet · c. turquoise · d. platinum blonde · e. pale peach · f. green</p>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1d, 2f, 3a, 4b, 5c, 6e.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1d, 2f, 3a, 4b, 5c, 6e.</p></details>
 <p><strong>Exercise A2. Fill in the gaps</strong> with: icon · striking · background · foreground · pop art<br />
 Warhol was a (1) <strong><em>_</em>_ painter. In this portrait, Dolly’s face is in the (2) </strong><strong><em>_ and the (3) </em></strong><strong><em> is pale peach. The most (4) </em></strong><strong><em> detail is her red mouth. With this portrait, she became an (5) </em></strong>___.</p>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 pop art · 2 foreground · 3 background · 4 striking · 5 icon.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 pop art · 2 foreground · 3 background · 4 striking · 5 icon.</p></details>
 <p><strong>Exercise A3. Reformulate with a nuance word</strong> (rather, quite, a bit, almost).<br />
 1. The colours are very bright. → (a bit too)<br />
 2. Her hair fills the picture. → (almost)<br />
 3. She looks artificial. → (rather)</p>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1. The colours are a bit too bright. 2. Her hair almost fills the picture. 3. She looks rather artificial.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1. The colours are a bit too bright. 2. Her hair almost fills the picture. 3. She looks rather artificial.</p></details>
 <h3>Flashcards of the lesson</h3>
 <p>Make at least six cards: four blue (theme), one green (opinion), one red (grammar).</p>
 <table>
@@ -528,24 +552,24 @@ Warhol was a (1) <strong><em>_</em>_ painter. In this portrait, Dolly’s face i
 </tbody>
 </table>
 <p><strong>Quick check.</strong> Correct: <em>She is having green eyes.</em></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> She has green eyes.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> She has green eyes.</p></details>
 <h2>Step 6. Exercises</h2>
 <p><strong>Exercise 1. look or look like?</strong><br />
 1. She ... happy. 2. She ... a film star. 3. The colours ... very bright. 4. The earrings ... two big sweets. 5. The portrait ... a poster from the 1980s.</p>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 looks · 2 looks like · 3 look · 4 look like · 5 looks like.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 looks · 2 looks like · 3 look · 4 look like · 5 looks like.</p></details>
 <p><strong>Exercise 2. Present simple or present continuous?</strong><br />
 1. Dolly (smile) ... in the portrait. 2. She (have) ... big curly hair. 3. She (look) ... straight at us. 4. Warhol (use) ... bright colours in his portraits. 5. The background (be) ... pale peach.</p>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 is smiling · 2 has · 3 is looking · 4 uses · 5 is.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 is smiling · 2 has · 3 is looking · 4 uses · 5 is.</p></details>
 <p><strong>Exercise 3. Compare</strong> the poster and an official photo.<br />
 1. In the portrait, her hair is (bright) ... than in the photo. 2. The colours are (artificial) ... 3. The photo is (realistic) ... 4. The red lips are the (striking) ... detail.</p>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 brighter · 2 more artificial than in the photo · 3 more realistic than the portrait · 4 most striking.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 brighter · 2 more artificial than in the photo · 3 more realistic than the portrait · 4 most striking.</p></details>
 <p><strong>Exercise 4. Transform</strong> into the present continuous when possible. If it is impossible, explain why.<br />
 1. She smiles. 2. She has turquoise earrings. 3. She looks at the camera. 4. She knows the painter.</p>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 She is smiling. 2 Impossible: have for a feature is a state verb. 3 She is looking at the camera. 4 Impossible: know is a state verb.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 She is smiling. 2 Impossible: have for a feature is a state verb. 3 She is looking at the camera. 4 Impossible: know is a state verb.</p></details>
 <p><strong>Exercise 5. Short production.</strong> Write six sentences: two in the present simple, two in the present continuous, one with looks or looks like, one comparative.</p>
 <p><strong>Model answer:</strong> Dolly has big platinum curls. She wears turquoise earrings. She is smiling. She is looking straight at us. She looks like a film star. The colours are brighter than in real life.</p>
 <p class="help-box"><strong>Help box.</strong> Use this frame: <em>In the foreground, I can see... She has... She is... She looks like... The colours are ...-er than...</em></p>

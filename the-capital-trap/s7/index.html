@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/the-capital-trap/">The Capital Trap</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-capital-trap/">Home</a>
 <a href="/the-capital-trap/s1/">L1</a>
@@ -146,14 +170,14 @@ body.dys main{max-width:720px}
 <h2>The Route 66 trap · 10 min</h2>
 <p>Students trace the road on the National Atlas map (and on the rivers map if they follow the Mississippi first).</p>
 <p>Route 66 goes through Springfield, Illinois, and Springfield, Missouri. Which one is a capital?</p>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>Springfield, Illinois, is a capital. Springfield, Missouri, is not (the capital of Missouri is Jefferson City). Another capital on the road is Oklahoma City, which is both the biggest city and the capital. No trap this time.</p></div>
 
 <h2>The preterite · 14 min</h2>
 <p><span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Read Lucas’s trip. Students underline the verbs, then complete exercise 4. After that, sort the regular <em>-ed</em> endings.</p>
 <h3>Exercise 4. Lucas’s trip</h3>
 <p>Lucas ______ (fly) to Chicago. He ______ (visit) the city and ______ (take) photos of the lake. Then he ______ (drive) to Springfield, the capital of Illinois. In New Orleans, he ______ (eat) gumbo and ______ (listen) to jazz. At the end, he ______ (swim) in Key West.</p>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>flew, visited, took, drove, ate, listened, swam</p></div>
 
 <div class="tbl-scroll"><table class="grid">
@@ -180,7 +204,7 @@ body.dys main{max-width:720px}
 <li><strong>Route 66.</strong> Start in Chicago, finish in Los Angeles. Find the 2 capitals on the way and avoid the Springfield trap.</li>
 </ol>
 </div>
-<div class="ans"><p class="tag">Answer key, exercise 5</p>
+<div class="ans prof-only"><p class="tag">Answer key, exercise 5</p>
 <p>Open answers in the preterite. A complete itinerary names at least three cities and one capital, uses two or three connectors (<em>first, then, finally</em>), and, if possible, one comparison or one surprise fact (a name origin, Juneau, or a trap).</p></div>
 
 <div class="recap">

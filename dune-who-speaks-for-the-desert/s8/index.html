@@ -419,8 +419,9 @@
     }
 
   </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-general" class="english-look">
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/ait-benhaddou-arch.jpg" alt="An archway in the ksar of Ait Benhaddou, opening onto a green valley." width="1600" height="1067"><figcaption>Ait Benhaddou, Morocco. Photo: Dlinemedia. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 8 of 8</p>
     <h1>Lesson 8. The Council of the Deep Desert</h1>
@@ -514,7 +538,7 @@
       <li>So I think we must thank him, but the council must decide. <em>(Your decision.)</em></li>
     </ol>
     <p>The dys version of the final task uses the same seven boxes, one sentence per box.</p>
-    <details class="answers"><summary>A B2 model statement (read after you have written yours, or at the teacher's invitation)</summary>
+    <details class="answers prof-only"><summary>A B2 model statement (read after you have written yours, or at the teacher's invitation)</summary>
       <blockquote><p>Elders of the sietch, I was trained by the planetologist, and I speak for the desert. Muad'Dib has given us victory, and I do not deny it. Our enemies have been defeated, and the spice is in our hands. Yet I ask you: in whose hands, exactly? The legend we sang was planted long ago by strangers, and the man who fulfilled it has learnt to speak our words better than we do. When he told the Guild that &quot;the power to destroy a thing is the absolute control over it&quot;, he spoke of our planet as a weapon. Kynes's father warned us that no disaster could be more terrible than to &quot;fall into the hands of a Hero&quot;. Although Muad'Dib loves us, a people that hands its voice to one man may never take it back. If we follow him across the stars, our sons will die far from the sand, and the slow plan to bring water to Dune will be forgotten. I propose that we honour him, but that the council, not the prophet, decides the future of the desert. The highest function of ecology is understanding consequences; let it be ours too.</p></blockquote>
       <p>This is a model, not the only right answer. Another reasoned decision, well supported, is equally welcome.</p>
     </details>
@@ -534,7 +558,7 @@
 
     <h3>Self-correction grid</h3>
     <p>The same structure as in Lesson 5: What I did / What I missed / My improved version. After the lesson, rewrite your conclusion and one paragraph, following the teacher grid.</p>
-    <details class="teacher"><summary>Expected answers at two levels, and common errors</summary>
+    <details class="teacher prof-only"><summary>Expected answers at two levels, and common errors</summary>
       <p><strong>B1.</strong> &quot;Paul helps the Fremen to win, but the legend was written by others, so the Fremen do not decide. A hero can be dangerous.&quot;</p>
       <p><strong>B2.</strong> &quot;Paul is both the voice of the Fremen and the instrument of a legend planted by the Bene Gesserit and written by Irulan. His victory gives the Fremen power but takes away their voice and threatens Kynes's long ecological plan; the price is paid by the Fremen and by the desert.&quot;</p>
       <p><strong>Common errors, and how to redirect.</strong></p>

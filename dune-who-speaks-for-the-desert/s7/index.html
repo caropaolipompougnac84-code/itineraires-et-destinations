@@ -419,8 +419,9 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/wadi-rum-cliff.jpg" alt="A red sandstone cliff rising from the sand in Wadi Rum, under a blue sky." width="1600" height="1063"><figcaption>Cliffs in Wadi Rum, Jordan. Photo: Jorge Láscar. CC BY 2.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 7 of 8</p>
     <h1>Lesson 7. The Hero Trap</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale</p>
@@ -517,11 +541,11 @@
       <span class="ref">Q8. Book III, final chapter: Paul faces the Emperor and the Guild. Read the threat to the spice, and the Guild's reaction, in your edition.</span>
     </div>
     <p>Q8 shows the liberator using the language of total control, and of the destruction of the very resource that defined the planet. Link this with Q9: the leader understands consequences and uses them as a weapon. Has the hero become the new owner of the spice?</p>
-    <details class="teacher"><summary>Teacher's note on Q8</summary>
+    <details class="teacher prof-only"><summary>Teacher's note on Q8</summary>
       <p>Some sources give an earlier formulation, in Paul's thoughts: &quot;He who can destroy a thing has the real control of it.&quot; Check which wording your edition uses, and where (spoken threat, or inner thought, or both). Use your edition with the class. Do not write the film line &quot;The spice must flow&quot; as if it belonged to this chapter: it does not belong to the novel.</p>
     </details>
 
-    <details class="answers"><summary>Key, a direction for Q7 and Q8</summary>
+    <details class="answers prof-only"><summary>Key, a direction for Q7 and Q8</summary>
       <p>B1, pairs: warrior / mystic; ogre / saint; the fox / the innocent; chivalrous / ruthless; less than a god / more than a man. Which side &quot;wins&quot; is a reasoned choice, not a single answer. B2: the antitheses refuse a simple portrait; Irulan's official history cannot close the question it opens, and that doubt is already a comment on power. Q8: the hero now speaks as a controller of the resource; the liberator uses destruction as a form of ownership.</p>
     </details>
 
@@ -547,7 +571,7 @@
       <li>a legend / dangerous / an army</li>
       <li>Kynes's plan / slow / Paul's war</li>
     </ol>
-    <details class="answers"><summary>Key, exercise 6</summary>
+    <details class="answers prof-only"><summary>Key, exercise 6</summary>
       <p>a) The Fremen are not as independent as before / less independent than before (both are arguable). b) A legend can be more dangerous than an army. c) Kynes's plan is slower than Paul's war. Accept any reasoned order: the content is debatable, the structure must be correct.</p>
     </details>
 

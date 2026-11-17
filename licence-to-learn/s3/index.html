@@ -92,8 +92,9 @@ body.dys main{max-width:720px}
 .box-check li{margin:.35em 0}
 .gap{display:inline-block;min-width:4.5em;border-bottom:1.5px solid var(--ink);margin:0 .2em}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -102,6 +103,29 @@ body.dys main{max-width:720px}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/">Home</a>
 <a href="/licence-to-learn/s1/">L1</a>
@@ -175,7 +199,7 @@ body.dys main{max-width:720px}
 <tr><td>Does the mission require cooperation?</td><td class="blank"></td><td class="blank"></td></tr>
 </tbody></table></div>
 
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ul><li>MI5: Security Service; UK national security; yes; yes.</li><li>MI6: Secret Intelligence Service; foreign intelligence; yes; yes.</li></ul></div>
 
 <h2>Worksheet 3B. Correct the statement</h2>
@@ -185,7 +209,7 @@ body.dys main{max-width:720px}
 <li>An MI5 agent is an employee.</li>
 <li>Intelligence work only means chasing suspects.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>MI5 has staff overseas.</li><li>MI6 officers work in the UK and overseas.</li><li>MI5 agents are not employees; its employed staff are officers.</li><li>Intelligence work also includes analysis, languages, technology and coordination.</li></ol></div>
 
 <h2>Building your vocabulary: grammar practice</h2>
@@ -196,7 +220,7 @@ body.dys main{max-width:720px}
 <li>An agent <span class="gap"></span> information. (provide)</li>
 <li>The services <span class="gap"></span> different responsibilities. (have)</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>protects</li><li>work</li><li>provides</li><li>have</li></ol></div>
 
 <h3>Exercise 2. Form the questions</h3>
@@ -205,7 +229,7 @@ body.dys main{max-width:720px}
 <li>officers / where / work / do?</li>
 <li>an agent / does / information / provide?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>What does MI5 protect?</li><li>Where do officers work?</li><li>Does an agent provide information?</li></ol></div>
 
 <h3>Exercise 3. Compare with whereas</h3>
@@ -214,7 +238,7 @@ body.dys main{max-width:720px}
 <li>MI5 focuses on UK national security. MI6 focuses on foreign intelligence.</li>
 <li>An officer is employed by MI5. An agent is not.</li>
 </ol>
-<div class="ans"><h3>Model answers</h3>
+<div class="ans prof-only"><h3>Model answers</h3>
 <ol><li>MI5 focuses on UK national security, whereas MI6 focuses on foreign intelligence.</li><li>An officer is employed by MI5, whereas an agent is not.</li></ol></div>
 
 <h3>Exercise 4. Define with who</h3>
@@ -222,7 +246,7 @@ body.dys main{max-width:720px}
 <li>An agent is a person who <span class="gap"></span>.</li>
 <li>An analyst is a person who <span class="gap"></span>.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol><li>provides information or assistance.</li><li>examines information to understand it.</li></ol></div>
 
 <h2><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Protected oral intervention</h2>
@@ -255,7 +279,7 @@ body.dys main{max-width:720px}
 <p>Their missions differ, but their work can cross <span class="gap"></span>.</p>
 <p>An MI5 officer is an <span class="gap"></span>. An agent provides <span class="gap"></span>.</p>
 </div>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>UK national security; foreign; borders; employee; information.</p></div>
 
 <p class="offlink">Public sources: <a href="https://www.mi5.gov.uk/" target="_blank" rel="noopener">MI5</a> and <a href="https://www.sis.gov.uk/" target="_blank" rel="noopener">SIS (MI6)</a>.</p>

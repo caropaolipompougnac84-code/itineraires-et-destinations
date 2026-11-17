@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,11 +250,34 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/cades-cove-sunny-morning.jpg" alt="A sunny meadow and trees in Cades Cove, in the Great Smoky Mountains." width="1600" height="1200"><figcaption>Cades Cove, Great Smoky Mountains National Park, June 2015. Photo: Great Smoky Mountains National Park. Public domain, Wikimedia Commons.</figcaption></figure><h1>Lesson 6. Aunt Dolly: passing the torch to Miley</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale</p>
 <p><strong>Debatable question:</strong> What can you really pass on to someone who is not your child?<br />
 <strong>By the end of this lesson, I can:</strong> tell the story of a bond between two people, report what they said, compare two voices.</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -315,7 +339,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>When did Dollywood open? 2. Complete: <em>The park has existed ... 1986.</em> 3. Two jobs at Dollywood.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 On 3 May 1986. · 2 since · 3 lifeguard, ride operator, chef.</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 On 3 May 1986. · 2 since · 3 lifeguard, ride operator, chef.</li>
 </ol>
 <h2>Step 2. The question of the day</h2>
 <p>Ask: Who is your godmother, godfather, tutor or mentor? What did this person give you that money cannot buy?</p></details>
@@ -336,7 +360,7 @@
 - 10 February 2019: Jolene together at the 61st Grammy Awards, during a tribute to Dolly.<br />
 - 2023: <em>Wrecking Ball</em>, Miley’s hit, sung together on Dolly’s album <em>Rockstar</em>.</p>
 <p><strong>Reading task.</strong> Who asked Dolly to be the godmother? What does “honorary” mean here? Which song comes back most often in the timeline?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> Billy Ray Cyrus · it is not an official religious role, it is a title of honour and affection · Jolene.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> Billy Ray Cyrus · it is not an official religious role, it is a title of honour and affection · Jolene.</p></details>
 <h3>Clip 1. Jolene (Backyard Sessions)</h3>
 <p><span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span><strong>Watch or listen:</strong> Miley Cyrus, <em>The Backyard Sessions</em>, “Jolene”, official Miley Cyrus channel: <a href="https://www.youtube.com/watch?v=wOwblaKmyVw">https://www.youtube.com/watch?v=wOwblaKmyVw</a><br />
 <strong>Play from 0:00 to 1:32.</strong></p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/wOwblaKmyVw" title="YouTube video wOwblaKmyVw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><p class="video-link">Exact link, to keep unchanged: <a href="https://www.youtube.com/watch?v=wOwblaKmyVw">https://www.youtube.com/watch?v=wOwblaKmyVw</a></p></div>
@@ -345,13 +369,13 @@
 2. please don’t take my ......<br />
 3. Please don’t take him even though you ......<br />
 4. How many times does she sing the name “Jolene” in the first line?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 begging · 2 man · 3 can · 4 four times.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 begging · 2 man · 3 can · 4 four times.</p></details>
 <p><strong>Context.</strong> In <em>Jolene</em> (1973), a woman begs a beautiful rival not to take her man. Miley, a young singer, chooses a song written by Dolly fifty years ago: this is one way a song is passed on.</p>
 <h3>Clip 2. Rainbowland</h3>
 <p><strong>Watch or listen:</strong> Miley Cyrus, <em>Rainbowland</em> (feat. Dolly Parton), official Miley Cyrus channel: <a href="https://www.youtube.com/watch?v=GtFw9dEwrbo">https://www.youtube.com/watch?v=GtFw9dEwrbo</a><br />
 <strong>Play from 0:00 to 2:00.</strong></p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/GtFw9dEwrbo" title="YouTube video GtFw9dEwrbo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><p class="video-link">Exact link, to keep unchanged: <a href="https://www.youtube.com/watch?v=GtFw9dEwrbo">https://www.youtube.com/watch?v=GtFw9dEwrbo</a></p></div>
 <p><strong>Task.</strong> 1. Who sings first? 2. Note three words about the world they dream of. 3. Describe the two voices with adjectives: <em>high, low, soft, husky, bright, powerful, gentle, deep</em>.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key (possible):</strong> 1 Miley · 2 rainbow, love, peace, together, colours · 3 Dolly’s voice is high and bright; Miley’s voice is low and husky.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key (possible):</strong> 1 Miley · 2 rainbow, love, peace, together, colours · 3 Dolly’s voice is high and bright; Miley’s voice is low and husky.</p></details>
 <p><strong>Optional (not YouTube):</strong> Dolly Parton and Miley Cyrus perform Jolene at the 2019 Grammys, video published by Billboard: https://www.billboard.com/video/dolly-parton-jolene-about-2019-billboard-grammy-awards-coverage-on-billboardgn-sourceflv/ . Task: watch without sound; write three sentences on how they look at each other (proud, tender, playful, close, confident).</p>
 <h3>Document 2. Advice and tribute</h3>
 <blockquote>
@@ -364,7 +388,7 @@
 (quoted by Lead Stories, 9 September 2026)</p>
 </blockquote>
 <p><strong>Reading task.</strong> What does “You do you” mean?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> be yourself, follow your own way, do what is right for you.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> be yourself, follow your own way, do what is right for you.</p></details>
 <h2>Step 4. Expanding your vocabulary: heritage</h2>
 <table>
 <thead>
@@ -435,10 +459,10 @@
 <p><strong>Words to report and comment:</strong> according to... · she claimed that... · she admitted that... · she explained that... · in other words,...</p>
 <h3>Exercises on vocabulary</h3>
 <p><strong>Exercise F1. Match.</strong> 1 role model · 2 heir · 3 bond · 4 cover / a strong link · b a person you admire · c a song sung by another artist · d a person who inherits</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1b, 2d, 3a, 4c.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1b, 2d, 3a, 4c.</p></details>
 <p><strong>Exercise F2. Fill in the gaps:</strong> looked up to · passed on · under her wing · legacy<br />
 Miley (1) <strong><em>_</em>_ Dolly. Dolly took her (2) </strong><strong><em>_. She (3) </em></strong><strong><em> songs and advice. Today, this is part of her (4) </em></strong>___.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 looked up to · 2 under her wing · 3 passed on · 4 legacy.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 looked up to · 2 under her wing · 3 passed on · 4 legacy.</p></details>
 <h3>Flashcards</h3>
 <table>
 <thead>
@@ -504,14 +528,14 @@ Miley (1) <strong><em>_</em>_ Dolly. Dolly took her (2) </strong><strong><em>_. 
 <h2>Step 6. Exercises</h2>
 <p><strong>Exercise 1. Who said it?</strong> Dolly, Miley or Billy Ray?<br />
 1. “You just have to be her godmother.” 2. “I accept.” 3. “You do you, I’ll do me, and together we’ll be us.” (who reported it to the press?)</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Billy Ray Cyrus · 2 Dolly · 3 the advice came from Dolly; Miley reported it.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Billy Ray Cyrus · 2 Dolly · 3 the advice came from Dolly; Miley reported it.</p></details>
 <p><strong>Exercise 2. Timeline.</strong> 2006 · 2010 · 2017 · 2023 / a Rainbowland · b Aunt Dolly in Hannah Montana · c Wrecking Ball on Rockstar · d Jolene at Dollywood</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 2006 b · 2010 d · 2017 a · 2023 c.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 2006 b · 2010 d · 2017 a · 2023 c.</p></details>
 <p><strong>Exercise 3. Report the words.</strong><br />
 1. Dolly: “I am her honorary godmother.” → Dolly said that... 2. Dolly to Miley: “Be yourself.” → Dolly told Miley... 3. Billy Ray: “Will you be her godmother?” → Billy Ray asked Dolly if... 4. Miley: “I will always love her.” → Miley said that...</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 she was her honorary godmother · 2 to be herself · 3 she would be her godmother · 4 she would always love her.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 she was her honorary godmother · 2 to be herself · 3 she would be her godmother · 4 she would always love her.</p></details>
 <p><strong>Exercise 4. say or tell?</strong> 1 Dolly ... Miley to be herself. 2 Miley ... that she was heartbroken. 3 Dolly ... the journalist that she had known Miley since she was a baby.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 told · 2 said · 3 told.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 told · 2 said · 3 told.</p></details>
 <p><strong>Exercise 5. Report the best advice</strong> you have received from an adult, a tutor or a boss (five sentences).<br />
 <strong>Model answer:</strong> My tutor told me to arrive ten minutes early. She said that customers always remembered a smile. She advised me to ask questions. She asked me if I liked the job. She told me not to give up.</p>
 <p class="help-box"><strong>Help box.</strong> Frames: <em>He/She told me to... · He/She said that... · He/She asked me if...</em><br />

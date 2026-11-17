@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/dys/">Start here</a>
 <a href="/whose-land-whose-water/dys/#presentation">Présentation</a>
@@ -149,7 +173,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <section class="card"><h2>Three sentence tools</h2>
 <div class="worked"><b>Worked example.</b><br>The government promised to end the advisories.</div>
 <ol><li>Say a promise: “The government promised to…”</li><li>Say what was done: “The agreement was signed in 1975.” “Some advisories were lifted.”</li><li>Add a limit and a request: “However, some advisories were still active. Please explain the next steps.”</li></ol>
-<div class="ans"><h3>Self-check</h3><p>promised <b>to</b> + verb; was / were + past participle; However + a limit.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>promised <b>to</b> + verb; was / were + past participle; However + a limit.</p></div></section>
 <section class="card"><h2>Building your vocabulary</h2><h3>Lesson 1. What Can I See?</h3><ul><li>see: notice with your eyes;</li><li>might: perhaps;</li><li>line: a long thin mark;</li><li>connect: join;</li><li>alone: without another person.</li></ul>
 <h3>Lesson 2. Equal Citizens and Existing Rights</h3><ul><li>proposal: a plan for discussion;</li><li>right: something people are entitled to;</li><li>equality: equal worth or treatment;</li><li>withdraw: take back;</li><li>plus: something additional.</li></ul>
 <h3>Lesson 3. A Dam Changes a Place</h3><ul><li>dam: a structure holding back water;</li><li>reservoir: an artificial lake;</li><li>benefit: something helpful;</li><li>loss: something no longer available;</li><li>agreement: a decision accepted by parties.</li></ul>

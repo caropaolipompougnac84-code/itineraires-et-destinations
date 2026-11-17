@@ -110,8 +110,9 @@ body.dys main{max-width:720px}
 .grid-wrap{overflow-x:auto}
 table.grid td,table.grid th{font-size:.92rem}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look" style="--c:#1f4fd1">
+<body class="dys english-look mode-eleve" style="--c:#1f4fd1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -121,6 +122,29 @@ table.grid td,table.grid th{font-size:.92rem}
 <a href="/who-rules-britain/">Who Rules Britain?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/portrait-of-a-queen/dys/">Home</a>
 <a href="/portrait-of-a-queen/dys/s1/">L1</a>
@@ -166,7 +190,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>Why was the anointing not filmed in 1953?</li>
 <li>Name two adjectives from the method that you could use about a royal portrait.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>An official, ageless, approved face that hides real ageing.</li>
 <li>To keep a sacred moment out of the public gaze.</li>
@@ -197,7 +221,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <div class="card">
 <p><b>A further official case, also not reproduced.</b> Graham Sutherland’s portrait of Winston Churchill (1954) was so unflinching that Churchill hated it, and it was later destroyed. It is useful as a comparison (a sitter who did not accept the truth of the paint), but it is not the main document of this lesson, and it is still in copyright. If you show it, use an official museum or archive page, not a copy on this site.</p>
 </div>
-<div class="ans"><h3>Answer key · model comparison</h3>
+<div class="ans prof-only"><h3>Answer key · model comparison</h3>
 <p>Annigoni builds a timeless icon, close to Elizabeth I’s mask of youth: the Queen is distant and serene. Freud refuses the icon: tiny format, heavy paint, an ageing face. Paradoxically, the Queen accepted to sit for him, which can be read as a sign of confidence in the institution.</p>
 </div>
 <section class="exit"><span class="tag">Exit ticket</span>

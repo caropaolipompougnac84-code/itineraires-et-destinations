@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/dys/">Start here</a>
 <a href="/whose-land-whose-water/dys/#presentation">Présentation</a>
@@ -187,25 +211,25 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <ul><li>White Paper and Red Paper;</li><li>James Bay;</li><li>Muskrat Falls or Site C;</li><li>a pipeline;</li><li>drinking water.</li></ul>
 <p>Complete:</p>
 <ol><li>My case is <span class="gap"></span>.</li><li>My lesson source is <span class="gap"></span>.</li><li>One fact I can explain is <span class="gap"></span>.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>All three fields must be complete. Use the earlier lesson text if necessary.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>All three fields must be complete. Use the earlier lesson text if necessary.</p></div></section>
 <section class="card"><span class="tag">Exercise 2</span><h3>Sort the message</h3><div class="worked"><b>Worked example.</b><br>“Please publish a dated update.”<br>This is a request.</div>
 <p>Label:</p>
 <ol><li>“The snapshot is dated 10 September 2026.” <span class="gap"></span>.</li><li>“Please explain the remaining work.” <span class="gap"></span>.</li><li>“The figures do not describe every water problem.” <span class="gap"></span>.</li></ol>
 <p>Choose: fact / request / limitation.</p>
-<div class="ans"><h3>Self-check</h3><p>Fact; request; limitation.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Fact; request; limitation.</p></div></section>
 <section class="card"><span class="tag">Exercise 3</span><h3>Complete the language</h3><div class="worked"><b>Worked example.</b><br>I am writing about water.</div>
 <p>Complete:</p>
 <ol><li>I am writing <span class="gap"></span> the project.<br>Choose: about / at.</li><li>According <span class="gap"></span> the source, <span class="gap"></span>.<br>Choose: to / for.</li><li>Please <span class="gap"></span> the next steps.<br>Choose: explain / explains.</li></ol>
 <p>General extension:</p>
 <ol start="4"><li>Correct: “Although progress was made, but the task was unfinished.”</li></ol>
-<div class="ans"><h3>Self-check</h3><p>About; to; explain; “Although progress was made, the task was unfinished.”</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>About; to; explain; “Although progress was made, the task was unfinished.”</p></div></section>
 <section class="card"><span class="tag">Exercise 4</span><h3>Prepare your oral message</h3><div class="worked"><b>Worked example.</b><br>I am speaking about drinking water. The official snapshot records progress, but active advisories remained. I ask for clear dated updates.</div>
 <p>Write:</p>
 <ol><li>My subject is <span class="gap"></span>.</li><li>According to <span class="gap"></span>, <span class="gap"></span>.</li><li>One limit is <span class="gap"></span>.</li><li>I ask for <span class="gap"></span>.</li></ol>
 <p>Say your four sentences aloud.</p>
 <p>Then answer this question aloud:</p>
 <div class="script"><p>Why is your request useful?</p></div>
-<div class="ans"><h3>Self-check</h3><p>Your answer should give a reason linked to the case.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Your answer should give a reason linked to the case.</p></div></section>
 <section class="route"><h2>Speaking: your route</h2><h3>Route S · SEGPA</h3><p>Use the Route C model below. Choose two sentences. Copy them. Say them aloud.</p><div class="worked"><b>Worked example.</b><br>I am writing about drinking water.<br>Please give communities clear information about the remaining work.</div><h3>Route C · CAP or CFA</h3><p>Write 40 to 60 words.</p>
 <div class="worked"><b>Worked model.</b><br>Dear Member of Parliament,<br>I am writing about drinking water. The official September 2026 snapshot shows progress, but some advisories were still active. The figures come from Indigenous Services Canada.<br>Please give communities clear information about the remaining work.<br>Yours sincerely,<br>A student</div><h3>Route P · Bac pro or CFA</h3><p>Write a briefing email of approximately 100 to 150 words.</p>
 <div class="script"><p>Subject: Evidence and next steps</p><p>Dear <span class="gap"></span>,</p><p>This message concerns <span class="gap"></span>.</p><p>The main fact is <span class="gap"></span>.</p><p>The source and date are <span class="gap"></span>.</p><p>A remaining concern is <span class="gap"></span>.</p><p>Before the next decision, please <span class="gap"></span>.</p><p>This would help because <span class="gap"></span>.</p><p>Kind regards,<br><span class="gap"></span></p></div>
@@ -221,7 +245,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>Find one sentence in your own message that needs greater precision.</p>
 <p>Write:</p>
 <div class="script"><p>First version: <span class="gap"></span>.<br>Improved version: <span class="gap"></span>.</p></div>
-<div class="ans"><h3>Self-check</h3><p>The improved sentence should be clearer, better supported or less absolute.</p></div></div>
+<div class="ans prof-only"><h3>Self-check</h3><p>The improved sentence should be clearer, better supported or less absolute.</p></div></div>
 </main>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>

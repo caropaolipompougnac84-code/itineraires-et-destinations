@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/dys/">Start here</a>
 <a href="/the-verdict-of-the-people/dys/s1/">L1</a>
@@ -137,37 +161,37 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise S1</span><h3>True or false</h3>
 <div class="worked"><b>Worked example.</b> “Puerto Rico is a US territory.” True.</div>
 <p><b>Now you.</b><br>1. Puerto Rico has senators.<br>2. Washington, D.C. is a state.</p>
-<div class="ans"><h4>Self-check</h4><p>1. False.<br>2. False.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. False.<br>2. False.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
 <div class="worked"><b>Worked example.</b> “Puerto Rico has a representative.”</div>
 <p><b>Now you.</b><br>Complete: “Puerto Rico and Washington, D.C. have no <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>senators.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Compare</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>senators.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Compare</h3>
 <div class="worked"><b>Worked example.</b> “Both places have representatives.”</div>
 <p><b>Now you.</b><br>Write one similarity. Say your answer aloud.</p>
-<div class="ans"><h4>Self-check</h4><p>Possible answers: Both places have representatives. Neither place has senators. Neither place is a state.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Possible answers: Both places have representatives. Neither place has senators. Neither place is a state.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t3c">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t3c"><p>Puerto Rico elects a Resident Commissioner.</p><p>This representative can introduce bills and vote in committees.</p><p>However, the representative cannot vote on the final approval of a bill in the full House.</p><p>Washington, D.C. has a House delegate.</p><p>Neither place has senators.</p><p>Washington, D.C. has presidential electors.</p><p>Puerto Rico does not.</p></div></div>
 <section class="card"><span class="tag">Exercise C1</span><h3>Match</h3>
 <div class="worked"><b>Worked example.</b> “Resident Commissioner” goes with Puerto Rico.</div>
 <p><b>Now you.</b><br>Match with Puerto Rico or Washington, D.C.:<br>1. House delegate.<br>2. No presidential electors.</p>
-<div class="ans"><h4>Self-check</h4><p>1. Washington, D.C.<br>2. Puerto Rico.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Complete the contrast</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. Washington, D.C.<br>2. Puerto Rico.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Complete the contrast</h3>
 <div class="worked"><b>Worked example.</b> “Both places have House representation.”</div>
 <p><b>Now you.</b><br>Complete: “Washington, D.C. has presidential electors, whereas <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>“Washington, D.C. has presidential electors, whereas Puerto Rico does not.”</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Correct</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>“Washington, D.C. has presidential electors, whereas Puerto Rico does not.”</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Correct</h3>
 <div class="worked"><b>Worked example.</b> “Puerto Rico has no representation.” Correction: “Puerto Rico has a Resident Commissioner.”</div>
 <p><b>Now you.</b><br>Correct: “The Resident Commissioner has no powers.”</p>
-<div class="ans"><h4>Self-check</h4><p>“The Resident Commissioner has powers, including introducing bills and voting in committees.”</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>“The Resident Commissioner has powers, including introducing bills and voting in committees.”</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t3p">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t3p"><p>Puerto Rico and Washington, D.C. have federal representation, but not the same arrangements as states.</p><p>Neither has senators.</p><p>Puerto Rico’s Resident Commissioner has responsibilities in the House, including committee work.</p><p>However, the Resident Commissioner cannot vote on the final approval of a bill in the full House.</p><p>Washington, D.C. has presidential electors.</p><p>Puerto Rico does not.</p><p>These examples show why “representation” needs a precise explanation.</p></div></div>
 <section class="card"><span class="tag">Exercise P1</span><h3>Explain the difference</h3>
 <div class="worked"><b>Worked example.</b> “No representative” and “a representative with limited voting powers” do not mean the same thing.</div>
 <p><b>Now you.</b><br>Explain why “Puerto Rico has no representation” is misleading.</p>
-<div class="ans"><h4>Self-check</h4><p>It ignores the Resident Commissioner and the powers of that office.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Concession</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>It ignores the Resident Commissioner and the powers of that office.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Concession</h3>
 <div class="worked"><b>Worked example.</b> “Although the office has powers, it also has limits.”</div>
 <p><b>Now you.</b><br>Complete: “Although Puerto Rico has a Resident Commissioner, <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>Possible answer: “Although Puerto Rico has a Resident Commissioner, the office cannot vote on the final approval of a bill in the full House.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write a comparison</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Possible answer: “Although Puerto Rico has a Resident Commissioner, the office cannot vote on the final approval of a bill in the full House.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write a comparison</h3>
 <div class="worked"><b>Worked example.</b> Opening: “The two places share some features, but their arrangements are not identical.”</div>
 <p><b>Now you.</b><br>Write 60 to 80 words. Include <i>whereas</i> and one similarity.</p>
-<div class="ans"><h4>Self-check</h4><p>Mention: no senators, House representation, and the difference in presidential electors.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Mention: no senators, House representation, and the difference in presidential electors.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
 <p>CAP apprentice: use Route C. Bac pro apprentice: use Route P. Do Exercises 1 and 2 of your route, then do this task instead of Exercise 3. Keep the same written record and homework.</p>
-<section class="card"><span class="tag">CFA task</span><h3>Use precise information</h3><div class="worked"><b>Worked example.</b> “A person can have a role with specific limits.”</div><p><b>Now you.</b><br>Correct: “Puerto Rico has nobody in Congress.”</p><div class="ans"><h4>Self-check</h4><p>“Puerto Rico has a Resident Commissioner with specific powers and limits.”</p></div></section></section>
+<section class="card"><span class="tag">CFA task</span><h3>Use precise information</h3><div class="worked"><b>Worked example.</b> “A person can have a role with specific limits.”</div><p><b>Now you.</b><br>Correct: “Puerto Rico has nobody in Congress.”</p><div class="ans prof-only"><h4>Self-check</h4><p>“Puerto Rico has a Resident Commissioner with specific powers and limits.”</p></div></section></section>
 
 <section class="record"><span class="tag">Written record</span><p><b>S:</b> “Puerto Rico and Washington, D.C. have no senators.”</p><p><b>C:</b> “They have representation, but their arrangements differ.”</p><p><b>P:</b> “Representation is not simply present or absent. Its powers and limits matter.”</p></section>
 <section class="card"><p><b>Speaking frame.</b> “Both places <span class="gap"></span>, whereas <span class="gap"></span>.”</p><p><b>Emergency sentence.</b> “Puerto Rico has representation, but the office has limits.”</p></section>

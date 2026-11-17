@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/">Home</a>
 <a href="/the-verdict-of-the-people/s1/">L1</a>
@@ -144,35 +168,35 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 7A</span>
 <h3>Accuracy audit</h3>
 <p>Correct these statements before the discussion.</p><ol><li>Midterms directly replace the president.</li><li>The Senate alone approves all ordinary legislation.</li><li>Puerto Rico has no representative.</li><li>A media call is the same as certification.</li><li>The painting is a neutral photograph of an election.</li><li>A congressional result automatically decides the next trade policy.</li></ol>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>They elect Congress; they do not directly elect a new president.</li><li>Ordinary legislation generally needs both chambers and presentation to the president.</li><li>It has a Resident Commissioner with specific powers and limits.</li><li>A media call and legal certification are different acts.</li><li>It is an artistic representation that needs interpretation.</li><li>It may affect the political context, but the policy outcome needs further evidence.</li></ol>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 7B</span>
 <h3>Choose a useful connector</h3>
 <p>Use: however, nevertheless, moreover, therefore.</p><ol><li>The two places share some features; <span class="gap"></span>, their presidential-elector arrangements differ.</li><li>The report is recent. <span class="gap"></span>, its categories must still be checked.</li><li>The Senate considers nominations. <span class="gap"></span>, it has responsibilities concerning treaties.</li><li>We do not have certification evidence. <span class="gap"></span>, we should not describe the result as certified.</li></ol>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>however.</li><li>Nevertheless.</li><li>Moreover.</li><li>Therefore.</li></ol><p>Accept alternatives that give the intended logical link.</p>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 7C</span>
 <h3><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Repair the interaction</h3>
 <p>Rewrite each response politely and usefully.</p><ol><li>“That is stupid.”</li><li>“You are wrong about everything.”</li><li>“I do not know, so I will guess.”</li><li>“That proves what everybody thinks.”</li></ol>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <ol><li>“I am not convinced by that argument. What evidence supports it?”</li><li>“I think we are using different categories. Which figure are you referring to?”</li><li>“I cannot establish that from our sources.”</li><li>“That identifies an outcome, but it does not establish every voter’s motivation.”</li></ol>
 </div>
 </section>
 <section class="card"><span class="tag">Exercise 7D</span>
 <h3>Individual briefing note</h3>
 <p><b>Common B1+ route, 140 to 170 words, written for your role:</b> introduce your role’s question; explain two sourced facts; give one implication; state one limit; connect briefly to the driving question of the sequence. Use your own words and list your sources separately.</p><p><b>Towards B2:</b> integrate a counterpoint or compare two interpretations.</p>
-<div class="ans"><h4>Answer key</h4>
+<div class="ans prof-only"><h4>Answer key</h4>
 <p>No single model answer should supply election results. Check that each factual statement matches the student’s source log and that the cross-border consequence is presented as a hypothesis, not an established outcome. The word range is a classroom planning choice, not a CEFR threshold.</p>
 </div>
 </section>
 <section class="card" id="vocabulary"><h2>Expanding your vocabulary</h2>
 <div class="tbl-scroll"><table class="grid"><thead><tr><th>Function</th><th>Useful language</th></tr></thead><tbody><tr><td>Introduce evidence</td><td>“According to the source, updated on…”</td></tr><tr><td>Clarify</td><td>“Do you mean the outgoing or the incoming Congress?”</td></tr><tr><td>Distinguish</td><td>“That is a projection rather than a certified result.”</td></tr><tr><td>Concede</td><td>“That is a reasonable point; however…”</td></tr><tr><td>Identify uncertainty</td><td>“Our sources do not establish that.”</td></tr><tr><td>Summarise</td><td>“We agree on the rule, but the consequence is still uncertain.”</td></tr></tbody></table></div>
 <p><b>Quick exercise.</b> Which expression would you use when a speaker mixes up the Congress elected in November 2026 and the one sitting before January 2027?</p>
-<div class="ans"><h4>Answer key</h4><p>“Do you mean the outgoing or the incoming Congress?”</p></div></section>
+<div class="ans prof-only"><h4>Answer key</h4><p>“Do you mean the outgoing or the incoming Congress?”</p></div></section>
 <section class="record"><span class="tag">Written record · self-assessment</span><ul><li>One fact I explained accurately was…</li><li>One source I used was…</li><li>One question I answered was…</li><li>One claim I qualified was…</li><li>My next language target is…</li></ul></section>
 <section class="exit"><span class="tag">Exit ticket</span><p>Write one claim from today, then improve it with a qualification.</p></section>
 <h2>Homework for the next English lesson</h2><div class="card"><ol><li>Revise one paragraph of your briefing note.</li><li>Explain the revision in two sentences.</li><li>Review six flashcards.</li><li>Write one rule for checking claims that you could use on another topic.</li></ol></div>

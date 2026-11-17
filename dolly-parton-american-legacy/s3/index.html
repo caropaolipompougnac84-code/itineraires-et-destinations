@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,11 +250,34 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/ryman-auditorium-nashville.jpg" alt="The red-brick Ryman Auditorium in Nashville, seen on a bright day." width="1600" height="1067"><figcaption>Ryman Auditorium, Nashville. Photo: Daniel Schwen. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><h1>Lesson 3. Backstage: three role-plays</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
 <p><strong>Debatable question:</strong> Who really makes a star: the star or the team?<br />
 <strong>By the end of this lesson, I can:</strong> ask for something, offer help, make a suggestion, say no politely and pay a compliment in a professional situation.</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -315,7 +339,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>Give two words for hair and two words for bling. 2. Put in order: <em>dress / sparkly / pink / a</em>. 3. Past simple of make, wear, write.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 wig, curls; rhinestones, sequins · 2 a sparkly pink dress · 3 made, wore, wrote.</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 wig, curls; rhinestones, sequins · 2 a sparkly pink dress · 3 made, wore, wrote.</li>
 </ol>
 <h2>Step 2. The question of the day</h2>
 <p>Ask: Before a concert, who works with the star? Make a list on the board (dresser, hairdresser, wig maker, make-up artist, sound engineer, lighting technician, stage manager...). Then: <em>Who really makes a star: the star or the team?</em> Students vote with a show of hands and keep their vote for the end of the lesson.</p></details>
@@ -402,10 +426,10 @@
 <h3>Exercises on vocabulary</h3>
 <p><strong>Exercise C1. Who says it?</strong> dresser, hairdresser or make-up artist?<br />
 1. “Close your eyes, I’m doing your eyeliner.” 2. “I’ll take it in at the waist.” 3. “Shall I add more volume on top?”</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 make-up artist · 2 dresser · 3 hairdresser.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 make-up artist · 2 dresser · 3 hairdresser.</p></details>
 <p><strong>Exercise C2. Fill in the gaps:</strong> fitting · quick change · dressing room · stage lights<br />
 Dolly is in her (1) <strong><em>_</em>_. The (2) </strong><strong><em>_ is at six. After song three, she has a (3) </em></strong><strong><em> of two minutes. The colours must be strong for the (4) </em></strong>___.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 dressing room · 2 fitting · 3 quick change · 4 stage lights.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 dressing room · 2 fitting · 3 quick change · 4 stage lights.</p></details>
 <h3>Flashcards</h3>
 <table>
 <thead>
@@ -471,16 +495,16 @@ Dolly is in her (1) <strong><em>_</em>_. The (2) </strong><strong><em>_ is at si
 <h2>Step 5. Exercises</h2>
 <p><strong>Exercise 1. Request, offer, suggestion, disagreement or compliment?</strong><br />
 1. Shall I add some glitter? 2. I’m not sure about the green. 3. Could you make it a bit tighter? 4. What about false lashes? 5. I love the way it shines.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 offer · 2 polite disagreement · 3 request · 4 suggestion · 5 compliment.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 offer · 2 polite disagreement · 3 request · 4 suggestion · 5 compliment.</p></details>
 <p><strong>Exercise 2. Complete the dialogue</strong> with: Shall I · I’d rather · Could you · What about · I love<br />
 A: ... the white dress? B: Hmm, ... wear the pink one. A: OK. ... take it in at the waist? B: Yes, please. ... make it a bit shorter too? A: Of course. B: ... the way you work!</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> What about · I’d rather · Shall I · Could you · I love.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> What about · I’d rather · Shall I · Could you · I love.</p></details>
 <p><strong>Exercise 3. Make these sentences polite.</strong><br />
 1. Add hairspray. 2. I want the golden wig. 3. No, not the green eyeshadow. 4. Do it faster.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Could you add some hairspray, please? 2 I’d rather have the golden wig. / Could I have the golden wig? 3 I’m not sure about the green eyeshadow. 4 Would it be possible to do it a bit faster?</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Could you add some hairspray, please? 2 I’d rather have the golden wig. / Could I have the golden wig? 3 I’m not sure about the green eyeshadow. 4 Would it be possible to do it a bit faster?</p></details>
 <p><strong>Exercise 4. Offer or suggestion? Transform.</strong><br />
 1. I’ll add more volume. → (Shall I...?) 2. We use a zip. → (Why don’t we...?) 3. The pink lipstick. → (What about...?)</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Shall I add more volume? 2 Why don’t we use a zip? 3 What about the pink lipstick?</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Shall I add more volume? 2 Why don’t we use a zip? 3 What about the pink lipstick?</p></details>
 <h2><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Step 6-7. The three backstage role-plays</h2>
 <p>Work in pairs. One student plays Dolly, the other plays the professional. Prepare for five minutes with your card, play for two or three minutes, then change roles. Use the Help or Going further starters if you need them.</p>
 <h3>Scene 1. Dolly and her dresser</h3>

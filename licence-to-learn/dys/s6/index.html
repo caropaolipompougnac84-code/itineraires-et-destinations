@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/dys/">Start here</a>
 <a href="/licence-to-learn/dys/s1/">L1</a>
@@ -166,7 +190,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 1</span><h3>Match</h3>
 <div class="worked"><b>Worked example.</b> Which service? : I would choose MI5.</div>
 <div><b>Now you.</b><p>Match:</p><ol><li>What quality?</li><li>What must you do?</li><li>What mustn’t you do?</li></ol><p>With:</p><p>a. I must check information. &nbsp; b. I mustn’t invent evidence. &nbsp; c. I am patient.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ol><li>c</li><li>a</li><li>b</li></ol></div>
 
 </section>
@@ -174,7 +198,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 2</span><h3>Grammar</h3>
 <div class="worked"><b>Worked example.</b> I would like join MI5. Correct: I would like to join MI5.</div>
 <div><b>Now you.</b><p>Correct:</p><ol><li>She musts check information.</li><li>Yesterday, I check the report.</li><li>What did you learnt?</li></ol><p>Route S: item 1. Route C: items 1 and 2. Route P: all three.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ol><li>She must check information.</li><li>Yesterday, I checked the report.</li><li>What did you learn?</li></ol></div>
 
 </section>
@@ -182,7 +206,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 3</span><h3>Prepare your card</h3>
 <div class="worked"><b>Worked example.</b> Quality: patient. Sentence: I am patient.</div>
 <div><b>Now you.</b><p>Complete:</p><p>I choose <span class='gap'></span>.</p><p>My reason is <span class='gap'></span>.</p><p>I am <span class='gap'></span>.</p><p>My example is <span class='gap'></span>.</p><p>I must <span class='gap'></span>.</p><p>I mustn’t <span class='gap'></span>.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ul class='box-check'><li>□ My service choice makes sense.</li><li>□ I gave a quality.</li><li>□ My example supports it.</li><li>□ My rules have the right meanings.</li></ul></div>
 
 </section>
@@ -190,7 +214,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 4</span><h3>Ask for help</h3>
 <div class="worked"><b>Worked example.</b> I did not hear. Could you repeat the question, please?</div>
 <div><b>Now you.</b><p>Now: the recruiter speaks too quickly.</p><p>Route P: you need thinking time.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <p>Could you speak more slowly, please?</p><p>Route P: Could I have a moment to think?</p></div>
 
 </section>

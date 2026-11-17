@@ -78,8 +78,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="">
+<body class="mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -88,6 +89,29 @@ body.dys main{max-width:720px}
 <a href="/destination-australia/annexe/ancienne-version.html">Destination Australia</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/destination-australia/annexe/ancienne-version.html">Home</a>
 <a href="/destination-australia/annexe/s1/">L1</a>
@@ -129,7 +153,7 @@ body.dys main{max-width:720px}
 <li>Why is the AUD 5,000 not a visa fee?</li>
 <li>At what ages can a French passport holder generally apply for a first subclass 417 visa?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Passport, visa, available funds, flight, private insurance.</li>
 <li>It is available money for living costs (and a way to leave), not a payment to Home Affairs.</li>
@@ -158,7 +182,7 @@ body.dys main{max-width:720px}
 <div class="offlink"><p><b>Authentic document.</b> <a href="https://www.ato.gov.au/individuals-and-families/tax-file-number/apply-for-a-tfn/foreign-passport-holders-permanent-migrants-and-temporary-visitors-tfn-application" target="_blank" rel="noopener">Australian Taxation Office: TFN application for permanent migrants and temporary visitors</a>.</p></div>
 <p>If you have applied, tell your employer: the ATO normally allows 28 days to provide your TFN. A 45% withholding rate can apply if you do not provide it and no relevant exception applies. Do not put a TFN on a public resume or send it to an unverified recruiter.</p>
 <p><b>Your task.</b> Put the Big Four in your own checklist. Write one question to ask a bank and one question to ask a mobile provider.</p>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>SIM or eSIM, bank account, TFN and private insurance. Examples: “What account fees will I pay?” and “Does this plan cover the places where I will work?”</p>
 </div>
 <section class="exit"><span class="tag">Exit ticket</span>
@@ -166,7 +190,7 @@ body.dys main{max-width:720px}
 <li>List the Big Four.</li>
 <li>What should you do if you are unsure about an item in your luggage?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>SIM or eSIM, bank account, TFN, private insurance.</li>
 <li>Ask an officer before leaving the controlled area; declare items when required.</li>

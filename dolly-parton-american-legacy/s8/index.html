@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,12 +250,35 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/grand-ole-opry-2007.jpg" alt="The Grand Ole Opry building in Nashville, with flower beds and trees in front." width="1600" height="1170"><figcaption>Grand Ole Opry, Nashville, December 2007. Photo: Bobak Ha'Eri. CC BY 3.0, Wikimedia Commons.</figcaption></figure><h1>Lesson 8. Dolly's legacy</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale</p>
 <p><strong>Debatable question:</strong> Is generosity a private choice or a public duty for the very rich?<br />
 <strong>By the end of this lesson, I can:</strong> pay tribute to someone, explain the goal of an action, describe how a programme works, say what will remain.</p>
 <p><strong>Teacher’s note.</strong> This is a lesson of tribute. We speak about Dolly with respect.</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -316,7 +340,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>Two signs of an AI-generated video. 2. Complete: <em>There is no ... that Miley inherited the fortune.</em> 3. Fact, claim or fake: <em>Dolly left Jolene to Miley.</em></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 monotone voice, lips that don’t match the words · 2 evidence · 3 unverified claim.</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 monotone voice, lips that don’t match the words · 2 evidence · 3 unverified claim.</li>
 </ol>
 <h2>Step 2. The question of the day</h2>
 <p>Ask: If you were very rich, would you have to give money away? Or is it your private choice?</p></details>
@@ -332,11 +356,11 @@
 <strong>Play from 0:52 to 3:58</strong> (3 minutes 6 seconds).</p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/IjxcK1ZZw3c" title="YouTube video IjxcK1ZZw3c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><p class="video-link">Exact link, to keep unchanged: <a href="https://www.youtube.com/watch?v=IjxcK1ZZw3c">https://www.youtube.com/watch?v=IjxcK1ZZw3c</a></p></div>
 <p><strong>Task (while watching).</strong> Put the steps in order and note the verb used.<br />
 a. The books are mailed by the postal service. b. Titles are selected by a committee. c. Books are printed. d. Each book is labelled and shrink-wrapped. e. Parents register their children.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> b (1:00-1:14), c (1:37-2:09), e (2:17-2:34), d (3:29), a (3:44-3:52).</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> b (1:00-1:14), c (1:37-2:09), e (2:17-2:34), d (3:29), a (3:44-3:52).</p></details>
 <h3>Document 3. A donation for research</h3>
 <p>In April 2020, at the start of the COVID-19 pandemic, Dolly gave one million dollars to Vanderbilt University Medical Center in Nashville, in honour of her friend Dr Naji Abumrad. According to Vanderbilt, the Dolly Parton COVID-19 Research Fund contributed to early research linked to the Moderna vaccine (<a href="https://news.vumc.org/2020/11/23/is-it-true-that-work-on-a-covid-19-vaccine-at-vanderbilt-university-medical-center-was-funded-by-dolly-parton/">VUMC</a>).</p>
 <p><strong>Reading task.</strong> For each action, find the year and the goal.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1988 Dollywood Foundation and Buddy Program: fight dropout · 1995 Imagination Library: help young children love reading, in honour of her father · 2020 donation to Vanderbilt: support COVID-19 research.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1988 Dollywood Foundation and Buddy Program: fight dropout · 1995 Imagination Library: help young children love reading, in honour of her father · 2020 donation to Vanderbilt: support COVID-19 research.</p></details>
 <h2>Step 4. Expanding your vocabulary: generosity and memory</h2>
 <table>
 <thead>
@@ -407,10 +431,10 @@ a. The books are mailed by the postal service. b. Titles are selected by a commi
 <p><strong>Words to argue about duty and choice:</strong> It is up to each person to... · Society expects... · It is a moral duty to... · Nobody can force someone to... · It depends on...</p>
 <h3>Exercises on vocabulary</h3>
 <p><strong>Exercise H1. Match.</strong> 1 literacy · 2 to drop out · 3 a donation · 4 to live on / a money given · b to continue to exist · c reading and writing · d to leave school</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1c, 2d, 3a, 4b.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1c, 2d, 3a, 4b.</p></details>
 <p><strong>Exercise H2. Fill in the gaps:</strong> philanthropist · give back · at no cost · tribute<br />
 Dolly was a great (1) <strong><em>_</em>_. She wanted to (2) </strong><strong><em>_ to her region. Children receive books (3) </em></strong><strong><em> to families. This lesson is a (4) </em></strong>___ to her.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 philanthropist · 2 give back · 3 at no cost · 4 tribute.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 philanthropist · 2 give back · 3 at no cost · 4 tribute.</p></details>
 <h3>Flashcards</h3>
 <table>
 <thead>
@@ -467,15 +491,15 @@ Dolly was a great (1) <strong><em>_</em>_. She wanted to (2) </strong><strong><e
 <p><strong>Exercise 1. Match the action and the goal.</strong><br />
 1. She created the Imagination Library · 2. She gave a million dollars to Vanderbilt · 3. She built Dollywood near her home · 4. She paid $500 to graduates<br />
 a. to support COVID-19 research · b. so that children could love reading · c. to create jobs in her region · d. so that students would finish school</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1b, 2a, 3c, 4d.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1b, 2a, 3c, 4d.</p></details>
 <p><strong>Exercise 2. The journey of a book (present passive).</strong> Each book (choose) ... by a committee. Then it (print) ... and (label) ... . Finally it (mail) ... to the child, at no cost to the family.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> is chosen · is printed · is labelled · is mailed.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> is chosen · is printed · is labelled · is mailed.</p></details>
 <p><strong>Exercise 3. Transform</strong> into the passive.<br />
 1. Volunteers register the children. 2. The postal service delivers the books. 3. Local partners fund the programme.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The children are registered by volunteers. 2 The books are delivered by the postal service. 3 The programme is funded by local partners.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The children are registered by volunteers. 2 The books are delivered by the postal service. 3 The programme is funded by local partners.</p></details>
 <p><strong>Exercise 4. Purpose: reformulate</strong> with <em>so that</em>.<br />
 1. She opened the park to create jobs. (so that people / can) 2. She sent books to help children read. (so that children / could)</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 She opened the park so that people could find jobs. 2 She sent books so that children could read.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 She opened the park so that people could find jobs. 2 She sent books so that children could read.</p></details>
 <p><strong>Exercise 5. A tribute (80 to 100 words):</strong> who she was, two things she did (past simple), why (to / so that), what will remain (will). Respectful tone.<br />
 <strong>Model answer:</strong> Dolly Parton was a singer, a songwriter and a generous woman. She grew up poor in Tennessee. She created the Imagination Library so that children could have books at home, and she gave money to help research during the COVID-19 pandemic. Her songs, like <em>Jolene</em> and <em>9 to 5</em>, will live on, and millions of children will remember the books with her name. Her life shows that you can come from nothing and give a lot.</p>
 <p class="help-box"><strong>Help box.</strong> Frame: <em>Dolly Parton was... She created... so that... She gave... to... Her songs will...</em><br />

@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/dys/">Start here</a>
 <a href="/whose-land-whose-water/dys/#presentation">Présentation</a>
@@ -186,38 +210,38 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <section class="card"><span class="tag">Exercise 1</span><h3>Find the speaker</h3><div class="worked"><b>Worked example.</b><br>Who protested at Muskrat Falls?<br>Billy Gauthier.</div>
 <p>Now answer:</p>
 <ol><li>Who criticised Site C in the report? <span class="gap"></span>.</li><li>What did Gauthier want to protect? <span class="gap"></span>.</li><li>What is an alternative? <span class="gap"></span>.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Roland Willson; water and traditional activities; another choice.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Roland Willson; water and traditional activities; another choice.</p></div></section>
 <section class="card"><span class="tag">Exercise 2</span><h3>Match words</h3><div class="worked"><b>Worked example.</b><br>protect : keep safe.</div>
 <p>Match:</p>
 <ol><li>protest;</li><li>prediction;</li><li>measurement.</li></ol>
 <ol type="a"><li>an observed result;</li><li>publicly show disagreement;</li><li>what someone thinks may happen.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>1b, 2c, 3a.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>1b, 2c, 3a.</p></div></section>
 <section class="card"><span class="tag">Exercise 3</span><h3>Listen to Billy Gauthier</h3><div class="offlink"><p><b>Listening document.</b> Emotional hunger striker protesting Muskrat Falls. CBC News NL · YouTube, 18 October 2016 · 2 min 40. Listen first without reading. If the video does not work, use the support account and write “Reading-support route”. <a href="https://www.youtube.com/watch?v=xxj9H1WjsYg" target="_blank" rel="noopener">Open on YouTube</a>.</p></div>
 <p>This report discusses a hunger strike. You may use the support account instead.</p>
 <div class="worked"><b>Worked example of a note.</b><br>Speaker: Billy Gauthier.</div>
 <p>Listen for:</p>
 <ol><li>What activity does his daughter enjoy? <span class="gap"></span>.</li><li>Does he talk about protecting future generations? <span class="gap"></span>.</li></ol>
 <div class="source"><span class="tag">Support account</span><p>Gauthier links his protest to fishing and future generations. His daughter enjoys fishing.</p><p><i>Use it only if you cannot listen. Label your answer “Reading-support route”.</i></p></div>
-<div class="ans"><h3>Self-check</h3><p>Fishing; yes.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Fishing; yes.</p></div></section>
 <section class="card"><span class="tag">Exercise 4</span><h3>Listen to Roland Willson</h3><div class="offlink"><p><b>Listening document.</b> B.C. First Nations continue fight against controversial Site C dam. APTN News · YouTube, 26 January 2018 · 2 min 22. Listen first without reading. If the video does not work, use the support account and write “Reading-support route”. <a href="https://www.youtube.com/watch?v=I9hxRZpWtFs" target="_blank" rel="noopener">Open on YouTube</a>.</p></div>
 <div class="worked"><b>Worked example.</b><br>An alternative is another energy choice.</div>
 <p>Listen for two alternatives:</p>
 <ol><li><span class="gap"></span>.</li><li><span class="gap"></span>.</li></ol>
 <div class="source"><span class="tag">Support account</span><p>The alternatives named in the teaching dossier are wind, solar and geothermal energy.</p><p><i>Use it only if you cannot listen. Label your answer “Reading-support route”.</i></p></div>
-<div class="ans"><h3>Self-check</h3><p>Any two of wind, solar and geothermal.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Any two of wind, solar and geothermal.</p></div></section>
 <section class="card"><span class="tag">Exercise 5</span><h3>Choose careful words</h3><div class="worked"><b>Worked example.</b><br>“Pollution could increase.”<br>This is a prediction.</div>
 <p>Now label:</p>
 <ol><li>“The test recorded a higher level.” <span class="gap"></span>.</li><li>“Levels might rise.” <span class="gap"></span>.</li></ol>
 <p>Complete:</p>
 <ol start="3"><li>Campaigners want to <span class="gap"></span> water.<br>Choose: protect / protecting.</li><li>Authorities should <span class="gap"></span> the concern.<br>Choose: explain / to explain.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Measurement; prediction; protect; explain.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Measurement; prediction; protect; explain.</p></div></section>
 <section class="route"><h2>Speaking: your route</h2><div class="worked"><b>Worked example.</b><br>Gauthier wants to protect fishing. Willson proposes other energy choices.</div><h3>Route S · SEGPA</h3><p>Use the Route C sentences below. Say the first sentence aloud. Then say the second one. You may read them from the page, one at a time.</p><h3>Route C · CAP or CFA</h3><p>Say:</p>
 <div class="script"><p>Billy Gauthier wants to protect water.<br>Roland Willson proposes other energy choices.</p></div><h3>Route P · Bac pro or CFA</h3><p>Prepare a safety-meeting message:</p>
-<div class="script"><p>The reported concern is…<br>We need evidence about…<br>A possible alternative is…</p></div><h3>Route G · Lycée général et technologique, LVA</h3><p>Explain one similarity and one difference between the reports. Identify testimony and uncertainty.</p><h3>Route G · Lycée général et technologique, LVB</h3><p>Give three sentences naming the speakers and concerns.</p><div class="ans"><h3>Self-check</h3><p>Do not say that every Indigenous person has the same view.</p></div></section>
+<div class="script"><p>The reported concern is…<br>We need evidence about…<br>A possible alternative is…</p></div><h3>Route G · Lycée général et technologique, LVA</h3><p>Explain one similarity and one difference between the reports. Identify testimony and uncertainty.</p><h3>Route G · Lycée général et technologique, LVB</h3><p>Give three sentences naming the speakers and concerns.</p><div class="ans prof-only"><h3>Self-check</h3><p>Do not say that every Indigenous person has the same view.</p></div></section>
 <h2>Written record</h2><div class="record"><div class="plain"><p>I identify the speaker and the concern. A prediction is not the same as a measured result.</p></div></div>
 <h2>Homework</h2><div class="card"><div class="worked"><b>Worked example.</b><br>Prediction: levels could rise.</div>
 <p>Write one prediction and one measurement sentence.</p>
-<div class="ans"><h3>Self-check</h3><div class="script"><p>Prediction: pollution might increase.<br>Measurement: the test recorded a higher level.</p></div>
+<div class="ans prof-only"><h3>Self-check</h3><div class="script"><p>Prediction: pollution might increase.<br>Measurement: the test recorded a higher level.</p></div>
 <p>These are language examples, not claims about a specific new test.</p></div></div>
 </main>
 <footer><div class="wrap">

@@ -419,8 +419,9 @@
     }
 
   </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-general" class="is-dys english-look">
+<body data-section="lycee-general" class="is-dys english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/wadi-rum-landscape.jpg" alt="A wide sandy track in Wadi Rum, leading towards a flat-topped rock under a deep blue sky." width="1600" height="1063"><figcaption>Wadi Rum, Jordan. Photo: Jorge Láscar. CC BY 2.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Dys version</p>
     <h1>Dys version</h1>
@@ -482,7 +506,7 @@
     <p>Step 3. Complete the sentence.</p>
     <p>Example: On Arrakis, people must save water.</p>
     <p>Exercise: On Arrakis, people must ________ (wear a suit / protect children / recycle water).</p>
-        <details class="answers"><summary>Key, Lesson 1</summary>
+        <details class="answers prof-only"><summary>Key, Lesson 1</summary>
       <p>Any of the three is correct.</p>\n    </details>
 
 
@@ -491,7 +515,7 @@
     <p>Everybody needs it.</p>
     <p>Example: The Fremen are a people who live in the desert.</p>
     <p>Exercise: The spice is a resource ________ the empire needs. (who / which)</p>
-        <details class="answers"><summary>Key, Lesson 2</summary>
+        <details class="answers prof-only"><summary>Key, Lesson 2</summary>
       <p>which.</p>\n    </details>
 
 
@@ -500,7 +524,7 @@
     <p>The Fremen believe it.</p>
     <p>Example: Although Jessica is a stranger, the Fremen help her.</p>
     <p>Exercise: Although the legend is false, ________.</p>
-        <details class="answers"><summary>Key, Lesson 3</summary>
+        <details class="answers prof-only"><summary>Key, Lesson 3</summary>
       <p>the Fremen believe it / it gives power to Paul.</p>\n    </details>
 
 
@@ -509,7 +533,7 @@
     <p>Paul fulfils it.</p>
     <p>Example: The legend was planted.</p>
     <p>Exercise: People told the story. The story ________ told.</p>
-        <details class="answers"><summary>Key, Lesson 4</summary>
+        <details class="answers prof-only"><summary>Key, Lesson 4</summary>
       <p>was.</p>\n    </details>
 
 
@@ -523,7 +547,7 @@
     <p>He says a hero is dangerous.</p>
     <p>Example: If the spice disappears, the Guild will stop.</p>
     <p>Exercise: If the Fremen follow a hero, they ________ (lose / will lose) their voice.</p>
-        <details class="answers"><summary>Key, Lesson 6</summary>
+        <details class="answers prof-only"><summary>Key, Lesson 6</summary>
       <p>will lose (or might lose).</p>\n    </details>
 
 
@@ -531,7 +555,7 @@
     <p>Paul is &quot;less than a god, more than a man&quot;.</p>
     <p>Example: Paul is more powerful than the Emperor.</p>
     <p>Exercise: A legend is ________ dangerous ________ an army.</p>
-        <details class="answers"><summary>Key, Lesson 7</summary>
+        <details class="answers prof-only"><summary>Key, Lesson 7</summary>
       <p>more ... than (or as ... as).</p>\n    </details>
 
 

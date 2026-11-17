@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/">Home</a>
 <a href="/whose-land-whose-water/#presentation">Présentation</a>
@@ -390,7 +414,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <h4>Written record</h4><div class="script"><p>The Grizzlies presents hope through relationships, young people’s decisions and collective action. Lacrosse creates opportunities, but it does not remove every difficulty. The film invites us to question promises, responsibility and whose knowledge is recognised. I attribute viewpoints to particular characters and distinguish film evidence from wider claims about Inuit experiences.</p></div>
 <h4>Homework to bring to the debate</h4><p>Bring:</p>
 <ul><li>your viewing notes;</li><li>your debate card;</li><li>your personal response;</li><li>four flashcards.</li></ul></div>
-<div class="ans" id="grizzlies-key"><h2>Part II. Complete answer key and assessment guidance</h2>
+<div class="ans prof-only" id="grizzlies-key"><h2>Part II. Complete answer key and assessment guidance</h2>
 <h3><span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>1. Before viewing</h3>
 <h4>B1</h4><ol><li>The Grizzlies.</li><li>Miranda de Pencier.</li><li>Kugluktuk, Nunavut, Canada.</li><li>A fictional drama based on real events.</li><li>No. It presents selected characters, events and filmmaking choices, not every Inuit experience.</li></ol>
 <h4>B2</h4><p>Possible answers consistent with the supplied lesson:</p>
@@ -530,7 +554,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <li>□ I listened without interrupting.</li>
 <li>□ I asked or answered a question.</li>
 </ul>
-<div class="ans"><h3>Answer key</h3><p>Trailer: 1. “6,000 years.” Inuit people have lived there for thousands of years: the teacher is the newcomer. 2. Lacrosse. 3. “We don’t need to defend our way of life to a southerner.” “Family comes first. Not school, not some white man’s game.” Also accept the man who asks the teacher who he is to say what they need. 4. It moves the focus from the outsider to the young people: they have made sacrifices, they have been dealing with difficulties for years and they are “still here”. 5. proud, strong, hope. 6. Accept any accurate moment from the film, labelled as coming from the film, not from the trailer.</p>
+<div class="ans prof-only"><h3>Answer key</h3><p>Trailer: 1. “6,000 years.” Inuit people have lived there for thousands of years: the teacher is the newcomer. 2. Lacrosse. 3. “We don’t need to defend our way of life to a southerner.” “Family comes first. Not school, not some white man’s game.” Also accept the man who asks the teacher who he is to say what they need. 4. It moves the focus from the outsider to the young people: they have made sacrifices, they have been dealing with difficulties for years and they are “still here”. 5. proud, strong, hope. 6. Accept any accurate moment from the film, labelled as coming from the film, not from the trailer.</p>
 <p>Listening: an inspiring true story; the teacher says the young people changed him more than he changed them; hope and the emergence of a talented younger generation; justified reference to their actions, talents or mutual support. Only award direct-listening credit for material heard in the selected extracts. Wider information in the teaching dossier must be labelled as reading support.</p>
 <p>Grammar: Playing; Watching; give up; for.</p>
 <p>Vocabulary: 1b, 2a, 3d, 4c, 5e.</p>

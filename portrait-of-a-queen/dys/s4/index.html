@@ -110,8 +110,9 @@ body.dys main{max-width:720px}
 .grid-wrap{overflow-x:auto}
 table.grid td,table.grid th{font-size:.92rem}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look" style="--c:#1f4fd1">
+<body class="dys english-look mode-eleve" style="--c:#1f4fd1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -121,6 +122,29 @@ table.grid td,table.grid th{font-size:.92rem}
 <a href="/who-rules-britain/">Who Rules Britain?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/portrait-of-a-queen/dys/">Home</a>
 <a href="/portrait-of-a-queen/dys/s1/">L1</a>
@@ -169,7 +193,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>What does the antithesis “long or short” do in that speech?</li>
 <li>Why is “imperial family” a problem in 1947?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>21 April 1947, on the radio, from Cape Town.</li>
 <li>It makes the vow total, whatever the length of her life.</li>
@@ -183,7 +207,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li><b>The sacred and the visible.</b> The anointing was not filmed. Why keep one moment hidden when everything else is televised? Link this with the idea, already studied, that royalty can depend on mystery as well as on being seen.</li>
 <li><b>Debate.</b> Did television make the monarchy stronger or more fragile? Use a concession and, if you can, a hypothesis (<em>If the anointing had been filmed…</em>).</li>
 </ul>
-<div class="ans"><h3>Answer key · key points</h3>
+<div class="ans prof-only"><h3>Answer key · key points</h3>
 <p>Television made millions of people witnesses and created a shared national moment. But it also turned the monarchy into a show, open to judgement: once the Crown depends on images, it can be damaged by images. The hidden anointing tries to keep one last sacred space.</p>
 </div>
 <section class="exit"><span class="tag">Exit ticket</span>
@@ -191,7 +215,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>Give one reason why television made the monarchy stronger, and one reason why it made it more fragile.</li>
 <li>Why was the anointing not filmed?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Stronger: a shared national moment, a face in every home. More fragile: the Crown becomes a show, open to criticism.</li>
 <li>To keep a sacred moment out of the public gaze: not everything dignified can be shown.</li>

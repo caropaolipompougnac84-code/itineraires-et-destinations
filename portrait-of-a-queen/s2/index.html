@@ -110,8 +110,9 @@ body.dys main{max-width:720px}
 .grid-wrap{overflow-x:auto}
 table.grid td,table.grid th{font-size:.92rem}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look" style="--c:#1f4fd1">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve" style="--c:#1f4fd1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -121,6 +122,29 @@ table.grid td,table.grid th{font-size:.92rem}
 <a href="/who-rules-britain/">Who Rules Britain?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/portrait-of-a-queen/">Home</a>
 <a href="/portrait-of-a-queen/s1/">L1</a>
@@ -169,7 +193,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>What does “dignified power” mean, in one sentence?</li>
 <li>Who commissioned the 1933 portrait of Princess Elizabeth, and why does that matter?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Identify, describe, read the symbols, interpret, reception.</li>
 <li>Power that works by winning reverence and loyalty, not by taking day-to-day decisions.</li>
@@ -194,7 +218,7 @@ table.grid td,table.grid th{font-size:.92rem}
 </table></div>
 
 <p><b>Writing (B2), 150 words.</b> What political message does the Ditchley Portrait convey? Use at least one concession and two words from the method (for example <em>idealised, iconic, to convey</em>).</p>
-<div class="ans"><h3>Answer key · key points</h3>
+<div class="ans prof-only"><h3>Answer key · key points</h3>
 <ul>
 <li>Standing on the map: the Queen literally embodies the kingdom.</li>
 <li>Light and storm: she brings peace and order out of danger.</li>
@@ -206,7 +230,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>What is the mask of youth?</li>
 <li>Give one symbol in the Ditchley Portrait and say what it conveys.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>An official, ageless, approved face that hides the monarch’s real ageing.</li>
 <li>Accept: the map (she rules and protects the land); storm and sunlight (danger and peace, or providence).</li>

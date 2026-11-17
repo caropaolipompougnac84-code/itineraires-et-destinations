@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/dys/">Start here</a>
 <a href="/the-verdict-of-the-people/dys/s1/">L1</a>
@@ -137,37 +161,37 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise S1</span><h3>Choose facts</h3>
 <div class="worked"><b>Worked example.</b> “Congress has two chambers.” This is an accurate fact.</div>
 <p><b>Now you.</b><br>Choose two more facts from your written records.</p>
-<div class="ans"><h4>Self-check</h4><p>Check each sentence against the lesson record. Do not use a fact you cannot find.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Build your report</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Check each sentence against the lesson record. Do not use a fact you cannot find.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Build your report</h3>
 <div class="worked"><b>Worked example.</b> Opening: “My report is about US elections.”</div>
 <p><b>Now you.</b><br>Complete: “Bingham painted <span class="gap"></span>.” “Congress has <span class="gap"></span>.” “I check <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>Possible answers: an election crowd; the House and the Senate; the source and the date.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Speak</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Possible answers: an election crowd; the House and the Senate; the source and the date.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Speak</h3>
 <div class="worked"><b>Worked example.</b> Read one sentence. Pause. Read the next sentence.</div>
 <p><b>Now you.</b><br>Say your report aloud.</p>
-<div class="ans"><h4>Self-check</h4><p>Did you say at least three accurate sentences? If yes, the task is complete.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Did you say at least three accurate sentences? If yes, the task is complete.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t7c">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t7c"><p>Model report:</p><p>“Bingham’s painting shows different reactions to election results.</p><p>Today, US institutions divide power.</p><p>Congress has the House and the Senate.</p><p>The president does not decide everything alone.</p><p>A news report needs a clear source and date.</p><p>We should not confuse a promise with an achieved result.”</p></div></div>
 <section class="card"><span class="tag">Exercise C1</span><h3>Select</h3>
 <div class="worked"><b>Worked example.</b> Choose “Congress has two chambers” rather than “The president decides everything”.</div>
 <p><b>Now you.</b><br>Choose three accurate facts from three lessons.</p>
-<div class="ans"><h4>Self-check</h4><p>Underline the matching sentence in each lesson.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Organise</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Underline the matching sentence in each lesson.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Organise</h3>
 <div class="worked"><b>Worked example.</b> Order: topic, fact, explanation, caution.</div>
 <p><b>Now you.</b><br>Write a 50 to 70-word report. Use: My report explains… / One important fact is… / This matters because… / We should check…</p>
-<div class="ans"><h4>Self-check</h4><p>Your report needs three accurate facts, one explanation and one checking rule. The word range is guidance, not a speed or spelling test.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Speak and answer</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Your report needs three accurate facts, one explanation and one checking rule. The word range is guidance, not a speed or spelling test.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Speak and answer</h3>
 <div class="worked"><b>Worked example.</b> Question: “Why should we check the date?” Model answer: “Because a report may be old.”</div>
 <p><b>Now you.</b><br>Say your report aloud. Then answer: “Why should we not guess a missing result?”</p>
-<div class="ans"><h4>Self-check</h4><p>“Because we do not have evidence.” Other answers with the same meaning are accepted.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>“Because we do not have evidence.” Other answers with the same meaning are accepted.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t7p">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t7p"><p>Model report:</p><p>“Bingham’s painting introduces a question about participation.</p><p>Modern US institutions also need careful explanation.</p><p>Congress can limit presidential action, while Puerto Rico shows that representation takes different forms.</p><p>Election information needs a source, a date and a status.</p><p>Possible consequences for trade should be labelled as predictions rather than established results.”</p></div></div>
 <section class="card"><span class="tag">Exercise P1</span><h3>Plan</h3>
 <div class="worked"><b>Worked example.</b> Fact: Congress has two chambers. Meaning: the president does not act alone in lawmaking.</div>
 <p><b>Now you.</b><br>Choose three facts and explain why one of them matters.</p>
-<div class="ans"><h4>Self-check</h4><p>Each fact must match a lesson text. Its importance must follow logically.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Write</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Each fact must match a lesson text. Its importance must follow logically.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Write</h3>
 <div class="worked"><b>Worked example.</b> Structure: introduction, facts, implication, limit.</div>
 <p><b>Now you.</b><br>Write 100 to 130 words with one cultural reference, two institutional or source-checking facts, one explanation and one qualification.</p>
-<div class="ans"><h4>Self-check</h4><p>Do not include an election winner or total unless a verified source has been supplied.</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Speak and clarify</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Do not include an election winner or total unless a verified source has been supplied.</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Speak and clarify</h3>
 <div class="worked"><b>Worked example.</b> Question: “Does that prove every future outcome?” Answer: “No. It identifies a possible consequence, not a certainty.”</div>
 <p><b>Now you.</b><br>Give a 60 to 90-second report. Then answer: “What is one thing your evidence does not establish?”</p>
-<div class="ans"><h4>Self-check</h4><p>A good answer names a real limit, for example: “The text does not establish a future trade outcome.”</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>A good answer names a real limit, for example: “The text does not establish a future trade outcome.”</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
 <p>CAP apprentice: use Route C. Bac pro apprentice: use Route P. Do Exercises 1 and 2 of your route, then do this task instead of Exercise 3. Keep the same written record and homework.</p>
-<section class="card"><span class="tag">CFA task</span><h3>Give a short briefing</h3><div class="worked"><b>Worked example.</b> Opening: “Here is what we can establish.”</div><p><b>Now you.</b><br>Give a 45-second briefing (CAP) or a 60 to 90-second briefing (Bac pro). Include one established fact, one explanation, one uncertainty and one checking question.</p><div class="ans"><h4>Self-check</h4><p>Ask yourself: “Did I clearly separate what I know from what I need to check?”</p></div></section></section>
+<section class="card"><span class="tag">CFA task</span><h3>Give a short briefing</h3><div class="worked"><b>Worked example.</b> Opening: “Here is what we can establish.”</div><p><b>Now you.</b><br>Give a 45-second briefing (CAP) or a 60 to 90-second briefing (Bac pro). Include one established fact, one explanation, one uncertainty and one checking question.</p><div class="ans prof-only"><h4>Self-check</h4><p>Ask yourself: “Did I clearly separate what I know from what I need to check?”</p></div></section></section>
 
 <section class="record"><span class="tag">Written record</span><p><b>S:</b> “One accurate fact I used was <span class="gap"></span>.”</p><p><b>C:</b> “One checking rule I used was <span class="gap"></span>.”</p><p><b>P:</b> “My next target is <span class="gap"></span>.”</p></section>
 <section class="card"><p><b>Speaking frame.</b> Use your model report.</p><p><b>Emergency sentence.</b> “My report uses facts I can check.”</p></section>

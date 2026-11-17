@@ -419,8 +419,9 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/siwa-oasis-lake.jpg" alt="A still lake lined with palm trees in the Siwa Oasis." width="1600" height="959"><figcaption>A lake in the Siwa Oasis, Egypt. Photo: Ghada M. Elshazly. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 6 of 8</p>
     <h1>Lesson 6. The Ecologist's Warning</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
@@ -508,7 +532,7 @@
 
     <h2><span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Stage 3. Listening: Kynes's dream</h2>
     <p>Listen twice. Liet-Kynes is the Imperial planetologist.</p>
-    <details class="teacher"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
+    <details class="teacher prof-only"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
       <p>Read at natural speed, twice. Written for the sequence.</p>
       <blockquote><p>Liet-Kynes is the Imperial planetologist, a scientist sent to study Arrakis. His father dreamed of changing the planet: catching the water, planting grasses on the dunes, and one day making Arrakis green. The Fremen adopted this dream, and Kynes became one of their leaders. But a plan that takes centuries needs patience, and a hero who promises everything now can destroy it.</p></blockquote>
     </details>
@@ -538,11 +562,11 @@
       <span class="ref">Q9. Appendix I, &quot;The Ecology of Dune&quot;.</span>
     </div>
     <p><strong>Text intelligence.</strong> Q5 is the father's voice inside the son's dying mind. The warning comes from science, not from religion, at the very moment when the religious story is winning. Q6 closes the chapter on &quot;accident and error&quot;: the scientist loses faith in order. Why does Herbert give the strongest warning to a dying man, in what the chapter presents as a remembered lesson?</p>
-    <details class="teacher"><summary>Teacher's note on Q5, Q6 and Q9</summary>
+    <details class="teacher prof-only"><summary>Teacher's note on Q5, Q6 and Q9</summary>
       <p>Check all three in your edition. For Q9, some epigraphs give a shorter form, &quot;understanding consequences&quot;, without &quot;the&quot;. Use your wording. The filled spiral on this death scene is on the presentation page and in the teacher's guide: idea on the outer side, reference on the inner side. The expected kind of tip (not to be given in advance) is of this order: &quot;A people can be saved by the story that enslaves it.&quot;</p>
     </details>
 
-    <details class="answers"><summary>Key, a direction for Q5 to Q9</summary>
+    <details class="answers prof-only"><summary>Key, a direction for Q5 to Q9</summary>
       <p>Q5 warns that a Hero can be the worst disaster for a people, not their safety. Q6, at the end of the same chapter, withdraws the idea of a clean, ordered plan: accident and error last. Q9, from the ecology appendix, makes understanding consequences the highest task. Together they anticipate the cost of following Paul: a victory that may destroy the slow plan, and a people that may lose its voice.</p>
     </details>
 
@@ -558,7 +582,7 @@
       <li>the planet / become green : the sandworms / die</li>
       <li>a hero / take power : the long plan / stop</li>
     </ol>
-    <details class="answers"><summary>Key, exercise 5</summary>
+    <details class="answers prof-only"><summary>Key, exercise 5</summary>
       <p>a) If the Fremen follow Paul, the empire will / might fall (first conditional, a real possibility), or: If the Fremen followed Paul, the empire would fall. b) If the planet became green, the sandworms would die. c) If a hero took power, the long plan would stop. Common error: <em>would</em> in the if-clause.</p>
     </details>
 

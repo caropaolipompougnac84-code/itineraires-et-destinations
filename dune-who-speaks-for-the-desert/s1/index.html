@@ -419,8 +419,9 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-general" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -466,6 +467,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/sossusvlei-dune.jpg" alt="A great orange dune at Sossusvlei, Namibia, rising from the desert under a clear sky." width="1600" height="893"><figcaption>A dune at Sossusvlei, Namibia. Photo: Diego Delso. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2 · Lesson 1 of 8</p>
     <h1>Lesson 1. A Planet Called Dune</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
@@ -493,7 +517,7 @@
     <p>Look at the image below. There is no caption yet. In one word, say what you see. Then answer: is this a place to live?</p>
     <figure class="artwork"><img src="../img/rub-al-khali-esa-radar.jpg" alt="A grey radar satellite image of a vast field of sand dunes, seen from above, with no people and no settlement visible." /></figure>
 
-    <details class="teacher"><summary>Caption, for the teacher (reveal after the first words)</summary>
+    <details class="teacher prof-only"><summary>Caption, for the teacher (reveal after the first words)</summary>
       <p>ESA radar image of the Rub' al Khali, the Empty Quarter, on the Arabian Peninsula. A radar view of a real sand sea: the dunes appear as a dense, regular pattern, with almost no trace of a settlement. ESA, <a href="https://www.esa.int/ESA_Multimedia/Images/2014/12/Rub_al_Khali">Rub' al Khali</a>, CC BY-SA 3.0 IGO. After the first words, you may give the place-name and ask: what changes when we learn that this is a real desert on Earth, not a planet in a novel?</p>
     </details>
 
@@ -520,13 +544,13 @@
         <p>Take notes under three headings: the man, the origin, the world. Then give a 30-second oral summary.</p>
       </div>
     </div>
-    <details class="teacher"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
+    <details class="teacher prof-only"><summary>Listening text, for the teacher (do not display during the first listening)</summary>
       <p>Read at natural speed, twice. This text was written for the sequence. It is not a quotation from the novel.</p>
       <blockquote><p>Frank Herbert was born in 1920 in Tacoma, in the state of Washington. He worked as a journalist. In the late 1950s, he planned an article on sand dunes near Florence, Oregon, where scientists were planting grasses to stop the sand from moving. The article was never finished, but the idea of a world made of sand stayed with him. His novel Dune was published in 1965. It describes a desert planet, Arrakis, where water is so rare that people recycle the water of their own bodies. It also describes an empire, a precious resource called the spice, and a young man, Paul Atreides, whom a people of the desert, the Fremen, come to see as a messiah.</p></blockquote>
       <p>The Florence dunes project and the 1965 publication are widely documented. Do not tell the class that the novel appeared &quot;six years later&quot;, or that it followed &quot;several refusals from publishers&quot;, until those details have been checked in Brian Herbert's biography (listed in the bibliography, for the teacher only).</p>
     </details>
 
-    <details class="answers"><summary>Key to the diagnostic listening</summary>
+    <details class="answers prof-only"><summary>Key to the diagnostic listening</summary>
       <p>1 True. 2 False: he worked as a journalist. 3 True. 4 True. 5 True.</p>
       <p>Herbert was a journalist. The idea came from sand dunes near Florence, Oregon, and from grasses planted to stop the sand.</p>
       <p>Elements of the world of Arrakis: a desert planet, water so rare that it is recycled, an empire, the spice, Paul Atreides, the Fremen.</p>
@@ -551,12 +575,12 @@
     </div>
     <p>Questions. Who is speaking in Q1? Who is speaking in Q2? Who is &quot;him&quot;? What is Arrakis? What does &quot;forever his place&quot; suggest?</p>
     <p><strong>Text intelligence.</strong> The opening sentence is not the narrator of the story. It is an extract from a book written later, inside the fiction, by a princess. The novel begins with a historian who already knows that Paul is great. What does it change to read the hero's story through someone who already admires him?</p>
-    <details class="teacher"><summary>Teacher's note on the quotations</summary>
+    <details class="teacher prof-only"><summary>Teacher's note on the quotations</summary>
       <p>Before the lesson, check Q1 and Q2 in your edition. Transcriptions used to prepare this page were crossed with more than one published source, not with a single paper copy. If your wording differs, use your edition and tell the class.</p>
       <p>Expected answers are on the correction sheet. In short: Q1 is Herbert's dedication, to the dry-land ecologists. Q2 is written, inside the fiction, by the Princess Irulan, in a book about Muad'Dib; Arrakis is the desert planet also called Dune; &quot;forever his place&quot; suggests a destiny and an identity tied to the land. The historian already glorifies the hero.</p>
     </details>
 
-    <details class="answers"><summary>Key, Q1 and Q2</summary>
+    <details class="answers prof-only"><summary>Key, Q1 and Q2</summary>
       <p>Q1 is the author's dedication, addressed to the dry-land ecologists (and, more widely, to people whose work is with &quot;real materials&quot;). Q2 is spoken by the Princess Irulan, a historian inside the fiction, in a book about Muad'Dib. &quot;Him&quot; is Paul. Arrakis is the desert planet known as Dune. &quot;Forever his place&quot; suggests that the hero's identity and destiny are already tied to that land. Because the historian already admires him, the reader meets a legend, not a neutral report.</p>
     </details>
 
@@ -574,7 +598,7 @@
       <li>nobody / cry in public</li>
       <li>travellers / wear a special suit</li>
     </ol>
-    <details class="answers"><summary>Key, exercise 1</summary>
+    <details class="answers prof-only"><summary>Key, exercise 1</summary>
       <p>a) People have to / must protect their water. b) Children need to / must learn to walk on sand. c) Nobody can cry in public / You mustn't cry in public. d) Travellers have to wear a special suit. Accept any correct modal. Check the difference between &quot;mustn't&quot; (prohibition) and &quot;don't have to&quot; (no obligation).</p>
     </details>
 
@@ -607,7 +631,7 @@
       <li><strong>EE.</strong> Forty words: &quot;My first impression of Dune&quot;.</li>
     </ul>
     <p>Self-correction: What I understood / What I missed / My improved answer.</p>
-    <details class="teacher"><summary>Teacher grid (positioning only)</summary>
+    <details class="teacher prof-only"><summary>Teacher grid (positioning only)</summary>
       <ul>
         <li>CO: A2, isolated facts; B1, main facts and origin; B2, facts, origin, and a link between the Oregon dunes and the novel.</li>
         <li>CE: A2, Arrakis is a planet; B1, a princess writes about a man linked to the planet; B2, the writer is a historian inside the fiction who already glorifies the hero.</li>

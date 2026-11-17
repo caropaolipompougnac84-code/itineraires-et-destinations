@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body class="english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/">Home</a>
 <a href="/whose-land-whose-water/#presentation">Présentation</a>
@@ -199,7 +223,7 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <div class="script"><p>Dear Member of Parliament,</p><p>I am writing about <span class="gap"></span>.</p><p>In <span class="gap"></span>, <span class="gap"></span> proposed/promised/argued that <span class="gap"></span>.</p><p>According to <span class="gap"></span>, dated <span class="gap"></span>, <span class="gap"></span>.</p><p>A second relevant fact is <span class="gap"></span>.</p><p>However, these facts do not establish <span class="gap"></span>.</p><p>The viewpoint of <span class="gap"></span> also matters because <span class="gap"></span>.</p><p>I therefore ask you to <span class="gap"></span>.</p><p>This would help because <span class="gap"></span>.</p><p>Yours sincerely,<br><span class="gap"></span></p></div>
 <h2><span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Model letter</h2><div class="script"><p>Dear Member of Parliament,</p><p>I am writing about the promise to end long-term drinking-water advisories on First Nations reserves.</p><p>The deadline was March 2021. The Indigenous Services Canada page retrieved for our class displays a snapshot dated 10 September 2026. It records 158 advisories lifted since November 2015, but 38 active advisories in 36 communities.</p><p>These figures show progress, but they do not show that the promise was fully completed. They also concern a specific category of public systems on reserves, rather than every water problem affecting Indigenous people.</p><p>I therefore ask you to support clear, regularly dated reporting and the work needed to maintain reliable water services. Reports should distinguish completed construction, testing and the official lifting of an advisory.</p><p>Communities should be able to understand what remains to be done and how decisions are made. A fair assessment must recognise improvements without treating an unfinished commitment as a completed one.</p><p>Yours sincerely,<br>A student researcher</p></div>
 <p>The figures and scope in this model follow the retrieved official page.</p>
-<div class="ans"><h3>Answer key</h3><p>Grammar:</p>
+<div class="ans prof-only"><h3>Answer key</h3><p>Grammar:</p>
 <ol><li>“We recommend that the government provide updates.”<br>Also acceptable: “The government ought to provide updates.”</li><li>“Although the deadline was missed, progress was recorded.”</li><li>“The report proves…” However, this still requires evidence. A safer version is: “The report shows that some representatives agreed.”</li><li>“The government promised to end the advisories.”</li></ol>
 <p>Vocabulary: limitation; recommendation; evidence.</p></div>
 <h2>Assessment grids</h2><h3><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Oral, out of 20</h3>

@@ -78,8 +78,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="">
+<body class="mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -88,6 +89,29 @@ body.dys main{max-width:720px}
 <a href="/destination-australia/annexe/ancienne-version.html">Destination Australia</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/destination-australia/annexe/ancienne-version.html">Home</a>
 <a class="on" href="/destination-australia/annexe/s1/">L1</a>
@@ -129,7 +153,7 @@ body.dys main{max-width:720px}
 <li>Name one reason why a young person might work there for a year.</li>
 <li>What document do you need before you get on a plane?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Accept a clear location (an island continent in the Southern Hemisphere; cities such as Sydney or Melbourne).</li>
 <li>Accept: work, travel, English, a working holiday, meeting people.</li>
@@ -142,7 +166,7 @@ body.dys main{max-width:720px}
 <li>What hopes or worries might they have?</li>
 <li>Compare their journey with a young traveller’s journey today (time, cost, documents, reasons for leaving).</li>
 </ul>
-<div class="ans"><h3>Answer key · model points</h3>
+<div class="ans prof-only"><h3>Answer key · model points</h3>
 <p>The passengers travel by sea, with luggage, for weeks or months. They may hope for work or a new start, and worry about illness, money or not knowing the country. Today a flight takes about a day, but a young traveller still needs a passport, a visa, money and a plan. The painting is not a picture of present-day visa procedures.</p>
 </div>
 <div class="card">

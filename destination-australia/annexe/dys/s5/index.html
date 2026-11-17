@@ -78,8 +78,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys">
+<body class="dys mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -88,6 +89,29 @@ body.dys main{max-width:720px}
 <a href="/destination-australia/annexe/ancienne-version.html">Destination Australia</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/destination-australia/annexe/dys/">Home</a>
 <a href="/destination-australia/annexe/dys/s1/">L1</a>
@@ -129,7 +153,7 @@ body.dys main{max-width:720px}
 <li>What does RSA stand for, and is one certificate enough for every state?</li>
 <li>Give one question to ask about pay before you accept a job.</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Extra pay for a casual employee, instead of paid leave (25% on the adult National Minimum Wage, when that rate applies).</li>
 <li>Responsible Service of Alcohol; no, check the state where you will work.</li>
@@ -149,7 +173,7 @@ body.dys main{max-width:720px}
 <li>How long is the usual specified-work requirement for a second subclass 417 visa?</li>
 <li>Does every farm job automatically count?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Three months, normally at least 88 calendar days of eligible full-time-equivalent work, under Home Affairs rules. Recheck the official page.</li>
 <li>No. The industry, postcode and counting rules must match.</li>

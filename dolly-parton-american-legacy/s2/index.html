@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,11 +250,34 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/cataloochee-balsam-mountain.jpg" alt="Green mountains under a blue sky in the Cataloochee and Balsam Mountain area of Tennessee." width="1600" height="800"><figcaption>Cataloochee and Balsam Mountain, Great Smoky Mountains National Park. Photo: NPS Photo. Public domain, Wikimedia Commons.</figcaption></figure><h1>Lesson 2. Rags to rhinestones</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Compréhension orale · <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale</p>
 <p><strong>Debatable question:</strong> Can you be proud of where you come from and still reinvent yourself completely?<br />
 <strong>By the end of this lesson, I can:</strong> tell the story of a childhood, talk about past habits, describe an outfit precisely.</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -319,7 +343,7 @@
 <li>Give the comparative of <em>bright</em> and <em>colourful</em>.</li>
 </ol>
 <p></p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 platinum blonde, lilac, scarlet, turquoise, pale peach (any three) · 2 like · 3 brighter, more colourful.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 platinum blonde, lilac, scarlet, turquoise, pale peach (any three) · 2 like · 3 brighter, more colourful.</p></details>
 <p>Two students read their “Guess who” description; the class guesses.</p>
 <h2>Step 2. The question of the day</h2>
 <p>Write on the board: <strong>“It costs a lot of money to look this cheap.”</strong> (Dolly Parton). Ask: What is surprising in this sentence? Can a person who grew up poor be proud of it and still wear rhinestones?</p>
@@ -328,15 +352,15 @@
 <h3><span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Document 1. Her childhood (reading)</h3>
 <p>Dolly Rebecca Parton was born on 19 January 1946 in Locust Ridge, in the Great Smoky Mountains of East Tennessee. She was the fourth of twelve children. Her parents were farmers and the family lived in a one-room cabin. Her father could not read. Her mother sang old ballads and church songs, and music was everywhere in the family. In 1964, the day after she finished high school, she left for Nashville to become a singer.</p>
 <p><strong>Reading task.</strong> Find: her date of birth · the number of children in the family · the type of house · the city where she went in 1964.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 19 January 1946 · twelve · a one-room cabin · Nashville.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 19 January 1946 · twelve · a one-room cabin · Nashville.</p></details>
 <h3><span class="skill-tag" title="Compréhension orale" aria-label="Compréhension orale">CO</span>Document 2. Coat of Many Colors (song, 1971)</h3>
 <p><strong>Watch or listen:</strong> Dolly Parton, <em>Coat Of Many Colors</em> (Official Audio), Dolly Parton channel: <a href="https://www.youtube.com/watch?v=KFbYFHaigSk">https://www.youtube.com/watch?v=KFbYFHaigSk</a><br />
 <strong>Play from 0:00 to 3:04</strong> (whole track, 3 minutes 4 seconds).</p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/KFbYFHaigSk" title="YouTube video KFbYFHaigSk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><p class="video-link">Exact link, to keep unchanged: <a href="https://www.youtube.com/watch?v=KFbYFHaigSk">https://www.youtube.com/watch?v=KFbYFHaigSk</a></p></div>
 <p><strong>Before listening (summary to read).</strong> One autumn, her mother had no money for a coat, so she made one with scraps of fabric. As she sewed, she told Dolly the Bible story of Joseph and his coat of many colours. Dolly was proud of her coat, but at school the other children laughed at her. Years later, Dolly wrote a song about that day. It reached number 4 in the American country charts in 1971, and Dolly always said it was her favourite song.</p>
 <p><strong>Task during listening (first time).</strong> Tick the words you hear: <em>rags · colours · mother · money · school · city · proud · rich · happy · coat</em>.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> you hear rags, colours, mother, money, school, proud, rich, happy, coat. You do not hear “city”.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> you hear rags, colours, mother, money, school, proud, rich, happy, coat. You do not hear “city”.</p></details>
 <p><strong>Task during listening (second time, from 1:30 to 3:04).</strong> Answer: How did the children react? How did Dolly feel? What does she say about being “rich”?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> They laughed at her. She felt hurt but she was still proud of her coat. She says that one is only poor if one chooses to be: she felt rich because of the love in it.<br />
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> They laughed at her. She felt hurt but she was still proud of her coat. She says that one is only poor if one chooses to be: she felt rich because of the love in it.<br />
 (Teacher’s note: the lyrics are protected by copyright; do not hand out the full lyrics. Use the summary above and short quotations only.)</p></details>
 <h3>Document 3. Dolly on her look</h3>
 <table>
@@ -363,7 +387,7 @@
 </table>
 <p>She described her style as “a country girl’s idea of glam” (quoted by <em>People</em>).</p>
 <p><strong>Reading task.</strong> In each quotation, find the contrast.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> money / cheap · blonde jokes / not dumb, not blonde · artificial / real.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> money / cheap · blonde jokes / not dumb, not blonde · artificial / real.</p></details>
 <h2>Step 4. Expanding your vocabulary: the Dolly look</h2>
 <h3>A. Theme vocabulary</h3>
 <table>
@@ -433,13 +457,13 @@
 </table>
 <h3>Exercises on vocabulary</h3>
 <p><strong>Exercise B1. Sort the words into the right field:</strong> sequins, wig, blush, gown, curls, glitter, eyeliner, cowboy boots.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> Hair: wig, curls · Bling: sequins, glitter · Make-up: blush, eyeliner · Clothes: gown, cowboy boots.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> Hair: wig, curls · Bling: sequins, glitter · Make-up: blush, eyeliner · Clothes: gown, cowboy boots.</p></details>
 <p><strong>Exercise B2. Fill in the gaps</strong> with: proud · scraps · laughed · grew up · sewed<br />
 Dolly (1) <strong><em>_</em>_ in a cabin. Her mother (2) </strong><strong><em>_ a coat with (3) </em></strong><strong><em> of fabric. The children (4) </em></strong><strong><em> at her, but she was (5) </em></strong>___ of her coat.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 grew up · 2 sewed · 3 scraps · 4 laughed · 5 proud.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 grew up · 2 sewed · 3 scraps · 4 laughed · 5 proud.</p></details>
 <p><strong>Exercise B3. Opposites.</strong> Match: 1 tacky · 2 poor · 3 artificial · 4 pale<br />
 a. real · b. elegant · c. bright · d. rich</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1b, 2d, 3a, 4c.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1b, 2d, 3a, 4c.</p></details>
 <h3>Flashcards</h3>
 <table>
 <thead>
@@ -504,19 +528,19 @@ a. real · b. elegant · c. bright · d. rich</p>
 <p><strong>Quick check.</strong> Put in order: <em>dress / pink / a / sparkly / long</em> → <strong>a long sparkly pink dress</strong> (a sparkly long pink dress is also accepted: sparkly can be read as an opinion).</p>
 <h2>Step 6. Exercises</h2>
 <p><strong>Exercise 1. Find the past forms</strong> of these verbs in Documents 1 and 2: be, live, sing, make, tell, laugh, write, leave.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> was, lived, sang, made, told, laughed, wrote, left.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> was, lived, sang, made, told, laughed, wrote, left.</p></details>
 <p><strong>Exercise 2. Put the story in order.</strong><br />
 a. The children laughed at her. b. Her mother made a coat with scraps of fabric. c. Years later, she wrote a song about it. d. Dolly wore her coat to school. e. The family had no money for a coat.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> e, b, d, a, c.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> e, b, d, a, c.</p></details>
 <p><strong>Exercise 3. used to.</strong><br />
 1. The family (live) ... in a one-room cabin. 2. Her mother (sing) ... old ballads. 3. The children (not / have) ... new clothes. 4. Dolly (dream) ... of becoming a star.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 used to live · 2 used to sing · 3 didn’t use to have · 4 used to dream.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 used to live · 2 used to sing · 3 didn’t use to have · 4 used to dream.</p></details>
 <p><strong>Exercise 4. Describe the outfit</strong> (adjective order).<br />
 1. a (pink / sparkly / long) gown 2. a (white / beautiful / fringe) jacket 3. (big / blonde / curly) hair 4. (red / high / shiny) heels</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 a long sparkly pink gown (or a sparkly long pink gown) · 2 a beautiful white fringe jacket · 3 big curly blonde hair · 4 shiny high red heels.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 a long sparkly pink gown (or a sparkly long pink gown) · 2 a beautiful white fringe jacket · 3 big curly blonde hair · 4 shiny high red heels.</p></details>
 <p><strong>Exercise 5. Transform</strong> into questions in the past simple.<br />
 1. She grew up in Tennessee. (Where...?) 2. Her mother made the coat. (Who...?) 3. She left for Nashville in 1964. (When...?)</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Where did she grow up? 2 Who made the coat? (subject question: no did) 3 When did she leave for Nashville?</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 Where did she grow up? 2 Who made the coat? (subject question: no did) 3 When did she leave for Nashville?</p></details>
 <p><strong>Exercise 6. Short production (8 sentences).</strong> Four sentences about Dolly as a child (past simple and used to), four about her stage look. Give your opinion with one adjective from the Opinion line and one contrast word.<br />
 <strong>Model answer:</strong> As a child, Dolly lived in a cabin. She used to wear clothes made by her mother. One autumn, her mother sewed a coat with scraps of fabric. The children laughed at her. Later, she wore big platinum wigs and sparkly rhinestone suits. Although her look was over the top, it was glamorous. She never hid where she came from. I think she was proud of her roots and free to reinvent herself.</p>
 <p class="help-box"><strong>Help box.</strong> Frame: <em>When she was a child, she lived... She used to... Later, she wore a ... ... ... (opinion, colour, material) ...</em><br />

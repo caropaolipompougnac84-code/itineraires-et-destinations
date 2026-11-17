@@ -110,8 +110,9 @@ body.dys main{max-width:720px}
 .grid-wrap{overflow-x:auto}
 table.grid td,table.grid th{font-size:.92rem}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look" style="--c:#1f4fd1">
+<body class="dys english-look mode-eleve" style="--c:#1f4fd1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -121,6 +122,29 @@ table.grid td,table.grid th{font-size:.92rem}
 <a href="/who-rules-britain/">Who Rules Britain?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/portrait-of-a-queen/dys/">Home</a>
 <a href="/portrait-of-a-queen/dys/s1/">L1</a>
@@ -166,7 +190,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li>Why does the 2020 broadcast recall the Second World War?</li>
 <li>What is mediation, in the task you have just done?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>By speaking “as your Queen and as a grandmother”, from the heart, after being criticised for silence.</li>
 <li>To use collective memory and a familiar wartime promise (“we will meet again”) in order to unite the country.</li>
@@ -186,7 +210,7 @@ table.grid td,table.grid th{font-size:.92rem}
 <li><b>The debate on disclaimers.</b> In 2020 and 2022, some politicians and public figures asked Netflix to say clearly that the series is fiction. Should drama about living people carry a warning?</li>
 <li><b>Prepare the final task</b> (gallery talk, op-ed or commission letter): choose your format, list three sources (one portrait, one speech, one other), and note one objection you will answer.</li>
 </ul>
-<div class="ans"><h3>Answer key · arguments</h3>
+<div class="ans prof-only"><h3>Answer key · arguments</h3>
 <p><b>For a warning:</b> viewers take fiction for history; real people can be hurt. <b>Against:</b> drama has always reinterpreted history (Shakespeare’s history plays); audiences can tell the difference; fiction can reveal emotional truths that archives cannot. A good spoken answer uses a concession and a rebuttal.</p>
 </div>
 <section class="exit"><span class="tag">Exit ticket</span>

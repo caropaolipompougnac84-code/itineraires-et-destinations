@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/dys/">Start here</a>
 <a href="/the-verdict-of-the-people/dys/s1/">L1</a>
@@ -137,37 +161,37 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise S1</span><h3>Name</h3>
 <div class="worked"><b>Worked example.</b> “One country is the United States.”</div>
 <p><b>Now you.</b><br>Name the other two.</p>
-<div class="ans"><h4>Self-check</h4><p>Canada and Mexico.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Choose</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Canada and Mexico.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Choose</h3>
 <div class="worked"><b>Worked example.</b> “Trade means buying and selling.”</div>
 <p><b>Now you.</b><br>Choose:<br>A. Every political change immediately changes all trade.<br>B. A political change can affect trade.</p>
-<div class="ans"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Complete</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Complete</h3>
 <div class="worked"><b>Worked example.</b> “Canada is a trading partner.”</div>
 <p><b>Now you.</b><br>Complete: “Political decisions can affect <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>trade.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>trade.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t6c">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t6c"><p>The United States, Canada and Mexico trade with each other.</p><p>USMCA is their trade agreement.</p><p>Congress has powers over trade.</p><p>A change in Congress may affect political debates.</p><p>However, an election does not immediately change every trade rule.</p><p>We must separate what happened from what may happen next.</p></div></div>
 <section class="card"><span class="tag">Exercise C1</span><h3>Fact or possibility?</h3>
 <div class="worked"><b>Worked example.</b> “USMCA is a trade agreement.” Fact.</div>
 <p><b>Now you.</b><br>Classify: “A change in Congress may affect a trade debate.”</p>
-<div class="ans"><h4>Self-check</h4><p>A possibility.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Complete</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>A possibility.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Complete</h3>
 <div class="worked"><b>Worked example.</b> “The word <i>may</i> shows possibility.”</div>
 <p><b>Now you.</b><br>Complete: “An election <span class="gap"></span> affect trade debates.”</p>
-<div class="ans"><h4>Self-check</h4><p>may.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Explain</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>may.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Explain</h3>
 <div class="worked"><b>Worked example.</b> “The election has happened. Its future effects may still be uncertain.”</div>
 <p><b>Now you.</b><br>Write two sentences with: One fact is… / One possible effect is…</p>
-<div class="ans"><h4>Self-check</h4><p>The first sentence uses information from the text. The second uses may or might and does not claim certainty.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>The first sentence uses information from the text. The second uses may or might and does not claim certainty.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t6p">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t6p"><p>Neighbouring countries may follow US congressional elections because Congress has powers over trade.</p><p>However, a result does not automatically decide future policy.</p><p>Existing laws, the president and decisions by other countries also matter.</p><p>A useful report explains how a political change could lead to a decision.</p><p>It then says what is still uncertain.</p><p>This is more careful than predicting an outcome without explaining the connection.</p></div></div>
 <section class="card"><span class="tag">Exercise P1</span><h3>Find limits</h3>
 <div class="worked"><b>Worked example.</b> “Congress is not the only actor.”</div>
 <p><b>Now you.</b><br>Name two other factors from the text.</p>
-<div class="ans"><h4>Self-check</h4><p>Existing laws, the president, decisions by other countries.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Conditional</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>Existing laws, the president, decisions by other countries.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Conditional</h3>
 <div class="worked"><b>Worked example.</b> “If a proposal changes, the debate may change.”</div>
 <p><b>Now you.</b><br>Complete with <i>changes</i> and <i>may</i>: “If Congress <span class="gap"></span> the law, trade conditions <span class="gap"></span> change.”</p>
-<div class="ans"><h4>Self-check</h4><p>“If Congress changes the law, trade conditions may change.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write for a visitor</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>“If Congress changes the law, trade conditions may change.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write for a visitor</h3>
 <div class="worked"><b>Worked example.</b> Opening: “US elections can matter beyond US borders, but…”</div>
 <p><b>Now you.</b><br>Write 60 to 80 words. Include a fact, a possible consequence and a limit.</p>
-<div class="ans"><h4>Self-check</h4><p>Your answer must separate established information from prediction. No invented 2026 outcome is needed.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Your answer must separate established information from prediction. No invented 2026 outcome is needed.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
 <p>CAP apprentice: use Route C. Bac pro apprentice: use Route P. Do Exercises 1 and 2 of your route, then do this task instead of Exercise 3. Keep the same written record and homework.</p>
-<section class="card"><span class="tag">CFA task</span><h3>Separate fact and prediction</h3><div class="worked"><b>Worked example.</b> “Canada and the United States trade with each other.” That is a fact.</div><p><b>Now you.</b><br>Write a careful sentence about a possible business consequence of political change. Starter: “A change may affect <span class="gap"></span>, but we need <span class="gap"></span>.”</p><div class="ans"><h4>Self-check</h4><p>Accept a clearly labelled possibility. Do not accept a claim that a specific price or delivery outcome is certain.</p></div></section></section>
+<section class="card"><span class="tag">CFA task</span><h3>Separate fact and prediction</h3><div class="worked"><b>Worked example.</b> “Canada and the United States trade with each other.” That is a fact.</div><p><b>Now you.</b><br>Write a careful sentence about a possible business consequence of political change. Starter: “A change may affect <span class="gap"></span>, but we need <span class="gap"></span>.”</p><div class="ans prof-only"><h4>Self-check</h4><p>Accept a clearly labelled possibility. Do not accept a claim that a specific price or delivery outcome is certain.</p></div></section></section>
 
 <section class="record"><span class="tag">Written record</span><p><b>S:</b> “The United States trades with Canada and Mexico.”</p><p><b>C:</b> “An election may affect trade, but its effects are not automatic.”</p><p><b>P:</b> “Explain the possible connection between a political change and a consequence.”</p></section>
 <section class="card"><p><b>Speaking frame.</b> “One fact is <span class="gap"></span>. One possible consequence is <span class="gap"></span>.”</p><p><b>Emergency sentence.</b> “A possible consequence is not a certain result.”</p></section>

@@ -200,8 +200,9 @@
 
   </style>
   
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-pro" class="english-look">
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,12 +250,35 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/barber-shop-interior.jpg" alt="An empty barber shop with chairs, mirrors and a green floor, ready for the day's work." width="1200" height="800"><figcaption>A barber shop. Photo: jimmyweee. CC BY 2.0, Wikimedia Commons.</figcaption></figure><h1>Appendix A. CFA pathway: hair and beauty</h1>
 <p><strong>For:</strong> apprentices preparing the CAP Métiers de la coiffure, the BP Coiffure, the CAP Esthétique, cosmétique, parfumerie, the BP Esthétique, cosmétique, parfumerie, and students of the bacs pro Métiers de la coiffure and Esthétique cosmétique parfumerie.<br />
 <strong>How to use it:</strong> after Lessons 1, 2 and 3. One lesson of 55 minutes (planned over 52). Lessons 7 and 8 complete the portrait.<br />
 <strong>Debatable question:</strong> Is a “Dolly look” a costume or a real service you can sell?</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -306,7 +330,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>Three words for hair and three for make-up from Lesson 2. 2. Make it polite: <em>I want more volume.</em> 3. What colour was Dolly’s eyeshadow in the Warhol portrait?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 wig, curls, volume; foundation, eyeshadow, false lashes · 2 Could you add more volume, please? · 3 lilac.</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 wig, curls, volume; foundation, eyeshadow, false lashes · 2 Could you add more volume, please? · 3 lilac.</li>
 </ol>
 <h2>Step 2. Expanding your vocabulary</h2>
 <h3>Hair</h3>
@@ -440,10 +464,10 @@
 </table>
 <p><strong>Words to sell a service:</strong> It’s ideal for... · It includes... · It will last... · I’d recommend... · Please note that...</p></details>
 <p><strong>Exercise 1. Hair or beauty?</strong> Sort: rollers, concealer, toner, false lashes, highlights, contouring, hairspray, foundation.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> Hair: rollers, toner, highlights, hairspray · Beauty: concealer, false lashes, contouring, foundation.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> Hair: rollers, toner, highlights, hairspray · Beauty: concealer, false lashes, contouring, foundation.</p></details>
 <p><strong>Exercise 2. Fill in the gaps:</strong> patch test · skin type · roots · toner<br />
 Before the lashes, we need a (1) <strong><em>_</em>_. What is your (2) </strong><strong><em>_? Your (3) </em></strong><strong><em> are darker, so we’ll use a (4) </em></strong>___ after bleaching.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 patch test · 2 skin type · 3 roots · 4 toner.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 patch test · 2 skin type · 3 roots · 4 toner.</p></details>
 <p><strong>Flashcards (model).</strong> <strong>a patch test</strong> · test cutané · <em>We do a patch test 48 hours before.</em> / <strong>It will take about + time</strong> (red) · <em>It will take about an hour.</em></p>
 <h2>Step 3. The teacher’s point</h2>
 <p><strong>Teacher script.</strong> Play the professional with one apprentice as the client. Ask five questions. The group notes the questions, then classifies them yes/no or wh-.</p>
@@ -476,11 +500,11 @@ Before the lashes, we need a (1) <strong><em>_</em>_. What is your (2) </strong>
 <p><strong>Quick check.</strong> Make a question: <em>you / allergies / have</em> → <strong>Do you have any allergies?</strong></p>
 <h2>Step 4. Exercises</h2>
 <p><strong>Exercise 3. The steps of a Dolly look.</strong> Put in order: a. add false lashes · b. apply foundation · c. put on the wig and add hairspray · d. welcome the client and do the consultation · e. apply eyeshadow and lipstick</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> d, b, e, a, c (c before b is accepted if justified: some salons do the hair first).</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> d, b, e, a, c (c before b is accepted if justified: some salons do the hair first).</p></details>
 <p><strong>Exercise 4. Questions for the client.</strong> Write the questions: 1 occasion? 2 allergies? 3 skin type? 4 wig or own hair? 5 time available?</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 What is the occasion? 2 Do you have any allergies? 3 What is your skin type? 4 Would you like a wig or would you rather use your own hair? 5 How much time do you have?</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 What is the occasion? 2 Do you have any allergies? 3 What is your skin type? 4 Would you like a wig or would you rather use your own hair? 5 How much time do you have?</p></details>
 <p><strong>Exercise 5. Transform with will.</strong> 1 The service / take / ninety minutes. 2 The curls / last / all night.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The service will take ninety minutes. 2 The curls will last all night.</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 The service will take ninety minutes. 2 The curls will last all night.</p></details>
 <h2>Step 5. Role-play with a client</h2>
 <p><strong>Situation.</strong> A client comes to your salon. She is going to a Dolly Parton tribute concert on Saturday night and wants “a Dolly look”: big hair and stage make-up.</p>
 <p><strong>Role card A · The client</strong><br />

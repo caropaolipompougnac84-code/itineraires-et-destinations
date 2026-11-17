@@ -21,8 +21,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/english-look.css">
 <script src="/destination-australia/script.js" defer></script>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Aller au contenu</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -32,6 +33,29 @@
 </div></nav>
 <div class="seq-bar"><nav class="seq-nav" aria-label="Lessons"><a class="on" aria-current="page" href="/destination-australia/dys/">Accueil</a><a class="" href="/destination-australia/dys/s1/">S1</a><a class="" href="/destination-australia/dys/s2/">S2</a><a class="" href="/destination-australia/dys/s3/">S3</a><a class="" href="/destination-australia/dys/s4/">S4</a><a class="" href="/destination-australia/dys/s5/">S5</a><a class="" href="/destination-australia/dys/s6/">S6</a><a class="" href="/destination-australia/dys/s7/">S7</a><a class="" href="/destination-australia/dys/s8/">S8</a><a class="" href="/destination-australia/dys/s9/">S9</a><a class="" href="/destination-australia/dys/s10/">S10</a><a class="" href="/destination-australia/dys/s11/">S11</a><a class="" href="/destination-australia/dys/s12/">S12</a><a class="" href="/destination-australia/dys/s13/">S13</a><a class="" href="/destination-australia/dys/assessment/">Éval.</a><a class="" href="/destination-australia/dys/#australian-voices">Listening</a><a class="" href="/destination-australia/aussie-slang/">Slang</a><a class="" href="/destination-australia/dys/downloads/">Docs</a><a class="" href="/destination-australia/annexe/">Annexe</a></nav></div>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <p class="switch"><button type="button" data-dys-toggle>Version plus lisible</button> <a class="back-standard" href="/destination-australia/">Mise en page habituelle</a></p>
 <p class="lisible-note">Terminale bac pro et Terminale générale et technologique. Les objectifs et les activités langagières restent ceux du programme. La version plus lisible change seulement la mise en page. Pour un étayage plus léger, en Première ou au quotidien, prenez le parcours ★ : mêmes tâches, consignes plus guidées, textes plus courts. Le parcours ★★ reste disponible.</p>
 
@@ -61,7 +85,7 @@
 
 <p class="dl">
 <a href="/destination-australia/dys/downloads/">Téléchargements</a>
-<a class="sec" href="/destination-australia/dys/teacher/">Corrigés</a>
+<a class="sec prof-only" href="/destination-australia/dys/teacher/">Corrigés</a>
 <a class="sec" href="/destination-australia/annexe/">Ancienne version</a>
 </p>
 
@@ -128,7 +152,7 @@ Cette vidéo peut être téléchargée ici : <a href="/destination-australia/vid
 </details>
 <p class="downloads">Fiche élève : <a href="/destination-australia/downloads/fiches-eleves-australian-voices.pdf">PDF</a> · <a href="/destination-australia/downloads/fiches-eleves-australian-voices.docx">Word</a> · <a href="/destination-australia/downloads/fiches-eleves-australian-voices.odt">LibreOffice</a>.</p>
 </article>
-<aside class="voices-teacher">
+<aside class="voices-teacher prof-only">
 <h3>Pour le professeur</h3>
 <p>Le corrigé se télécharge à part, il n’est pas sur la fiche élève.</p>
 <p class="voices-dl">

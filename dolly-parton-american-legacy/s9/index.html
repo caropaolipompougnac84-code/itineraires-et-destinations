@@ -200,8 +200,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,10 +250,33 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/cades-cove-methodist-church.jpg" alt="A white wooden church among the trees in Cades Cove, Tennessee." width="1600" height="1200"><figcaption>Methodist church, Cades Cove, Great Smoky Mountains National Park. Photo: Vicpeters. CC BY-SA 3.0, Wikimedia Commons.</figcaption></figure><h1>Lesson 9. Final task and summative assessment</h1><p class="skills-legend">Activities in this lesson: <span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Compréhension écrite · <span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Production orale · <span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Production écrite</p>
 <p><strong>Question of the sequence:</strong> Is a legacy what a person leaves behind, or what other people decide to make of it?</p>
-<details class="teacher"><summary>For the teacher: timing (52 minutes)</summary>
+<details class="teacher prof-only"><summary>For the teacher: timing (52 minutes)</summary>
 <table>
 <thead>
 <tr>
@@ -294,7 +318,7 @@
 <h2>Step 1. Recap</h2>
 <ol>
 <li>Give one goal of the Imagination Library. 2. Make it passive: <em>They send a book every month.</em> 3. Name the three backstage professionals.</p>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 so that children can love reading · 2 A book is sent every month. · 3 the dresser, the hairdresser, the make-up artist.</li>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key:</strong> 1 so that children can love reading · 2 A book is sent every month. · 3 the dresser, the hairdresser, the make-up artist.</li>
 </ol>
 <h2>Final task: Backstage at the tribute concert</h2>
 <h3>Student sheet</h3>
@@ -406,7 +430,7 @@ After Dolly Parton’s death in August 2026, a video spread online. In it, Miley
 <li>What was Miley’s only public message about?</li>
 <li>Give the two pieces of advice from the experts.</li>
 </ol>
-<details class="answers"><summary>Answer key</summary><p><strong>Answer key.</strong> 1 False: it is very likely AI-generated (1). 2 Because the property is managed by a private trust (1). 3 That she had organised everything so that nobody would have to deal with a mess (1). 4 Love, grief and music: it was a tribute (1). 5 Check who posted it; check whether reliable media report it (1).</p></details>
+<details class="answers prof-only"><summary>Answer key</summary><p><strong>Answer key.</strong> 1 False: it is very likely AI-generated (1). 2 Because the property is managed by a private trust (1). 3 That she had organised everything so that nobody would have to deal with a mess (1). 4 Love, grief and music: it was a tribute (1). 5 Check who posted it; check whether reliable media report it (1).</p></details>
 <h3><span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Part D · Writing (5 points)</h3>
 <p>Choose one subject (100 words):<br />
 1. Write a tribute to Dolly Parton for your school website.<br />

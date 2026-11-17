@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/dys/">Start here</a>
 <a href="/the-verdict-of-the-people/dys/s1/">L1</a>
@@ -137,37 +161,37 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise S1</span><h3>Choose</h3>
 <div class="worked"><b>Worked example.</b> “How many chambers does Congress have?” Answer: two.</div>
 <p><b>Now you.</b><br>1. Congress has one / two chambers.<br>2. The chambers are the House and the Senate / the courts.</p>
-<div class="ans"><h4>Self-check</h4><p>1. two.<br>2. the House and the Senate.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. two.<br>2. the House and the Senate.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Complete</h3>
 <div class="worked"><b>Worked example.</b> “The United States has a <span class="gap"></span>.” Answer: president.</div>
 <p><b>Now you.</b><br>Complete: “Congress has the <span class="gap"></span> and the <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>House; Senate.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Say a fact</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>House; Senate.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Say a fact</h3>
 <div class="worked"><b>Worked example.</b> “The president does not decide everything alone.”</div>
 <p><b>Now you.</b><br>Say two sentences: “Congress has <span class="gap"></span>.” “The president does not <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>“Congress has two chambers.” “The president does not make every decision alone.”</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>“Congress has two chambers.” “The president does not make every decision alone.”</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t2c">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t2c"><p>Congress has the House and the Senate.</p><p>Both chambers generally need to approve the same bill.</p><p>The bill is then presented to the president.</p><p>The president may veto it.</p><p>The president therefore needs to work with Congress.</p><p>An election can change who has power in Congress.</p></div></div>
 <section class="card"><span class="tag">Exercise C1</span><h3>Order</h3>
 <div class="worked"><b>Worked example.</b> First, a bill is proposed.</div>
 <p><b>Now you.</b><br>Put these steps in order.<br>A. The bill is presented to the president.<br>B. Both chambers approve the same bill.</p>
-<div class="ans"><h4>Self-check</h4><p>B, then A.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Complete</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>B, then A.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>Complete</h3>
 <div class="worked"><b>Worked example.</b> “A bill is a proposed <span class="gap"></span>.” Answer: law.</div>
 <p><b>Now you.</b><br>Use: Congress, veto.<br>1. The president may <span class="gap"></span> a bill.<br>2. The president needs to work with <span class="gap"></span>.</p>
-<div class="ans"><h4>Self-check</h4><p>1. veto.<br>2. Congress.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Explain</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>1. veto.<br>2. Congress.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Explain</h3>
 <div class="worked"><b>Worked example.</b> “The president cannot decide everything alone because Congress has powers too.”</div>
 <p><b>Now you.</b><br>Write two or three sentences explaining this.</p>
-<div class="ans"><h4>Self-check</h4><p>Mention the two chambers and the approval of a bill. Do not say that the president alone makes every law.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Mention the two chambers and the approval of a bill. Do not say that the president alone makes every law.</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t2p">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t2p"><p>Midterm elections can change the balance of power in Congress.</p><p>They do not directly elect a new president.</p><p>Congress has two chambers.</p><p>Ordinary federal laws generally need both chambers to approve the same bill.</p><p>The bill is then presented to the president.</p><p>The president may veto it.</p><p>A president may therefore need to negotiate, even after winning a presidential election.</p></div></div>
 <section class="card"><span class="tag">Exercise P1</span><h3>Correct</h3>
 <div class="worked"><b>Worked example.</b> “Midterms directly elect a new president.” Correction: “Midterms do not directly elect a new president.”</div>
 <p><b>Now you.</b><br>Correct: “The president’s proposals automatically become law.”</p>
-<div class="ans"><h4>Self-check</h4><p>“The president’s proposals do not automatically become law. Congress has a role in approving legislation.”</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Passive voice</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>“The president’s proposals do not automatically become law. Congress has a role in approving legislation.”</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Passive voice</h3>
 <div class="worked"><b>Worked example.</b> “Both chambers approve the bill.” becomes “The bill is approved by both chambers.”</div>
 <p><b>Now you.</b><br>Transform: “Both chambers must approve the bill.”</p>
-<div class="ans"><h4>Self-check</h4><p>“The bill must be approved by both chambers.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Explain to someone</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>“The bill must be approved by both chambers.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Explain to someone</h3>
 <div class="worked"><b>Worked example.</b> Opening: “Winning the presidency does not remove the powers of Congress.”</div>
 <p><b>Now you.</b><br>Write 60 to 80 words for a student who thinks the president decides everything.</p>
-<div class="ans"><h4>Self-check</h4><p>Include the House and the Senate, the approval of a bill and one reason why negotiation may be necessary.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Include the House and the Senate, the approval of a bill and one reason why negotiation may be necessary.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
 <p>CAP apprentice: use Route C. Bac pro apprentice: use Route P. Do Exercises 1 and 2 of your route, then do this task instead of Exercise 3. Keep the same written record and homework.</p>
-<section class="card"><span class="tag">CFA task</span><h3>Explain responsibilities</h3><div class="worked"><b>Worked example.</b> “At work, different people can have different responsibilities.”</div><p><b>Now you.</b><br>Explain why “the president decides everything” is misleading. Starter: “Congress also has <span class="gap"></span>.”</p><div class="ans"><h4>Self-check</h4><p>Mention the powers of Congress. Do not claim that a workplace and the US government work in the same way.</p></div></section></section>
+<section class="card"><span class="tag">CFA task</span><h3>Explain responsibilities</h3><div class="worked"><b>Worked example.</b> “At work, different people can have different responsibilities.”</div><p><b>Now you.</b><br>Explain why “the president decides everything” is misleading. Starter: “Congress also has <span class="gap"></span>.”</p><div class="ans prof-only"><h4>Self-check</h4><p>Mention the powers of Congress. Do not claim that a workplace and the US government work in the same way.</p></div></section></section>
 
 <section class="record"><span class="tag">Written record</span><p><b>S:</b> “Congress has the House and the Senate.”</p><p><b>C:</b> “The president needs to work with Congress.”</p><p><b>P:</b> “Midterms can change the power of Congress without directly electing a new president.”</p></section>
 <section class="card"><p><b>Speaking frame.</b> “The president cannot decide everything alone because <span class="gap"></span>.”</p><p><b>Emergency sentence.</b> “Congress has powers too.”</p></section>

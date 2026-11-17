@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/the-capital-trap/">The Capital Trap</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-capital-trap/dys/">Home</a>
 <a href="/the-capital-trap/dys/s1/">L1</a>
@@ -152,7 +176,7 @@ body.dys main{max-width:720px}
 <li>Hawaii is a group of ______ in the Pacific Ocean.</li>
 <li>Denver is ______, far from the coast.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p><p>flows, borders, separated, between, islands, inland</p></div>
+<div class="ans prof-only"><p class="tag">Answer key</p><p>flows, borders, separated, between, islands, inland</p></div>
 
 <h3>Exercise 2. <em>In the north of</em> or <em>north of</em>?</h3>
 <ol>
@@ -161,7 +185,7 @@ body.dys main{max-width:720px}
 <li>Mexico is ______ Texas.</li>
 <li>Miami is ______ Florida.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p><p>north of, in the north of, south of, in the south of</p></div>
+<div class="ans prof-only"><p class="tag">Answer key</p><p>north of, in the north of, south of, in the south of</p></div>
 
 <h2>2. The origin of names</h2>
 <div class="tbl-scroll"><table class="grid">

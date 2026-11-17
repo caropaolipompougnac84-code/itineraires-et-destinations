@@ -78,8 +78,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys">
+<body class="dys mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -88,6 +89,29 @@ body.dys main{max-width:720px}
 <a href="/destination-australia/annexe/ancienne-version.html">Destination Australia</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/destination-australia/annexe/dys/">Home</a>
 <a href="/destination-australia/annexe/dys/s1/">L1</a>
@@ -129,7 +153,7 @@ body.dys main{max-width:720px}
 <li>How long is the usual requirement for a second subclass 417 visa?</li>
 <li>What is a White Card for?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>Eligible work, in the right industry and postcode, counted under Home Affairs rules; not any farm job.</li>
 <li>Three months, normally at least 88 calendar days of eligible full-time-equivalent work. Recheck the official page.</li>
@@ -167,7 +191,7 @@ body.dys main{max-width:720px}
 <h2>Discover Cairns</h2>
 <figure class="portrait"><img src="/destination-australia/annexe/img/cairns-esplanade.jpg" alt="Trinity Bay seen from the Esplanade in Cairns." loading="lazy" width="1600"><figcaption>Look at Trinity Bay from the Esplanade. Check local swimming advice, marine hazards and seasonal conditions. Do not assume every beach is suitable for swimming. <span class="credit">John Robert McPherson, Trinity Bay from the Esplanade, Cairns, <a href='https://commons.wikimedia.org/wiki/File:Trinity_Bay_from_the_Esplanade,_Cairns_102_9163.jpg' target='_blank' rel='noopener'>CC0</a>, via Wikimedia Commons.</span></figcaption></figure>
 <p><b>Your task.</b> Calculate four weeks of rent at AUD 300 per week. Write three house rules and two beach-safety rules.</p>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>AUD 1,200 for four weeks. Possible rules: clean shared areas, discuss guests, respect quiet hours; swim between the flags and follow lifeguard instructions.</p>
 </div>
 <section class="exit"><span class="tag">Exit ticket</span>
@@ -175,7 +199,7 @@ body.dys main{max-width:720px}
 <li>How much is four weeks of rent at AUD 300 a week?</li>
 <li>Where should you swim at a patrolled beach?</li>
 </ol>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <ol>
 <li>AUD 1,200. A calendar month is not always four weeks.</li>
 <li>Between the red and yellow flags, and follow lifeguard instructions.</li>

@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +99,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/dys/">Start here</a>
 <a href="/the-verdict-of-the-people/dys/s1/">L1</a>
@@ -137,37 +161,37 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise S1</span><h3>Find the essentials</h3>
 <div class="worked"><b>Worked example.</b> A report needs a source.</div>
 <p><b>Now you.</b><br>What else does it need?</p>
-<div class="ans"><h4>Self-check</h4><p>A date.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Choose</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>A date.</p></div></section><section class="card"><span class="tag">Exercise S2</span><h3>Choose</h3>
 <div class="worked"><b>Worked example.</b> “Missing information means I should check.”</div>
 <p><b>Now you.</b><br>Choose:<br>A. Guess a result.<br>B. Say what is missing.</p>
-<div class="ans"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Write</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>B.</p></div></section><section class="card"><span class="tag">Exercise S3</span><h3>Write</h3>
 <div class="worked"><b>Worked example.</b> “The date is missing.”</div>
 <p><b>Now you.</b><br>Complete: “I cannot check the report because <span class="gap"></span>.”</p>
-<div class="ans"><h4>Self-check</h4><p>Possible answers: the source is missing; the date is missing; the page is incomplete.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Possible answers: the source is missing; the date is missing; the page is incomplete.</p></div></section></section><section class="route c" id="route-c"><h2>Route C · CAP</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t5c">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t5c"><p>Before using an election report, find its publisher and its update time.</p><p>Check what the page reports.</p><p>A news organisation may call a race.</p><p>This is not the same as legal certification.</p><p>If the page does not explain the status of the result, keep that uncertainty in your report.</p></div></div>
 <section class="card"><span class="tag">Exercise C1</span><h3>List</h3>
 <div class="worked"><b>Worked example.</b> “Publisher” is one detail to record.</div>
 <p><b>Now you.</b><br>Write two other details.</p>
-<div class="ans"><h4>Self-check</h4><p>The update time and the status of the result.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>True or false</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>The update time and the status of the result.</p></div></section><section class="card"><span class="tag">Exercise C2</span><h3>True or false</h3>
 <div class="worked"><b>Worked example.</b> “A source and a date help us check a report.” True.</div>
 <p><b>Now you.</b><br>“A media call is automatically legal certification.”</p>
-<div class="ans"><h4>Self-check</h4><p>False.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Complete a safe report</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>False.</p></div></section><section class="card"><span class="tag">Exercise C3</span><h3>Complete a safe report</h3>
 <div class="worked"><b>Worked example.</b> “The publisher is named, but the update time is missing.”</div>
 <p><b>Now you.</b><br>Complete: “The page reports <span class="gap"></span>. However, I cannot establish <span class="gap"></span>.” You may use: a media call; legal certification.</p>
-<div class="ans"><h4>Self-check</h4><p>“The page reports a media call. However, I cannot establish legal certification.”</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>“The page reports a media call. However, I cannot establish legal certification.”</p></div></section></section><section class="route p" id="route-p"><h2>Route P · Bac pro</h2>
 <div class="source"><span class="tag">Short text</span><div class="audio-bar"><button type="button" data-speak="t5p">Listen (device voice)</button><button type="button" data-stop="1">Stop</button><span class="voice-status" aria-live="polite"></span></div><div id="t5p"><p>Two election pages can disagree because they were updated at different times.</p><p>They may also count different categories.</p><p>For example, one page may list races called, while another describes the expected make-up of a chamber.</p><p>A newer figure is not automatically comparable with an older one.</p><p>Before reporting a difference, check the category, the time and the status.</p><p>If the evidence is incomplete, explain the limit.</p></div></div>
 <section class="card"><span class="tag">Exercise P1</span><h3>Find causes</h3>
 <div class="worked"><b>Worked example.</b> Different update times may explain a difference.</div>
 <p><b>Now you.</b><br>Name another possible cause.</p>
-<div class="ans"><h4>Self-check</h4><p>The pages may count different categories or use different result statuses.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Correct the method</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>The pages may count different categories or use different result statuses.</p></div></section><section class="card"><span class="tag">Exercise P2</span><h3>Correct the method</h3>
 <div class="worked"><b>Worked example.</b> “Use the newest number” is incomplete advice.</div>
 <p><b>Now you.</b><br>Improve: “The newer page must be right.”</p>
-<div class="ans"><h4>Self-check</h4><p>“The newer page may contain more recent information, but we must check whether it measures the same category.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write a method note</h3>
+<div class="ans prof-only"><h4>Self-check</h4><p>“The newer page may contain more recent information, but we must check whether it measures the same category.”</p></div></section><section class="card"><span class="tag">Exercise P3</span><h3>Write a method note</h3>
 <div class="worked"><b>Worked example.</b> Opening: “Before comparing two figures, I would…”</div>
 <p><b>Now you.</b><br>Write 60 to 80 words explaining three checks.</p>
-<div class="ans"><h4>Self-check</h4><p>Include category, time and status. Explain why guessing is not acceptable.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
+<div class="ans prof-only"><h4>Self-check</h4><p>Include category, time and status. Explain why guessing is not acceptable.</p></div></section></section><section class="route cfa" id="route-cfa"><h2>CFA pathway</h2>
 <p>CAP apprentice: use Route C. Bac pro apprentice: use Route P. Do Exercises 1 and 2 of your route, then do this task instead of Exercise 3. Keep the same written record and homework.</p>
-<section class="card"><span class="tag">CFA task</span><h3>Check a forwarded message</h3><div class="worked"><b>Worked example.</b> “This screenshot has no date.”</div><p><b>Now you.</b><br>A colleague forwards an election screenshot. Write a polite reply asking for two missing details. Starter: “Could you send me <span class="gap"></span> and <span class="gap"></span>?”</p><div class="ans"><h4>Self-check</h4><p>“Could you send me the original source and the update date?”</p></div></section></section>
+<section class="card"><span class="tag">CFA task</span><h3>Check a forwarded message</h3><div class="worked"><b>Worked example.</b> “This screenshot has no date.”</div><p><b>Now you.</b><br>A colleague forwards an election screenshot. Write a polite reply asking for two missing details. Starter: “Could you send me <span class="gap"></span> and <span class="gap"></span>?”</p><div class="ans prof-only"><h4>Self-check</h4><p>“Could you send me the original source and the update date?”</p></div></section></section>
 <section class="card"><span class="tag">Optional real-results card</span><p>This card is not needed to complete the lesson. If a teacher gives you a verified report, complete: Publisher · Exact page · Updated · Finding · Status · What remains uncertain.</p><p>If no report has been given, write: “No verified report has been supplied. I will not invent a result.” That is a valid answer.</p></section>
 <section class="record"><span class="tag">Written record</span><p><b>S:</b> “Check the source and the date.”</p><p><b>C:</b> “A media call and legal certification are different.”</p><p><b>P:</b> “Compare the category, time and status before comparing figures.”</p></section>
 <section class="card"><p><b>Speaking frame.</b> “I can establish <span class="gap"></span>. I cannot yet establish <span class="gap"></span>.”</p><p><b>Emergency sentence.</b> “I will not guess a missing result.”</p></section>

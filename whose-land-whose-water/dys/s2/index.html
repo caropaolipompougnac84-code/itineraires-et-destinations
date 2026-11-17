@@ -112,8 +112,9 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +123,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/dys/">Start here</a>
 <a href="/whose-land-whose-water/dys/#presentation">Présentation</a>
@@ -186,34 +210,34 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <section class="card"><span class="tag">Exercise 1</span><h3>Read and choose</h3><div class="worked"><b>Worked example.</b><br>Was the White Paper a sports report or a government proposal?<br>Answer: a government proposal.</div>
 <p>Now choose:</p>
 <ol><li>The White Paper appeared in 1969 / 1999.</li><li>Many leaders wanted to lose / keep existing rights.</li><li><i>Citizens Plus</i> means citizenship with additional rights / citizenship without rights.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>1969; keep; citizenship with additional rights.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>1969; keep; citizenship with additional rights.</p></div></section>
 <section class="card"><span class="tag">Exercise 2</span><h3>Match words</h3><div class="worked"><b>Worked example.</b><br>withdraw : take back.</div>
 <p>Now match:</p>
 <ol><li>proposal;</li><li>plus;</li><li>right.</li></ol>
 <ol type="a"><li>something additional;</li><li>something people are entitled to;</li><li>a plan for discussion.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>1c, 2a, 3b.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>1c, 2a, 3b.</p></div></section>
 <section class="card"><span class="tag">Exercise 3</span><h3>Listen</h3><div class="offlink"><p><b>Listening document.</b> Harold Cardinal | National Aboriginal History Month. APTN News · YouTube, 19 June 2017 · 1 min 04. Listen first without reading. If the video does not work, use the support account and write “Reading-support route”. <a href="https://www.youtube.com/watch?v=QFMyvJkt04w" target="_blank" rel="noopener">Open on YouTube</a>.</p></div>
 <div class="worked"><b>Worked example of a note.</b><br>Name heard: Harold Cardinal.</div>
 <p>Listen once for the subject.</p>
 <p>Listen again for these details:</p>
 <ol><li>How old was he when he became association leader? <span class="gap"></span>.</li><li>What was his book called? <span class="gap"></span>.</li></ol>
 <div class="source"><span class="tag">Support account</span><p>Harold Cardinal became leader of the Indian Association of Alberta at 23. His book was called The Unjust Society. The title challenged the idea of a “Just Society”.</p><p><i>Use it only if you cannot listen. Label your answer “Reading-support route”.</i></p></div>
-<div class="ans"><h3>Self-check</h3><p>23; <i>The Unjust Society</i>.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>23; <i>The Unjust Society</i>.</p></div></section>
 <section class="card"><span class="tag">Exercise 4</span><h3>Report a plan</h3><div class="worked"><b>Worked example.</b><br>The plan was to change a law.<br>The government was going to change a law.</div>
 <p>Complete:</p>
 <ol><li>The government was going to <span class="gap"></span> Indian status.<br>Choose: remove / removing.</li><li>The leaders wanted to <span class="gap"></span> their rights.<br>Choose: keep / kept.</li></ol>
 <p>General extension:</p>
 <ol start="3"><li>“We will change the policy.”<br>They said that they <span class="gap"></span> change the policy.</li></ol>
-<div class="ans"><h3>Self-check</h3><p>Remove; keep; would.</p></div></section>
+<div class="ans prof-only"><h3>Self-check</h3><p>Remove; keep; would.</p></div></section>
 <section class="route"><h2>Speaking: your route</h2><div class="worked"><b>Worked example.</b><br>The government wanted change. However, many leaders wanted to keep existing rights.</div><h3>Route S · SEGPA</h3><p>Use the Route C sentences below. Say the first sentence aloud. Then say the second one. You may read them from the page, one at a time.</p><h3>Route C · CAP or CFA</h3><p>Say:</p>
 <div class="script"><p>The White Paper was a proposal.<br>Many leaders wanted to keep their rights.</p></div><h3>Route P · Bac pro or CFA</h3><p>Explain the disagreement to a colleague who missed the meeting.</p>
 <p>Use:</p>
 <div class="script"><p>The proposal was…<br>The objection was…<br>The important difference was…</p></div><h3>Route G · Lycée général et technologique, LVA</h3><p>Explain in five sentences why equal treatment and protection of existing rights may conflict.</p><h3>Route G · Lycée général et technologique, LVB</h3><p>Use:</p>
-<div class="script"><p>The government said…<br>Many leaders disagreed because…<br>The Red Paper…</p></div><div class="ans"><h3>Self-check</h3><p>Your answer should explain the disagreement without saying that First Nations leaders rejected equality itself.</p></div></section>
+<div class="script"><p>The government said…<br>Many leaders disagreed because…<br>The Red Paper…</p></div><div class="ans prof-only"><h3>Self-check</h3><p>Your answer should explain the disagreement without saying that First Nations leaders rejected equality itself.</p></div></section>
 <h2>Written record</h2><div class="record"><div class="plain"><p>Many First Nations leaders wanted equal citizenship without losing existing rights. The Red Paper expressed this idea as “Citizens Plus”.</p></div></div>
 <h2>Homework</h2><div class="card"><div class="worked"><b>Worked example.</b><br>A proposal is a plan for discussion.</div>
 <p>Write a definition of <i>withdraw</i> and one sentence with <i>rights</i>.</p>
-<div class="ans"><h3>Self-check</h3><p>Withdraw means take back. Example: “The leaders wanted to keep their rights.”</p></div></div>
+<div class="ans prof-only"><h3>Self-check</h3><p>Withdraw means take back. Example: “The leaders wanted to keep their rights.”</p></div></div>
 </main>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>

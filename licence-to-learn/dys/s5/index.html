@@ -88,8 +88,9 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/licence-to-learn/">Licence to Learn</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/licence-to-learn/dys/">Start here</a>
 <a href="/licence-to-learn/dys/s1/">L1</a>
@@ -163,7 +187,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 1</span><h3>Match the meaning</h3>
 <div class="worked"><b>Worked example.</b> must : necessary.</div>
 <div><b>Now you.</b><p>Match:</p><ol><li>mustn’t</li><li>don’t have to</li></ol><p>With:</p><p>a. not necessary &nbsp; b. forbidden</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ol><li>b</li><li>a</li></ol></div>
 
 </section>
@@ -171,7 +195,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 2</span><h3>Grammar</h3>
 <div class="worked"><b>Worked example.</b> Sharing a password is forbidden. You mustn’t share a password.</div>
 <div><b>Now you.</b><ol><li>Checking is necessary. You <span class='gap'></span> check.</li><li>Wearing a suit is optional. You <span class='gap'></span> wear a suit.</li><li>Inventing evidence is forbidden. You <span class='gap'></span> invent evidence.</li></ol><p>Extension example: He musts check. Correct: He must check. Now correct: She doesn’t has to wear a suit.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ol><li>must / have to</li><li>don’t have to</li><li>mustn’t</li></ol><p>Extension: She doesn’t have to wear a suit.</p></div>
 
 </section>
@@ -179,7 +203,7 @@ body.dys p,body.dys li{max-width:38em}
 <section class="card"><span class="tag">Exercise 3</span><h3>Solve a problem</h3>
 <div class="worked"><b>Worked example.</b> I do not understand. I have to ask for help.</div>
 <div><b>Now you.</b><p>Now: a claim has no source.</p><p>Complete: I must <span class='gap'></span>. I mustn’t <span class='gap'></span>.</p></div>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <p>I must check the source. I mustn’t present the claim as confirmed.</p></div>
 
 </section>
@@ -192,7 +216,7 @@ body.dys p,body.dys li{max-width:38em}
 <li>C: three rules, including don’t have to;</li>
 <li>P: five rules and two reasons.</li>
 </ul>
-<div class="ans"><h3>Self-check</h3>
+<div class="ans prof-only"><h3>Self-check</h3>
 <ul class='box-check'><li>□ Necessary and forbidden are different.</li><li>□ I did not write musts.</li><li>□ I did not put to after must.</li></ul></div>
 
 </section>
@@ -216,7 +240,7 @@ body.dys p,body.dys li{max-width:38em}
 <p>Mustn’t means <span class="gap"></span>.</p>
 <p>Don’t have to means <span class="gap"></span>.</p>
 </div>
-<div class="ans"><h3>Answer key</h3>
+<div class="ans prof-only"><h3>Answer key</h3>
 <p>necessary; forbidden; not necessary.</p></div>
 
 </main>

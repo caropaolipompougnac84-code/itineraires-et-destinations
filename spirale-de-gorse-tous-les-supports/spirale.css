@@ -1,0 +1,66 @@
+/* La spirale de Gorse pour tous les supports (complète sequence.css) */
+:root{--navy:#1A3658;--navy-pale:#EEF2F7}
+.stp-main p,.stp-main li,.stp-main td,.stp-main th{font-size:max(16px,1em)}
+.carte-num,.couv-label,.spiral-credit,.muted,figcaption,.source,.note,.breadcrumb,.brand-tag,.photo-credits-foot,.site-footer p{font-size:max(16px,1rem)!important}
+.couv-label{text-align:center;text-transform:uppercase;letter-spacing:.12em;color:var(--b);margin:1.2rem 0 .4rem}
+.couv-peinture{max-width:900px;margin:0 auto}
+.couv-peinture .cadre{max-width:900px;margin:0 auto}
+.couv-peinture .cadre img{width:100%;height:auto;display:block}
+.couv-legende-texte{max-width:46rem;margin:.8rem auto 0;text-align:center}
+.pour{background:var(--pale);border-radius:10px;padding:.6rem .9rem}
+.doc-support{border-left:5px solid var(--b);background:#fff;padding:.6rem 1rem;margin:.6rem 0 .4rem;font-size:20px}
+.doc-support p{margin:.4rem 0}
+.doc-support.poeme ol.vers{list-style:none;padding:0;margin:0}
+.doc-support.poeme ol.vers li{display:flex;gap:.6rem;align-items:baseline;line-height:1.55}
+.doc-support.poeme .num{flex:none;min-width:1.8em;color:var(--b);font-size:16px}
+.doc-support.poeme .v{flex:1;min-width:0;overflow-wrap:anywhere}
+.doc-support.poeme li.hors .v{color:var(--soft);font-style:italic}
+.source{color:var(--soft)}
+.blk-avant,.blk-court,.blk-dys,.blk-vocab-en{border:2px solid var(--line);border-radius:14px;padding:.3rem 1rem .8rem;margin:1.2rem 0;background:#fff}
+.blk-avant{border-color:var(--b);background:var(--pale)}
+.grille-2{display:grid;gap:0 1rem}
+@media (min-width:760px){.grille-2{grid-template-columns:1fr 1fr}}
+ol.tours{list-style:none;padding:0;margin:.6rem 0;counter-reset:none}
+ol.tours>li{border:2px solid var(--b);border-radius:14px;padding:.4rem 1rem .6rem;margin:.8rem 0;background:#fff}
+ol.tours>li:nth-child(2){margin-left:.6rem}ol.tours>li:nth-child(3){margin-left:1.2rem}ol.tours>li:nth-child(4){margin-left:1.8rem}ol.tours>li:nth-child(5){margin-left:2.4rem}
+@media (max-width:600px){ol.tours>li:nth-child(n){margin-left:0}}
+ol.tours>li.pointe{background:var(--pale);border-width:3px}
+.tour-nom{font-family:var(--f-t);color:var(--b);font-size:26px!important;font-weight:700;margin:.3rem 0 .4rem;display:flex;align-items:center;gap:.6rem}
+.tour-n{display:inline-flex;align-items:center;justify-content:center;width:1.6em;height:1.6em;border-radius:50%;background:var(--b);color:#fff;font-family:var(--f-ui);font-size:18px;flex:none}
+.tour-q,.tour-ext,.tour-int{margin:.35rem 0}
+ul.pourquoi{list-style:none;padding:0;display:grid;gap:1rem}
+@media (min-width:760px){ul.pourquoi{grid-template-columns:1fr 1fr}}
+ul.pourquoi li{border-top:4px solid var(--b);background:#fff;padding:.2rem .2rem .6rem}
+ul.pourquoi h3{margin-top:.6rem}
+ul.mots{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none}
+ul.mots li{border:1px solid var(--line);border-radius:999px;padding:.25rem .8rem;background:#fff}
+.bon{font-size:18px}
+.bon-titre{font-family:var(--f-t);font-size:28px!important;color:var(--b);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.bon-table td:nth-child(n+2),.bon-table th:nth-child(n+2){text-align:right}
+.bon-table tr.tot td{font-weight:700}
+.bon-table tr.tot td:first-child{text-align:right}
+.bon-sign{border-top:1px dashed var(--line);padding-top:.6rem;color:var(--soft)}
+.fig-spirale img{max-width:640px;width:100%;height:auto;display:block;margin:0 auto}
+.fig-spirale{overflow:visible}
+.video-lien{margin:.6rem 0 1rem}
+.prolong{border-left:4px solid var(--b);padding-left:.8rem}
+.carte-vide{padding:1rem;text-align:center;font-family:var(--f-t);font-size:22px;line-height:1.25}
+.lead{font-size:21px}
+/* Anglais : bleu marine */
+.panel.lang-en{--b:var(--navy);--b-deep:#10233b;--pale:var(--navy-pale);--line:#C3CEDC}
+.panel.lang-en .blk-title{background:var(--navy)}
+.carte-en{--b:var(--navy);--b-deep:#10233b;--pale:var(--navy-pale)}
+.carte-en .carte-num,.carte-en .carte-titre,.carte-en .carte-vide{color:var(--navy)}
+.tab-en a{color:var(--navy)!important}
+table.recap tr.en td:first-child{color:var(--navy)}
+table.minutage td:first-child{white-space:nowrap;font-weight:700;color:var(--b)}
+.tscroll table{min-width:0}
+@media (max-width:640px){
+  .bon-table{font-size:16px}
+  .bon-table th,.bon-table td{padding:.35rem .4rem}
+  .tscroll table.recap,.tscroll table.minutage{table-layout:auto}
+}
+@media print{.panel{display:block!important}.fig-spirale img{max-width:12cm}}
+.tab.tab-en.on{background:var(--navy);border-color:var(--navy)}.tab.tab-en.on a{color:#fff!important}
+.fig-spirale a{display:block}
+.codes{display:inline-block;margin-left:.3rem;padding:0 .5rem;border:1px solid var(--b);border-radius:999px;color:var(--b);font-weight:700;white-space:nowrap}

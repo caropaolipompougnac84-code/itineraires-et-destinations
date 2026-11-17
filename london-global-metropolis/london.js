@@ -11,7 +11,7 @@
     [].forEach.call(d.querySelectorAll('[data-keep]'),function(cb){cb.checked=c.indexOf(cb.getAttribute('data-keep'))<0;});}
   function show(id){
     if(!d.getElementById(id)||closed().indexOf(id)>=0) id=DEFAULT;
-    if(d.body.classList.contains('mode-eleve')&&id&&d.getElementById(id)&&d.getElementById(id).classList.contains('prof-only')) id=DEFAULT;
+    if(d.body.classList.contains('mode-eleve')&&id&&d.getElementById(id)&&d.getElementById(id).classList.contains('prof-only')){if(location.hash&&location.hash.slice(1)!==DEFAULT){try{history.replaceState(null,'','#'+DEFAULT);}catch(e){}} id=DEFAULT;}
     panels.forEach(function(p){p.classList.toggle('on',p.id===id);});
     tabs.forEach(function(t){var on=t.getAttribute('data-tab')===id;t.classList.toggle('on',on);var a=t.querySelector('a');if(a)a.setAttribute('aria-current',on?'page':'false');if(on){var r=t.parentNode;r.scrollLeft=t.offsetLeft-r.clientWidth/2+t.offsetWidth/2;}});
   }

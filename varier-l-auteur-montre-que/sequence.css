@@ -453,3 +453,13 @@ mark.tournure{background:transparent;color:inherit;padding:0;font-style:inherit}
 @media (max-width:600px){
   #spirale-paragraphe table.tour-phrase th,#spirale-paragraphe table.tour-phrase td{font-size:16px;padding:.7rem .65rem}
 }
+
+/* Tableau d'ouverture : tout en haut, légende crème sur bleu nuit */
+figure.peinture.belle-page.ouverture-tableau{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;background:#0E1626}
+figure.ouverture-tableau figcaption,figure.ouverture-tableau figcaption cite{color:#FFFDF5!important;background:#0E1626!important;font-size:max(17px,1.0625rem)!important;line-height:1.6!important;font-weight:500;opacity:1!important;font-style:normal!important;max-width:62rem;margin:0 auto;padding:.7rem 1rem .9rem;text-align:left}
+figure.ouverture-tableau figcaption a{color:#FFE9A8!important;text-decoration:underline;font-weight:700}
+.mode-dys figure.ouverture-tableau figcaption,.mode-dys figure.ouverture-tableau figcaption cite{font-size:20px!important}
+nav.soeurs{border:2px solid #7B1E3A;border-radius:14px;padding:.8rem 1.1rem;margin:1.4rem 0;background:#fff}
+.voir-aussi{margin:.2rem 0;font-size:1.1em}
+.voir-aussi a{font-weight:700;color:var(--b);text-decoration:underline}
+@media print{figure.ouverture-tableau{width:auto!important;margin:0 0 1rem!important}}

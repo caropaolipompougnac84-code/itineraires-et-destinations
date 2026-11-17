@@ -291,6 +291,26 @@
       "credit": "Dialogue filmé en classe, électricien en Dordogne"
     },
     {
+      "id": "cfa-anglais-quiz-metiers",
+      "hubOrder": 0,
+      "title": "Anglais · Quiz de vocabulaire anglais des métiers",
+      "summary": "25 sections SEGPA et CFA",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": [
+        "tous",
+        "cap"
+      ],
+      "levelLabel": "SEGPA · CFA",
+      "collection": "cfa-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/quiz-metiers/",
+      "date": "2026-11-17"
+    },
+    {
       "id": "cfa-anglais-trades-in-english",
       "title": "Anglais · CAP, bac pro et CFA · Learning a Job and Keeping Going to School: Dual-Track Curriculum",
       "summary": "Vingt dialogues en anglais, entre un professionnel et un client, pour le CAP, le bac professionnel et le CFA. Chaque vidéo a sa fiche élève et son corrigé, en pdf, docx et odt.",
@@ -329,6 +349,23 @@
       "date": "2026-11-14",
       "image": "trades-in-english.jpg",
       "credit": "Dialogue filmé en classe, électricien en Dordogne"
+    },
+    {
+      "id": "segpa-anglais-quiz-metiers",
+      "hubOrder": 0,
+      "title": "Anglais · Quiz de vocabulaire anglais des métiers",
+      "summary": "25 sections SEGPA et CFA",
+      "section": "segpa",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "SEGPA · CFA",
+      "collection": "segpa-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/quiz-metiers/",
+      "date": "2026-11-17"
     },
     {
       "id": "segpa-anglais-trades-in-english",

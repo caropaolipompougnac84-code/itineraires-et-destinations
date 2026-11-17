@@ -2729,6 +2729,27 @@
       "date": "2026-11-16",
       "image": "safe-at-work-seconde-pro.jpg",
       "credit": "Lewis Hine, Icarus, Empire State Building, 1930, The Metropolitan Museum of Art, New York. CC0 (Open Access)."
+    },
+    {
+      "id": "lp-anglais-can-we-trust-what-we-see",
+      "title": "Anglais · Première bac pro · Can We Trust What We See?",
+      "summary": "Seven lessons in English, Première bac pro, from B1 towards B1+, on whether we can still believe our eyes in a world of filters, edited photos and AI-generated images. Cover: Holbein, The Ambassadors. Official sources, fact checks, and a final task as a trainee social media assistant.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "Première bac pro · B1 vers B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "medias",
+        "citoyennete",
+        "culture",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/can-we-trust-what-we-see/",
+      "date": "2026-11-17",
+      "image": "can-we-trust-what-we-see.jpg",
+      "credit": "Hans Holbein the Younger, The Ambassadors, 1533. National Gallery, London. Public domain, Wikimedia Commons."
     }
   ]
 }

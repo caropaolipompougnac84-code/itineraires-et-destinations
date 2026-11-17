@@ -1,0 +1,46 @@
+/* De la spirale à la rédaction : compléments */
+.art-parcours{font-family:var(--f-t,'EB Garamond',serif);font-style:italic;font-size:1.35rem;color:#7B1E3A;margin:1rem 0 .4rem;text-align:center}
+.art-lien{font-size:1.1rem;line-height:1.7;margin:.4rem 0 1.4rem}
+.gorse-fig{background:#fffdf8;border-radius:14px;padding:.3rem .2rem .9rem;margin:1rem 0 1.6rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.gorse-fig svg{width:100%;height:auto;display:block}
+.gorse-fig figcaption{font-size:max(16px,1.0625rem);color:#5a4f49;margin:.8rem .7rem 0;line-height:1.55}
+ol.gorse-steps{list-style:none;margin:0 0 1.4rem;padding:0}
+ol.gorse-steps>li{display:flex;gap:.9rem;padding:1.2rem 0;border-bottom:1px solid #e3d6cc}
+ol.gorse-steps>li:first-child{border-top:1px solid #e3d6cc}
+ol.gorse-steps .n{flex:0 0 auto;font-family:'EB Garamond',serif;font-style:italic;color:#7B1E3A;font-size:1.6rem;line-height:1.2;min-width:1.6rem}
+ol.gorse-steps>li>div{min-width:0;flex:1}
+ol.gorse-steps p{margin:0 0 .7rem;line-height:1.75;font-size:max(17px,1.1rem)}
+ol.gorse-steps strong{color:#7B1E3A}
+ol.gorse-steps .lab{font-weight:700;color:#5a4f49;margin:.6rem 0 .2rem}
+ul.tourn{margin:.2rem 0 .8rem;padding-left:1.2rem}
+ul.tourn li{margin:.35rem 0;line-height:1.65;font-size:max(17px,1.1rem)}
+.ex-phrase{background:#FAF3F5;border-left:4px solid #7B1E3A;padding:.55rem .8rem;border-radius:6px}
+.pointe-li{background:#f4ebe3;border-radius:12px;padding-left:.8rem!important;padding-right:.8rem!important}
+ol.dys-list{list-style:none;padding-left:0}ol.dys-list li{margin:.8rem 0;line-height:1.7}
+.etape{margin:2.2rem 0 2.6rem}
+.etape h3{color:#7B1E3A}
+.sujet,.problematique{font-weight:700;font-size:1.15rem;line-height:1.6;background:#fff;border:2px solid #7B1E3A;border-radius:12px;padding:.8rem 1rem}
+ol.plan{padding-left:1.2rem}ol.plan li{margin:.8rem 0}ol.plan p{margin:.2rem 0}
+.tours-rep{font-style:italic;color:#5a4f49}
+.para-modele{background:#FAF3F5;border:2px solid #7B1E3A;border-radius:14px;padding:1.2rem 1.2rem;margin:1rem 0 1.6rem}
+.para-modele p{margin:0;font-size:max(17px,1.12rem);line-height:1.85;overflow-wrap:break-word}
+.corpus{margin:1rem 0 2rem}
+nav.soeurs{border:2px solid #7B1E3A;border-radius:14px;padding:.8rem 1rem;margin:1.4rem 0;background:#fff}
+nav.soeurs ul{margin:.4rem 0 0;padding-left:1.2rem}nav.soeurs li{margin:.5rem 0;line-height:1.5}
+.palier{border:1.5px solid #e3d6cc;border-radius:14px;padding:.4rem 1rem 1rem;margin:1.4rem 0;background:#fff}
+.regle{background:#F7F9FC;border-left:5px solid #7B1E3A;padding:.6rem .9rem;margin:.6rem 0 1rem}
+.regle p{margin:.4rem 0}
+.credit-spirale{font-style:italic}
+li.tout-en-un{border:2px solid #7B1E3A!important}
+.mode-dys ol.gorse-steps p,.mode-dys ul.tourn li,.mode-dys .para-modele p{font-size:20px}
+@media (max-width:420px){.para-modele{padding:1rem .85rem}ol.gorse-steps>li{gap:.6rem}}
+.corpus-t{font-weight:700;color:#7B1E3A;text-transform:uppercase;letter-spacing:.05em;font-size:16px;margin:0 0 .4rem}
+.sub-dys ol.dys-list,.sub-dys ol.dys-list>li{list-style:none!important}.sub-dys ol.dys-list{padding-left:0!important;margin-left:0!important}
+.ouverture-tableau{margin-top:0!important;margin-bottom:0!important}
+.ouverture-texte{padding-top:.4rem;padding-bottom:.2rem}
+.ouverture-texte .art-lien{margin-bottom:.6rem}
+/* Légende du tableau d'ouverture : très lisible */
+figure.ouverture-tableau figcaption,figure.ouverture-tableau figcaption cite{color:#FFFDF5!important;background:#0E1626!important;font-size:max(17px,1.0625rem)!important;line-height:1.6!important;font-weight:500;opacity:1!important}
+figure.ouverture-tableau figcaption a{color:#FFE9A8!important;text-decoration:underline;font-weight:700}
+.mode-dys figure.ouverture-tableau figcaption{font-size:20px!important}
+.mode-dys figure.ouverture-tableau figcaption cite{font-size:inherit!important}

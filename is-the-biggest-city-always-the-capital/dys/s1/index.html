@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/is-the-biggest-city-always-the-capital/">Is the Biggest City Always the Capital?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/is-the-biggest-city-always-the-capital/dys/">Home</a>
 <a class="on" href="/is-the-biggest-city-always-the-capital/dys/s1/">L1</a>
@@ -149,7 +173,7 @@ body.dys main{max-width:720px}
 <li>What is the biggest city in the USA?</li>
 <li>Is Sydney the capital of Australia?</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>Washington, D.C.</li>
 <li>New York City.</li>
@@ -159,7 +183,7 @@ body.dys main{max-width:720px}
 <h2>Look at the watercolour · 10 min</h2>
 <figure class="hero"><img src="/is-the-biggest-city-always-the-capital/img/capitol-west-front-1831.jpg" alt="Watercolour of the west front of the United States Capitol in Washington, D.C., with cows grazing in the park in the foreground." loading="lazy" width="1400"><figcaption>Look at the watercolour and read its reference. Where does the scene take place? When was it painted? Which building represents political power? <span class="credit">West front of the United States Capitol, with cows in the foreground. Watercolour by John Rubens Smith (1775 to 1849), 1831. Library of Congress / Wikimedia Commons. Public domain. <a href="https://commons.wikimedia.org/wiki/File:West_front_of_the_United_States_Capitol_with_cows_in_the_foreground_LCCN95511395.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</span></figcaption></figure>
 <p><strong>Sentence starters.</strong> The watercolour shows… It was painted in 1831. In the foreground, I can see… In the background, I can see…</p>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>The watercolour shows the west front of the United States Capitol in Washington, D.C. It was painted by John Rubens Smith in 1831. In the foreground, cows graze in a park. The Capitol, where the United States Congress meets, represents political power. Washington, D.C., not New York City, is the capital of the USA.</p></div>
 
 <h2>Read: water first, cities next · 18 min</h2>
@@ -174,7 +198,7 @@ body.dys main{max-width:720px}
 <li>Explain the sentence “Transport shaped the map, but politics shaped the capitals.”</li>
 <li>Find two verbs in the passive in the text.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>Because people and goods used to travel by water: there were very few roads.</li>
 <li>The Erie Canal linked New York to the Great Lakes; as a result, New York City grew faster than any other city.</li>
@@ -187,7 +211,7 @@ body.dys main{max-width:720px}
 <figure class="map"><img src="/is-the-biggest-city-always-the-capital/img/map-states-capitals.jpg" alt="Map of the United States with state names and state capitals marked in red, plus insets for Alaska and Hawaii." loading="lazy" width="1400"><figcaption>The same official National Atlas map is used in <a href='/the-capital-trap/s2/'>The Capital Trap, lesson 2</a>. Here the task is to locate places with precise B1+ expressions, not to repeat that lesson’s list of oceans and rivers. <span class="credit">National Atlas of the United States of America, U.S. Department of the Interior / U.S. Geological Survey, 2003. Public domain.</span></figcaption></figure>
 <p>In pairs, find on the map: two state capitals that are much smaller than the biggest city of their state; a capital on a river; a capital on the coast; a state capital you cannot reach by road. Then locate each place precisely for your partner.</p>
 <p><strong>Sentence starters.</strong> It is located not far from… · It lies at the far end of…, close to the border with… · It stands on the banks of…, about … km from…</p>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>Possible answers: Sacramento (California), Albany (New York State), Springfield (Illinois), Tallahassee (Florida); Albany is on the Hudson River, Sacramento on the Sacramento River; Juneau, Boston and Honolulu are on the coast; Juneau cannot be reached by road.</p></div>
 
 <div class="recap">

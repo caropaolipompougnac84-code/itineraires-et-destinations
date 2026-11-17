@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/is-the-biggest-city-always-the-capital/">Is the Biggest City Always the Capital?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/is-the-biggest-city-always-the-capital/dys/">Home</a>
 <a href="/is-the-biggest-city-always-the-capital/dys/s1/">L1</a>
@@ -148,7 +172,7 @@ body.dys main{max-width:720px}
 <li>Give one argument against.</li>
 <li>Complete: I see your point, ___ …</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>It already has airports, roads and hotels; business, media and government are in the same place.</li>
 <li>A central capital is fairer for all regions; it keeps political power away from business power.</li>
@@ -161,7 +185,7 @@ body.dys main{max-width:720px}
 <div class="game-box" id="game" data-game="1">
 <p>If JavaScript is available, play here: three answers appear, including the trap.</p>
 </div>
-<div class="ans"><p class="tag">The pairs (the trap is in brackets)</p>
+<div class="ans prof-only"><p class="tag">The pairs (the trap is in brackets)</p>
 <ul>
 <li>Canada: Ottawa (Toronto)</li>
 <li>Australia: Canberra (Sydney)</li>

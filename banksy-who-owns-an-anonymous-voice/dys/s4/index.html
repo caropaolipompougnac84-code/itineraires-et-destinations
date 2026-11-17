@@ -282,8 +282,9 @@
 
   </style>
   
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-pro" class="is-dys english-look">
+<body data-section="lycee-pro" class="is-dys english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -323,6 +324,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     <p class="kicker">Dys version · Lesson 4 of 6</p>
     <h1>Lesson 4. Can anti-commercial art escape the market?</h1>
@@ -342,7 +366,7 @@
     <table><thead><tr><th>Word or phrase</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td><strong>auction</strong></td><td>a public sale, the highest bidder wins</td><td><strong>The work was sold at an auction.</strong></td></tr><tr><td><strong>to shred</strong></td><td>to cut into strips</td><td><strong>Part of the work was shredded.</strong></td></tr><tr><td><strong>contrast</strong></td><td>a clear difference</td><td><strong>There is a contrast between fun and decay.</strong></td></tr><tr><td><strong>whereas</strong></td><td>used to set two facts against each other</td><td><strong>A park promises fun, whereas this park looks grim.</strong></td></tr><tr><td><strong>although</strong></td><td>used to admit one fact, then add a contrast</td><td><strong>Although the work was shredded, it was sold again.</strong></td></tr></tbody></table>
 
     <p><strong>Exercise.</strong> Combine with the word in brackets. 1. A theme park is cheerful. Dismaland looks grim. (whereas) 2. The shredding looked like an attack. The work became more valuable. (although)</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d4-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d4-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 A theme park is cheerful, whereas Dismaland looks grim. 2 Although the shredding looked like an attack, the work became more valuable.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d4-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d4-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 A theme park is cheerful, whereas Dismaland looks grim. 2 Although the shredding looked like an attack, the work became more valuable.</p></div></div>
 
     <h2>The Walled Off Hotel</h2>
     <p>This hotel opened in Bethlehem in 2017, beside a barrier. Guests pay to stay next to a wall that limits movement. That is a contrast worth describing carefully.</p>

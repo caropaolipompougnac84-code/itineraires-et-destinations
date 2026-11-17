@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/is-the-biggest-city-always-the-capital/">Is the Biggest City Always the Capital?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/is-the-biggest-city-always-the-capital/dys/">Home</a>
 <a href="/is-the-biggest-city-always-the-capital/dys/s1/">L1</a>
@@ -144,7 +168,7 @@ body.dys main{max-width:720px}
 <li>Put in the passive: They chose the site in 1791.</li>
 <li>How can you get to Juneau?</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>Because of the deal of 1790 between the North and the South.</li>
 <li>The site was chosen in 1791.</li>
@@ -206,7 +230,7 @@ body.dys main{max-width:720px}
 <tr><td>India</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>Nigeria</td><td></td><td></td><td></td><td></td></tr>
 </tbody></table></div>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <div class="tbl-scroll"><table class="grid">
 <thead><tr><th>Country</th><th>Capital(s) / biggest city</th><th>When?</th><th>Who decided?</th><th>Why?</th></tr></thead>
 <tbody>
@@ -220,7 +244,7 @@ body.dys main{max-width:720px}
 
 <h2>Whole class: what do the stories have in common? · 10 min</h2>
 <p>Find at least three points that several stories share.</p>
-<div class="ans"><p class="tag">Possible answers</p>
+<div class="ans prof-only"><p class="tag">Possible answers</p>
 <ul>
 <li>The capital is not the biggest city.</li>
 <li>It is often a compromise between rival cities or regions (Canada, Australia, South Africa).</li>

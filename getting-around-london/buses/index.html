@@ -10,7 +10,8 @@
   <meta property="og:image" content="https://itineraires-destinations.fr/getting-around-london/art/kauffer-winter-sales-1922.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Source+Sans+3:ital,wght@0,400;0,700;1,400&display=swap"><link rel="stylesheet" href="/css/english-look.css"></head><body class="english-look bus"><div class="herit">Part of <a href="/getting-around-london/">A Long Heritage: British Public Transport</a> · Next: <a href='/getting-around-london/general/' style='color:#ffcf8a'>Mind the Gap: the London Underground</a></div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Source+Sans+3:ital,wght@0,400;0,700;1,400&display=swap"><link rel="stylesheet" href="/css/english-look.css"><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head><body class="english-look bus mode-eleve"><div class="herit">Part of <a href="/getting-around-london/">A Long Heritage: British Public Transport</a> · Next: <a href='/getting-around-london/general/' style='color:#ffcf8a'>Mind the Gap: the London Underground</a></div>
 
 <style>
 /* Layout: platform-sign header, sticky tabs, reading column; hand-drawn SVG illustrations and a schematic map at the heart of each step */
@@ -173,7 +174,30 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
   <a href="#sheet">Student sheet</a>
 </div></nav>
 
-<main><div class="wrap">
+<main>
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+<div class="wrap">
 
 <!-- CURRICULUM -->
 <section class="panel" id="curriculum">
@@ -245,7 +269,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <li>What are the flags above the street? Whose flag is it?</li>
     <li>Imagine the same street with no buses. What can you see instead? Use: <i>pedestrians, shoppers, trees, benches, it's quieter</i>.</li>
   </ul>
-  <div class="ans"><p class="ans-label"><strong>Possible answers</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Possible answers</strong></p>
 <div class="stack"><p>I can count five red buses. The flags are Union Jacks, the flag of the United Kingdom. Without buses, there are more pedestrians and shoppers. It's quieter and the air is cleaner.</p></div></div></div>
   <div class="stack"><h3>For or against?</h3>
   <div class="grid2">
@@ -266,7 +290,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <li>Imagine you use a wheelchair. Is this good news for you? Why?</li>
     <li>Give your opinion: "I think it's a good idea because…" / "I don't agree because…"</li>
   </ol></div>
-  <div class="ans"><p class="ans-label"><strong>Answers</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Answers</strong></p>
 <div class="stack"><p>1. Marble Arch, Oxford Circus, Tottenham Court Road. At Oxford Circus: the Victoria line and the Central line (and the Bakerloo line on the real map). 2 and 3: open answers.</p></div></div>
   <div class="teacher"><b>For the teacher.</b> Show the Facebook post as a hook. It takes students from simple description (taking a bus) to a real social question: who does the city belong to? Pedestrians, shop owners, people who can't walk very far?</div>
   <div class="media">
@@ -288,7 +312,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <li>Is it day or night? How do you know?</li>
     <li>What are the red and white lines in the street?</li>
   </ol>
-  <div class="ans"><p class="ans-label"><strong>Possible answers</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Possible answers</strong></p>
 <div class="stack"><p>I can see Big Ben and the Houses of Parliament. It is night: the sky is dark blue and the buildings are lit up. The red and white lines are the lights of cars and buses moving fast.</p></div></div></div>
   <div class="stack"><h3>Where is it?</h3>
   <figure class="photo">
@@ -296,7 +320,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <figcaption>Central London. Find the river Thames, Hyde Park and Regent's Park.</figcaption>
   </figure>
   <p>Match each number with a place: <i>Big Ben, Tower Bridge, Buckingham Palace, King's Cross station, St Paul's Cathedral, the London Eye</i>.</p>
-  <div class="ans"><p class="ans-label"><strong>Answers</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Answers</strong></p>
 <div class="stack"><p>1. Buckingham Palace 2. Big Ben 3. the London Eye 4. St Paul's Cathedral 5. Tower Bridge 6. King's Cross station</p></div></div></div>
   <div class="stack"><h3>Brainstorming</h3>
   <p>What do you know about London? Name a monument, a colour, a means of transport.</p></div>
@@ -341,7 +365,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <li>What can you see in the background?</li>
     <li>What is the weather like?</li>
   </ul>
-  <div class="ans"><p class="ans-label"><strong>Model answer</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Model answer</strong></p>
 <div class="stack"><p>In the foreground, there are two red double-decker buses and a black cab, a London taxi. In the background, on the right, there is Big Ben, the clock tower. On the left, there is the Palace of Westminster, where the Parliament meets. The sky is blue: it is a sunny day.</p></div></div></div>
   <p>London has hundreds of bus routes. Some go past famous monuments, so you can visit the city for the price of a bus ticket.</p>
   <div class="stack"><h3>Three routes for sightseeing</h3>
@@ -360,7 +384,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
   </ul></div>
   <div class="stack"><h3>Exercise</h3>
   <p>You want to see St Paul's Cathedral and the Tower of London on the same bus. Which route do you take?</p></div>
-  <div class="ans"><p class="ans-label"><strong>Answer</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Answer</strong></p>
 <div class="stack"><p>Route 15.</p></div></div>
   <div class="stack"><h3>Last stop: Tower Bridge</h3>
   <figure class="photo">
@@ -373,7 +397,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <li>Compare the old buildings and the new ones. Use: <i>old, modern, tall, made of glass, made of stone</i>.</li>
     <li>One skyscraper looks like a vegetable. Which one? Its nickname is "the Gherkin" (un cornichon).</li>
   </ul>
-  <div class="ans"><p class="ans-label"><strong>Possible answers</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Possible answers</strong></p>
 <div class="stack"><p>It is Tower Bridge. It crosses the river Thames. The bridge is old and made of stone. Behind it, the skyscrapers of the City are modern, very tall and made of glass. The round building on the right is the Gherkin.</p></div></div></div>
   <div class="stack"><h3>Rush hour</h3>
   <figure class="photo">
@@ -381,7 +405,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <figcaption>Evening traffic in Westminster.</figcaption>
   </figure>
   <p>Why is the bus blurred? Is it a good time to take the bus? Use: <i>rush hour, traffic, crowded, fast, slow</i>.</p>
-  <div class="ans"><p class="ans-label"><strong>Possible answer</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Possible answer</strong></p>
 <div class="stack"><p>The bus is blurred because it is moving fast. It is the evening, maybe rush hour: there is a lot of traffic and the buses are crowded.</p></div></div></div>
   <div class="media">
     <a href="https://tfl.gov.uk/maps/bus" target="_blank" rel="noopener"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6l6-2 8 3 6-2v15l-6 2-8-3-6 2z"/><path d="M9 4v15M17 7v15"/></svg><div><strong>TfL bus maps</strong><span>Official route maps</span></div></a>
@@ -445,7 +469,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <li>Which line goes to St Paul's?</li>
     <li>What colour is the Victoria line?</li>
   </ol></div>
-  <div class="ans"><p class="ans-label"><strong>Answers</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Answers</strong></p>
 <div class="stack"><p>1. Westminster. 2. The Central line. 3. Light blue.</p></div></div>
   <div class="media">
     <a href="https://tfl.gov.uk/maps/track/tube" target="_blank" rel="noopener"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6l6-2 8 3 6-2v15l-6 2-8-3-6 2z"/><path d="M9 4v15M17 7v15"/></svg><div><strong>The real Tube map</strong><span>Download it from TfL</span></div></a>
@@ -480,7 +504,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
     <li>From Waterloo (London Eye) to the Tower of London.</li>
     <li>From King's Cross to St Paul's Cathedral.</li>
   </ol></div>
-  <div class="ans"><p class="ans-label"><strong>Answers</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Answers</strong></p>
 <div class="stack">
     <p>1. Take the District line westbound to South Kensington. No change!</p>
     <p>2. Take the Jubilee line to Westminster, then change for the District line eastbound to Tower Hill.</p>
@@ -511,7 +535,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
   </ul></div>
   <div class="stack"><h3>Maths in English</h3>
   <p>Sam takes the bus four times in one day. How much does he pay? Why?</p></div>
-  <div class="ans"><p class="ans-label"><strong>Answer</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Answer</strong></p>
 <div class="stack"><p>4 × £1.75 = £7.00, but the daily cap is £5.25, so he pays £5.25.</p></div></div>
   <div class="media">
     <a href="https://tfl.gov.uk/fares" target="_blank" rel="noopener"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="20" height="13" rx="2"/><path d="M3 11h20"/></svg><div><strong>TfL fares</strong><span>Official prices, updated</span></div></a>
@@ -550,7 +574,7 @@ figure.photo figcaption{padding:.5rem .8rem .7rem}
   <p>Using the map, write the directions from Victoria to Bank.</p></div>
   <div class="stack"><h3>Part 3: Writing (10 points)</h3>
   <p>Your friend is going to London. Write a message (60 to 80 words). Explain how to go from King's Cross to Big Ben, and how to pay.</p></div>
-  <div class="ans"><p class="ans-label"><strong>Answer key and marking</strong></p>
+  <div class="ans prof-only"><p class="ans-label"><strong>Answer key and marking</strong></p>
 <div class="stack">
     <p><b>Part 1.</b> 1. bus stop 2. tap out 3. fare 4. southbound 5. change</p>
     <p><b>Part 2.</b> Take the Victoria line to Oxford Circus, change for the Central line to Bank. Accept any logical route.</p>

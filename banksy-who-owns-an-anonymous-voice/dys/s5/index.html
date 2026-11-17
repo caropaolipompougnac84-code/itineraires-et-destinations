@@ -282,8 +282,9 @@
 
   </style>
   
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-pro" class="is-dys english-look">
+<body data-section="lycee-pro" class="is-dys english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -323,6 +324,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     <p class="kicker">Dys version · Lesson 5 of 6</p>
     <h1>Lesson 5. Does a mural lose its voice when it leaves its wall?</h1>
@@ -344,7 +368,7 @@
     <h2>Grammar: if + present, will / may</h2>
     <p><strong>Worked example.</strong> If the mural is removed, it may be safer. If the mural is removed, it will lose its place.</p>
     <p><strong>Exercise.</strong> Complete. 1. If the pelicans are taken off the shop, they _____ lose the fish on the sign. 2. The gymnast was cut out _____ protect her. (in order to / because of) 3. The image is striking _____ the hole beneath her. (in order to / because of)</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d5-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d5-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 will / may. 2 in order to. 3 because of.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d5-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d5-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 will / may. 2 in order to. 3 because of.</p></div></div>
 
     <h2>Speak</h2>
     <p>Give a recommendation, 30 to 40 seconds:</p>

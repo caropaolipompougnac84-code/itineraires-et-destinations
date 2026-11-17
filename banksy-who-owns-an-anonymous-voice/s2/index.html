@@ -282,8 +282,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -326,6 +327,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     
 <figure class="look-hero"><img src="/banksy-who-owns-an-anonymous-voice/img/look/stokes-croft-street.jpg" alt="Stokes Croft in Bristol on a bright day, with shops, vans and people on the pavement." width="1500" height="1000"><figcaption>Stokes Croft, Bristol. Photo: Steve Daniels. CC BY-SA 2.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Seconde bac pro · A2 and B1 · Lesson 2 of 6</p>
@@ -353,7 +377,7 @@
     <aside class="slogan-box"><p class="box-label">A visual slogan: four questions</p><p>Every work in this sequence is read as a speech act, a slogan in the form of a picture. For each image, answer:</p><ol><li><strong>What does it say?</strong> Write one sentence, as if it were a slogan.</li><li><strong>To whom?</strong> Who is the image speaking to?</li><li><strong>In what tone?</strong> Ironic, angry, playful, bitter, hopeful, warning, mocking, or another tone you can justify.</li><li><strong>How does it speak?</strong> Name the visual devices: stencil, written words, official look, placement, contrast, a real object next to the painting, a contradiction between the words and the place.</li></ol></aside>
     <p><strong>Exercise A. The name as a visual slogan.</strong> For the path that says BANKSY, and for the carved stone at the Moco Museum, answer the four slogan questions. Then answer this: is "Banksy" already an author the public can meet, without a private name?</p>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete: <em>The path says... People are... The stone says... The name Picasso is... I think the public name is / is not enough, because...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Write a short paragraph (eight to ten lines). Compare the crowd in front of <cite>Hammer Boy</cite> (the public meets the work, not a face) with the Moco stone (a famous saying, a crossed-out name, and the name Banksy carved below). What does each image say about authorship? Keep a museum display in the category of a display, not a certificate from Pest Control.</p></div></div>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c0" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c0" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. The path says BANKSY and points visitors towards a temporary park: people follow a public name, not a face. The tone may be playful or practical, like a wayfinding sign. The crowd at Hammer Boy meets a mural on a New York corner; the artist is not in the picture. The stone exhibits a well-known sentence often attributed to Picasso; Picasso's name is crossed out and Banksy's name is carved below. It may say, ironically, that a great artist steals, or that a name can replace another name. A museum display is not a confirmation of civil identity, and it is not a Pest Control certificate. The public name Banksy is already a kind of author; a civil name is a different question, which the next cards will treat carefully.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c0" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c0" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. The path says BANKSY and points visitors towards a temporary park: people follow a public name, not a face. The tone may be playful or practical, like a wayfinding sign. The crowd at Hammer Boy meets a mural on a New York corner; the artist is not in the picture. The stone exhibits a well-known sentence often attributed to Picasso; Picasso's name is crossed out and Banksy's name is carved below. It may say, ironically, that a great artist steals, or that a name can replace another name. A museum display is not a confirmation of civil identity, and it is not a Pest Control certificate. The public name Banksy is already a kind of author; a civil name is a different question, which the next cards will treat carefully.</p></div></div>
 
     <h2><span class="skill-tag" title="Compréhension écrite" aria-label="Compréhension écrite">CE</span>Step 2. Source cards</h2>
     <p>These cards are educational paraphrases, not copied articles. They exist so that you can practise a distinction. Read them carefully. Then, for each card, write: is this a documented fact, an attributed claim, a rumour, or an interpretation?</p>
@@ -399,7 +423,7 @@
       <li>The Mail on Sunday put the name Gunningham forward in 2008.</li>
       <li>Pest Control confirmed the Reuters identification. (Careful.)</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 F (the publication and its date are documented). 2 This sentence is not acceptable in this sequence: it turns a claim into a fact, with no attribution. The accurate form is a C: <em>According to Reuters, Banksy was born Robin Gunningham.</em> 3 C. 4 F (what NPR stated, on a dated broadcast). 5 I (a judgement, and a risky one: fame has more than one cause). 6 R (no adequate source). 7 F (the paper did publish that claim in 2008; the identity itself remains a claim). 8 This is false, and it is not a fair claim either. According to Reuters, Pest Control said the artist had decided not to comment. An absence of comment is not a confirmation.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 F (the publication and its date are documented). 2 This sentence is not acceptable in this sequence: it turns a claim into a fact, with no attribution. The accurate form is a C: <em>According to Reuters, Banksy was born Robin Gunningham.</em> 3 C. 4 F (what NPR stated, on a dated broadcast). 5 I (a judgement, and a risky one: fame has more than one cause). 6 R (no adequate source). 7 F (the paper did publish that claim in 2008; the identity itself remains a claim). 8 This is false, and it is not a fair claim either. According to Reuters, Pest Control said the artist had decided not to comment. An absence of comment is not a confirmation.</p></div></div>
 
     <h2>Step 4. Expanding your vocabulary</h2>
     <table><thead><tr><th>Word or phrase</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td><strong>according to</strong></td><td>used to show the source of a piece of information</td><td><em>According to Reuters, the artist later used another name.</em></td></tr><tr><td><strong>to report that</strong></td><td>to give information as news, as a journalist does</td><td><em>Reuters reported that it had examined court documents.</em></td></tr><tr><td><strong>to confirm</strong></td><td>to say officially that something is true</td><td><em>Banksy did not confirm the identification.</em></td></tr><tr><td><strong>to deny</strong></td><td>to say that something is not true</td><td><em>A refusal to comment is not a denial.</em></td></tr><tr><td><strong>to allege</strong></td><td>to say that something is true, without proving it</td><td><em>The paper alleged that it had identified the artist.</em></td></tr><tr><td><strong>investigation</strong></td><td>a careful enquiry that looks for evidence</td><td><em>The investigation was published in March 2026.</em></td></tr><tr><td><strong>privacy</strong></td><td>the right to keep some parts of life out of public view</td><td><em>Some people argue that a private name should stay private.</em></td></tr><tr><td><strong>public interest</strong></td><td>a reason for publishing something because society may need to know it</td><td><em>The newsroom must decide whether publication is in the public interest.</em></td></tr><tr><td><strong>to attribute</strong></td><td>to assign a statement or a work to a source or a person</td><td><em>We attribute the claim to Reuters, not to Banksy.</em></td></tr><tr><td><strong>to qualify (a claim)</strong></td><td>to limit a statement so that it stays accurate</td><td><em>You can qualify a headline by adding according to.</em></td></tr></tbody></table>
@@ -419,7 +443,7 @@
       <li>NPR PROVES REUTERS RIGHT.</li>
       <li>BANKSY DENIES EVERYTHING.</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example rewrites. Other accurate versions are possible. 1. Reuters reports that Banksy was born Robin Gunningham. / According to a Reuters investigation, Banksy was born Robin Gunningham. 2. Pest Control said the artist had decided not to comment. 3. NPR said it had not independently confirmed Reuters' findings. 4. In the sources examined for this sequence, Banksy did not confirm the identification, and did not issue a personal denial either. A lawyer challenged many details without confirming or denying the name.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example rewrites. Other accurate versions are possible. 1. Reuters reports that Banksy was born Robin Gunningham. / According to a Reuters investigation, Banksy was born Robin Gunningham. 2. Pest Control said the artist had decided not to comment. 3. NPR said it had not independently confirmed Reuters' findings. 4. In the sources examined for this sequence, Banksy did not confirm the identification, and did not issue a personal denial either. A lawyer challenged many details without confirming or denying the name.</p></div></div>
 
     <p><strong>Exercise 3. Complete with according to, reported that, may, did not confirm, or denied.</strong></p>
     <ol>
@@ -429,7 +453,7 @@
       <li>Banksy _______ the identification in the sources we have.</li>
       <li>A well-supported claim _______ still be debated. It is not automatically a classroom fact.</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 According to. 2 reported that (or alleged that). 3 reported that / stated that. 4 did not confirm. 5 may.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l2-c3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l2-c3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 According to. 2 reported that (or alleged that). 3 reported that / stated that. 4 did not confirm. 5 may.</p></div></div>
 
     <h2><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Step 5. Newsroom role-play (interaction, and médiation of a claim)</h2>
     <p>You work on the news desk of a school magazine. A major agency has just published an investigation into Banksy's civil identity. You must decide what to print, and how to print it. You are not asked to find a private address or to contact a private person.</p>

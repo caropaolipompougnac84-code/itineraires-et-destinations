@@ -282,8 +282,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -326,6 +327,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     
 <figure class="look-hero"><img src="/banksy-who-owns-an-anonymous-voice/img/look/bristol-old-market.jpg" alt="Old Market in Bristol, with colourful shop fronts and a few cars on a bright day." width="1600" height="986"><figcaption>Old Market, Bristol. Photo: Philip Pankhurst. CC BY-SA 2.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Seconde bac pro · A2 and B1 · Lesson 4 of 6</p>
@@ -350,7 +374,7 @@
     </div>
     <p><strong>First viewing.</strong> Number these elements in the order you see them: preparation, the auction, the audience reaction. Do not explain them yet.</p>
     <p><strong>Second viewing.</strong> Note one visible event, and one question the footage cannot answer.</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Order: students should follow what the extract actually shows. Typically: preparation around the frame and the room; the auction itself; then the audience reaction as the paper moves through the frame. Visible event (examples): the lower part of the work passes through the frame and hangs in strips; people in the room react. Questions the footage cannot answer (examples): whether every bidder knew; what the artist exactly intended; whether the gesture criticises the market or becomes part of it. The film is the artist's own presentation, so it cannot be treated as a neutral enquiry.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Order: students should follow what the extract actually shows. Typically: preparation around the frame and the room; the auction itself; then the audience reaction as the paper moves through the frame. Visible event (examples): the lower part of the work passes through the frame and hangs in strips; people in the room react. Questions the footage cannot answer (examples): whether every bidder knew; what the artist exactly intended; whether the gesture criticises the market or becomes part of it. The film is the artist's own presentation, so it cannot be treated as a neutral enquiry.</p></div></div>
 
     <p><strong>Exercise 1. Visible or unproven?</strong> Write V or U.</p>
     <ol>
@@ -360,7 +384,7 @@
       <li>The artist wanted to destroy the market for the work.</li>
       <li>The transformed work later sold for a very high price. (This is not in the two-minute extract: it comes from later reporting.)</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 V (in the film). 2 U (we cannot see what people knew). 3 V. 4 U (intention is not proven by the film). 5 This is a reported market fact from 2021, not something the two-minute extract shows. In the exercise, it is unproven <em>from the footage</em>. It can be used later as a documented report, with attribution.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 V (in the film). 2 U (we cannot see what people knew). 3 V. 4 U (intention is not proven by the film). 5 This is a reported market fact from 2021, not something the two-minute extract shows. In the exercise, it is unproven <em>from the footage</em>. It can be used later as a documented report, with attribution.</p></div></div>
 
     <h2>Step 3. Dismaland, a temporary park</h2>
     <p>In 2015, Banksy created Dismaland, a temporary "bemusement park" in Weston-super-Mare. Many other artists took part. Do not attribute every object in a photograph to Banksy. The trailer is again from the channel banksyfilm, published on 25 August 2015.</p>
@@ -381,8 +405,8 @@
     <figure class="artwork"><img src="../img/advertise-0800.jpg" width="1800" height="1350" alt="A long white advertising board on a brick wall above a London street, with large black capital letters: TO ADVERTISE HERE CALL 0800 BANKSY, above parked cars and a painted arch." /><figcaption>A large painted sign on Brick Lane, London, widely attributed to Banksy: TO ADVERTISE HERE CALL 0800 BANKSY. Photograph by Wikimedia Commons user Justinc, <a href="https://commons.wikimedia.org/wiki/File:To_Advertise_Here_Call_0800_Banksy.jpg">Wikimedia Commons</a>, CC BY-SA 2.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
     <p><strong>Exercise 3b. Official language, used as a slogan.</strong> For <cite>Exit through the gift shop</cite>, for <cite>Social Cleansing</cite>, and for <cite>To advertise here call 0800 Banksy</cite>, write the slogan sentence, the audience, the tone, and the visual device (official look, arrow, advertising board, a phone number made from the artist's public name).</p>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete, for each sign: <em>The words say... They look like... The tone is... The image mocks / denounces...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Write a short paragraph for each. How does the official look help the sentence? What happens if a critique of the market ends with a gift shop, or if a critique of advertising uses the form of an advertisement?</p></div></div>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c3b" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c3b" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. Exit through the gift shop looks like a safety or wayfinding sign; it may say that the way out of a critique is a shop. The tone is ironic. Social Cleansing imitates a British restriction sign (a curfew, official hours) in order to denounce a social policy; the official look is the device. To advertise here call 0800 Banksy uses the form of a billboard and the public name as a phone number: it may mock advertising, or mock the idea that a wall is for sale. Other justified readings are possible. None of them is a proof of a private intention.</p></div></div>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Visible elements (examples): a crooked castle; a distorted mermaid; a police vehicle in the water; deckchairs; queues; a boat crowded with figurines. Contrasts (examples): a theme park promises fun, brightness and safety, whereas Dismaland shows decay, awkward humour and political images; a castle should look magical, whereas this one looks damaged; boats in a park are usually a pleasant ride, whereas these boats carry figurines of migrants. Accept other contrasts that are grounded in what is shown.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c3b" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c3b" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. Exit through the gift shop looks like a safety or wayfinding sign; it may say that the way out of a critique is a shop. The tone is ironic. Social Cleansing imitates a British restriction sign (a curfew, official hours) in order to denounce a social policy; the official look is the device. To advertise here call 0800 Banksy uses the form of a billboard and the public name as a phone number: it may mock advertising, or mock the idea that a wall is for sale. Other justified readings are possible. None of them is a proof of a private intention.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Visible elements (examples): a crooked castle; a distorted mermaid; a police vehicle in the water; deckchairs; queues; a boat crowded with figurines. Contrasts (examples): a theme park promises fun, brightness and safety, whereas Dismaland shows decay, awkward humour and political images; a castle should look magical, whereas this one looks damaged; boats in a park are usually a pleasant ride, whereas these boats carry figurines of migrants. Accept other contrasts that are grounded in what is shown.</p></div></div>
 
     <h2>Step 4. Expanding your vocabulary and grammar</h2>
     <table><thead><tr><th>Word or phrase</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td><strong>auction</strong></td><td>a public sale in which the highest bidder wins</td><td><em>The work was sold at an auction in London.</em></td></tr><tr><td><strong>to shred</strong></td><td>to cut into strips</td><td><em>Part of the work was shredded in the frame.</em></td></tr><tr><td><strong>commodity</strong></td><td>something treated as an object of trade</td><td><em>A critical artwork can become a valuable commodity.</em></td></tr><tr><td><strong>contrast</strong></td><td>a clear difference between two things</td><td><em>There is a contrast between the park's promise and its appearance.</em></td></tr><tr><td><strong>whereas</strong></td><td>used to set two facts against each other</td><td><em>A theme park promises delight, whereas Dismaland looks disappointing on purpose.</em></td></tr><tr><td><strong>although</strong></td><td>used to admit one fact and then add a contrasting one</td><td><em>Although the gesture seemed to attack the sale, the work later sold for more.</em></td></tr><tr><td><strong>to criticise</strong></td><td>to point out what is wrong, in your view</td><td><em>The park seems to criticise entertainment and consumer culture.</em></td></tr><tr><td><strong>hypocrisy</strong></td><td>pretending to have principles that your actions contradict</td><td><em>A simple accusation of hypocrisy may be too thin for this case.</em></td></tr></tbody></table>
@@ -395,7 +419,7 @@
       <li>The original mural was in the street. The auctioned work was in a framed sale. (more... than / whereas)</li>
       <li>The castle should look fairytale-like. This castle looks crooked. (less... than)</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c4" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c4" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. 1. A theme park is supposed to be cheerful, whereas Dismaland looks grim. 2. Although the shredding looked like an attack on the auction, the work became even more valuable. 3. The original mural was in the street, whereas the auctioned work was in a framed sale. / The auctioned work was treated as a more saleable object than the mural on the wall. 4. This castle looks less fairytale-like than a traditional park castle. / This castle is less magical than visitors might expect.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l4-c4" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l4-c4" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. 1. A theme park is supposed to be cheerful, whereas Dismaland looks grim. 2. Although the shredding looked like an attack on the auction, the work became even more valuable. 3. The original mural was in the street, whereas the auctioned work was in a framed sale. / The auctioned work was treated as a more saleable object than the mural on the wall. 4. This castle looks less fairytale-like than a traditional park castle. / This castle is less magical than visitors might expect.</p></div></div>
 
     <h2>Step 5. The Walled Off Hotel, a place that is already a slogan</h2>
     <p>In 2017, a hotel associated with Banksy opened in Bethlehem, beside the West Bank barrier. The name plays on the Waldorf hotels. The place is at once a hotel, a viewpoint, and a political statement. Guests pay to stay next to a wall that limits movement. That is already a contradiction worth describing carefully, without rushing to a single moral verdict.</p>

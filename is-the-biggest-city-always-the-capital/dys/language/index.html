@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/is-the-biggest-city-always-the-capital/">Is the Biggest City Always the Capital?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/is-the-biggest-city-always-the-capital/dys/">Home</a>
 <a href="/is-the-biggest-city-always-the-capital/dys/s1/">L1</a>
@@ -143,7 +167,7 @@ body.dys main{max-width:720px}
 <h2>2. Lexicon check</h2>
 <p>Complete with: <em>compromise, from scratch, seat, rivals, crowded, harbour</em>.</p>
 <p>Sydney and Melbourne were ______, so Australia chose a ______: a new capital. Abuja was built ______ because Lagos was too ______. Wellington was chosen for its central position and its ______. Pretoria is the ______ of the South African government.</p>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <p>rivals, compromise, from scratch, crowded, harbour, seat</p></div>
 
 <h2>3. Grammar: complex comparatives</h2>
@@ -163,7 +187,7 @@ body.dys main{max-width:720px}
 <li>Abuja / Lagos: nowhere near as… as</li>
 <li>The bigger the capital / the higher the rents</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>Los Angeles is more than seven times as big as Sacramento.</li>
 <li>Toronto is by far the biggest city in Canada.</li>
@@ -180,7 +204,7 @@ body.dys main{max-width:720px}
 <li>They discovered gold near Johannesburg in 1886.</li>
 <li>A decree created the Federal Capital Territory in 1976.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>Ottawa was chosen (by Queen Victoria) in 1857.</li>
 <li>New Delhi was planned by two British architects.</li>
@@ -199,7 +223,7 @@ body.dys main{max-width:720px}
 <li>Lagos was crowded. ______, the government decided to build Abuja.</li>
 <li>Toronto is the biggest city, ______ Ottawa is the capital.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>used to be</li>
 <li>whose</li>

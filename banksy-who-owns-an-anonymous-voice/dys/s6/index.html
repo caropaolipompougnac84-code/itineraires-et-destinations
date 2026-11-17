@@ -282,8 +282,9 @@
 
   </style>
   
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-pro" class="is-dys english-look">
+<body data-section="lycee-pro" class="is-dys english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -323,6 +324,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     <p class="kicker">Dys version · Lesson 6 of 6</p>
     <h1>Lesson 6. Exhibiting Banksy without owning the name</h1>
@@ -350,7 +374,7 @@
       <p>This photograph shows a gymnast with a ribbon, on a damaged building in Irpin, in 2022. The work is widely attributed to Banksy. The hole in the wall is part of the image. In 2023 the section of wall was moved, in order to save it. The artist's civil identity is not confirmed in the sources used for this exhibition.</p>
     </blockquote>
     <p><strong>Exercise.</strong> Repair this bad label: "This mural was painted by Robin Gunningham in 2022."</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d6-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d6-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example: A mural widely attributed to Banksy, 2022. Reuters reported a civil name in March 2026. Banksy did not confirm it in the sources used here. (You may also leave the civil name out of the label completely.)</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d6-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d6-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example: A mural widely attributed to Banksy, 2022. Reuters reported a civil name in March 2026. Banksy did not confirm it in the sources used here. (You may also leave the civil name out of the label completely.)</p></div></div>
 
     <h2>Written work</h2>
     <p>Write a label of four to six short sentences for your work. Then write three sentences: <strong>I think the warehouse mural should / should not be removed, because... If it is removed, it may...</strong></p>

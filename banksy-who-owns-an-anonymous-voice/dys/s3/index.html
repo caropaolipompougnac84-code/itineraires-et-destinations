@@ -282,8 +282,9 @@
 
   </style>
   
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-pro" class="is-dys english-look">
+<body data-section="lycee-pro" class="is-dys english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -323,6 +324,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     <p class="kicker">Dys version · Lesson 3 of 6</p>
     <h1>Lesson 3. If you own the wall, do you own the art?</h1>
@@ -345,7 +369,7 @@
       <li>The court case was about a physical section of wall.</li>
       <li>The court decided that the public owns every Banksy mural.</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d3-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d3-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 False. 2 True. 3 False.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d3-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d3-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 False. 2 True. 3 False.</p></div></div>
 
     <h2>Two photographs</h2>
     <p>No Ball Games, in Tottenham, was later removed and sold. The Irpin gymnast was cut out of a building in 2023, in order to save it, and later moved.</p>
@@ -356,7 +380,7 @@
     <p>We use <strong>was / were + past participle</strong> when the object is the focus: The mural <strong>was painted</strong> in 2009. It <strong>was removed</strong> later. It <strong>was sold</strong> in sections.</p>
     <p><strong>Worked example.</strong> Active: Someone removed the mural. Passive: The mural was removed.</p>
     <p><strong>Exercise 2.</strong> Rewrite in the passive. 1. Someone painted the mural on a wall. 2. Someone cut the gymnast out of the building.</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d3-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d3-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 The mural was painted on a wall. 2 The gymnast was cut out of the building.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="d3-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="d3-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 The mural was painted on a wall. 2 The gymnast was cut out of the building.</p></div></div>
 
     <h2>Speak (mid-point practice)</h2>
     <p>A café owner wants to cut out a mural and sell it. Residents want it to stay. Use this frame, for 40 seconds:</p>

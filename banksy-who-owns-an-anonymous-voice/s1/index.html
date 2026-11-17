@@ -282,8 +282,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -326,6 +327,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     
 <figure class="look-hero"><img src="/banksy-who-owns-an-anonymous-voice/img/look/stokes-croft-murals-2023.jpg" alt="A Bristol shop front painted with a bright underwater mural, on a sunny street." width="1600" height="1196"><figcaption>Stokes Croft, Bristol, 16 September 2023. Photo: ScheWo. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Seconde bac pro · A2 and B1 · Lesson 1 of 6</p>
@@ -379,7 +403,7 @@
     <h3>Exercises on vocabulary</h3>
     <p><strong>Exercise 1. Match.</strong> 1. visual slogan &nbsp; 2. to denounce &nbsp; 3. irony &nbsp; 4. tone &nbsp; 5. placement</p>
     <p>a. the way the message sounds &nbsp; b. a message spoken by a picture &nbsp; c. saying the opposite on purpose &nbsp; d. to say publicly that something is wrong &nbsp; e. where the work is put, as part of the sentence</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1b, 2d, 3c, 4a, 5e.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1b, 2d, 3c, 4a, 5e.</p></div></div>
 
     <p><strong>Exercise 2. Description or interpretation?</strong> Write D or I.</p>
     <ol>
@@ -389,11 +413,11 @@
       <li>The image is a slogan about lost hope.</li>
       <li>The wall behind the figure is almost empty.</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 D (visible colour and shape). 2 I (sadness and loss are not proven). 3 D (a visible action). 4 I (a general meaning, a slogan you write). 5 D (what the photograph shows of the wall).</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 D (visible colour and shape). 2 I (sadness and loss are not proven). 3 D (a visible action). 4 I (a general meaning, a slogan you write). 5 D (what the photograph shows of the wall).</p></div></div>
 
     <p><strong>Exercise 3. Fill in the gaps</strong> with: slogan · ironic · placement · may · evidence</p>
     <p>We can write a visual _______ for this mural, but we must keep _______ and interpretation apart. The empty wall _______ suggest loneliness: that is a possible reading, not a proof. If a sentence is painted so that water covers it, the _______ is part of the message, and the tone may be _______.</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>slogan; evidence; may; placement; ironic.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>slogan; evidence; may; placement; ironic.</p></div></div>
 
     <h3>Flashcards of the lesson</h3>
     <p>Each student makes three cards: one word from the slogan bank, one word for arguing, one grammar structure. On the front: the word or structure. On the back: a short meaning, and one example sentence about today's mural. Model:</p>
@@ -414,13 +438,13 @@
     <p><cite>What are you looking at?</cite>, in a subway near Hyde Park, faces a real surveillance camera. The words address someone: the camera, or the passer-by, or both.</p>
     <figure class="artwork"><img src="../img/what-are-you-looking-at.jpg" width="607" height="800" alt="Black stencil letters on a stained grey underpass wall, WHAT ARE YOU LOOKING AT?, facing a closed-circuit camera fixed on the adjoining wall." /><figcaption>A stencil widely attributed to Banksy in a subway near Hyde Park, London: the words WHAT ARE YOU LOOKING AT?, painted on the wall facing a real surveillance camera. Photograph by Andrew Dunn, April 2006, <a href="https://commons.wikimedia.org/wiki/File:What_are_you_looking_at.jpg">Wikimedia Commons</a>, CC BY-SA 2.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete: <em>There is a camera. The words say... The image is speaking to... The tone is... because...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Write four short sentences: the slogan, the addressee, the tone, and the device (the real camera is part of the sentence). Then say whether the question is angry, playful, or both.</p></div></div>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c6" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c6" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. Other justified answers are possible. The words say: What are you looking at? They may be speaking to the camera, or to us as we look. The tone may be confrontational or ironic: a painted question answers a machine that watches. The device is the pairing of written words with a real camera. We cannot prove the artist's exact intention from the photograph alone.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c6" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c6" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. Other justified answers are possible. The words say: What are you looking at? They may be speaking to the camera, or to us as we look. The tone may be confrontational or ironic: a painted question answers a machine that watches. The device is the pairing of written words with a real camera. We cannot prove the artist's exact intention from the photograph alone.</p></div></div>
 
     <h3><span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>A written slogan that the water completes</h3>
     <p>On the Regent's Canal in Camden, the words <em>I DON'T BELIEVE IN GLOBAL WARMING</em> are painted so that the lower line sits in the water. The canal becomes part of the sentence.</p>
     <figure class="artwork"><img src="../img/global-warming-canal.jpg" width="1800" height="1350" alt="Red capital letters on a white canal wall: I DON'T BELIEVE IN GLOBAL WARMING, with the words GLOBAL WARMING partly covered by the water, and a reflection of the text in the canal." /><figcaption>A mural widely attributed to Banksy on the Regent's Canal in Camden, London: the words I DON'T BELIEVE IN GLOBAL WARMING, painted so that the lower line sits in the water. Photograph by Matt Brown, 21 December 2009, <a href="https://commons.wikimedia.org/wiki/File:I_don%C2%B4t_believe_in_global_warming.png">Wikimedia Commons</a>, CC BY 2.0. The photograph is shared under that licence. The artwork itself remains protected.</figcaption></figure>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>Complete: <em>The words say... The water is... The tone is ironic because... The image denounces...</em></p></div><div class="track"><h4>B1 pathway</h4><p>Explain, in six to eight lines, how placement turns a written sentence into an ironic slogan. Who is the target? What would change if the same words were painted high and dry on a different wall?</p></div></div>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c7" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c7" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. The words appear to deny climate change. The water covers part of the sentence, so the place contradicts the claim: that is irony. The target may be climate sceptics, or a wider public. The image denounces rising water, and it does so without a civil name beside it. If the same words were high and dry, the slogan would lose its punch: placement is part of what is said.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c7" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c7" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. The words appear to deny climate change. The water covers part of the sentence, so the place contradicts the claim: that is irony. The target may be climate sceptics, or a wider public. The image denounces rising water, and it does so without a civil name beside it. If the same words were high and dry, the slogan would lose its punch: placement is part of what is said.</p></div></div>
 
     <h3>A slogan that looks official, and a slogan without words</h3>
     <p><cite>One Nation Under CCTV</cite>, on Newman Street in London: a child is painting huge letters. A uniformed figure and a dog seem to watch. A camera is part of the scene. Then look at <cite>The Mild Mild West</cite> in Stokes Croft, Bristol, a picture that can speak without writing a sentence, and at a Bristol stencil that is a sentence about permission: <em>You don't need planning permission to build castles in the sky.</em></p>
@@ -443,10 +467,10 @@
       <li>There is / There are large letters on the wall.</li>
       <li>The uniformed figure may watch / may be watching the child.</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c4" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c4" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 There is. 2 is painting. 3 may mean (may + infinitive: The letters may mean...). 4 There are. 5 may be watching (a possible action we see as ongoing).</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c4" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c4" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>1 There is. 2 is painting. 3 may mean (may + infinitive: The letters may mean...). 4 There are. 5 may be watching (a possible action we see as ongoing).</p></div></div>
 
     <p><strong>Exercise 5. Write the slogan.</strong> For <cite>One Nation Under CCTV</cite>, for <cite>The Mild Mild West</cite>, and for the Bristol stencil, write: one slogan sentence, the audience, the tone, and one visual device. A2: short sentences with the frames. B1: a short paragraph for each, keeping description and interpretation apart.</p>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c5" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c5" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. Other justified slogans are possible. One Nation Under CCTV may say: this nation lives under cameras. The audience may be the public, or the authorities. The tone may be critical or ironic: a child paints a huge official-looking sentence while a uniformed figure watches. The Mild Mild West has no written sentence: a teddy bear throws a Molotov cocktail at riot police, a playful figure doing a violent action. The tone may be ironic or angry; the audience may be the city, or the police. The Bristol stencil says, in words: you don't need planning permission to build castles in the sky. It may mock official rules, in a hopeful or ironic tone. None of these readings is a proof of the artist's private intention.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l1-c5" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l1-c5" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example answers. Other justified slogans are possible. One Nation Under CCTV may say: this nation lives under cameras. The audience may be the public, or the authorities. The tone may be critical or ironic: a child paints a huge official-looking sentence while a uniformed figure watches. The Mild Mild West has no written sentence: a teddy bear throws a Molotov cocktail at riot police, a playful figure doing a violent action. The tone may be ironic or angry; the audience may be the city, or the police. The Bristol stencil says, in words: you don't need planning permission to build castles in the sky. It may mock official rules, in a hopeful or ironic tone. None of these readings is a proof of the artist's private intention.</p></div></div>
 
     <h2><span class="skill-tag" title="Production orale" aria-label="Production orale">PO</span>Step 6. Speaking task</h2>
     <div class="tracks"><div class="track"><h4>A2 pathway</h4><p>In pairs, present one of today's murals in 30 to 40 seconds, as a visual slogan. Use at least two of these frames: <em>There is... The image says... The tone is... It may...</em> Your partner then asks you one simple question.</p></div><div class="track"><h4>B1 pathway</h4><p>In pairs, compare two murals in about one minute. For each, give the slogan, the audience and the tone. Use <em>may</em>, <em>whereas</em> and <em>I would argue that</em>. End with a question the photographs cannot answer: for example, who owns the wall, or what the artist intended as a private person.</p></div></div>

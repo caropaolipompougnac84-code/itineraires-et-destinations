@@ -380,8 +380,9 @@
 
   </style>
   
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body data-section="lycee-pro" class="is-dys english-look">
+<body data-section="lycee-pro" class="is-dys english-look mode-eleve">
   <a class="skip-link" href="#main">Aller au contenu</a>
   <header class="site-header">
     <div class="wrap">
@@ -424,6 +425,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     
 <figure class="look-hero"><img src="/s-exprimer-sur-le-lieu-de-travail/img/look/mechanic-at-work.jpg" alt="A mechanic crouched in a workshop, inspecting a small part among tools and spare pieces." width="1600" height="1067"><figcaption>A mechanic at work. Photo: PattayaPatrol. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><section class="page-hero">
@@ -461,7 +485,7 @@
 <p><strong>Tutor:</strong> And Léa: next time, tell me immediately, before you call the customer. You did well, but I have to know first.</p></div></div></div>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves, questions (A2 : 1 à 6. B1 : toutes)</p><div class="student-text"><p>You will hear a conversation between Léa and her tutor, Mr Baker. Listen twice and answer.</p>
 <ol><li>What is the problem?</li><li>When did the box arrive?</li><li>What is the order number?</li><li>Who is Mr Harris?</li><li>What did Karim do?</li><li>What can they do to solve the problem?</li><li>(B1) What did Léa do before she spoke to Mr Baker?</li><li>(B1) What should she do next time, and why?</li></ol></div></div>
-<div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><ol><li>A cardboard box is damaged / arrived damaged, and two parts were broken.</li><li>This morning.</li><li>4821.</li><li>He is a customer. He needs the parts today.</li><li>He went to the stockroom and found two new parts.</li><li>They can replace the parts, pack them in a new box, and deliver this afternoon. They will also apologise to Mr Harris.</li><li>She opened the box, she checked the order number, and she called Mr Harris.</li><li>She should tell the tutor immediately, before she calls the customer, because the tutor has to know first.</li></ol></div></div>
+<div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><ol><li>A cardboard box is damaged / arrived damaged, and two parts were broken.</li><li>This morning.</li><li>4821.</li><li>He is a customer. He needs the parts today.</li><li>He went to the stockroom and found two new parts.</li><li>They can replace the parts, pack them in a new box, and deliver this afternoon. They will also apologise to Mr Harris.</li><li>She opened the box, she checked the order number, and she called Mr Harris.</li><li>She should tell the tutor immediately, before she calls the customer, because the tutor has to know first.</li></ol></div></div>
 <h3>Activité 2. Past simple and useful phrases (10 min).</h3>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves</p><div class="student-text"><p><strong>Expanding your vocabulary: problems and solutions</strong></p>
 <ul><li>There's a problem. / I'm afraid there's a problem. / What's the matter?</li><li>The box arrived damaged. / Two parts were broken. / The machine stopped. / The order was late. / A customer was unhappy.</li><li>I'm sorry. / I'm sorry about that. / I apologise. / We're sorry for the delay.</li><li>We can replace it. / We can repair it. / We can deliver it this afternoon.</li><li>I'll check with my tutor. / I'll call the customer. / I'll do that now.</li></ul>
@@ -472,14 +496,14 @@
 <ul><li>What happened? / What did you do? / Did you check the order? Yes, I did. / No, I didn't.</li><li>I didn't use the damaged box.</li></ul>
 <p><strong>Exercise.</strong> Put the verbs in the past simple.</p>
 <ol><li>The box _______________ this morning. (arrive)</li><li>I _______________ it and I _______________ a problem. (open / find)</li><li>Two parts _______________ broken. (be)</li><li>Karim _______________ to the stockroom. (go)</li><li>We _______________ the parts and we _______________ to the customer. (replace / apologise)</li><li>_______________ you _______________ the tutor immediately? (tell)</li></ol></div></div>
-<div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><ol><li>arrived</li><li>opened / found</li><li>were</li><li>went</li><li>replaced / apologised</li><li>Did / tell</li></ol></div></div>
+<div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-2" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-2" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><ol><li>arrived</li><li>opened / found</li><li>were</li><li>went</li><li>replaced / apologised</li><li>Did / tell</li></ol></div></div>
 <h3>Activité 3. Report, apologise, propose a solution (14 min). Interaction orale.</h3>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves</p><div class="student-text"><p><strong>Dialogue 4. With the tutor</strong></p>
 <p>Student: Excuse me, Ms Clark. I'm afraid there's a problem. Tutor: What's the matter? Student: I checked the machine this morning and it stopped. I switched it off immediately. Tutor: Did you tell anyone? Student: I told Karim. He came and he looked at it. I think a part is broken. Tutor: All right. You did the right thing. I'll come and see. Don't switch it on. Student: Thank you.</p>
 <p><strong>Dialogue 5. With a customer</strong></p>
 <p>Customer: Good afternoon. I have a problem with my order. Student: Good afternoon. I'm sorry to hear that. How can I help you? Customer: The box arrived damaged, and two parts were broken. Student: I'm sorry about that. Could you give me the order number, please? Customer: Yes, it's 4821. Student: Thank you. We can replace the parts today, and we can deliver this afternoon. Customer: That's fine. Thank you. Student: You're welcome. I'm sorry again for the problem.</p>
 <p><strong>Your task.</strong> In pairs, choose one of the two dialogues. Read it twice and change roles. Then invent a new problem from your trade (a late delivery, a wrong dish, a leak, a broken tool, a wrong size). Write 6 to 8 lines: report the problem in the past simple, apologise, and propose a solution. Act it out.</p></div></div>
-<div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Exemple restauration :</p>
+<div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-3" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-3" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Exemple restauration :</p>
 <div class="student-text"><p>Customer: Good afternoon. I have a problem with my order. Student: I'm sorry to hear that. How can I help you? Customer: I ordered a vegetable dish, but there is an allergen I can't eat. Student: I'm very sorry. I checked the ticket and I made a mistake. We can prepare a new dish for you now, without that ingredient. Customer: Thank you. Student: You're welcome. I'm sorry again.</p></div>
 <p>Exemple bâtiment :</p>
 <div class="student-text"><p>Student: Excuse me, Mr Baker. I'm afraid there's a problem. Tutor: What's the matter? Student: The delivery arrived late this morning, and one box was damaged. I told the site supervisor and I put the box aside. Tutor: Good. We can call the supplier and ask for a new delivery. Don't use the damaged materials.</p></div></div></div>
@@ -488,7 +512,7 @@
 <p><strong>A2 (60 to 80 words).</strong> Use this frame: <em>This morning, there was a problem. The... I... Then I... We can... I'm sorry about...</em></p>
 <p><strong>B1 (90 to 110 words).</strong> Write a complete note: what happened, when, what you did, who you told, what solution you propose, and one sentence to show you know what to do next time.</p>
 <p>Do not invent a long story. Keep it professional and clear.</p></div></div>
-<div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-4" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-4" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Exemple A2 :</p>
+<div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-4" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-4" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Exemple A2 :</p>
 <div class="student-text"><p>This morning, there was a problem. The cardboard box for order 4821 arrived damaged. I opened it and two parts were broken. Then I told my tutor, Mr Baker, and I told Karim. Karim found two new parts in the stockroom. We can pack them in a new box and deliver this afternoon. I'm sorry about the problem.</p></div>
 <p>Exemple B1 :</p>
 <div class="student-text"><p>This morning, a cardboard box for order 4821, for Mr Harris, arrived damaged. I opened it, I checked the number, and I found that two parts were broken. I told Karim, who went to the stockroom and found two new parts. I also called the customer, and then I spoke to my tutor, Mr Baker. We can replace the parts and deliver them this afternoon. I'm sorry about this problem. Next time, I will tell my tutor immediately, before I call the customer.</p></div></div></div>
@@ -497,7 +521,7 @@
 <ul><li>I'm afraid there's a problem. / What's the matter?</li><li>The box arrived damaged. I checked it. I told my tutor.</li><li>I'm sorry about that. / I apologise.</li><li>We can replace it today. / I'll check with my tutor.</li><li>What happened? What did you do? Did you tell the tutor? Yes, I did.</li></ul></div></div>
 <div class="box box-student" lang="en"><p class="box-label">Pour les élèves</p><div class="student-text"><p><strong>Homework, Lesson 6</strong></p>
 <ol><li>Write the past simple of these verbs: arrive, open, check, tell, go, find, be, have, break, come, say, replace, happen, leave, do.</li><li>Complete the dialogue. Customer: I have a _______________ with my order. You: I'm _______________ to hear that. How can I _______________ you? Customer: The box _______________ damaged. You: I'm sorry about that. We can _______________ it today.</li><li>Write your own incident note (A2: 60 to 80 words, B1: 90 to 110 words) about a problem from your PFMP, real or imagined. Use the past simple, an apology, and a solution.</li></ol></div></div>
-<div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-5" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-5" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><ol><li>arrived, opened, checked, told, went, found, was/were, had, broke, came, said, replaced, happened, left, did</li><li>problem / sorry / help / arrived / replace (or <em>repair</em>, <em>deliver</em>, <em>exchange</em>, according to a just choice)</li><li>(Production personnelle. Le corrigé suit le modèle de l'activité 4 : faits au <em>past simple</em>, excuse, solution, ton professionnel.)</li></ol></div></div>
+<div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="dysl6-corrige-5" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="dysl6-corrige-5" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><ol><li>arrived, opened, checked, told, went, found, was/were, had, broke, came, said, replaced, happened, left, did</li><li>problem / sorry / help / arrived / replace (or <em>repair</em>, <em>deliver</em>, <em>exchange</em>, according to a just choice)</li><li>(Production personnelle. Le corrigé suit le modèle de l'activité 4 : faits au <em>past simple</em>, excuse, solution, ton professionnel.)</li></ol></div></div>
 
     <nav class="pager" aria-label="Précédent et suivant"><a href="../s5/">Lesson 5</a><a href="../s7/">Lesson 7</a></nav>
   </main>

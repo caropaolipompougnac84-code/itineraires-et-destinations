@@ -91,8 +91,9 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+<style>body.mode-eleve .prof-only{display:none!important}</style>
 </head>
-<body class="dys english-look">
+<body class="dys english-look mode-eleve">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +101,29 @@ body.dys main{max-width:720px}
 <a href="/is-the-biggest-city-always-the-capital/">Is the Biggest City Always the Capital?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/is-the-biggest-city-always-the-capital/dys/">Home</a>
 <a href="/is-the-biggest-city-always-the-capital/dys/s1/">L1</a>
@@ -144,7 +168,7 @@ body.dys main{max-width:720px}
 <li>Who chose Wellington, and why?</li>
 <li>When did the Nigerian government move to Abuja?</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>As a compromise between Sydney and Melbourne, the two rival cities.</li>
 <li>Three commissioners from Australia, for its central position and its excellent harbour.</li>
@@ -164,7 +188,7 @@ body.dys main{max-width:720px}
 <li>The modern Commonwealth was born in 1949.</li>
 <li>Members share sporting events.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>False: Mozambique, Rwanda, Gabon and Togo were never British.</li>
 <li>False: India, Nigeria and South Africa are republics with their own presidents.</li>
@@ -185,7 +209,7 @@ body.dys main{max-width:720px}
 <tr><td>Wellington</td><td></td><td></td></tr>
 </tbody></table></div>
 <p><strong>Sentence starters.</strong> New Delhi is a sign of permanence, since… · Abuja rather stands for a break: … · Pretoria is both: the Union Buildings were built…, yet in 1994…</p>
-<div class="ans"><p class="tag">Possible answers</p>
+<div class="ans prof-only"><p class="tag">Possible answers</p>
 <ul>
 <li>New Delhi: permanence. It was planned by British architects and inaugurated in 1931; independent India kept it and the Viceroy’s House became the home of the President.</li>
 <li>Abuja: break. It was decided in 1976, sixteen years after independence, to unite the country with a central, neutral capital.</li>
@@ -201,7 +225,7 @@ body.dys main{max-width:720px}
 <li>Wellington is a city ______ harbour is excellent.</li>
 <li>Walter Burley Griffin was an architect ______ wife also designed Canberra.</li>
 </ol>
-<div class="ans"><p class="tag">Answer key</p>
+<div class="ans prof-only"><p class="tag">Answer key</p>
 <ol>
 <li>used to be</li>
 <li>used to meet</li>

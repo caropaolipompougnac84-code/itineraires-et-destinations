@@ -43,7 +43,7 @@
   function setMode(mode){d.body.classList.toggle('mode-eleve',mode==='eleve');d.body.classList.toggle('mode-prof',mode!=='eleve');
     [].forEach.call(d.querySelectorAll('.mode-btn[data-mode]'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-mode')===mode?'true':'false');});
     try{localStorage.setItem(MKEY,mode);}catch(e){}}
-  var saved='prof';try{saved=localStorage.getItem(MKEY)||'prof';}catch(e){}
+  var saved='eleve';try{saved=localStorage.getItem(MKEY)||'eleve';}catch(e){}
   setMode(saved);applyClosed();
   if(!location.hash)history.replaceState(null,'','#accueil');
   current();

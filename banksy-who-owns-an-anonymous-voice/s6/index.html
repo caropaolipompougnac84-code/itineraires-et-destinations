@@ -282,8 +282,9 @@
 
   </style>
   
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+</head>
+<body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -326,6 +327,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     
 <figure class="look-hero"><img src="/banksy-who-owns-an-anonymous-voice/img/look/bristol-from-cabot-tower.jpg" alt="A wide view of Bristol from Cabot Tower, with the old city, new buildings and a bright sky." width="1600" height="739"><figcaption>View from Cabot Tower, Bristol, August 2025. Photo: Captain Galaxy. CC BY 4.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Seconde bac pro · A2 and B1 · Lesson 6 of 6</p>
@@ -365,7 +389,7 @@
       <li>"This photograph is free to use because it is on the internet, and so is the artwork."</li>
       <li>"The High Court decided that the public owns every Banksy mural."</li>
     </ol>
-    <div class="toggle-wrap"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l6-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l6-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example rewrites. 1. A mural widely attributed to Banksy, 2022. Reuters reported in March 2026 that Banksy was born Robin Gunningham. Banksy has not confirmed that identification in the sources used for this exhibition. (Better: do not put the civil name in the visitor's first sentence at all.) 2. We do not know a single intention for every work. Some street pieces have been removed and sold; Pest Control does not treat that as a normal way to obtain a certificate. The law depends on the case. 3. A photograph may have a Creative Commons licence. The artwork itself remains protected. 4. In 2015, in a particular case about <cite>Art Buff</cite>, the High Court ordered the return of a physical section of wall. It did not decide that the public owns every mural.</p></div></div>
+    <div class="toggle-wrap prof-only"><button type="button" class="btn-toggle" aria-expanded="false" aria-controls="l6-c1" data-show="Afficher le corrigé" data-hide="Cacher le corrigé">Afficher le corrigé</button><div id="l6-c1" class="toggle-panel is-corrige" hidden><p class="box-label">Corrigé</p><p>Example rewrites. 1. A mural widely attributed to Banksy, 2022. Reuters reported in March 2026 that Banksy was born Robin Gunningham. Banksy has not confirmed that identification in the sources used for this exhibition. (Better: do not put the civil name in the visitor's first sentence at all.) 2. We do not know a single intention for every work. Some street pieces have been removed and sold; Pest Control does not treat that as a normal way to obtain a certificate. The law depends on the case. 3. A photograph may have a Creative Commons licence. The artwork itself remains protected. 4. In 2015, in a particular case about <cite>Art Buff</cite>, the High Court ordered the return of a physical section of wall. It did not decide that the public owns every mural.</p></div></div>
 
     <h2><span class="skill-tag" title="Production écrite" aria-label="Production écrite">PE</span>Step 2. Written assessment (15 minutes)</h2>
     <p>You work alone. You may use your observation card from Lesson 5, and the classroom sentence about Reuters from Lesson 2. You may not search the web for a private name.</p>

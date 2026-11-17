@@ -1,0 +1,86 @@
+@font-face{font-family:"EB Garamond";src:url("fonts/EBGaramond-VariableFont_wght.ttf") format("truetype");font-weight:400 800;font-display:swap}
+@font-face{font-family:"OpenDyslexic";src:url("fonts/OpenDyslexic-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"OpenDyslexic";src:url("fonts/OpenDyslexic-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{--navy:#1A3658;--navy-l:#e8edf4;--ok:#1e6b3a;--ok-l:#e3f3e8;--ko:#9b1c1c;--ko-l:#fbe9e9;--ink:#1d1d1d;--paper:#fbfaf7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.5;color:var(--ink);background:var(--paper)}
+h1,h2,h3,.brand{font-family:"EB Garamond",Georgia,serif;color:var(--navy)}
+a{color:var(--navy)}
+.site-head{background:var(--navy);color:#fff;padding:14px 18px}
+.site-head .brand{color:#fff;font-size:1.5rem;text-decoration:none;font-weight:600}
+.wrap{max-width:860px;margin:0 auto;padding:18px 16px 40px}
+h1{font-size:2rem;line-height:1.2;margin:.4em 0 .2em}
+h2{font-size:1.6rem;margin:1.2em 0 .4em}
+.lead{font-size:1.1rem}
+.tag{display:inline-block;background:var(--navy-l);color:var(--navy);border-radius:999px;padding:2px 12px;font-size:.95rem;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{display:block;background:#fff;border:2px solid var(--navy);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.card h3{margin:0 0 4px;font-size:1.45rem}
+.card p{margin:0;font-size:1rem}
+.card:focus,.card:hover{background:var(--navy-l)}
+.modes{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.btn{appearance:none;border:2px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-weight:bold;border-radius:12px;padding:12px 16px;min-height:48px;cursor:pointer}
+.btn.primary{background:var(--navy);color:#fff}
+.btn[aria-pressed="true"]{background:var(--navy);color:#fff}
+.btn:disabled{opacity:.6;cursor:default}
+.quiz{background:#fff;border:2px solid var(--navy);border-radius:16px;padding:16px;margin:14px 0}
+.progress{height:10px;background:var(--navy-l);border-radius:6px;overflow:hidden;margin-bottom:10px}
+.progress span{display:block;height:100%;background:var(--navy);width:0}
+.part{font-weight:bold;color:var(--navy);margin:0 0 6px}
+.prompt{font-size:1.5rem;font-weight:bold;margin:6px 0 14px}
+.prompt.sentence{font-weight:normal;font-size:1.3rem}
+.options{display:grid;gap:10px}
+.opt{text-align:left;width:100%;font-size:1.15rem;font-weight:normal}
+.opt.ok,.pair.ok{background:var(--ok-l);border-color:var(--ok);color:var(--ok);font-weight:bold}
+.opt.ko,.pair.ko{background:var(--ko-l);border-color:var(--ko);color:var(--ko)}
+.feedback{min-height:1.6em;margin:12px 0;font-weight:bold}
+.feedback.ok{color:var(--ok)}.feedback.ko{color:var(--ko)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match .col{display:grid;gap:10px;align-content:start}
+.pair{width:100%;font-weight:normal;font-size:1.05rem;text-align:left;word-break:break-word}
+.pair.sel{background:var(--navy);color:#fff}
+.score{font-size:1.6rem;font-weight:bold;color:var(--navy)}
+details{background:#fff;border:1px solid #c9d2de;border-radius:12px;padding:10px 14px;margin:12px 0}
+summary{font-weight:bold;color:var(--navy);cursor:pointer;min-height:32px}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #c9d2de;padding:8px;text-align:left;vertical-align:top}
+th{background:var(--navy-l);color:var(--navy)}
+.downloads{display:flex;gap:10px;flex-wrap:wrap}
+.foot{border-top:2px solid var(--navy);margin-top:30px;padding:16px;text-align:center;font-size:1rem;color:#333}
+.say{font-size:1rem;padding:8px 12px;min-height:44px}
+.sr{position:absolute;left:-9999px}
+/* Version dys */
+body.dys{font-family:"OpenDyslexic",Arial,Helvetica,sans-serif;font-size:21px;line-height:1.75;letter-spacing:0;word-spacing:.08em;background:#fffdf3}
+body.dys h1,body.dys h2,body.dys h3{font-family:"OpenDyslexic",Arial,sans-serif}
+body.dys .prompt{font-size:1.45rem}
+body.dys .opt{font-size:1.2rem;padding:16px}
+body.dys .match{grid-template-columns:1fr}
+@media (max-width:480px){h1{font-size:1.75rem}.wrap{padding:14px 12px 30px}.quiz{padding:12px}.prompt{font-size:1.35rem}}
+@media print{.site-head,.modes,.quiz,.foot .noprint{display:none}}
+/* Liste de vocabulaire : cartes empilées sur téléphone et en version dys */
+td,th{overflow-wrap:anywhere}
+@media (max-width:600px){
+  .vocab thead{display:none}
+  .vocab,.vocab tbody{display:block}
+  .vocab tr{display:grid;grid-template-columns:84px 1fr auto;gap:2px 10px;border:1px solid #c9d2de;border-radius:10px;padding:8px 10px;margin-bottom:8px;background:#fff}
+  .vocab td{border:0;padding:2px 0}
+  .vocab td:nth-child(1){grid-column:1;grid-row:1 / span 2;align-self:center}
+  .vocab td:nth-child(2),.vocab td:nth-child(3){grid-column:2}
+  .vocab td:nth-child(2){grid-row:1}.vocab td:nth-child(3){grid-row:2}
+  .vocab td:nth-child(4){grid-column:3;grid-row:1 / span 2;align-self:center}
+}
+body.dys .vocab thead{display:none}
+body.dys .vocab,body.dys .vocab tbody{display:block}
+body.dys .vocab tr{display:grid;grid-template-columns:1fr;gap:4px;border:1px solid #c9d2de;border-radius:10px;padding:10px;margin-bottom:10px;background:#fff}
+body.dys .vocab td{border:0;padding:2px 0;grid-column:1 !important;grid-row:auto !important}
+body.dys .vocab td.pic img{width:150px;height:120px}
+.btn.ok:disabled,.btn.ko:disabled{opacity:1}
+/* Images */
+.qfig{margin:4px 0 8px;text-align:center}
+.qimg{display:block;margin:0 auto;max-width:100%;width:auto;height:auto;max-height:180px;object-fit:contain;border-radius:10px;border:1px solid #c9d2de;background:#fff}
+body.dys .qimg{max-height:200px}
+.vocab td.pic{width:96px;text-align:center;vertical-align:middle}
+.vocab td.pic img{display:block;width:80px;height:68px;object-fit:contain;margin:0 auto;background:#fff}
+.credits{padding-left:1.2em}.credits li{margin:0 0 8px;overflow-wrap:anywhere}

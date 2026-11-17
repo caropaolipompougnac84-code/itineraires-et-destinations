@@ -2771,6 +2771,267 @@
       "date": "2026-11-17",
       "image": "can-we-still-trust-what-we-see-online.jpg",
       "credit": "Follower of Hieronymus Bosch, The Conjurer (L'Escamoteur), first half of the 16th century. Musée municipal, Saint-Germain-en-Laye. Public domain, Wikimedia Commons."
+    },
+    {
+      "id": "lg-anglais-destination-australia",
+      "title": "Anglais · Terminale bac pro et Terminale générale et technologique · Head off to Australia",
+      "summary": "Un an en Australie : visa vacances-travail, budget, emploi, transports et vie quotidienne. Treize séances pour la Terminale bac pro et la Terminale générale et technologique, plus l'évaluation.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": [
+        "1re",
+        "tle"
+      ],
+      "levelLabel": "Terminale bac pro et Terminale générale et technologique",
+      "collection": "lg-anglais",
+      "themes": [
+        "voyage",
+        "travail"
+      ],
+      "url": "https://itineraires-destinations.fr/destination-australia/",
+      "date": "2026-11-14",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120573079490243&set=a.122120557935490243"
+    },
+    {
+      "id": "lg-anglais-expanding-vocabulary",
+      "title": "Anglais · Méthode · Expanding your vocabulary",
+      "summary": "Atelier pour élargir le vocabulaire en anglais.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": [
+        "1re",
+        "tle"
+      ],
+      "levelLabel": "1re / Tle · lycée général et technologique",
+      "collection": "lg-anglais",
+      "themes": [
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/expanding-your-vocabulary/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120729109490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lg-anglais-english-punctuation",
+      "title": "Anglais · Méthode · English Punctuation: Practice",
+      "summary": "Exercices de ponctuation en anglais.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "Méthode · A2 à B1 · lycée général et technologique",
+      "collection": "lg-anglais",
+      "themes": [
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/english-punctuation-practice/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778087490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-licence-to-learn",
+      "title": "Anglais · Licence to Learn",
+      "summary": "MI5, MI6 et le monde de James Bond : six leçons de 55 minutes, calibrées sur 52 minutes, jusqu’à un entretien de recrutement fictif. Tronc B1, progression vers B1+ (LVA).",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": [
+        "2de",
+        "1re"
+      ],
+      "levelLabel": "2de / 1re · LVA : B1 vers B1+ · général et technologique / pro",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/licence-to-learn/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120740479490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-1re-whose-land",
+      "title": "Anglais · 1re · Whose Land, Whose Water?",
+      "summary": "Quand un gouvernement fait des promesses aux peuples autochtones, qui décide de la terre et de l’eau ? Huit leçons de 55 minutes, calibrées sur 52 minutes, jusqu’à une audience citoyenne et une lettre ouverte. Parcours bac pro, CAP et dys.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "1re générale et technologique · LVA B1+ / LVB B1 · bac pro / CAP",
+      "collection": "lp-anglais",
+      "themes": [
+        "environnement",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/whose-land-whose-water/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122121737523490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-2de-green-at-work",
+      "title": "Anglais · Seconde professionnelle · Green at Work",
+      "summary": "Séquence d’anglais pour la Seconde professionnelle, également utilisable en CFA et pour un brevet professionnel. Six leçons de 55 minutes, minutées sur 52 minutes. Un travailleur peut-il vraiment faire une différence pour la planète ? Étude de la langue, évaluations, version dys et version pour l’élève qui ne peut pas venir en classe.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "Seconde professionnelle · baccalauréat professionnel · LVA · de A2 vers B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "environnement"
+      ],
+      "url": "https://itineraires-destinations.fr/green-at-work-seconde-pro/",
+      "date": "2026-11-16",
+      "image": "green-at-work-seconde-pro.jpg",
+      "credit": "Jean-François Millet, The Gleaners (Des glaneuses), 1857, oil on canvas, Musée d'Orsay, Paris. Public domain."
+    },
+    {
+      "id": "lp-anglais-2de-safe-at-work",
+      "title": "Anglais · Seconde professionnelle · Safe at Work",
+      "summary": "Séquence d’anglais pour la Seconde professionnelle, également utilisable en CFA et pour un brevet professionnel. Six leçons de 55 minutes, minutées sur 52 minutes. La sécurité au travail : à qui la tâche ? Étude de la langue, évaluations, version dys et version pour l’élève qui ne peut pas venir en classe.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "Seconde professionnelle · baccalauréat professionnel · LVA · de A2 vers B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail"
+      ],
+      "url": "https://itineraires-destinations.fr/safe-at-work-seconde-pro/",
+      "date": "2026-11-16",
+      "image": "safe-at-work-seconde-pro.jpg",
+      "credit": "Lewis Hine, Icarus, Empire State Building, 1930, The Metropolitan Museum of Art, New York. CC0 (Open Access)."
+    },
+    {
+      "id": "lp-anglais-english-punctuation",
+      "title": "Anglais · Méthode · English Punctuation: Practice",
+      "summary": "Exercices de ponctuation en anglais.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "Méthode · A2 à B1 · baccalauréat professionnel",
+      "collection": "lp-anglais",
+      "themes": [
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/english-punctuation-practice/",
+      "date": "2026-11-11",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778087490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-quiz-metiers",
+      "title": "Anglais · CAP / bac pro · Quiz de vocabulaire anglais des métiers",
+      "summary": "Quiz de vocabulaire anglais par métier, pour le CAP, le CFA et le baccalauréat professionnel. Une page par section, version dys, fiches en pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": [
+        "tous",
+        "cap"
+      ],
+      "levelLabel": "CAP / CFA · baccalauréat professionnel",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/quiz-metiers/",
+      "date": "2026-11-17"
+    },
+    {
+      "id": "lp-anglais-kitchen",
+      "title": "Anglais · CAP / CFA · Kitchen and Everyday Life",
+      "summary": "Vocabulaire de la cuisine et du quotidien (CAP A2).",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "cap",
+      "levelLabel": "CAP A2",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail"
+      ],
+      "url": "https://cuisine-et-vie-quotidienne-anglais.netlify.app/",
+      "date": "2026-11-06",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120561055490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-production",
+      "title": "Anglais / Français · CFA · Ressources CFA Production",
+      "summary": "Ressources pour apprentis en filière Production.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "CFA : apprentis",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail"
+      ],
+      "url": "https://ressources-cfa-production.netlify.app/",
+      "date": "2026-11-07",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120811171490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-london-global-metropolis",
+      "title": "Anglais · Première bac pro / CFA · London: Global Metropolis",
+      "summary": "Sept lessons de 52 minutes sur Londres, ville-monde : géographie urbaine, services, transports, dialogues, discours indirect, email et pitch. Onglets pour le tableau numérique, réponses à afficher, version dys, fiches en pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "Première bac pro · apprentis en CFA · B1 à B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "voyage",
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/london-global-metropolis/",
+      "date": "2026-11-17"
+    },
+    {
+      "id": "lp-anglais-a-wedding-in-scotland",
+      "title": "Anglais · Première bac pro / CFA · A Wedding in Scotland",
+      "summary": "Sept lessons de 52 minutes pour organiser un mariage en Écosse pour des invités français : lieu, budget, traditions, accueil, discours indirect, Keats. Onglets, réponses à afficher, version dys, fiches en pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "Première bac pro · apprentis en CFA · B1 à B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "voyage",
+        "travail",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/a-wedding-in-scotland/",
+      "date": "2026-11-17"
+    },
+    {
+      "id": "agri-anglais-cap-exam-toolkit",
+      "title": "Anglais · Exam Toolkit · CAP et CAPA · My Working Day",
+      "summary": "Boîte à outils d'examen A2, My Working Day, pour plusieurs métiers de CAP (lycée professionnel et CFA) et de CAPA (lycée agricole).",
+      "section": "lycee-agricole",
+      "subject": "anglais",
+      "level": "cap",
+      "levelLabel": "CAP et CAPA · A2",
+      "collection": "agri-anglais",
+      "themes": [
+        "examen",
+        "travail"
+      ],
+      "url": "https://itineraires-destinations.fr/exam-toolkit-cap-capa/",
+      "date": "2026-11-10"
+    },
+    {
+      "id": "agri-anglais-day-at-the-fair",
+      "title": "Anglais · Bac pro / agricole · A Day at the Fair",
+      "summary": "Vendre des produits locaux à la foire (B1).",
+      "section": "lycee-agricole",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "Bac pro / lycée agricole : B1",
+      "collection": "agri-anglais",
+      "themes": [
+        "travail",
+        "voyage"
+      ],
+      "url": "https://a-day-at-the-fair-vente.netlify.app/",
+      "date": "2026-11-06",
+      "facebookUrl": "https://www.facebook.com/photo/?fbid=122120560263490243&set=a.122104658121490243"
     }
   ]
 }

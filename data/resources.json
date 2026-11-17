@@ -2750,6 +2750,27 @@
       "date": "2026-11-17",
       "image": "can-we-trust-what-we-see.jpg",
       "credit": "Hans Holbein the Younger, The Ambassadors, 1533. National Gallery, London. Public domain, Wikimedia Commons."
+    },
+    {
+      "id": "lg-anglais-1re-can-we-still-trust-what-we-see-online",
+      "title": "Anglais · Première, lycée général et technologique · Can We Still Trust What We See Online?",
+      "summary": "Seven lessons in English, Première, lycée général et technologique, English LVA, towards B1+ (B2 tasks for stretch), on who decides what we see in a world of edited, staged and AI-generated images. Cover: The Conjurer (L'Escamoteur), follower of Hieronymus Bosch.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "Première · lycée général et technologique · English LVA · towards B1+",
+      "collection": "lg-anglais",
+      "themes": [
+        "medias",
+        "citoyennete",
+        "culture",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/can-we-still-trust-what-we-see-online/",
+      "date": "2026-11-17",
+      "image": "can-we-still-trust-what-we-see-online.jpg",
+      "credit": "Follower of Hieronymus Bosch, The Conjurer (L'Escamoteur), first half of the 16th century. Musée municipal, Saint-Germain-en-Laye. Public domain, Wikimedia Commons."
     }
   ]
 }

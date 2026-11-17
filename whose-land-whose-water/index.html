@@ -133,8 +133,23 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 }
 
 </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look">
+<body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -143,6 +158,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a class="on" href="/whose-land-whose-water/">Home</a>
 <a href="/whose-land-whose-water/#presentation">Présentation</a>
@@ -311,6 +349,177 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <img class="qr" src="/whose-land-whose-water/images/qr-whose-land-whose-water.png" alt="QR code linking to the official page of Whose Land, Whose Water?" width="160" height="160">
 </section>
 </main>
+<section class="compl-block" id="eleve-absent"><h2>2. Activités langagières à signaler ou à ajouter</h2>
+<div class='tw'><table>
+<thead><tr><th>Lesson</th><th>Étape</th><th>Marque ou ajout</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Ajouter 4 min d'écoute : l'enseignante lit deux fois la notice du tableau de Jim Logan (prise de notes)</td><td>CO</td></tr>
+<tr><td>1</td><td>Observation des tableaux en binôme</td><td>PI</td></tr>
+<tr><td>2</td><td>Paired restitution</td><td>PI</td></tr>
+<tr><td>3, 4</td><td>Compare the cases / viewpoints</td><td>PI</td></tr>
+<tr><td>5</td><td>Comparison sheet : ajouter une production écrite de 60 mots (<em>Testimony or fact?</em>) à la place de 3 min de correction</td><td>PE</td></tr>
+<tr><td>6</td><td>Mise en commun des rapports</td><td>PI</td></tr>
+<tr><td>8</td><td>Hearings in groups of four</td><td>PI (déjà marqué en Lesson 7, à étendre)</td></tr>
+</tbody>
+</table></div>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. Look Before You Judge</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis l'introduction culturelle et la boîte à mots, puis observe les tableaux de Jim Logan et de Norval Morrisseau.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What do you see in each painting?</li>
+<li>What is an observation? What is an interpretation?</li>
+<li>Which painting speaks to you more? Why?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>is, might be, does not prove</em> : fais l'exercice de la Lesson 1.</li>
+<li><strong>Je produis</strong> (10 min). Décris un des deux tableaux en 60 mots, en séparant ce que tu vois et ce que tu penses.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et la trace écrite.</p>
+<h3>Lesson 2. 1969: The White Paper and the Red Paper</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le texte historique et écoute deux fois la vidéo de Harold Cardinal.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What did the White Paper propose in 1969?</li>
+<li>How did the Red Paper answer?</li>
+<li>What does « Citizens Plus » mean?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de grammaire de la Lesson 2.</li>
+<li><strong>Je produis</strong> (10 min). Compare les deux textes en 60 mots (<em>whereas</em>, <em>while</em>).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 3. Rivers into Reservoirs</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Écoute deux fois le reportage de CBC, avec des pauses.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What happened to the rivers?</li>
+<li>Who benefited?</li>
+<li>Who lost something?</li>
+<li><strong>Étude de la langue</strong> (10 min). Cause et conséquence : <em>because of, as a result, which led to</em>. Trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). Remplis la fiche cause-conséquence de la Lesson 3.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et la fiche.</p>
+<h3>Lesson 4. Dams Today: Muskrat Falls and Site C</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les deux introductions et regarde les deux vidéos (deux fois chacune).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Where are Muskrat Falls and Site C?</li>
+<li>What problems do the two cases share?</li>
+<li>What is different?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de grammaire et de vocabulaire de la Lesson 4.</li>
+<li><strong>Je produis</strong> (10 min). Compare les deux cas en 80 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 2 et la trace écrite.</p>
+<h3>Lesson 5. Pipelines on Unceded Land</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis l'introduction juridique et culturelle, écoute les deux extraits (deux fois).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does « unceded land » mean?</li>
+<li>What is the difference between consultation and consent?</li>
+<li>What is a testimony? What is fact-checking?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 5.</li>
+<li><strong>Je produis</strong> (10 min). En 60 mots : <em>Testimony or fact? Why do we need both?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 5. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 6. Promises Kept, Promises Broken</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis la promesse et écoute les reportages de CBC et APTN.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What promise was made about water?</li>
+<li>Was it kept? Give one figure.</li>
+<li>What are the Calls to Action?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>has been, has not yet been</em> : present perfect, trois phrases sur la promesse.</li>
+<li><strong>Je produis</strong> (10 min). Écris un verdict nuancé de 60 mots : <em>kept, partly kept or broken?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 6. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 2 et le verdict en deux phrases.</p>
+<h3>Lesson 7. The Grizzlies: Youth, Land and Hope</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le synopsis et regarde deux fois la bande-annonce officielle (0:00 à 2:20).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Where does the story take place?</li>
+<li>What do the young people do?</li>
+<li>What gives hope in the trailer?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 7.</li>
+<li><strong>Je produis</strong> (10 min). En 60 mots : <em>What can sport do for a community?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 7. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 3 et la trace écrite.</p>
+<h3>Lesson 8. A Citizens' Hearing and an Open Letter</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Choisis un des cas de la séquence et relis tes notes.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Which case do you choose?</li>
+<li>What is your best piece of evidence?</li>
+<li>What do you ask for?</li>
+<li><strong>Étude de la langue</strong> (10 min). Lettre formelle : <em>I am writing to…</em>, <em>I would like to draw your attention to…</em></li>
+<li><strong>Je produis</strong> (10 min). Écris la lettre ouverte (150 mots). C'est aussi l'évaluation : elle est notée avec la grille de la séquence.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta carte de preuve. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : la carte de preuve et 80 mots de lettre.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
+<p>Axes : axe 6 (toutes les années) et axe 2 (années paires).</p>
+<h3>Déroulé en deux lessons de 52 minutes</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Lecture des consignes, repérage du ou des documents.</td><td>Lecture</td></tr>
+<tr><td>3 à 43</td><td>Compréhension de l'écrit</td><td>Lecture, prise de notes, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>43 à 50</td><td>Relecture</td><td>Relecture du compte rendu, vérification des références au texte.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question (si deux questions sont proposées).</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan en trois parties, trois exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 200 à 250 mots environ ; LVB : 150 à 180 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée : temps, accords, connecteurs, orthographe.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<h3>Compréhension de l'écrit (/10)</h3>
+<p>Document : un article authentique de CBC News ou d'APTN (2 300 à 4 000 signes) sur l'accès à l'eau potable dans une communauté des Premières Nations, ou deux documents : un article et un communiqué du gouvernement du Canada.</p>
+<p>Questions de guidage (en français) :</p>
+<ul>
+<li>Présentez le ou les documents.</li>
+<li>Quelle est la situation décrite ?</li>
+<li>Quelles promesses ont été faites, et par qui ?</li>
+<li>Quels points de vue s'opposent ?</li>
+<li>Quelle est la position de l'auteur ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<h3>Expression écrite (/10)</h3>
+<p>Traitez une des questions :</p>
+<ul>
+<li><em>Who should decide what happens to land and water?</em> Use examples from the sequence.</li>
+<li><em>Write an open letter to the Minister in charge, about one case studied in class.</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div></section>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>
 <p>This sequence is original teaching material for language learning. Drinking-water figures come from the Indigenous Services Canada snapshot dated 10 September 2026 (158 long-term advisories lifted since November 2015, 38 active, in 36 communities); they change and should be checked before use. The Trans Mountain figure (an offer of a collective 15% ownership share to 128 Indigenous groups) comes from the November 2026 federal budget; an offer is not a completed transfer. The paintings by Norval Morrisseau and Jim Logan are reproduced with the permission of the Norval Morrisseau Estate and of the artist, and are credited beside each image. Licensed photographs are credited next to each picture, with a caption that explains the link with the lesson. Videos are linked on YouTube, not copied. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0 licence</a>.</p>

@@ -231,8 +231,23 @@
     }
 
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-general" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style>
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
+</head>
+<body data-section="lycee-general" class="mode-eleve english-look">
   <header class="site-header">
     <div class="wrap">
       <div class="brand">
@@ -285,6 +300,29 @@
   </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     <p class="nojs-note">Without JavaScript, every lesson is on this page, one after another. The tabs above jump to each lesson.</p>
 
     <section class="panel" id="introduction" data-tab="introduction" aria-labelledby="introduction-title">
@@ -571,7 +609,172 @@ puisse cette flamme devenir la vôtre. »</p>
     <p style="margin:1.4rem 0 0"><a class="work-link" href="../lycee-general/anglais.html">Back to English, lycée général et technologique</a></p>
   </main>
 
-  <footer class="site-footer">
+  <section class="compl-block" id="eleve-absent"><h2>1. Minutage type, à décliner dans chaque lesson (lessons 2 à 9)</h2>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Before you read</td><td>Question d'entrée de la lesson, tour de parole.</td><td>PO</td></tr>
+<tr><td>5 à 20</td><td>Close reading</td><td>Lecture de l'extrait du livret, gloses, repérages.</td><td>CE</td></tr>
+<tr><td>20 à 30</td><td>Listening</td><td>Écoute de l'extrait joué (enregistrement en libre accès ou lecture de l'enseignante), trois écoutes ciblées.</td><td>CO</td></tr>
+<tr><td>30 à 44</td><td>Spoken turn</td><td>Claim de 40 à 60 secondes avec une citation, en binôme puis devant la classe ; point d'arrêt à la minute 44.</td><td>PO, PI</td></tr>
+<tr><td>44 à 52</td><td>Written record et devoirs</td><td>Trace écrite (180 à 250 mots, à finir à la maison), devoirs. Si la lesson déborde : sortie de secours du livret.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p>Lesson 1 : 10 min d'observation du tableau (PO), 12 min de vidéo de présentation (CO), 15 min de dédicace et de questions (CE, PI), 10 min de premières hypothèses écrites (PE), 5 min de trace et devoirs. Lesson 10 : 3 min de consignes, 41 min de commentaire écrit (PE), 8 min de commentaire de metteur en scène, oral (PO) ; les passages restants au début de la lesson suivante.</p>
+<h2>2. Marques d'activités</h2>
+<p>Ajouter dans chaque lesson les marques CO, PO, PI, PE à côté des étapes ci-dessus (seule la marque CE figure aujourd'hui).</p>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. Inheriting a way of reading</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : le tableau de Chassériau, Othello et Desdémone à Venise (Louvre).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 2. Iago's invitation: « I am not what I am »</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : I.1, la réplique de Iago.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 3. The Senate: a story that wins a hearing</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : I.3, Othello devant le Sénat.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 4. The desire for proof</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : III.3, « the green-eyed monster ».</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 5. The handkerchief and the test of trust</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : III.4, le mouchoir.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 6. Directing the spectator</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : IV.1, la scène observée par Othello.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 7. One conversation, two meanings</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : IV.1, Cassio et Bianca.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 8. The language of justification</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : V.2, « Put out the light ».</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 9. What can literature teach?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : les critiques Rymer, Johnson, Coleridge, Hazlitt, Bradley.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 10. Explaining the trap</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le livret : la question du commentaire.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the key moment of the extract?</li>
+<li>Choose one quotation and explain it.</li>
+<li>How does the extract answer the guiding question of the lesson?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relève trois procédés (image, répétition, aparté) et nomme-les en anglais.</li>
+<li><strong>Je produis</strong> (10 min). Écris la trace écrite de la lesson (180 à 250 mots) en répondant à la question du livret.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta meilleure phrase avec sa citation. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Entraînement au format de l'épreuve de LLCER (version prof)</h2>
+<p>Rappel de l'épreuve terminale de spécialité LLCER anglais (note de service, Éduscol, définition de l'épreuve) :</p>
+<ul>
+<li>Écrit, 3 h 30 : synthèse d'un dossier de trois ou quatre documents (textes littéraires et non littéraires, iconographie), en anglais, environ 500 mots (16 points) ; traduction ou transposition d'un passage d'environ 500 signes (4 points).</li>
+<li>Oral, 20 minutes sans préparation : présentation d'un dossier personnel de quatre à six documents en lien avec les thématiques étudiées (10 minutes au plus), puis entretien.</li>
+<li>Niveau visé : B2 à C1. Programme : Bulletin officiel spécial n° 8 du 25 juillet 2019.</li>
+</ul>
+<h3>Écrit blanc, synthèse et traduction (3 h 30, ou trois lessons)</h3>
+<p>Dossier proposé (thématique « Arts et débats d'idées », axe « L'art qui fait débat ») :</p>
+<ol>
+<li>Othello, III.3, extrait du livret (« O, beware, my lord, of jealousy »).</li>
+<li>Thomas Rymer, A Short View of Tragedy (1693), extrait sur le mouchoir (domaine public).</li>
+<li>Le tableau de Chassériau, Othello et Desdémone à Venise (Louvre, domaine public).</li>
+<li>Un court article de presse authentique sur une mise en scène récente d'Othello (critique du Guardian ou de la BBC, libre accès).</li>
+</ol>
+<p>Consigne de synthèse : <em>In about 500 words, show how these documents explore the way Othello is made to see what he fears.</em> Traduction (4 points) : environ 500 signes de l'extrait 1, vers le français.</p>
+<div class='tw'><table>
+<thead><tr><th>Lesson</th><th>Minutage</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>5 min de consignes ; 30 min de lecture du dossier ; 17 min de plan</td></tr>
+<tr><td>2</td><td>52 min de rédaction de la synthèse</td></tr>
+<tr><td>3</td><td>20 min de fin de rédaction et de relecture ; 30 min de traduction ; 2 min de ramassage</td></tr>
+</tbody>
+</table></div>
+<p>Grille (synthèse /16) : compréhension et mise en relation des documents /6 ; construction et problématique /4 ; correction et richesse de la langue /6. Traduction /4 : sens /2, correction du français /2.</p>
+<h3>Oral blanc (20 minutes)</h3>
+<p>L'élève présente un dossier personnel de quatre à six documents (dont au moins un extrait d'Othello) en 10 minutes au plus, puis entretien de 10 minutes. Préparation du dossier : lessons 9 et 10 et devoirs.</p></section>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a></strong></p>

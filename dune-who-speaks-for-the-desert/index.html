@@ -322,8 +322,23 @@
     .awaiting { font-style: italic; color: #3a4a5c; }
 
   </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body data-section="lycee-general" class="english-look">
+<body data-section="lycee-general" class="mode-eleve english-look">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -367,6 +382,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/dune-who-speaks-for-the-desert/img/look/wadi-rum-landscape.jpg" alt="A wide sandy track in Wadi Rum, leading towards a flat-topped rock under a deep blue sky." width="1600" height="1063"><figcaption>Wadi Rum, Jordan. Photo: Jorge Láscar. CC BY 2.0, Wikimedia Commons.</figcaption></figure><p class="kicker">Anglais · Première technologique · lycée général et technologique · LVA and LVB · B1-B2</p>
     <h1>Who Speaks for the Desert?</h1>
@@ -612,7 +650,164 @@
 
     <p style="margin:1.4rem 0 0"><a class="work-link" href="../lycee-general/anglais.html">Back to English, lycée général et technologique</a></p>
   </main>
-  <footer class="site-footer">
+  <section class="compl-block" id="eleve-absent"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. A Planet Called Dune</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Observe l'image sans légende de la Lesson 1, puis lis les citations Q1 et Q2.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What do you see? Is it a place to live?</li>
+<li>Who is speaking in Q2? Who is « him »?</li>
+<li>Invent three rules of life on Arrakis.</li>
+<li><strong>Étude de la langue</strong> (10 min). Modaux : <em>must, mustn't, have to</em> pour tes trois règles.</li>
+<li><strong>Je produis</strong> (10 min). Enregistre une note vocale de 1 minute ou écris 60 mots : <em>Would you live on Arrakis?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Lesson 2. The Spice: One Resource, One System</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Observe la carte des routes des épices et lis le texte « The spice, explained ».</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Who travelled on the spice routes? Who became rich?</li>
+<li>Why is the spice so important in Dune?</li>
+<li>What resource could be the « spice » of our world?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>because of, so, that is why</em> : trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). En 60 mots : <em>One resource, one system: who controls it?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 2 et 3.</p>
+<h3>Lesson 3. Whose Planet? Empire and the Desert People</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le dialogue de la Lesson 3 et la citation Q4.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the Missionaria Protectiva?</li>
+<li>Who owns Arrakis, according to the Empire? To the Fremen?</li>
+<li>What is your position?</li>
+<li><strong>Étude de la langue</strong> (10 min). Expression de l'opinion : <em>In my view, I would argue that</em>.</li>
+<li><strong>Je produis</strong> (10 min). Écris l'opinion de 60 mots de la Lesson 3.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 2 et l'opinion.</p>
+<h3>Lesson 4. Making a Messiah</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis la litanie contre la peur (Q3) et le texte « How a prophecy works ».</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is a prophecy?</li>
+<li>How is a legend made?</li>
+<li>Why is it dangerous?</li>
+<li><strong>Étude de la langue</strong> (10 min). Passif : réécris un événement simple en légende (<em>He was seen…</em>, <em>It is said that…</em>).</li>
+<li><strong>Je produis</strong> (10 min). Réécris un événement banal de ta semaine en légende (80 mots).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 2 et la réécriture en 40 mots.</p>
+<h3>Lesson 5. Mid-Sequence Assessment</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). L'évaluation intermédiaire se fait à la maison, sans aide, en 45 minutes : compréhension de l'oral (le texte lu par l'enseignante est disponible en audio), compréhension de l'écrit, expression écrite.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Fais les parties A, B et C dans l'ordre.</li>
+<li>Note l'heure de début et de fin.</li>
+<li>Envoie ton travail sur l'ENT.</li>
+<li><strong>Étude de la langue</strong> (10 min). Relis tes trois traces écrites avant de commencer.</li>
+<li><strong>Je produis</strong> (10 min). Enregistre ta présentation de 2 minutes (partie D).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite pour cette lesson. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : parties A et C seulement.</p>
+<h3>Lesson 6. The Ecologist's Warning</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Observe les images (Banshee Hill, la Namibie vue du ciel) et lis Q5, Q6 et Q9.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does a moving dune show?</li>
+<li>What is Kynes's dream?</li>
+<li>Should the planet be made green, even if the Fremen way of life disappears?</li>
+<li><strong>Étude de la langue</strong> (10 min). Conditionnel : <em>If the planet became green, …</em></li>
+<li><strong>Je produis</strong> (10 min). Écris la note de l'écologiste (60 mots).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 6. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 3 et la trace écrite.</p>
+<h3>Lesson 7. The Hero Trap</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis Q7 et Q8.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What pairs of opposites do you find in Q7?</li>
+<li>What is the threat in Q8?</li>
+<li>Why can a hero be a trap?</li>
+<li><strong>Étude de la langue</strong> (10 min). Concession : <em>although, even though</em>.</li>
+<li><strong>Je produis</strong> (10 min). Écris le brouillon de ta déclaration pour le conseil (100 mots).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 7. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 3 et 50 mots de brouillon.</p>
+<h3>Lesson 8. The Council of the Deep Desert</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Relis ta spirale et ton brouillon.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Which role do you choose?</li>
+<li>What is your main argument?</li>
+<li>What question would you ask another member of the council?</li>
+<li><strong>Étude de la langue</strong> (10 min). Relecture : temps, connecteurs, modaux.</li>
+<li><strong>Je produis</strong> (10 min). Écris la déclaration finale (150 mots) et enregistre ton intervention de 3 minutes. C'est l'évaluation finale.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta phrase la plus forte. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : la déclaration en 80 mots.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
+<p>Axes : axe 5 (années impaires), axe 4 (années paires), axe 3 (années impaires). Voie technologique : l'évaluation ponctuelle porte sur les mêmes axes.</p>
+<h3>Déroulé en deux lessons de 52 minutes</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Lecture des consignes, repérage du ou des documents.</td><td>Lecture</td></tr>
+<tr><td>3 à 43</td><td>Compréhension de l'écrit</td><td>Lecture, prise de notes, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>43 à 50</td><td>Relecture</td><td>Relecture du compte rendu, vérification des références au texte.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question (si deux questions sont proposées).</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan en trois parties, trois exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 200 à 250 mots environ ; LVB : 150 à 180 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée : temps, accords, connecteurs, orthographe.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<h3>Compréhension de l'écrit (/10)</h3>
+<p>Document : un texte authentique de 2 300 à 4 000 signes sur la désertification ou sur la gestion de l'eau dans un désert (par exemple un article de la NASA Earth Observatory sur le Sahel, en libre accès), ou deux documents : un extrait du roman de Frank Herbert et un article scientifique court.</p>
+<p>Questions de guidage (en français) :</p>
+<ul>
+<li>Présentez le ou les documents.</li>
+<li>Quel phénomène est décrit ?</li>
+<li>Quelles solutions sont proposées, et par qui ?</li>
+<li>(Si deux documents) Qu'est-ce que la fiction ajoute à l'article ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<h3>Expression écrite (/10)</h3>
+<p>Traitez une des questions :</p>
+<ul>
+<li><em>Can science fiction help us think about real problems?</em> Use examples from the sequence.</li>
+<li><em>You are a member of the Council of the Deep Desert. Write a speech to defend the desert people.</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div></section>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a></strong></p>

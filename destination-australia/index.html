@@ -21,8 +21,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/english-look.css">
 <script src="/destination-australia/script.js" defer></script>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look">
+<body class="mode-eleve english-look">
 <a class="skip" href="#main">Aller au contenu</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -30,8 +45,31 @@
 <a href="/lycee-general/">Lycée général et technologique</a>
 <a href="/destination-australia/">Head off to Australia</a>
 </div></nav>
-<div class="seq-bar"><nav class="seq-nav" aria-label="Séances"><a class="on" aria-current="page" href="/destination-australia/">Accueil</a><a class="" href="/destination-australia/s1/">S1</a><a class="" href="/destination-australia/s2/">S2</a><a class="" href="/destination-australia/s3/">S3</a><a class="" href="/destination-australia/s4/">S4</a><a class="" href="/destination-australia/s5/">S5</a><a class="" href="/destination-australia/s6/">S6</a><a class="" href="/destination-australia/s7/">S7</a><a class="" href="/destination-australia/s8/">S8</a><a class="" href="/destination-australia/s9/">S9</a><a class="" href="/destination-australia/s10/">S10</a><a class="" href="/destination-australia/s11/">S11</a><a class="" href="/destination-australia/s12/">S12</a><a class="" href="/destination-australia/s13/">S13</a><a class="" href="/destination-australia/assessment/">Éval.</a><a class="" href="/destination-australia/#australian-voices">Listening</a><a class="" href="/destination-australia/aussie-slang/">Slang</a><a class="" href="/destination-australia/downloads/">Docs</a><a class="" href="/destination-australia/annexe/">Annexe</a></nav></div>
+<div class="seq-bar"><nav class="seq-nav" aria-label="Lessons"><a class="on" aria-current="page" href="/destination-australia/">Accueil</a><a class="" href="/destination-australia/s1/">S1</a><a class="" href="/destination-australia/s2/">S2</a><a class="" href="/destination-australia/s3/">S3</a><a class="" href="/destination-australia/s4/">S4</a><a class="" href="/destination-australia/s5/">S5</a><a class="" href="/destination-australia/s6/">S6</a><a class="" href="/destination-australia/s7/">S7</a><a class="" href="/destination-australia/s8/">S8</a><a class="" href="/destination-australia/s9/">S9</a><a class="" href="/destination-australia/s10/">S10</a><a class="" href="/destination-australia/s11/">S11</a><a class="" href="/destination-australia/s12/">S12</a><a class="" href="/destination-australia/s13/">S13</a><a class="" href="/destination-australia/assessment/">Éval.</a><a class="" href="/destination-australia/#australian-voices">Listening</a><a class="" href="/destination-australia/aussie-slang/">Slang</a><a class="" href="/destination-australia/downloads/">Docs</a><a class="" href="/destination-australia/annexe/">Annexe</a></nav></div>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/destination-australia/img/look/sydney-harbour-bridge-daytime.jpg" alt="The Sydney Harbour Bridge on a clear day, with a palm tree in the foreground and the city beyond." width="1600" height="1200"><figcaption>Sydney Harbour Bridge. Photo: GoodGuyPaul. CC0, Wikimedia Commons.</figcaption></figure><p class="switch"><button type="button" data-dys-toggle>Version plus lisible</button></p>
 <p class="lisible-note">Terminale bac pro et Terminale générale et technologique. Les objectifs et les activités langagières restent ceux du programme. La version plus lisible change seulement la mise en page. Pour un étayage plus léger, en Première ou au quotidien, prenez le parcours ★ : mêmes tâches, consignes plus guidées, textes plus courts. Le parcours ★★ reste disponible.</p>
@@ -58,7 +96,7 @@
 
 <h2>The 13 lessons, then the test</h2>
 <p>Click a card. Each lesson starts with the activity.</p>
-<nav class="lessons" aria-label="Les séances"><a href="/destination-australia/s1/"><strong>S1</strong>Paintings<br><span class="notice">Look, speak</span></a><a href="/destination-australia/s2/"><strong>S2</strong>History<br><span class="notice">Read, present</span></a><a href="/destination-australia/s3/"><strong>S3</strong>Society<br><span class="notice">Role-play</span></a><a href="/destination-australia/s4/"><strong>S4</strong>Animals<br><span class="notice">Read, discuss</span></a><a href="/destination-australia/s5/"><strong>S5</strong>Transport, FIFO<br><span class="notice">Plan a route</span></a><a href="/destination-australia/s6/"><strong>S6</strong>Visa<br><span class="notice">Choose, check</span></a><a href="/destination-australia/s7/"><strong>S7</strong>Customs<br><span class="notice">Lea's bag</span></a><a href="/destination-australia/s8/"><strong>S8</strong>Money<br><span class="notice">Calculator</span></a><a href="/destination-australia/s9/"><strong>S9</strong>Jobs<br><span class="notice">Resume, interview</span></a><a href="/destination-australia/s10/"><strong>S10</strong>Studying<br><span class="notice">Compare systems</span></a><a href="/destination-australia/s11/"><strong>S11</strong>Contacts, forms<br><span class="notice">Write, fill in</span></a><a href="/destination-australia/s12/"><strong>S12</strong>Aussie English<br><span class="notice">Listen</span></a><a href="/destination-australia/s13/"><strong>S13</strong>Living there<br><span class="notice">Debate</span></a><a href="/destination-australia/assessment/"><strong>Éval.</strong>Final task<br><span class="notice">File + interview</span></a></nav>
+<nav class="lessons" aria-label="Les lessons"><a href="/destination-australia/s1/"><strong>S1</strong>Paintings<br><span class="notice">Look, speak</span></a><a href="/destination-australia/s2/"><strong>S2</strong>History<br><span class="notice">Read, present</span></a><a href="/destination-australia/s3/"><strong>S3</strong>Society<br><span class="notice">Role-play</span></a><a href="/destination-australia/s4/"><strong>S4</strong>Animals<br><span class="notice">Read, discuss</span></a><a href="/destination-australia/s5/"><strong>S5</strong>Transport, FIFO<br><span class="notice">Plan a route</span></a><a href="/destination-australia/s6/"><strong>S6</strong>Visa<br><span class="notice">Choose, check</span></a><a href="/destination-australia/s7/"><strong>S7</strong>Customs<br><span class="notice">Lea's bag</span></a><a href="/destination-australia/s8/"><strong>S8</strong>Money<br><span class="notice">Calculator</span></a><a href="/destination-australia/s9/"><strong>S9</strong>Jobs<br><span class="notice">Resume, interview</span></a><a href="/destination-australia/s10/"><strong>S10</strong>Studying<br><span class="notice">Compare systems</span></a><a href="/destination-australia/s11/"><strong>S11</strong>Contacts, forms<br><span class="notice">Write, fill in</span></a><a href="/destination-australia/s12/"><strong>S12</strong>Aussie English<br><span class="notice">Listen</span></a><a href="/destination-australia/s13/"><strong>S13</strong>Living there<br><span class="notice">Debate</span></a><a href="/destination-australia/assessment/"><strong>Éval.</strong>Final task<br><span class="notice">File + interview</span></a></nav>
 
 <p class="dl">
 <a href="/destination-australia/downloads/">Téléchargements</a>
@@ -162,7 +200,7 @@ Cette vidéo peut être téléchargée ici : <a href="/destination-australia/vid
 <p>Chère collègue, cher collègue,</p>
 <p>Séquence d'anglais pour la Terminale bac pro et la Terminale générale et technologique.</p>
 <p>Projet : un an en Australie, le plus souvent avec un visa vacances-travail 417, parfois un visa étudiant.</p>
-<p>Chaque séance affiche les cinq activités langagières du programme, un minutage de 52 minutes et une issue de secours. Les cinq activités langagières et la médiation sont travaillées. Chaque séance a une trace écrite et un devoir court, corrigé à la séance suivante.</p>
+<p>Chaque lesson affiche les cinq activités langagières du programme, un minutage de 52 minutes et une issue de secours. Les cinq activités langagières et la médiation sont travaillées. Chaque lesson a une trace écrite et un devoir court, corrigé à la lesson suivante.</p>
 <p>Deux passages ajoutés au texte de départ : les animaux qui font peur, et les transports, y compris le fly-in fly-out (FIFO).</p>
 <p>Chiffres revérifiés en novembre 2026 sur les sites officiels. Faites-les revérifier par les élèves.</p>
 <p>L'ancienne version en huit leçons est en <a href="/destination-australia/annexe/">annexe</a>.</p>
@@ -177,7 +215,7 @@ Cette vidéo peut être téléchargée ici : <a href="/destination-australia/vid
 <details class="more" id="adapter-premiere">
 <summary>Adapter l'étayage</summary>
 <ul>
-<li>Ne prenez pas les 13 séances d'affilée : choisissez un parcours plus court, par exemple S1 (tableaux), S4 (animaux), S5 (transports et FIFO), S6 (visa), S8 (budget), S12 (Aussie English, vidéo d'Elena), puis l'entretien.</li>
+<li>Ne prenez pas les 13 lessons d'affilée : choisissez un parcours plus court, par exemple S1 (tableaux), S4 (animaux), S5 (transports et FIFO), S6 (visa), S8 (budget), S12 (Aussie English, vidéo d'Elena), puis l'entretien.</li>
 <li>Au budget (S8), guidez davantage le calcul : donnez les figures, faites calculer seulement le reste à vivre, et gardez le calculateur pour une démonstration collective.</li>
 <li>Étayez les lectures les plus longues : lisez-les ensemble, ou donnez d'abord le texte court, puis deux questions seulement du texte plus long.</li>
 <li>Gardez en priorité les mini-tâches du projet : le sac de Léa (S7), le calculateur (S8), le CV et l'entretien (S9), et la compréhension de l'oral en S12.</li>
@@ -187,6 +225,263 @@ Cette vidéo peut être téléchargée ici : <a href="/destination-australia/vid
 
 
 </main>
+<section class="compl-block" id="eleve-absent"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. Look at the paintings</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre les tableaux de la Lesson 1 sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What do you see in each painting?</li>
+<li>Who painted them, and when?</li>
+<li>What do they say about Australia?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>There is / there are</em>, prépositions de lieu.</li>
+<li><strong>Je produis</strong> (10 min). Décris un tableau en 60 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 2. 26 January: one date, two names</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le document sur le 26 janvier sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What happened on 26 January 1788?</li>
+<li>What are the two names of the day?</li>
+<li>Why do some people not celebrate?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prétérit et passif (<em>The colony was founded in 1788</em>).</li>
+<li><strong>Je produis</strong> (10 min). En 80 mots : <em>One date, two names: why?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 3. Who lives in Australia today?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre les chiffres de la Lesson 3 sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How many people live in Australia?</li>
+<li>Where do most people live?</li>
+<li>Name two countries of origin of Australians.</li>
+<li><strong>Étude de la langue</strong> (10 min). Chiffres et pourcentages (<em>about a quarter, more than half</em>).</li>
+<li><strong>Je produis</strong> (10 min). Présente la population australienne en 60 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 4. Animals that scare some people</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le document sur les animaux sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Name three dangerous animals.</li>
+<li>Where can you meet them?</li>
+<li>What safety advice is given?</li>
+<li><strong>Étude de la langue</strong> (10 min). Impératif et modaux de conseil (<em>Don't…, You should…</em>).</li>
+<li><strong>Je produis</strong> (10 min). Écris cinq conseils de sécurité pour un voyageur.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 5. Getting there, getting around, FIFO</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le document sur les transports et le FIFO sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How long is the flight from France?</li>
+<li>What does FIFO mean?</li>
+<li>Why do some workers fly in and fly out?</li>
+<li><strong>Étude de la langue</strong> (10 min). Durée : <em>It takes…, for, since</em>.</li>
+<li><strong>Je produis</strong> (10 min). Écris un message pour expliquer un trajet (60 mots).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 5. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 6. Which visa?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre la page sur les visas (Working Holiday) sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is a Working Holiday visa?</li>
+<li>Who can get it?</li>
+<li>How long can you stay?</li>
+<li><strong>Étude de la langue</strong> (10 min). Conditions : <em>If you are under 31 (35 for French citizens), you can…</em></li>
+<li><strong>Je produis</strong> (10 min). Écris à un ami pour lui expliquer quel visa demander.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 6. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 7. Lea's bag at customs</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le dialogue de Léa à la douane sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does Lea have in her bag?</li>
+<li>What is not allowed?</li>
+<li>What does the officer say?</li>
+<li><strong>Étude de la langue</strong> (10 min). Discours rapporté (<em>The officer asked her if…</em>).</li>
+<li><strong>Je produis</strong> (10 min). Rapporte la scène en 80 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 7. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 8. Money, wages, a simple budget</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le budget de la Lesson 8 sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the minimum wage in Australia?</li>
+<li>What are the main costs?</li>
+<li>Can you save money?</li>
+<li><strong>Étude de la langue</strong> (10 min). Comparatifs (<em>more expensive than in France</em>).</li>
+<li><strong>Je produis</strong> (10 min). Établis ton budget mensuel en anglais (cinq lignes, une phrase de bilan).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 8. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 9. Jobs, resume, interview</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre l'offre d'emploi et le modèle de CV sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What job is offered?</li>
+<li>What skills are needed?</li>
+<li>What is a resume?</li>
+<li><strong>Étude de la langue</strong> (10 min). Present perfect pour l'expérience (<em>I have worked…</em>).</li>
+<li><strong>Je produis</strong> (10 min). Écris ton CV en anglais et trois réponses d'entretien.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 9. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 10. Studying in Australia</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le document sur les études sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What can you study?</li>
+<li>How much does it cost?</li>
+<li>What does a student need?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>would like to, plan to, be going to</em>.</li>
+<li><strong>Je produis</strong> (10 min). Écris un projet d'études en 80 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 10. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 11. Who to contact, and how to fill in a form</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le formulaire de la Lesson 11 sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Which service do you contact for each problem?</li>
+<li>What information does the form ask for?</li>
+<li>What is the hardest part?</li>
+<li><strong>Étude de la langue</strong> (10 min). Questions directes et indirectes (<em>Could you tell me where…?</em>).</li>
+<li><strong>Je produis</strong> (10 min). Remplis le formulaire et écris un courriel de demande.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 11. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 12. Aussie English</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre les expressions de la Lesson 12 sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Give five Aussie words and their meaning.</li>
+<li>Where do they come from?</li>
+<li>Which one do you like best?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prononciation : accent australien, cinq mots à répéter.</li>
+<li><strong>Je produis</strong> (10 min). Écris un dialogue de six répliques avec trois mots australiens.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 12. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 13. Living there: rent, health, the big question</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre les documents sur le logement et la santé sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How much is the rent in Sydney?</li>
+<li>How does health care work?</li>
+<li>Would you like to live in Australia? Why?</li>
+<li><strong>Étude de la langue</strong> (10 min). Conditionnel de type 2 (<em>If I lived in Australia, I would…</em>).</li>
+<li><strong>Je produis</strong> (10 min). En 120 mots : <em>Would you go and live in Australia?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 13. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de Terminale (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Terminale (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027 ; modèle d'entraînement pour les élèves en contrôle continu) :</p>
+<ul>
+<li>Écrit, 1 h 30 (temps d'écoute non compris) : compréhension de l'oral (document de 1 min 30 au plus, trois écoutes séparées d'une minute, compte rendu en français) ; compréhension de l'écrit (2 500 à 4 300 signes) ; expression écrite (une ou deux questions). Compréhension et expression ont le même poids.</li>
+<li>Oral, 10 minutes, 10 minutes de préparation : l'examinateur propose deux axes, le candidat en choisit un ; il reçoit deux documents iconographiques ou citations ; présentation de 5 minutes au plus, puis entretien.</li>
+<li>Niveaux : B2 en LVA, B1 en LVB.</li>
+<li>Axes de l'écrit : années paires 2, 4, 6 ; années impaires 1, 5, 6. Axes de l'oral (voie générale) : 1, 2, 4, 5, 6.</li>
+</ul>
+<p>Axes : axe 2 (écrit les années paires, oral). Pour l'élève de bac pro, voir le dossier de préparation à l'examen (CCF).</p>
+<h3>Écrit en deux lessons de 52 minutes (ou une plage de 2 heures)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Présentation de l'épreuve.</td><td>Lecture</td></tr>
+<tr><td>2 à 10</td><td>Compréhension de l'oral : écoutes</td><td>Trois écoutes séparées d'une minute, prise de notes.</td><td>CO</td></tr>
+<tr><td>10 à 24</td><td>Compréhension de l'oral : compte rendu</td><td>Compte rendu en français.</td><td>CO</td></tr>
+<tr><td>24 à 50</td><td>Compréhension de l'écrit</td><td>Lecture, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question.</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan et exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 250 à 300 mots environ ; LVB : 180 à 220 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral (/10).</strong> Document : une vidéo authentique de 1 min 30 au plus sur Australia Day / Survival Day (ABC News Australia, en libre accès).</p>
+<p>Consigne : « Rendez compte en français du document. » Points à retrouver :</p>
+<ul>
+<li>Le sujet : le 26 janvier et ses deux noms.</li>
+<li>Les personnes qui parlent et leur point de vue.</li>
+<li>Les faits cités (date, chiffres, lieux).</li>
+<li>Le ton du reportage.</li>
+</ul>
+<p>Grille de classe, compréhension de l'oral (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques mots ou éléments isolés</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, organisés ; le point de vue général</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; le point de vue, le ton, les intentions</td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'écrit (/10).</strong> Document : un article authentique de 2 500 à 4 300 signes sur le débat autour de la date de la fête nationale australienne (ABC News ou The Guardian Australia, en libre accès).</p>
+<p>Questions de guidage :</p>
+<ul>
+<li>Présentez le document.</li>
+<li>Quels sont les arguments pour garder le 26 janvier ? Pour changer de date ?</li>
+<li>Quelle place les Aborigènes et les insulaires du détroit de Torres ont-ils dans ce débat ?</li>
+<li>Quel est le point de vue de l'auteur ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<p><strong>Expression écrite (/10 ; ramenée sur 20 avec la compréhension, même poids).</strong> Traitez une des questions :</p>
+<ul>
+<li><em>Can a national day unite a country with different memories?</em> Use examples from the sequence.</li>
+<li><em>You are spending a year in Australia with a Working Holiday visa. Write a blog post about what you learnt on 26 January.</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div>
+<h3>Oral blanc (10 minutes, 10 minutes de préparation)</h3>
+<p>Organisation : quatre passages par lesson (4 × 10 min, plus 2 min de transition chacun, 4 min d'installation) ; les élèves préparent pendant le passage du précédent.</p>
+<p>Documents de l'oral blanc (deux au choix de l'élève, selon l'axe choisi) :</p>
+<ul>
+<li>Axe 2 « Territoire et mémoire » : une photographie d'un rassemblement du 26 janvier à Sydney ; le drapeau aborigène (Harold Thomas, 1971).</li>
+<li>Axe 6 « Le Royaume-Uni et ses nations » : la carte du Commonwealth ; une citation sur le référendum australien de 1999 sur la république.</li>
+</ul>
+<p>Grille de classe, oral (/20) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Expression en continu : contenu</td><td>/6</td><td>2 : description des documents ; 4 : documents reliés à l'axe ; 6 : problématique claire, analyse nuancée, références culturelles</td></tr>
+<tr><td>Expression en continu : langue</td><td>/4</td><td>1 : langue simple, nombreuses hésitations ; 2 : correcte, lexique de la séquence ; 3 : fluide ; 4 : précise et variée</td></tr>
+<tr><td>Entretien : réactivité</td><td>/6</td><td>2 : réponses brèves ; 4 : réponses développées ; 6 : relance, argumente, défend un point de vue</td></tr>
+<tr><td>Entretien : langue</td><td>/4</td><td>1 à 4, mêmes repères que l'expression en continu</td></tr>
+</tbody>
+</table></div></section>
 <footer><div class="wrap"><p>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p></div></footer>
 </body>
 </html>

@@ -340,3 +340,9 @@ table.grille th:nth-child(n+2),table.grille td:nth-child(n+2){width:4.2rem;text-
 .eval-recap-list li{border:2px solid var(--line);border-radius:12px;padding:.7rem .9rem;margin:0 0 .55rem;background:#fff}
 .eval-recap-list .ev-name{font-weight:700;color:var(--b);display:block;margin:0 0 .2rem;font-size:1.05em}
 .eval-recap-list .ev-meta{margin:0;line-height:1.45}
+
+/* Version élève: hide teacher evaluations and teacher space */
+.mode-eleve .tab.prof-only,
+.mode-eleve .panel.prof-only,
+.mode-eleve #evaluations,
+.mode-eleve #espace-prof{display:none!important}

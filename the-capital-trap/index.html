@@ -91,8 +91,23 @@ body.dys main{max-width:720px}
 @media (max-width:600px){body{font-size:16.5px}h1{font-size:1.45rem}table.grid{font-size:.86rem}}
 @media print{.site-nav,.seq-nav,.switch{display:none}.card-face{break-inside:avoid}}
 </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look">
+<body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -100,6 +115,29 @@ body.dys main{max-width:720px}
 <a href="/the-capital-trap/">The Capital Trap</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a class="on" href="/the-capital-trap/">Home</a>
 <a href="/the-capital-trap/s1/">L1</a>
@@ -209,7 +247,7 @@ body.dys main{max-width:720px}
 <a href="/the-capital-trap/s7/"><b>Lesson 7</b> Planning a road trip on Route 66, in the preterite.</a>
 </div>
 <p>Final task: present your road trip and write a postcard, like Inès. The grids are on the <a href="/the-capital-trap/assessment/">assessment</a> page. Language tables and exercises are also collected on the <a href="/the-capital-trap/language/">language</a> page. Cut-out cards are on the <a href="/the-capital-trap/cards/">cards</a> page. The student sheet is in the <a href="/the-capital-trap/downloads/">downloads</a>.</p>
-<p>To revise, make your own bristol <a href="/the-capital-trap/flashcards/">flashcards</a> (Carole’s method): the word or the state on the front, the meaning or the capital on the back, studied in both directions, in short daily sessions.</p>
+<p>To revise, make your own bristol <a href="/the-capital-trap/flashcards/">flashcards</a> (Carole’s method): the word or the state on the front, the meaning or the capital on the back, studied in both directions, in short daily lessons.</p>
 
 <figure>
 <img class="qr" src="/the-capital-trap/img/qr.png" alt="QR code for the official page of The Capital Trap" width="160" height="160">
@@ -217,6 +255,179 @@ body.dys main{max-width:720px}
 </figure>
 
 </main>
+<section class="compl-block" id="eleve-absent"><h2>2. Activités langagières à signaler (marques à ajouter)</h2>
+<div class='tw'><table>
+<thead><tr><th>Lesson</th><th>Étape existante</th><th>Marque à ajouter</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Story: Inès and the map (15 min) : la première lecture se fait à l'écoute, livres fermés (l'enseignante lit), puis lecture</td><td>CO puis CE</td></tr>
+<tr><td>1</td><td>Questions, speaking and the written record</td><td>PI (questions en binôme), PE (trace écrite)</td></tr>
+<tr><td>2</td><td>Map search</td><td>PI (binômes, l'un cherche, l'autre vérifie)</td></tr>
+<tr><td>2</td><td>Written record</td><td>PE</td></tr>
+<tr><td>3</td><td>Memory game, cards A</td><td>PI</td></tr>
+<tr><td>3</td><td>Written record (deux phrases comparatives à produire)</td><td>PE</td></tr>
+<tr><td>4</td><td>Map detective, cards D</td><td>PI</td></tr>
+<tr><td>4</td><td>Where do the names come from?</td><td>CE</td></tr>
+<tr><td>6</td><td>Team game</td><td>PI</td></tr>
+<tr><td>6</td><td>Bilan + written record</td><td>PO, PE</td></tr>
+<tr><td>7</td><td>Route 66 sign, in silence first : ajouter 2 min d'écoute d'un court extrait audio (Get Your Kicks on Route 66, libre accès en ligne)</td><td>CO</td></tr>
+<tr><td>7</td><td>Prepare the road trip in the past</td><td>PE, PI</td></tr>
+</tbody>
+</table></div>
+<h2>3. Étude de la langue (lessons 1, 2, 4, 6)</h2>
+<ul>
+<li>Lesson 1 : présent simple des faits (<em>The USA has 50 states. The capital is Washington, D.C.</em>), <em>there is / there are</em>.</li>
+<li>Lesson 2 : prépositions de lieu (<em>in, north of, between, borders, on the coast of</em>).</li>
+<li>Lesson 4 : <em>comes from, is named after, was founded by</em> (premier contact avec le passif).</li>
+<li>Lesson 6 : récapitulatif comparatifs et superlatifs, avec <em>not … but …</em> (<em>The capital of Australia is not Sydney but Canberra</em>).</li>
+</ul>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. Why geography matters</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre l'onglet Lesson 1. Lis le texte « A land of contrasts » et l'histoire d'Inès et de la carte.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Name two contrasts in the geography of the USA.</li>
+<li>Why is the capital often a small city?</li>
+<li>What does Inès understand about the map at the end?</li>
+<li><strong>Étude de la langue</strong> (10 min). Écris trois phrases au présent simple sur les États-Unis avec <em>has</em>, <em>is</em> et <em>borders</em>.</li>
+<li><strong>Je produis</strong> (10 min). En 50 mots : <em>Why does geography matter when you travel?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie les deux phrases de la trace écrite de la Lesson 1 et la phrase d'Inès sur la carte. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 2. Discovering the map</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre la carte politique de la Lesson 2. Repère les océans, les pays voisins, l'Alaska et Hawaï.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Which countries border the USA?</li>
+<li>Which two oceans does the USA touch?</li>
+<li>Why are Alaska and Hawaii special on the map?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prépositions de lieu : complète cinq phrases avec <em>in, north of, between, on the coast of, borders</em>.</li>
+<li><strong>Je produis</strong> (10 min). Décris la position des États-Unis en cinq phrases, comme pour un correspondant qui ne connaît pas la carte.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « The USA is a country in North America. It has 50 states. It borders Canada and Mexico. Its capital is Washington, D.C. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 3. Big cities vs capitals</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Regarde les deux paires de photos de la Lesson 3. Devine laquelle est la capitale avant de lire la réponse.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Which city is the capital of California? Of Texas?</li>
+<li>Which city is bigger in each pair?</li>
+<li>What is surprising?</li>
+<li><strong>Étude de la langue</strong> (10 min). Comparatifs et superlatifs : fais les exercices 1 et 2 de la Lesson 3, puis vérifie avec le corrigé.</li>
+<li><strong>Je produis</strong> (10 min). Écris trois phrases sur le modèle <em>X is bigger than Y, but Y is the capital of Z.</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Los Angeles is bigger than Sacramento, but Sacramento is the capital of California. Houston is bigger than Austin, but Austin is the capital of Texas. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : exercice 1, puis la trace écrite.</p>
+<h3>Lesson 4. Map detective</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le mystère de Juneau (trois photos) et la partie sur l'origine des noms de lieux.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How can you go to Juneau?</li>
+<li>Why is it surprising for a capital?</li>
+<li>Give one place name from French, one from Spanish, one from a Native American language.</li>
+<li><strong>Étude de la langue</strong> (10 min). Écris trois phrases avec <em>comes from</em> ou <em>is named after</em> (exemple : <em>Detroit comes from French</em>).</li>
+<li><strong>Je produis</strong> (10 min). Choisis un nom de ville américaine et explique son origine en 40 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Juneau, the capital of Alaska, cannot be reached by road from the rest of the country. You go there by plane or by boat. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 5. Guess the city</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Regarde la courte vidéo de la Lesson 5 (deux fois) et les cartes C.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Note three things you see or hear in the video.</li>
+<li>Which city is it? How do you know?</li>
+<li>What is the most surprising detail?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice 3 : compare deux villes des cartes, avec un superlatif.</li>
+<li><strong>Je produis</strong> (10 min). Écris une devinette en trois indices sur une ville américaine (<em>It is in the south. It is bigger than… It is the …est…</em>).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie tes trois phrases comparatives, dont une au superlatif. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : la vidéo et la question 2, puis la devinette.</p>
+<h3>Lesson 6. The Capital Trap game</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Relis tes traces écrites des Lessons 3 à 5.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the capital of Australia? Of Canada? Of Brazil?</li>
+<li>What is the capital of New York State? Of Florida? Of Illinois?</li>
+<li>Which answer surprised you the most? Why?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prononciation : lis à voix haute <em>Sacramento, Tallahassee, Albany, Ottawa, Canberra</em> en marquant la syllabe accentuée (souligne-la).</li>
+<li><strong>Je produis</strong> (10 min). Crée cinq cartes du jeu sur le modèle <em>The capital of X is Y, not Z.</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « The capital of X is Y, not Z. (trois exemples, les plus surprenants) »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : les cinq cartes seulement.</p>
+<h3>Lesson 7. Planning a road trip</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Regarde le panneau Route 66 et lis le voyage de Lucas (Lesson 7).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Where did Lucas start?</li>
+<li>Why are there two Springfields on the trip?</li>
+<li>Which capital did he visit?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prétérit : relève six verbes au prétérit dans le texte de Lucas et classe-les selon la prononciation de -ed (/t/, /d/, /ɪd/).</li>
+<li><strong>Je produis</strong> (10 min). Écris ton road trip au prétérit (80 mots), avec au moins trois villes et une capitale.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « First, we started in Chicago. Then we drove … (ton itinéraire, trois villes, une capitale) »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : la question 1 et cinq phrases du road trip.</p>
+<h3>Évaluation pour l'élève absent ou hospitalisé</h3>
+<p>L'évaluation écrite ci-dessous peut se faire à la maison ou à l'hôpital, en deux fois 45 minutes, sans aide. L'élève note l'heure de début et de fin.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
+<p>Axes : axe 6, présent les années paires comme impaires dans l'évaluation ponctuelle.</p>
+<h3>Déroulé en deux lessons de 52 minutes</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Lecture des consignes, repérage du ou des documents.</td><td>Lecture</td></tr>
+<tr><td>3 à 43</td><td>Compréhension de l'écrit</td><td>Lecture, prise de notes, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>43 à 50</td><td>Relecture</td><td>Relecture du compte rendu, vérification des références au texte.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question (si deux questions sont proposées).</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan en trois parties, trois exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 200 à 250 mots environ ; LVB : 150 à 180 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée : temps, accords, connecteurs, orthographe.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<h3>Compréhension de l'écrit (/10)</h3>
+<p>Document : un article authentique de 2 300 à 4 000 signes sur le choix de Washington, D.C. comme capitale (par exemple la page « Why Washington, D.C.? » du site de la Library of Congress ou de la Smithsonian Institution, en libre accès), ou deux documents : un texte sur Washington et un sur Ottawa (Government of Canada, « Ottawa, the capital »).</p>
+<p>Questions de guidage (en français) :</p>
+<ul>
+<li>Présentez le document (nature, source, date, thème).</li>
+<li>Pourquoi la plus grande ville n'a-t-elle pas été choisie comme capitale ? Relevez deux raisons.</li>
+<li>Quels acteurs ont pris la décision, et quand ?</li>
+<li>Quelle image du pays ce choix donne-t-il ?</li>
+<li>(Si deux documents) Qu'ont en commun Washington et Ottawa ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<h3>Expression écrite (/10)</h3>
+<p>Traitez une des questions :</p>
+<ul>
+<li><em>Is the biggest city always the most important one?</em> Use at least three examples from the sequence.</li>
+<li><em>You are planning a trip across North America with your class. Write an email to your partner school: which capitals will you visit and why?</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div></section>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>
 <p>This sequence is original teaching material for language learning. City populations are approximate (city proper) and are given so that students can compare places; they are not a census table. Licensed images are credited next to each picture, with a caption that explains the link with the lesson. The Universalis classroom map and a watermarked stock photograph from the earlier edition are not reproduced here; they have been replaced by public-domain or Creative Commons images. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0 licence</a>.</p>

@@ -97,10 +97,48 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 @media(max-width:600px){.flashcard-models{grid-template-columns:1fr}}
 
 .seslist li{margin:.4rem 0}</style><link rel="stylesheet" href="/css/plan-de-route.css">
-  <link rel="stylesheet" href="/css/english-look.css"></head><body class="english-look"><nav class="site-nav" aria-label="Site"><div class="wrap"><a href="/the-king-reigns/">Itinéraires et destinations</a><a href="/lycee-general/">Lycée général et technologique</a><a href="/the-king-reigns/">The King Reigns</a><a href="/the-king-reigns/adapted/">Adapted version</a><a href="/who-rules-britain/">Going further: Who Rules Britain?</a></div></nav><a class="skip" href="#main">Skip to content</a><div class="wrap"><div class="level">English · Première and Terminale · tronc commun: B1+ towards B2 in Première, B2 in Terminale · spécialité LLCER: towards C1 (C1 extensions)</div><nav class="gnav" aria-label="Sequence"><span class="gl">Sequence</span><a aria-current='page' href='/the-king-reigns/'>Start</a><a href='/the-king-reigns/s1/'>1</a><a href='/the-king-reigns/s2/'>2</a><a href='/the-king-reigns/s3/'>3</a><a href='/the-king-reigns/s4/'>4</a><a href='/the-king-reigns/s5/'>5</a><a href='/the-king-reigns/s6/'>6</a><a href='/the-king-reigns/s7/'>7</a><a href='/the-king-reigns/s8/'>8</a><a href='/the-king-reigns/final/'>Final task</a><a href='/the-king-reigns/sources/'>Sources</a><a class='alt' href='/the-king-reigns/adapted/'>Adapted version (dys)</a></nav><main id="main">
+  <link rel="stylesheet" href="/css/english-look.css">
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
+</head><body class="mode-eleve english-look"><nav class="site-nav" aria-label="Site"><div class="wrap"><a href="/the-king-reigns/">Itinéraires et destinations</a><a href="/lycee-general/">Lycée général et technologique</a><a href="/the-king-reigns/">The King Reigns</a><a href="/the-king-reigns/adapted/">Adapted version</a><a href="/who-rules-britain/">Going further: Who Rules Britain?</a></div></nav><a class="skip" href="#main">Skip to content</a><div class="wrap"><div class="level">English · Première and Terminale · tronc commun: B1+ towards B2 in Première, B2 in Terminale · spécialité LLCER: towards C1 (C1 extensions)</div><nav class="gnav" aria-label="Sequence"><span class="gl">Sequence</span><a aria-current='page' href='/the-king-reigns/'>Start</a><a href='/the-king-reigns/s1/'>1</a><a href='/the-king-reigns/s2/'>2</a><a href='/the-king-reigns/s3/'>3</a><a href='/the-king-reigns/s4/'>4</a><a href='/the-king-reigns/s5/'>5</a><a href='/the-king-reigns/s6/'>6</a><a href='/the-king-reigns/s7/'>7</a><a href='/the-king-reigns/s8/'>8</a><a href='/the-king-reigns/final/'>Final task</a><a href='/the-king-reigns/sources/'>Sources</a><a class='alt' href='/the-king-reigns/adapted/'>Adapted version (dys)</a></nav><main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
 <figure class="look-hero"><img src="/the-king-reigns/img/look/palace-of-westminster-feb-2007.jpg" alt="The Palace of Westminster and Elizabeth Tower beside the Thames, seen in late afternoon light." width="1600" height="630"><figcaption>Palace of Westminster, London. Photo: Diliff. CC BY-SA 2.5, Wikimedia Commons.</figcaption></figure><h1>The King Reigns, Parliament Rules<small>From Magna Carta to Downing Street</small></h1>
-<aside class="cinq-rubriques" aria-label="Sequence frame"><dl><dt>Level</dt><dd>English · Première and Terminale · tronc commun: B1+ towards B2 in Première, B2 in Terminale · spécialité LLCER: towards C1 (C1 extensions)</dd><dt>Key question</dt><dd>how did the King lose it?</dd></dl></aside><section class="plan-de-route" id="plan-de-route" lang="en"><h2>Road map</h2><p class="pdr-lead">Lessons of 55 minutes, timed for 52 minutes. 18 lessons: each of the eight sessions is taught in two lessons (documents first, then language and expression), and the final task takes two lessons.</p><ol><li id="lesson-1">
+<aside class="cinq-rubriques" aria-label="Sequence frame"><dl><dt>Level</dt><dd>English · Première and Terminale · tronc commun: B1+ towards B2 in Première, B2 in Terminale · spécialité LLCER: towards C1 (C1 extensions)</dd><dt>Key question</dt><dd>how did the King lose it?</dd></dl></aside><section class="plan-de-route" id="plan-de-route" lang="en"><h2>Road map</h2><p class="pdr-lead">Lessons of 55 minutes, timed for 52 minutes. 18 lessons: each of the eight parts is taught in two lessons (documents first, then language and expression), and the final task takes two lessons.</p><ol><li id="lesson-1">
 <a href="/the-king-reigns/s1/#lesson-a">Lesson 1 · Who's in charge? Documents and powers</a> <span class="pdr-time">52 min</span>
 <p class="pdr-aim">Name the three actors of British politics and what each one can do, from two official documents.</p>
 <ul class="pdr-steps"><li>5 min · Marked recap (3 points)</li><li>12 min · Monet's Westminster as a landmark, then Document A in pairs</li><li>10 min · Document B and the class grid: King, Prime Minister, Parliament</li><li>5 min · Key words</li><li>12 min · Exercise: who does what?</li><li>8 min · Written record and homework</li></ul>
@@ -121,7 +159,7 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <li><b>Participation.</b> Everyone speaks at least once: each student answers "Who's in charge in Britain?" in at least one sentence with a modal.</li>
 <li><b>Homework for next lesson.</b> Learn the six key words. Then write three sentences beginning with: I think the real power belongs to ... because ...</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 1. Next time: Runnymede, 1215.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 1. Next time: Runnymede, 1215.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the modals exercise (the figures of speech become homework). In the last 8 minutes: dictate the written record (The rule box: can / cannot / has to / must + verb, no "to" after can and must; one example sentence for the King, the Prime Minister and MPs); a quick round of the class, one sentence with a modal each, so that everyone has spoken at least once; write the homework on the board (Learn the six key words. Then write three sentences beginning with: I think the real power belongs to ... because ).</p>
 </li>
 <li id="lesson-3">
@@ -145,7 +183,7 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <li><b>Participation.</b> Everyone speaks at least once: every student speaks in the role play, as King John or as a baron.</li>
 <li><b>Homework for next lesson.</b> In 80 words, explain why King John accepted to limit his own power. Use at least three verbs in the past simple.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 2. Next time: Magna Carta's long life.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 2. Next time: Magna Carta's long life.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the grammar exercise (the figures of speech become homework). In the last 8 minutes: dictate the written record (Five irregular verbs met in the story (lose, take, set, die, become) and four time connectors (first, then, a few weeks later, finally)); a quick round of the class, one line of the role play each, so that everyone has spoken at least once; write the homework on the board (In 80 words, explain why King John accepted to limit his own power. Use at least three verbs in the past simple).</p>
 </li>
 <li id="lesson-5">
@@ -169,7 +207,7 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <li><b>Participation.</b> Everyone speaks at least once: each student says one passive sentence about Magna Carta.</li>
 <li><b>Homework for next lesson.</b> Find one recent news article or official page (parliament.uk, British Library, BBC) that mentions Magna Carta. Summarise it in five lines and copy the link.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 3. Next time: 1689 and the Bill of Rights.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 3. Next time: 1689 and the Bill of Rights.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the passive exercise. In the last 8 minutes: dictate the written record (The passive rule: be + past participle, by + agent; two examples: Magna Carta was reissued in 1225. It is still quoted today); a quick round of the class, one passive sentence each, so that everyone has spoken at least once; write the homework on the board (Find one recent news article or official page (parliament.uk, British Library, BBC) that mentions Magna Carta. Summarise it in five lines and copy the link).</p>
 </li>
 <li id="lesson-7">
@@ -179,21 +217,21 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <ul class="pdr-end">
 <li><b>Written record.</b> After 1689, the King needs the consent of Parliament for laws, taxes and the army.</li>
 <li><b>Participation.</b> Everyone speaks at least once: each student reads one old spelling aloud and gives the modern one.</li>
-<li><b>Homework for next lesson.</b> Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise sessions 1 to 4 for the mini quiz.</li>
+<li><b>Homework for next lesson.</b> Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise parts 1 to 4 for the mini quiz.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of lesson 7. Next time: no longer, without, unless, and the mini quiz on sessions 1 to 4.</p>
-<p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at Document C. In the last 8 minutes: dictate the written record (After 1689, the King needs the consent of Parliament for laws, taxes and the army); a quick round of the class, one old spelling and its modern form each, so that everyone has spoken at least once; write the homework on the board (Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise sessions 1 to 4 for the mini quiz).</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of lesson 7. Next time: no longer, without, unless, and the mini quiz on parts 1 to 4.</p>
+<p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at Document C. In the last 8 minutes: dictate the written record (After 1689, the King needs the consent of Parliament for laws, taxes and the army); a quick round of the class, one old spelling and its modern form each, so that everyone has spoken at least once; write the homework on the board (Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise parts 1 to 4 for the mini quiz).</p>
 </li>
 <li id="lesson-8">
 <a href="/the-king-reigns/s4/#lesson-b">Lesson 8 · 1689: no longer, without, unless; mini quiz 1 to 4</a> <span class="pdr-time">52 min</span>
-<p class="pdr-aim">Use no longer, without and unless, then check sessions 1 to 4 in a marked mini quiz.</p>
-<ul class="pdr-steps"><li>5 min · Flashcard check in pairs</li><li>8 min · Words in action</li><li>10 min · To say it: no longer, without, unless</li><li>5 min · Figures of speech: anaphora (That ...) and the door as a symbol</li><li>12 min · Mini quiz, sessions 1 to 4 (marked, ten points)</li><li>8 min · Expression task: the guide's oral</li><li>4 min · Written record and homework</li></ul>
+<p class="pdr-aim">Use no longer, without and unless, then check parts 1 to 4 in a marked mini quiz.</p>
+<ul class="pdr-steps"><li>5 min · Flashcard check in pairs</li><li>8 min · Words in action</li><li>10 min · To say it: no longer, without, unless</li><li>5 min · Figures of speech: anaphora (That ...) and the door as a symbol</li><li>12 min · Mini quiz, parts 1 to 4 (marked, ten points)</li><li>8 min · Expression task: the guide's oral</li><li>4 min · Written record and homework</li></ul>
 <ul class="pdr-end">
 <li><b>Written record.</b> Three sentences: The King can no longer suspend laws. He cannot raise taxes without the consent of Parliament. There is no standing army unless Parliament agrees.</li>
 <li><b>Participation.</b> Everyone speaks at least once: each student gives one line of the guide's oral at Westminster.</li>
 <li><b>Homework for next lesson.</b> Write a 280-character post, like on a social network, that explains what changed in 1689.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 4. Next time: the King reigns but does not rule.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 4. Next time: the King reigns but does not rule.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the mini quiz (the guide's oral becomes homework practice). In the last 8 minutes: dictate the written record (Three sentences: The King can no longer suspend laws. He cannot raise taxes without the consent of Parliament. There is no standing army unless Parliament agrees); a quick round of the class, one guide sentence each, so that everyone has spoken at least once; write the homework on the board (Write a 280-character post, like on a social network, that explains what changed in 1689).</p>
 </li>
 <li id="lesson-9">
@@ -217,7 +255,7 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <li><b>Participation.</b> Everyone speaks at least once: each student gives one argument in the debate, with a contrast connector.</li>
 <li><b>Homework for next lesson.</b> List three things the King does and three things he cannot do. Give one example for each.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 5. Next time: Parliament, the Commons and the Lords.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 5. Next time: Parliament, the Commons and the Lords.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the contrast exercise; the debate becomes a quick round. In the last 8 minutes: dictate the written record (Four connectors and one model sentence: Although the King reads the speech, the Government writes it); a quick round of the class, one argument with a connector each, so that everyone has spoken at least once; write the homework on the board (List three things the King does and three things he cannot do. Give one example for each).</p>
 </li>
 <li id="lesson-11">
@@ -241,7 +279,7 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <li><b>Participation.</b> Everyone speaks at least once: each student has a role in the simulation and says one sentence (the Speaker announces each step in the passive).</li>
 <li><b>Homework for next lesson.</b> Draw or write the path of a bill in six steps, in English, with one sentence for each step. Finish the written report.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 6. Next time: Number 10.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 6. Next time: Number 10.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the simulation; the written report becomes homework. In the last 8 minutes: dictate the written record (Six steps in the passive: The bill is introduced. It is debated. It is sent to the Lords. It is amended. It is agreed. It is given Royal Assent); a quick round of the class, one sentence in the simulation each, so that everyone has spoken at least once; write the homework on the board (Draw or write the path of a bill in six steps, in English, with one sentence for each step. Finish the written report).</p>
 </li>
 <li id="lesson-13">
@@ -251,21 +289,21 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <ul class="pdr-end">
 <li><b>Written record.</b> The Prime Minister is appointed by the King and must command the confidence of the House of Commons.</li>
 <li><b>Participation.</b> Everyone speaks at least once: each student corrects one false sentence of the exercise aloud.</li>
-<li><b>Homework for next lesson.</b> Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise sessions 5 to 7 for the mini quiz.</li>
+<li><b>Homework for next lesson.</b> Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise parts 5 to 7 for the mini quiz.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of lesson 13. Next time: conditionals and the mini quiz on sessions 5 to 7.</p>
-<p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the listening. In the last 8 minutes: dictate the written record (The Prime Minister is appointed by the King and must command the confidence of the House of Commons); a quick round of the class, one corrected sentence each, so that everyone has spoken at least once; write the homework on the board (Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise sessions 5 to 7 for the mini quiz).</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of lesson 13. Next time: conditionals and the mini quiz on parts 5 to 7.</p>
+<p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the listening. In the last 8 minutes: dictate the written record (The Prime Minister is appointed by the King and must command the confidence of the House of Commons); a quick round of the class, one corrected sentence each, so that everyone has spoken at least once; write the homework on the board (Make one bristol flashcard for each of the six key words (method on the start page) and learn them. Revise parts 5 to 7 for the mini quiz).</p>
 </li>
 <li id="lesson-14">
 <a href="/the-king-reigns/s7/#lesson-b">Lesson 14 · Number 10: conditionals; mini quiz 5 to 7</a> <span class="pdr-time">52 min</span>
-<p class="pdr-aim">State rules and hypotheses with conditionals 0, 1 and 2, then check sessions 5 to 7.</p>
-<ul class="pdr-steps"><li>5 min · Flashcard check in pairs</li><li>8 min · Words in action</li><li>10 min · To say it: conditionals 0, 1 and 2</li><li>5 min · Figures of speech: command the confidence, Number 10</li><li>12 min · Mini quiz, sessions 5 to 7 (marked, ten points)</li><li>8 min · Expression task: one-minute oral</li><li>4 min · Written record and homework</li></ul>
+<p class="pdr-aim">State rules and hypotheses with conditionals 0, 1 and 2, then check parts 5 to 7.</p>
+<ul class="pdr-steps"><li>5 min · Flashcard check in pairs</li><li>8 min · Words in action</li><li>10 min · To say it: conditionals 0, 1 and 2</li><li>5 min · Figures of speech: command the confidence, Number 10</li><li>12 min · Mini quiz, parts 5 to 7 (marked, ten points)</li><li>8 min · Expression task: one-minute oral</li><li>4 min · Written record and homework</li></ul>
 <ul class="pdr-end">
 <li><b>Written record.</b> Three conditionals: If a party wins a majority, its leader becomes Prime Minister. If the PM loses a vote of confidence, there will be a crisis. If I were Prime Minister, I would ...</li>
 <li><b>Participation.</b> Everyone speaks at least once: each student says one conditional sentence about the Prime Minister.</li>
 <li><b>Homework for next lesson.</b> In one paragraph, explain how the UK can change Prime Minister without a general election. Use the 2026 example.</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 7. Next time: citizens decide.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 7. Next time: citizens decide.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the mini quiz. In the last 8 minutes: dictate the written record (Three conditionals: If a party wins a majority, its leader becomes Prime Minister. If the PM loses a vote of confidence, there will be a crisis. If I were Prime Minister, I would ); a quick round of the class, one conditional sentence each, so that everyone has spoken at least once; write the homework on the board (In one paragraph, explain how the UK can change Prime Minister without a general election. Use the 2026 example).</p>
 </li>
 <li id="lesson-15">
@@ -289,7 +327,7 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <li><b>Participation.</b> Everyone speaks at least once: each student gives one argument in the debate.</li>
 <li><b>Homework for next lesson.</b> Prepare the plan of your final task: choose the speech or the op-ed, write your three main ideas and the three dates you will use. Finish your flashcard pack (20 cards).</li>
 </ul>
-<p class="pdr-stop"><b>Stopping point.</b> End of session 8. Next time: preparing the final task.</p>
+<p class="pdr-stop"><b>Stopping point.</b> End of part 8. Next time: preparing the final task.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short, stop at the debate, kept to one round. In the last 8 minutes: dictate the written record (Two arguments for and two against votes at sixteen, each with should or a comparative); a quick round of the class, one argument each, so that everyone has spoken at least once; write the homework on the board (Prepare the plan of your final task: choose the speech or the op-ed, write your three main ideas and the three dates you will use. Finish your flashcard pack (20 cards)).</p>
 </li>
 <li id="lesson-17">
@@ -315,7 +353,7 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 </ul>
 <p class="pdr-stop"><b>Stopping point.</b> End of the sequence. With more than ten speakers, the remaining speeches open the next lessons.</p>
 <p class="pdr-exit"><b>Emergency exit · 8 min.</b> If time runs short after the speeches: each remaining speaker gives the first minute of their speech, the class fills one line of the grid together, and the rest of the speeches open the next lessons. Homework written on the board: read the corrected grid.</p>
-</li></ol></section><p class="downloads">Student sheet: <a href="/the-king-reigns/downloads/the-king-reigns-student-sheet.pdf">PDF</a> · <a href="/the-king-reigns/downloads/the-king-reigns-student-sheet.docx">Word (.docx)</a> · <a href="/the-king-reigns/downloads/the-king-reigns-student-sheet.odt">LibreOffice (.odt)</a> · Blank flashcards: <a href="/the-king-reigns/flashcards/blank-flashcards.pdf">PDF</a> · <a href="/the-king-reigns/flashcards/blank-flashcards.docx">DOCX</a> · <a href="/the-king-reigns/flashcards/blank-flashcards.odt">ODT</a></p><section class="box intro" id="intro"><span class="tag">Introduction card</span><span class="tag">8 sessions</span><span class="tag">Final task</span><h2 style="margin-top:.4rem">The King Reigns, Parliament Rules: From Magna Carta to Downing Street</h2><dl><dt>Key question</dt><dd>Who really holds power in the United Kingdom today, and how did the King lose it?</dd><dt>Classes</dt><dd>Terminale (main) and Première, general and technological lycée. Tronc commun: B1+ towards B2 in Première, B2 in Terminale. Spécialité LLCER: towards C1, through the C1 extensions.</dd><dt>Curriculum</dt><dd>French national curriculum of 29 May 2025. Terminale: theme 6, The United Kingdom and its nations (study topic: a Kingdom still united?), with theme 5, Citizenship and virtual worlds, and the study topic on political speech in theme 4. Première: theme 3, Art and power.</dd><dt>Organisation</dt><dd>Eight sessions, each taught in two lessons of 55 minutes timed for 52 minutes (16 lessons), plus two lessons for the final task. Each session opens with a marked recap and ends with Homework. In every session, the language comes from what students need to say: words in action, one grammar point with its rule, figures of speech found in the documents, and an expression task, each with entry, core and stretch tiers. Answers are printed under each exercise.</dd><dt>Final task</dt><dd>A three-minute speech as a new MP, or an op-ed of 250 to 300 words, with an assessment grid.</dd><dt>Adapted version</dt><dd>Every page exists in an adapted version for dyslexic students: key words first, short sentences, audio, sentence starters.</dd></dl><div class="then-now"><figure><img src="/the-king-reigns/img/monet.jpg" alt="Claude Monet, The Houses of Parliament, Sunset: the towers of Westminster in blue against a pink and orange sky, reflected in the Thames." loading="lazy"><figcaption>Claude Monet (1840 to 1926), <em>The Houses of Parliament, Sunset</em>, 1903, oil on canvas, 81.3 x 92.5 cm, National Gallery of Art, Washington, Chester Dale Collection, 1963.10.48. Public domain (NGA Open Access). <a href="https://www.nga.gov/artworks/46523-houses-parliament-sunset" target="_blank" rel="noopener">Museum or source page</a>.</figcaption></figure><figure><img src="/the-king-reigns/img/westminster-sunset-2015.jpg" alt="The Palace of Westminster and the Thames at sunset, seen from the river, in 2015." loading="lazy"><figcaption>The Palace of Westminster and the Thames at sunset, 22 January 2015. Photo: Oast House Archive, Geograph, <a href="https://commons.wikimedia.org/wiki/File:Westminster_%5E_The_Thames_at_Sunset_-_geograph.org.uk_-_4320241.jpg">CC BY-SA 2.0</a>, via Wikimedia Commons.</figcaption></figure><p class="tn-cap"><b>Then and now.</b> In 1903 Monet painted the new Palace of Westminster as a dark silhouette against the sunset. More than a century later the same towers still stand for Parliament, and journalists still say "Westminster" when they mean the MPs inside.</p></div></section><h2>The eight sessions</h2><ol class="seslist"><li><a href="/the-king-reigns/s1/"><b>Session 1</b></a>. Who's in charge? The King, the Prime Minister and Parliament. <i>Who has the real power in the United Kingdom: the King, the Prime Minister or Parliament?</i></li><li><a href="/the-king-reigns/s2/"><b>Session 2</b></a>. Runnymede, 15 June 1215: the barons against King John. <i>Why did a king accept to put limits on his own power?</i></li><li><a href="/the-king-reigns/s3/"><b>Session 3</b></a>. Magna Carta's long life: from England to the world. <i>Why does a medieval charter still matter today?</i></li><li><a href="/the-king-reigns/s4/"><b>Session 4</b></a>. 1689: the Bill of Rights and the end of absolute monarchy. <i>How did Parliament become stronger than the King?</i></li><li><a href="/the-king-reigns/s5/"><b>Session 5</b></a>. The King reigns but does not rule. <i>If the King has no real power, what is he for?</i></li><li><a href="/the-king-reigns/s6/"><b>Session 6</b></a>. Parliament: the Commons and the Lords. <i>How does a bill become a law in Westminster?</i></li><li><a href="/the-king-reigns/s7/"><b>Session 7</b></a>. Number 10: the Prime Minister at the centre. <i>How does someone become Prime Minister, and how can they lose the job?</i></li><li><a href="/the-king-reigns/s8/"><b>Session 8</b></a>. Citizens decide: four nations, a referendum and votes at sixteen. <i>Who has a voice in British democracy, and is the United Kingdom still united?</i></li><li><a href="/the-king-reigns/final/"><b>Final task and assessment</b></a>. Final task: From Runnymede to Westminster. <i>Speech or op-ed, with the assessment grid</i></li><li><a href="/the-king-reigns/sources/"><b>Sources and images</b></a>. Every fact and every painting, with its link. <i>Checked on 2 November 2026</i></li></ol><h2>How to use this sequence</h2><div class="box method"><ul><li>Start each session with the marked recap: five minutes, alone, then check together.</li><li>The documents come from official sources (UK Parliament, GOV.UK, the Royal Family, legislation.gov.uk, the National Archives, the Electoral Commission). Each one has its link.</li><li>Answers, model answers and quiz keys are printed under each exercise, so the page can be projected or printed as it is.</li><li>Homework closes every session and prepares the next recap.</li><li>The adapted version keeps the same lessons and the same final task.</li></ul></div><p><a href='/the-king-reigns/teacher-notes/' >Teacher notes</a></p><section id="flashcards" class="flashcards-method" lang="en">
+</li></ol></section><p class="downloads">Student sheet: <a href="/the-king-reigns/downloads/the-king-reigns-student-sheet.pdf">PDF</a> · <a href="/the-king-reigns/downloads/the-king-reigns-student-sheet.docx">Word (.docx)</a> · <a href="/the-king-reigns/downloads/the-king-reigns-student-sheet.odt">LibreOffice (.odt)</a> · Blank flashcards: <a href="/the-king-reigns/flashcards/blank-flashcards.pdf">PDF</a> · <a href="/the-king-reigns/flashcards/blank-flashcards.docx">DOCX</a> · <a href="/the-king-reigns/flashcards/blank-flashcards.odt">ODT</a></p><section class="box intro" id="intro"><span class="tag">Introduction card</span><span class="tag">8 parts</span><span class="tag">Final task</span><h2 style="margin-top:.4rem">The King Reigns, Parliament Rules: From Magna Carta to Downing Street</h2><dl><dt>Key question</dt><dd>Who really holds power in the United Kingdom today, and how did the King lose it?</dd><dt>Classes</dt><dd>Terminale (main) and Première, general and technological lycée. Tronc commun: B1+ towards B2 in Première, B2 in Terminale. Spécialité LLCER: towards C1, through the C1 extensions.</dd><dt>Curriculum</dt><dd>French national curriculum of 29 May 2025. Terminale: theme 6, The United Kingdom and its nations (study topic: a Kingdom still united?), with theme 5, Citizenship and virtual worlds, and the study topic on political speech in theme 4. Première: theme 3, Art and power.</dd><dt>Organisation</dt><dd>Eight parts, each taught in two lessons of 55 minutes timed for 52 minutes (16 lessons), plus two lessons for the final task. Each part opens with a marked recap and ends with Homework. In every part, the language comes from what students need to say: words in action, one grammar point with its rule, figures of speech found in the documents, and an expression task, each with entry, core and stretch tiers. Answers are printed under each exercise.</dd><dt>Final task</dt><dd>A three-minute speech as a new MP, or an op-ed of 250 to 300 words, with an assessment grid.</dd><dt>Adapted version</dt><dd>Every page exists in an adapted version for dyslexic students: key words first, short sentences, audio, sentence starters.</dd></dl><div class="then-now"><figure><img src="/the-king-reigns/img/monet.jpg" alt="Claude Monet, The Houses of Parliament, Sunset: the towers of Westminster in blue against a pink and orange sky, reflected in the Thames." loading="lazy"><figcaption>Claude Monet (1840 to 1926), <em>The Houses of Parliament, Sunset</em>, 1903, oil on canvas, 81.3 x 92.5 cm, National Gallery of Art, Washington, Chester Dale Collection, 1963.10.48. Public domain (NGA Open Access). <a href="https://www.nga.gov/artworks/46523-houses-parliament-sunset" target="_blank" rel="noopener">Museum or source page</a>.</figcaption></figure><figure><img src="/the-king-reigns/img/westminster-sunset-2015.jpg" alt="The Palace of Westminster and the Thames at sunset, seen from the river, in 2015." loading="lazy"><figcaption>The Palace of Westminster and the Thames at sunset, 22 January 2015. Photo: Oast House Archive, Geograph, <a href="https://commons.wikimedia.org/wiki/File:Westminster_%5E_The_Thames_at_Sunset_-_geograph.org.uk_-_4320241.jpg">CC BY-SA 2.0</a>, via Wikimedia Commons.</figcaption></figure><p class="tn-cap"><b>Then and now.</b> In 1903 Monet painted the new Palace of Westminster as a dark silhouette against the sunset. More than a century later the same towers still stand for Parliament, and journalists still say "Westminster" when they mean the MPs inside.</p></div></section><h2>The eight parts</h2><ol class="seslist"><li><a href="/the-king-reigns/s1/"><b>Part 1</b></a>. Who's in charge? The King, the Prime Minister and Parliament. <i>Who has the real power in the United Kingdom: the King, the Prime Minister or Parliament?</i></li><li><a href="/the-king-reigns/s2/"><b>Part 2</b></a>. Runnymede, 15 June 1215: the barons against King John. <i>Why did a king accept to put limits on his own power?</i></li><li><a href="/the-king-reigns/s3/"><b>Part 3</b></a>. Magna Carta's long life: from England to the world. <i>Why does a medieval charter still matter today?</i></li><li><a href="/the-king-reigns/s4/"><b>Part 4</b></a>. 1689: the Bill of Rights and the end of absolute monarchy. <i>How did Parliament become stronger than the King?</i></li><li><a href="/the-king-reigns/s5/"><b>Part 5</b></a>. The King reigns but does not rule. <i>If the King has no real power, what is he for?</i></li><li><a href="/the-king-reigns/s6/"><b>Part 6</b></a>. Parliament: the Commons and the Lords. <i>How does a bill become a law in Westminster?</i></li><li><a href="/the-king-reigns/s7/"><b>Part 7</b></a>. Number 10: the Prime Minister at the centre. <i>How does someone become Prime Minister, and how can they lose the job?</i></li><li><a href="/the-king-reigns/s8/"><b>Part 8</b></a>. Citizens decide: four nations, a referendum and votes at sixteen. <i>Who has a voice in British democracy, and is the United Kingdom still united?</i></li><li><a href="/the-king-reigns/final/"><b>Final task and assessment</b></a>. Final task: From Runnymede to Westminster. <i>Speech or op-ed, with the assessment grid</i></li><li><a href="/the-king-reigns/sources/"><b>Sources and images</b></a>. Every fact and every painting, with its link. <i>Checked on 2 November 2026</i></li></ol><h2>How to use this sequence</h2><div class="box method"><ul><li>Start each part with the marked recap: five minutes, alone, then check together.</li><li>The documents come from official sources (UK Parliament, GOV.UK, the Royal Family, legislation.gov.uk, the National Archives, the Electoral Commission). Each one has its link.</li><li>Answers, model answers and quiz keys are printed under each exercise, so the page can be projected or printed as it is.</li><li>Homework closes every part and prepares the next recap.</li><li>The adapted version keeps the same lessons and the same final task.</li></ul></div><p><a href='/the-king-reigns/teacher-notes/' >Teacher notes</a></p><section id="flashcards" class="flashcards-method" lang="en">
 <h2>My bristol flashcards · how to use them</h2>
 
 <p><b>Principle.</b> Each student makes their own cards by hand, on bristol cards. Writing the word is already a way of learning it. The pack stays in the bag, so students can revise anywhere, with no screen. There is no ready-made deck: this page gives the method, a few model cards and a blank template.</p>
@@ -325,12 +363,12 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <div class="tbl-scroll"><table><tr><th></th><th>What to write</th></tr>
 <tr><td>Front</td><td>One English word, phrase, date or structure, in the colour of its category.</td></tr>
 <tr><td>Back</td><td>A short meaning in English (a French translation only if you need it) and one example sentence of your own, linked to The King Reigns.</td></tr>
-<tr><td>Corner</td><td>The category and the session where you met the item.</td></tr>
+<tr><td>Corner</td><td>The category and the part where you met the item.</td></tr>
 <tr><td>Check</td><td>Can I give the meaning and an example without turning the card over?</td></tr></table></div>
 <h3>Colour code</h3>
 <div class="tbl-scroll"><table><tr><th>Category</th><th>Pen colour</th></tr><tr><td>Vocabulary</td><td>green</td></tr><tr><td>Grammar</td><td>red</td></tr><tr><td>Dates and events</td><td>blue</td></tr><tr><td>Figures of speech and linkers</td><td>purple</td></tr></table></div>
 <h3>When to make the cards</h3>
-<div class="tbl-scroll"><table><tr><th>When</th><th>Cards to make</th></tr><tr><td>End of each first lesson of a session (lessons 1, 3, 5, 7, 9, 11, 13, 15)</td><td>Six cards: the key words of the session (homework).</td></tr><tr><td>Start of each second lesson (lessons 2, 4, 6, 8, 10, 12, 14, 16)</td><td>Five-minute check in pairs with the cards.</td></tr><tr><td>Before the mini quizzes (lessons 8 and 14)</td><td>Add the dates and the grammar rule of each session.</td></tr><tr><td>Lesson 17, before the final task</td><td>Finish the pack (20 cards or more), then practise in pairs with three boxes.</td></tr></table></div>
+<div class="tbl-scroll"><table><tr><th>When</th><th>Cards to make</th></tr><tr><td>End of each first lesson of a part (lessons 1, 3, 5, 7, 9, 11, 13, 15)</td><td>Six cards: the key words of the part (homework).</td></tr><tr><td>Start of each second lesson (lessons 2, 4, 6, 8, 10, 12, 14, 16)</td><td>Five-minute check in pairs with the cards.</td></tr><tr><td>Before the mini quizzes (lessons 8 and 14)</td><td>Add the dates and the grammar rule of each part.</td></tr><tr><td>Lesson 17, before the final task</td><td>Finish the pack (20 cards or more), then practise in pairs with three boxes.</td></tr></table></div>
 <h3>Practice in pairs, with three boxes</h3>
 <p>Student A shows the front; student B gives the meaning and a sentence. A card that is right moves on one box. A card that is wrong goes back to box 1. Target before the final task: 12 cards in box 3.</p>
 <h3>Model cards</h3>
@@ -345,7 +383,270 @@ footer{margin-top:2.5rem;padding-top:.8rem;border-top:1px solid var(--line2);col
 <tr><td>A precise example of your own on the back (not only a translation)</td><td>/ 3</td></tr>
 <tr><td>Check: the teacher draws five cards and the student answers (four right answers or more = 2 points)</td><td>/ 2</td></tr></table></div>
 <p class="downloads">Blank template to print and cut out: <a href="/the-king-reigns/flashcards/blank-flashcards.pdf">PDF</a> · <a href="/the-king-reigns/flashcards/blank-flashcards.docx">Word (.docx)</a> · <a href="/the-king-reigns/flashcards/blank-flashcards.odt">LibreOffice (.odt)</a></p>
-</section><section class="further" id="going-further"><h2>Going further in Terminale</h2><p><a href="/who-rules-britain/"><b>Who Rules Britain? Sovereignty, Crown and People</b></a> is the advanced Terminale version of this sequence (tronc commun B2, with C1 tasks; a good bridge towards the spécialité LLCER, towards C1). It does not repeat these lessons: it starts from what students learnt here (Magna Carta, 1689, Bagehot, Royal Assent, the 2016 referendum, votes at sixteen) and takes them further, with unadapted primary sources, Dicey, the 2019 prorogation case, the 2022 Scottish referendum ruling, a mid-sequence test and a written exam.</p><p>A further sequence in Terminale, <a href="/portrait-of-a-queen/"><b>The Queen Who Had to Be Seen: Elizabeth II, Image and Power</b></a>, starts from Bagehot’s dignified power (already studied here, especially in <a href="/the-king-reigns/s5/#lesson-9">lesson 9</a>) and asks how Elizabeth II used her image as its instrument. It does not repeat the two-column sort, the reign-or-rule exercise, or the extract read here.</p></section></main><nav class="gnav" aria-label="Sequence"><span class="gl">Sequence</span><a aria-current='page' href='/the-king-reigns/'>Start</a><a href='/the-king-reigns/s1/'>1</a><a href='/the-king-reigns/s2/'>2</a><a href='/the-king-reigns/s3/'>3</a><a href='/the-king-reigns/s4/'>4</a><a href='/the-king-reigns/s5/'>5</a><a href='/the-king-reigns/s6/'>6</a><a href='/the-king-reigns/s7/'>7</a><a href='/the-king-reigns/s8/'>8</a><a href='/the-king-reigns/final/'>Final task</a><a href='/the-king-reigns/sources/'>Sources</a><a class='alt' href='/the-king-reigns/adapted/'>Adapted version (dys)</a></nav><footer class="site-footer"><div class="wrap"><p>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p><p>All prompts, explanations and model answers are original. Quoted official texts are credited to their sources; the paintings are in the public domain; the photographs are under Creative Commons licences, credited under each image.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Licence CC BY-NC-SA 4.0</a> · <a href="/">Itinéraires et destinations</a></p></div></footer></div><script>
+</section><section class="further" id="going-further"><h2>Going further in Terminale</h2><p><a href="/who-rules-britain/"><b>Who Rules Britain? Sovereignty, Crown and People</b></a> is the advanced Terminale version of this sequence (tronc commun B2, with C1 tasks; a good bridge towards the spécialité LLCER, towards C1). It does not repeat these lessons: it starts from what students learnt here (Magna Carta, 1689, Bagehot, Royal Assent, the 2016 referendum, votes at sixteen) and takes them further, with unadapted primary sources, Dicey, the 2019 prorogation case, the 2022 Scottish referendum ruling, a mid-sequence test and a written exam.</p><p>A further sequence in Terminale, <a href="/portrait-of-a-queen/"><b>The Queen Who Had to Be Seen: Elizabeth II, Image and Power</b></a>, starts from Bagehot’s dignified power (already studied here, especially in <a href="/the-king-reigns/s5/#lesson-9">lesson 9</a>) and asks how Elizabeth II used her image as its instrument. It does not repeat the two-column sort, the reign-or-rule exercise, or the extract read here.</p></section></main><nav class="gnav" aria-label="Sequence"><span class="gl">Sequence</span><a aria-current='page' href='/the-king-reigns/'>Start</a><a href='/the-king-reigns/s1/'>1</a><a href='/the-king-reigns/s2/'>2</a><a href='/the-king-reigns/s3/'>3</a><a href='/the-king-reigns/s4/'>4</a><a href='/the-king-reigns/s5/'>5</a><a href='/the-king-reigns/s6/'>6</a><a href='/the-king-reigns/s7/'>7</a><a href='/the-king-reigns/s8/'>8</a><a href='/the-king-reigns/final/'>Final task</a><a href='/the-king-reigns/sources/'>Sources</a><a class='alt' href='/the-king-reigns/adapted/'>Adapted version (dys)</a></nav><section class="compl-block" id="eleve-absent"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Part 1 (Lessons 1 et 2). Who's in charge?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les deux documents officiels de la Part 1 et observe le tableau de Monet (Westminster).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Who are the three actors of British politics?</li>
+<li>What can the King do? What can the Prime Minister do?</li>
+<li>What does Monet show of Westminster?</li>
+<li><strong>Étude de la langue</strong> (10 min). Modaux du pouvoir : <em>can, cannot, must</em>. Trois phrases sur le roi, le Premier ministre, le Parlement.</li>
+<li><strong>Je produis</strong> (10 min). Explique en 60 mots qui dirige le Royaume-Uni.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et la trace écrite.</p>
+<h3>Part 2 (Lessons 3 et 4). Runnymede, 1215</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le Document A et la frise des cinq dates.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What happened at Runnymede on 15 June 1215?</li>
+<li>Who was against King John?</li>
+<li>Which two clauses are still law?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prétérit des verbes irréguliers : relève cinq verbes du récit.</li>
+<li><strong>Je produis</strong> (10 min). Raconte 1215 en 80 mots, au prétérit.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Part 3 (Lessons 5 et 6). Magna Carta's long life</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les Documents A, B et C (lecture puzzle).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How did Magna Carta travel to America?</li>
+<li>What is the Fifth Amendment?</li>
+<li>What is the link with the Universal Declaration of Human Rights?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>was inspired by, has influenced</em> : passif et present perfect, trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). Écris une frise commentée en cinq dates.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 3. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et la frise.</p>
+<h3>Part 4 (Lessons 7 et 8). 1689: the Bill of Rights</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le Bill of Rights (orthographe d'origine) et le Document A.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What can the King no longer do after 1689?</li>
+<li>Find two words with old spelling and write them in modern English.</li>
+<li>Why is 1689 a turning point?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>can no longer, is not allowed to</em> : trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). En 60 mots : <em>Why is 1689 the end of absolute monarchy in England?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Part 5 (Lessons 9 et 10). The King reigns but does not rule</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le texte de Bagehot et le passage sur la sanction royale (Royal Assent).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the « dignified » part of the system?</li>
+<li>What is the « efficient » part?</li>
+<li>Why is Royal Assent a formality?</li>
+<li><strong>Étude de la langue</strong> (10 min). Concession : <em>although, even if, however</em>. Trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). Explique en 60 mots la phrase « The King reigns but does not rule ».</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 5. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 3 et la trace écrite.</p>
+<h3>Part 6 (Lessons 11 et 12). Parliament</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Observe le tableau de Turner (l'incendie de 1834) et lis le Document A.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What happened in 1834?</li>
+<li>What are the two Houses?</li>
+<li>What are the steps of a bill?</li>
+<li><strong>Étude de la langue</strong> (10 min). Ordre chronologique : <em>first, then, after that, finally</em>.</li>
+<li><strong>Je produis</strong> (10 min). Décris le parcours d'une loi en six étapes.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 6. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 2 et la trace écrite.</p>
+<h3>Part 7 (Lessons 13 et 14). Number 10</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les Documents A et B (Walpole et la règle de confiance).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Who was the first Prime Minister?</li>
+<li>What is the rule of confidence?</li>
+<li>How can a Prime Minister change without a general election?</li>
+<li><strong>Étude de la langue</strong> (10 min). Conditionnel : <em>If the Commons lose confidence, the Prime Minister…</em></li>
+<li><strong>Je produis</strong> (10 min). En 80 mots, raconte un changement de Premier ministre sans élection.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 7. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 2 et la trace écrite.</p>
+<h3>Part 8 (Lessons 15 et 16). Citizens decide</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les chiffres de 2016 et la carte des quatre nations.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What were the results of the 2016 referendum?</li>
+<li>How did the four nations vote?</li>
+<li>Who had a voice in 1215, 1689 and 2016?</li>
+<li><strong>Étude de la langue</strong> (10 min). Pourcentages et comparaison : <em>more than half, a majority of, whereas</em>.</li>
+<li><strong>Je produis</strong> (10 min). En 100 mots : <em>Who decides in the United Kingdom today?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Part 8. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 3 et la trace écrite.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
+<p>Axes : axe 3 (années impaires).</p>
+<h3>Déroulé en deux lessons de 52 minutes</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Lecture des consignes, repérage du ou des documents.</td><td>Lecture</td></tr>
+<tr><td>3 à 43</td><td>Compréhension de l'écrit</td><td>Lecture, prise de notes, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>43 à 50</td><td>Relecture</td><td>Relecture du compte rendu, vérification des références au texte.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question (si deux questions sont proposées).</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan en trois parties, trois exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 200 à 250 mots environ ; LVB : 150 à 180 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée : temps, accords, connecteurs, orthographe.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<h3>Compréhension de l'écrit (/10)</h3>
+<p>Document : un document authentique de 2 300 à 4 000 signes : la page « The role of the Monarchy » du site officiel de la famille royale, ou un article de BBC News sur le King's Speech, en libre accès.</p>
+<p>Questions de guidage (en français) :</p>
+<ul>
+<li>Présentez le document.</li>
+<li>Quel est le rôle du roi selon le document ?</li>
+<li>Quels pouvoirs réels a-t-il ? Lesquels sont symboliques ?</li>
+<li>Quelle image de la monarchie le document veut-il donner ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<h3>Expression écrite (/10)</h3>
+<p>Traitez une des questions :</p>
+<ul>
+<li><em>Does the British monarch still have power, or only an image of power?</em> Use examples from the sequence.</li>
+<li><em>Write a short speech for a school debate: « The monarchy is useful to democracy. » Agree or disagree.</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div>
+<h2>Rattachement Terminale à afficher</h2>
+<ul>
+<li>Axe 6 « Le Royaume-Uni et ses nations », objet « Un Royaume toujours uni ? » (Part 8 : le référendum et les quatre nations).</li>
+<li>Axe 4 « Enjeux et formes de la communication », objet « Forme et portée du discours politique, de Winston Churchill aux réseaux sociaux » (Parts 5 et 7 : le King's Speech, Number 10).</li>
+<li>Axe 5 « Citoyenneté et mondes virtuels » en appui (qui a la parole ?).</li>
+<li>Problématique Terminale : <em>The King reigns, Parliament rules: but who speaks for the four nations?</em></li>
+<li>Recoupement avec Who Rules Britain? : les deux séquences le signalent ; à proposer comme alternatives, pas à la suite.</li>
+</ul>
+<h2>Évaluation au format de Terminale (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Terminale (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027 ; modèle d'entraînement pour les élèves en contrôle continu) :</p>
+<ul>
+<li>Écrit, 1 h 30 (temps d'écoute non compris) : compréhension de l'oral (document de 1 min 30 au plus, trois écoutes séparées d'une minute, compte rendu en français) ; compréhension de l'écrit (2 500 à 4 300 signes) ; expression écrite (une ou deux questions). Compréhension et expression ont le même poids.</li>
+<li>Oral, 10 minutes, 10 minutes de préparation : l'examinateur propose deux axes, le candidat en choisit un ; il reçoit deux documents iconographiques ou citations ; présentation de 5 minutes au plus, puis entretien.</li>
+<li>Niveaux : B2 en LVA, B1 en LVB.</li>
+<li>Axes de l'écrit : années paires 2, 4, 6 ; années impaires 1, 5, 6. Axes de l'oral (voie générale) : 1, 2, 4, 5, 6.</li>
+</ul>
+<p>Axes : axe 6 (écrit toutes les années, oral), axe 4 (écrit les années paires, oral).</p>
+<h3>Écrit en deux lessons de 52 minutes (ou une plage de 2 heures)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Présentation de l'épreuve.</td><td>Lecture</td></tr>
+<tr><td>2 à 10</td><td>Compréhension de l'oral : écoutes</td><td>Trois écoutes séparées d'une minute, prise de notes.</td><td>CO</td></tr>
+<tr><td>10 à 24</td><td>Compréhension de l'oral : compte rendu</td><td>Compte rendu en français.</td><td>CO</td></tr>
+<tr><td>24 à 50</td><td>Compréhension de l'écrit</td><td>Lecture, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question.</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan et exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 250 à 300 mots environ ; LVB : 180 à 220 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral (/10).</strong> Document : l'extrait vidéo officiel du King's Speech le plus récent (UK Parliament, libre accès), 1 min 30 au plus.</p>
+<p>Consigne : « Rendez compte en français du document. » Points à retrouver :</p>
+<ul>
+<li>Le cadre (lieu, cérémonie).</li>
+<li>Qui écrit le discours, qui le lit.</li>
+<li>Trois mesures annoncées.</li>
+<li>Le rôle réel du roi.</li>
+</ul>
+<p>Grille de classe, compréhension de l'oral (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques mots ou éléments isolés</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, organisés ; le point de vue général</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; le point de vue, le ton, les intentions</td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'écrit (/10).</strong> Document : un article authentique de 2 500 à 4 300 signes sur le rôle constitutionnel du monarque (BBC News, libre accès).</p>
+<p>Questions de guidage :</p>
+<ul>
+<li>Présentez le document.</li>
+<li>Quels pouvoirs le roi a-t-il en théorie, et en pratique ?</li>
+<li>Quels liens avec les quatre nations ?</li>
+<li>Quel point de vue l'auteur adopte-t-il ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<p><strong>Expression écrite (/10 ; ramenée sur 20 avec la compréhension, même poids).</strong> Traitez une des questions :</p>
+<ul>
+<li><em>The King reigns but does not rule: is the monarchy still useful?</em></li>
+<li><em>Write a speech for a school debate: « The four nations should each have a vote on the future of the monarchy. »</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div>
+<h3>Oral blanc (10 minutes, 10 minutes de préparation)</h3>
+<p>Organisation : quatre passages par lesson (4 × 10 min, plus 2 min de transition chacun, 4 min d'installation) ; les élèves préparent pendant le passage du précédent.</p>
+<p>Documents de l'oral blanc :</p>
+<ul>
+<li>Axe 6 : la carte des résultats de 2016 par nation ; une photo du Parlement gallois (Senedd).</li>
+<li>Axe 4 : une photo du King's Speech ; la citation « The King reigns but does not rule ».</li>
+</ul>
+<p>Grille de classe, oral (/20) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Expression en continu : contenu</td><td>/6</td><td>2 : description des documents ; 4 : documents reliés à l'axe ; 6 : problématique claire, analyse nuancée, références culturelles</td></tr>
+<tr><td>Expression en continu : langue</td><td>/4</td><td>1 : langue simple, nombreuses hésitations ; 2 : correcte, lexique de la séquence ; 3 : fluide ; 4 : précise et variée</td></tr>
+<tr><td>Entretien : réactivité</td><td>/6</td><td>2 : réponses brèves ; 4 : réponses développées ; 6 : relance, argumente, défend un point de vue</td></tr>
+<tr><td>Entretien : langue</td><td>/4</td><td>1 à 4, mêmes repères que l'expression en continu</td></tr>
+</tbody>
+</table></div></section>
+<footer class="site-footer"><div class="wrap"><p>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p><p>All prompts, explanations and model answers are original. Quoted official texts are credited to their sources; the paintings are in the public domain; the photographs are under Creative Commons licences, credited under each image.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Licence CC BY-NC-SA 4.0</a> · <a href="/">Itinéraires et destinations</a></p></div></footer></div><script>
 document.addEventListener('click',function(e){var g=e.target.closest('button.allans');if(g){var open=g.getAttribute('aria-pressed')!=='true';document.querySelectorAll('details.ans').forEach(function(d){d.open=open});document.querySelectorAll('button.allans').forEach(function(b){b.setAttribute('aria-pressed',open?'true':'false');b.textContent=open?'Hide all answers':'Show all answers'});}
 var s=e.target.closest('button.say');if(s&&'speechSynthesis' in window){var t=document.getElementById(s.dataset.for);if(!t)return;speechSynthesis.cancel();if(s.getAttribute('aria-pressed')==='true'){s.setAttribute('aria-pressed','false');s.textContent='Listen';return;}var u=new SpeechSynthesisUtterance(t.innerText);u.lang='en-GB';u.rate=.9;var v=speechSynthesis.getVoices().filter(function(x){return x.lang=='en-GB'})[0];if(v)u.voice=v;u.onend=function(){s.setAttribute('aria-pressed','false');s.textContent='Listen'};s.setAttribute('aria-pressed','true');s.textContent='Stop';speechSynthesis.speak(u);}});
 document.addEventListener('input',function(e){var t=e.target;if(t.matches('textarea[data-count]')){var n=(t.value.match(/[A-Za-z0-9À-ſ'’-]+/g)||[]).length;var o=document.getElementById(t.dataset.count);o.textContent=n+' words'+((n>=250&&n<=300)?' · within range':' · target 250 to 300');}});

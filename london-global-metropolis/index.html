@@ -18,8 +18,23 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/english-look.css">
   <link rel="stylesheet" href="london.css">
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look mode-prof" data-section="cfa">
+<body class="english-look mode-eleve" data-section="cfa">
   <a class="skip" href="#contenu">Aller au contenu</a>
   <header class="site-header">
     <div class="wrap">
@@ -53,12 +68,12 @@
       </ul>
     </aside>
     <div class="modes" role="group" aria-label="Affichage">
-      <button type="button" class="mode-btn" data-mode="eleve" aria-pressed="false">Version élève</button>
-      <button type="button" class="mode-btn" data-mode="prof" aria-pressed="true">Version prof</button>
+      <button type="button" class="mode-btn" data-mode="eleve" aria-pressed="true">Version élève</button>
+      <button type="button" class="mode-btn" data-mode="prof" aria-pressed="false">Version prof</button>
       <button type="button" class="mode-btn" id="dys-btn" data-dys="1" aria-pressed="false">Version dys</button>
       <button type="button" class="mode-btn" id="manage-btn" aria-expanded="false" aria-controls="tab-manage">Gérer les onglets</button>
     </div>
-<div class="tab-manage" id="tab-manage" hidden><p><strong>Gérer les onglets.</strong> Décochez un onglet pour le masquer. Le choix est retenu sur cet appareil.</p><ul><li><label><input type="checkbox" data-keep="introduction" checked disabled> Introduction</label></li><li><label><input type="checkbox" data-keep="lesson-1" checked> Lesson 1</label></li><li><label><input type="checkbox" data-keep="lesson-2" checked> Lesson 2</label></li><li><label><input type="checkbox" data-keep="lesson-3" checked> Lesson 3</label></li><li><label><input type="checkbox" data-keep="lesson-4" checked> Lesson 4</label></li><li><label><input type="checkbox" data-keep="lesson-5" checked> Lesson 5</label></li><li><label><input type="checkbox" data-keep="lesson-6" checked> Lesson 6</label></li><li><label><input type="checkbox" data-keep="lesson-7" checked> Lesson 7</label></li><li><label><input type="checkbox" data-keep="secours" checked> Sortie de secours</label></li><li><label><input type="checkbox" data-keep="evaluations" checked> Évaluations et grilles</label></li><li><label><input type="checkbox" data-keep="fiches" checked> Fiches à imprimer</label></li><li><label><input type="checkbox" data-keep="espace-prof" checked> Espace prof</label></li></ul><p><button type="button" class="btn-sec" id="tabs-reset">Réouvrir tous les onglets</button></p></div></div><nav class="stp-tabs" aria-label="Onglets de la séquence"><div class="wrap"><div class="row" id="tablist"><span class="tab" data-tab="introduction"><a href="#introduction">Introduction</a></span><span class="tab" data-tab="lesson-1"><a href="#lesson-1">Lesson 1</a><button type="button" class="tab-x" data-close="lesson-1" aria-label="Fermer l'onglet Lesson 1">×</button></span><span class="tab" data-tab="lesson-2"><a href="#lesson-2">Lesson 2</a><button type="button" class="tab-x" data-close="lesson-2" aria-label="Fermer l'onglet Lesson 2">×</button></span><span class="tab" data-tab="lesson-3"><a href="#lesson-3">Lesson 3</a><button type="button" class="tab-x" data-close="lesson-3" aria-label="Fermer l'onglet Lesson 3">×</button></span><span class="tab" data-tab="lesson-4"><a href="#lesson-4">Lesson 4</a><button type="button" class="tab-x" data-close="lesson-4" aria-label="Fermer l'onglet Lesson 4">×</button></span><span class="tab" data-tab="lesson-5"><a href="#lesson-5">Lesson 5</a><button type="button" class="tab-x" data-close="lesson-5" aria-label="Fermer l'onglet Lesson 5">×</button></span><span class="tab" data-tab="lesson-6"><a href="#lesson-6">Lesson 6</a><button type="button" class="tab-x" data-close="lesson-6" aria-label="Fermer l'onglet Lesson 6">×</button></span><span class="tab" data-tab="lesson-7"><a href="#lesson-7">Lesson 7</a><button type="button" class="tab-x" data-close="lesson-7" aria-label="Fermer l'onglet Lesson 7">×</button></span><span class="tab" data-tab="secours"><a href="#secours">Sortie de secours</a><button type="button" class="tab-x" data-close="secours" aria-label="Fermer l'onglet Sortie de secours">×</button></span><span class="tab" data-tab="evaluations"><a href="#evaluations">Évaluations et grilles</a><button type="button" class="tab-x" data-close="evaluations" aria-label="Fermer l'onglet Évaluations et grilles">×</button></span><span class="tab" data-tab="fiches"><a href="#fiches">Fiches à imprimer</a><button type="button" class="tab-x" data-close="fiches" aria-label="Fermer l'onglet Fiches à imprimer">×</button></span><span class="tab" data-tab="espace-prof"><a href="#espace-prof">Espace prof</a><button type="button" class="tab-x" data-close="espace-prof" aria-label="Fermer l'onglet Espace prof">×</button></span></div></div></nav><main class="wrap stp-main" id="contenu"><p class="nojs-note">Sans JavaScript, tous les onglets restent visibles à la suite.</p><section class="panel on" id="introduction" aria-label="Introduction">
+<div class="tab-manage" id="tab-manage" hidden><p><strong>Gérer les onglets.</strong> Décochez un onglet pour le masquer. Le choix est retenu sur cet appareil.</p><ul><li><label><input type="checkbox" data-keep="introduction" checked disabled> Introduction</label></li><li><label><input type="checkbox" data-keep="lesson-1" checked> Lesson 1</label></li><li><label><input type="checkbox" data-keep="lesson-2" checked> Lesson 2</label></li><li><label><input type="checkbox" data-keep="lesson-3" checked> Lesson 3</label></li><li><label><input type="checkbox" data-keep="lesson-4" checked> Lesson 4</label></li><li><label><input type="checkbox" data-keep="lesson-5" checked> Lesson 5</label></li><li><label><input type="checkbox" data-keep="lesson-6" checked> Lesson 6</label></li><li><label><input type="checkbox" data-keep="lesson-7" checked> Lesson 7</label></li><li><label><input type="checkbox" data-keep="secours" checked> Sortie de secours</label></li><li><label><input type="checkbox" data-keep="evaluations" checked> Évaluations et grilles</label></li><li><label><input type="checkbox" data-keep="fiches" checked> Fiches à imprimer</label></li><li><label><input type="checkbox" data-keep="espace-prof" checked> Espace prof</label></li><li><label><input type="checkbox" data-keep="eleve-absent" checked> Élève absent ou hospitalisé</label></li></ul><p><button type="button" class="btn-sec" id="tabs-reset">Réouvrir tous les onglets</button></p></div></div><nav class="stp-tabs" aria-label="Onglets de la séquence"><div class="wrap"><div class="row" id="tablist"><span class="tab" data-tab="introduction"><a href="#introduction">Introduction</a></span><span class="tab" data-tab="lesson-1"><a href="#lesson-1">Lesson 1</a><button type="button" class="tab-x" data-close="lesson-1" aria-label="Fermer l'onglet Lesson 1">×</button></span><span class="tab" data-tab="lesson-2"><a href="#lesson-2">Lesson 2</a><button type="button" class="tab-x" data-close="lesson-2" aria-label="Fermer l'onglet Lesson 2">×</button></span><span class="tab" data-tab="lesson-3"><a href="#lesson-3">Lesson 3</a><button type="button" class="tab-x" data-close="lesson-3" aria-label="Fermer l'onglet Lesson 3">×</button></span><span class="tab" data-tab="lesson-4"><a href="#lesson-4">Lesson 4</a><button type="button" class="tab-x" data-close="lesson-4" aria-label="Fermer l'onglet Lesson 4">×</button></span><span class="tab" data-tab="lesson-5"><a href="#lesson-5">Lesson 5</a><button type="button" class="tab-x" data-close="lesson-5" aria-label="Fermer l'onglet Lesson 5">×</button></span><span class="tab" data-tab="lesson-6"><a href="#lesson-6">Lesson 6</a><button type="button" class="tab-x" data-close="lesson-6" aria-label="Fermer l'onglet Lesson 6">×</button></span><span class="tab" data-tab="lesson-7"><a href="#lesson-7">Lesson 7</a><button type="button" class="tab-x" data-close="lesson-7" aria-label="Fermer l'onglet Lesson 7">×</button></span><span class="tab" data-tab="secours"><a href="#secours">Sortie de secours</a><button type="button" class="tab-x" data-close="secours" aria-label="Fermer l'onglet Sortie de secours">×</button></span><span class="tab prof-only" data-tab="evaluations"><a href="#evaluations">Évaluations et grilles</a><button type="button" class="tab-x" data-close="evaluations" aria-label="Fermer l'onglet Évaluations et grilles">×</button></span><span class="tab" data-tab="fiches"><a href="#fiches">Fiches à imprimer</a><button type="button" class="tab-x" data-close="fiches" aria-label="Fermer l'onglet Fiches à imprimer">×</button></span><span class="tab prof-only" data-tab="espace-prof"><a href="#espace-prof">Espace prof</a><button type="button" class="tab-x" data-close="espace-prof" aria-label="Fermer l'onglet Espace prof">×</button></span><span class="tab" data-tab="eleve-absent"><a href="#eleve-absent">Élève absent ou hospitalisé</a><button type="button" class="tab-x" data-close="eleve-absent" aria-label="Fermer l'onglet Élève absent ou hospitalisé">×</button></span></div></div></nav><main class="wrap stp-main" id="contenu"><p class="nojs-note">Sans JavaScript, tous les onglets restent visibles à la suite.</p><section class="panel on" id="introduction" aria-label="Introduction">
 <figure class="look-hero"><img src="img/monet-thames-westminster.jpg" alt="Peinture de la Tamise dans la brume, avec Westminster Bridge, le Parlement et une jetée au premier plan." width="1920" height="1235"><figcaption>Claude Monet, The Thames below Westminster, vers 1871, National Gallery, Londres, domaine public, Wikimedia Commons.</figcaption></figure>
 <h2>Introduction</h2>
 <p class="lede">What makes London a global city, and how can I use what I know about it to advise a client from my entreprise d'accueil?</p>
@@ -667,7 +682,7 @@ d. Before we start, may I ask a few questions?</p>
 </div>
 <div class="sub sub-deroule" hidden><h3>Déroulé, 52 minutes montre en main</h3><p>On avance d'étape en étape, montre en main, sans ouvrir une activité qui ferait dépasser 52 minutes.</p><div class="tscroll"><table><thead><tr><th>Minutes</th><th>Ce que l'on fait</th></tr></thead><tbody><tr><td class="min">0 à 2</td><td>Météo de la classe (papiers prévus avec la fiche S).</td></tr><tr><td class="min">2 à 6</td><td>Consigne au tableau blanc : chaque apprenti A a la moitié des informations, chaque apprenti B l'autre moitié.</td></tr><tr><td class="min">6 à 26</td><td>Interaction orale : les binômes s'échangent les informations sans montrer leur fiche (« When did the first underground railway open? »).</td></tr><tr><td class="min">26 à 36</td><td>Compréhension de l'écrit : les binômes comparent leurs fiches complétées avec le texte de contrôle et corrigent.</td></tr><tr><td class="min">36 à 48</td><td>Expression écrite : « Write a short message (60 words) to a friend who is visiting London. Give three tips. »</td></tr><tr><td class="min">48 à 52</td><td>Trace écrite : les cinq faits les plus utiles, recopiés dans le cahier.</td></tr></tbody></table></div><div class="blk-secours sortie-ligne"><p><strong>Si ce n'est pas fini :</strong> arrêtez-vous après l'échange d'informations et faites copier le texte de contrôle.</p></div></div>
 <p class="panel-foot">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
-</section><section class="panel" id="evaluations" aria-label="Évaluations et grilles">
+</section><section class="panel prof-only" id="evaluations" aria-label="Évaluations et grilles">
 <h2>Évaluations et grilles</h2>
 <ul class="eval-recap-list">
 <li><span class="ev-name">Diagnostique (pas de note)</span><p class="ev-meta">Lesson 1 · 10 min · Positionnement, CE de départ</p></li>
@@ -1035,6 +1050,95 @@ d. Before we start, may I ask a few questions?</p>
 <p class="rights-line">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
 </article>
 <p class="panel-foot">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+<div class="compl-block prof-only" id="entrainement-examen"><h2>Entraînement au CCF (version prof)</h2>
+<p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, bac pro, coefficient 2) :</p>
+<ul>
+<li>Situation A, écrite, 1 heure au plus, en dernière année de formation : compréhension de l'oral (document de 1 min 30 au plus, entendu trois fois, une minute entre les écoutes, compte rendu en français) ; compréhension de l'écrit (document authentique inconnu de 15 lignes de 70 caractères au plus, compte rendu en français) ; expression écrite (deux sujets au choix, l'un sur la vie quotidienne, l'autre sur la vie professionnelle, 100 à 120 mots au moins selon la consigne).</li>
+<li>Situation B, orale, 10 minutes : partie 1, expression orale en continu, 5 minutes au plus, sur un travail, un projet, un produit, un service ou une expérience professionnelle, sans lecture, notes et une image autorisées ; partie 2, interaction, 5 minutes au plus, à partir de la présentation.</li>
+<li>En Première : entraînement au format, sans valeur certificative.</li>
+</ul>
+<h3>Recalage des évaluations sommatives sur le format CCF</h3>
+<p>Les évaluations existantes sont proches du CCF. Pour qu'elles servent d'entraînement au format officiel :</p>
+<ul>
+<li>Compréhension de l'oral : document de 1 min 30 au plus, entendu trois fois avec une minute entre les écoutes ; compte rendu <strong>en français</strong> (pas de QCM seul).</li>
+<li>Compréhension de l'écrit : document authentique de 15 lignes au plus ; compte rendu <strong>en français</strong>.</li>
+<li>Expression écrite : <strong>deux sujets au choix</strong>, l'un sur la vie quotidienne, l'autre sur la vie professionnelle ; 100 à 120 mots au moins (l'email actuel de 120 à 150 mots devient le sujet professionnel).</li>
+<li>Oral : 5 minutes de présentation au plus, puis 5 minutes d'échange (le pitch actuel de 2 minutes est à porter à 3 à 5 minutes, sans lecture, notes et une image autorisées).</li>
+<li>Notation : grille nationale (ci-dessous), en plus ou à la place des barèmes sur 20 par activité.</li>
+</ul>
+<h3>Situation A blanche, en une lesson de 52 minutes (version prof)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Les élèves lisent les trois parties et choisissent leur sujet d'expression écrite.</td><td>Lecture</td></tr>
+<tr><td>2 à 17</td><td>Compréhension de l'oral</td><td>Trois écoutes du document (1 min 30 au plus), une minute entre chaque écoute ; prise de notes ; compte rendu en français.</td><td>CO</td></tr>
+<tr><td>17 à 32</td><td>Compréhension de l'écrit</td><td>Lecture du document, compte rendu en français guidé par les questions.</td><td>CE</td></tr>
+<tr><td>32 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 100 à 120 mots au moins.</td><td>PE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots, ramassage.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral.</strong> document à choisir : une vidéo authentique de 1 min 30 au plus présentant l'Elizabeth line (chaîne officielle de Transport for London), en libre accès.</p>
+<p>Consigne : « Écoutez trois fois le document. Rendez compte en français de ce que vous avez compris : qui parle, de quoi, où, pourquoi, et ce que la personne pense. »</p>
+<p><strong>Compréhension de l'écrit.</strong> Texte d'entraînement (le jour du CCF, prendre un document authentique inconnu de 15 lignes au plus) :</p>
+<blockquote><p>On 24 May 2022, a new railway line opened in London: the Elizabeth line, named after Queen Elizabeth II. It crosses the capital from west to east, from Reading and Heathrow Airport to Shenfield and Abbey Wood. In the centre of London, the trains run in new tunnels under the city. The line was a huge project: it took more than ten years to build, and it cost about nineteen billion pounds. The trains are long, air-conditioned and accessible to everyone. For visitors, the line is very useful: you can travel from Heathrow to the centre of London in about thirty minutes.</p></blockquote>
+<p>Source : texte d'entraînement écrit pour la classe, d'après les informations publiées par Transport for London (tfl.gov.uk).</p>
+<p>Consigne : « Rendez compte en français du document. Aidez-vous des questions. »</p>
+<ul>
+<li>Quand et où la nouvelle ligne a-t-elle ouvert ?</li>
+<li>Pourquoi porte-t-elle ce nom ?</li>
+<li>Quels chiffres montrent l'ampleur du projet ?</li>
+<li>Pourquoi est-elle utile aux visiteurs ?</li>
+</ul>
+<p><strong>Expression écrite.</strong> Choisissez un sujet. Écrivez 100 à 120 mots au moins.</p>
+<ul>
+<li>Sujet 1 (vie quotidienne) : <em>Describe the way you go to work or to the CFA every day. What would you like to change?</em></li>
+<li>Sujet 2 (vie professionnelle) : <em>A group of clients arrives at Heathrow next week. Write an email to explain how to get to their hotel in central London.</em></li>
+</ul>
+<h3>Situation B blanche (version prof)</h3>
+<p>Organisation : 10 minutes par élève (5 minutes de présentation, 5 minutes d'échange). Avec 24 élèves, prévoir 6 lessons, quatre passages par lesson. Pendant les passages, les autres élèves travaillent en autonomie au fond de la salle (fiche ci-dessous), casque ou travail écrit, sans bruit.</p>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage au tableau ; les élèves en autonomie prennent la fiche.</td><td>Lecture</td></tr>
+<tr><td>4 à 15</td><td>Passage 1</td><td>5 min de présentation sans lecture, puis 5 min d'échange ; 1 min de notation.</td><td>PO, PI</td></tr>
+<tr><td>15 à 26</td><td>Passage 2</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>26 à 37</td><td>Passage 3</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>37 à 48</td><td>Passage 4</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>48 à 52</td><td>Bilan collectif</td><td>Deux conseils pour la classe, sans nommer personne.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p>Sujets de présentation possibles (l'élève choisit, une image et des notes autorisées, pas de texte rédigé) :</p>
+<ul>
+<li>Présenter son entreprise d'accueil et son poste (une image autorisée).</li>
+<li>Présenter une prestation proposée à un client (séjour, réception, livraison, vente).</li>
+<li>Présenter une mission réalisée en entreprise entre deux périodes au CFA (fiche 8 de la séquence).</li>
+</ul>
+<p>Questions d'échange, à adapter : « Why did you choose this? » ; « What was the most difficult part? » ; « What would you do differently? » ; « Would you recommend it to a customer? Why? » ; « What did you learn? » ; « Can you tell me more about…? »</p>
+<p>Travail en autonomie pendant les passages : préparer sa propre fiche de présentation (5 mots clés, 3 phrases d'accroche, 1 image), puis faire les exercices d'Étude de la langue de la séquence.</p>
+<h3>Grille nationale bac pro LVA (BO n° 47 du 16 décembre 2021, annexe 4), version prof</h3>
+<p>Situation A, sur 12 (chaque activité de 0 à 4, demi-points possibles) :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Compréhension de l'oral</th><th>Compréhension de l'écrit</th><th>Expression écrite</th></tr></thead>
+<tbody>
+<tr><td>4 (4 ou 3,5)</td><td>Comprend l'essentiel des informations, perçoit la cohérence d'ensemble, identifie le point de vue ou les intentions</td><td>Mêmes critères sur le document écrit</td><td>S'exprime clairement, même avec des erreurs dans les structures complexes ; lexique varié ; expose avantages ou inconvénients ; justifie</td></tr>
+<tr><td>3 (3 ou 2,5)</td><td>Relève certains des éléments porteurs de sens ; saisit certains liens entre les informations</td><td>Mêmes critères sur le document écrit</td><td>Écrit descriptif ou narratif au volume attendu ; structures simples ; lexique assez varié ; sentiments ou point de vue ; erreurs qui gênent peu</td></tr>
+<tr><td>2 (2 ou 1,5)</td><td>Identifie la thématique ou l'objet principal ; comprend les informations les plus significatives et quelques détails</td><td>Mêmes critères sur le document écrit</td><td>Écrit globalement compréhensible malgré des erreurs ; cherche à exprimer une appréciation ; effort de construction</td></tr>
+<tr><td>1 (1 ou 0,5)</td><td>Identifie quelques sons, mots ou éléments isolés ; comprend en partie les informations factuelles (personnes, lieux, dates)</td><td>Identifie quelques mots isolés ; comprend en partie les informations factuelles</td><td>Écrit nettement trop court ; langue en partie compréhensible ; mots isolés</td></tr>
+</tbody>
+</table></div>
+<p>Situation B, sur 8 :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Expression orale en continu (/4)</th><th>Interaction orale (/4)</th></tr></thead>
+<tbody>
+<tr><td>4</td><td>Discours assez nuancé, informé, point de vue pertinent ; langue assez fluide, prononciation claire ; supports utilisés à bon escient</td><td>Réagit avec pertinence ; argumente et cherche à convaincre simplement ; langue assez fluide</td></tr>
+<tr><td>3</td><td>Discours pertinent par rapport à la dimension culturelle ou professionnelle du sujet ; langue globalement correcte ; relativement autonome par rapport aux supports</td><td>Prend sa part dans l'échange ; sait se reprendre ou reformuler ; vocabulaire globalement approprié</td></tr>
+<tr><td>2</td><td>Discours d'exposition (description, narration, explication) généralement compréhensible ; cherche à exprimer une appréciation ; se détache parfois des supports</td><td>S'efforce de prendre part, réagit simplement ; expressions mémorisées fréquentes</td></tr>
+<tr><td>1</td><td>Mots isolés, énoncés très courts, nombreuses pauses ; s'appuie uniquement sur les supports</td><td>Intervient peu ; répétitions et relances fréquentes ; réponses brèves</td></tr>
+</tbody>
+</table></div>
+<p>Note finale : A (/12) + B (/8) = /20. Fiche officielle : https://cache.media.education.gouv.fr/file/47/06/8/ensel369_annexe4_1423068.pdf</p></div>
 </section><section class="panel" id="fiches" aria-label="Fiches à imprimer">
 <h2>Fiches à imprimer</h2>
 <p>La séquence complète, en gros caractères (16 pt), est disponible en PDF, en Word et en OpenDocument. Elle contient la fiche professeur, les supports apprentis (Fiches 0 à 8 et S), les corrigés, les grilles et la version adaptée.</p>
@@ -1050,7 +1154,7 @@ d. Before we start, may I ask a few questions?</p>
 </ul>
 <p>À l'impression de la version adaptée : police sans empattement (Lexend, Arial ou OpenDyslexic), 16 pt au moins, interligne 1,5, texte aligné à gauche, jamais justifié, une consigne par ligne, mots-clés en gras, beaucoup d'espace blanc.</p>
 <p class="panel-foot">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
-</section><section class="panel" id="espace-prof" aria-label="Espace prof">
+</section><section class="panel prof-only" id="espace-prof" aria-label="Espace prof">
 <h2>Espace prof</h2>
 <div class="blk-secours">
 <h3>La météo de la classe (à chaque lesson, 2 minutes)</h3>
@@ -1125,7 +1229,94 @@ d. Before we start, may I ask a few questions?</p>
 <p>Les autres photographies et pictogrammes de cette page illustrent les lieux et le lexique de la séquence. Aucune de ces images ne montre de nudité. La police OpenDyslexic, utilisée pour la version dys, est sous licence SIL Open Font License 1.1.</p>
 <p class="panel-foot">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
 </section>
-  </main>
+  <section class="panel" id="eleve-absent" aria-label="Élève absent ou hospitalisé"><div class="compl-block"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. Welcome to a world city</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le texte de la Lesson 1 et la demande du client (Danish company, 40 employees).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does the client want?</li>
+<li>Which two venues does she hesitate between?</li>
+<li>What does she need advice on?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 1.</li>
+<li><strong>Je produis</strong> (10 min). Présente Londres en 60 mots à un client qui ne la connaît pas.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 2. Three districts, three jobs</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les présentations des trois quartiers.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Name the three districts.</li>
+<li>Which job is linked to each district?</li>
+<li>Which district would you recommend to the client? Why?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 2.</li>
+<li><strong>Je produis</strong> (10 min). Recommande un quartier en 60 mots, selon ton métier.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Lesson 3. Getting around: Tube or river bus?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Écoute le document de la Lesson 3 (deux fois).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How much does each transport cost?</li>
+<li>Which one is faster?</li>
+<li>Which one would you choose for a group of 40? Why?</li>
+<li><strong>Étude de la langue</strong> (10 min). Comparatifs : trois phrases (<em>cheaper, faster, more comfortable</em>).</li>
+<li><strong>Je produis</strong> (10 min). Écris un message au client pour conseiller un transport (60 mots).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 3 et les trois phrases.</p>
+<h3>Lesson 4. What the client said</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis ou écoute le message du client (Lesson 4).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does the client want to change?</li>
+<li>What is she worried about?</li>
+<li>What does she ask you to do?</li>
+<li><strong>Étude de la langue</strong> (10 min). Discours indirect : <em>She said that… She asked if… She wanted to know…</em></li>
+<li><strong>Je produis</strong> (10 min). Rapporte le message à ton responsable en 60 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et deux phrases au discours indirect.</p>
+<h3>Lesson 5. Four steps to a good sale</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les quatre étapes de la vente (Lesson 5).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What are the four steps?</li>
+<li>How do you answer an objection on the price?</li>
+<li>What is a good closing sentence?</li>
+<li><strong>Étude de la langue</strong> (10 min). Amorces : <em>I understand your concern…</em>, <em>What if we…?</em></li>
+<li><strong>Je produis</strong> (10 min). Écris un dialogue de huit répliques avec un client qui hésite.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie les quatre étapes. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : les quatre étapes et deux répliques.</p>
+<h3>Lesson 6. Évaluation sommative écrite</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). L'évaluation écrite se fait à la maison ou à l'hôpital, 45 minutes, sans aide. Le document audio est sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Fais la compréhension de l'écrit.</li>
+<li>Fais la compréhension de l'oral.</li>
+<li>Écris l'email au client.</li>
+<li><strong>Étude de la langue</strong> (10 min). Relis tes traces écrites.</li>
+<li><strong>Je produis</strong> (10 min). Email au client, 120 à 150 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : compréhension de l'écrit et email.</p>
+<h3>Lesson 7. Évaluation sommative orale</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Prépare ton pitch avec une image et des notes.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Quelle option recommandes-tu ?</li>
+<li>Pourquoi ?</li>
+<li>Quels doutes le client peut-il avoir ?</li>
+<li><strong>Étude de la langue</strong> (10 min). Reformuler un doute : <em>If I understand correctly, you are worried that…</em></li>
+<li><strong>Je produis</strong> (10 min). Enregistre ton pitch (2 à 5 minutes), puis réponds à trois questions écrites envoyées par l'enseignante.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : pitch de 2 minutes seulement.</p></div></section>
+</main>
 <div class="timer" id="timer" hidden><span class="timer-t" id="timer-t">00:00</span><button type="button" id="timer-pause">Pause</button><button type="button" id="timer-stop">Fermer</button></div>
   <footer class="site-footer">
     <div class="wrap">

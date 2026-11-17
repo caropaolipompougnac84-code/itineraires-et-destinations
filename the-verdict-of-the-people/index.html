@@ -88,8 +88,23 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look">
+<body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +113,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a class="on" href="/the-verdict-of-the-people/">Home</a>
 <a href="/the-verdict-of-the-people/s1/">L1</a>
@@ -159,6 +197,151 @@ body.dys p,body.dys li{max-width:38em}
 <li><a href="https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement" target="_blank" rel="noopener">Office of the US Trade Representative, USMCA</a> (entry into force: 1 July 2020).</li>
 </ul>
 </main>
+<section class="compl-block" id="eleve-absent"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. Reading the Verdict</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Observe le tableau de la Lesson 1 (titre, artiste) et lis la Source A.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What do you see in the painting?</li>
+<li>What is the political question in the painting?</li>
+<li>What does Source A say about elections?</li>
+<li><strong>Étude de la langue</strong> (10 min). Décrire et nuancer : fais l'exercice 1C.</li>
+<li><strong>Je produis</strong> (10 min). En 60 mots : <em>An election can show people's power because…</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 2. Why Midterms Matter</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis la Source B (Lesson 2).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What are the midterms?</li>
+<li>Name one shared and one separate power of Congress.</li>
+<li>Why do midterms matter?</li>
+<li><strong>Étude de la langue</strong> (10 min). Passif : réécris trois phrases au passif (<em>Senators are elected…</em>).</li>
+<li><strong>Je produis</strong> (10 min). Explique les midterms à un camarade français en 60 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 3 et la trace écrite.</p>
+<h3>Lesson 3. Citizens, but Equally Represented?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Situe Porto Rico et Washington, D.C. sur une carte. Lis la Source C.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Are the people of Puerto Rico US citizens?</li>
+<li>Can they vote for the President?</li>
+<li>What is the situation of Washington, D.C.?</li>
+<li><strong>Étude de la langue</strong> (10 min). Comparatifs : <em>as many rights as</em>, <em>fewer votes than</em>. Trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). En 80 mots : <em>Citizens, but equally represented?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 4. Images, Claims and Reported Speech</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Observe le tableau de la Lesson 4 et lis la source.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What claim is made in the source?</li>
+<li>Who makes it?</li>
+<li>Is it a fact or an opinion?</li>
+<li><strong>Étude de la langue</strong> (10 min). Discours rapporté : rapporte trois phrases de la source (<em>He said that…</em>).</li>
+<li><strong>Je produis</strong> (10 min). Rapporte en 60 mots ce que dit un candidat, sans donner ton avis.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : une phrase rapportée et la trace écrite.</p>
+<h3>Lesson 5. Results: Establish, Date and Qualify</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le dossier de sources de la Lesson 5 (résultats).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the result, and when was it published?</li>
+<li>Is the result final or provisional?</li>
+<li>What does Source B add?</li>
+<li><strong>Étude de la langue</strong> (10 min). Probabilité : <em>may, might, is likely to</em>. Trois phrases sur les résultats.</li>
+<li><strong>Je produis</strong> (10 min). Écris une note de 60 mots qui établit, date et nuance un résultat.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 5. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et la note.</p>
+<h3>Lesson 6. Beyond US Borders</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Situe le Canada, le Mexique et deux îles des Caraïbes. Lis la Source F et écoute la Source G (deux fois).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How do the neighbours of the USA react to the result?</li>
+<li>What is the link with the Caribbean?</li>
+<li>Give one fact and its limit.</li>
+<li><strong>Étude de la langue</strong> (10 min). Relatives : trois phrases avec <em>which</em> ou <em>who</em>.</li>
+<li><strong>Je produis</strong> (10 min). En 80 mots : <em>Do US elections matter outside the USA?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 6. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et la trace écrite.</p>
+<h3>Lesson 7. The Cross-Border Radio Discussion</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Relis tes traces écrites.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Choose one fact you are sure of.</li>
+<li>Name its source and date.</li>
+<li>Name one limit of this fact.</li>
+<li><strong>Étude de la langue</strong> (10 min). Expressions de la discussion : <em>Let me come back to…</em>, <em>I see your point, but…</em></li>
+<li><strong>Je produis</strong> (10 min). Enregistre une intervention radio de 2 minutes (ou écris 150 mots) avec un fait sourcé et sa limite.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ton ouverture de discussion. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : une intervention de 1 minute.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
+<p>Axes : axe 6 (toutes les années) et axe 2 (années paires).</p>
+<h3>Déroulé en deux lessons de 52 minutes</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Lecture des consignes, repérage du ou des documents.</td><td>Lecture</td></tr>
+<tr><td>3 à 43</td><td>Compréhension de l'écrit</td><td>Lecture, prise de notes, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>43 à 50</td><td>Relecture</td><td>Relecture du compte rendu, vérification des références au texte.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question (si deux questions sont proposées).</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan en trois parties, trois exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 200 à 250 mots environ ; LVB : 150 à 180 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée : temps, accords, connecteurs, orthographe.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<h3>Compréhension de l'écrit (/10)</h3>
+<p>Document : un article de presse américain authentique (2 300 à 4 000 signes) sur le statut de Porto Rico ou sur le vote des habitants de Washington, D.C. (par exemple un article d'AP News ou de NPR, en libre accès).</p>
+<p>Questions de guidage (en français) :</p>
+<ul>
+<li>Présentez le document.</li>
+<li>Quelle situation le document décrit-il ?</li>
+<li>Quels arguments sont présentés pour et contre un changement de statut ?</li>
+<li>Quel est le point de vue de l'auteur, et comment le savez-vous ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<h3>Expression écrite (/10)</h3>
+<p>Traitez une des questions :</p>
+<ul>
+<li><em>Are all US citizens equally represented?</em> Use examples from the sequence.</li>
+<li><em>Should Puerto Rico become the 51st state? Write an article for your school newspaper.</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div></section>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>
 <p>This sequence is original teaching material for language learning. It does not supply or invent any 2026 election result: students establish results from dated, identifiable sources. Every image is in the public domain or under a free licence, credited next to the picture, with a caption that explains its link with the lesson. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0 licence</a>.</p>

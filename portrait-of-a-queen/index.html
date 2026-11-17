@@ -110,8 +110,23 @@ body.dys main{max-width:720px}
 .grid-wrap{overflow-x:auto}
 table.grid td,table.grid th{font-size:.92rem}
 </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look" style="--c:#1f4fd1">
+<body class="mode-eleve english-look" style="--c:#1f4fd1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -121,6 +136,29 @@ table.grid td,table.grid th{font-size:.92rem}
 <a href="/who-rules-britain/">Who Rules Britain?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a class="on" href="/portrait-of-a-queen/">Home</a>
 <a href="/portrait-of-a-queen/s1/">L1</a>
@@ -257,6 +295,203 @@ table.grid td,table.grid th{font-size:.92rem}
 </ul>
 
 </main>
+<section class="compl-block" id="eleve-absent"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. Dignified power</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le texte de Bagehot et la photo de la relève de la garde sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is « dignified » power?</li>
+<li>Why does a monarch need to be seen?</li>
+<li>What does the photo show?</li>
+<li><strong>Étude de la langue</strong> (10 min). Passif (<em>is seen, is admired</em>).</li>
+<li><strong>Je produis</strong> (10 min). En 100 mots : <em>Why must a queen be seen?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 2. Gloriana: the first Elizabeth's mask</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le portrait d'Elizabeth I (Lesson 2) sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What symbols do you see?</li>
+<li>What is a « mask of youth »?</li>
+<li>What image of power does the portrait give?</li>
+<li><strong>Étude de la langue</strong> (10 min). Description d'image (<em>in the foreground, symbolises</em>).</li>
+<li><strong>Je produis</strong> (10 min). Décris le portrait en 100 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 3. A vow: Cape Town, 21 April 1947</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le discours du Cap (texte et audio) sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Where and when did the princess speak?</li>
+<li>What did she promise?</li>
+<li>Who was she speaking to?</li>
+<li><strong>Étude de la langue</strong> (10 min). Discours rapporté (<em>She promised that…</em>).</li>
+<li><strong>Je produis</strong> (10 min). Rapporte la promesse en 100 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 4. Crowned on camera, 2 June 1953</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le document sur le couronnement télévisé sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How many people watched?</li>
+<li>Why was television important?</li>
+<li>What was not filmed?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prétérit et passif (<em>was broadcast, was watched</em>).</li>
+<li><strong>Je produis</strong> (10 min). En 100 mots : <em>Why did the coronation change the image of the monarchy?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 5. Annigoni 1955, Freud 2001: idealised or unflinching?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre les deux portraits (pages officielles des musées) sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Who painted each portrait, and when?</li>
+<li>Which one is idealised? Which one is unflinching?</li>
+<li>Which do you prefer? Why?</li>
+<li><strong>Étude de la langue</strong> (10 min). Comparaison (<em>whereas, unlike, more… than</em>).</li>
+<li><strong>Je produis</strong> (10 min). Compare les deux portraits en 120 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 5. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 6. Annus horribilis, 24 November 1992</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le discours du 24 novembre 1992 sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does « annus horribilis » mean?</li>
+<li>What happened that year?</li>
+<li>What is the tone of the speech?</li>
+<li><strong>Étude de la langue</strong> (10 min). Modaux de déduction (<em>must have been, can't have been</em>).</li>
+<li><strong>Je produis</strong> (10 min). En 100 mots : <em>How did the Queen speak about a bad year?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 6. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 7. 1997 and 2020: speaking to the nation</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre les discours de 1997 et de 2020 (audio et texte) sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>When and why did she speak in 1997? In 2020?</li>
+<li>What is the key sentence of each speech?</li>
+<li>What do the two speeches have in common?</li>
+<li><strong>Étude de la langue</strong> (10 min). Rhétorique : répétition, pronom <em>we</em>.</li>
+<li><strong>Je produis</strong> (10 min). Écris un court discours de 100 mots à la nation sur un événement de l'année.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 7. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
+<h3>Lesson 8. The Crown: fiction, history and the right to invent</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le document sur la série The Crown sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is The Crown?</li>
+<li>What is invented? What is historical?</li>
+<li>Do fiction writers have the right to invent?</li>
+<li><strong>Étude de la langue</strong> (10 min). Opinion nuancée (<em>It could be argued that…</em>).</li>
+<li><strong>Je produis</strong> (10 min). En 150 mots : <em>Can fiction tell the truth about history?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 8. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de Terminale (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Terminale (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027 ; modèle d'entraînement pour les élèves en contrôle continu) :</p>
+<ul>
+<li>Écrit, 1 h 30 (temps d'écoute non compris) : compréhension de l'oral (document de 1 min 30 au plus, trois écoutes séparées d'une minute, compte rendu en français) ; compréhension de l'écrit (2 500 à 4 300 signes) ; expression écrite (une ou deux questions). Compréhension et expression ont le même poids.</li>
+<li>Oral, 10 minutes, 10 minutes de préparation : l'examinateur propose deux axes, le candidat en choisit un ; il reçoit deux documents iconographiques ou citations ; présentation de 5 minutes au plus, puis entretien.</li>
+<li>Niveaux : B2 en LVA, B1 en LVB.</li>
+<li>Axes de l'écrit : années paires 2, 4, 6 ; années impaires 1, 5, 6. Axes de l'oral (voie générale) : 1, 2, 4, 5, 6.</li>
+</ul>
+<p>Axes : axe 6 (écrit toutes les années, oral), axe 4 (écrit les années paires, oral).</p>
+<h3>Écrit en deux lessons de 52 minutes (ou une plage de 2 heures)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Présentation de l'épreuve.</td><td>Lecture</td></tr>
+<tr><td>2 à 10</td><td>Compréhension de l'oral : écoutes</td><td>Trois écoutes séparées d'une minute, prise de notes.</td><td>CO</td></tr>
+<tr><td>10 à 24</td><td>Compréhension de l'oral : compte rendu</td><td>Compte rendu en français.</td><td>CO</td></tr>
+<tr><td>24 à 50</td><td>Compréhension de l'écrit</td><td>Lecture, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question.</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan et exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 250 à 300 mots environ ; LVB : 180 à 220 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral (/10).</strong> Document : l'extrait audio du discours de la reine du 5 avril 2020 (chaîne officielle de la famille royale, libre accès), 1 min 30 au plus.</p>
+<p>Consigne : « Rendez compte en français du document. » Points à retrouver :</p>
+<ul>
+<li>Le contexte (date, situation).</li>
+<li>Les personnes à qui la reine s'adresse.</li>
+<li>Le message principal.</li>
+<li>Les procédés (nous, répétition, référence au passé).</li>
+</ul>
+<p>Grille de classe, compréhension de l'oral (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques mots ou éléments isolés</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, organisés ; le point de vue général</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; le point de vue, le ton, les intentions</td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'écrit (/10).</strong> Document : un article authentique de 2 500 à 4 300 signes sur l'image de la monarchie après 2022 (BBC News, libre accès).</p>
+<p>Questions de guidage :</p>
+<ul>
+<li>Présentez le document.</li>
+<li>Comment la monarchie entretient-elle son image ?</li>
+<li>Quelles critiques sont rapportées ?</li>
+<li>Quel est le point de vue de l'auteur ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<p><strong>Expression écrite (/10 ; ramenée sur 20 avec la compréhension, même poids).</strong> Traitez une des questions :</p>
+<ul>
+<li><em>Does a monarchy need to be seen to survive?</em></li>
+<li><em>Write the script of a short podcast episode: « Elizabeth II, an image of power ».</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div>
+<h3>Oral blanc (10 minutes, 10 minutes de préparation)</h3>
+<p>Organisation : quatre passages par lesson (4 × 10 min, plus 2 min de transition chacun, 4 min d'installation) ; les élèves préparent pendant le passage du précédent.</p>
+<p>Documents de l'oral blanc :</p>
+<ul>
+<li>Axe 6 : la photo officielle du couronnement de 1953 ; la carte du Commonwealth.</li>
+<li>Axe 4 : la phrase « We will meet again » (2020) ; la phrase « annus horribilis » (1992).</li>
+</ul>
+<p>Grille de classe, oral (/20) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Expression en continu : contenu</td><td>/6</td><td>2 : description des documents ; 4 : documents reliés à l'axe ; 6 : problématique claire, analyse nuancée, références culturelles</td></tr>
+<tr><td>Expression en continu : langue</td><td>/4</td><td>1 : langue simple, nombreuses hésitations ; 2 : correcte, lexique de la séquence ; 3 : fluide ; 4 : précise et variée</td></tr>
+<tr><td>Entretien : réactivité</td><td>/6</td><td>2 : réponses brèves ; 4 : réponses développées ; 6 : relance, argumente, défend un point de vue</td></tr>
+<tr><td>Entretien : langue</td><td>/4</td><td>1 à 4, mêmes repères que l'expression en continu</td></tr>
+</tbody>
+</table></div></section>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>
 <p>This sequence is original teaching material. Short official quotations are linked to their full texts on the Royal Family website. Public-domain paintings are credited next to each image, with a caption that explains the link with the lesson. Copyrighted portraits (Annigoni, Freud, Beaton, Sutherland) and stills from <em>The Crown</em> are not reproduced: they are described and linked to official pages. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0 licence</a>.</p>

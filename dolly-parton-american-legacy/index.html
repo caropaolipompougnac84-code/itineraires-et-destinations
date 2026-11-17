@@ -200,8 +200,23 @@
 
   </style>
   
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body data-section="lycee-pro" class="english-look">
+<body data-section="lycee-pro" class="mode-eleve english-look">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
@@ -249,6 +264,29 @@
 </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 
     
 <figure class="look-hero"><img src="/dolly-parton-american-legacy/img/look/nashville-ryman-broadway.jpg" alt="A wide view of the Ryman Auditorium and Broadway in Nashville, with the city skyline beyond." width="1600" height="870"><figcaption>The Ryman Auditorium and Broadway, Nashville. Photo: Daniel Schwen. CC BY-SA 4.0, Wikimedia Commons.</figcaption></figure><section class="page-hero">
@@ -467,7 +505,216 @@
     <nav class="pager" aria-label="Previous and next"><a href="s1/">Next: Lesson 1</a></nav>
   </main>
 
-  <footer class="site-footer">
+  <section class="compl-block" id="eleve-absent"><h2>2. Activités langagières à ajouter ou signaler</h2>
+<div class='tw'><table>
+<thead><tr><th>Lesson</th><th>Ajout ou marque</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>CO : 4 min, extrait sonore d'une interview de Dolly Parton (chaîne officielle), deux écoutes, trois mots à relever, pris sur l'observation du portrait de Warhol</td></tr>
+<tr><td>2, 6, 8</td><td>PE : la trace écrite devient une production de 3 phrases personnelles (<em>Like Dolly, I…</em>)</td></tr>
+<tr><td>3</td><td>PI : les trois jeux de rôle des coulisses (déjà présents, à marquer). CO : l'enseignante joue le premier dialogue, les élèves notent qui demande quoi</td></tr>
+<tr><td>5</td><td>CO : vidéo officielle de recrutement de Dollywood (1 min 30, deux écoutes)</td></tr>
+<tr><td>9</td><td>CO : partie compréhension de l'oral de l'évaluation finale (voir situation A blanche ci-dessous)</td></tr>
+<tr><td>1 à 9</td><td>PI : tous les échanges en binôme déjà prévus</td></tr>
+</tbody>
+</table></div>
+<h2>3. Trace écrite et Étude de la langue manquantes</h2>
+<ul>
+<li>Lesson 3, Étude de la langue : demandes polies (<em>Could you…? Would you mind…? I'd like…</em>).</li>
+<li>Lesson 9 : trace écrite remplacée par la fiche d'autoévaluation ; Étude de la langue : relecture guidée (temps, accords, connecteurs).</li>
+<li>Versions dys : remplacer les flèches (dix dans la lesson 1).</li>
+</ul>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. An icon in colour: Warhol's Dolly</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Observe le portrait de Dolly Parton par Andy Warhol (Lesson 1).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What colours do you see?</li>
+<li>What is Pop Art?</li>
+<li>Why is Dolly an icon?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 1.</li>
+<li><strong>Je produis</strong> (10 min). Décris le portrait en 50 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Lesson 2. Rags to rhinestones</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le texte sur l'enfance de Dolly (Lesson 2).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Where was Dolly born?</li>
+<li>Was her family rich or poor?</li>
+<li>What does « from rags to rhinestones » mean?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prétérit : relève cinq verbes et donne leur base verbale.</li>
+<li><strong>Je produis</strong> (10 min). Raconte l'enfance de Dolly en 60 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 3. Backstage: three role-plays</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis les trois dialogues des coulisses.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Who are the people in each role-play?</li>
+<li>What does each person ask for?</li>
+<li>Which one is the most polite?</li>
+<li><strong>Étude de la langue</strong> (10 min). Demandes polies : <em>Could you…? Would you mind…? I'd like…</em></li>
+<li><strong>Je produis</strong> (10 min). Écris un dialogue de six répliques entre un technicien et une artiste.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie les trois demandes polies que tu préfères. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : une question et trois demandes polies.</p>
+<h3>Lesson 4. 9 to 5: working women</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Écoute la chanson 9 to 5 et lis le texte de la Lesson 4.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the song about?</li>
+<li>What problems do working women have in the song?</li>
+<li>Is it still true today?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 4.</li>
+<li><strong>Je produis</strong> (10 min). En 60 mots : <em>Is 9 to 5 still a modern song?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 5. Dollywood: a business and an employer</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le document sur Dollywood (Lesson 5).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Where is Dollywood?</li>
+<li>How many people work there?</li>
+<li>What does Dollywood offer its employees?</li>
+<li><strong>Étude de la langue</strong> (10 min). Chiffres et nombres : écris cinq chiffres du document en toutes lettres.</li>
+<li><strong>Je produis</strong> (10 min). Écris une courte annonce d'emploi pour Dollywood (60 mots).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 5. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Lesson 6. Aunt Dolly: passing the torch to Miley</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le document de la Lesson 6.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Who is Miley Cyrus for Dolly?</li>
+<li>What does « passing the torch » mean?</li>
+<li>What did Dolly give her?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 6.</li>
+<li><strong>Je produis</strong> (10 min). En 50 mots : <em>Who passed the torch to you? (a family member, a teacher, a tutor at work)</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 6. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 7. True or Tale? The inheritance rumour</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis la rumeur et la vérification de la Lesson 7.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the rumour?</li>
+<li>Is it true? How do you know?</li>
+<li>How can we check a rumour?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 7.</li>
+<li><strong>Je produis</strong> (10 min). Écris trois conseils pour vérifier une rumeur.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 7. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 8. Dolly's legacy</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le texte sur l'Imagination Library.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is the Imagination Library?</li>
+<li>Why did Dolly start it?</li>
+<li>Which countries does it reach?</li>
+<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de la Lesson 8.</li>
+<li><strong>Je produis</strong> (10 min). En 80 mots : <em>What is Dolly's legacy?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 8. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 9. Final task and summative assessment</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). L'évaluation finale se fait à la maison ou à l'hôpital, 45 minutes, sans aide. Le document audio est sur la page.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Fais la compréhension de l'oral.</li>
+<li>Fais la compréhension de l'écrit.</li>
+<li>Fais l'expression écrite.</li>
+<li><strong>Étude de la langue</strong> (10 min). Relis tes traces écrites avant de commencer.</li>
+<li><strong>Je produis</strong> (10 min). Enregistre 3 minutes de présentation (partie orale).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : compréhension de l'écrit et expression écrite.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Entraînement au CCF (version prof)</h2>
+<p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, bac pro, coefficient 2) :</p>
+<ul>
+<li>Situation A, écrite, 1 heure au plus, en dernière année de formation : compréhension de l'oral (document de 1 min 30 au plus, entendu trois fois, une minute entre les écoutes, compte rendu en français) ; compréhension de l'écrit (document authentique inconnu de 15 lignes de 70 caractères au plus, compte rendu en français) ; expression écrite (deux sujets au choix, l'un sur la vie quotidienne, l'autre sur la vie professionnelle, 100 à 120 mots au moins selon la consigne).</li>
+<li>Situation B, orale, 10 minutes : partie 1, expression orale en continu, 5 minutes au plus, sur un travail, un projet, un produit, un service ou une expérience professionnelle, sans lecture, notes et une image autorisées ; partie 2, interaction, 5 minutes au plus, à partir de la présentation.</li>
+<li>En Première : entraînement au format, sans valeur certificative.</li>
+</ul>
+<h3>Situation A blanche, en une lesson de 52 minutes (version prof)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Les élèves lisent les trois parties et choisissent leur sujet d'expression écrite.</td><td>Lecture</td></tr>
+<tr><td>2 à 17</td><td>Compréhension de l'oral</td><td>Trois écoutes du document (1 min 30 au plus), une minute entre chaque écoute ; prise de notes ; compte rendu en français.</td><td>CO</td></tr>
+<tr><td>17 à 32</td><td>Compréhension de l'écrit</td><td>Lecture du document, compte rendu en français guidé par les questions.</td><td>CE</td></tr>
+<tr><td>32 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 100 à 120 mots au moins.</td><td>PE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots, ramassage.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral.</strong> document à choisir : une vidéo authentique de 1 min 30 au plus sur l'Imagination Library ou sur Dollywood (chaîne officielle de la Dollywood Foundation), en libre accès.</p>
+<p>Consigne : « Écoutez trois fois le document. Rendez compte en français de ce que vous avez compris : qui parle, de quoi, où, pourquoi, et ce que la personne pense. »</p>
+<p><strong>Compréhension de l'écrit.</strong> Texte d'entraînement (le jour du CCF, prendre un document authentique inconnu de 15 lignes au plus) :</p>
+<blockquote><p>In 1995, Dolly Parton started a small project in Sevier County, Tennessee, where she grew up. Every month, each child under five received a book by post, at no cost to the family. Dolly did it for her father: he could not read or write, and she wanted other children to have a better chance. The project is called the Imagination Library. Today, it sends books to children in the United States, Canada, the United Kingdom, Ireland and Australia. In 2023, it gave its two hundred millionth book. Dolly often says that she is proud to be called « the Book Lady ».</p></blockquote>
+<p>Source : texte d'entraînement écrit pour la classe, d'après les informations publiées par la Dollywood Foundation (imaginationlibrary.com).</p>
+<p>Consigne : « Rendez compte en français du document. Aidez-vous des questions. »</p>
+<ul>
+<li>Où et quand le projet a-t-il commencé ?</li>
+<li>Que reçoivent les enfants, et à quel rythme ?</li>
+<li>Pourquoi Dolly Parton a-t-elle lancé ce projet ?</li>
+<li>Quelle est l'importance du projet aujourd'hui ?</li>
+</ul>
+<p><strong>Expression écrite.</strong> Choisissez un sujet. Écrivez 100 à 120 mots au moins.</p>
+<ul>
+<li>Sujet 1 (vie quotidienne) : <em>Which person (an artist, a sports player, a member of your family) is a model for you? Explain why.</em></li>
+<li>Sujet 2 (vie professionnelle) : <em>You work in a bookshop. A customer wants a book for a young child. Write an email to recommend one book and explain your choice.</em></li>
+</ul>
+<h3>Situation B blanche (version prof)</h3>
+<p>Organisation : 10 minutes par élève (5 minutes de présentation, 5 minutes d'échange). Avec 24 élèves, prévoir 6 lessons, quatre passages par lesson. Pendant les passages, les autres élèves travaillent en autonomie au fond de la salle (fiche ci-dessous), casque ou travail écrit, sans bruit.</p>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage au tableau ; les élèves en autonomie prennent la fiche.</td><td>Lecture</td></tr>
+<tr><td>4 à 15</td><td>Passage 1</td><td>5 min de présentation sans lecture, puis 5 min d'échange ; 1 min de notation.</td><td>PO, PI</td></tr>
+<tr><td>15 à 26</td><td>Passage 2</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>26 à 37</td><td>Passage 3</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>37 à 48</td><td>Passage 4</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>48 à 52</td><td>Bilan collectif</td><td>Deux conseils pour la classe, sans nommer personne.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p>Sujets de présentation possibles (l'élève choisit, une image et des notes autorisées, pas de texte rédigé) :</p>
+<ul>
+<li>Présenter un artiste ou une œuvre (chanson, portrait) qui compte pour soi, une image autorisée.</li>
+<li>Présenter son métier ou une tâche réalisée en PFMP, comme Dollywood présente ses métiers.</li>
+<li>Version couture : présenter une tenue de scène (croquis ou photo), les matières, les étapes de fabrication.</li>
+</ul>
+<p>Questions d'échange, à adapter : « Why did you choose this? » ; « What was the most difficult part? » ; « What would you do differently? » ; « Would you recommend it to a customer? Why? » ; « What did you learn? » ; « Can you tell me more about…? »</p>
+<p>Travail en autonomie pendant les passages : préparer sa propre fiche de présentation (5 mots clés, 3 phrases d'accroche, 1 image), puis faire les exercices d'Étude de la langue de la séquence.</p>
+<h3>Grille nationale bac pro LVA (BO n° 47 du 16 décembre 2021, annexe 4), version prof</h3>
+<p>Situation A, sur 12 (chaque activité de 0 à 4, demi-points possibles) :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Compréhension de l'oral</th><th>Compréhension de l'écrit</th><th>Expression écrite</th></tr></thead>
+<tbody>
+<tr><td>4 (4 ou 3,5)</td><td>Comprend l'essentiel des informations, perçoit la cohérence d'ensemble, identifie le point de vue ou les intentions</td><td>Mêmes critères sur le document écrit</td><td>S'exprime clairement, même avec des erreurs dans les structures complexes ; lexique varié ; expose avantages ou inconvénients ; justifie</td></tr>
+<tr><td>3 (3 ou 2,5)</td><td>Relève certains des éléments porteurs de sens ; saisit certains liens entre les informations</td><td>Mêmes critères sur le document écrit</td><td>Écrit descriptif ou narratif au volume attendu ; structures simples ; lexique assez varié ; sentiments ou point de vue ; erreurs qui gênent peu</td></tr>
+<tr><td>2 (2 ou 1,5)</td><td>Identifie la thématique ou l'objet principal ; comprend les informations les plus significatives et quelques détails</td><td>Mêmes critères sur le document écrit</td><td>Écrit globalement compréhensible malgré des erreurs ; cherche à exprimer une appréciation ; effort de construction</td></tr>
+<tr><td>1 (1 ou 0,5)</td><td>Identifie quelques sons, mots ou éléments isolés ; comprend en partie les informations factuelles (personnes, lieux, dates)</td><td>Identifie quelques mots isolés ; comprend en partie les informations factuelles</td><td>Écrit nettement trop court ; langue en partie compréhensible ; mots isolés</td></tr>
+</tbody>
+</table></div>
+<p>Situation B, sur 8 :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Expression orale en continu (/4)</th><th>Interaction orale (/4)</th></tr></thead>
+<tbody>
+<tr><td>4</td><td>Discours assez nuancé, informé, point de vue pertinent ; langue assez fluide, prononciation claire ; supports utilisés à bon escient</td><td>Réagit avec pertinence ; argumente et cherche à convaincre simplement ; langue assez fluide</td></tr>
+<tr><td>3</td><td>Discours pertinent par rapport à la dimension culturelle ou professionnelle du sujet ; langue globalement correcte ; relativement autonome par rapport aux supports</td><td>Prend sa part dans l'échange ; sait se reprendre ou reformuler ; vocabulaire globalement approprié</td></tr>
+<tr><td>2</td><td>Discours d'exposition (description, narration, explication) généralement compréhensible ; cherche à exprimer une appréciation ; se détache parfois des supports</td><td>S'efforce de prendre part, réagit simplement ; expressions mémorisées fréquentes</td></tr>
+<tr><td>1</td><td>Mots isolés, énoncés très courts, nombreuses pauses ; s'appuie uniquement sur les supports</td><td>Intervient peu ; répétitions et relances fréquentes ; réponses brèves</td></tr>
+</tbody>
+</table></div>
+<p>Note finale : A (/12) + B (/8) = /20. Fiche officielle : https://cache.media.education.gouv.fr/file/47/06/8/ensel369_annexe4_1423068.pdf</p></section>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a></strong></p>

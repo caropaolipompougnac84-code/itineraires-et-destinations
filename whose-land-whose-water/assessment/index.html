@@ -112,8 +112,23 @@ body.dys p,body.dys li{max-width:38em}
 h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 .dl-line{margin:.4em 0 1em}.worksheet h3{scroll-margin-top:12px}
 </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look">
+<body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -122,6 +137,29 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/">Whose Land, Whose Water?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/whose-land-whose-water/">Home</a>
 <a href="/whose-land-whose-water/#presentation">Présentation</a>
@@ -141,7 +179,9 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <a href="/whose-land-whose-water/teacher/">Teacher notes</a>
 <a href="/whose-land-whose-water/the-sentence-i-cannot-finish-alone/">Method</a>
 </nav>
-<p class="switch"><a href="/whose-land-whose-water/dys/assessment/">Adapted version (dyslexia): SEGPA, CAP, CFA, bac pro</a></p>
+<p class="switch"><a href="/whose-land-whose-water/dys/assessment/">Adapted version (dyslexia): SEGPA, CAP, CFA, bac pro</a></p><div class="eleve-gate-note"><p><strong>Version élève.</strong> Les évaluations, les grilles et les corrigés sont réservés au professeur. Ouvrez la Version prof pour les afficher. Si vous ne pouvez pas venir en classe ou si vous êtes hospitalisé, utilisez le parcours « L'élève ne peut pas venir en classe ou est hospitalisé » sur la page d'accueil de la séquence.</p></div>
+<div class="prof-only assessment-prof">
+
 <span class="level">Lycée général et technologique · Première</span><span class="level">LVA B1+ · LVB B1</span><span class="level">Bac pro · CFA</span><span class="level">CAP · A2 route</span>
 
 <h1>Assessment</h1>
@@ -171,7 +211,8 @@ h4{font-size:1.02rem;margin:1em 0 .35em;color:var(--navy)}
 <p>For B1, accept connected simple sentences and brief reasons. For B1+, expect a more developed explanation and clearer qualification. Do not turn the rubric into a checklist requiring every advanced grammar structure.</p>
 <h2>Student self-check before handing in</h2><ul class="box-check"><li>□ I named the subject.</li><li>□ I used information from the lessons.</li><li>□ I named the source.</li><li>□ I dated any changing figure.</li><li>□ I made a clear request.</li><li>□ I did not invent evidence.</li><li>□ I said the message aloud.</li></ul>
 <p>The evidence card, question sheet, open-letter frame and model letter are on the <a href="/whose-land-whose-water/s8/">lesson 8 page</a>.</p>
-</main>
+
+</div></main>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>
 <p>This sequence is original teaching material for language learning. Drinking-water figures come from the Indigenous Services Canada snapshot dated 10 September 2026 (158 long-term advisories lifted since November 2015, 38 active, in 36 communities); they change and should be checked before use. The Trans Mountain figure (an offer of a collective 15% ownership share to 128 Indigenous groups) comes from the November 2026 federal budget; an offer is not a completed transfer. The paintings by Norval Morrisseau and Jim Logan are reproduced with the permission of the Norval Morrisseau Estate and of the artist, and are credited beside each image. Licensed photographs are credited next to each picture, with a caption that explains the link with the lesson. Videos are linked on YouTube, not copied. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0 licence</a>.</p>

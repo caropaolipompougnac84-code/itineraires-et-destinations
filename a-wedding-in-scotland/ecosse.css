@@ -501,3 +501,9 @@ body.english-look .brand-tag{color:#E8F1FB!important}
 .skill-tag{background:var(--b)!important}
 .skills-line{color:var(--b)!important;background:var(--pale)!important}
 .tab.on{background:#005EB8;border-color:#005EB8}
+
+/* Version élève: hide teacher evaluations and teacher space */
+.mode-eleve .tab.prof-only,
+.mode-eleve .panel.prof-only,
+.mode-eleve #evaluations,
+.mode-eleve #espace-prof{display:none!important}

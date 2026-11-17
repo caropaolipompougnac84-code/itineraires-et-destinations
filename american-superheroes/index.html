@@ -189,8 +189,23 @@
     .nojs-note { display: none; font-size: 0.9rem; color: #555; }
     html:not(.js-tabs) .nojs-note { display: block; }
   </style>
-<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style></head>
-<body data-section="lycee-pro" class="english-look">
+<style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style>
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
+</head>
+<body data-section="lycee-pro" class="mode-eleve english-look">
   <header class="site-header">
     <div class="wrap">
       <div class="brand">
@@ -239,6 +254,29 @@
   </nav>
 
   <main class="wrap page-content" id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <p class="nojs-note">Without JavaScript, every lesson is on this page, one after another. The tabs above jump to each lesson.</p>
 
@@ -535,7 +573,256 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <section class="compl-block" id="eleve-absent"><h2>2. Lessons minutées (55 minutes, minutées sur 52)</h2>
+<h3>Lesson 1. What do we see on this page?</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Mise en route</td><td>Image projetée sans titre : chacun dit un mot en anglais (colour, man, city…).</td><td>PO</td></tr>
+<tr><td>5 à 15</td><td>Écoute</td><td>L'enseignante décrit la page 4 de The Black Terror no. 11 (1945) deux fois ; les élèves montrent les cases dont elle parle.</td><td>CO</td></tr>
+<tr><td>15 à 27</td><td>Observation guidée</td><td>Nombre de cases, gouttière, bulles, récitatifs, lecture des détails agrandis.</td><td>CE</td></tr>
+<tr><td>27 à 37</td><td>Building your vocabulary</td><td>panel, gutter, speech balloon, caption, splash ; jeu de désignation en binôme.</td><td>PI</td></tr>
+<tr><td>37 à 47</td><td>Étude de la langue</td><td><em>There is / there are</em>, prépositions de lieu (<em>in the top left panel, at the bottom</em>).</td><td></td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td>Trace recopiée, devoirs notés.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : On this page there are … panels. In the first panel, there is … A caption gives information; a balloon gives words.</p>
+<p><strong>Devoirs</strong> : Apprendre les cinq mots de la lesson ; décrire une case en trois phrases.</p>
+<p><strong>Sortie de secours</strong> (8 dernières minutes, si le tableau numérique ne marche pas ou si la lesson déborde) : Description orale collective d'une seule case, trace écrite dictée, devoirs au tableau.</p>
+<h3>Lesson 2. How does the page show movement?</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Rappel</td><td>Trois mots de la lesson 1, interrogation orale rapide.</td><td>PO</td></tr>
+<tr><td>5 à 15</td><td>Observation</td><td>Pages 3 et 6 : la grande case (splash), les onomatopées, les lignes de mouvement.</td><td>CE</td></tr>
+<tr><td>15 à 23</td><td>Écoute</td><td>L'enseignante lit une action en trois phrases ; les élèves retrouvent la case.</td><td>CO</td></tr>
+<tr><td>23 à 35</td><td>Étude de la langue</td><td>Présent en be + -ing pour décrire une image (<em>he is jumping, the car is speeding</em>).</td><td></td></tr>
+<tr><td>35 à 47</td><td>Production en binôme</td><td>A décrit une case, B la retrouve, puis on échange.</td><td>PI</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : A splash is one large image. Onomatopoeia shows sound (BANG!). Motion lines show movement. In this panel, the hero is jumping.</p>
+<p><strong>Devoirs</strong> : Écrire quatre phrases en be + -ing sur une case au choix.</p>
+<p><strong>Sortie de secours</strong> (8 dernières minutes, si le tableau numérique ne marche pas ou si la lesson déborde) : Jeu « find the panel » en classe entière, trace dictée.</p>
+<h3>Lesson 3. What kind of hero in wartime?</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Rappel</td><td>Une onomatopée, une phrase en be + -ing.</td><td>PO</td></tr>
+<tr><td>5 à 13</td><td>Contexte</td><td>Écoute : l'enseignante présente 1941 et l'entrée en guerre des États-Unis (deux fois), questions de repérage.</td><td>CO</td></tr>
+<tr><td>13 à 27</td><td>Lecture</td><td>Daredevil Comics no. 1 (juillet 1941), page d'ouverture : qui, contre qui, quel message.</td><td>CE</td></tr>
+<tr><td>27 à 37</td><td>Étude de la langue</td><td>Prétérit (<em>The comic appeared in 1941. The USA entered the war in December</em>).</td><td></td></tr>
+<tr><td>37 à 47</td><td>Production</td><td>Écrire 50 mots : <em>What kind of hero is he?</em></td><td>PE</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : Daredevil Comics no. 1 appeared in July 1941, before the USA entered the war. The hero fights Hitler: comics can carry a political message.</p>
+<p><strong>Devoirs</strong> : Apprendre cinq verbes irréguliers au prétérit ; finir le texte de 50 mots.</p>
+<p><strong>Sortie de secours</strong> (8 dernières minutes, si le tableau numérique ne marche pas ou si la lesson déborde) : Lecture commentée de la page en classe entière, trace dictée.</p>
+<h3>Lesson 4. Colour, and who is left out</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Rappel</td><td>Une phrase au prétérit sur 1941.</td><td>PO</td></tr>
+<tr><td>5 à 17</td><td>Couleur</td><td>Reprendre une page de la lesson 1 ou 2 : nommer les couleurs et leur place, sans plaquer un symbole.</td><td>CE, PO</td></tr>
+<tr><td>17 à 25</td><td>Pop Art</td><td>Écoute : l'enseignante présente Drowning Girl de Roy Lichtenstein (1963, MoMA), œuvre non reproduite ; lien vers la page du musée.</td><td>CO</td></tr>
+<tr><td>25 à 35</td><td>Étude de la langue</td><td><em>may, might, cannot</em> pour nuancer (<em>The yellow may suggest… but I cannot reduce…</em>).</td><td></td></tr>
+<tr><td>35 à 47</td><td>Qui est absent ?</td><td>En binôme : qui ne voit-on pas sur ces pages ? Femmes, minorités ; une phrase chacun.</td><td>PI, PE</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : The yellow captions may … but I cannot reduce the whole page to one colour meaning. Some people are left out of these pages.</p>
+<p><strong>Devoirs</strong> : Écrire trois phrases avec may, might, cannot sur une page au choix.</p>
+<p><strong>Sortie de secours</strong> (8 dernières minutes, si le tableau numérique ne marche pas ou si la lesson déborde) : Tour de table « one colour, one place », trace dictée.</p>
+<h3>Lesson 5. Escape game: The Museum of Unfinished Heroes</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 4</td><td>Consignes</td><td>Équipes de trois ou quatre, règles du jeu.</td><td>CE</td></tr>
+<tr><td>4 à 40</td><td>Escape game</td><td>Enveloppes 1 à 5 : compter les cases, corriger une étiquette fausse, etc. Indices sur demande.</td><td>CE, PI, PE</td></tr>
+<tr><td>40 à 47</td><td>Correction</td><td>Chaque équipe lit son étiquette corrigée.</td><td>PO</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : A good museum label is accurate: it says what we see, the date, the artist, and it does not mislead the visitor.</p>
+<p><strong>Devoirs</strong> : Réécrire une étiquette de musée pour une page de la séquence (40 mots).</p>
+<p><strong>Sortie de secours</strong> (8 dernières minutes, si le tableau numérique ne marche pas ou si la lesson déborde) : Une seule enveloppe en classe entière, trace dictée.</p>
+<h3>Lesson 6. Final task: images of a nation</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>La page imprimée est distribuée.</td><td>CE</td></tr>
+<tr><td>3 à 20</td><td>Décrire</td><td>Description écrite complète (cases, lecture, lieux, mouvement, bulles, couleur).</td><td>PE</td></tr>
+<tr><td>20 à 32</td><td>Lecture prudente</td><td>Ce que la page veut faire ressentir (<em>may</em>), deux choses qu'elle ne prouve pas.</td><td>PE</td></tr>
+<tr><td>32 à 47</td><td>Oral</td><td>Par deux, 2 minutes chacun : <em>What do American superheroes tell us about the nation?</em>, puis deux questions.</td><td>PO, PI</td></tr>
+<tr><td>47 à 52</td><td>Ramassage et bilan</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : Pas de trace écrite : tâche finale.</p>
+<p><strong>Devoirs</strong> : Aucun.</p>
+<p><strong>Sortie de secours</strong> (8 dernières minutes, si le tableau numérique ne marche pas ou si la lesson déborde) : Parties 1 et 2 écrites seulement ; l'oral est reporté à la lesson suivante.</p>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. What do we see on this page?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre la page 4 de The Black Terror (Lesson 1) et les détails agrandis.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How many panels are there?</li>
+<li>What is in the gutter?</li>
+<li>What does the first caption say?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>There is / there are</em> : écris quatre phrases sur la page.</li>
+<li><strong>Je produis</strong> (10 min). Décris une case en 40 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « On this page there are … panels. A caption gives information; a balloon gives words. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 2. How does the page show movement?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre les pages 3 et 6 (Lesson 2).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What is a splash?</li>
+<li>Find two onomatopoeias.</li>
+<li>How do we see movement?</li>
+<li><strong>Étude de la langue</strong> (10 min). Be + -ing : quatre phrases sur une case.</li>
+<li><strong>Je produis</strong> (10 min). Décris le mouvement dans une case en 40 mots.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « A splash is one large image. Onomatopoeia shows sound. Motion lines show movement. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 3. What kind of hero in wartime?</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis la page d'ouverture de Daredevil Comics no. 1 (1941).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>When did the comic appear?</li>
+<li>Who does the hero fight?</li>
+<li>When did the USA enter the war?</li>
+<li><strong>Étude de la langue</strong> (10 min). Prétérit : cinq phrases sur 1941.</li>
+<li><strong>Je produis</strong> (10 min). En 50 mots : <em>What kind of hero is he?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Daredevil Comics no. 1 appeared in July 1941, before the USA entered the war. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 4. Colour, and who is left out</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Reprends une page des lessons 1 ou 2 ; ouvre le lien vers Drowning Girl (MoMA).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Name the main colours and where they are.</li>
+<li>Who is not on these pages?</li>
+<li>What is Pop Art?</li>
+<li><strong>Étude de la langue</strong> (10 min). <em>may, might, cannot</em> : trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). Écris trois phrases nuancées sur la couleur d'une page.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « The colours may … but I cannot reduce the page to one meaning. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et une phrase.</p>
+<h3>Lesson 5. The Museum of Unfinished Heroes</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Fais les enveloppes 1 et 2 du jeu seul (les indices sont sur la page).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How many panels on page 4?</li>
+<li>What is wrong with the damaged label?</li>
+<li>How would you correct it?</li>
+<li><strong>Étude de la langue</strong> (10 min). Phrase de musée : <em>This page was drawn by… in…</em></li>
+<li><strong>Je produis</strong> (10 min). Écris l'étiquette corrigée (40 mots).</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « A good museum label is accurate and does not mislead the visitor. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : enveloppe 1 seulement.</p>
+<h3>Lesson 6. Final task: images of a nation</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). La tâche finale se fait à la maison, 45 minutes, sans aide.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Décris la page choisie.</li>
+<li>Ce qu'elle veut faire ressentir (<em>may</em>).</li>
+<li>Deux choses qu'elle ne prouve pas.</li>
+<li><strong>Étude de la langue</strong> (10 min). Relis tes traces écrites avant de commencer.</li>
+<li><strong>Je produis</strong> (10 min). Enregistre 2 minutes : <em>What do American superheroes tell us about the nation?</em></li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : la description seulement.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Entraînement au CCF (Première bac pro, version prof)</h2>
+<p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, bac pro, coefficient 2) :</p>
+<ul>
+<li>Situation A, écrite, 1 heure au plus, en dernière année de formation : compréhension de l'oral (document de 1 min 30 au plus, entendu trois fois, une minute entre les écoutes, compte rendu en français) ; compréhension de l'écrit (document authentique inconnu de 15 lignes de 70 caractères au plus, compte rendu en français) ; expression écrite (deux sujets au choix, l'un sur la vie quotidienne, l'autre sur la vie professionnelle, 100 à 120 mots au moins selon la consigne).</li>
+<li>Situation B, orale, 10 minutes : partie 1, expression orale en continu, 5 minutes au plus, sur un travail, un projet, un produit, un service ou une expérience professionnelle, sans lecture, notes et une image autorisées ; partie 2, interaction, 5 minutes au plus, à partir de la présentation.</li>
+<li>En Première : entraînement au format, sans valeur certificative.</li>
+</ul>
+<h3>Situation A blanche, en une lesson de 52 minutes (version prof)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Les élèves lisent les trois parties et choisissent leur sujet d'expression écrite.</td><td>Lecture</td></tr>
+<tr><td>2 à 17</td><td>Compréhension de l'oral</td><td>Trois écoutes du document (1 min 30 au plus), une minute entre chaque écoute ; prise de notes ; compte rendu en français.</td><td>CO</td></tr>
+<tr><td>17 à 32</td><td>Compréhension de l'écrit</td><td>Lecture du document, compte rendu en français guidé par les questions.</td><td>CE</td></tr>
+<tr><td>32 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 100 à 120 mots au moins.</td><td>PE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots, ramassage.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral.</strong> document à choisir : une vidéo authentique de 1 min 30 au plus présentant la naissance de Superman (chaîne d'un musée ou d'une bibliothèque, par exemple la Library of Congress ou le Smithsonian, en libre accès).</p>
+<p>Consigne : « Écoutez trois fois le document. Rendez compte en français de ce que vous avez compris : qui parle, de quoi, où, pourquoi, et ce que la personne pense. »</p>
+<p><strong>Compréhension de l'écrit.</strong> Texte d'entraînement (le jour du CCF, prendre un document authentique inconnu de 15 lignes au plus) :</p>
+<blockquote><p>Superman first appeared in Action Comics no. 1 in June 1938. His creators, Jerry Siegel and Joe Shuster, were two young men from Cleveland, Ohio. They were the sons of Jewish immigrants from Europe. Like their hero, who comes from another planet, they knew what it means to arrive in a new country. In 1938, they sold the rights to Superman for 130 dollars. The comic was a huge success: soon, Superman had his own magazine, a radio show and cartoons. Today, a copy of Action Comics no. 1 can sell for millions of dollars at auction.</p></blockquote>
+<p>Source : texte d'entraînement écrit pour la classe, d'après les faits publiés par la Library of Congress et la Smithsonian Institution.</p>
+<p>Consigne : « Rendez compte en français du document. Aidez-vous des questions. »</p>
+<ul>
+<li>Qui a créé Superman, quand et où ?</li>
+<li>Quel lien peut-on faire entre les créateurs et leur héros ?</li>
+<li>Quelle erreur commerciale les créateurs ont-ils faite ?</li>
+<li>Que montre le succès de Superman ?</li>
+</ul>
+<p><strong>Expression écrite.</strong> Choisissez un sujet. Écrivez 100 à 120 mots au moins.</p>
+<ul>
+<li>Sujet 1 (vie quotidienne) : <em>Who is your favourite hero (in comics, films or real life)? Describe him or her and explain why.</em></li>
+<li>Sujet 2 (vie professionnelle) : <em>You work in a comic shop. A customer wants a gift for a 15-year-old. Write a short message to recommend a comic, with a description and the price.</em></li>
+</ul>
+<h3>Situation B blanche (version prof)</h3>
+<p>Organisation : 10 minutes par élève (5 minutes de présentation, 5 minutes d'échange). Avec 24 élèves, prévoir 6 lessons, quatre passages par lesson. Pendant les passages, les autres élèves travaillent en autonomie au fond de la salle (fiche ci-dessous), casque ou travail écrit, sans bruit.</p>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage au tableau ; les élèves en autonomie prennent la fiche.</td><td>Lecture</td></tr>
+<tr><td>4 à 15</td><td>Passage 1</td><td>5 min de présentation sans lecture, puis 5 min d'échange ; 1 min de notation.</td><td>PO, PI</td></tr>
+<tr><td>15 à 26</td><td>Passage 2</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>26 à 37</td><td>Passage 3</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>37 à 48</td><td>Passage 4</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>48 à 52</td><td>Bilan collectif</td><td>Deux conseils pour la classe, sans nommer personne.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p>Sujets de présentation possibles (l'élève choisit, une image et des notes autorisées, pas de texte rédigé) :</p>
+<ul>
+<li>Présenter une page de bande dessinée ou une affiche de film de super-héros (une image autorisée).</li>
+<li>Présenter un travail réalisé en atelier ou en PFMP, comme un « héros du quotidien » de son métier.</li>
+<li>Présenter un produit dérivé (figurine, affiche) comme un vendeur à un client.</li>
+</ul>
+<p>Questions d'échange, à adapter : « Why did you choose this? » ; « What was the most difficult part? » ; « What would you do differently? » ; « Would you recommend it to a customer? Why? » ; « What did you learn? » ; « Can you tell me more about…? »</p>
+<p>Travail en autonomie pendant les passages : préparer sa propre fiche de présentation (5 mots clés, 3 phrases d'accroche, 1 image), puis faire les exercices d'Étude de la langue de la séquence.</p>
+<h3>Grille nationale bac pro LVA (BO n° 47 du 16 décembre 2021, annexe 4), version prof</h3>
+<p>Situation A, sur 12 (chaque activité de 0 à 4, demi-points possibles) :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Compréhension de l'oral</th><th>Compréhension de l'écrit</th><th>Expression écrite</th></tr></thead>
+<tbody>
+<tr><td>4 (4 ou 3,5)</td><td>Comprend l'essentiel des informations, perçoit la cohérence d'ensemble, identifie le point de vue ou les intentions</td><td>Mêmes critères sur le document écrit</td><td>S'exprime clairement, même avec des erreurs dans les structures complexes ; lexique varié ; expose avantages ou inconvénients ; justifie</td></tr>
+<tr><td>3 (3 ou 2,5)</td><td>Relève certains des éléments porteurs de sens ; saisit certains liens entre les informations</td><td>Mêmes critères sur le document écrit</td><td>Écrit descriptif ou narratif au volume attendu ; structures simples ; lexique assez varié ; sentiments ou point de vue ; erreurs qui gênent peu</td></tr>
+<tr><td>2 (2 ou 1,5)</td><td>Identifie la thématique ou l'objet principal ; comprend les informations les plus significatives et quelques détails</td><td>Mêmes critères sur le document écrit</td><td>Écrit globalement compréhensible malgré des erreurs ; cherche à exprimer une appréciation ; effort de construction</td></tr>
+<tr><td>1 (1 ou 0,5)</td><td>Identifie quelques sons, mots ou éléments isolés ; comprend en partie les informations factuelles (personnes, lieux, dates)</td><td>Identifie quelques mots isolés ; comprend en partie les informations factuelles</td><td>Écrit nettement trop court ; langue en partie compréhensible ; mots isolés</td></tr>
+</tbody>
+</table></div>
+<p>Situation B, sur 8 :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Expression orale en continu (/4)</th><th>Interaction orale (/4)</th></tr></thead>
+<tbody>
+<tr><td>4</td><td>Discours assez nuancé, informé, point de vue pertinent ; langue assez fluide, prononciation claire ; supports utilisés à bon escient</td><td>Réagit avec pertinence ; argumente et cherche à convaincre simplement ; langue assez fluide</td></tr>
+<tr><td>3</td><td>Discours pertinent par rapport à la dimension culturelle ou professionnelle du sujet ; langue globalement correcte ; relativement autonome par rapport aux supports</td><td>Prend sa part dans l'échange ; sait se reprendre ou reformuler ; vocabulaire globalement approprié</td></tr>
+<tr><td>2</td><td>Discours d'exposition (description, narration, explication) généralement compréhensible ; cherche à exprimer une appréciation ; se détache parfois des supports</td><td>S'efforce de prendre part, réagit simplement ; expressions mémorisées fréquentes</td></tr>
+<tr><td>1</td><td>Mots isolés, énoncés très courts, nombreuses pauses ; s'appuie uniquement sur les supports</td><td>Intervient peu ; répétitions et relances fréquentes ; réponses brèves</td></tr>
+</tbody>
+</table></div>
+<p>Note finale : A (/12) + B (/8) = /20. Fiche officielle : https://cache.media.education.gouv.fr/file/47/06/8/ensel369_annexe4_1423068.pdf</p></section>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a></strong></p>

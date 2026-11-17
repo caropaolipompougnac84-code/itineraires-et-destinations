@@ -159,8 +159,23 @@
       font-size: 0.88rem;
     }
   </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body data-section="lycee-pro" class="english-look">
+<body data-section="lycee-pro" class="mode-eleve english-look">
   <header class="site-header">
     <div class="wrap">
       <div class="brand">
@@ -185,6 +200,29 @@
   </header>
   <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../lycee-pro/index.html">Lycée professionnel</a></li><li><a href="../lycee-pro/anglais.html">Anglais</a></li><li aria-current="page">From fault to quote</li></ol></nav>
   <main class="page-content wrap" id="contenu">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/from-fault-to-quote/img/look/duke-humfreys-library.jpg" alt="The long, timber-roofed reading room of Duke Humfrey's Library in Oxford, lined with old books." width="1600" height="1375"><figcaption>Duke Humfrey's Library, Oxford. Photo: Diliff. CC BY-SA 3.0, Wikimedia Commons.</figcaption></figure><section class="page-hero">
       <p class="kicker">Baccalauréat professionnel · Anglais · Lycée professionnel</p>
@@ -230,12 +268,12 @@
     <p>Avec Julien Morel, l’élève constate l’usure des deux bougies, d’un kit chaîne et pignons arrivé en fin de course, et des plaquettes avant, des deux côtés. Le filtre à huile doit aussi être remplacé, comme le prévoit l’entretien. Le kit chaîne n’est pas en stock. Il faut donc écrire et téléphoner au service pièces de Triumph Motorcycles, à Hinckley, dans le Leicestershire, pour vérifier les prix, la disponibilité et les délais, puis ajuster le devis remis au client.</p>
     <p>L’entreprise, les personnes, l’établissement, les adresses de courriel, les numéros de téléphone et les montants utilisés pour l’exercice sont fictifs ou indicatifs. Les références de pièces correspondent à des numéros du catalogue constructeur, relevés chez des revendeurs ; les prix sont des prix indicatifs, arrondis, relevés en novembre 2026.</p>
 
-    <h2>Tableau des séances</h2>
+    <h2>Tableau des lessons</h2>
     <div class="scroll">
       <table class="grid">
         <thead>
           <tr>
-            <th>Séance</th>
+            <th>Lesson</th>
             <th>Titre</th>
             <th>Ce que l’élève fait</th>
             <th>Activités langagières</th>
@@ -281,14 +319,14 @@
         </tbody>
       </table>
     </div>
-    <p class="programme">Six séances courtes, conçues pour un horaire de lycée professionnel. La tâche finale relie explicitement l’anglais et les Lettres.</p>
+    <p class="programme">Six lessons courtes, conçues pour un horaire de lycée professionnel. La tâche finale relie explicitement l’anglais et les Lettres.</p>
 
     <h2>Évaluations</h2>
     <p>Une grille accompagne la tâche finale. Elle porte sur la clarté du diagnostic, l’exactitude des pièces et des quantités, la cohérence du budget, la qualité du courriel, la tenue de l’appel (épellation, prix, délais, reformulation), et le réinvestissement dans le compte rendu ou l’oral de PFMP. Les corrigés se trouvent à la fin du document téléchargeable.</p>
 
 
     <h2 id="sounding-natural">Sounding natural at the workshop</h2>
-    <p>Fiche complémentaire, à utiliser avec la séance 5, A call to Hinckley. Une phrase peut être juste, et pourtant un peu raide. À l’atelier, on ne parle pas de la même façon à Julien, à un client, ou à Emma Whittaker, au service pièces de Triumph, à Hinckley.</p>
+    <p>Fiche complémentaire, à utiliser avec la lesson 5, A call to Hinckley. Une phrase peut être juste, et pourtant un peu raide. À l’atelier, on ne parle pas de la même façon à Julien, à un client, ou à Emma Whittaker, au service pièces de Triumph, à Hinckley.</p>
     <p>La fiche propose dix situations de l’atelier et de l’appel : ne pas connaître une référence, faire répéter un numéro de pièce, faire patienter, demander de préciser, refuser poliment un délai, être débordé, accepter un prix, remercier, épeler une référence, confirmer une commande. Trois colonnes : l’anglais de classe, la phrase entre collègues, puis la phrase avec le client ou le fournisseur. Un exercice de transformation, avec son corrigé, permet de réécrire six phrases. Niveau A2-B1.</p>
     <div class="scroll">
       <table class="grid registres">
@@ -327,7 +365,7 @@
     <h2>Téléchargements</h2>
     <ul class="downloads">
       <li>
-        <p class="doc-title">From fault to quote, bac pro motocycles (séances, tâche finale, grille et corrigés)</p>
+        <p class="doc-title">From fault to quote, bac pro motocycles (lessons, tâche finale, grille et corrigés)</p>
         <span class="doc-links">
           <a href="From-fault-to-quote-bac-pro-motocycles.pdf">PDF</a>
           <a href="From-fault-to-quote-bac-pro-motocycles.docx">Word (.docx)</a>
@@ -335,7 +373,7 @@
         </span>
       </li>
       <li>
-        <p class="doc-title">Sounding natural at the workshop (fiche complémentaire, séance 5)</p>
+        <p class="doc-title">Sounding natural at the workshop (fiche complémentaire, lesson 5)</p>
         <span class="doc-links">
           <a href="Sounding-natural-at-the-workshop.pdf">PDF</a>
           <a href="Sounding-natural-at-the-workshop.docx">Word (.docx)</a>
@@ -360,7 +398,258 @@
       <p><strong>Point de vigilance.</strong> Les adresses, les numéros, les interlocuteurs et l’entreprise d’accueil sont fictifs. On n’écrit pas à un service réel pour cet exercice. Les opérations décrites illustrent une situation de formation ; elles ne constituent pas une procédure technique à appliquer sur un véhicule.</p>
     </div>
   </main>
-  <footer class="site-footer">
+  <section class="compl-block" id="eleve-absent"><h2>2. Lessons minutées (55 minutes, minutées sur 52)</h2>
+<h3>Lesson 1. The fault</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Mise en route</td><td>Le tableau de Fernand Léger, Le Mécanicien : un mot chacun.</td><td>PO</td></tr>
+<tr><td>5 à 17</td><td>Lecture</td><td>La situation : Lucas, la Triumph Bonneville T120, le client.</td><td>CE</td></tr>
+<tr><td>17 à 25</td><td>Écoute</td><td>L'enseignante lit le signalement du client deux fois ; les élèves notent les symptômes.</td><td>CO</td></tr>
+<tr><td>25 à 35</td><td>Étude de la langue</td><td>Décrire une panne : présent simple et present perfect (<em>The engine misfires. The pads have worn out</em>).</td><td></td></tr>
+<tr><td>35 à 47</td><td>Fiche en anglais</td><td>Symptômes, diagnostic, cause ; puis présentation orale en binôme.</td><td>PE, PI</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : Symptom: … Diagnosis: … Cause: … (trois lignes sur la Bonneville)</p>
+<p><strong>Devoirs</strong> : Apprendre six mots de la panne.</p>
+<p><strong>Sortie de secours</strong> : Fiche symptômes, diagnostic, cause en classe entière ; trace dictée.</p>
+<h3>Lesson 2. Building your vocabulary</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Rappel</td><td>Six mots de la lesson 1.</td><td>PO</td></tr>
+<tr><td>5 à 20</td><td>Lexique illustré</td><td>Pièces, références, stock, délai, devis : association image et mot.</td><td>CE</td></tr>
+<tr><td>20 à 30</td><td>Prononciation</td><td>Épeler une référence, lire des nombres (<em>O as in Oscar</em>).</td><td>CO, PO</td></tr>
+<tr><td>30 à 42</td><td>Jeu en binôme</td><td>A donne une référence, B la note et la relit.</td><td>PI</td></tr>
+<tr><td>42 à 47</td><td>Écrit court</td><td>Cinq phrases avec les mots du jour.</td><td>PE</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : spark plug, chain and sprocket kit, brake pads, oil filter, part number, lead time, quote</p>
+<p><strong>Devoirs</strong> : Apprendre l'alphabet radio de A à M.</p>
+<p><strong>Sortie de secours</strong> : Jeu des références en classe entière.</p>
+<h3>Lesson 3. The provisional budget</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Rappel</td><td>Épeler deux références.</td><td>PO</td></tr>
+<tr><td>5 à 15</td><td>Lecture</td><td>Le tableau de devis : livres, euros, port, main-d'œuvre, HT, TTC.</td><td>CE</td></tr>
+<tr><td>15 à 25</td><td>Étude de la langue</td><td>Nombres, prix, décimales (<em>twenty-five pounds fifty</em>), conversions.</td><td></td></tr>
+<tr><td>25 à 42</td><td>Calcul et rédaction</td><td>Compléter le devis, puis le présenter en anglais à un camarade.</td><td>PE, PI</td></tr>
+<tr><td>42 à 47</td><td>Vérification</td><td>Correction collective.</td><td>CO</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : The total excluding VAT is … The total including VAT is …</p>
+<p><strong>Devoirs</strong> : Refaire le devis avec un autre taux de change.</p>
+<p><strong>Sortie de secours</strong> : Devis complété en classe entière au tableau.</p>
+<h3>Lesson 4. A professional email</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Rappel</td><td>Lire un total à voix haute.</td><td>PO</td></tr>
+<tr><td>5 à 17</td><td>Modèle</td><td>Étude d'un courriel professionnel.</td><td>CE</td></tr>
+<tr><td>17 à 27</td><td>Étude de la langue</td><td>Formules du courriel (<em>I am writing to…, Could you confirm…, Kind regards</em>).</td><td></td></tr>
+<tr><td>27 à 42</td><td>Rédaction</td><td>Compléter le courriel de commande.</td><td>PE</td></tr>
+<tr><td>42 à 47</td><td>Réponse du service pièces</td><td>Lecture de la réponse, deux questions.</td><td>CE</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : Formules d'ouverture et de clôture d'un courriel professionnel.</p>
+<p><strong>Devoirs</strong> : Réécrire le courriel au propre.</p>
+<p><strong>Sortie de secours</strong> : Courriel complété en classe entière.</p>
+<h3>Lesson 5. A call to Hinckley</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 5</td><td>Rappel</td><td>Trois formules du courriel.</td><td>PO</td></tr>
+<tr><td>5 à 15</td><td>Écoute</td><td>Le dialogue modèle, deux écoutes.</td><td>CO</td></tr>
+<tr><td>15 à 25</td><td>Étude de la langue</td><td>Registre : fiche Sounding natural at the workshop.</td><td></td></tr>
+<tr><td>25 à 45</td><td>Jeu de rôle</td><td>Appel au service pièces, puis échange des rôles.</td><td>PI</td></tr>
+<tr><td>45 à 47</td><td>Retour</td><td>Deux conseils.</td><td>PO</td></tr>
+<tr><td>47 à 52</td><td>Trace écrite et devoirs</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : Can you repeat the part number, please? I can confirm the order for…</p>
+<p><strong>Devoirs</strong> : S'entraîner à l'appel à la maison (enregistrement).</p>
+<p><strong>Sortie de secours</strong> : Lecture du dialogue modèle à deux voix, puis trace.</p>
+<h3>Lesson 6. Final task</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>La tâche et la grille.</td><td>CE</td></tr>
+<tr><td>3 à 18</td><td>Courriel</td><td>Commande des pièces.</td><td>PE</td></tr>
+<tr><td>18 à 38</td><td>Appel simulé</td><td>Passages en binôme devant l'enseignante.</td><td>PI</td></tr>
+<tr><td>38 à 48</td><td>Devis ajusté</td><td>Corriger le devis après l'appel.</td><td>PE</td></tr>
+<tr><td>48 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Trace écrite</strong> : Pas de trace écrite : tâche finale.</p>
+<p><strong>Devoirs</strong> : Intégrer l'échange au compte rendu de PFMP (volet Lettres).</p>
+<p><strong>Sortie de secours</strong> : Courriel et devis seulement ; l'appel au début de la lesson suivante.</p>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. The fault</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis la situation (Lucas, la Bonneville, le client).</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does the customer report?</li>
+<li>What do Lucas and Julien find?</li>
+<li>Which parts must be replaced?</li>
+<li><strong>Étude de la langue</strong> (10 min). Present perfect : <em>The pads have worn out.</em> Trois phrases.</li>
+<li><strong>Je produis</strong> (10 min). Remplis la fiche symptômes, diagnostic, cause.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Symptom, diagnosis, cause (trois lignes). »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Lesson 2. Building your vocabulary</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le lexique illustré du livret.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Name five parts.</li>
+<li>What is a part number?</li>
+<li>What is a lead time?</li>
+<li><strong>Étude de la langue</strong> (10 min). Épeler : écris trois références avec l'alphabet radio.</li>
+<li><strong>Je produis</strong> (10 min). Cinq phrases avec les mots du jour.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la liste des pièces. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 1 et la liste.</p>
+<h3>Lesson 3. The provisional budget</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Ouvre le tableau de devis du livret.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>How much are the parts in pounds?</li>
+<li>How much is the shipping?</li>
+<li>What is the total including VAT?</li>
+<li><strong>Étude de la langue</strong> (10 min). Lis à voix haute et écris en lettres trois prix.</li>
+<li><strong>Je produis</strong> (10 min). Complète le devis.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « The total excluding VAT is … The total including VAT is … »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
+<h3>Lesson 4. A professional email</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le modèle de courriel.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Who writes to whom?</li>
+<li>What is asked?</li>
+<li>How does the email end?</li>
+<li><strong>Étude de la langue</strong> (10 min). Formules du courriel.</li>
+<li><strong>Je produis</strong> (10 min). Complète le courriel de commande.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Formules d'ouverture et de clôture. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : question 2 et le courriel.</p>
+<h3>Lesson 5. A call to Hinckley</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). Lis le dialogue modèle et la fiche Sounding natural at the workshop.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>What does Lucas want?</li>
+<li>What problem comes up?</li>
+<li>How is it solved?</li>
+<li><strong>Étude de la langue</strong> (10 min). Trois façons de faire répéter, du registre de classe au registre client.</li>
+<li><strong>Je produis</strong> (10 min). Enregistre l'appel (2 minutes) en jouant les deux rôles, ou écris-le.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie trois formules de l'appel. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
+<h3>Lesson 6. Final task</h3>
+<ol>
+<li><strong>Je découvre</strong> (5 min). La tâche finale se fait à la maison : courriel, devis ajusté, enregistrement de l'appel.</li>
+<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
+<li>Écris le courriel.</li>
+<li>Ajuste le devis.</li>
+<li>Enregistre l'appel.</li>
+<li><strong>Étude de la langue</strong> (10 min). Relis tes traces écrites.</li>
+<li><strong>Je produis</strong> (10 min). Courriel et enregistrement de l'appel.</li>
+<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite. »</li>
+</ol>
+<p><em>Version courte (15 min)</em> : le courriel seulement.</p></section>
+<section class="compl-block prof-only" id="entrainement-examen"><h2>Entraînement au CCF (Terminale, version prof)</h2>
+<p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, bac pro, coefficient 2) :</p>
+<ul>
+<li>Situation A, écrite, 1 heure au plus, en dernière année de formation : compréhension de l'oral (document de 1 min 30 au plus, entendu trois fois, une minute entre les écoutes, compte rendu en français) ; compréhension de l'écrit (document authentique inconnu de 15 lignes de 70 caractères au plus, compte rendu en français) ; expression écrite (deux sujets au choix, l'un sur la vie quotidienne, l'autre sur la vie professionnelle, 100 à 120 mots au moins selon la consigne).</li>
+<li>Situation B, orale, 10 minutes : partie 1, expression orale en continu, 5 minutes au plus, sur un travail, un projet, un produit, un service ou une expérience professionnelle, sans lecture, notes et une image autorisées ; partie 2, interaction, 5 minutes au plus, à partir de la présentation.</li>
+<li>En Terminale : les situations A et B ont lieu dans l'année ; ce sujet sert de blanc.</li>
+</ul>
+<h3>Situation A blanche, en une lesson de 52 minutes (version prof)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Les élèves lisent les trois parties et choisissent leur sujet d'expression écrite.</td><td>Lecture</td></tr>
+<tr><td>2 à 17</td><td>Compréhension de l'oral</td><td>Trois écoutes du document (1 min 30 au plus), une minute entre chaque écoute ; prise de notes ; compte rendu en français.</td><td>CO</td></tr>
+<tr><td>17 à 32</td><td>Compréhension de l'écrit</td><td>Lecture du document, compte rendu en français guidé par les questions.</td><td>CE</td></tr>
+<tr><td>32 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 100 à 120 mots au moins.</td><td>PE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots, ramassage.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral.</strong> document à choisir : une vidéo authentique de 1 min 30 au plus présentant l'usine Triumph de Hinckley ou un entretien de moto (chaîne officielle de Triumph Motorcycles), en libre accès.</p>
+<p>Consigne : « Écoutez trois fois le document. Rendez compte en français de ce que vous avez compris : qui parle, de quoi, où, pourquoi, et ce que la personne pense. »</p>
+<p><strong>Compréhension de l'écrit.</strong> Texte d'entraînement (le jour du CCF, prendre un document authentique inconnu de 15 lignes au plus) :</p>
+<blockquote><p>Triumph Motorcycles is one of the oldest motorcycle brands in the world. The company started in Coventry, England, at the end of the nineteenth century, first making bicycles. Its first motorcycle appeared in 1902. After difficult years, the factory closed in 1983. A businessman, John Bloor, bought the brand and built a new factory in Hinckley, Leicestershire. The first new Triumph motorcycles were presented in 1990. Today, the head office and part of the production are still in Hinckley, and the bikes are sold all over the world. The Bonneville, a classic model, is named after a salt flat in Utah, in the United States, where speed records were set.</p></blockquote>
+<p>Source : texte d'entraînement écrit pour la classe, d'après l'historique publié par Triumph Motorcycles.</p>
+<p>Consigne : « Rendez compte en français du document. Aidez-vous des questions. »</p>
+<ul>
+<li>Où et quand la marque est-elle née ?</li>
+<li>Que s'est-il passé en 1983 ?</li>
+<li>Quel rôle joue Hinckley aujourd'hui ?</li>
+<li>D'où vient le nom Bonneville ?</li>
+</ul>
+<p><strong>Expression écrite.</strong> Choisissez un sujet. Écrivez 100 à 120 mots au moins.</p>
+<ul>
+<li>Sujet 1 (vie quotidienne) : <em>Describe your dream motorbike or vehicle, and explain why you would like to have it.</em></li>
+<li>Sujet 2 (vie professionnelle) : <em>A customer brings his motorbike for a service. Write an email to explain what you found and what you suggest, with the price.</em></li>
+</ul>
+<h3>Situation B blanche (version prof)</h3>
+<p>Organisation : 10 minutes par élève (5 minutes de présentation, 5 minutes d'échange). Avec 24 élèves, prévoir 6 lessons, quatre passages par lesson. Pendant les passages, les autres élèves travaillent en autonomie au fond de la salle (fiche ci-dessous), casque ou travail écrit, sans bruit.</p>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage au tableau ; les élèves en autonomie prennent la fiche.</td><td>Lecture</td></tr>
+<tr><td>4 à 15</td><td>Passage 1</td><td>5 min de présentation sans lecture, puis 5 min d'échange ; 1 min de notation.</td><td>PO, PI</td></tr>
+<tr><td>15 à 26</td><td>Passage 2</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>26 à 37</td><td>Passage 3</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>37 à 48</td><td>Passage 4</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>48 à 52</td><td>Bilan collectif</td><td>Deux conseils pour la classe, sans nommer personne.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p>Sujets de présentation possibles (l'élève choisit, une image et des notes autorisées, pas de texte rédigé) :</p>
+<ul>
+<li>Présenter une intervention réalisée en PFMP (panne, diagnostic, réparation), une photo autorisée.</li>
+<li>Présenter une moto ou une pièce à un client.</li>
+<li>Présenter le devis réalisé dans la séquence et le justifier.</li>
+</ul>
+<p>Questions d'échange, à adapter : « Why did you choose this? » ; « What was the most difficult part? » ; « What would you do differently? » ; « Would you recommend it to a customer? Why? » ; « What did you learn? » ; « Can you tell me more about…? »</p>
+<p>Travail en autonomie pendant les passages : préparer sa propre fiche de présentation (5 mots clés, 3 phrases d'accroche, 1 image), puis faire les exercices d'Étude de la langue de la séquence.</p>
+<h3>Grille nationale bac pro LVA (BO n° 47 du 16 décembre 2021, annexe 4), version prof</h3>
+<p>Situation A, sur 12 (chaque activité de 0 à 4, demi-points possibles) :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Compréhension de l'oral</th><th>Compréhension de l'écrit</th><th>Expression écrite</th></tr></thead>
+<tbody>
+<tr><td>4 (4 ou 3,5)</td><td>Comprend l'essentiel des informations, perçoit la cohérence d'ensemble, identifie le point de vue ou les intentions</td><td>Mêmes critères sur le document écrit</td><td>S'exprime clairement, même avec des erreurs dans les structures complexes ; lexique varié ; expose avantages ou inconvénients ; justifie</td></tr>
+<tr><td>3 (3 ou 2,5)</td><td>Relève certains des éléments porteurs de sens ; saisit certains liens entre les informations</td><td>Mêmes critères sur le document écrit</td><td>Écrit descriptif ou narratif au volume attendu ; structures simples ; lexique assez varié ; sentiments ou point de vue ; erreurs qui gênent peu</td></tr>
+<tr><td>2 (2 ou 1,5)</td><td>Identifie la thématique ou l'objet principal ; comprend les informations les plus significatives et quelques détails</td><td>Mêmes critères sur le document écrit</td><td>Écrit globalement compréhensible malgré des erreurs ; cherche à exprimer une appréciation ; effort de construction</td></tr>
+<tr><td>1 (1 ou 0,5)</td><td>Identifie quelques sons, mots ou éléments isolés ; comprend en partie les informations factuelles (personnes, lieux, dates)</td><td>Identifie quelques mots isolés ; comprend en partie les informations factuelles</td><td>Écrit nettement trop court ; langue en partie compréhensible ; mots isolés</td></tr>
+</tbody>
+</table></div>
+<p>Situation B, sur 8 :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Expression orale en continu (/4)</th><th>Interaction orale (/4)</th></tr></thead>
+<tbody>
+<tr><td>4</td><td>Discours assez nuancé, informé, point de vue pertinent ; langue assez fluide, prononciation claire ; supports utilisés à bon escient</td><td>Réagit avec pertinence ; argumente et cherche à convaincre simplement ; langue assez fluide</td></tr>
+<tr><td>3</td><td>Discours pertinent par rapport à la dimension culturelle ou professionnelle du sujet ; langue globalement correcte ; relativement autonome par rapport aux supports</td><td>Prend sa part dans l'échange ; sait se reprendre ou reformuler ; vocabulaire globalement approprié</td></tr>
+<tr><td>2</td><td>Discours d'exposition (description, narration, explication) généralement compréhensible ; cherche à exprimer une appréciation ; se détache parfois des supports</td><td>S'efforce de prendre part, réagit simplement ; expressions mémorisées fréquentes</td></tr>
+<tr><td>1</td><td>Mots isolés, énoncés très courts, nombreuses pauses ; s'appuie uniquement sur les supports</td><td>Intervient peu ; répétitions et relances fréquentes ; réponses brèves</td></tr>
+</tbody>
+</table></div>
+<p>Note finale : A (/12) + B (/8) = /20. Fiche officielle : https://cache.media.education.gouv.fr/file/47/06/8/ensel369_annexe4_1423068.pdf</p></section>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></strong></p>

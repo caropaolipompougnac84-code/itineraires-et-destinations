@@ -68,8 +68,23 @@
     .sources li { margin: 0.45rem 0; scroll-margin-top: 1rem; }
     .hero-illu { max-width: 24rem; }
   </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body data-section="methodologie" class="english-look">
+<body data-section="methodologie" class="mode-eleve english-look">
   <header class="site-header">
     <div class="wrap">
       <div class="brand">
@@ -95,6 +110,29 @@
   <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../../index.html">Accueil</a></li><li><a href="../../methodologie/index.html">Méthodologie et pédagogie</a></li><li aria-current="page">Préparer aux examens en anglais</li></ol></nav>
 
   <main class="wrap page-content">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
     
 <figure class="look-hero"><img src="/preparer-aux-examens/anglais/img/look/kings-lynn-library.jpg" alt="The red-brick public library in King's Lynn, with a round tower and a green tree beside it." width="1600" height="1200"><figcaption>The public library, King's Lynn. Photo: Oxyman. CC BY 2.5, Wikimedia Commons.</figcaption></figure><section class="page-hero">
       <p class="kicker">Méthodologie · Anglais</p>
@@ -187,7 +225,84 @@
         </li>
       </ul>
 <p class="src">Textes officiels : <a href="#source-6">6</a>, <a href="#source-7">7</a>, <a href="#source-8">8</a>, <a href="#source-9">9</a>, <a href="#source-10">10</a>, <a href="#source-11">11</a>.</p>
-    </section>
+    
+<section class="compl-block prof-only" id="blanc-agricole"><p>Version prof. Format : note de service DGER/SDPFE/2026-58 du 4 février 2026. Niveau visé : B1+.</p>
+<h2>Rappel du format</h2>
+<ul>
+<li>Situation A, écrite, 1 h 30 au plus (trois écoutes comprises) : CO (document sonore ou vidéo inconnu, 1 min 30 au plus, trois écoutes, pauses d'une minute au plus, compte rendu écrit en français) ; CE (texte authentique de 15 lignes au plus, compte rendu en français) ; EE (100 mots au moins, consigne en français). Lien thématique souhaité entre les trois parties, mais parties indépendantes.</li>
+<li>Situation B, orale, 10 minutes : 5 minutes de présentation d'un sujet au choix (thématiques de la classe, projets de PFMP, actions, mobilités), image et plan en mots clés autorisés, pas de lecture ; puis 5 minutes d'échange.</li>
+<li>Pondération : expression orale 40 %, CO 30 %, CE 20 %, EE 10 %.</li>
+</ul>
+<p>Scénario du sujet : <em>Farm shops in Britain: from the field to the customer.</em> Domaine de la vie professionnelle (vente directe, production) et domaine de la vie personnelle, sociale et culturelle (habitudes de consommation).</p>
+<h2>Situation A blanche (90 minutes, ou deux lessons)</h2>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Distribution du sujet complet, titre du document sonore annoncé</td><td>Lecture</td></tr>
+<tr><td>3 à 10</td><td>Trois écoutes (1 min 30 au plus chacune), une minute de pause entre les écoutes, prise de notes</td><td>CO</td></tr>
+<tr><td>10 à 30</td><td>Compte rendu en français de la CO</td><td>CO</td></tr>
+<tr><td>30 à 55</td><td>Compte rendu en français du texte</td><td>CE</td></tr>
+<tr><td>55 à 85</td><td>Expression écrite, 100 mots au moins</td><td>EE</td></tr>
+<tr><td>85 à 90</td><td>Relecture, ramassage</td><td></td></tr>
+</tbody>
+</table></div>
+<p>En deux lessons de 52 minutes : lesson 1, CO puis CE (minutes 0 à 52) ; lesson 2, EE (35 minutes), puis 15 minutes de correction collective de la CO, 2 minutes de ramassage.</p>
+<h3>Compréhension de l'oral</h3>
+<p>Document à choisir : une vidéo authentique de 1 min 30 au plus sur une ferme qui vend en direct (par exemple un reportage de BBC Countryfile ou une vidéo de la National Farmers' Union, libre accès). Exclure les enregistrements de manuels et les textes lus.</p>
+<p>Consigne : « Vous allez entendre trois fois le document intitulé [titre]. Rendez compte en français de ce que vous avez compris : nature du document, thème, personnes, lieux, informations précises, points de vue. »</p>
+<h3>Compréhension de l'écrit</h3>
+<p>Texte d'entraînement (le jour de l'ECCF, prendre un texte authentique de 15 lignes au plus) :</p>
+<blockquote><p>More and more farms in Britain open a small shop on their land. Customers can buy eggs, meat, vegetables, cheese or honey produced on the farm or nearby. For farmers, it is a way to earn more: when they sell to a supermarket, they get only a small part of the final price. In a farm shop, they set their own prices. Customers like to know where their food comes from, and many of them say that it tastes better. But a farm shop is a lot of work: someone must serve customers every day, follow hygiene rules and keep the accounts. Some farms have found a solution: a self-service shed with an honesty box, where customers pay by card or leave the money.</p></blockquote>
+<p>Source : texte d'entraînement écrit pour la classe à partir d'informations publiées par la National Farmers' Union et la Farm Retail Association.</p>
+<p>Consigne : « Rendez compte en français du texte : de quoi parle-t-il, quels avantages et quelles difficultés présente-t-il, quelle solution est proposée ? »</p>
+<h3>Expression écrite (consigne en français, 100 mots au moins)</h3>
+<p>Choisissez un sujet.</p>
+<ul>
+<li>Sujet 1 : Vous effectuez votre PFMP dans une exploitation qui vend en direct. Un groupe de touristes britanniques veut visiter la ferme. Écrivez-leur un courriel en anglais pour présenter l'exploitation, les produits et les horaires de la boutique.</li>
+<li>Sujet 2 : Un ami anglais vous demande si vous faites vos courses au supermarché ou chez les producteurs. Répondez-lui en anglais en expliquant vos habitudes et votre avis.</li>
+</ul>
+<h2>Situation B blanche (10 minutes par élève)</h2>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage ; les autres élèves préparent leur propre fiche en mots clés.</td><td>Lecture</td></tr>
+<tr><td>4 à 15</td><td>Passage 1</td><td>5 min de présentation sans lecture, 5 min d'échange, 1 min de notation.</td><td>EOC, EOI</td></tr>
+<tr><td>15 à 26</td><td>Passage 2</td><td>Même déroulé.</td><td>EOC, EOI</td></tr>
+<tr><td>26 à 37</td><td>Passage 3</td><td>Même déroulé.</td><td>EOC, EOI</td></tr>
+<tr><td>37 à 48</td><td>Passage 4</td><td>Même déroulé.</td><td>EOC, EOI</td></tr>
+<tr><td>48 à 52</td><td>Bilan</td><td>Deux conseils collectifs.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p>Sujets possibles (au choix de l'élève) : mon exploitation de PFMP ; une tâche que j'ai réalisée (soins aux animaux, taille, vente, transformation) ; une mobilité ou un voyage d'étude ; une thématique de la classe (fêtes rurales, alimentation, environnement). Questions d'échange : <em>What was your role? What did you find difficult? What would you change? Would you like to work abroad? Why do you think customers buy local produce?</em></p>
+<h2>Grilles (version prof)</h2>
+<h3>Oral : grille de l'annexe 4 (C3.3), sur 20</h3>
+<div class='tw'><table>
+<thead><tr><th>Niveau</th><th>Expression en continu (/6)</th><th>Interaction (/6)</th><th>Recevabilité et intelligibilité de la langue (/8)</th></tr></thead>
+<tbody>
+<tr><td>B1+</td><td>6 : discours argumenté, informé, point de vue pertinent</td><td>6 : prend activement part, rebondit, justifie</td><td>6 à 8 : langue correcte, fluide, proche de l'authenticité</td></tr>
+<tr><td>B1</td><td>5 : discours articulé et nuancé, globalement pertinent</td><td>5 : prend part, se reprend et reformule</td><td>4 à 5 : langue globalement correcte, vocabulaire approprié, rares erreurs</td></tr>
+<tr><td>A2</td><td>4 : discours simple et bref</td><td>4 : prend part avec hésitations et redites</td><td>2 à 3 : langue compréhensible, quelques erreurs</td></tr>
+<tr><td>A1</td><td>2 à 3 : mots isolés, idées simples, discours superficiel</td><td>2 à 3 : intervient simplement, répétitions, questions sans réponse</td><td>1 : langue globalement compréhensible, vocabulaire limité</td></tr>
+<tr><td>&lt;A1</td><td>0 à 1 : amorce de discours, éléments isolés</td><td>0 à 1 : n'intervient pas ou très peu</td><td>0 à 1 : très partiellement compréhensible</td></tr>
+</tbody>
+</table></div>
+<h3>Grille de synthèse (annexe 9)</h3>
+<div class='tw'><table>
+<thead><tr><th>Activité</th><th>Note sur 20 (points entiers)</th><th>Coefficient</th><th>Points</th></tr></thead>
+<tbody>
+<tr><td>Expression orale (continu et interaction)</td><td>/20 (grille ci-dessus)</td><td>× 4</td><td>/80</td></tr>
+<tr><td>Compréhension de l'oral</td><td>/20</td><td>× 3</td><td>/60</td></tr>
+<tr><td>Compréhension de l'écrit</td><td>/20</td><td>× 2</td><td>/40</td></tr>
+<tr><td>Expression écrite</td><td>/20</td><td>× 1</td><td>/20</td></tr>
+<tr><td>Total</td><td></td><td></td><td>/200, divisé par 10 = note C3.3 sur 20</td></tr>
+</tbody>
+</table></div>
+<p>Niveau CECRL : &lt;A1 1 à 3 ; A1 4 à 7 ; A2 8 à 11 ; B1 12 à 15 ; B1+ 16 à 20 (indiquer B2 ou C1 si le niveau est supérieur). Arrondi : au point inférieur jusqu'à 0,49, au point supérieur à partir de 0,50.</p>
+<p>Repères de classe pour la CO et la CE (sur 20) : 1 à 3, quelques mots isolés ; 4 à 7, le thème et quelques informations ; 8 à 11, les informations principales ; 12 à 15, les informations principales et des détails, la situation de communication ; 16 à 20, l'essentiel, les détails et les points de vue. Repères pour l'EE (sur 20, en trois sous-parties comme l'oral) : réalisation de la tâche et situation de communication /6 ; cohérence /6 ; correction de la langue /8.</p>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>L'épreuve blanche peut se faire à la maison ou à l'hôpital, sans aide, en respectant la durée. L'élève note l'heure de début et de fin. Le document audio est déposé sur l'ENT ; l'élève l'écoute trois fois, avec une minute de pause entre les écoutes, sans revenir en arrière. L'oral se fait par enregistrement (présentation), puis par un échange au téléphone ou en visioconférence avec l'enseignante, ou à défaut par trois questions écrites envoyées après l'enregistrement. Version courte (fatigue) : une seule partie de l'écrit et la présentation orale.</p></section>
+</section>
 
     <section class="exam-part" id="bac-pro" aria-labelledby="bac-pro-titre">
       <h2 id="bac-pro-titre">Bac professionnel</h2>
@@ -243,7 +358,91 @@
         </li>
       </ul>
 <p class="src">Textes officiels : <a href="#source-11">11</a>, <a href="#source-12">12</a>, <a href="#source-13">13</a>, <a href="#source-14">14</a>, <a href="#source-3">3</a>.</p>
-    </section>
+    
+<section class="compl-block prof-only" id="blanc-bac-pro"><p>Pour la Terminale (blanc certificatif dans le format) et la Première (entraînement). Version prof : ne pas publier en version élève, sauf la partie « L'élève ne peut pas venir en classe ou est hospitalisé ».</p>
+<p>Thème du sujet : <em>Working in a team, at home and abroad</em>.</p>
+<p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, bac pro, coefficient 2) :</p>
+<ul>
+<li>Situation A, écrite, 1 heure au plus, en dernière année de formation : compréhension de l'oral (document de 1 min 30 au plus, entendu trois fois, une minute entre les écoutes, compte rendu en français) ; compréhension de l'écrit (document authentique inconnu de 15 lignes de 70 caractères au plus, compte rendu en français) ; expression écrite (deux sujets au choix, l'un sur la vie quotidienne, l'autre sur la vie professionnelle, 100 à 120 mots au moins selon la consigne).</li>
+<li>Situation B, orale, 10 minutes : partie 1, expression orale en continu, 5 minutes au plus, sur un travail, un projet, un produit, un service ou une expérience professionnelle, sans lecture, notes et une image autorisées ; partie 2, interaction, 5 minutes au plus, à partir de la présentation.</li>
+</ul>
+<h3>Situation A blanche, en une lesson de 52 minutes (version prof)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Les élèves lisent les trois parties et choisissent leur sujet d'expression écrite.</td><td>Lecture</td></tr>
+<tr><td>2 à 17</td><td>Compréhension de l'oral</td><td>Trois écoutes du document (1 min 30 au plus), une minute entre chaque écoute ; prise de notes ; compte rendu en français.</td><td>CO</td></tr>
+<tr><td>17 à 32</td><td>Compréhension de l'écrit</td><td>Lecture du document, compte rendu en français guidé par les questions.</td><td>CE</td></tr>
+<tr><td>32 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 100 à 120 mots au moins.</td><td>PE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots, ramassage.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral.</strong> une vidéo authentique de 1 min 30 au plus sur le travail en équipe ou la mobilité Erasmus+ d'un apprenti ou d'un élève de lycée professionnel (chaîne officielle Erasmus+ de la Commission européenne, en anglais, libre accès). Le titre est donné aux élèves.</p>
+<p>Consigne : « Écoutez trois fois le document. Rendez compte en français de ce que vous avez compris : qui parle, de quoi, où, pourquoi, et ce que la personne pense. »</p>
+<p><strong>Compréhension de l'écrit.</strong> Texte d'entraînement (le jour du CCF, prendre un document authentique inconnu de 15 lignes au plus) :</p>
+<blockquote><p>Every year, thousands of young people in vocational training spend a few weeks working in another European country with Erasmus+. Before they leave, they often worry about the language. When they come back, most of them say that the language was not the hardest part. The hardest part was the first day: a new team, new tools, new rules. « On my first morning in Dublin, I did not understand the safety briefing, » says Hugo, 19, a carpentry student. « So I asked my colleague to show me. By Friday, I was explaining it to the new intern. » Employers say that these students come back more confident, more autonomous, and better at working with others.</p></blockquote>
+<p>Source : texte d'entraînement écrit pour la classe à partir des témoignages publiés par Erasmus+ ; le jour du CCF, prendre un document authentique inconnu.</p>
+<p>Consigne : « Rendez compte en français du document. Aidez-vous des questions. »</p>
+<ul>
+<li>De quel programme parle le texte, et pour qui ?</li>
+<li>Qu'est-ce qui inquiète les jeunes avant le départ ?</li>
+<li>Qu'est-ce qui a été le plus difficile pour eux, et pourquoi ?</li>
+<li>Que raconte Hugo ?</li>
+<li>Qu'en disent les employeurs ?</li>
+</ul>
+<p><strong>Expression écrite.</strong> Choisissez un sujet. Écrivez 100 à 120 mots au moins.</p>
+<ul>
+<li>Sujet 1 (vie quotidienne) : <em>Do you prefer working alone or in a team? Explain why, with an example from your life.</em></li>
+<li>Sujet 2 (vie professionnelle) : <em>You are back from a PFMP abroad. Write an email to your tutor in the company to thank him or her and say what you learnt.</em></li>
+</ul>
+<h3>Situation B blanche (version prof)</h3>
+<p>Organisation : 10 minutes par élève (5 minutes de présentation, 5 minutes d'échange). Avec 24 élèves, prévoir 6 lessons, quatre passages par lesson. Pendant les passages, les autres élèves travaillent en autonomie au fond de la salle (fiche ci-dessous), casque ou travail écrit, sans bruit.</p>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage au tableau ; les élèves en autonomie prennent la fiche.</td><td>Lecture</td></tr>
+<tr><td>4 à 15</td><td>Passage 1</td><td>5 min de présentation sans lecture, puis 5 min d'échange ; 1 min de notation.</td><td>PO, PI</td></tr>
+<tr><td>15 à 26</td><td>Passage 2</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>26 à 37</td><td>Passage 3</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>37 à 48</td><td>Passage 4</td><td>Même déroulé.</td><td>PO, PI</td></tr>
+<tr><td>48 à 52</td><td>Bilan collectif</td><td>Deux conseils pour la classe, sans nommer personne.</td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p>Sujets de présentation possibles (l'élève choisit, une image et des notes autorisées, pas de texte rédigé) :</p>
+<ul>
+<li>Présenter une réalisation de PFMP ou d'atelier (une photo autorisée).</li>
+<li>Présenter un produit ou un service de son entreprise à un client.</li>
+<li>Présenter un projet professionnel ou de mobilité.</li>
+</ul>
+<p>Questions d'échange, à adapter : « Why did you choose this? » ; « What was the most difficult part? » ; « What would you do differently? » ; « Would you recommend it to a customer? Why? » ; « What did you learn? » ; « Can you tell me more about…? »</p>
+<p>Travail en autonomie pendant les passages : préparer sa propre fiche de présentation (5 mots clés, 3 phrases d'accroche, 1 image), puis faire les exercices d'Étude de la langue de la séquence.</p>
+<h3>Grille nationale bac pro LVA (BO n° 47 du 16 décembre 2021, annexe 4), version prof</h3>
+<p>Situation A, sur 12 (chaque activité de 0 à 4, demi-points possibles) :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Compréhension de l'oral</th><th>Compréhension de l'écrit</th><th>Expression écrite</th></tr></thead>
+<tbody>
+<tr><td>4 (4 ou 3,5)</td><td>Comprend l'essentiel des informations, perçoit la cohérence d'ensemble, identifie le point de vue ou les intentions</td><td>Mêmes critères sur le document écrit</td><td>S'exprime clairement, même avec des erreurs dans les structures complexes ; lexique varié ; expose avantages ou inconvénients ; justifie</td></tr>
+<tr><td>3 (3 ou 2,5)</td><td>Relève certains des éléments porteurs de sens ; saisit certains liens entre les informations</td><td>Mêmes critères sur le document écrit</td><td>Écrit descriptif ou narratif au volume attendu ; structures simples ; lexique assez varié ; sentiments ou point de vue ; erreurs qui gênent peu</td></tr>
+<tr><td>2 (2 ou 1,5)</td><td>Identifie la thématique ou l'objet principal ; comprend les informations les plus significatives et quelques détails</td><td>Mêmes critères sur le document écrit</td><td>Écrit globalement compréhensible malgré des erreurs ; cherche à exprimer une appréciation ; effort de construction</td></tr>
+<tr><td>1 (1 ou 0,5)</td><td>Identifie quelques sons, mots ou éléments isolés ; comprend en partie les informations factuelles (personnes, lieux, dates)</td><td>Identifie quelques mots isolés ; comprend en partie les informations factuelles</td><td>Écrit nettement trop court ; langue en partie compréhensible ; mots isolés</td></tr>
+</tbody>
+</table></div>
+<p>Situation B, sur 8 :</p>
+<div class='tw'><table>
+<thead><tr><th>Degré</th><th>Expression orale en continu (/4)</th><th>Interaction orale (/4)</th></tr></thead>
+<tbody>
+<tr><td>4</td><td>Discours assez nuancé, informé, point de vue pertinent ; langue assez fluide, prononciation claire ; supports utilisés à bon escient</td><td>Réagit avec pertinence ; argumente et cherche à convaincre simplement ; langue assez fluide</td></tr>
+<tr><td>3</td><td>Discours pertinent par rapport à la dimension culturelle ou professionnelle du sujet ; langue globalement correcte ; relativement autonome par rapport aux supports</td><td>Prend sa part dans l'échange ; sait se reprendre ou reformuler ; vocabulaire globalement approprié</td></tr>
+<tr><td>2</td><td>Discours d'exposition (description, narration, explication) généralement compréhensible ; cherche à exprimer une appréciation ; se détache parfois des supports</td><td>S'efforce de prendre part, réagit simplement ; expressions mémorisées fréquentes</td></tr>
+<tr><td>1</td><td>Mots isolés, énoncés très courts, nombreuses pauses ; s'appuie uniquement sur les supports</td><td>Intervient peu ; répétitions et relances fréquentes ; réponses brèves</td></tr>
+</tbody>
+</table></div>
+<p>Note finale : A (/12) + B (/8) = /20. Fiche officielle : https://cache.media.education.gouv.fr/file/47/06/8/ensel369_annexe4_1423068.pdf</p>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>L'épreuve blanche peut se faire à la maison ou à l'hôpital, sans aide, en respectant la durée. L'élève note l'heure de début et de fin. Le document audio est déposé sur l'ENT ; l'élève l'écoute trois fois, avec une minute de pause entre les écoutes, sans revenir en arrière. L'oral se fait par enregistrement (présentation), puis par un échange au téléphone ou en visioconférence avec l'enseignante, ou à défaut par trois questions écrites envoyées après l'enregistrement. Version courte (fatigue) : une seule partie de l'écrit et la présentation orale.</p></section>
+</section>
 
     <section class="exam-part" id="lycee-general" aria-labelledby="lycee-general-titre">
       <h2 id="lycee-general-titre">Lycée général et technologique</h2>
@@ -296,6 +495,176 @@
         </li>
       </ul>
 <p class="src">Textes officiels : <a href="#source-15">15</a>, <a href="#source-16">16</a>, <a href="#source-17">17</a>, <a href="#source-18">18</a>, <a href="#source-19">19</a>, <a href="#source-20">20</a>.</p>
+
+<section class="compl-block prof-only" id="blanc-lgt-premiere"><p>Version prof. Utilisable en contrôle continu (fin de séquence, évaluation commune de Première) et comme évaluation de remplacement.</p>
+<p>Choix des axes : les années paires (2028, 2030…), axes 2, 4, 6 ; les années impaires (2027, 2029…), axes 3, 5, 6. Pour 2027 : axes 3, 5 et 6.</p>
+<h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
+<p>Axes : axe 5 « L'être humain et la nature » (objet « L'homme face à la nature et aux évènements météorologiques ») et axe 6 « Les aires anglophones américaines » (objet « Les Caraïbes dans les Amériques et le monde »), tous deux évalués les années impaires.</p>
+<h3>Déroulé en deux lessons de 52 minutes</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Lecture des consignes, repérage du ou des documents.</td><td>Lecture</td></tr>
+<tr><td>3 à 43</td><td>Compréhension de l'écrit</td><td>Lecture, prise de notes, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>43 à 50</td><td>Relecture</td><td>Relecture du compte rendu, vérification des références au texte.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question (si deux questions sont proposées).</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan en trois parties, trois exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 200 à 250 mots environ ; LVB : 150 à 180 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée : temps, accords, connecteurs, orthographe.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<h3>Compréhension de l'écrit (/10)</h3>
+<p>Document : un article authentique de presse nord-américaine de 2 300 à 4 000 signes sur les ouragans dans les Caraïbes et la reconstruction (par exemple AP News ou CBC News, libre accès), ou deux documents : un article et un court extrait de témoignage.</p>
+<p>Questions de guidage (en français) :</p>
+<ul>
+<li>Présentez le ou les documents (nature, source, date, thème).</li>
+<li>Quel événement est décrit, et où ?</li>
+<li>Quelles conséquences pour les habitants ?</li>
+<li>Quelles réponses (locales, nationales, internationales) sont apportées ?</li>
+<li>Quel point de vue l'auteur adopte-t-il ? Justifiez avec le texte.</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<h3>Expression écrite (/10)</h3>
+<p>Traitez une des questions :</p>
+<ul>
+<li><em>Can people live in harmony with nature when nature can be so violent?</em></li>
+<li><em>You live on a Caribbean island. Write a letter to a friend in France about the season of hurricanes and how your community gets ready.</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>L'épreuve blanche peut se faire à la maison ou à l'hôpital, sans aide, en respectant la durée. L'élève note l'heure de début et de fin. Le document audio est déposé sur l'ENT ; l'élève l'écoute trois fois, avec une minute de pause entre les écoutes, sans revenir en arrière. L'oral se fait par enregistrement (présentation), puis par un échange au téléphone ou en visioconférence avec l'enseignante, ou à défaut par trois questions écrites envoyées après l'enregistrement. Version courte (fatigue) : une seule partie de l'écrit et la présentation orale.</p></section>
+
+<section class="compl-block prof-only" id="blanc-lgt-terminale"><p>Version prof. Pour les élèves en contrôle continu, ce blanc nourrit aussi l'attestation de langues vivantes (niveau par activité : CO, CE, EE, expression orale).</p>
+<p>Choix des axes de l'écrit : années paires 2, 4, 6 ; années impaires 1, 5, 6. Pour 2027 : axes 1, 5 et 6.</p>
+<h2>Évaluation au format de Terminale (version prof)</h2>
+<p>Rappel du format de l'évaluation ponctuelle de Terminale (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027 ; modèle d'entraînement pour les élèves en contrôle continu) :</p>
+<ul>
+<li>Écrit, 1 h 30 (temps d'écoute non compris) : compréhension de l'oral (document de 1 min 30 au plus, trois écoutes séparées d'une minute, compte rendu en français) ; compréhension de l'écrit (2 500 à 4 300 signes) ; expression écrite (une ou deux questions). Compréhension et expression ont le même poids.</li>
+<li>Oral, 10 minutes, 10 minutes de préparation : l'examinateur propose deux axes, le candidat en choisit un ; il reçoit deux documents iconographiques ou citations ; présentation de 5 minutes au plus, puis entretien.</li>
+<li>Niveaux : B2 en LVA, B1 en LVB.</li>
+<li>Axes de l'écrit : années paires 2, 4, 6 ; années impaires 1, 5, 6. Axes de l'oral (voie générale) : 1, 2, 4, 5, 6.</li>
+</ul>
+<p>Axes : axes 1, 5 et 6 à l'écrit (année impaire) ; à l'oral, deux axes parmi 1, 2, 4, 5, 6.</p>
+<h3>Écrit en deux lessons de 52 minutes (ou une plage de 2 heures)</h3>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 2</td><td>Consignes</td><td>Présentation de l'épreuve.</td><td>Lecture</td></tr>
+<tr><td>2 à 10</td><td>Compréhension de l'oral : écoutes</td><td>Trois écoutes séparées d'une minute, prise de notes.</td><td>CO</td></tr>
+<tr><td>10 à 24</td><td>Compréhension de l'oral : compte rendu</td><td>Compte rendu en français.</td><td>CO</td></tr>
+<tr><td>24 à 50</td><td>Compréhension de l'écrit</td><td>Lecture, compte rendu guidé.</td><td>CE</td></tr>
+<tr><td>50 à 52</td><td>Ramassage</td><td></td><td></td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<div class='tw'><table>
+<thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
+<tbody>
+<tr><td>0 à 3</td><td>Consignes</td><td>Choix de la question.</td><td>Lecture</td></tr>
+<tr><td>3 à 8</td><td>Plan</td><td>Plan et exemples tirés de la séquence.</td><td>PE</td></tr>
+<tr><td>8 à 46</td><td>Expression écrite</td><td>Rédaction (LVA : 250 à 300 mots environ ; LVB : 180 à 220 mots environ, longueurs indicatives de classe).</td><td>PE</td></tr>
+<tr><td>46 à 52</td><td>Relecture</td><td>Relecture guidée.</td><td>PE</td></tr>
+<tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'oral (/10).</strong> Document : une vidéo authentique de 1 min 30 au plus sur le vote des jeunes en Écosse (BBC Scotland, libre accès) ; titre donné aux élèves.</p>
+<p>Consigne : « Rendez compte en français du document. » Points à retrouver :</p>
+<ul>
+<li>Le sujet et le lieu.</li>
+<li>Les jeunes interrogés et leurs avis.</li>
+<li>Les chiffres cités.</li>
+<li>La question posée à la fin.</li>
+</ul>
+<p>Grille de classe, compréhension de l'oral (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques mots ou éléments isolés</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, organisés ; le point de vue général</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; le point de vue, le ton, les intentions</td></tr>
+</tbody>
+</table></div>
+<p><strong>Compréhension de l'écrit (/10).</strong> Document : un article authentique de 2 500 à 4 300 signes sur la place des réseaux sociaux dans la vie politique au Royaume-Uni (BBC News ou The Guardian, libre accès).</p>
+<p>Questions de guidage :</p>
+<ul>
+<li>Présentez le document.</li>
+<li>Comment les réseaux sociaux changent-ils la parole politique ?</li>
+<li>Quels risques l'article souligne-t-il ?</li>
+<li>Quel est le point de vue de l'auteur ?</li>
+</ul>
+<p>Grille de classe, compréhension de l'écrit (/10), alignée sur les degrés du CECRL utilisés par les fiches nationales (Éduscol, page des modalités d'évaluation des langues vivantes) :</p>
+<div class='tw'><table>
+<thead><tr><th>Points</th><th>Ce que montre le compte rendu</th></tr></thead>
+<tbody>
+<tr><td>1 à 2 (A1)</td><td>Quelques éléments isolés repérés (noms, lieux, dates)</td></tr>
+<tr><td>3 à 4 (A2)</td><td>Le sujet général et quelques informations principales</td></tr>
+<tr><td>5 à 7 (B1)</td><td>Les informations principales et quelques détails, liés entre eux ; le point de vue est repéré</td></tr>
+<tr><td>8 à 10 (B2)</td><td>L'essentiel et les détails significatifs ; les intentions, le ton et l'implicite sont compris ; les liens entre documents sont faits</td></tr>
+</tbody>
+</table></div>
+<p><strong>Expression écrite (/10 ; ramenée sur 20 avec la compréhension, même poids).</strong> Traitez une des questions :</p>
+<ul>
+<li><em>Social media: a new public space for citizens or a threat to democracy?</em></li>
+<li><em>Write an article for your school website: « Should 16-year-olds vote in the whole United Kingdom? »</em></li>
+</ul>
+<p>Grille de classe, expression écrite (/10) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Réalisation de la tâche, argumentation</td><td>/4</td><td>1 : hors sujet ou idées isolées ; 2 : sujet traité en partie, peu d'exemples ; 3 : sujet traité, exemples tirés de la séquence ; 4 : point de vue nuancé, exemples précis, références culturelles</td></tr>
+<tr><td>Cohérence, organisation</td><td>/3</td><td>1 : phrases juxtaposées ; 2 : mots de liaison simples, paragraphes ; 3 : progression claire, connecteurs variés</td></tr>
+<tr><td>Correction et richesse de la langue</td><td>/3</td><td>1 : erreurs qui gênent la lecture ; 2 : langue simple et compréhensible ; 3 : langue assez correcte, lexique de la séquence, structures variées</td></tr>
+</tbody>
+</table></div>
+<h3>Oral blanc (10 minutes, 10 minutes de préparation)</h3>
+<p>Organisation : quatre passages par lesson (4 × 10 min, plus 2 min de transition chacun, 4 min d'installation) ; les élèves préparent pendant le passage du précédent.</p>
+<p>Documents de l'oral blanc (l'examinateur propose deux axes ; l'élève en choisit un et reçoit deux documents) :</p>
+<ul>
+<li>Axe 1 « Espace privé et espace public » : une photo d'un espace de coworking ; une citation sur le droit à la vie privée.</li>
+<li>Axe 5 « Citoyenneté et mondes virtuels » : une capture d'écran d'un fil d'actualité ; une citation sur la parole sur les réseaux sociaux.</li>
+<li>Axe 6 « Le Royaume-Uni et ses nations » : une photo du Parlement écossais ; la carte des quatre nations.</li>
+<li>Axe 2 « Territoire et mémoire » : une photo d'un monument aux morts du Commonwealth ; une citation sur la mémoire de l'esclavage.</li>
+<li>Axe 4 « Enjeux et formes de la communication » : une citation de Winston Churchill ; une affiche de campagne.</li>
+</ul>
+<p>Grille de classe, oral (/20) :</p>
+<div class='tw'><table>
+<thead><tr><th>Critère</th><th>Points</th><th>Repères</th></tr></thead>
+<tbody>
+<tr><td>Expression en continu : contenu</td><td>/6</td><td>2 : description des documents ; 4 : documents reliés à l'axe ; 6 : problématique claire, analyse nuancée, références culturelles</td></tr>
+<tr><td>Expression en continu : langue</td><td>/4</td><td>1 : langue simple, nombreuses hésitations ; 2 : correcte, lexique de la séquence ; 3 : fluide ; 4 : précise et variée</td></tr>
+<tr><td>Entretien : réactivité</td><td>/6</td><td>2 : réponses brèves ; 4 : réponses développées ; 6 : relance, argumente, défend un point de vue</td></tr>
+<tr><td>Entretien : langue</td><td>/4</td><td>1 à 4, mêmes repères que l'expression en continu</td></tr>
+</tbody>
+</table></div>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>L'épreuve blanche peut se faire à la maison ou à l'hôpital, sans aide, en respectant la durée. L'élève note l'heure de début et de fin. Le document audio est déposé sur l'ENT ; l'élève l'écoute trois fois, avec une minute de pause entre les écoutes, sans revenir en arrière. L'oral se fait par enregistrement (présentation), puis par un échange au téléphone ou en visioconférence avec l'enseignante, ou à défaut par trois questions écrites envoyées après l'enregistrement. Version courte (fatigue) : une seule partie de l'écrit et la présentation orale.</p></section>
 <h3 id="llcer">LLCER anglais : interpréter, confronter, défendre une lecture</h3>
 <p class="exam-intro">Comment faire dialoguer des documents au lieu de les commenter l’un après l’autre ?</p>
 <h4 class="blk">Le format officiel</h4>
@@ -334,6 +703,38 @@
       </ul>
 <p class="muted note">Écrit de LLCER (synthèse et traduction) : ressources en préparation.</p>
 <p class="src">Textes officiels : <a href="#source-21">21</a>, <a href="#source-22">22</a>, <a href="#source-23">23</a>, <a href="#source-24">24</a>, <a href="#source-25">25</a>, <a href="#source-26">26</a>.</p>
+
+<section class="compl-block prof-only" id="blanc-llcer"><p>Version prof.</p>
+<p>Rappel de l'épreuve terminale de spécialité LLCER anglais (note de service, Éduscol, définition de l'épreuve) :</p>
+<ul>
+<li>Écrit, 3 h 30 : synthèse d'un dossier de trois ou quatre documents (textes littéraires et non littéraires, iconographie), en anglais, environ 500 mots (16 points) ; traduction ou transposition d'un passage d'environ 500 signes (4 points).</li>
+<li>Oral, 20 minutes sans préparation : présentation d'un dossier personnel de quatre à six documents en lien avec les thématiques étudiées (10 minutes au plus), puis entretien.</li>
+<li>Niveau visé : B2 à C1. Programme : Bulletin officiel spécial n° 8 du 25 juillet 2019.</li>
+</ul>
+<h2>Écrit blanc (3 h 30 ; ou quatre lessons de 52 minutes)</h2>
+<p>Thématique : « Voyages, territoires, frontières », axe « Migration et exil ».</p>
+<p>Dossier proposé (documents du domaine public ou en libre accès) :</p>
+<ol>
+<li>Emma Lazarus, « The New Colossus » (1883), poème gravé sur le socle de la statue de la Liberté.</li>
+<li>Une photographie d'Ellis Island par Lewis Hine (vers 1905, domaine public, Library of Congress).</li>
+<li>Un extrait d'un discours présidentiel sur l'immigration (archives officielles, domaine public aux États-Unis).</li>
+<li>Un article de presse récent sur l'arrivée de migrants dans un pays anglophone (libre accès).</li>
+</ol>
+<p>Consigne de synthèse : <em>In about 500 words, show how these documents question the promise of a new home.</em> Traduction (4 points) : les huit derniers vers de « The New Colossus » (environ 500 signes), vers le français.</p>
+<div class='tw'><table>
+<thead><tr><th>Lesson</th><th>Minutage</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>5 min de consignes ; 35 min de lecture et de prise de notes ; 12 min de problématique</td></tr>
+<tr><td>2</td><td>15 min de plan ; 37 min de rédaction</td></tr>
+<tr><td>3</td><td>40 min de rédaction ; 12 min de relecture</td></tr>
+<tr><td>4</td><td>35 min de traduction ; 15 min de correction collective de la méthode ; 2 min de ramassage</td></tr>
+</tbody>
+</table></div>
+<p>Grille de classe : synthèse /16 (compréhension et mise en relation des documents /6 ; problématique et construction /4 ; langue /6) ; traduction /4 (exactitude du sens /2, qualité du français /2).</p>
+<h2>Oral blanc (20 minutes, sans préparation)</h2>
+<p>L'élève présente son dossier personnel (quatre à six documents, dont au moins un extrait d'une œuvre intégrale lue) en 10 minutes au plus, puis entretien. Organisation : deux passages par lesson (2 × 20 min, plus 12 min d'installation et de bilan). Grille de classe (/20) : présentation du dossier et cohérence /6 ; analyse et culture /6 ; entretien /4 ; langue /4.</p>
+<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>L'épreuve blanche peut se faire à la maison ou à l'hôpital, sans aide, en respectant la durée. L'élève note l'heure de début et de fin. Le document audio est déposé sur l'ENT ; l'élève l'écoute trois fois, avec une minute de pause entre les écoutes, sans revenir en arrière. L'oral se fait par enregistrement (présentation), puis par un échange au téléphone ou en visioconférence avec l'enseignante, ou à défaut par trois questions écrites envoyées après l'enregistrement. Version courte (fatigue) : une seule partie de l'écrit et la présentation orale.</p></section>
 <h3 id="amc">Anglais monde contemporain (AMC)</h3>
 <p class="exam-intro">Comment comprendre un débat contemporain sans confondre information, commentaire et persuasion ? AMC est une déclinaison de la spécialité LLCER, pas un enseignement optionnel national.</p>
 <h4 class="blk">Le format officiel</h4>
@@ -375,6 +776,12 @@
       </ul>
 <p class="muted note">Dossier complet pour la part en anglais du Grand Oral : en préparation.</p>
 <p class="src">Textes officiels : <a href="#source-27">27</a>, <a href="#source-28">28</a>, <a href="#source-29">29</a>.</p>
+
+<section class="compl-block" id="note-grand-oral"><ul>
+<li>Le Grand oral porte sur les deux enseignements de spécialité de l'élève. Il ne concerne l'anglais que pour les élèves de LLCER anglais ou d'AMC.</li>
+<li>Le site n'a pas de ressource Grand oral. Avant d'en créer une, vérifier dans la note de service du Grand oral si une partie peut être présentée en langue étrangère (non vérifié ici).</li>
+<li>Proposition, si besoin : une fiche « Choisir une question de Grand oral à partir de Passing the Flame » (exemple : <em>Why do we believe what we want to see?</em>), avec méthode en français.</li>
+</ul></section>
 <h3 id="dnl">Section européenne et DNL : penser une discipline en anglais</h3>
 <p class="exam-intro">Une DNL n’est pas un exposé d’anglais avec du vocabulaire spécialisé : il s’agit de raisonner dans une discipline, en anglais.</p>
 <h4 class="blk">Le format officiel</h4>

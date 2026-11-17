@@ -11,6 +11,7 @@
     [].forEach.call(d.querySelectorAll('[data-keep]'),function(cb){cb.checked=c.indexOf(cb.getAttribute('data-keep'))<0;});}
   function show(id){
     if(!d.getElementById(id)||closed().indexOf(id)>=0) id=DEFAULT;
+    if(d.body.classList.contains('mode-eleve')&&id&&d.getElementById(id)&&d.getElementById(id).classList.contains('prof-only')) id=DEFAULT;
     panels.forEach(function(p){p.classList.toggle('on',p.id===id);});
     tabs.forEach(function(t){var on=t.getAttribute('data-tab')===id;t.classList.toggle('on',on);var a=t.querySelector('a');if(a)a.setAttribute('aria-current',on?'page':'false');if(on){var r=t.parentNode;r.scrollLeft=t.offsetLeft-r.clientWidth/2+t.offsetWidth/2;}});
   }
@@ -54,7 +55,7 @@
   function setDys(on){d.body.classList.toggle('dys',on);
     var b=d.getElementById('dys-btn');if(b)b.setAttribute('aria-pressed',on?'true':'false');
     try{localStorage.setItem(DKEY,on?'1':'0');}catch(e){}}
-  var saved='prof';try{saved=localStorage.getItem(MKEY)||'prof';}catch(e){}
+  var saved='eleve';try{saved=localStorage.getItem(MKEY)||'eleve';}catch(e){}
   setMode(saved);applyClosed();
   var dysOn=false;try{dysOn=localStorage.getItem(DKEY)==='1';}catch(e){}
   setDys(dysOn);

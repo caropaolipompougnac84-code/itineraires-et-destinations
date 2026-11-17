@@ -88,8 +88,23 @@ body.dys p,body.dys li{max-width:38em}
 @media (max-width:600px){body{font-size:16.5px}body.dys{font-size:1.1rem}h1{font-size:1.45rem}table.grid{font-size:.86rem}main{padding:12px 10px 32px}}
 @media print{.site-nav,.seq-nav,.switch,.audio-bar{display:none}}
 </style>
+
+<style id="compl-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only{display:none!important}
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.4rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.eleve-gate-note{margin:1rem 0;padding:1rem 1.1rem;border:2px solid #1A3658;border-radius:12px;background:#f4f6fa}
+body.mode-prof .eleve-gate-note{display:none!important}
+</style>
+
 </head>
-<body class="english-look">
+<body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -98,6 +113,29 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/">The Verdict of the People</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/the-verdict-of-the-people/">Home</a>
 <a href="/the-verdict-of-the-people/s1/">L1</a>
@@ -111,7 +149,9 @@ body.dys p,body.dys li{max-width:38em}
 <a href="/the-verdict-of-the-people/flashcards/">Flashcards</a>
 <a href="/the-verdict-of-the-people/teacher/">Teacher notes</a>
 </nav>
-<p class="switch"><a href="/the-verdict-of-the-people/dys/">Adapted version (dys)</a></p>
+<p class="switch"><a href="/the-verdict-of-the-people/dys/">Adapted version (dys)</a></p><div class="eleve-gate-note"><p><strong>Version élève.</strong> Les évaluations, les grilles et les corrigés sont réservés au professeur. Ouvrez la Version prof pour les afficher. Si vous ne pouvez pas venir en classe ou si vous êtes hospitalisé, utilisez le parcours « L'élève ne peut pas venir en classe ou est hospitalisé » sur la page d'accueil de la séquence.</p></div>
+<div class="prof-only assessment-prof">
+
 <span class="level">Première générale et technologique</span><span class="level">LVA</span><span class="level">B1+ (official target)</span><span class="level alt">Towards B2 (extension)</span>
 <h1>Assessment</h1><p class="lede">An individual oral grid and a written grid, each out of 20.</p>
 <section class="card"><h2>Oral task · individual grid, /20</h2>
@@ -130,7 +170,8 @@ body.dys p,body.dys li{max-width:38em}
 <p>Do not require every grammar structure taught in the sequence. Assess whether students choose language that serves their meaning. No model answer supplies election results: check each factual statement against the student’s source log.</p></section>
 <section class="card"><h2>Student self-check before handing in</h2>
 <ul><li>Every number has a source, a time, a category and a status.</li><li>I have not inferred a result from an outdated list of members.</li><li>My cross-border consequence is presented as a hypothesis.</li><li>I mention Bingham, two institutional or representation facts and one limit.</li></ul></section>
-</main>
+
+</div></main>
 <footer><div class="wrap">
 <p><strong>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</strong></p>
 <p>This sequence is original teaching material for language learning. It does not supply or invent any 2026 election result: students establish results from dated, identifiable sources. Every image is in the public domain or under a free licence, credited next to the picture, with a caption that explains its link with the lesson. You may use this resource with credit to the author, for non-commercial purposes, and you may adapt it under the same licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0 licence</a>.</p>

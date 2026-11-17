@@ -644,7 +644,52 @@
       font-size: 1.1rem;
       line-height: 1.55;
     }
-  </style>
+  
+    /* Tableau d'ouverture : montrer l'œuvre entière, sans recadrage 16/9. */
+    body.lettres-look .look-hero-tableau{
+      margin: 1.2rem 0 1.4rem;
+    }
+    body.lettres-look .look-hero-tableau img{
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center top;
+      width: 100%;
+      height: auto;
+      max-height: none;
+      background: #f4ebe3;
+    }
+    .etude .gorse-short p + p{ margin-top: 10px; }
+    .etude .gorse-short .gorse-steps{ margin-top: 14px; }
+    .etude .gorse-short .gorse-steps + .gorse-short-grid{ margin-top: 16px; }
+    .etude .gorse-steps .appui{ color: var(--muted, #5a4f49); }
+    .etude .gorse-modele{
+      margin-top: 28px;
+      padding: 16px 18px 18px;
+      background: var(--cream, #fffdf8);
+      border: 1px solid var(--line, #e4d4cc);
+      border-radius: 20px;
+    }
+    .etude .gorse-modele h3{
+      margin: 0 0 8px;
+      font-family: var(--display, Georgia, serif);
+      font-style: italic;
+      font-weight: 560;
+      font-size: 1.35rem;
+    }
+    .etude .gorse-modele .gorse-steps{ margin-top: 14px; }
+    .etude .gorse-modele .gorse-dl{ margin-top: 14px; }
+    .etude .gorse-short, .etude .gorse-modele{ scroll-margin-top: 124px; }
+    .etude .gorse-short-grid{ width: 100%; grid-template-columns: 1fr; }
+    .etude .gorse-short-grid figure,
+    .etude .gorse-modele .gorse-fig{ width: 100%; max-width: 100%; }
+    .etude .gorse-short-grid img,
+    .etude .gorse-modele .gorse-fig img{ width: 100%; height: auto; display: block; }
+    @media (min-width: 800px){
+      .etude .gorse-short-grid{ grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+    }
+    .etude .gorse-pointe-block p{ margin: 0 0 6px; }
+    .etude .gorse-pointe-block p:last-child{ margin-bottom: 0; }
+    </style>
 </head>
 <body data-section="methodologie" class="lettres-look">
   <header class="site-header">
@@ -701,7 +746,8 @@
       <p class="eyebrow">Animation pédagogique</p>
       <h1>Tomber amoureux<br>de l’étude</h1>
       <p class="lede">Six méthodes pour que le travail en solo cesse d’être une corvée. Moins de relecture passive. Plus de geste, de rappel, de plaisir de comprendre. La spirale de Gorse, conçue par Madame Carole Paoli Pompougnac, s’y ajoute pour le travail du texte.</p>
-<figure class="look-hero"><img src="/tomber-amoureux-de-letude/img/look/salle-labrouste-bnf.jpg" alt="La salle Labrouste du site Richelieu de la Bibliothèque nationale de France, colonnes et coupole de verre" width="1600" height="1065"><figcaption>La salle Labrouste du site Richelieu de la Bibliothèque nationale de France, colonnes et coupole de verre. Auteur: Stefan Drößler. CC BY 4.0, Wikimedia Commons.</figcaption></figure>
+<figure class="look-hero look-hero-tableau"><img src="img/look/kersting-homme-lisant-a-la-lampe.jpg" alt="Homme lisant à la lampe, tableau de Georg Friedrich Kersting : un homme en manteau sombre, assis à son bureau, lit un livre à la lumière d’une lampe." width="1600" height="2135"><figcaption>Georg Friedrich Kersting, Homme lisant à la lampe (Lesender Mann beim Lampenlicht), 1814, huile sur toile, 48 x 37 cm. Musée Oskar Reinhart « Am Stadtgarten », Winterthour. Domaine public. Source : <a href="https://commons.wikimedia.org/wiki/File:Kersting_-_Lesender_Mann_beim_Lampenlicht.jpg">Wikimedia Commons</a>.</figcaption></figure>
+      <p class="measure">Le parcours sur l’art fait partie intégrante de ce travail.</p>
       <ul class="pills">
         <li><a href="#pomodoro"><em>01</em> Pomodoro</a></li>
         <li><a href="#cornell"><em>02</em> Cornell</a></li>
@@ -1003,6 +1049,8 @@
         <p class="src">Modèles et deux voies (générale et technologique) : <a href="https://itineraires-destinations.fr/expanding-your-vocabulary/">Expanding your vocabulary</a>.</p>
       </aside>
 
+        </section>
+
     <section class="wrap" id="spirale" data-station>
       <p class="kicker"><span>07</span> Spirale de Gorse</p>
       <h2>Partir de ce qui saute aux yeux</h2>
@@ -1039,25 +1087,56 @@
       <p class="note">À chaque tour, l’idée s’écrit à l’extérieur, et à l’intérieur ce qui la soutient. Si un élément résiste à ton idée, reviens en arrière et reformule. La première impression n’est pas forcément fausse : elle peut être précisée, limitée, parfois déplacée.</p>
 
       <aside class="gorse-short" id="spirale-courte">
-        <p class="kicker">Version courte</p>
-        <h3>Version courte, en trois tours</h3>
+        <p class="kicker">Version en cinq tours</p>
+        <h3>Version en cinq tours</h3>
+        <p>Pour le CAP, la SEGPA, ou une première approche. La version longue reste la référence.</p>
+        <p>Ces cinq tours sont modulables : le professeur les resserre ou les développe selon la classe, le niveau et le temps disponible.</p>
+        <ol class="gorse-steps">
+            <li><span class="n">1</span><p><strong>Je remarque.</strong> Ce qui saute aux yeux : la première impression, ce qui paraît évident.</p></li>
+            <li><span class="n">2</span><p><strong>Je repère.</strong> Ce que je distingue plus nettement, un détail, un passage, un élément, par exemple les vers ou la phrase qui confirment ce que j’ai remarqué.</p></li>
+            <li><span class="n">3</span><p><strong>Je comprends.</strong> Ce que cela me permet de comprendre.</p></li>
+            <li><span class="n">4</span><p><strong>J’anticipe.</strong> Les éléments réunis, je me fie à mon intuition : percer le texte à jour, c’est anticiper sa finalité, l’idée principale.</p></li>
+            <li><span class="n">5</span><p><strong>Je trouve le sens.</strong> Formule le problème précis, ce que tu peux défendre, et sa limite.</p></li>
+        </ol>
         <div class="gorse-short-grid">
           <figure>
-            <img src="img/spirale-gorse-courte.svg" width="840" height="620" alt="Spirale lisse en trois tours : je remarque, en partant de ce qui saute aux yeux ; je comprends ; j’anticipe, puis « Je trouve le sens ». L’idée s’écrit du côté extérieur, les appuis du côté intérieur.">
+            <img src="img/spirale-gorse-modele.svg" width="920" height="700" alt="Spirale lisse en cinq tours : je remarque, ce qui saute aux yeux ; je repère ; je comprends ; j’anticipe, puis « Je trouve le sens ». L’idée s’écrit du côté extérieur, les appuis du côté intérieur.">
           </figure>
           <div>
-            <p>Pour le CAP, la SEGPA, ou une première approche. La version longue reste la référence.</p>
             <ul class="gorse-dl">
-              <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse-courte.pdf">Fiche PDF, version courte</a></li>
+              <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse-courte.pdf">Fiche PDF, version en cinq tours</a></li>
               <li><a href="fiches/fiche-spirale-de-gorse-courte.docx">Fiche .docx</a></li>
               <li><a href="fiches/fiche-spirale-de-gorse-courte.odt">Fiche .odt</a></li>
 
-              <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse-courte-adaptee.pdf">Fiche adaptée, version courte, PDF</a></li>
+              <li><a class="btn-forest" href="fiches/fiche-spirale-de-gorse-courte-adaptee.pdf">Fiche adaptée, version en cinq tours, PDF</a></li>
               <li><a href="fiches/fiche-spirale-de-gorse-courte-adaptee.docx">Fiche adaptée .docx</a></li>
               <li><a href="fiches/fiche-spirale-de-gorse-courte-adaptee.odt">Fiche adaptée .odt</a></li>
             </ul>
           </div>
         </div>
+      </aside>
+
+      <aside class="gorse-modele" id="modele-ballade">
+        <p class="kicker">Modèle complété</p>
+        <h3>Modèle complété : la Ballade des pendus</h3>
+        <p>Les cinq tours, déjà remplis, sur L’Épitaphe Villon, dite Ballade des pendus. À l’extérieur, l’idée. À l’intérieur, les appuis. François Villon, « L’Epitaphe en forme de Ballade que feit Villon pour luy et ses compagnons, s’attendant estre pendu avec eulx », Œuvres complètes, Paris, A. Lemerre, 1876, p. 101-102. Texte du domaine public, d’après Wikisource, « Ballade des pendus ».</p>
+        <p><a href="ballade-des-pendus/">Lire le poème entier, moyen français et français moderne</a></p>
+        <figure class="gorse-fig">
+          <img src="img/spirale-gorse-villon.svg" width="1980" height="1520" alt="Spirale remplie des cinq étapes sur L’Épitaphe Villon, dite Ballade des pendus. Je remarque l’adresse Frères humains, les morts qui nous parlent, aux vers 1 et 5. Je repère une ballade : trois dizains, un envoi, un refrain aux vers 10, 20, 30 et 35. Je comprends le réalisme macabre et l’appel à la pitié, aux vers 9 et 21 à 24. J’anticipe une prière, vers le Fils de la Vierge et le Prince Jésus, aux vers 16 à 18 et 31 à 35. Je trouve le sens : une fraternité avec ceux qu’on a pendus, une pitié qui refuse le mépris sans effacer la peine, et cette limite : le poème demande l’absolution, non l’innocence.">
+          <figcaption>Exemple rempli. Côté extérieur : l’idée. Côté intérieur : les appuis.</figcaption>
+        </figure>
+        <ol class="gorse-steps">
+          <li><span class="n">1</span><p><strong>Je remarque.</strong> « Frères humains » : les morts nous parlent, et nous nomment frères. C’est ce qui saute aux yeux dès le premier vers, confirmé par « cy attachez cinq, six ». <span class="appui">Appuis : v. 1 ; v. 5.</span></p></li>
+          <li><span class="n">2</span><p><strong>Je repère.</strong> Une ballade : trois dizains de décasyllabes, un envoi de cinq vers, un refrain qui ferme chaque strophe. <span class="appui">Appuis : v. 10, 20, 30 et 35 ; v. 31 à 35.</span></p></li>
+          <li><span class="n">3</span><p><strong>Je comprends.</strong> Le poème montre les corps sans fard, et demande pourtant qu’on ne s’en rie pas. Le réalisme macabre sert l’appel à la pitié. <span class="appui">Appuis : v. 21 à 24 ; v. 9 ; v. 34.</span></p></li>
+          <li><span class="n">4</span><p><strong>J’anticipe.</strong> La finalité est une prière. On intercède auprès du Fils de la Vierge Marie ; l’envoi s’adresse au Prince Jésus, pour qu’Enfer n’ait pas la maîtrise. <span class="appui">Appuis : v. 16 à 18 ; v. 31 à 33.</span></p></li>
+          <li><span class="n">5</span><div class="gorse-pointe-block"><p><strong>Je trouve le sens.</strong></p><p><strong>Le problème précis :</strong> Une fraternité avec ceux qu’on a pendus est-elle encore possible ?</p><p><strong>Ce que l’on peut défendre :</strong> Une pitié qui refuse le mépris, sans effacer la peine (« occis par justice »).</p><p><strong>Sa limite :</strong> Le poème demande l’absolution, non l’innocence, et prévient « Ne soyez donc de nostre confrairie » (v. 29).</p><p class="appui">Appuis : v. 12-13 ; v. 29 ; v. 10 et 35.</p></div></li>
+        </ol>
+        <ul class="gorse-dl">
+          <li><a class="btn-forest" href="fiches/modele-ballade-des-pendus.pdf">Modèle complété, PDF</a></li>
+          <li><a href="fiches/modele-ballade-des-pendus.docx">Modèle complété, .docx</a></li>
+          <li><a href="fiches/modele-ballade-des-pendus.odt">Modèle complété, .odt</a></li>
+        </ul>
       </aside>
 
       <p class="kicker" style="margin-top:2.2rem">Exemple</p>

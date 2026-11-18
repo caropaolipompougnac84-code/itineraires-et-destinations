@@ -201,6 +201,22 @@
   </style>
   
 <style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+<style id="compl-gorse-style">
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3,.compl-block h4{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.45rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.gorse-fig{margin:1.25rem 0 1rem}
+.gorse-fig img,.gorse-fig svg{display:block;width:100%;max-width:36rem;height:auto}
+.gorse-fig figcaption{font-size:.95rem;line-height:1.45;color:#1A3658;margin:.55rem 0 0}
+ol.gorse-steps{list-style:none;padding:0;margin:1.35rem 0 0;display:flex;flex-direction:column;gap:1.15rem}
+ol.gorse-steps li{display:grid;grid-template-columns:2.1rem 1fr;gap:.8rem;align-items:start}
+ol.gorse-steps .n{font:700 1.3rem/1.15 "Source Sans 3",Verdana,sans-serif;color:#1A3658}
+ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
+body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
+body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
+</style>
 </head>
 <body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -253,6 +269,7 @@
 <div class="compl-modes" role="group" aria-label="Affichage">
 <button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
 <button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+<button type="button" data-compl-mode="absent" aria-pressed="false">Version élève absent</button>
 </div>
 <script>
 (function(){
@@ -260,6 +277,10 @@
   function setM(m){
     document.body.classList.toggle("mode-eleve", m==="eleve");
     document.body.classList.toggle("mode-prof", m==="prof");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
     document.querySelectorAll("[data-compl-mode]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
     });
@@ -269,7 +290,7 @@
     var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
   });
   var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
-  setM(saved==="prof"?"prof":"eleve");
+  setM((saved==="prof"||saved==="dys"||saved==="absent")?saved:"eleve");
 })();
 </script>
 
@@ -529,7 +550,8 @@ Dolly Parton died on 25 August 2026, aged 80. She created the Dollywood Foundati
     <nav class="pager" aria-label="Previous and next"><a href="../s7/">Previous: Lesson 7</a><a href="../s9/">Next: Lesson 9</a></nav>
   </main>
 
-  <footer class="site-footer">
+  <section class="compl-block gorse-block" id="spirale-de-gorse"><h2>Spirale de Gorse</h2><p>Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : chaque tour est une prise plus haute. On part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'à la pointe, le sommet où l'essentiel se laisse voir. Quatre tours, puis la pointe. À appliquer, dans chaque lesson, au document principal (texte, image ou audio). Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-complete.svg" width="800" height="900" alt="Spirale de Gorse : cinq tours annotés se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, J'anticipe, Je trouve le sens."><figcaption>Spirale de Gorse, quatre tours puis la pointe. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Ce qui saute aux yeux, la première impression.</p><p>I notice… / This is about…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail, un passage, un élément plus net.</p><p>I spot… / The key word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Ce que ces éléments permettent de comprendre.</p><p>This shows that… / They have in common…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>J'anticipe (I anticipate)</strong></p><p>La visée du texte, ce qu'il faut en faire.</p><p>The text wants me to… / I anticipate…</p></div></li><li><span class="n" aria-hidden="true">5</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>La pointe : l'essentiel que l'on peut défendre, et sa limite.</p><p>The point is… / But I must not…</p></div></li></ol></section>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">CC BY-NC-SA 4.0</a></strong></p>

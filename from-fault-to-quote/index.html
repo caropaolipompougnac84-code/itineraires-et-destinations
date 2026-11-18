@@ -174,6 +174,22 @@ body.mode-eleve .prof-only{display:none!important}
 body.mode-prof .eleve-gate-note{display:none!important}
 </style>
 
+<style id="compl-gorse-style">
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3,.compl-block h4{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.45rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.gorse-fig{margin:1.25rem 0 1rem}
+.gorse-fig img,.gorse-fig svg{display:block;width:100%;max-width:36rem;height:auto}
+.gorse-fig figcaption{font-size:.95rem;line-height:1.45;color:#1A3658;margin:.55rem 0 0}
+ol.gorse-steps{list-style:none;padding:0;margin:1.35rem 0 0;display:flex;flex-direction:column;gap:1.15rem}
+ol.gorse-steps li{display:grid;grid-template-columns:2.1rem 1fr;gap:.8rem;align-items:start}
+ol.gorse-steps .n{font:700 1.3rem/1.15 "Source Sans 3",Verdana,sans-serif;color:#1A3658}
+ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
+body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
+body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
+</style>
 </head>
 <body data-section="lycee-pro" class="mode-eleve english-look">
   <header class="site-header">
@@ -203,6 +219,7 @@ body.mode-prof .eleve-gate-note{display:none!important}
 <div class="compl-modes" role="group" aria-label="Affichage">
 <button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
 <button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+<button type="button" data-compl-mode="absent" aria-pressed="false">Version élève absent</button>
 </div>
 <script>
 (function(){
@@ -210,6 +227,10 @@ body.mode-prof .eleve-gate-note{display:none!important}
   function setM(m){
     document.body.classList.toggle("mode-eleve", m==="eleve");
     document.body.classList.toggle("mode-prof", m==="prof");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
     document.querySelectorAll("[data-compl-mode]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
     });
@@ -219,7 +240,7 @@ body.mode-prof .eleve-gate-note{display:none!important}
     var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
   });
   var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
-  setM(saved==="prof"?"prof":"eleve");
+  setM((saved==="prof"||saved==="dys"||saved==="absent")?saved:"eleve");
 })();
 </script>
 
@@ -649,6 +670,43 @@ body.mode-prof .eleve-gate-note{display:none!important}
 </tbody>
 </table></div>
 <p>Note finale : A (/12) + B (/8) = /20. Fiche officielle : https://cache.media.education.gouv.fr/file/47/06/8/ensel369_annexe4_1423068.pdf</p></section>
+<section class="compl-block compl-eval" id="evaluation-ponctuelle"><h2>Évaluation au format de l'épreuve ponctuelle et du CCF (version prof)</h2>
+<p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, baccalauréat professionnel, coefficient 2, BO n° 47 du 16 décembre 2021) :</p>
+<ul><li>Situation A, écrite, 1 heure au plus, en dernière année de formation : compréhension de l'oral (document de 1 min 30 au plus, entendu trois fois, une minute entre les écoutes, compte rendu en français) ; compréhension de l'écrit (document authentique inconnu de 15 lignes de 70 caractères au plus, compte rendu en français) ; expression écrite (deux sujets au choix, l'un sur la vie quotidienne, l'autre sur la vie professionnelle, 100 à 120 mots au moins).</li><li>Situation B, orale, 10 minutes : expression orale en continu, 5 minutes au plus, sur un travail, un projet, un produit, un service ou une expérience professionnelle, sans lecture, notes et une image autorisées ; puis interaction, 5 minutes au plus.</li><li>Élèves des établissements publics ou privés sous contrat et apprentis des CFA habilités : CCF. Autres candidats : épreuve ponctuelle, mêmes activités, une partie écrite d'une heure et une partie orale de dix minutes.</li></ul>
+<p>Ce sujet sert d'entraînement en Seconde ou en Première, et de blanc en Terminale. Version prof seulement.</p>
+<h3>Situation A blanche, en une lesson de 52 minutes (version prof)</h3>
+<table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 2</td><td>Consignes</td><td>Les élèves lisent les trois parties et choisissent leur sujet d'expression écrite.</td><td>Lecture</td></tr><tr><td>2 à 17</td><td>Compréhension de l'oral</td><td>Trois écoutes du document (1 min 30 au plus), une minute entre chaque écoute ; prise de notes ; compte rendu en français.</td><td>CO</td></tr><tr><td>17 à 32</td><td>Compréhension de l'écrit</td><td>Lecture du document, compte rendu en français guidé par les questions.</td><td>CE</td></tr><tr><td>32 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 100 à 120 mots au moins.</td><td>PE</td></tr><tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots, ramassage.</td><td></td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table>
+<h3>Compréhension de l'oral, CO</h3>
+<p><strong>Transcript (version prof seulement)</strong></p>
+<p>&gt; Good morning, this is Alex from the workshop in Hinckley. I'm calling about the bike you dropped off on Monday. We found the fault: a worn part on the braking system, and a small leak. I've prepared a provisional quote. I can email it today, with the labour, the parts, and the VAT. If you agree, we can start tomorrow. If you have questions, ask me now, or write them in your reply. Please don't ride the bike until we have replaced the part. Safety first, then the invoice. Could you confirm your name and a phone number, so I don't send the quote to the wrong person?</p>
+<p>Consigne : « Écoutez trois fois le document. Rendez compte en français de ce que vous avez compris : qui parle, de quoi, où, pourquoi, et ce que la personne pense. »</p>
+<p><strong>Corrigé (version prof).</strong> Alex, de l'atelier d'Hinckley, appelle au sujet d'une moto déposée lundi. La panne : une pièce usée sur le freinage, et une petite fuite. Un devis provisoire peut partir aujourd'hui (main-d'œuvre, pièces, TVA). Accord du client pour commencer demain. Questions possibles au téléphone ou par écrit. Ne plus rouler tant que la pièce n'est pas changée. La sécurité d'abord, puis la facture. Confirmation du nom et d'un numéro, pour ne pas envoyer le devis à la mauvaise personne.</p>
+<h3>Compréhension de l'écrit, CE</h3>
+<p>Texte d'entraînement (le jour du CCF, prendre un document authentique inconnu de 15 lignes au plus) :</p>
+<p>&gt; From a fault to a quote, the professional path is clear, and it must stay polite. First you identify the problem, with the right words: a leak, a worn part, a noise, a warning light. Then you build a provisional budget: parts, labour, VAT, and a date. Then you write, or you call. An email has a subject, a greeting, the facts, a request for agreement, and a courteous ending. A call to a partner, a dealer or a customer in Hinckley or elsewhere follows the same order, only spoken. The final task of the sequence is to hold that chain without losing the person at the other end.</p>
+<p>Source : texte d'entraînement écrit pour la classe.</p>
+<p>Consigne : « Rendez compte en français du document. Aidez-vous des questions. »</p>
+<ul><li>Quelle est la chaîne décrite dans le texte ?</li><li>Quels mots techniques sont cités ?</li><li>Que doit contenir le devis ?</li><li>Que doit contenir le courriel ?</li><li>Que rappelle la tâche finale ?</li></ul>
+<p><strong>Corrigé (version prof).</strong> La chaîne va de la panne au devis, en restant poli. D'abord le diagnostic (fuite, pièce usée, bruit, voyant), puis un budget provisoire (pièces, main-d'œuvre, TVA, date), puis un écrit ou un appel. Un courriel a un objet, une formule d'appel, les faits, une demande d'accord, une formule de fin. Un appel suit le même ordre, à l'oral. La tâche finale est de tenir cette chaîne sans perdre la personne au bout.</p>
+<h3>Expression écrite, PE</h3>
+<p>Choisissez un sujet. Écrivez 100 à 120 mots au moins.</p>
+<ul><li>Sujet 1, vie professionnelle : Write the email that goes with a provisional quote: the fault, the parts, the labour, the price, and a question to the customer.</li><li>Sujet 2, vie quotidienne : A friend asks why their moped makes a noise. Write a message: what they should not do, and why they should see a workshop.</li></ul>
+<p><strong>Éléments de corrigé (version prof).</strong> Sujet 1 : objet clair, faits, montant ou mention du devis joint, demande de confirmation. Sujet 2 : consigne de sécurité, pas de diagnostic hasardeux. Lexique : fault, leak, worn, quote, labour, VAT, confirm.</p>
+<h3>Situation B blanche (version prof), 10 minutes par élève</h3>
+<table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage ; les autres élèves préparent leur propre fiche en mots-clés.</td><td>Lecture</td></tr><tr><td>4 à 14</td><td>Passage</td><td>5 min de présentation sans lecture, 5 min d'échange.</td><td>PO</td></tr><tr><td>Puis</td><td>Passages suivants</td><td>Même déroulé.</td><td>PO</td></tr></tbody></table>
+<h3>Production orale, PO</h3>
+<p>Présentez, en cinq minutes, un devis ou un appel professionnel de la séquence : la panne, les étapes, ce que vous dites au client. Puis répondez aux questions. Une fiche de mots-clés est autorisée, pas la lecture d'un texte.</p>
+<p>Questions d'interaction possibles : How do you start a professional email? What is a provisional quote? What do you say if the customer is in a hurry and the bike is not safe?</p>
+<p><strong>Éléments de corrigé (version prof).</strong> Ordre clair (panne, devis, accord), politesse, sécurité avant la rapidité. Spécialité motocycles respectée.</p>
+<h3>Grille nationale bac pro LVA (BO n° 47 du 16 décembre 2021, annexe 4), version prof</h3>
+<p>Chaque activité langagière est notée sur 20, puis ramenée pour un cinquième de la note finale. Repères de classe, alignés sur le B1+ visé en LVA (A2+ en LVB) :</p>
+<table><thead><tr><th>Activité</th><th>1 à 5</th><th>6 à 10</th><th>11 à 15</th><th>16 à 20</th></tr></thead><tbody><tr><td>CO</td><td>Quelques mots isolés</td><td>Le sujet général est repéré</td><td>Les informations principales sont rendues en français</td><td>L'essentiel, des détails et le point de vue sont rendus</td></tr><tr><td>CE</td><td>Quelques éléments isolés</td><td>Le thème et quelques faits</td><td>Les informations principales, liées entre elles</td><td>L'essentiel, des détails et l'implicite</td></tr><tr><td>PE</td><td>Hors sujet ou trop court</td><td>Sujet abordé, langue encore hésitante</td><td>Sujet traité, 100 mots au moins, langue compréhensible</td><td>Argument nuancé, lexique professionnel, langue assez sûre</td></tr><tr><td>PO (continu et interaction)</td><td>Lecteur, propos très court</td><td>Présente avec aide, répond peu</td><td>Présente sans lire, répond de façon simple</td><td>Présente clairement, interagit, lexique de la séquence</td></tr></tbody></table></section>
+<section class="compl-block prof-only gorse-exemple"><h3>Exemple travaillé, version prof</h3><p><strong>Exemple travaillé, sur le texte d'évaluation (version prof)</strong></p>
+<p>Pour chaque tour : la question du professeur, la réponse attendue, et ce qui se resserre.</p>
+<table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux ?</td><td>Le chemin va de la panne au devis, et il doit rester poli.</td><td>On n'est plus devant une panne isolée ; le texte pose un parcours, et un ton.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quels mots et quelles étapes deviennent plus nets ?</td><td>D'abord identifier le problème, avec les mots justes : une fuite, une pièce usée, un bruit, un voyant.</td><td>Le lexique n'est plus une liste : il sert la première étape professionnelle.</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que permettent de comprendre ces éléments ?</td><td>Sans les mots justes et sans politesse, on ne peut ni expliquer la panne ni proposer un devis.</td><td>La langue fait partie du métier, autant que le diagnostic.</td></tr><tr><td>4. J'anticipe (I anticipate)</td><td>Que vise le texte ?</td><td>Il prépare le devis, le courriel et l'appel, pas une leçon de mécanique sans destinataire.</td><td>On anticipe le piège : décrire la panne sans s'adresser au client.</td></tr><tr><td>5. Je trouve le sens (I find the meaning)</td><td>Quel est l'essentiel, et sa limite ?</td><td>De la panne au devis, chaque étape doit être claire et polie. Limite : un lexique juste, sans destinataire et sans ton, ne fait pas le travail.</td><td>Une phrase défendable, prête pour l'écrit professionnel et pour l'oral.</td></tr></tbody></table>
+<p>Dans chaque lesson, les cinq étapes s'appliquent au document du jour : la panne ; Expanding your vocabulary (un mot de métier dans une phrase utile) ; le devis ; le courriel professionnel ; l'appel à Hinckley ; la tâche finale.</p></section>
+
+<section class="compl-block gorse-block" id="spirale-de-gorse"><h2>Spirale de Gorse</h2><p>Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : chaque tour est une prise plus haute. On part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'à la pointe, le sommet où l'essentiel se laisse voir. Quatre tours, puis la pointe. À appliquer, dans chaque lesson, au document principal (texte, image ou audio). Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-complete.svg" width="800" height="900" alt="Spirale de Gorse : cinq tours annotés se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, J'anticipe, Je trouve le sens."><figcaption>Spirale de Gorse, quatre tours puis la pointe. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Ce qui saute aux yeux, la première impression.</p><p>I notice… / This is about…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail, un passage, un élément plus net.</p><p>I spot… / The key word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Ce que ces éléments permettent de comprendre.</p><p>This shows that… / They have in common…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>J'anticipe (I anticipate)</strong></p><p>La visée du texte, ce qu'il faut en faire.</p><p>The text wants me to… / I anticipate…</p></div></li><li><span class="n" aria-hidden="true">5</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>La pointe : l'essentiel que l'on peut défendre, et sa limite.</p><p>The point is… / But I must not…</p></div></li></ol></section>
 <footer class="site-footer">
     <div class="wrap">
       <div>

@@ -215,6 +215,22 @@ body.mode-eleve .prof-only{display:none!important}
 body.mode-prof .eleve-gate-note{display:none!important}
 </style>
 
+<style id="compl-gorse-style">
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3,.compl-block h4{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.45rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.gorse-fig{margin:1.25rem 0 1rem}
+.gorse-fig img,.gorse-fig svg{display:block;width:100%;max-width:36rem;height:auto}
+.gorse-fig figcaption{font-size:.95rem;line-height:1.45;color:#1A3658;margin:.55rem 0 0}
+ol.gorse-steps{list-style:none;padding:0;margin:1.35rem 0 0;display:flex;flex-direction:column;gap:1.15rem}
+ol.gorse-steps li{display:grid;grid-template-columns:2.1rem 1fr;gap:.8rem;align-items:start}
+ol.gorse-steps .n{font:700 1.3rem/1.15 "Source Sans 3",Verdana,sans-serif;color:#1A3658}
+ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
+body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
+body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
+</style>
 </head>
 <body data-section="lycee-pro" class="mode-eleve english-look">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -267,6 +283,7 @@ body.mode-prof .eleve-gate-note{display:none!important}
 <div class="compl-modes" role="group" aria-label="Affichage">
 <button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
 <button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+<button type="button" data-compl-mode="absent" aria-pressed="false">Version élève absent</button>
 </div>
 <script>
 (function(){
@@ -274,6 +291,10 @@ body.mode-prof .eleve-gate-note{display:none!important}
   function setM(m){
     document.body.classList.toggle("mode-eleve", m==="eleve");
     document.body.classList.toggle("mode-prof", m==="prof");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
     document.querySelectorAll("[data-compl-mode]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
     });
@@ -283,7 +304,7 @@ body.mode-prof .eleve-gate-note{display:none!important}
     var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
   });
   var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
-  setM(saved==="prof"?"prof":"eleve");
+  setM((saved==="prof"||saved==="dys"||saved==="absent")?saved:"eleve");
 })();
 </script>
 
@@ -714,6 +735,42 @@ body.mode-prof .eleve-gate-note{display:none!important}
 </tbody>
 </table></div>
 <p>Note finale : A (/12) + B (/8) = /20. Fiche officielle : https://cache.media.education.gouv.fr/file/47/06/8/ensel369_annexe4_1423068.pdf</p></section>
+<section class="compl-block compl-eval" id="evaluation-ponctuelle"><h2>Évaluation au format de l'épreuve ponctuelle et du CCF (version prof)</h2>
+<p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, baccalauréat professionnel, coefficient 2, BO n° 47 du 16 décembre 2021) :</p>
+<ul><li>Situation A, écrite, 1 heure au plus, en dernière année de formation : compréhension de l'oral (document de 1 min 30 au plus, entendu trois fois, une minute entre les écoutes, compte rendu en français) ; compréhension de l'écrit (document authentique inconnu de 15 lignes de 70 caractères au plus, compte rendu en français) ; expression écrite (deux sujets au choix, l'un sur la vie quotidienne, l'autre sur la vie professionnelle, 100 à 120 mots au moins).</li><li>Situation B, orale, 10 minutes : expression orale en continu, 5 minutes au plus, sur un travail, un projet, un produit, un service ou une expérience professionnelle, sans lecture, notes et une image autorisées ; puis interaction, 5 minutes au plus.</li><li>Élèves des établissements publics ou privés sous contrat et apprentis des CFA habilités : CCF. Autres candidats : épreuve ponctuelle, mêmes activités, une partie écrite d'une heure et une partie orale de dix minutes.</li></ul>
+<p>Ce sujet sert d'entraînement en Seconde ou en Première, et de blanc en Terminale. Version prof seulement.</p>
+<h3>Situation A blanche, en une lesson de 52 minutes (version prof)</h3>
+<table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 2</td><td>Consignes</td><td>Les élèves lisent les trois parties et choisissent leur sujet d'expression écrite.</td><td>Lecture</td></tr><tr><td>2 à 17</td><td>Compréhension de l'oral</td><td>Trois écoutes du document (1 min 30 au plus), une minute entre chaque écoute ; prise de notes ; compte rendu en français.</td><td>CO</td></tr><tr><td>17 à 32</td><td>Compréhension de l'écrit</td><td>Lecture du document, compte rendu en français guidé par les questions.</td><td>CE</td></tr><tr><td>32 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 100 à 120 mots au moins.</td><td>PE</td></tr><tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots, ramassage.</td><td></td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table>
+<h3>Compréhension de l'oral, CO</h3>
+<p><strong>Transcript (version prof seulement)</strong></p>
+<p>&gt; When I look at Warhol's Dolly, I don't only see a star in colour. I see a woman who wrote songs about work, money and pride, and who built a park that employs people in her own county. People tell stories about her: the coat of many colours, the nine-to-five day, the rumour about a will. Some are true, some are tale. What I keep is this: a voice that came from a poor place and did not forget it, and a business that is also a way of giving work. A legacy is not only a museum. It is what still pays a wage, and what a younger artist can still sing.</p>
+<p>Consigne : « Écoutez trois fois le document. Rendez compte en français de ce que vous avez compris : qui parle, de quoi, où, pourquoi, et ce que la personne pense. »</p>
+<p><strong>Corrigé (version prof).</strong> La locutrice, devant le portrait de Warhol, voit plus qu'une star : une femme qui a écrit sur le travail, l'argent et la fierté, et qui a créé un parc qui emploie des gens chez elle. Certaines histoires sont vraies, d'autres sont des légendes (le manteau de plusieurs couleurs, la journée de neuf à cinq, une rumeur de testament). Elle retient une voix venue de la pauvreté qui n'oublie pas d'où elle vient, et une entreprise qui donne encore du travail. Un héritage, ce n'est pas seulement un musée : c'est aussi un salaire, et une chanson qu'une plus jeune peut encore chanter.</p>
+<h3>Compréhension de l'écrit, CE</h3>
+<p>Texte d'entraînement (le jour du CCF, prendre un document authentique inconnu de 15 lignes au plus) :</p>
+<p>&gt; Dolly Parton is an American figure, and she is also a case study for a professional class. The Warhol portrait made her an icon. The songs told another story: a childhood without money, women at work, a voice that can be tender and sharp in the same verse. Dollywood is not only a theme park; it is an employer. When a rumour about an inheritance circulates, the professional question is the same as in any company: what is a fact, what is a tale, and how do you say so without trampling a person? A legacy, in this sequence, is what remains in culture and what remains in work.</p>
+<p>Source : texte d'entraînement écrit pour la classe.</p>
+<p>Consigne : « Rendez compte en français du document. Aidez-vous des questions. »</p>
+<ul><li>Comment le texte présente-t-il Dolly Parton ?</li><li>Que distinguent les chansons, par rapport au portrait ?</li><li>Que dit-il de Dollywood ?</li><li>Quelle question professionnelle pose une rumeur ?</li><li>Que signifie ici le mot legacy ?</li></ul>
+<p><strong>Corrigé (version prof).</strong> Dolly est une figure américaine et un cas pour une classe professionnelle. Le portrait de Warhol en fait une icône ; les chansons racontent l'enfance, le travail des femmes, une voix tendre et tranchante. Dollywood est aussi un employeur. Face à une rumeur, il faut séparer le fait de la légende, sans écraser la personne. L'héritage est à la fois culturel et professionnel.</p>
+<h3>Expression écrite, PE</h3>
+<p>Choisissez un sujet. Écrivez 100 à 120 mots au moins.</p>
+<ul><li>Sujet 1, vie professionnelle : You work in the communication team of a heritage site or a park. Write a short text for visitors: who Dolly is, what people can see, and why the place also means jobs.</li><li>Sujet 2, vie quotidienne : Write about a song or an image from the sequence that struck you, and explain what it says about work or family.</li></ul>
+<p><strong>Éléments de corrigé (version prof).</strong> Sujet 1 : présentation claire, un fait vrai, le lien emploi. Sujet 2 : un objet précis (Warhol, 9 to 5, Coat of Many Colors, Jolene), un avis. Attention à la rumeur : on ne la reprend pas comme un fait.</p>
+<h3>Situation B blanche (version prof), 10 minutes par élève</h3>
+<table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 4</td><td>Installation</td><td>Ordre de passage ; les autres élèves préparent leur propre fiche en mots-clés.</td><td>Lecture</td></tr><tr><td>4 à 14</td><td>Passage</td><td>5 min de présentation sans lecture, 5 min d'échange.</td><td>PO</td></tr><tr><td>Puis</td><td>Passages suivants</td><td>Même déroulé.</td><td>PO</td></tr></tbody></table>
+<h3>Production orale, PO</h3>
+<p>Présentez, en cinq minutes, l'héritage de Dolly Parton à un visiteur : une image, une chanson, une entreprise ou un geste de transmission. Puis répondez aux questions. Une image de la séquence est autorisée.</p>
+<p>Questions d'interaction possibles : Is she only a star? What does Dollywood change in the story? How do you check a rumour before you repeat it?</p>
+<p><strong>Éléments de corrigé (version prof).</strong> Un objet précis, un lien avec le travail ou la transmission, une prudence sur le vrai et le faux.</p>
+<h3>Grille nationale bac pro LVA (BO n° 47 du 16 décembre 2021, annexe 4), version prof</h3>
+<p>Chaque activité langagière est notée sur 20, puis ramenée pour un cinquième de la note finale. Repères de classe, alignés sur le B1+ visé en LVA (A2+ en LVB) :</p>
+<table><thead><tr><th>Activité</th><th>1 à 5</th><th>6 à 10</th><th>11 à 15</th><th>16 à 20</th></tr></thead><tbody><tr><td>CO</td><td>Quelques mots isolés</td><td>Le sujet général est repéré</td><td>Les informations principales sont rendues en français</td><td>L'essentiel, des détails et le point de vue sont rendus</td></tr><tr><td>CE</td><td>Quelques éléments isolés</td><td>Le thème et quelques faits</td><td>Les informations principales, liées entre elles</td><td>L'essentiel, des détails et l'implicite</td></tr><tr><td>PE</td><td>Hors sujet ou trop court</td><td>Sujet abordé, langue encore hésitante</td><td>Sujet traité, 100 mots au moins, langue compréhensible</td><td>Argument nuancé, lexique professionnel, langue assez sûre</td></tr><tr><td>PO (continu et interaction)</td><td>Lecteur, propos très court</td><td>Présente avec aide, répond peu</td><td>Présente sans lire, répond de façon simple</td><td>Présente clairement, interagit, lexique de la séquence</td></tr></tbody></table></section>
+<section class="compl-block prof-only gorse-exemple"><h3>Exemple travaillé, version prof</h3><p><strong>Exemple travaillé, sur le texte d'évaluation (version prof)</strong></p>
+<p>Pour chaque tour : la question du professeur, la réponse attendue, et ce qui se resserre.</p>
+<table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux ?</td><td>Dolly Parton est une figure américaine, et aussi un cas d'étude pour une classe professionnelle.</td><td>On n'est plus devant une simple biographie de star ; le texte annonce un cas à travailler.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quels éléments deviennent plus nets ?</td><td>Le portrait de Warhol en a fait une icône. Les chansons racontent autre chose : une enfance sans beaucoup d'argent, le travail, la voix.</td><td>Deux images de Dolly se font face : l'icône, et le récit du travail.</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que permettent de comprendre ces éléments ?</td><td>L'héritage de Dolly ne tient pas seulement à l'image : il tient aussi à ce qu'elle dit du travail et de l'origine.</td><td>La question se déplace de la célébrité vers ce que l'on transmet.</td></tr><tr><td>4. J'anticipe (I anticipate)</td><td>Que vise le texte ?</td><td>Il prépare un avis sur l'héritage (image, chansons, entreprise, rumeur), pas une liste de succès.</td><td>On anticipe le hors-sujet : raconter la vie de Dolly sans la question de l'héritage.</td></tr><tr><td>5. Je trouve le sens (I find the meaning)</td><td>Quel est l'essentiel, et sa limite ?</td><td>Dolly Parton est une icône et une travailleuse qui a construit son héritage. Limite : ni le portrait de Warhol, ni une seule chanson, ne suffisent à tout dire.</td><td>Une phrase défendable, avec sa limite.</td></tr></tbody></table>
+<p>Dans chaque lesson, les cinq étapes s'appliquent au document du jour : le portrait de Warhol ; les origines ; le jeu de rôles en coulisses ; <em>9 to 5</em> ; Dollywood ; Miley ; la rumeur d'héritage ; l'héritage ; la tâche finale.</p></section>
+
 <footer class="site-footer">
     <div class="wrap">
       <div>

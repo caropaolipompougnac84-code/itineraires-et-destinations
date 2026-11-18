@@ -381,6 +381,22 @@
   </style>
   
 <style id="skill-tags-css">.skill-tag{display:inline-block;background:#1A3658;color:#fff;font-weight:700;font-size:.78em;letter-spacing:.05em;line-height:1.25;padding:.12em .5em;border-radius:6px;margin:0 .4em 0 0;vertical-align:.1em;font-family:inherit}.skills-legend{margin:.4em 0 .9em;font-size:1em;color:#1A3658}.skills-legend .skill-tag{margin-left:.15em}</style><style>body.mode-eleve .prof-only{display:none!important}</style>
+<style id="compl-gorse-style">
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3,.compl-block h4{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.45rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.gorse-fig{margin:1.25rem 0 1rem}
+.gorse-fig img,.gorse-fig svg{display:block;width:100%;max-width:36rem;height:auto}
+.gorse-fig figcaption{font-size:.95rem;line-height:1.45;color:#1A3658;margin:.55rem 0 0}
+ol.gorse-steps{list-style:none;padding:0;margin:1.35rem 0 0;display:flex;flex-direction:column;gap:1.15rem}
+ol.gorse-steps li{display:grid;grid-template-columns:2.1rem 1fr;gap:.8rem;align-items:start}
+ol.gorse-steps .n{font:700 1.3rem/1.15 "Source Sans 3",Verdana,sans-serif;color:#1A3658}
+ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
+body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
+body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
+</style>
 </head>
 <body data-section="lycee-pro" class="english-look mode-eleve">
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -432,6 +448,7 @@
 <div class="compl-modes" role="group" aria-label="Affichage">
 <button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
 <button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+<button type="button" data-compl-mode="absent" aria-pressed="false">Version élève absent</button>
 </div>
 <script>
 (function(){
@@ -439,6 +456,10 @@
   function setM(m){
     document.body.classList.toggle("mode-eleve", m==="eleve");
     document.body.classList.toggle("mode-prof", m==="prof");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
     document.querySelectorAll("[data-compl-mode]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
     });
@@ -448,7 +469,7 @@
     var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
   });
   var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
-  setM(saved==="prof"?"prof":"eleve");
+  setM((saved==="prof"||saved==="dys"||saved==="absent")?saved:"eleve");
 })();
 </script>
 
@@ -531,7 +552,12 @@
     <nav class="pager" aria-label="Précédent et suivant"><a href="../s1/">Lesson 1</a><a href="../s3/">Lesson 3</a></nav>
   </main>
 
-  <footer class="site-footer">
+  <section class="compl-block gorse-block" id="spirale-de-gorse"><h2>Spirale de Gorse</h2><p>À appliquer, dans chaque lesson, au document principal. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-complete.svg" width="800" height="900" alt="Spirale de Gorse : cinq tours annotés se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, J'anticipe, Je trouve le sens."><figcaption>Spirale de Gorse, quatre tours puis la pointe. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Ce qui saute aux yeux, la première impression.</p><p>I notice… / This is about…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail, un passage, un élément plus net.</p><p>I spot… / The key word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Ce que ces éléments permettent de comprendre.</p><p>This shows that… / They have in common…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>J'anticipe (I anticipate)</strong></p><p>La visée du texte, ce qu'il faut en faire.</p><p>The text wants me to… / I anticipate…</p></div></li><li><span class="n" aria-hidden="true">5</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>La pointe : l'essentiel que l'on peut défendre, et sa limite.</p><p>The point is… / But I must not…</p></div></li></ol></section>
+<section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section>
+<section class="compl-block prof-only" id="lesson-extra-2"><h3>Lesson 2. Hello, I work here</h3>
+<p><strong>Emergency exit · 8 min.</strong> If time runs short at this stopping point, we condense: we dictate the model greeting (name, role, « I work here ») ; a round of the class, each student says the greeting once ; the homework (record a 20-second voicemail or write it in the notebook) is written on the board.</p>
+</section>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></strong></p>

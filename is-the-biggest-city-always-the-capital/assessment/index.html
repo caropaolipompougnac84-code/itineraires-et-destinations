@@ -107,8 +107,13 @@ ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
 body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
 body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 </style>
+<style id="compl-modes-style">
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 20px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+</style>
 </head>
-<body class="english-look">
+<body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Site"><div class="wrap">
 <a href="/">Itinéraires et destinations</a>
@@ -116,6 +121,32 @@ body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 <a href="/is-the-biggest-city-always-the-capital/">Is the Biggest City Always the Capital?</a>
 </div></nav>
 <main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+<button type="button" data-compl-mode="absent" aria-pressed="false">Version élève absent</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM((saved==="prof"||saved==="dys"||saved==="absent")?saved:"eleve");
+})();
+</script>
+
 <nav class="seq-nav" aria-label="Sequence">
 <a href="/is-the-biggest-city-always-the-capital/">Home</a>
 <a href="/is-the-biggest-city-always-the-capital/s1/">L1</a>

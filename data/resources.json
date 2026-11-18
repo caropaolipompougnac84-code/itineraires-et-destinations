@@ -3032,6 +3032,119 @@
       "url": "https://itineraires-destinations.fr/a-day-at-the-fair/",
       "date": "2026-11-06",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120560263490243&set=a.122104658121490243"
+    },
+    {
+      "id": "lp-anglais-safe-at-work-next-step",
+      "title": "Anglais · Terminale bac pro · Safe at Work, Next Step",
+      "summary": "How do you keep a visitor, and a colleague, safe in your workplace? Six lessons de 55 minutes, en co-intervention, à partir de la photographie de Lewis Hine, Power house mechanic, 1920. Cette séquence prolonge Safe at Work (Seconde).",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Terminale bac pro · toutes filières · B1 vers B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/safe-at-work-next-step/",
+      "date": "2026-11-18",
+      "image": "safe-at-work-next-step.jpg",
+      "credit": "Lewis Hine, Power house mechanic working on steam pump, 1920. George Eastman Museum, Rochester. Domaine public, Wikimedia Commons."
+    },
+    {
+      "id": "lp-anglais-the-headline-and-the-shop-floor",
+      "title": "Anglais · Terminale bac pro · The Headline and the Shop Floor",
+      "summary": "What do you do when a story about your workplace is circulating? Six lessons de 55 minutes, en mise en situation professionnelle : l'élève est en PFMP, et une information circule sur l'entreprise. Gravure de William Hogarth, The Times, Plate I, 1762.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Terminale bac pro · toutes filières · B1 vers B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "medias",
+        "travail",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/the-headline-and-the-shop-floor/",
+      "date": "2026-11-18",
+      "image": "the-headline-and-the-shop-floor.jpg",
+      "credit": "William Hogarth, The Times, Plate I, 1762. The British Museum, Londres. Domaine public, Wikimedia Commons."
+    },
+    {
+      "id": "lp-anglais-a-public-holiday",
+      "title": "Anglais · Terminale bac pro · A Public Holiday",
+      "summary": "How do you welcome visitors on a public holiday? Six lessons de 55 minutes, avec une tâche finale : préparer et présenter le stand ou l'accueil d'un jour férié britannique ou irlandais. Tableau de William Powell Frith, The Derby Day, Tate Britain.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Terminale bac pro · toutes filières · B1 vers B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/a-public-holiday/",
+      "date": "2026-11-18",
+      "image": "a-public-holiday.jpg",
+      "credit": "William Powell Frith, The Derby Day, 1856-1858. Tate Britain, Londres, N00615. Domaine public, Wikimedia Commons."
+    },
+    {
+      "id": "lp-anglais-talk-to-the-team",
+      "title": "Anglais · Terminale bac pro · Talk to the Team",
+      "summary": "How do you hand over a job clearly, and listen in return? Six lessons de 55 minutes, en jeu de rôles : une passation de poste entre un collègue qui part et un collègue qui arrive. Tableau de Ford Madox Brown, Work, Manchester Art Gallery.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Terminale bac pro · toutes filières · B1 vers B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/talk-to-the-team/",
+      "date": "2026-11-18",
+      "image": "talk-to-the-team.jpg",
+      "credit": "Ford Madox Brown, Work, 1863-1865. Manchester Art Gallery, Manchester. Domaine public, Wikimedia Commons."
+    },
+    {
+      "id": "lp-anglais-green-shift-at-work",
+      "title": "Anglais · Terminale bac pro · Green Shift at Work",
+      "summary": "What change at work is worth defending, in English, as part of your chef-d'œuvre? Six lessons de 55 minutes, liées au chef-d'œuvre. Tableau de Winslow Homer, The Veteran in a New Field, The Metropolitan Museum of Art.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Terminale bac pro · toutes filières · B1 vers B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "environnement",
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/green-shift-at-work/",
+      "date": "2026-11-18",
+      "image": "green-shift-at-work.jpg",
+      "credit": "Winslow Homer, The Veteran in a New Field, 1865. The Metropolitan Museum of Art, New York, 67.187.131. Domaine public, Wikimedia Commons."
+    },
+    {
+      "id": "lp-anglais-who-decides-at-home",
+      "title": "Anglais · Terminale bac pro · Who Decides at Home?",
+      "summary": "Who decides, and how can a worker or a citizen be heard? Six lessons de 55 minutes pour préparer le CCF et l'épreuve ponctuelle, situations A et B. Aquatinte de Rowlandson et Pugin, The House of Commons.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tle",
+      "levelLabel": "Terminale bac pro · toutes filières · B1 vers B1+",
+      "collection": "lp-anglais",
+      "themes": [
+        "citoyennete",
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/who-decides-at-home/",
+      "date": "2026-11-18",
+      "image": "who-decides-at-home.jpg",
+      "credit": "Thomas Rowlandson et Augustus Charles Pugin, The House of Commons, The Microcosm of London, 1808-1810. British Library, Londres. Domaine public, Wikimedia Commons."
     }
   ]
 }

@@ -1,0 +1,2511 @@
+{
+  "doms": {
+    "rev": {
+      "fr": "Révisions du CM1",
+      "ka": "CM1-ის გამეორება"
+    },
+    "lec": {
+      "fr": "Lecture et compréhension",
+      "ka": "კითხვა და გაგება"
+    },
+    "ecr": {
+      "fr": "Écriture",
+      "ka": "წერა"
+    },
+    "voc": {
+      "fr": "Vocabulaire",
+      "ka": "ლექსიკა"
+    },
+    "gra": {
+      "fr": "Grammaire",
+      "ka": "გრამატიკა"
+    },
+    "ort": {
+      "fr": "Orthographe grammaticale et lexicale",
+      "ka": "მართლწერა"
+    },
+    "con": {
+      "fr": "Conjugaison",
+      "ka": "ზმნის უღლება"
+    },
+    "ora": {
+      "fr": "Oral",
+      "ka": "ზეპირი მეტყველება"
+    }
+  },
+  "cons": {
+    "match": {
+      "ka": "იპოვე წყვილები: ფრანგული სიტყვა და ქართული სიტყვა.",
+      "fr": "Trouve les paires : le mot français et le mot géorgien."
+    },
+    "article": {
+      "ka": "აირჩიე სწორი არტიკლი.",
+      "fr": "Choisis le bon déterminant."
+    },
+    "word": {
+      "ka": "აირჩიე სწორი პასუხი.",
+      "fr": "Choisis la bonne réponse."
+    },
+    "spell": {
+      "ka": "აირჩიე სწორად დაწერილი სიტყვა.",
+      "fr": "Choisis le mot bien écrit."
+    },
+    "verb": {
+      "ka": "ჩაწერე ზმნა სწორი ფორმით.",
+      "fr": "Écris le verbe à la bonne forme."
+    },
+    "plural": {
+      "ka": "ჩაწერე სიტყვა მრავლობით რიცხვში.",
+      "fr": "Écris le mot au pluriel."
+    },
+    "fem": {
+      "ka": "ჩაწერე სიტყვა მდედრობით სქესში.",
+      "fr": "Écris le mot au féminin."
+    },
+    "missing": {
+      "ka": "ჩაწერე გამოტოვებული სიტყვა.",
+      "fr": "Écris le mot qui manque."
+    },
+    "order": {
+      "ka": "დაალაგე სიტყვები და ააწყვე წინადადება.",
+      "fr": "Range les mots pour faire une phrase."
+    },
+    "read": {
+      "ka": "წაიკითხე ტექსტი და უპასუხე კითხვას.",
+      "fr": "Lis le texte et réponds à la question."
+    },
+    "gram": {
+      "ka": "დააკვირდი წინადადებას და აირჩიე პასუხი.",
+      "fr": "Observe la phrase et choisis la réponse."
+    },
+    "pron": {
+      "ka": "აირჩიე სწორი ნაცვალსახელი.",
+      "fr": "Choisis le bon pronom."
+    },
+    "sens": {
+      "ka": "რას ნიშნავს ეს გამოთქმა?",
+      "fr": "Que veut dire cette expression ?"
+    },
+    "listen": {
+      "ka": "მოუსმინე და აირჩიე, რა გაიგე.",
+      "fr": "Écoute et choisis ce que tu entends."
+    },
+    "write": {
+      "ka": "დაწერე მოკლე ტექსტი. გამოიყენე მოცემული სიტყვები.",
+      "fr": "Écris un petit texte. Utilise les mots donnés."
+    }
+  },
+  "lessons": [
+    {
+      "id": "r1",
+      "d": "rev",
+      "fr": "Le nom et le déterminant",
+      "ka": "არსებითი სახელი და არტიკლი",
+      "lvl": "A1+ · CM1",
+      "rfr": [
+        "En français, chaque nom est masculin ou féminin. Je l'apprends avec son déterminant : le livre, la table.",
+        "Masculin : le, un, mon, ce. Féminin : la, une, ma, cette. Pluriel : les, des, mes, ces.",
+        "Devant une voyelle ou un h muet, le et la deviennent l' : l'école, l'arbre."
+      ],
+      "rka": [
+        "ფრანგულში ყველა არსებითი სახელი ან მამრობითია, ან მდედრობითი. სიტყვა არტიკლთან ერთად ისწავლე: le livre, la table.",
+        "მამრობითი: le, un, mon, ce. მდედრობითი: la, une, ma, cette. მრავლობითი: les, des, mes, ces.",
+        "ხმოვნის ან უხმო h-ის წინ le და la იქცევა l'-ად: l'école, l'arbre."
+      ],
+      "ex": [
+        {
+          "t": "match",
+          "c": "match",
+          "p": [
+            [
+              "le cahier",
+              "რვეული"
+            ],
+            [
+              "le livre",
+              "წიგნი"
+            ],
+            [
+              "le stylo",
+              "კალამი"
+            ],
+            [
+              "la règle",
+              "სახაზავი"
+            ],
+            [
+              "la trousse",
+              "პენალი"
+            ]
+          ],
+          "r": "Apprends toujours le nom avec son déterminant : le cahier, la règle.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "article",
+          "q": "Où est ___ trousse ?",
+          "o": [
+            "le",
+            "la"
+          ],
+          "k": 1,
+          "r": "Trousse est féminin : la trousse.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "article",
+          "q": "C'est ___ école.",
+          "o": [
+            "un",
+            "une"
+          ],
+          "k": 1,
+          "r": "École est féminin : une école.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "article",
+          "q": "___ garçon s'appelle Léo.",
+          "o": [
+            "Le",
+            "La"
+          ],
+          "k": 0,
+          "r": "Garçon est masculin : le garçon.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "article",
+          "q": "___ arbre est grand.",
+          "o": [
+            "Le",
+            "La",
+            "L'"
+          ],
+          "k": 2,
+          "r": "Arbre commence par une voyelle : l'arbre.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "plural",
+          "q": "un cahier, des ___",
+          "s": [
+            "cahiers"
+          ],
+          "r": "Au pluriel, on ajoute souvent un s qu'on n'entend pas : des cahiers.",
+          "b": 1
+        }
+      ],
+      "dic": "La maîtresse ouvre la porte de la classe. Les élèves posent leur cartable et sortent un cahier.",
+      "dfr": "Attention au genre des noms et au s du pluriel.",
+      "dka": "ყურადღება მიაქციე სქესს და მრავლობითის s-ს.",
+      "tr": "Un nom est masculin ou féminin. Je l'apprends avec son déterminant : le livre, la table, l'école. Au pluriel : les livres."
+    },
+    {
+      "id": "r2",
+      "d": "rev",
+      "fr": "Le présent de l'indicatif",
+      "ka": "აწმყო დრო (présent)",
+      "lvl": "A1+ · CM1",
+      "rfr": [
+        "Verbes en -er : e, es, e, ons, ez, ent (je chante, nous chantons).",
+        "Verbes comme finir : is, is, it, issons, issez, issent.",
+        "À connaître par cœur : être (je suis), avoir (j'ai), aller (je vais), faire (je fais), dire, venir, pouvoir, voir, vouloir, prendre."
+      ],
+      "rka": [
+        "-er-ზე დაბოლოებული ზმნები: e, es, e, ons, ez, ent (je chante, nous chantons).",
+        "finir-ის მსგავსი ზმნები: is, is, it, issons, issez, issent.",
+        "ზეპირად უნდა იცოდე: être (je suis), avoir (j'ai), aller (je vais), faire (je fais), dire, venir, pouvoir, voir, vouloir, prendre."
+      ],
+      "ex": [
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Nous ___ en classe. (travailler)",
+          "s": [
+            "travaillons"
+          ],
+          "r": "Avec nous, la terminaison est -ons : nous travaillons.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Les élèves ___ la maîtresse. (écouter)",
+          "s": [
+            "écoutent"
+          ],
+          "r": "Avec ils ou elles, la terminaison est -ent. On ne l'entend pas, mais on l'écrit.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Le film ___ à six heures. (finir)",
+          "s": [
+            "finit"
+          ],
+          "r": "Finir : il finit, avec un t à la fin.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Je ___ en CM2. (être)",
+          "s": [
+            "suis"
+          ],
+          "r": "Être : je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Mes grands-parents ___ un jardin. (avoir)",
+          "s": [
+            "ont"
+          ],
+          "r": "Avoir : j'ai, tu as, il a, nous avons, vous avez, ils ont.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Vous ___ vos devoirs. (faire)",
+          "o": [
+            "faisez",
+            "faites",
+            "fait"
+          ],
+          "k": 1,
+          "r": "Faire est irrégulier : vous faites.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Nous ___ au parc. (aller)",
+          "s": [
+            "allons"
+          ],
+          "r": "Aller : je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+          "b": 2
+        }
+      ],
+      "dic": "Le matin, je prends le bus avec mon frère. Nous arrivons à l'école à huit heures et nous jouons dans la cour.",
+      "dfr": "Le verbe s'accorde avec son sujet : nous arrivons, nous jouons.",
+      "dka": "ზმნა ეთანხმება ქვემდებარეს: nous arrivons, nous jouons.",
+      "tr": "Au présent, le verbe s'accorde avec son sujet. Je chante, tu chantes, il chante, nous chantons, vous chantez, ils chantent."
+    },
+    {
+      "id": "r3",
+      "d": "rev",
+      "fr": "L'imparfait et le futur",
+      "ka": "imparfait (უწყვეტელი) და futur (მყოფადი)",
+      "lvl": "A2 · CM1",
+      "rfr": [
+        "Imparfait : ais, ais, ait, ions, iez, aient pour tous les verbes (je jouais, nous finissions). Il décrit le passé ou une habitude.",
+        "Futur : infinitif + ai, as, a, ons, ez, ont (je jouerai). Il dit ce qui se passera.",
+        "Futurs irréguliers : je serai, j'aurai, j'irai, je ferai, je viendrai, je pourrai, je verrai, je voudrai."
+      ],
+      "rka": [
+        "Imparfait (უწყვეტელი): ყველა ზმნას აქვს ais, ais, ait, ions, iez, aient (je jouais, nous finissions). ის აღწერს წარსულს ან ჩვევას.",
+        "Futur (მყოფადი): ინფინიტივი + ai, as, a, ons, ez, ont (je jouerai). ის გვეუბნება, რა მოხდება.",
+        "არაწესიერი ფორმები: je serai, j'aurai, j'irai, je ferai, je viendrai, je pourrai, je verrai, je voudrai."
+      ],
+      "ex": [
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Quand j'étais petit, je ___ dans la cour. (jouer, imparfait)",
+          "s": [
+            "jouais"
+          ],
+          "r": "Imparfait avec je : -ais. Je jouais.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Avant, nous ___ à Tbilissi. (habiter, imparfait)",
+          "s": [
+            "habitions"
+          ],
+          "r": "Avec nous, l'imparfait se termine par -ions : nous habitions.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Il faisait beau. Le verbe est :",
+          "o": [
+            "au présent",
+            "à l'imparfait",
+            "au futur"
+          ],
+          "k": 1,
+          "r": "faisait se termine par -ait : c'est l'imparfait.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Demain, je ___ au football. (jouer, futur)",
+          "s": [
+            "jouerai"
+          ],
+          "r": "Futur : infinitif + ai. Je jouerai.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Samedi, nous ___ à la piscine. (aller, futur)",
+          "s": [
+            "irons"
+          ],
+          "r": "Aller au futur : j'irai, nous irons.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Demain, tu ___ du vélo. (faire, futur)",
+          "s": [
+            "feras"
+          ],
+          "r": "Faire au futur : je ferai, tu feras.",
+          "b": 2
+        }
+      ],
+      "dic": "Quand j'étais petit, j'habitais à Tbilissi. Demain, je téléphonerai à ma grand-mère et nous parlerons longtemps.",
+      "dfr": "Imparfait en -ais, -ait ; futur en -rai, -rons.",
+      "dka": "imparfait მთავრდება -ais, -ait-ით, futur კი -rai, -rons-ით.",
+      "tr": "L'imparfait décrit le passé : je jouais, nous jouions. Le futur dit ce qui se passera : je jouerai, nous jouerons."
+    },
+    {
+      "id": "r4",
+      "d": "rev",
+      "fr": "Le passé composé",
+      "ka": "passé composé (რთული წარსული)",
+      "lvl": "A2 · CM1",
+      "rfr": [
+        "Passé composé = avoir ou être au présent + participe passé : j'ai mangé, je suis parti.",
+        "Avec être : aller, venir, partir, arriver, entrer, sortir, rester, tomber, naître, mourir.",
+        "Participes à connaître : fait, dit, pris, vu, voulu, pu, venu, été, eu."
+      ],
+      "rka": [
+        "Passé composé = avoir ან être აწმყოში + მიმღობა (participe passé): j'ai mangé, je suis parti.",
+        "être-თი იუღლება: aller, venir, partir, arriver, entrer, sortir, rester, tomber, naître, mourir.",
+        "დაიმახსოვრე მიმღობები: fait, dit, pris, vu, voulu, pu, venu, été, eu."
+      ],
+      "ex": [
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Hier, j' ___ du pain. (acheter, passé composé)",
+          "s": [
+            "ai acheté"
+          ],
+          "r": "Avoir au présent + participe passé : j'ai acheté.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Elle ___ à la gare. (aller, passé composé)",
+          "s": [
+            "est allée"
+          ],
+          "r": "Aller se conjugue avec être. Le participe s'accorde avec le sujet : elle est allée.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Nous ___ le bus. (prendre, passé composé)",
+          "s": [
+            "avons pris"
+          ],
+          "r": "Prendre a un participe irrégulier : pris.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Ils ___ traversé la place.",
+          "o": [
+            "on",
+            "ont"
+          ],
+          "k": 1,
+          "r": "ont, c'est le verbe avoir : ils avaient traversé.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Tu ___ venu avec moi.",
+          "o": [
+            "as",
+            "es"
+          ],
+          "k": 1,
+          "r": "Venir se conjugue avec être : tu es venu.",
+          "b": 1
+        },
+        {
+          "t": "order",
+          "c": "order",
+          "w": [
+            "la",
+            "Nous",
+            "sommes",
+            "boulangerie",
+            "allés",
+            "à",
+            "."
+          ],
+          "z": [
+            "Nous",
+            "sommes",
+            "allés",
+            "à",
+            "la",
+            "boulangerie",
+            "."
+          ],
+          "r": "Nous sommes allés : être au présent + participe passé accordé.",
+          "b": 1
+        }
+      ],
+      "dic": "Samedi, nous sommes allés au marché. Papa a acheté des tomates et j'ai choisi des pommes rouges.",
+      "dfr": "Avec avoir : a acheté, ai choisi. Avec être : sommes allés.",
+      "dka": "avoir-თან: a acheté, ai choisi. être-თან: sommes allés.",
+      "tr": "Le passé composé se forme avec avoir ou être au présent et le participe passé : j'ai joué, je suis allé."
+    },
+    {
+      "id": "r5",
+      "d": "rev",
+      "fr": "Les homophones grammaticaux",
+      "ka": "ერთნაირად წარმოთქმული სიტყვები",
+      "lvl": "A2 · CM1",
+      "rfr": [
+        "a (verbe avoir, on peut dire avait) ; à (un lieu, un moment).",
+        "et (on peut dire et puis) ; est (verbe être, on peut dire était).",
+        "on (on peut dire il) ; ont (avaient). son (le sien) ; sont (étaient).",
+        "ou (ou bien) ; où (un lieu). ces (ceux-là) ; ses (les siens)."
+      ],
+      "rka": [
+        "a (ზმნა avoir, შეიძლება ითქვას avait); à (ადგილი, დრო).",
+        "et (შეიძლება ითქვას et puis); est (ზმნა être, შეიძლება ითქვას était).",
+        "on (შეიძლება ითქვას il); ont (avaient). son (მისი); sont (étaient).",
+        "ou (ან); où (სად, ადგილი). ces (ესენი); ses (მისი)."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Léo ___ neuf ans.",
+          "o": [
+            "a",
+            "à"
+          ],
+          "k": 0,
+          "r": "On peut dire : Léo avait neuf ans. C'est le verbe avoir : a.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "La classe ___ grande.",
+          "o": [
+            "et",
+            "est"
+          ],
+          "k": 1,
+          "r": "On peut dire : la classe était grande. C'est le verbe être : est.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Ses frères ___ grands.",
+          "o": [
+            "son",
+            "sont"
+          ],
+          "k": 1,
+          "r": "On peut dire : ses frères étaient grands. C'est sont.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Le mercredi, ___ va au parc.",
+          "o": [
+            "on",
+            "ont"
+          ],
+          "k": 0,
+          "r": "On peut dire : il va au parc. C'est on.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "___ est ma chambre ?",
+          "o": [
+            "Ou",
+            "Où"
+          ],
+          "k": 1,
+          "r": "On parle d'un lieu : où, avec un accent.",
+          "b": 3
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Léo range ___ affaires.",
+          "o": [
+            "ces",
+            "ses"
+          ],
+          "k": 1,
+          "r": "Ce sont les affaires à lui : ses.",
+          "b": 3
+        }
+      ],
+      "dic": "Léo a un chat et un chien. Ses amis sont venus les voir. On a joué dans le jardin où il y a un grand arbre.",
+      "dfr": "Remplace pour vérifier : a / avait, sont / étaient, où = un lieu.",
+      "dka": "შესამოწმებლად შეცვალე: a / avait, sont / étaient, où = ადგილი.",
+      "tr": "Je remplace pour vérifier : a ou avait, est ou était, sont ou étaient, ont ou avaient, ou ou ou bien."
+    },
+    {
+      "id": "l1",
+      "d": "lec",
+      "fr": "Lire et comprendre un texte",
+      "ka": "ტექსტის კითხვა და გაგება",
+      "lvl": "A2 · CM2",
+      "rfr": [
+        "Je lis le texte deux fois.",
+        "Certaines réponses sont écrites dans le texte : je les cherche.",
+        "D'autres réponses ne sont pas écrites : je les devine grâce aux indices.",
+        "Je repère qui, où, quand et pourquoi."
+      ],
+      "rka": [
+        "ტექსტს ორჯერ ვკითხულობ.",
+        "ზოგი პასუხი ტექსტში წერია: ვეძებ მას.",
+        "ზოგი პასუხი არ წერია: ვხვდები მინიშნებების დახმარებით.",
+        "ვარკვევ: ვინ, სად, როდის და რატომ."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "read",
+          "x": "Le samedi matin, la famille de Léo part à la mer. Dans la voiture, Léo chante avec sa petite sœur Léa. Le ciel est bleu et le soleil brille. À midi, ils mangent des sandwichs sur la plage. Léo est très content : son père lui a promis une glace au chocolat !",
+          "q": "Où va la famille de Léo ?",
+          "o": [
+            "à la montagne",
+            "à la mer",
+            "à l'école"
+          ],
+          "k": 1,
+          "r": "La réponse est écrite dans la première phrase.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "read",
+          "x": "Le samedi matin, la famille de Léo part à la mer. Dans la voiture, Léo chante avec sa petite sœur Léa. Le ciel est bleu et le soleil brille. À midi, ils mangent des sandwichs sur la plage. Léo est très content : son père lui a promis une glace au chocolat !",
+          "q": "Avec qui Léo chante-t-il ?",
+          "o": [
+            "avec son père",
+            "avec sa petite sœur",
+            "avec son ami"
+          ],
+          "k": 1,
+          "r": "Le texte dit : Léo chante avec sa petite sœur Léa.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "read",
+          "x": "Le samedi matin, la famille de Léo part à la mer. Dans la voiture, Léo chante avec sa petite sœur Léa. Le ciel est bleu et le soleil brille. À midi, ils mangent des sandwichs sur la plage. Léo est très content : son père lui a promis une glace au chocolat !",
+          "q": "Quel temps fait-il ?",
+          "o": [
+            "Il pleut.",
+            "Il fait beau.",
+            "Il neige."
+          ],
+          "k": 1,
+          "r": "Ce n'est pas écrit, mais le ciel est bleu et le soleil brille : il fait beau.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "read",
+          "x": "Le samedi matin, la famille de Léo part à la mer. Dans la voiture, Léo chante avec sa petite sœur Léa. Le ciel est bleu et le soleil brille. À midi, ils mangent des sandwichs sur la plage. Léo est très content : son père lui a promis une glace au chocolat !",
+          "q": "Pourquoi Léo est-il content ?",
+          "o": [
+            "Son père lui a promis une glace.",
+            "Il va à l'école.",
+            "Il a un chien."
+          ],
+          "k": 0,
+          "r": "Les deux points annoncent l'explication.",
+          "b": 3
+        },
+        {
+          "t": "qcm",
+          "c": "read",
+          "x": "Il était une fois un petit renard qui vivait au bord d'une forêt. Chaque soir, il regardait la lune. Un jour, il décida de partir très loin pour la toucher. Il marcha toute la nuit. Au matin, fatigué, il comprit que la lune était bien trop haute. Il rentra chez lui en souriant : le voyage avait été magnifique.",
+          "q": "Où vivait le renard ?",
+          "o": [
+            "dans une ville",
+            "au bord d'une forêt",
+            "dans la mer"
+          ],
+          "k": 1,
+          "r": "C'est écrit dans la première phrase.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "read",
+          "x": "Il était une fois un petit renard qui vivait au bord d'une forêt. Chaque soir, il regardait la lune. Un jour, il décida de partir très loin pour la toucher. Il marcha toute la nuit. Au matin, fatigué, il comprit que la lune était bien trop haute. Il rentra chez lui en souriant : le voyage avait été magnifique.",
+          "q": "Pourquoi part-il ?",
+          "o": [
+            "pour toucher la lune",
+            "pour manger",
+            "pour voir sa mère"
+          ],
+          "k": 0,
+          "r": "Le texte dit : il décida de partir très loin pour la toucher.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "read",
+          "x": "Il était une fois un petit renard qui vivait au bord d'une forêt. Chaque soir, il regardait la lune. Un jour, il décida de partir très loin pour la toucher. Il marcha toute la nuit. Au matin, fatigué, il comprit que la lune était bien trop haute. Il rentra chez lui en souriant : le voyage avait été magnifique.",
+          "q": "Comment se sent-il à la fin ?",
+          "o": [
+            "triste",
+            "en colère",
+            "heureux"
+          ],
+          "k": 2,
+          "r": "Il rentre en souriant et trouve le voyage magnifique : il est heureux.",
+          "b": 2
+        }
+      ],
+      "dic": "Le renard regardait la lune. Il marcha toute la nuit, puis il rentra chez lui.",
+      "dfr": "Regardait (imparfait), marcha et rentra (passé simple).",
+      "dka": "regardait (imparfait), marcha და rentra (passé simple).",
+      "tr": "Pour comprendre un texte, je cherche les réponses écrites et je devine les autres grâce aux indices."
+    },
+    {
+      "id": "e1",
+      "d": "ecr",
+      "fr": "Écrire un texte court",
+      "ka": "მოკლე ტექსტის წერა",
+      "lvl": "A2 · CM2",
+      "rfr": [
+        "Avant d'écrire, je cherche mes idées : qui, où, quand, quoi.",
+        "Chaque phrase commence par une majuscule et finit par un point.",
+        "J'enchaîne avec : d'abord, ensuite, puis, enfin.",
+        "Je relis : les accords, les accents, la ponctuation."
+      ],
+      "rka": [
+        "წერამდე ვეძებ იდეებს: ვინ, სად, როდის, რა.",
+        "ყოველი წინადადება იწყება დიდი ასოთი და მთავრდება წერტილით. ქართულში დიდი ასოები არ არის, ფრანგულში კი აუცილებელია!",
+        "ვიყენებ დამაკავშირებელ სიტყვებს: d'abord, ensuite, puis, enfin.",
+        "ვკითხულობ თავიდან: შეთანხმება, აქცენტები, სასვენი ნიშნები."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Quel mot sert à finir un récit ?",
+          "o": [
+            "d'abord",
+            "ensuite",
+            "enfin"
+          ],
+          "k": 2,
+          "r": "D'abord commence, ensuite continue, enfin termine.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Quelle phrase est bien écrite ?",
+          "o": [
+            "léo joue au parc.",
+            "Léo joue au parc.",
+            "Léo joue au parc"
+          ],
+          "k": 1,
+          "r": "Une majuscule au début (et au prénom), un point à la fin.",
+          "b": 1
+        },
+        {
+          "t": "order",
+          "c": "order",
+          "w": [
+            "mon",
+            "Ensuite,",
+            "je",
+            "petit-déjeuner",
+            "prends",
+            "."
+          ],
+          "z": [
+            "Ensuite,",
+            "je",
+            "prends",
+            "mon",
+            "petit-déjeuner",
+            "."
+          ],
+          "r": "Le mot qui enchaîne se met au début, suivi d'une virgule.",
+          "b": 2
+        },
+        {
+          "t": "write",
+          "c": "write",
+          "q": "Raconte ton dernier week-end en trois phrases.",
+          "w": [
+            "samedi",
+            "je suis allé"
+          ],
+          "n": 15,
+          "m": "Samedi, je suis allé au parc avec mon frère. Nous avons joué au ballon. C'était une belle journée.",
+          "r": "Une majuscule au début de chaque phrase, un point à la fin. Aller prend être : je suis allé.",
+          "b": 1
+        },
+        {
+          "t": "write",
+          "c": "write",
+          "q": "Décris ton animal préféré en deux phrases.",
+          "w": [
+            "mon animal préféré"
+          ],
+          "n": 10,
+          "m": "Mon animal préféré est le chat. Il est petit, doux et très malin.",
+          "r": "Accorde l'adjectif avec le nom : un chat doux, une chatte douce.",
+          "b": 3
+        },
+        {
+          "t": "write",
+          "c": "write",
+          "q": "Raconte ta journée d'école.",
+          "w": [
+            "d'abord",
+            "ensuite",
+            "enfin"
+          ],
+          "n": 20,
+          "m": "D'abord, j'arrive à l'école à huit heures. Ensuite, je travaille en classe avec mes camarades. Enfin, je rentre à la maison.",
+          "r": "D'abord, ensuite, enfin donnent l'ordre des actions.",
+          "b": 2
+        }
+      ],
+      "dic": "D'abord, je me lève. Ensuite, je prends mon petit-déjeuner. Enfin, je pars à l'école.",
+      "dfr": "Une virgule après d'abord, ensuite, enfin.",
+      "dka": "d'abord, ensuite, enfin-ის შემდეგ მძიმე იწერება.",
+      "tr": "Pour écrire un récit, je cherche mes idées, j'écris des phrases avec une majuscule et un point, j'enchaîne avec d'abord, ensuite, enfin, puis je relis."
+    },
+    {
+      "id": "v1",
+      "d": "voc",
+      "fr": "Familles de mots, préfixes et suffixes",
+      "ka": "სიტყვათა ოჯახი, პრეფიქსები და სუფიქსები",
+      "lvl": "A2 · CM2",
+      "rfr": [
+        "Les mots d'une même famille ont le même radical : danser, danseur, danse.",
+        "Le préfixe se place avant le radical : re- (de nouveau), in- ou im- (le contraire), pré- (avant).",
+        "Le suffixe se place après : -eur, -ier (un métier), -ette (petit), -erie (un magasin)."
+      ],
+      "rka": [
+        "ერთი ოჯახის სიტყვებს ერთი ფუძე აქვთ: danser, danseur, danse.",
+        "პრეფიქსი ფუძის წინ დგას: re- (ხელახლა), in- ან im- (საპირისპირო), pré- (მანამდე).",
+        "სუფიქსი ფუძის შემდეგ დგას: -eur, -ier (პროფესია), -ette (პატარა), -erie (მაღაზია)."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Quel mot est de la même famille que danser ?",
+          "o": [
+            "danseur",
+            "dent",
+            "dans"
+          ],
+          "k": 0,
+          "r": "Danser et danseur ont le même radical : dans-.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Quel mot n'est pas de la même famille que terre ?",
+          "o": [
+            "enterrer",
+            "terrain",
+            "tarte"
+          ],
+          "k": 2,
+          "r": "Tarte ressemble à terre, mais n'a pas le même sens.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Le contraire de possible :",
+          "o": [
+            "impossible",
+            "dépossible",
+            "repossible"
+          ],
+          "k": 0,
+          "r": "Le préfixe im- donne le contraire.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "missing",
+          "q": "Le contraire de connu : ___",
+          "s": [
+            "inconnu"
+          ],
+          "r": "Le préfixe in- donne le contraire : connu, inconnu.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Revenir veut dire :",
+          "o": [
+            "venir de nouveau",
+            "ne pas venir",
+            "venir avant"
+          ],
+          "k": 0,
+          "r": "Le préfixe re- veut dire de nouveau.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "La personne qui fait le pain est le :",
+          "o": [
+            "boulanger",
+            "boulangerie",
+            "boulange"
+          ],
+          "k": 0,
+          "r": "-er désigne le métier, -erie le magasin.",
+          "b": 2
+        }
+      ],
+      "dic": "Le boulanger prépare le pain. Il refait des croissants et range sa boulangerie.",
+      "dfr": "Boulanger, boulangerie : la même famille.",
+      "dka": "boulanger, boulangerie: ერთი ოჯახი.",
+      "tr": "Une famille de mots partage un radical. Un préfixe se met avant (re-, in-), un suffixe après (-eur, -ier)."
+    },
+    {
+      "id": "v2",
+      "d": "voc",
+      "fr": "Synonymes, contraires, sens propre et figuré",
+      "ka": "სინონიმები, ანტონიმები, პირდაპირი და გადატანითი მნიშვნელობა",
+      "lvl": "A2 · CM2",
+      "rfr": [
+        "Un synonyme a presque le même sens : joli, beau.",
+        "Un contraire a le sens opposé : grand, petit.",
+        "Un mot a un sens propre (le sens premier) et parfois un sens figuré (une image) : avoir un cœur d'or."
+      ],
+      "rka": [
+        "სინონიმს თითქმის იგივე მნიშვნელობა აქვს: joli, beau.",
+        "ანტონიმს საპირისპირო მნიშვნელობა აქვს: grand, petit.",
+        "სიტყვას აქვს პირდაპირი მნიშვნელობა და ზოგჯერ გადატანითი, როგორც სურათი: avoir un cœur d'or."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Un synonyme de joli :",
+          "o": [
+            "beau",
+            "laid",
+            "petit"
+          ],
+          "k": 0,
+          "r": "Joli et beau ont presque le même sens.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Le contraire de rapide :",
+          "o": [
+            "lent",
+            "vite",
+            "fort"
+          ],
+          "k": 0,
+          "r": "Rapide et lent ont des sens opposés.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "sens",
+          "q": "Avoir la tête dans les nuages veut dire :",
+          "o": [
+            "rêver",
+            "avoir mal à la tête",
+            "être très grand"
+          ],
+          "k": 0,
+          "r": "C'est une image : la personne rêve.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Il a un cœur d'or. C'est le sens :",
+          "o": [
+            "propre",
+            "figuré"
+          ],
+          "k": 1,
+          "r": "Son cœur n'est pas en or : il est très gentil.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "sens",
+          "q": "Il pleut des cordes veut dire :",
+          "o": [
+            "Il pleut très fort.",
+            "Il y a des cordes dans le ciel.",
+            "Il fait beau."
+          ],
+          "k": 0,
+          "r": "C'est une image : il pleut beaucoup.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Je bois un verre d'eau. Le mot verre est au sens :",
+          "o": [
+            "propre",
+            "figuré"
+          ],
+          "k": 0,
+          "r": "Ici, verre a son sens premier : l'objet pour boire.",
+          "b": 2
+        }
+      ],
+      "dic": "Mon frère a un cœur d'or. Il est gentil et jamais méchant.",
+      "dfr": "Cœur s'écrit avec œ.",
+      "dka": "cœur იწერება œ-ით.",
+      "tr": "Synonyme : même sens. Contraire : sens opposé. Sens propre : sens premier. Sens figuré : une image."
+    },
+    {
+      "id": "g1",
+      "d": "gra",
+      "fr": "Phrase simple et phrase complexe",
+      "ka": "მარტივი და რთული წინადადება",
+      "lvl": "A2+ · CM2",
+      "rfr": [
+        "Une phrase simple a un seul verbe conjugué : Léo lit.",
+        "Une phrase complexe a plusieurs verbes conjugués : Léo lit pendant que sa sœur dessine.",
+        "Pour savoir, je compte les verbes conjugués."
+      ],
+      "rka": [
+        "მარტივ წინადადებაში ერთი უღლებადი ზმნაა: Léo lit.",
+        "რთულ წინადადებაში რამდენიმე უღლებადი ზმნაა: Léo lit pendant que sa sœur dessine.",
+        "გასარკვევად ვთვლი უღლებად ზმნებს."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Léo lit pendant que sa sœur dessine. Combien de verbes conjugués ?",
+          "o": [
+            "1",
+            "2",
+            "3"
+          ],
+          "k": 1,
+          "r": "Deux verbes conjugués : lit, dessine. C'est une phrase complexe.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Le chat dort. Cette phrase est :",
+          "o": [
+            "simple",
+            "complexe"
+          ],
+          "k": 0,
+          "r": "Un seul verbe conjugué : dort.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Je mange et je pars. Cette phrase est :",
+          "o": [
+            "simple",
+            "complexe"
+          ],
+          "k": 1,
+          "r": "Deux verbes conjugués : mange, pars.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Il pleut, nous restons à la maison. Combien de verbes conjugués ?",
+          "o": [
+            "1",
+            "2",
+            "3"
+          ],
+          "k": 1,
+          "r": "pleut et restons : deux verbes conjugués.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Léo aime dessiner. Quel est le verbe conjugué ?",
+          "o": [
+            "aime",
+            "dessiner"
+          ],
+          "k": 0,
+          "r": "Dessiner est à l'infinitif : il n'est pas conjugué.",
+          "b": 2
+        },
+        {
+          "t": "order",
+          "c": "order",
+          "w": [
+            "que",
+            "Je",
+            "pense",
+            "raison",
+            "tu",
+            "as",
+            "."
+          ],
+          "z": [
+            "Je",
+            "pense",
+            "que",
+            "tu",
+            "as",
+            "raison",
+            "."
+          ],
+          "r": "Deux verbes conjugués reliés par que : phrase complexe.",
+          "b": 1
+        }
+      ],
+      "dic": "Léa dessine pendant que son frère lit. Quand la nuit tombe, ils rentrent.",
+      "dfr": "Chaque verbe s'accorde avec son sujet.",
+      "dka": "თითოეული ზმნა თავის ქვემდებარეს ეთანხმება.",
+      "tr": "Phrase simple : un seul verbe conjugué. Phrase complexe : plusieurs verbes conjugués."
+    },
+    {
+      "id": "g2",
+      "d": "gra",
+      "fr": "Le sujet et l'attribut du sujet",
+      "ka": "ქვემდებარე და attribut du sujet",
+      "lvl": "B1 · CM2",
+      "rfr": [
+        "Le sujet fait l'action, ou on dit quelque chose de lui. Je le trouve avec : Qui est-ce qui ?",
+        "Le sujet peut être placé après le verbe : Dans la forêt vivait un renard.",
+        "Après être, sembler, devenir, l'attribut du sujet dit comment est le sujet : Ma sœur est petite. Il s'accorde avec le sujet."
+      ],
+      "rka": [
+        "ქვემდებარე მოქმედებს, ან მასზე რაიმეს ვამბობთ. ვპოულობ კითხვით: Qui est-ce qui ?",
+        "ქვემდებარე შეიძლება ზმნის შემდეგ იდგეს: Dans la forêt vivait un renard.",
+        "être, sembler, devenir-ის შემდეგ attribut du sujet გვეუბნება, როგორია ქვემდებარე: Ma sœur est petite. ის ეთანხმება ქვემდებარეს."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Maman prépare le repas. Le sujet est :",
+          "o": [
+            "Maman",
+            "prépare",
+            "le repas"
+          ],
+          "k": 0,
+          "r": "Qui est-ce qui prépare ? Maman.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Dans la forêt vivait un renard. Le sujet est :",
+          "o": [
+            "la forêt",
+            "vivait",
+            "un renard"
+          ],
+          "k": 2,
+          "r": "Qui est-ce qui vivait ? Un renard. Le sujet est après le verbe.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Dans le jardin ___ les enfants. (jouer, présent)",
+          "s": [
+            "jouent"
+          ],
+          "r": "Le sujet les enfants est après le verbe, mais le verbe s'accorde quand même : jouent.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Les fleurs sont ___.",
+          "o": [
+            "belle",
+            "belles",
+            "beau"
+          ],
+          "k": 1,
+          "r": "L'attribut s'accorde avec le sujet : féminin pluriel, belles.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Le ciel devient gris. Le mot gris est :",
+          "o": [
+            "le sujet",
+            "l'attribut du sujet",
+            "le verbe"
+          ],
+          "k": 1,
+          "r": "Après devenir, gris dit comment est le ciel : attribut du sujet.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Ma sœur semble ___.",
+          "o": [
+            "content",
+            "contente",
+            "contents"
+          ],
+          "k": 1,
+          "r": "Sœur est féminin singulier : contente.",
+          "b": 2
+        }
+      ],
+      "dic": "Dans la cour jouent les enfants. Ils semblent heureux et la maîtresse est contente.",
+      "dfr": "Jouent s'accorde avec les enfants, placé après le verbe.",
+      "dka": "jouent ეთანხმება les enfants-ს, რომელიც ზმნის შემდეგ დგას.",
+      "tr": "Le sujet répond à Qui est-ce qui ? Il peut être après le verbe. L'attribut du sujet, après être, s'accorde avec le sujet."
+    },
+    {
+      "id": "g3",
+      "d": "gra",
+      "fr": "Les compléments du verbe et les pronoms",
+      "ka": "ზმნის დამატებები და ნაცვალსახელები",
+      "lvl": "B1 · CM2",
+      "rfr": [
+        "Le complément d'objet complète le verbe. Direct (COD) : Léo mange une pomme. Indirect (COI) : Léo parle à sa mère.",
+        "On ne peut pas facilement le déplacer ni le supprimer.",
+        "Pour ne pas répéter, je le remplace par un pronom placé avant le verbe : le, la, les, lui, leur. Léo la mange. Léo lui parle."
+      ],
+      "rka": [
+        "დამატება ავსებს ზმნას. პირდაპირი (COD): Léo mange une pomme. ირიბი (COI): Léo parle à sa mère.",
+        "მისი ადვილად გადაადგილება ან ამოღება არ შეიძლება.",
+        "გამეორების თავიდან ასაცილებლად მას ვცვლი ნაცვალსახელით, რომელიც ზმნის წინ დგას: le, la, les, lui, leur. Léo la mange. Léo lui parle."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Léo mange une pomme. Les mots une pomme sont :",
+          "o": [
+            "le sujet",
+            "le verbe",
+            "un complément d'objet"
+          ],
+          "k": 2,
+          "r": "Léo mange quoi ? Une pomme : complément d'objet direct.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Léo téléphone à sa grand-mère. Les mots à sa grand-mère sont :",
+          "o": [
+            "un COD",
+            "un COI",
+            "le sujet"
+          ],
+          "k": 1,
+          "r": "Il y a à entre le verbe et le complément : c'est un COI.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "pron",
+          "q": "Léo regarde le film. Léo ___ regarde.",
+          "o": [
+            "le",
+            "la",
+            "lui"
+          ],
+          "k": 0,
+          "r": "Le film est masculin, COD : le.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "pron",
+          "q": "Je parle à mes amis. Je ___ parle.",
+          "o": [
+            "les",
+            "leur",
+            "lui"
+          ],
+          "k": 1,
+          "r": "À mes amis : COI au pluriel, leur.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "pron",
+          "q": "Il donne un livre à Léo. Il ___ donne un livre.",
+          "o": [
+            "le",
+            "lui",
+            "leur"
+          ],
+          "k": 1,
+          "r": "À Léo : COI au singulier, lui.",
+          "b": 2
+        },
+        {
+          "t": "order",
+          "c": "order",
+          "w": [
+            "mange",
+            "la",
+            "Léo",
+            "."
+          ],
+          "z": [
+            "Léo",
+            "la",
+            "mange",
+            "."
+          ],
+          "r": "Le pronom se place avant le verbe : Léo la mange.",
+          "b": 2
+        }
+      ],
+      "dic": "Léo a un ballon rouge. Il le lance à son ami. Son ami le rattrape et lui sourit.",
+      "dfr": "Le pronom le se place avant le verbe.",
+      "dka": "ნაცვალსახელი le ზმნის წინ დგას.",
+      "tr": "Le complément d'objet complète le verbe : il mange une pomme (COD), il parle à sa mère (COI). Je peux le remplacer par le, la, les, lui, leur, avant le verbe."
+    },
+    {
+      "id": "g4",
+      "d": "gra",
+      "fr": "Les compléments circonstanciels",
+      "ka": "გარემოებები: ადგილი, დრო, მიზეზი",
+      "lvl": "A2+ · CM2",
+      "rfr": [
+        "Les compléments circonstanciels disent où (lieu), quand (temps) et pourquoi (cause).",
+        "On peut souvent les déplacer ou les supprimer : Ce matin, nous marchons dans la rue.",
+        "La cause : à cause de la pluie, parce qu'il pleut."
+      ],
+      "rka": [
+        "გარემოებები გვეუბნება: სად (ადგილი), როდის (დრო) და რატომ (მიზეზი).",
+        "ხშირად შეგვიძლია მათი გადაადგილება ან ამოღება: Ce matin, nous marchons dans la rue.",
+        "მიზეზი: à cause de la pluie, parce qu'il pleut."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Nous marchons dans la rue. Les mots dans la rue disent :",
+          "o": [
+            "où ?",
+            "quand ?",
+            "pourquoi ?"
+          ],
+          "k": 0,
+          "r": "Dans la rue : complément circonstanciel de lieu.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Ce matin, nous marchons. Les mots ce matin disent :",
+          "o": [
+            "où ?",
+            "quand ?",
+            "pourquoi ?"
+          ],
+          "k": 1,
+          "r": "Ce matin : complément circonstanciel de temps.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Nous restons à la maison à cause de la pluie. Les mots à cause de la pluie disent :",
+          "o": [
+            "où ?",
+            "quand ?",
+            "pourquoi ?"
+          ],
+          "k": 2,
+          "r": "À cause de : complément circonstanciel de cause.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Léo lit un livre dans sa chambre. Quel groupe peut-on supprimer ?",
+          "o": [
+            "un livre",
+            "dans sa chambre"
+          ],
+          "k": 1,
+          "r": "Léo lit un livre a encore un sens : dans sa chambre est un complément circonstanciel.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Il dort parce qu'il est fatigué. La cause est :",
+          "o": [
+            "il dort",
+            "parce qu'il est fatigué"
+          ],
+          "k": 1,
+          "r": "Parce que introduit la cause.",
+          "b": 2
+        },
+        {
+          "t": "order",
+          "c": "order",
+          "w": [
+            "partirons",
+            "Demain,",
+            "nous",
+            "mer",
+            "à",
+            "la",
+            "."
+          ],
+          "z": [
+            "Demain,",
+            "nous",
+            "partirons",
+            "à",
+            "la",
+            "mer",
+            "."
+          ],
+          "r": "Un complément de temps placé au début est suivi d'une virgule.",
+          "b": 1
+        }
+      ],
+      "dic": "Hier soir, à cause de l'orage, nous sommes restés à la maison. Nous avons joué aux cartes dans le salon.",
+      "dfr": "Hier soir (temps), à cause de l'orage (cause), dans le salon (lieu).",
+      "dka": "hier soir (დრო), à cause de l'orage (მიზეზი), dans le salon (ადგილი).",
+      "tr": "Les compléments circonstanciels disent où, quand, pourquoi. On peut souvent les déplacer ou les supprimer."
+    },
+    {
+      "id": "g5",
+      "d": "gra",
+      "fr": "Le groupe nominal : épithète et complément du nom",
+      "ka": "სახელადი ჯგუფი: épithète და complément du nom",
+      "lvl": "B1 · CM2",
+      "rfr": [
+        "Le groupe nominal a un nom principal, le nom noyau. On peut l'enrichir.",
+        "L'adjectif épithète est collé au nom : un chat noir. L'attribut est après être : le chat est noir.",
+        "Le complément du nom est relié au nom par une préposition : un verre d'eau, la maison de mon oncle."
+      ],
+      "rka": [
+        "სახელად ჯგუფს აქვს მთავარი არსებითი სახელი. შეგვიძლია მისი გავრცობა.",
+        "épithète ზედსართავი არსებით სახელთან ახლოს დგას: un chat noir. attribut კი être-ს შემდეგ: le chat est noir.",
+        "complément du nom არსებით სახელს წინდებულით უკავშირდება: un verre d'eau, la maison de mon oncle."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Le petit chien noir aboie. Le nom noyau est :",
+          "o": [
+            "petit",
+            "chien",
+            "noir"
+          ],
+          "k": 1,
+          "r": "Chien est le nom. Petit et noir sont des adjectifs.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "un chat noir : le mot noir est :",
+          "o": [
+            "épithète",
+            "attribut"
+          ],
+          "k": 0,
+          "r": "Noir est collé au nom : épithète.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "le chat est noir : le mot noir est :",
+          "o": [
+            "épithète",
+            "attribut"
+          ],
+          "k": 1,
+          "r": "Noir est après être : attribut du sujet.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "un gâteau au chocolat : les mots au chocolat sont :",
+          "o": [
+            "un complément du nom",
+            "un verbe",
+            "le sujet"
+          ],
+          "k": 0,
+          "r": "Au chocolat complète le nom gâteau, avec la préposition au.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Choisis le bon groupe :",
+          "o": [
+            "une robe vert",
+            "une robe verte",
+            "une robe verts"
+          ],
+          "k": 1,
+          "r": "Robe est féminin singulier : verte.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "missing",
+          "q": "des chevaux ___ (blanc)",
+          "s": [
+            "blancs"
+          ],
+          "r": "Chevaux est masculin pluriel : blancs.",
+          "b": 1
+        }
+      ],
+      "dic": "Ma grand-mère a une petite maison blanche. La porte de la cuisine est bleue.",
+      "dfr": "Blanche et bleue sont au féminin.",
+      "dka": "blanche და bleue მდედრობით სქესშია.",
+      "tr": "Le groupe nominal : le nom noyau, l'adjectif épithète (un chat noir), le complément du nom (un verre d'eau). L'attribut se place après être."
+    },
+    {
+      "id": "o1",
+      "d": "ort",
+      "fr": "Les accords dans le groupe nominal et avec le sujet",
+      "ka": "შეთანხმება სახელად ჯგუფში და ქვემდებარესთან",
+      "lvl": "A2+ · CM2",
+      "rfr": [
+        "Dans le groupe nominal, le déterminant et l'adjectif s'accordent avec le nom : des petites filles.",
+        "Le verbe s'accorde avec son sujet : les enfants jouent, il joue.",
+        "Féminin : souvent + e. Pluriel : souvent + s ou x. Ces lettres ne s'entendent pas toujours."
+      ],
+      "rka": [
+        "სახელად ჯგუფში არტიკლი და ზედსართავი ეთანხმება არსებით სახელს: des petites filles.",
+        "ზმნა ეთანხმება ქვემდებარეს: les enfants jouent, il joue.",
+        "მდედრობითი: ხშირად + e. მრავლობითი: ხშირად + s ან x. ეს ასოები ყოველთვის არ ისმის."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Les chiennes sont ___.",
+          "o": [
+            "gentils",
+            "gentilles",
+            "gentil"
+          ],
+          "k": 1,
+          "r": "Féminin pluriel : e et s. Avec -il, on double le l : gentilles.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "des ___ filles",
+          "o": [
+            "petit",
+            "petites",
+            "petits"
+          ],
+          "k": 1,
+          "r": "Filles est féminin pluriel : petites.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "fem",
+          "q": "Il est géorgien. Elle est ___ .",
+          "s": [
+            "géorgienne"
+          ],
+          "r": "Avec -ien, on double le n au féminin : géorgienne.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "fem",
+          "q": "un lion, une ___",
+          "s": [
+            "lionne"
+          ],
+          "r": "Certains noms doublent la consonne : lion, lionne.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Les oiseaux ___.",
+          "o": [
+            "chante",
+            "chantent",
+            "chantes"
+          ],
+          "k": 1,
+          "r": "Les oiseaux = ils : chantent.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Mes cousines ___ grandes. (être, présent)",
+          "s": [
+            "sont"
+          ],
+          "r": "Mes cousines = elles : elles sont.",
+          "b": 1
+        }
+      ],
+      "dic": "Les petites filles chantent une jolie chanson. Leurs voix douces remplissent la classe.",
+      "dfr": "Petites, jolie, douces : accorde les adjectifs.",
+      "dka": "petites, jolie, douces: შეათანხმე ზედსართავები.",
+      "tr": "Le déterminant et l'adjectif s'accordent avec le nom. Le verbe s'accorde avec son sujet."
+    },
+    {
+      "id": "o2",
+      "d": "ort",
+      "fr": "L'accord du participe passé",
+      "ka": "მიმღობის (participe passé) შეთანხმება",
+      "lvl": "B1 · CM2",
+      "rfr": [
+        "Avec être, le participe passé s'accorde avec le sujet : elle est partie, ils sont venus.",
+        "Avec avoir, il ne s'accorde pas avec le sujet : elles ont mangé.",
+        "Avec avoir, il s'accorde avec le COD seulement si le COD est placé avant le verbe : la pomme que j'ai mangée."
+      ],
+      "rka": [
+        "être-თან მიმღობა ეთანხმება ქვემდებარეს: elle est partie, ils sont venus.",
+        "avoir-თან ქვემდებარეს არ ეთანხმება: elles ont mangé.",
+        "avoir-თან ის ეთანხმება პირდაპირ დამატებას (COD), მხოლოდ თუ ის ზმნის წინ დგას: la pomme que j'ai mangée."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Mes sœurs sont ___ en ville.",
+          "o": [
+            "allé",
+            "allés",
+            "allées"
+          ],
+          "k": 2,
+          "r": "Avec être : féminin pluriel, on ajoute es.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Mes amis sont ___.",
+          "o": [
+            "venu",
+            "venus",
+            "venues"
+          ],
+          "k": 1,
+          "r": "Avec être : masculin pluriel, on ajoute s.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Elles ont ___ une glace.",
+          "o": [
+            "mangé",
+            "mangées"
+          ],
+          "k": 0,
+          "r": "Avec avoir, pas d'accord avec le sujet. Le COD une glace est après le verbe.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Les fleurs que j'ai ___ sont belles.",
+          "o": [
+            "cueilli",
+            "cueillies"
+          ],
+          "k": 1,
+          "r": "Le COD que (les fleurs) est avant le verbe : cueillies.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Cette histoire, je l'ai ___.",
+          "o": [
+            "lu",
+            "lue"
+          ],
+          "k": 1,
+          "r": "L' remplace cette histoire, placé avant le verbe : lue.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Elle ___ à la gare. (aller, passé composé)",
+          "s": [
+            "est allée"
+          ],
+          "r": "Avec être : elle est allée.",
+          "b": 0
+        }
+      ],
+      "dic": "Mes cousines sont arrivées hier. Elles ont apporté des gâteaux que nous avons mangés ensemble.",
+      "dfr": "Arrivées (avec être), apporté (avec avoir), mangés (COD placé avant).",
+      "dka": "arrivées (être-თან), apporté (avoir-თან), mangés (COD ზმნის წინ).",
+      "tr": "Avec être, le participe passé s'accorde avec le sujet. Avec avoir, il s'accorde avec le COD placé avant le verbe."
+    },
+    {
+      "id": "o3",
+      "d": "ort",
+      "fr": "Accents, lettres muettes et pluriels",
+      "ka": "აქცენტები, უხმო ასოები და მრავლობითი",
+      "lvl": "A2+ · CM2",
+      "rfr": [
+        "Les accents changent le son : é (été), è (mère), ê (fête). Il faut les écrire.",
+        "Beaucoup de lettres ne s'entendent pas : petit (petite), grand (grande). Le féminin aide à trouver la lettre muette.",
+        "Pluriels spéciaux : -eau et -eu prennent x (des bateaux, des jeux) ; -al devient -aux (des chevaux) ; un œil, des yeux."
+      ],
+      "rka": [
+        "აქცენტები ბგერას ცვლის: é (été), è (mère), ê (fête). ისინი აუცილებლად უნდა დაწერო.",
+        "ბევრი ასო არ ისმის: petit (petite), grand (grande). მდედრობითი ფორმა გვეხმარება უხმო ასოს პოვნაში.",
+        "განსაკუთრებული მრავლობითი: -eau და -eu იღებს x-ს (des bateaux, des jeux); -al ხდება -aux (des chevaux); un œil, des yeux."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Ouvre la ___ !",
+          "o": [
+            "fenetre",
+            "fenêtre",
+            "fénêtre"
+          ],
+          "k": 1,
+          "r": "Fenêtre prend un accent circonflexe sur le deuxième e.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "spell",
+          "q": "Choisis le mot bien écrit :",
+          "o": [
+            "élève",
+            "éléve",
+            "elève"
+          ],
+          "k": 0,
+          "r": "élève : é au début, è au milieu.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Quelle lettre muette à la fin de gran_ ?",
+          "o": [
+            "d",
+            "t",
+            "s"
+          ],
+          "k": 0,
+          "r": "Au féminin on dit grande : la lettre muette est d.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "plural",
+          "q": "un rideau, des ___",
+          "s": [
+            "rideaux"
+          ],
+          "r": "-eau prend un x au pluriel : rideaux.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "plural",
+          "q": "un cheval, des ___",
+          "s": [
+            "chevaux"
+          ],
+          "r": "-al devient -aux : chevaux.",
+          "b": 2
+        },
+        {
+          "t": "fill",
+          "c": "plural",
+          "q": "un œil, des ___",
+          "s": [
+            "yeux"
+          ],
+          "r": "Pluriel spécial : des yeux.",
+          "b": 2
+        }
+      ],
+      "dic": "En été, ma mère fait une grande fête. Les enfants jouent à des jeux près des bateaux.",
+      "dfr": "Été, mère, fête, près : attention aux accents.",
+      "dka": "été, mère, fête, près: ყურადღება აქცენტებს!",
+      "tr": "J'écris les accents. Je trouve la lettre muette avec le féminin ou un mot de la famille. Pluriels : -eaux, -eux, -aux."
+    },
+    {
+      "id": "c1",
+      "d": "con",
+      "fr": "Le passé simple",
+      "ka": "passé simple (წყვეტილის მსგავსი დრო)",
+      "lvl": "B1 · CM2",
+      "rfr": [
+        "Le passé simple est le temps des récits et des contes.",
+        "Verbes en -er : ai, as, a, âmes, âtes, èrent (il chanta, ils chantèrent).",
+        "Verbes comme finir : is, is, it, îmes, îtes, irent (il finit, ils finirent).",
+        "À connaître : il fut, il eut, il fit, il alla, il dit, il vint, il put, il vit, il voulut, il prit."
+      ],
+      "rka": [
+        "passé simple მოთხრობებისა და ზღაპრების დროა. ის ქართულ წყვეტილს ჰგავს.",
+        "-er-ზე დაბოლოებული ზმნები: ai, as, a, âmes, âtes, èrent (il chanta, ils chantèrent).",
+        "finir-ის მსგავსი ზმნები: is, is, it, îmes, îtes, irent (il finit, ils finirent).",
+        "დაიმახსოვრე: il fut, il eut, il fit, il alla, il dit, il vint, il put, il vit, il voulut, il prit."
+      ],
+      "ex": [
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Soudain, le loup ___ . (arriver, passé simple)",
+          "s": [
+            "arriva"
+          ],
+          "r": "Verbe en -er, avec il : -a. Il arriva.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Les enfants ___ . (crier, passé simple)",
+          "s": [
+            "crièrent"
+          ],
+          "r": "Avec ils : -èrent, avec un accent grave.",
+          "b": 1
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Les élèves ___ leurs devoirs. (finir, passé simple)",
+          "s": [
+            "finirent"
+          ],
+          "r": "Finir avec ils : finirent.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Le roi ___ très triste. (être, passé simple)",
+          "o": [
+            "fut",
+            "était",
+            "eut"
+          ],
+          "k": 0,
+          "r": "Être : il fut. Avoir : il eut. Était est l'imparfait.",
+          "b": 3
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Ils ___ une promenade. (faire, passé simple)",
+          "o": [
+            "firent",
+            "faisèrent",
+            "fairent"
+          ],
+          "k": 0,
+          "r": "Faire : il fit, ils firent.",
+          "b": 3
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Le prince ___ le château. (voir, passé simple)",
+          "s": [
+            "vit"
+          ],
+          "r": "Voir : il vit, ils virent.",
+          "b": 3
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Ils ___ la route. (prendre, passé simple)",
+          "s": [
+            "prirent"
+          ],
+          "r": "Prendre : il prit, ils prirent.",
+          "b": 3
+        }
+      ],
+      "dic": "Le prince arriva devant le château. Il vit une grande porte et il entra. Les gardes furent surpris.",
+      "dfr": "Arriva, vit, entra, furent : le passé simple.",
+      "dka": "arriva, vit, entra, furent: passé simple.",
+      "tr": "Le passé simple sert à raconter. Il chanta, ils chantèrent ; il finit, ils finirent ; il fut, il eut, il fit, il vint, il prit."
+    },
+    {
+      "id": "c2",
+      "d": "con",
+      "fr": "Le plus-que-parfait",
+      "ka": "plus-que-parfait (წინარე წარსული)",
+      "lvl": "B1 · CM2",
+      "rfr": [
+        "Plus-que-parfait = avoir ou être à l'imparfait + participe passé : j'avais mangé, j'étais parti.",
+        "Il dit ce qui s'était passé avant une autre action passée : Il avait fini ses devoirs quand sa mère arriva."
+      ],
+      "rka": [
+        "plus-que-parfait = avoir ან être imparfait-ში + მიმღობა: j'avais mangé, j'étais parti.",
+        "ის გვეუბნება, რა მოხდა სხვა წარსულ მოქმედებამდე: Il avait fini ses devoirs quand sa mère arriva."
+      ],
+      "ex": [
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Il avait ___ ses devoirs avant le dîner. (finir)",
+          "s": [
+            "fini"
+          ],
+          "r": "Avoir à l'imparfait + participe passé : il avait fini.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Nous ___ partis avant la pluie. (être, imparfait)",
+          "s": [
+            "étions"
+          ],
+          "r": "Partir se conjugue avec être : nous étions partis.",
+          "b": 0
+        },
+        {
+          "t": "fill",
+          "c": "verb",
+          "q": "Elle ___ seule. (venir, plus-que-parfait)",
+          "s": [
+            "était venue"
+          ],
+          "r": "Venir prend être, le participe s'accorde : elle était venue.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Ils avaient pris le train. Le verbe est au :",
+          "o": [
+            "passé composé",
+            "plus-que-parfait",
+            "futur"
+          ],
+          "k": 1,
+          "r": "Avaient (imparfait) + pris : plus-que-parfait.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Quand je suis arrivé, le film avait commencé. Quelle action est la première ?",
+          "o": [
+            "je suis arrivé",
+            "le film a commencé"
+          ],
+          "k": 1,
+          "r": "Le plus-que-parfait dit l'action la plus ancienne.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "J'___ oublié mon cahier.",
+          "o": [
+            "avais",
+            "étais"
+          ],
+          "k": 0,
+          "r": "Oublier se conjugue avec avoir : j'avais oublié.",
+          "b": 0
+        }
+      ],
+      "dic": "Quand nous sommes arrivés, le train était déjà parti. Nous avions oublié l'heure.",
+      "dfr": "Était parti, avions oublié : le plus-que-parfait.",
+      "dka": "était parti, avions oublié: plus-que-parfait.",
+      "tr": "Plus-que-parfait : avoir ou être à l'imparfait + participe passé. Il dit ce qui s'était passé avant."
+    },
+    {
+      "id": "c3",
+      "d": "con",
+      "fr": "Les temps du récit",
+      "ka": "მოთხრობის დროები",
+      "lvl": "B1 · CM2",
+      "rfr": [
+        "L'imparfait pose le décor et décrit : Il faisait nuit.",
+        "Le passé simple (ou le passé composé) raconte les actions qui font avancer l'histoire : Soudain, le loup arriva.",
+        "Le plus-que-parfait dit ce qui s'était passé avant."
+      ],
+      "rka": [
+        "imparfait აღწერს ფონს: Il faisait nuit.",
+        "passé simple (ან passé composé) გვიყვება მოქმედებებს, რომლებიც ამბავს წინ წაწევს: Soudain, le loup arriva.",
+        "plus-que-parfait გვეუბნება, რა მოხდა მანამდე."
+      ],
+      "ex": [
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Léo dormait quand le téléphone ___.",
+          "o": [
+            "sonna",
+            "sonnait"
+          ],
+          "k": 0,
+          "r": "Dormait pose le décor, sonna est l'action soudaine.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Il ___ nuit quand le loup arriva.",
+          "o": [
+            "faisait",
+            "fit"
+          ],
+          "k": 0,
+          "r": "Le décor est à l'imparfait : il faisait nuit.",
+          "b": 0
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Soudain, la porte ___.",
+          "o": [
+            "s'ouvrait",
+            "s'ouvrit"
+          ],
+          "k": 1,
+          "r": "Soudain annonce une action : passé simple.",
+          "b": 1
+        },
+        {
+          "t": "qcm",
+          "c": "gram",
+          "q": "Il était une fois. Le verbe est :",
+          "o": [
+            "à l'imparfait",
+            "au passé simple",
+            "au présent"
+          ],
+          "k": 0,
+          "r": "Était : imparfait, pour poser le décor du conte.",
+          "b": 0
+        },
+        {
+          "t": "order",
+          "c": "order",
+          "w": [
+            "un",
+            "château",
+            "Il",
+            "fois",
+            "roi",
+            "était",
+            "dans",
+            "une",
+            "un",
+            "."
+          ],
+          "z": [
+            "Il",
+            "était",
+            "une",
+            "fois",
+            "un",
+            "roi",
+            "dans",
+            "un",
+            "château",
+            "."
+          ],
+          "r": "Il était une fois : ainsi commencent les contes.",
+          "b": 0
+        },
+        {
+          "t": "write",
+          "c": "write",
+          "q": "Écris le début d'un conte : le décor à l'imparfait, puis une action au passé simple.",
+          "w": [
+            "il était une fois",
+            "soudain"
+          ],
+          "n": 20,
+          "m": "Il était une fois une petite fille qui vivait près d'une forêt. Un matin, elle partit chercher des fleurs. Soudain, elle vit un loup.",
+          "r": "Décor à l'imparfait, actions au passé simple.",
+          "b": 1
+        }
+      ],
+      "dic": "Il faisait froid et la neige tombait. Soudain, un petit chat apparut devant la porte.",
+      "dfr": "Faisait, tombait (décor) ; apparut (action).",
+      "dka": "faisait, tombait (ფონი); apparut (მოქმედება).",
+      "tr": "Dans un récit : l'imparfait pour le décor, le passé simple pour les actions, le plus-que-parfait pour ce qui s'était passé avant."
+    },
+    {
+      "id": "or1",
+      "d": "ora",
+      "fr": "Écouter, comprendre et dire",
+      "ka": "მოსმენა, გაგება და თქმა",
+      "lvl": "A2 · CM2",
+      "rfr": [
+        "J'écoute bien les sons qui se ressemblent : u (rue) et ou (roue), an (vent), in (vin), on (bon).",
+        "Je fais les liaisons : les amis, nous avons.",
+        "Je dis mes phrases à voix haute, lentement, en articulant."
+      ],
+      "rka": [
+        "კარგად ვუსმენ მსგავს ბგერებს: u (rue) და ou (roue), an (vent), in (vin), on (bon).",
+        "სიტყვებს ერთმანეთს ვუკავშირებ (liaison): les amis, nous avons.",
+        "წინადადებებს ვამბობ ხმამაღლა, ნელა და გარკვევით."
+      ],
+      "ex": [
+        {
+          "t": "ecoute",
+          "c": "listen",
+          "say": "la rue",
+          "o": [
+            "la rue",
+            "la roue"
+          ],
+          "k": 0,
+          "r": "u (rue) : les lèvres en avant, comme pour siffler. ou (roue) : la bouche ronde.",
+          "b": 0
+        },
+        {
+          "t": "ecoute",
+          "c": "listen",
+          "say": "la roue",
+          "o": [
+            "la rue",
+            "la roue"
+          ],
+          "k": 1,
+          "r": "ou, comme dans roue, loup, nous.",
+          "b": 0
+        },
+        {
+          "t": "ecoute",
+          "c": "listen",
+          "say": "le vent",
+          "o": [
+            "le vin",
+            "le vent"
+          ],
+          "k": 1,
+          "r": "an ou en, comme dans vent, maman, enfant.",
+          "b": 0
+        },
+        {
+          "t": "ecoute",
+          "c": "listen",
+          "say": "dessous",
+          "o": [
+            "dessus",
+            "dessous"
+          ],
+          "k": 1,
+          "r": "dessous (ou) veut dire en bas ; dessus (u) veut dire en haut.",
+          "b": 0
+        },
+        {
+          "t": "ecoute",
+          "c": "listen",
+          "say": "Léo prend le bus à huit heures.",
+          "q": "À quelle heure Léo prend-il le bus ?",
+          "o": [
+            "à six heures",
+            "à huit heures",
+            "à dix heures"
+          ],
+          "k": 1,
+          "r": "J'écoute bien les nombres : huit.",
+          "b": 2
+        },
+        {
+          "t": "qcm",
+          "c": "word",
+          "q": "Où fait-on la liaison ?",
+          "o": [
+            "les amis",
+            "les garçons"
+          ],
+          "k": 0,
+          "r": "On fait la liaison devant une voyelle : les amis se dit [lezami].",
+          "b": 1
+        }
+      ],
+      "dic": "Le vent souffle dans la rue. Les amis ont vu une roue rouge.",
+      "dfr": "Écoute bien : rue, roue, rouge.",
+      "dka": "კარგად მოუსმინე: rue, roue, rouge.",
+      "tr": "J'écoute les sons u et ou, an, in, on. Je fais les liaisons : les amis. Je parle lentement et clairement."
+    }
+  ],
+  "meth": [
+    {
+      "fr": "Apprendre une leçon",
+      "ka": "გაკვეთილის სწავლა",
+      "sfr": [
+        "Je lis À retenir deux fois.",
+        "Je ferme les yeux et je redis la règle.",
+        "J'invente un exemple.",
+        "Je fais les exercices, puis je reviens le lendemain."
+      ],
+      "ska": [
+        "ორჯერ ვკითხულობ „დაიმახსოვრე“-ს.",
+        "ვხუჭავ თვალებს და ვიმეორებ წესს.",
+        "ვიგონებ მაგალითს.",
+        "ვაკეთებ სავარჯიშოებს და მეორე დღეს ისევ ვბრუნდები."
+      ]
+    },
+    {
+      "fr": "Réussir une dictée",
+      "ka": "როგორ დავწეროთ კარნახი",
+      "sfr": [
+        "J'écoute toute la dictée une fois.",
+        "J'écris phrase par phrase.",
+        "Je relis trois fois : les accords, les accents, la ponctuation.",
+        "Je vérifie, puis je recopie les mots encadrés."
+      ],
+      "ska": [
+        "ერთხელ ვუსმენ მთელ კარნახს.",
+        "ვწერ წინადადება წინადადება.",
+        "სამჯერ ვკითხულობ თავიდან: შეთანხმება, აქცენტები, სასვენი ნიშნები.",
+        "ვამოწმებ და გადავწერ ჩარჩოში ჩასმულ სიტყვებს."
+      ]
+    },
+    {
+      "fr": "Trouver le verbe et le sujet",
+      "ka": "როგორ ვიპოვოთ ზმნა და ქვემდებარე",
+      "sfr": [
+        "Je change le temps de la phrase : le mot qui change est le verbe.",
+        "Je pose la question : Qui est-ce qui ? La réponse est le sujet.",
+        "Attention : le sujet peut être après le verbe."
+      ],
+      "ska": [
+        "წინადადებას სხვა დროში ვსვამ: სიტყვა, რომელიც იცვლება, ზმნაა.",
+        "ვსვამ კითხვას: Qui est-ce qui ? პასუხი ქვემდებარეა.",
+        "ყურადღება: ქვემდებარე შეიძლება ზმნის შემდეგ იდგეს."
+      ]
+    },
+    {
+      "fr": "Conjuguer un verbe",
+      "ka": "როგორ ვუღლოთ ზმნა",
+      "sfr": [
+        "Je trouve l'infinitif : chanter, finir, prendre.",
+        "Je trouve le temps demandé.",
+        "Je trouve le sujet : je, tu, il, nous, vous, ils.",
+        "J'écris le radical, puis la bonne terminaison."
+      ],
+      "ska": [
+        "ვპოულობ ინფინიტივს: chanter, finir, prendre.",
+        "ვპოულობ მოთხოვნილ დროს.",
+        "ვპოულობ ქვემდებარეს: je, tu, il, nous, vous, ils.",
+        "ვწერ ფუძეს და შემდეგ სწორ დაბოლოებას."
+      ]
+    },
+    {
+      "fr": "Relire mon texte",
+      "ka": "როგორ გადავიკითხოთ ჩემი ტექსტი",
+      "sfr": [
+        "Une majuscule au début de chaque phrase et aux prénoms.",
+        "Un point à la fin de chaque phrase.",
+        "Le verbe est accordé avec le sujet.",
+        "Les noms ont le bon déterminant : le, la, un, une.",
+        "Les accents sont bien écrits."
+      ],
+      "ska": [
+        "დიდი ასო ყოველი წინადადების დასაწყისში და სახელებში.",
+        "წერტილი ყოველი წინადადების ბოლოს.",
+        "ზმნა ქვემდებარეს ეთანხმება.",
+        "არსებით სახელებს სწორი არტიკლი აქვთ: le, la, un, une.",
+        "აქცენტები სწორადაა დაწერილი."
+      ]
+    }
+  ],
+  "evals": [
+    {
+      "d": "rev",
+      "items": [
+        {
+          "q": "Écris le déterminant : ___ fenêtre (le ou la).",
+          "a": "la fenêtre"
+        },
+        {
+          "q": "Conjugue au présent : nous (finir).",
+          "a": "nous finissons"
+        },
+        {
+          "q": "Mets au passé composé : elle (partir).",
+          "a": "elle est partie"
+        },
+        {
+          "q": "Complète : Il ___ faim. (a ou à)",
+          "a": "Il a faim."
+        }
+      ]
+    },
+    {
+      "d": "lec",
+      "items": [
+        {
+          "q": "Texte du renard : qui est le personnage principal ?",
+          "a": "un petit renard"
+        },
+        {
+          "q": "Que fait-il chaque soir ?",
+          "a": "Il regarde la lune."
+        },
+        {
+          "q": "Pourquoi sourit-il à la fin ? (inférer)",
+          "a": "Il est heureux de son voyage, même sans toucher la lune."
+        },
+        {
+          "q": "Donne un titre au texte.",
+          "a": "Réponse libre et justifiée (Le renard et la lune)."
+        }
+      ]
+    },
+    {
+      "d": "ecr",
+      "items": [
+        {
+          "q": "Raconte une sortie en 6 à 8 lignes.",
+          "a": "Critères : majuscules et points ; d'abord, ensuite, enfin ; temps du passé cohérents ; accords dans le groupe nominal ; texte relu."
+        }
+      ]
+    },
+    {
+      "d": "voc",
+      "items": [
+        {
+          "q": "Donne deux mots de la famille de jardin.",
+          "a": "jardinier, jardiner, jardinage"
+        },
+        {
+          "q": "Contraire de heureux avec un préfixe.",
+          "a": "malheureux"
+        },
+        {
+          "q": "Synonyme de content.",
+          "a": "heureux, joyeux"
+        },
+        {
+          "q": "Il a la tête dans les nuages : sens ?",
+          "a": "Il rêve (sens figuré)."
+        }
+      ]
+    },
+    {
+      "d": "gra",
+      "items": [
+        {
+          "q": "Trouve le sujet : Dans la forêt vivait un loup.",
+          "a": "un loup (sujet inversé)"
+        },
+        {
+          "q": "Simple ou complexe : Il pleut parce que le ciel est gris.",
+          "a": "complexe (deux verbes conjugués)"
+        },
+        {
+          "q": "Remplace le COD par un pronom : Léo lit le livre.",
+          "a": "Léo le lit."
+        },
+        {
+          "q": "Fonction de de bois dans une table de bois.",
+          "a": "complément du nom"
+        },
+        {
+          "q": "Complément circonstanciel dans : Le soir, nous lisons.",
+          "a": "le soir (temps)"
+        }
+      ]
+    },
+    {
+      "d": "ort",
+      "items": [
+        {
+          "q": "Accorde : des fleurs (blanc).",
+          "a": "des fleurs blanches"
+        },
+        {
+          "q": "Les enfants (jouer, présent) dans la cour.",
+          "a": "jouent"
+        },
+        {
+          "q": "Elles sont (venir, participe passé).",
+          "a": "venues"
+        },
+        {
+          "q": "La lettre que j'ai (écrire, participe passé).",
+          "a": "écrite"
+        }
+      ]
+    },
+    {
+      "d": "con",
+      "items": [
+        {
+          "q": "Il (prendre, passé simple).",
+          "a": "il prit"
+        },
+        {
+          "q": "Ils (aller, passé simple).",
+          "a": "ils allèrent"
+        },
+        {
+          "q": "Nous (finir, plus-que-parfait).",
+          "a": "nous avions fini"
+        },
+        {
+          "q": "Il (faire, imparfait) nuit quand le loup (arriver, passé simple).",
+          "a": "faisait, arriva"
+        }
+      ]
+    },
+    {
+      "d": "ora",
+      "items": [
+        {
+          "q": "Lire à voix haute une trace écrite.",
+          "a": "Fluidité, liaisons, articulation."
+        },
+        {
+          "q": "Distinguer rue et roue, vent et vin à l'écoute.",
+          "a": "4 paires sur 4."
+        },
+        {
+          "q": "Se présenter en cinq phrases.",
+          "a": "Nom, âge, famille, goûts, projet."
+        },
+        {
+          "q": "Raconter une courte histoire au passé.",
+          "a": "Décor à l'imparfait, actions au passé composé ou au passé simple."
+        }
+      ]
+    }
+  ],
+  "fiche": [
+    {
+      "h": "Public et démarche",
+      "p": [
+        "Public : élève de CM2. L'écrit est encore fragile.",
+        "Démarche FLE pour enfants : du niveau A1+ (révisions du CM1) au niveau A2, puis B1, qui correspond aux attendus de fin de CM2."
+      ]
+    },
+    {
+      "h": "Programme",
+      "p": [
+        "Programme de français du cycle 3, BO n° 16 du 17 avril 2025, en vigueur en CM2 depuis la rentrée 2026. Sept domaines : lecture et compréhension, écriture, vocabulaire, grammaire, orthographe, conjugaison, oral.",
+        "Passé simple et plus-que-parfait pour être, avoir, les verbes du 1er et du 2e groupe, faire, aller, dire, venir, pouvoir, voir, vouloir, prendre. Le conditionnel et l'impératif relèvent de la 6e : ils ne sont pas travaillés ici."
+      ]
+    },
+    {
+      "h": "Organisation",
+      "p": [
+        "21 leçons : 5 leçons de révisions du CM1, puis 16 leçons de CM2. Chaque leçon : À retenir, Exercices autocorrigés, Dictée lue à voix haute et autocorrigée, Trace écrite à recopier et vérifiée.",
+        "Durée conseillée : 30 à 45 minutes par leçon."
+      ]
+    },
+    {
+      "h": "Autonomie",
+      "p": [
+        "L'élève travaille seul : chaque réponse est corrigée tout de suite, avec la règle. Les étoiles comptent la première réponse. Elles sont gardées sur cet appareil quand le navigateur le permet.",
+        "Les dictées sont lues par la voix du navigateur. Si le son ne marche pas, l'adulte lit le texte, visible avec le bouton Voir le texte quand l'Espace adulte est ouvert."
+      ]
+    },
+    {
+      "h": "Version géorgienne",
+      "p": [
+        "Le bouton en haut de page passe les consignes et les explications en géorgien. Les exemples, les exercices, les dictées et les traces écrites restent en français. L'Espace adulte reste en français."
+      ]
+    },
+    {
+      "h": "Points de vigilance pour un élève géorgianophone",
+      "p": [
+        "Le géorgien n'a ni articles ni genre grammatical : insister sur le, la, un, une et sur les accords.",
+        "L'écriture géorgienne n'a pas de majuscules : vérifier la majuscule en début de phrase et aux noms propres.",
+        "Sons à travailler : u et ou, les voyelles nasales (an, in, on), le e muet, é et è.",
+        "Le géorgien s'écrit comme il se prononce : les lettres muettes et les accents demandent un travail régulier.",
+        "Le passé simple ressemble au temps géorgien du récit (წყვეტილი, l'aoriste) : on peut s'appuyer sur cette comparaison."
+      ]
+    }
+  ]
+}

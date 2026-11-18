@@ -156,6 +156,13 @@
       "subject": "lettres",
       "level": "hlp",
       "description": "Humanités, littérature et philosophie en Terminale."
+    },
+    {
+      "id": "fle",
+      "name": "Collection FLE",
+      "section": "fle",
+      "subject": "fle",
+      "description": "Français langue étrangère : cahiers et séquences pour apprendre le français."
     }
   ],
   "resources": [
@@ -3162,6 +3169,21 @@
       "date": "2026-11-18",
       "image": "who-decides-at-home.jpg",
       "credit": "Thomas Rowlandson et Augustus Charles Pugin, The House of Commons, The Microcosm of London, 1808-1810. British Library, Londres. Domaine public, Wikimedia Commons."
+    },
+    {
+      "id": "fle-le-francais-du-cm2",
+      "title": "FLE · Le français du CM2 · Édition spéciale Emir",
+      "summary": "Cahier de français du CM2, en français et en géorgien : 21 leçons à cliquer, du niveau A1+ au niveau B1.",
+      "section": "fle",
+      "subject": "fle",
+      "level": "cm2",
+      "levelLabel": "CM2 · FLE · A1+ à B1",
+      "collection": "fle",
+      "themes": [],
+      "url": "https://itineraires-destinations.fr/fle/le-francais-du-cm2/",
+      "date": "2026-11-18",
+      "image": "fle/le-francais-du-cm2/img/potter-peter-rabbit.jpg",
+      "credit": "Beatrix Potter, illustration pour The Tale of Peter Rabbit, 1902. Londres, Frederick Warne & Co. Domaine public."
     }
   ]
 }

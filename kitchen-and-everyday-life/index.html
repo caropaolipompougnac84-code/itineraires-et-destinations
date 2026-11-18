@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuisine et vie quotidienne : deux jeux pour parler anglais au travail et dans la vie · Itinéraires et destinations</title>
+<meta name="description" content="Deux jeux d'anglais pour le lycée professionnel, le CFA et le CAP Cuisine : le vocabulaire de la cuisine et A Day in London, l'anglais de la vie quotidienne.">
+<link rel="canonical" href="https://itineraires-destinations.fr/kitchen-and-everyday-life/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Itinéraires et destinations">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Cuisine et vie quotidienne : deux jeux pour parler anglais au travail et dans la vie · Itinéraires et destinations">
+<meta property="og:description" content="Deux jeux d'anglais pour le lycée professionnel, le CFA et le CAP Cuisine : le vocabulaire de la cuisine et A Day in London, l'anglais de la vie quotidienne.">
+<meta property="og:url" content="https://itineraires-destinations.fr/kitchen-and-everyday-life/">
+<meta property="og:image" content="https://itineraires-destinations.fr/kitchen-and-everyday-life/img/jeu-vocabulaire-cuisine.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/english-look.css">
+<style>
+
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.compl-modes button{font:700 1rem/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:48px}
+.compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .prof-only, body.mode-dys .prof-only{display:none!important}
+body.mode-dys, body.dys{font-size:1.2rem;line-height:1.75;letter-spacing:.02em;word-spacing:.04em}
+body.mode-dys .btn span[aria-hidden], body.dys .btn span[aria-hidden]{display:none}
+.look-hero{margin:0 0 1.25rem;padding:0}
+.look-hero img{display:block;width:100%;height:auto;max-height:70vh;object-fit:cover;object-position:center}
+.look-hero figcaption{font-size:.95rem;line-height:1.45;color:#1A3658;margin:.6rem 0 0}
+.site-skip{position:absolute;left:-999px;top:auto}
+.site-skip:focus{left:1rem;top:1rem;z-index:1000;background:#fff;padding:.4rem .7rem}
+
+
+@font-face{font-family:"Nunito";src:url("fonts/nunito.woff2") format("woff2");font-weight:200 1000;font-display:swap}
+:root{--bg:#fbf4e9;--paper:#fffdf8;--ink:#3a2a20;--soft:#7a5a45;--line:#ecdcc6;--metier:#c45a32;--metier-d:#a2461f;--vie:#26628c;--vie-d:#1b4d70;--gold:#e9b44c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.075rem/1.65 "Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header.hero{background:radial-gradient(1200px 380px at 50% -80px,#fff6e6 0%,var(--bg) 70%);border-top:8px solid var(--metier);padding:46px 0 10px;text-align:center}
+.badge{display:inline-flex;align-items:center;gap:.45em;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.35em 1em;font-weight:700;color:var(--soft);font-size:.95rem}
+h1{font-weight:900;font-size:clamp(1.7rem,4.6vw,2.75rem);line-height:1.18;margin:.55em auto .3em;max-width:22em;letter-spacing:-.01em}
+h1 .accent{color:var(--metier)}
+.intro{max-width:44em;margin:26px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px 28px;text-align:left;font-size:1.12rem;box-shadow:0 10px 30px -18px rgba(90,55,30,.35)}
+.intro p{margin:0}
+.intro em,.closing em{font-style:italic;color:var(--metier-d)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:40px 0 10px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 34px -20px rgba(90,55,30,.45)}
+.shot{display:block;position:relative;aspect-ratio:4/3;background:#f4ead8;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.card:hover .shot img{transform:scale(1.025)}
+.label{display:inline-block;align-self:flex-start;color:#fff;font-weight:800;font-size:.98rem;padding:.3em .95em;border-radius:999px;margin:0 0 .7em}
+.metier .label{background:var(--metier)}
+.vie .label{background:var(--vie)}
+.body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.kicker{font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;margin:0 0 .2em}
+.metier .kicker{color:var(--metier)}
+.vie .kicker{color:var(--vie)}
+h2{font-size:1.5rem;font-weight:900;line-height:1.25;margin:0 0 .5em}
+.body p{margin:0 0 .8em}
+.body ul{margin:0 0 1.1em;padding:0;list-style:none}
+.body li{padding-left:1.5em;position:relative;margin:.28em 0}
+.body li::before{content:"→";position:absolute;left:0;font-weight:800}
+.metier li::before{color:var(--metier)}
+.vie li::before{color:var(--vie)}
+.btn{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:.5em;min-height:58px;border-radius:16px;color:#fff;text-decoration:none;font-weight:900;font-size:1.15rem;padding:.7em 1em;transition:background .2s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.metier .btn{background:var(--metier)}.metier .btn:hover{background:var(--metier-d)}
+.vie .btn{background:var(--vie)}.vie .btn:hover{background:var(--vie-d)}
+.closing{max-width:46em;margin:34px auto 0;text-align:center;font-size:1.15rem}
+.closing p{margin:0 0 .9em}
+.poles{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:4px 0 6px}
+.pole{font-weight:800;border-radius:999px;padding:.35em 1em;color:#fff}
+.pole.m{background:var(--metier)}.pole.v{background:var(--vie)}
+footer{margin-top:44px;padding:26px 0 34px;border-top:1px solid var(--line);text-align:center;color:var(--soft);font-weight:700;font-size:.98rem}
+@media (max-width:760px){
+  body{font-size:1.04rem}
+  header.hero{padding-top:30px}
+  .intro{padding:20px 20px;font-size:1.06rem;margin-top:20px}
+  .cards{grid-template-columns:1fr;gap:22px;margin-top:28px}
+  .body{padding:20px 20px 22px}
+  h2{font-size:1.38rem}
+  .closing{font-size:1.07rem}
+  .btn{font-size:1.05rem;min-height:56px}
+}
+@media (prefers-reduced-motion:reduce){.shot img,.btn{transition:none}.card:hover .shot img{transform:none}}
+.cinq-rubriques{margin:14px 0 18px;padding:12px 14px;border:1px solid currentColor;border-radius:10px;font-size:.95rem;line-height:1.45;max-width:100%}.cinq-rubriques dl{margin:0}.cinq-rubriques dt{font-weight:700;margin-top:.55em}.cinq-rubriques dt:first-child{margin-top:0}.cinq-rubriques dd{margin:.15em 0 0}@media (max-width:600px){.cinq-rubriques{font-size:.92rem;padding:10px 12px}}
+
+</style>
+<style id="compl-gorse-style">
+.compl-block{margin:2rem 0;padding:1.1rem 1.2rem 1.5rem;border:2px solid #1A3658;border-radius:14px;background:#fff}
+.compl-block h2,.compl-block h3,.compl-block h4{color:#1A3658}
+.compl-block table{border-collapse:collapse;width:100%;margin:.6rem 0 1rem}
+.compl-block th,.compl-block td{border:1px solid #d5dbe6;padding:.45rem .6rem;text-align:left;vertical-align:top}
+.compl-block th{background:#eef2f7}
+.gorse-fig{margin:1.25rem 0 1rem}
+.gorse-fig img,.gorse-fig svg{display:block;width:100%;max-width:36rem;height:auto}
+.gorse-fig figcaption{font-size:.95rem;line-height:1.45;color:#1A3658;margin:.55rem 0 0}
+ol.gorse-steps{list-style:none;padding:0;margin:1.35rem 0 0;display:flex;flex-direction:column;gap:1.15rem}
+ol.gorse-steps li{display:grid;grid-template-columns:2.1rem 1fr;gap:.8rem;align-items:start}
+ol.gorse-steps .n{font:700 1.3rem/1.15 "Source Sans 3",Verdana,sans-serif;color:#1A3658}
+ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
+body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
+body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
+</style>
+</head>
+<body class="english-look mode-eleve" data-section="cfa">
+<a class="site-skip" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <a class="brand-mark" href="/">Itinéraires et destinations</a>
+      <span class="brand-tag">Séquences prêtes à l'emploi · Français, anglais · Tous niveaux</span>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger"><span class="sr-only">Menu</span></label>
+    <nav class="nav-main" aria-label="Navigation principale">
+      <a href="/">Accueil</a><a href="/lycee-pro/">Lycée professionnel</a><a href="/lycee-general/">Lycée général et technologique</a><a href="/lycee-agricole/">Lycée agricole</a><a href="/cfa/" aria-current="page">CFA</a><a href="/segpa/">6e à 3e · SEGPA</a><a href="/a-propos.html">À propos</a>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><a href="/cfa/">CFA</a></li><li><a href="/cfa/anglais.html">Anglais</a></li><li aria-current="page">Kitchen and Everyday Life</li></ol></nav>
+<main id="main">
+<div class="compl-modes" role="group" aria-label="Affichage">
+<button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
+<button type="button" data-compl-mode="prof" aria-pressed="false">Version prof</button>
+<button type="button" data-compl-mode="dys" aria-pressed="false">Version dys</button>
+<button type="button" data-compl-mode="absent" aria-pressed="false">Version élève absent</button>
+</div>
+<script>
+(function(){
+  var KEY="id-compl-mode-v1-"+location.pathname;
+  function setM(m){
+    if(m!=="eleve" && m!=="prof" && m!=="dys" && m!=="absent") m="eleve";
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    document.body.classList.toggle("mode-absent", m==="absent");
+    document.body.classList.toggle("mode-dys", m==="dys");
+    if(m==="dys") document.body.classList.add("dys");
+    else document.body.classList.remove("dys");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+    document.dispatchEvent(new CustomEvent("compl-mode",{detail:m}));
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM((saved==="prof"||saved==="dys"||saved==="absent")?saved:"eleve");
+})();
+</script>
+<figure class="look-hero">
+<img src="img/jeu-vocabulaire-cuisine.jpg" width="840" height="630" alt="Le jeu de vocabulaire : la photo d'un pinceau à pâtisserie, le mot « pastry brush », sa prononciation et une phrase d'exemple">
+<figcaption>What is this called? Le jeu de vocabulaire de la cuisine.</figcaption>
+</figure>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge"><span aria-hidden="true"></span> Lycée professionnel · CFA · CAP Cuisine</span>
+    <h1>Cuisine et vie quotidienne&nbsp;: deux jeux pour parler anglais <span class="accent">au travail et dans la vie</span></h1>
+<aside class="cinq-rubriques" aria-label="Cadre de la séquence"><dl><dt>Niveau</dt><dd>CAP Cuisine Cuisine et vie quotidienne : deux jeux pour parler anglais au travail et dans la vie Un cui</dd></dl></aside>
+    <div class="intro">
+      <p>Un cuisinier ne passe pas sa journée qu’en cuisine. Le matin, il prend le train, il fait ses courses, il commande un café, il appelle son maître de stage. Le soir, il nomme sans hésiter la <em lang="fr">mandoline</em>, le <em lang="en">slotted spoon</em> ou le <em lang="en">proofing basket</em>. Un enseignement professionnel s’accompagne toujours de situations de la vie quotidienne&nbsp;: c’est pourquoi je vous propose ce duo.</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="cards" aria-label="Les deux jeux">
+    <article class="card metier">
+      <a class="shot" href="https://jeu-vocabulaire-lycees-agricoles.netlify.app/" target="_blank" rel="noopener"  tabindex="-1" aria-hidden="true">
+        <img src="img/jeu-vocabulaire-cuisine.jpg" srcset="img/jeu-vocabulaire-cuisine-560.jpg 560w, img/jeu-vocabulaire-cuisine.jpg 840w" sizes="(max-width:760px) 100vw, 500px" width="840" height="630" alt="Le jeu de vocabulaire : la photo d’un pinceau à pâtisserie, le mot « pastry brush », sa prononciation et une phrase d’exemple" loading="eager">
+      </a>
+      <div class="body">
+        <span class="label">l’anglais du métier</span>
+        <p class="kicker">Jeu 1 · le vocabulaire de la cuisine</p>
+        <h2>What is this called?</h2>
+        <p>Une photo, la question «&nbsp;<span lang="en">What is this called?</span>&nbsp;», un compte à rebours 3-2-1, puis le mot, sa prononciation et une phrase d’exemple. L’élève apprend le mot juste, celui du métier.</p>
+        <ul>
+          <li>15 thèmes CFA · CAP Cuisine en tête&nbsp;: pains, poissons et fruits de mer, ustensiles de cuisine, boulangerie et pâtisserie, arts de la table, petit-déjeuner anglais…</li>
+          <li>QCM, orthographe et mode classe</li>
+          <li>Fiches à imprimer et page enseignant</li>
+        </ul>
+        <a class="btn" href="https://jeu-vocabulaire-lycees-agricoles.netlify.app/" target="_blank" rel="noopener" >Ouvrir le jeu de vocabulaire <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+
+    <article class="card vie">
+      <a class="shot" href="/a-day-in-london/"  tabindex="-1" aria-hidden="true">
+        <img src="img/a-day-in-london.jpg" srcset="img/a-day-in-london-560.jpg 560w, img/a-day-in-london.jpg 631w" sizes="(max-width:760px) 100vw, 500px" width="631" height="473" alt="A Day in London : l’épisode 1, à la gare, avec le titre « A Day in London · Learn everyday English »" loading="eager">
+      </a>
+      <div class="body">
+        <span class="label">l’anglais de la vie</span>
+        <p class="kicker">Jeu 2 · la vie quotidienne</p>
+        <h2 lang="en">A Day in London</h2>
+        <p>On suit Leo et Amy le temps d’une journée à Londres&nbsp;: la gare, le supermarché, la pharmacie, le café, le stage. L’élève apprend à vivre en anglais.</p>
+        <ul>
+          <li>Chaque mission commence par un épisode vidéo</li>
+          <li>On écoute, on répète et on se débrouille en anglais</li>
+          <li>Les règles en anglais, avec un bouton «&nbsp;Traduction&nbsp;»</li>
+        </ul>
+        <a class="btn" href="/a-day-in-london/" >Ouvrir A Day in London <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </section>
+
+  <section class="closing">
+    <p>Ces deux exercices sont très différents, mais ils développent les deux pôles de compétences&nbsp;: <strong>l’anglais du métier</strong> et <strong>l’anglais de la vie</strong>.</p>
+    <div class="poles" aria-hidden="true"><span class="pole m">l’anglais du métier</span><span class="pole v">l’anglais de la vie</span></div>
+    <p>Sans inscription, sans note&nbsp;: chacun avance à son rythme, sur ordinateur, tablette ou téléphone.</p>
+  </section>
+</div>
+
+
+
+</main>
+<section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : on part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'au sens que l'on peut défendre.</p>
+<p>Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section>
+<section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : on part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'au sens que l'on peut défendre.</p>
+<p>Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section><section class="compl-lesson" id="compl-lesson-1">
+<h2>Lesson 1. What is this called? Kitchen tools</h2>
+<div class="compl-block prof-only"><h3>Minutage, version prof</h3><table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 4</td><td>Accueil</td><td>Lecture du texte d'ouverture. Observation de deux photos d'ustensiles.</td><td>CE</td></tr><tr><td>4 à 14</td><td>Spirale de Gorse</td><td>Quatre tours, avec l'exemple travaillé, sur une photo d'ustensile.</td><td>CE, PO</td></tr><tr><td>14 à 26</td><td>Compréhension de l'oral</td><td>Jeu <em>What is this called?</em> : écouter le mot, sa prononciation, la phrase d'exemple (thème ustensiles).</td><td>CO</td></tr><tr><td>26 à 36</td><td>Expanding your vocabulary</td><td>Dire, répéter, écrire : knife, chopping board, saucepan, frying pan, whisk, ladle, peeler, colander, spatula, tongs.</td><td>PO, PE</td></tr><tr><td>36 à 48</td><td>Production</td><td>Nommer cinq objets à l'oral, puis écrire cinq phrases : This is a… I use it to…</td><td>PO, PE</td></tr><tr><td>48 à 52</td><td>Trace écrite et homework</td><td>Recopiage, consigne.</td><td>PE</td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table></div>
+<div class="compl-block prof-only gorse-exemple"><h3>Exemple travaillé, version prof</h3><p><strong>Exemple travaillé, Lesson 1, sur une photo d'ustensile (par exemple une passoire), version prof</strong></p>
+<p>Pour chaque tour : la question du professeur, la réponse attendue, et ce qui se resserre.</p>
+<table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux sur cette photo ? Regardez d'abord, sans chercher le mot.</td><td>C'est un objet de cuisine, en métal, avec des trous.</td><td>On part de ce que l'on voit, pas encore du mot anglais.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quel détail plus net voyez-vous ? À quoi sert cet objet, dans le geste ?</td><td>On y verse des légumes ou des pâtes pour enlever l'eau. Le mot est <em>colander</em>, une passoire.</td><td>L'objet n'est plus « un truc en métal » : il a un geste et un nom.</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que vous apprend ce mot, au poste ?</td><td>Si l'on demande « What is this called? », il faut le mot juste, celui du métier, et une phrase : I use a colander to drain the pasta.</td><td>Le critère se resserre : le nom exact, et l'usage.</td></tr><tr><td>4. Je trouve le sens (I find the meaning)</td><td>Quelle phrase pouvez-vous défendre, et quelle est sa limite ?</td><td>Au poste, le bon mot évite une erreur et fait gagner du temps. Limite : connaître le mot ne suffit pas si l'on ne sait pas le dire assez clairement pour être compris.</td><td>Une phrase défendable, prête pour l'oral et pour la</td></tr></tbody></table></div>
+<div class="compl-block"><p>Homework : Learn ten utensil words. Write five sentences: This is a… I use it to…</p><p>trace écrite. |</p>
+<p>Trace écrite : « What is this called? This is a colander. I use it to drain the pasta. The right word is the word of the job. »</p></div>
+<div class="compl-block prof-only"><h3>Sortie de secours, version prof</h3><p>Sortie de secours : les cinq phrases écrites se terminent au homework ; cinq mots oraux, la spirale et la trace restent en classe.</p></div>
+</section>
+<section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : on part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'au sens que l'on peut défendre.</p>
+<p>Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section><section class="compl-lesson" id="compl-lesson-2">
+<h2>Lesson 2. Expanding your vocabulary: from the kitchen to the table</h2>
+<div class="compl-block prof-only"><h3>Minutage, version prof</h3><table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 4</td><td>Relance</td><td>Rappeler cinq ustensiles de la Lesson 1.</td><td>PO</td></tr><tr><td>4 à 14</td><td>Spirale de Gorse</td><td>Quatre tours, avec l'exemple travaillé, sur une photo ou une phrase d'exemple du jeu (pain, poisson, pâtisserie, arts de la table, ou petit-déjeuner anglais).</td><td>CE, PO</td></tr><tr><td>14 à 28</td><td>Compréhension de l'oral</td><td>Jeu <em>What is this called?</em>, un ou deux thèmes du jour. Écouter, répéter, écrire le mot.</td><td>CO, PE</td></tr><tr><td>28 à 38</td><td>Expanding your vocabulary</td><td>Classer les mots : pains ; poissons et fruits de mer ; boulangerie et pâtisserie ; arts de la table ; petit-déjeuner anglais.</td><td>PE, PO</td></tr><tr><td>38 à 48</td><td>Production</td><td>Présenter oralement un petit-déjeuner anglais ou un plat, puis l'écrire en six phrases.</td><td>PO, PE</td></tr><tr><td>48 à 52</td><td>Trace écrite et homework</td><td>Recopiage, consigne.</td><td>PE</td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table></div>
+<div class="compl-block prof-only gorse-exemple"><h3>Exemple travaillé, version prof</h3><p><strong>Exemple travaillé, Lesson 2, sur une photo ou une phrase du petit-déjeuner anglais (version prof)</strong></p>
+<table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux ? Que voyez-vous dans l'assiette ou sur la photo ?</td><td>Un petit-déjeuner copieux : œufs, bacon, peut-être des beans, du toast, du thé.</td><td>On part de l'assiette, d'une image familière, pas d'une liste.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quels mots exacts faut-il retenir ? Donnez-en au moins quatre.</td><td>Eggs, bacon, baked beans, toast, tea, fried tomato. Le mot <em>breakfast</em> dit le moment.</td><td>Les mots du thème remplacent « des choses à manger le matin ».</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que vous apprennent ces mots, pour le métier et pour la vie ?</td><td>À table comme en cuisine, il faut nommer juste, pour prendre une commande ou pour commander soi-même.</td><td>Le même lexique sert au poste et dans la vie quotidienne.</td></tr><tr><td>4. Je trouve le sens (I find the meaning)</td><td>Quelle phrase pouvez-vous défendre, et quelle est sa limite ?</td><td>Savoir nommer un petit-déjeuner anglais, c'est déjà pouvoir le préparer, le servir ou le commander. Limite : une liste de mots ne remplace pas une phrase pour le client ou pour le serveur.</td><td>On arrive à une phrase utile, avec sa limite.</td></tr></tbody></table></div>
+<div class="compl-block"><p>Homework : Learn twelve words from two themes of the game. Write a six-line presentation of an English breakfast or of a dish.</p><p>Trace écrite : « An English breakfast can have eggs, bacon, baked beans, toast and tea. I can name the food, and I can say it in a sentence. »</p></div>
+<div class="compl-block prof-only"><h3>Sortie de secours, version prof</h3><p>Sortie de secours : la présentation écrite se termine au homework ; un thème oral, la spirale et la trace restent en classe.</p></div>
+</section>
+<section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : on part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'au sens que l'on peut défendre.</p>
+<p>Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section><section class="compl-lesson" id="compl-lesson-3">
+<h2>Lesson 3. A Day in London: the station and the shop</h2>
+<div class="compl-block prof-only"><h3>Minutage, version prof</h3><table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 4</td><td>Accueil</td><td>Situer Leo et Amy : une journée à Londres, la gare, puis un magasin ou un supermarché.</td><td>CE, PO</td></tr><tr><td>4 à 14</td><td>Spirale de Gorse</td><td>Quatre tours, avec l'exemple travaillé, sur l'épisode vidéo de la gare ou du magasin.</td><td>CO, CE</td></tr><tr><td>14 à 28</td><td>Compréhension de l'oral</td><td>Épisode existant : écouter, répéter les formules (ticket, train, platform, bag, price, receipt).</td><td>CO, PO</td></tr><tr><td>28 à 38</td><td>Compréhension de l'écrit</td><td>Lire les règles de la mission, avec le bouton « Traduction » si besoin, puis cinq questions en français ou en anglais.</td><td>CE</td></tr><tr><td>38 à 48</td><td>Production</td><td>Mini dialogue : acheter un ticket, ou payer au supermarché. Puis l'écrire en six répliques.</td><td>PO, PE</td></tr><tr><td>48 à 52</td><td>Trace écrite et homework</td><td>Recopiage, consigne.</td><td>PE</td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table></div>
+<div class="compl-block prof-only gorse-exemple"><h3>Exemple travaillé, version prof</h3><p><strong>Exemple travaillé, Lesson 3, sur l'épisode de la gare (version prof)</strong></p>
+<table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux dans cet épisode ? Écoutez une première fois, sans tout comprendre.</td><td>On est dans une gare, à Londres. Quelqu'un veut un ticket, ou chercher un train.</td><td>On part du lieu et du besoin, pas encore de toutes les répliques.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quels mots, quelles formules entendez-vous clairement ?</td><td>Ticket, train, platform, please, how much, thank you. Peut-être : A single to… / Return, please.</td><td>Quelques mots utiles remplacent le brouhaha de la gare.</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que permettent de faire ces formules ?</td><td>Acheter un ticket, demander le quai, payer, remercier : se débrouiller pour aller quelque part.</td><td>Le critère se resserre : se débrouiller, pas tout comprendre.</td></tr><tr><td>4. Je trouve le sens (I find the meaning)</td><td>Quelle phrase pouvez-vous défendre, et quelle est sa limite ?</td><td>Avec quelques phrases claires, on peut prendre le train. Limite : si l'on n'a pas compris le quai ou le prix, il faut oser demander : Can you repeat, please?</td><td>Une phrase défendable, et un geste de secours (redemander).</td></tr></tbody></table></div>
+<div class="compl-block"><p>Homework : Learn ten travel or shop words. Write the six-line dialogue again, changing the destination or the product.</p><p>Trace écrite : « A single to…, please. How much is it? Can you repeat, please? I need help. Thank you. »</p></div>
+<div class="compl-block prof-only"><h3>Sortie de secours, version prof</h3><p>Sortie de secours : le dialogue écrit se termine au homework ; l'écoute, deux formules orales, la spirale et la trace restent en classe.</p></div>
+</section>
+<section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : on part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'au sens que l'on peut défendre.</p>
+<p>Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section><section class="compl-lesson" id="compl-lesson-4">
+<h2>Lesson 4. A Day in London: the café and asking for help</h2>
+<div class="compl-block prof-only"><h3>Minutage, version prof</h3><table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 4</td><td>Relance</td><td>Quelles formules de la gare peut-on réemployer dans un café ?</td><td>PO</td></tr><tr><td>4 à 14</td><td>Spirale de Gorse</td><td>Quatre tours, avec l'exemple travaillé, sur l'épisode du café, de la pharmacie, ou de l'entreprise d'accueil.</td><td>CO, CE</td></tr><tr><td>14 à 28</td><td>Compréhension de l'oral</td><td>Épisode existant : écouter deux fois, répéter la commande ou la demande d'aide.</td><td>CO, PO</td></tr><tr><td>28 à 38</td><td>Compréhension de l'écrit</td><td>Lire le petit dialogue de la mission, répondre à quatre questions.</td><td>CE</td></tr><tr><td>38 à 48</td><td>Production</td><td>Commander un café, ou demander de l'aide (pharmacie, accueil). Écrire puis jouer le dialogue.</td><td>PE, PO</td></tr><tr><td>48 à 52</td><td>Trace écrite et homework</td><td>Recopiage, consigne.</td><td>PE</td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table></div>
+<div class="compl-block prof-only gorse-exemple"><h3>Exemple travaillé, version prof</h3><p><strong>Exemple travaillé, Lesson 4, sur l'épisode du café (version prof)</strong></p>
+<table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux, ou aux oreilles, dans cet épisode ?</td><td>On entre dans un café. Quelqu'un veut commander, et il faut parler.</td><td>On part de la situation, pas d'une liste de boissons.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quelles formules entendez-vous ? Donnez-en au moins trois.</td><td>Can I have a tea, please? / I'd like a coffee. / How much is it? / Have you got a table? / I need help.</td><td>Trois ou quatre phrases utiles apparaissent, déjà plus nettes.</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que vous apprennent ces formules, pour la journée à Londres et pour le métier ?</td><td>On commande comme un client, et l'on comprend aussi un client qui commande, si l'on travaille au service.</td><td>Le même anglais sert des deux côtés du comptoir.</td></tr><tr><td>4. Je trouve le sens (I find the meaning)</td><td>Quelle phrase pouvez-vous défendre, et quelle est sa limite ?</td><td>Savoir commander et demander de l'aide, c'est déjà vivre et travailler en anglais. Limite : une commande trop longue, ou trop rapide, ne passe pas ; une phrase courte et polie suffit.</td><td>Une phrase défendable, prête pour le dialogue et pour l'oral de six minutes.</td></tr></tbody></table></div>
+<div class="compl-block"><p>Homework : Learn eight café or help phrases. Write a six-line dialogue in a café or in a pharmacy. If the mission shows the workplace, write what you would say to your tutor in the host company (six lines), without inventing a period that is not in the game.</p><p>Trace écrite : « Can I have a tea, please? I'd like a coffee. How much is it? I need help. Can you repeat, please? »</p></div>
+<div class="compl-block prof-only"><h3>Sortie de secours, version prof</h3><p>Sortie de secours : le dialogue écrit se termine au homework ; la commande orale, la spirale et la trace restent en classe.</p></div>
+</section>
+<section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : on part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'au sens que l'on peut défendre.</p>
+<p>Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section><section class="compl-lesson" id="compl-lesson-5">
+<h2>Lesson 5. The job and everyday life</h2>
+<div class="compl-block prof-only"><h3>Minutage, version prof</h3><table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 4</td><td>Le duo</td><td>Relire le texte d'ouverture : l'anglais du métier et l'anglais de la vie.</td><td>CE</td></tr><tr><td>4 à 14</td><td>Spirale de Gorse</td><td>Quatre tours, avec l'exemple travaillé, sur le texte d'ouverture.</td><td>CE, PO</td></tr><tr><td>14 à 24</td><td>Compréhension de l'oral</td><td>Réécoute d'un mot du jeu 1 et d'une réplique du jeu 2 ; dire en quoi ils se ressemblent (une phrase claire, un besoin précis).</td><td>CO, PO</td></tr><tr><td>24 à 36</td><td>Production orale</td><td>Présenter, en une à deux minutes, un objet du métier et une situation de la vie (le train, le café, le magasin).</td><td>PO</td></tr><tr><td>36 à 48</td><td>Production écrite</td><td>Écrire 60 à 80 mots : le matin avant le travail, puis un geste en cuisine, avec des mots des deux jeux.</td><td>PE</td></tr><tr><td>48 à 52</td><td>Trace écrite et homework</td><td>Recopiage, consigne. Autoévaluation simple : je nomme, je demande, je me débrouille.</td><td>PE</td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement, sortie de la salle. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table></div>
+<div class="compl-block prof-only gorse-exemple"><h3>Exemple travaillé, version prof</h3><p><strong>Exemple travaillé, Lesson 5, sur le texte d'ouverture (version prof)</strong></p>
+<table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux dans ce texte ? Lisez la première phrase à voix haute.</td><td>Un cuisinier ne passe pas sa journée qu'en cuisine. Le matin, il prend le train, il fait ses courses, il commande un café, il appelle son tuteur en entreprise.</td><td>On quitte l'idée que l'anglais du CAP, c'est seulement la cuisine.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quels exemples le texte donne-t-il ensuite, pour le soir et pour le métier ?</td><td>Le soir, il nomme sans hésiter la mandoline, le slotted spoon, le proofing basket. Deux pôles : le métier, et la vie.</td><td>Des mots précis du poste s'ajoutent aux gestes de la journée.</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que vous apprend ce duo ?</td><td>Il faut l'anglais pour travailler, et l'anglais pour se débrouiller dans la ville. Les deux jeux ne font pas le même travail, mais ils se complètent.</td><td>Le critère se resserre : deux compétences, un même élève.</td></tr><tr><td>4. Je trouve le sens (I find the meaning)</td><td>Quelle phrase pouvez-vous défendre, et quelle est sa limite ?</td><td>Savoir nommer un ustensile et savoir demander un ticket, c'est déjà parler anglais au bon moment. Limite : l'un ne remplace pas l'autre ; un bon mot de cuisine ne suffit pas à la gare, et l'inverse non plus.</td><td>Une phrase défendable, avec sa limite, prête pour l'écrit de 60 à 80 mots et pour l'oral de six minutes.</td></tr></tbody></table></div>
+<div class="compl-block"><p>Homework : Finish the 60 to 80 word text. Learn ten words, five from the job and five from everyday life.</p><p>Trace écrite : « I need English at work, and I need English in everyday life. I can name a tool, and I can ask for a ticket or a tea. One does not replace the other. »</p></div>
+<div class="compl-block prof-only"><h3>Sortie de secours, version prof</h3><p>Sortie de secours : l'écrit se termine au homework ; la présentation orale courte, la spirale et la trace restent en classe.</p></div>
+</section>
+<section class="compl-block compl-eval" id="eleve-absent-audit"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
+<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
+<h3>Lesson 1. What is this called? Kitchen tools</h3>
+<ol><li><strong>Je découvre</strong> (5 min). Lis le texte d'ouverture et ouvre le jeu <em>What is this called?</em>, thème ustensiles.</li><li><strong>Je comprends</strong> (10 min). Pour cinq photos : What is this called? À quoi sert l'objet ?</li><li><strong>Étude de la langue</strong> (10 min). Écris dix mots d'ustensiles.</li><li><strong>Je produis</strong> (10 min). Écris cinq phrases : This is a… I use it to…</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 1.</li></ol>
+<p><em>Version courte (15 min)</em> : cinq mots et deux phrases.</p>
+<h3>Lesson 2. Expanding your vocabulary</h3>
+<ol><li><strong>Je découvre</strong> (5 min). Ouvre un thème du jeu (petit-déjeuner, pains, ou poissons).</li><li><strong>Je comprends</strong> (10 min). Écoute cinq mots, écris-les.</li><li><strong>Étude de la langue</strong> (10 min). Classe douze mots en deux colonnes.</li><li><strong>Je produis</strong> (10 min). Présente un petit-déjeuner anglais en six phrases.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 2.</li></ol>
+<p><em>Version courte (15 min)</em> : cinq mots et trois phrases.</p>
+<h3>Lesson 3. The station and the shop</h3>
+<ol><li><strong>Je découvre</strong> (5 min). Ouvre <em>A Day in London</em>, mission gare ou magasin.</li><li><strong>Je comprends</strong> (10 min). Écoute l'épisode deux fois. Where are they? What do they want?</li><li><strong>Étude de la langue</strong> (10 min). Recopie huit formules utiles.</li><li><strong>Je produis</strong> (10 min). Écris un dialogue de six répliques (ticket ou caisse).</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 3.</li></ol>
+<p><em>Version courte (15 min)</em> : l'épisode et trois formules.</p>
+<h3>Lesson 4. The café and asking for help</h3>
+<ol><li><strong>Je découvre</strong> (5 min). Ouvre la mission café, pharmacie, ou entreprise d'accueil.</li><li><strong>Je comprends</strong> (10 min). What do they order or ask? Which phrases do you hear?</li><li><strong>Étude de la langue</strong> (10 min). Recopie huit formules (commande ou aide).</li><li><strong>Je produis</strong> (10 min). Écris un dialogue de six répliques.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 4.</li></ol>
+<p><em>Version courte (15 min)</em> : l'épisode et la commande.</p>
+<h3>Lesson 5. The job and everyday life</h3>
+<ol><li><strong>Je découvre</strong> (5 min). Relis le texte d'ouverture.</li><li><strong>Je comprends</strong> (10 min). Quels exemples pour la vie ? Quels exemples pour le métier ?</li><li><strong>Étude de la langue</strong> (10 min). Relis tes traces écrites. Liste cinq mots du métier et cinq mots de la vie.</li><li><strong>Je produis</strong> (10 min). Écris 60 à 80 mots : un matin, puis un geste en cuisine.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 5.</li></ol>
+<p><em>Version courte (15 min)</em> : le texte d'ouverture et un paragraphe de 40 mots.</p></section>
+<section class="compl-block compl-eval" id="evaluation-ponctuelle"><h2>Évaluation au format de l'épreuve ponctuelle du CAP (version prof)</h2>
+<p>À insérer uniquement en Version prof. Lorsque le règlement de la spécialité prévoit la langue vivante : coefficient 1, niveau A2, note sur 20. Cinq activités comptent chacune pour un cinquième : compréhension de l'oral, compréhension de l'écrit, expression écrite, expression orale en continu, interaction. Élèves des établissements publics ou privés sous contrat et apprentis des CFA habilités : CCF. Autres candidats : épreuve ponctuelle (un écrit d'une heure et un oral de six minutes, mêmes activités, séparés par une pause d'au moins quinze minutes).</p>
+<p>Situation A (CCF, 1 h, sans préparation, ou écrit de l'épreuve ponctuelle) : compréhension de l'oral, 10 min (document d'une minute au plus, trois écoutes, questionnaire à choix multiple en français) ; compréhension de l'écrit, 25 min (document de dix lignes au plus, réponses en français) ; expression écrite, 25 min (un sujet au choix entre deux, vie quotidienne ou vie professionnelle, 60 à 80 mots au moins).</p>
+<p>Situation B (CCF, 6 min, ou oral de l'épreuve ponctuelle) : trois minutes de prise de parole en continu, puis trois minutes d'interaction. Le candidat présente un travail, un projet, un produit, un service ou une expérience professionnelle ; il peut s'aider d'un plan, de mots-clés, d'une image, mais ne lit pas un texte.</p>
+<h3>Situation A, en une lesson de 52 minutes (version prof)</h3>
+<table><thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 2</td><td>Consignes</td><td>Lecture des trois parties, choix du sujet d'écriture.</td><td>Lecture</td></tr><tr><td>2 à 12</td><td>Compréhension de l'oral</td><td>Trois écoutes (1 min au plus), une minute entre les écoutes ; QCM en français.</td><td>CO</td></tr><tr><td>12 à 37</td><td>Compréhension de l'écrit</td><td>Texte de dix lignes au plus, réponses en français.</td><td>CE</td></tr><tr><td>37 à 50</td><td>Expression écrite</td><td>Un sujet au choix, 60 à 80 mots au moins.</td><td>PE</td></tr><tr><td>50 à 52</td><td>Ramassage</td><td>Relecture, comptage des mots.</td><td></td></tr><tr><td>52 à 55</td><td>Marge</td><td>Rangement. La lesson dure 55 minutes, minutée sur 52.</td><td></td></tr></tbody></table>
+<h3>Compréhension de l'oral, CO</h3>
+<p><strong>Transcript (version prof seulement)</strong></p>
+<p>&gt; Good morning, can I help you? I'd like a coffee and a sandwich, please. Eat in or take away? Eat in, please. That's six pounds fifty. Card or cash? Card, please. Here's your receipt. The cups are on the right, and spoons are next to the sugar. Thank you. Have a nice day.</p>
+<p>Consigne : questionnaire à choix multiple, en français, après trois écoutes.</p>
+<ol><li>Où se passe la scène ? a) une gare b) un café c) une cuisine</li><li>Que commande la personne ? a) un thé et un gâteau b) un café et un sandwich c) seulement un café</li><li>Où consomme-t-elle ? a) sur place b) à emporter c) on ne sait pas</li><li>Combien paie-t-elle, et comment ? a) 6,50 livres, en espèces b) 5 livres, par carte c) 6,50 livres, par carte</li><li>Où sont les cuillères ? a) à gauche b) à côté du sucre c) sous le comptoir</li></ol>
+<p><strong>Corrigé (version prof).</strong> 1 b ; 2 b ; 3 a ; 4 c ; 5 b.</p>
+<h3>Compréhension de l'écrit, CE</h3>
+<p>Texte d'entraînement (dix lignes au plus) :</p>
+<p>&gt; A cook does not spend the whole day in the kitchen. In the morning, he takes the train, buys food, orders a coffee, and calls his tutor at the host company. In the kitchen, he must name tools correctly: a mandoline, a slotted spoon, a proofing basket, a colander. English is useful at work, and it is useful in everyday life. The two are different, but they help each other. If you can ask for a ticket and you can name a tool, you can already say what you need, clearly.</p>
+<p>Source : texte d'entraînement écrit pour la classe, d'après le texte d'ouverture de la séquence.</p>
+<p>Questions, réponses en français :</p>
+<ul><li>Que fait le cuisinier le matin, avant la cuisine ?</li><li>Quels ustensiles le texte nomme-t-il ?</li><li>Pourquoi l'anglais est-il utile, selon le texte ?</li><li>Quelle est la différence entre les deux pôles, et ce qui les relie ?</li><li>Quelle phrase finale résume ce que l'élève peut déjà faire ?</li></ul>
+<p><strong>Corrigé (version prof).</strong> Le matin, il prend le train, fait des courses, commande un café, appelle son tuteur en entreprise. Le texte nomme une mandoline, une cuillère trouée, un panier de fermentation, une passoire. L'anglais sert au travail et dans la vie quotidienne. Les deux sont différents, mais ils s'aident. Si l'on sait demander un ticket et nommer un ustensile, on peut déjà dire clairement ce dont on a besoin.</p>
+<h3>Expression écrite, PE</h3>
+<p>Choisissez un sujet. Écrivez 60 à 80 mots au moins.</p>
+<ul><li>Sujet 1, vie quotidienne : You are in London. Write what you say at the station and at a café.</li><li>Sujet 2, vie professionnelle : Present five kitchen tools. Name them and say what you use them for.</li></ul>
+<p><strong>Éléments de corrigé (version prof).</strong> Phrases courtes et polies ; lexique de la séquence (ticket, platform, tea, coffee, colander, whisk, saucepan). 60 à 80 mots au moins. On n'attend pas un récit long.</p>
+<h3>Situation B, 6 minutes par élève, PO (continu et interaction)</h3>
+<table><thead><tr><th>Minutes</th><th>Étape</th><th>Activité</th></tr></thead><tbody><tr><td>0 à 3</td><td>Présentation</td><td>L'élève présente un ustensile, un petit-déjeuner, ou une situation de la journée à Londres, sans lire un texte.</td><td>PO</td></tr><tr><td>3 à 6</td><td>Interaction</td><td>Questions de l'enseignante.</td><td>PO</td></tr></tbody></table>
+<p>Consigne : présentez, en trois minutes au plus, un objet du métier ou une situation de la vie (la gare, le café, le magasin). Une fiche de mots-clés et une image (photo du jeu, un ticket, une table dressée) sont autorisées.</p>
+<p>Questions d'interaction : What is this called? What do you use it for? How much is it? Can I have a tea, please? Can you repeat, please? Where is the platform?</p>
+<p><strong>Éléments de corrigé (version prof).</strong> Nom juste, une phrase d'usage, une formule polie. Niveau A2. L'élève ne lit pas un texte appris.</p>
+<h3>Grille CAP, niveau A2, version prof</h3>
+<p>Chaque activité sur 20, puis un cinquième de la note finale (note sur 20).</p>
+<table><thead><tr><th>Activité</th><th>1 à 8</th><th>9 à 14</th><th>15 à 20</th></tr></thead><tbody><tr><td>CO</td><td>Quelques mots isolés</td><td>Le lieu et le sujet sont reconnus, une ou deux informations justes</td><td>Les informations principales du dialogue sont justes</td></tr><tr><td>CE</td><td>Quelques éléments isolés</td><td>Le thème et deux ou trois faits</td><td>L'essentiel du texte, y compris les deux pôles (métier et vie)</td></tr><tr><td>PE</td><td>Hors sujet ou trop court</td><td>Sujet abordé, 60 mots, langue encore hésitante</td><td>Sujet traité, phrases lisibles, lexique du jeu ou de la ville</td></tr><tr><td>PO continu</td><td>Lecteur, propos très court</td><td>Présente avec aide</td><td>Présente sans lire, nomme et explique simplement</td></tr><tr><td>PO interaction</td><td>Répond peu ou à côté</td><td>Répond de façon simple</td><td>Répond et demande une précision, langue A2 compréhensible</td></tr></tbody></table></section>
+<section class="compl-block compl-eval" id="evaluation-sommative"><h2>Évaluation sommative</h2>
+<p>Même format que l'épreuve ponctuelle et que le CCF, à placer après la Lesson 5, en Version prof. On reprend le format, avec d'autres documents.</p>
+<p><strong>Variante, compréhension de l'oral (transcript, version prof).</strong></p>
+<p>&gt; What is this called? It's a whisk. I use it to mix eggs. And this? A chopping board. I cut vegetables on it, with a knife. Be careful, the knife is sharp. Can you pass me the colander, please? I need to drain the pasta. Thank you.</p>
+<p>QCM : 1. Combien d'objets sont nommés ? a) deux b) trois c) au moins quatre (fouet, planche, couteau, passoire). 2. À quoi sert le fouet ? a) à couper b) à battre les œufs c) à égoutter. 3. Où coupe-t-on les légumes ? a) dans la casserole b) sur une planche, avec un couteau c) dans la passoire. 4. Que faut-il faire attention avec le couteau ? a) il est lourd b) il est tranchant c) il est sale. 5. Pourquoi demande-t-on la passoire ? a) pour égoutter les pâtes b) pour mélanger c) pour servir le café. Corrigé : 1 c ; 2 b ; 3 b ; 4 b ; 5 a.</p>
+<p><strong>Variante, compréhension de l'écrit.</strong> Texte : « Leo and Amy spend a day in London. They buy a ticket at the station, they go to a supermarket, they stop at a pharmacy, they order a drink in a café, and they go to the host company. Each time, they listen, they repeat, and they try to manage in English. They do not need a long speech. They need a clear question, a polite phrase, and the courage to ask: Can you repeat, please? » Questions en français sur le parcours de la journée, ce que font Leo et Amy à chaque fois, et ce dont ils ont besoin. Corrigé : gare, supermarché, pharmacie, café, entreprise d'accueil ; ils écoutent, répètent, se débrouillent ; pas un long discours, une question claire, une formule polie, et oser demander de répéter.</p>
+<p><strong>Variante, expression écrite.</strong> Sujet 1 : Write your day: the train, a coffee, and one tool you use in the kitchen. Sujet 2 : A classmate does not know the word &quot;colander&quot;. Explain what it is and how you use it. 60 à 80 mots au moins.</p>
+<p>L'oral sommatif reprend la Situation B, avec un autre objet ou une autre mission que ceux présentés en Lesson 5.</p>
+<p>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p></section>
+<footer class="site-footer"><div class="wrap"><p>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></p></div></footer>
+
+</body>
+</html>

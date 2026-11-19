@@ -36,3 +36,22 @@ blockquote.dictee-modele{margin:1rem 0}
 .ouverture-tableau img{width:100%;height:auto;display:block}
 .stp-main, .stp-main p, .stp-main li, .stp-main td, .stp-main th{font-size:22px!important;line-height:1.6}
 .gnav{display:none!important}
+
+/* Spirale de Gorse : parties élève, prof, dys, et dessin téléphone (à coller une fois à la fin de page.css) */
+.spg{margin:1rem 0}
+.spg-dys{display:none}
+.mode-dys .spg-dys{display:block}
+.mode-dys .spg-eleve{display:none}
+.spg-steps li{margin:.35rem 0}
+.fig-spirale .spirale-tel{display:none}
+@media (max-width:640px){
+ .fig-spirale.a-tel{overflow-x:visible}
+ .fig-spirale.a-tel .spirale:not(.spirale-tel){display:none}
+ .fig-spirale.a-tel .spirale-tel{display:block;min-width:0;width:100%;max-width:440px;height:auto;margin:0 auto}
+ .spirale-tel .sv-step{font-size:24px}
+ .spirale-tel .sv-idee{font-size:21px}
+ .spirale-tel .sv-in{font-size:19px}
+}
+/* Couleur anglais : bleu marine */
+.spg-en .sv-step{fill:#12243C}
+.spg-en .sv-in{fill:#1A3658}

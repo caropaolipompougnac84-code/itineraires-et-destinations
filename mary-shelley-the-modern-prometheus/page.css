@@ -1,0 +1,37 @@
+/* Exercices du panneau brevet, calés sur le modèle page blanche (bordeaux, 22 px). */
+.stp-main .aide-local{background:var(--pale);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:0 0 1rem}
+.stp-main .trace{background:#fff;border:2px solid var(--b);border-radius:12px;padding:14px 16px;margin:1rem 0}
+.stp-main .trace::before{content:"À recopier dans le cahier";display:block;font-size:22px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--b);margin-bottom:6px}
+.stp-main .dictee{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:14px 16px;font-family:var(--f-t);font-size:22px}
+.stp-main .exo{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:1rem 0}
+.stp-main .exo .ligne{margin:8px 0;line-height:1.9}
+.stp-main .exo input,.stp-main .exo select{font:inherit;font-size:22px;max-width:100%;border:0;border-bottom:2px solid var(--b);background:#fffaf0;padding:2px 6px}
+.stp-main .exo input{width:100%}
+.stp-main .exo select.bon,.stp-main .exo input.bon{border-color:#2d6a4f;background:#eaf6ef}
+.stp-main .exo select.faux,.stp-main .exo input.faux{border-color:#9b1c1c;background:#fbeaea}
+.stp-main .bareme-total{font-weight:700;color:var(--b)}
+.stp-main .exo .verifier{margin-top:8px;border:0;background:var(--b);color:#fff;font:700 22px var(--f-ui);border-radius:999px;padding:8px 16px;cursor:pointer;min-height:48px}
+.stp-main .exo .score{margin-left:10px;font-weight:700}
+.stp-main .corrige{margin-top:10px}
+.stp-main .corr-body{display:none}
+.stp-main .corrige.ouvert .corr-body,.mode-prof .corrige.ouvert .corr-body,.mode-absent .corrige.ouvert .corr-body{display:block}
+.paire-rep{display:inline-flex;flex-wrap:wrap;gap:0;margin-top:14px;border:3px solid var(--b);border-radius:12px;overflow:hidden}
+.paire-rep button{font:700 22px var(--f-ui);padding:12px 22px;min-height:52px;border:0;cursor:pointer;background:#fff;color:var(--b)}
+.paire-rep button+button{border-left:3px solid var(--b)}
+.corrige:not(.ouvert) .rep-off,.corrige.ouvert .rep-on{background:var(--b);color:#fff}
+.checklist{list-style:none;padding-left:0}
+.checklist label{display:flex;gap:.5rem;align-items:flex-start}
+.mode-eleve .corrige,.mode-dys .corrige{display:none!important}
+.mode-prof .corrige,.mode-absent .corrige{display:block}
+.mode-eleve .verifier,.mode-eleve .score,.mode-dys .verifier,.mode-dys .score{display:none!important}
+.mode-absent .fiche-only,.mode-eleve .fiche-only,.mode-dys .fiche-only{display:none!important}
+.mode-absent .tab[data-tab="fiche-professeur"]{display:none!important}
+.ouverture-tableau img{width:100%;height:auto;display:block}
+.peinture.belle-page{margin:0 0 1.2rem}
+.peinture.belle-page figcaption{font-size:22px;line-height:1.5;margin:.6rem auto 0;max-width:60rem;padding:0 1rem}
+blockquote.dictee-modele{margin:1rem 0}
+
+:root{--b:#1A3658!important;--b-deep:#12243C!important;--pale:#EEF2F7!important;--line:#C3CEDC!important;}
+.mode-eleve [data-act="reponses"],.mode-dys [data-act="reponses"]{display:none!important}
+.ouverture-tableau img{width:100%;height:auto;display:block}
+.kgrid,.prog,.panel{font-size:22px;line-height:1.6}

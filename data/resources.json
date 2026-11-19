@@ -2148,10 +2148,10 @@
         "ecrit",
         "oral"
       ],
-      "url": "https://troisieme-francais-annee.netlify.app/#t0-brevet",
+      "url": "https://itineraires-destinations.fr/preparation-au-brevet/",
       "image": "brevet/brevet.jpg",
       "credit": "Jean Siméon Chardin, Un philosophe occupé de sa lecture (Portrait du peintre Joseph Aved), 1734. Musée du Louvre, Paris. Domaine public.",
-      "date": "2026-11-10"
+      "date": "2026-11-19"
     },
     {
       "id": "lg-hlp-tle-formes-qui-parlent",
@@ -3328,6 +3328,63 @@
       "date": "2026-11-19",
       "image": "alcools-apollinaire-premiere-pro.jpg",
       "credit": "Henri Rousseau, dit le Douanier Rousseau, La Muse inspirant le poète, 1909, huile sur toile, musée Pouchkine, Moscou. Domaine public."
+    },
+    {
+      "id": "segpa-lettres-5e-voyager-en-poesie",
+      "title": "Français · 5e SEGPA · Voyager en poésie",
+      "summary": "Du monde entier au cœur du monde : Gautier, Rimbaud, Richepin et Sindbad. Six leçons, évaluation, versions élève, prof, dys et élève absent, dossier en pdf, Word et LibreOffice.",
+      "section": "segpa",
+      "subject": "lettres",
+      "level": "5e",
+      "levelLabel": "5e SEGPA",
+      "collection": "segpa-lettres",
+      "themes": [
+        "poesie",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/voyager-en-poesie/",
+      "date": "2026-11-19",
+      "image": "voyager-en-poesie.jpg",
+      "credit": "Claude Gellée, dit le Lorrain, Port de mer au soleil couchant, 1639, musée du Louvre, Paris. Domaine public."
+    },
+    {
+      "id": "lg-anglais-1re-mary-shelley-the-modern-prometheus",
+      "title": "Anglais · 1re · Mary Shelley: The Modern Prometheus",
+      "summary": "Séquence d’anglais pour la Première du lycée général et technologique, B1+ vers B2, axe Fictions et réalités. Frankenstein, Dark Romanticism, six lessons, versions élève, prof, dys et élève absent.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique · B1+ to B2",
+      "collection": "lg-anglais",
+      "themes": [
+        "culture",
+        "litterature",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/mary-shelley-the-modern-prometheus/",
+      "date": "2026-11-19",
+      "image": "mary-shelley-the-modern-prometheus.jpg",
+      "credit": "Portrait of Frankenstein’s creature, opening image of the sequence."
+    },
+    {
+      "id": "lp-anglais-hidden-figures",
+      "title": "Anglais · Hidden Figures",
+      "summary": "Séquence d’anglais (B1, B2, C1) sur Katherine Johnson, Dorothy Vaughan et Mary Jackson à la NASA Langley, dans la lignée My Working Day. Cinq lessons, versions élève, prof, dys et élève absent. Photographies NASA du domaine public.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "B1 · B2 · C1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "culture",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/hidden-figures/",
+      "date": "2026-11-19",
+      "image": "hidden-figures.jpg",
+      "credit": "Katherine Johnson at NASA Langley, 1966. NASA. Public domain."
     }
   ]
 }

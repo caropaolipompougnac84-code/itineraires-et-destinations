@@ -3425,6 +3425,62 @@
       "date": "2026-11-19",
       "image": "call-the-midwife.jpg",
       "credit": "Portrait of a nurse, Poplar, East London."
+    },
+    {
+      "id": "lg-anglais-1re-scotland-power-from-the-water",
+      "title": "Anglais · 1re · Power from the Water: Scotland’s Energy, Yesterday and Tomorrow",
+      "summary": "Séquence d’anglais pour la Première, lycée général et technologique, axe 4 Innovations scientifiques et responsabilité (axe 5 en appui), à partir de Turner, The Falls of the Clyde. Six lessons, versions professeur, élève, dys et élève absent, spirale de Gorse.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique, B1+",
+      "collection": "lg-anglais",
+      "themes": [
+        "environnement",
+        "culture",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/scotland-power-from-the-water/",
+      "date": "2026-11-19",
+      "image": "scotland-power-from-the-water.jpg",
+      "credit": "J. M. W. Turner, The Falls of the Clyde, vers 1845, Lady Lever Art Gallery, domaine public."
+    },
+    {
+      "id": "lg-anglais-1re-yosemite-who-is-nature-for",
+      "title": "Anglais · 1re · Yosemite: Who Is Nature For?",
+      "summary": "Séquence d’anglais pour la Première, lycée général et technologique, axe 5 L’être humain et la nature (axe 2 en appui), à partir de Bierstadt, Looking Down Yosemite Valley. Six lessons, versions professeur, élève, dys et élève absent, spirale de Gorse.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique, B1+",
+      "collection": "lg-anglais",
+      "themes": [
+        "environnement",
+        "culture",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/yosemite-who-is-nature-for/",
+      "date": "2026-11-19",
+      "image": "yosemite-who-is-nature-for.jpg",
+      "credit": "Albert Bierstadt, Looking Down Yosemite Valley, California, 1865, Birmingham Museum of Art, domaine public."
+    },
+    {
+      "id": "lp-anglais-1re-safe-and-clean-at-work",
+      "title": "Anglais · 1re · Safe and Clean: Rules That Protect Us at Work",
+      "summary": "Séquence d’anglais pour la Première baccalauréat professionnel, B1, contexte de la vie professionnelle : réglementation, sécurité, hygiène. Six lessons, mise en situation professionnelle, versions professeur, élève, dys et élève absent, spirale de Gorse.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "1re · bac pro, B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "citoyennete"
+      ],
+      "url": "https://itineraires-destinations.fr/safe-and-clean-at-work/",
+      "date": "2026-11-19",
+      "image": "safe-and-clean-at-work.jpg",
+      "credit": "Work with care, 1936, Federal Art Project (WPA), Library of Congress LCCN 92517365, domaine public."
     }
   ]
 }

@@ -61,3 +61,21 @@
   });
   setMode('eleve');
 })();
+
+/* Open a tab from a link (#words-of-care, #post-war-words, #sequence...) or from the address */
+(function(){
+  function openTab(k){
+    var b=document.querySelector('.tab-btn[data-k="'+k+'"]');
+    if(!b) return false;
+    b.click();
+    var p=document.querySelector('.panel[data-k="'+k+'"]');
+    if(p) window.scrollTo({top:p.getBoundingClientRect().top+window.pageYOffset-20,behavior:'auto'});
+    return true;
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]'); if(!a) return;
+    var k=a.getAttribute('href').slice(1);
+    if(k && document.querySelector('.tab-btn[data-k="'+k+'"]')){ e.preventDefault(); openTab(k); history.replaceState(null,'','#'+k); }
+  });
+  if(location.hash){ openTab(location.hash.slice(1)); }
+})();

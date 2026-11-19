@@ -98,3 +98,40 @@ body.mode-prof details.ans{display:block}
 body:not(.mode-absent):not(.mode-prof) #eleve-absent .btn-rep,
 body:not(.mode-absent):not(.mode-prof) #eleve-absent .reponse,
 body:not(.mode-absent):not(.mode-prof) #eleve-absent .rep-wrap{display:none!important}
+
+/* Vocabulary lessons: Nursing, Words of Care ; Women at Work in Post-War London */
+.vocab-lesson .lesson-art{margin:0 0 1.2rem}
+body .vocab-lesson h1{font-size:30px;line-height:1.25}
+body .vocab-lesson h2{font-size:26px}
+.vocab-lesson .lesson-art img{display:block;width:100%;height:auto;border-radius:8px}
+.vocab-lesson .task{border:2px solid var(--bx,#1A3658);border-radius:12px;padding:12px 16px;margin:1.2rem 0;background:#fff}
+.vocab-lesson table.wordbank td,.vocab-lesson table.wordbank th{border:1px solid #c9d3e3;padding:6px 8px;text-align:left;vertical-align:top}
+.vocab-lesson .dialogue p{margin:.6rem 0;line-height:1.9}
+.vocab-lesson .gapw{white-space:nowrap}
+.vocab-lesson .gnum{font-size:22px;color:#1A3658;font-weight:700;margin-right:4px}
+.vocab-lesson input.gap{font:inherit;font-size:22px;width:9em;max-width:62vw;border:0;border-bottom:2px solid #1A3658;background:#f3f6fb;padding:2px 6px;color:#1A3658}
+.vocab-lesson .wordcheck{background:#f3f6fb;border-left:5px solid #1A3658;padding:8px 14px;margin:1rem 0}
+.vocab-lesson ul.ticks{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.3rem 1.2rem}
+.vocab-lesson ul.ticks input{width:24px;height:24px;vertical-align:middle}
+.vocab-lesson .write-line{border-bottom:1px solid #7d8db0;height:2.2rem;margin:0 0 .3rem}
+.vocab-lesson .dys-version{display:none}
+body.mode-dys .vocab-lesson .dys-version{display:block}
+body.mode-dys .vocab-lesson .std-version{display:none}
+.vocab-lesson .dys-task{border:2px solid #1A3658;border-radius:12px;padding:12px 16px;margin:1.2rem 0;line-height:1.8}
+.vocab-lesson .dys-words{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:8px 12px}
+.vocab-lesson .dl-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1.2rem}
+.vocab-lesson .dl-label{font-weight:700;color:#1A3658;margin:.6rem 0 .3rem}
+.vocab-lesson .dl-dys{display:none}
+body.mode-dys .vocab-lesson .dl-dys{display:block}
+body.mode-dys .vocab-lesson .dl-row.dl-dys{display:flex}
+body.mode-dys .vocab-lesson .dl-eleve{display:none}
+.vocab-lesson .answer-key{border:2px dashed #1A3658;border-radius:12px;padding:12px 16px;margin:1.2rem 0}
+.vocab-lesson .gorse-fig{margin:1.25rem 0 1rem}
+.vocab-lesson .gorse-fig img{display:block;width:100%;max-width:36rem;height:auto}
+.vocab-lesson .gorse-fig figcaption{color:#1A3658;margin:.55rem 0 0}
+.vocab-lesson .gorse-steps{list-style:none;padding:0;margin:1.35rem 0 0;display:flex;flex-direction:column;gap:1.15rem}
+.vocab-lesson .gorse-steps li{display:grid;grid-template-columns:2.1rem 1fr;gap:.8rem;align-items:start}
+.vocab-lesson .gorse-steps .n{font-weight:700;font-size:26px;color:#1A3658}
+.vocab-lesson .gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
+.vocab-lesson .compl-block{border-top:3px solid #1A3658;margin-top:1.4rem;padding-top:.4rem}
+.vocab-lesson sup{font-size:18px}

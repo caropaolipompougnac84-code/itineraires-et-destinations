@@ -1,0 +1,38 @@
+
+@font-face{font-family:"OpenDyslexic";src:url("fonts/opendyslexic-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"OpenDyslexic";src:url("fonts/opendyslexic-700.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{--b:#1A3658;--b-deep:#1A3658;--pale:#EEF2F7;--line:#C3CEDC;--ink:#14202e;--soft:#3d4a5c;--f-ui:"Atkinson Hyperlegible","Source Sans 3",Verdana,Arial,sans-serif;--f-t:"EB Garamond",Georgia,serif}
+body{background:#fff;color:var(--ink);font-family:var(--f-ui);font-size:22px;line-height:1.6;margin:0}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.4rem .8rem;z-index:99}
+.stp-head{padding:1rem 0 .4rem}
+.stp-head .kicker{color:var(--b);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:1rem;margin:.4rem 0 .2rem}
+.stp-head h1{font-family:var(--f-t);color:var(--b);font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:.2rem 0 .4rem;font-weight:600}
+.stp-sub,.axe-block{font-size:22px;line-height:1.5;margin:0 0 .9rem;color:var(--ink)}
+.axe-block{border-left:5px solid var(--b);background:var(--pale);padding:.7rem 1rem;border-radius:0 12px 12px 0}
+.modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem}
+.mode-btn,.act-btn{font:inherit;font-size:22px;font-weight:700;border-radius:12px;padding:.55rem 1rem;cursor:pointer;border:2px solid var(--b);background:#fff;color:var(--b);min-height:48px}
+.mode-btn[aria-pressed="true"]{background:var(--b);color:#fff}
+.mode-btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #1A3658;outline-offset:2px}
+.seq-main,.seq-main p,.seq-main li,.seq-main td,.seq-main th{font-size:22px;line-height:1.6}
+.seq-main{max-width:60rem}
+.mode-eleve .prof-only,.mode-dys .prof-only{display:none!important}
+.mode-dys .seq-main,.mode-dys .seq-main p,.mode-dys .seq-main li,.mode-dys .seq-main td,.mode-dys .stp-head{font-family:"OpenDyslexic",Arial,Verdana,sans-serif;letter-spacing:.02em;word-spacing:.08em}
+.mode-dys .seq-main,.mode-dys .seq-main p,.mode-dys .seq-main li{font-size:24px;line-height:1.55}
+.absent-banner{display:none;border:3px dashed var(--b);border-radius:14px;padding:.7rem 1.1rem;background:var(--pale);margin:0 0 1rem}
+.mode-absent .absent-banner{display:block}
+.site-footer{margin-top:2rem}
+/* neutralize older grey pages */
+.seq-main .wrap,body .wrap{max-width:900px}
+.seq-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1rem}
+.seq-nav a{display:inline-block;padding:.4rem .8rem;border:2px solid var(--b);border-radius:999px;text-decoration:none;color:var(--b);background:#fff;font-weight:700;font-size:22px;min-height:44px}
+.seq-nav a.on,.seq-nav a[aria-current="page"]{background:var(--b);color:#fff}
+/* hide legacy public answer / teacher toggles on Through the Lens */
+.toggles .seg:has([data-mode]),.toggles .seg:has([data-ans]),[data-answers-global]{display:none!important}
+@media (max-width:700px){
+  .seq-main,.seq-main p,.seq-main li,.seq-main td,.seq-main th,.stp-sub,.axe-block{font-size:22px}
+}
+figure img, .hero img, .fig img{max-width:100%;height:auto}
+figcaption{font-size:22px;color:var(--soft);font-style:italic}
+
+.eleve-assess-note{border:2px solid var(--b);border-radius:12px;padding:.8rem 1rem;background:var(--pale);margin:1rem 0}
+.mode-prof .eleve-assess-note,.mode-absent .eleve-assess-note{display:none!important}

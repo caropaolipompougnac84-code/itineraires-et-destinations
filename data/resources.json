@@ -2018,7 +2018,7 @@
     {
       "id": "meth-pedagogie-reussite",
       "title": "Méthodologie · Pédagogie de la réussite",
-      "summary": "Repères pour une pédagogie orientée vers la réussite.",
+      "summary": "Repères pour une pédagogie orientée vers la réussite, et la série My Working Day en anglais.",
       "section": "methodologie",
       "subject": "transversal",
       "level": "tous",
@@ -2027,10 +2027,12 @@
       "themes": [
         "examen"
       ],
-      "url": "https://pedagogie-de-la-reussite.netlify.app/",
-      "date": "2026-11-07",
+      "url": "https://itineraires-destinations.fr/my-working-day/",
+      "date": "2026-11-19",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120580171490243&set=a.122119021533490243",
-      "methodGroup": "dissertation"
+      "methodGroup": "dissertation",
+      "image": "my-working-day.jpg",
+      "credit": "William Powell Frith, The Derby Day, 1856 to 1858, oil on canvas, Tate Britain, London. Public domain."
     },
     {
       "id": "meth-trame-batir-annee",
@@ -3366,6 +3368,63 @@
       "date": "2026-11-19",
       "image": "mary-shelley-the-modern-prometheus.jpg",
       "credit": "Portrait of Frankenstein’s creature, opening image of the sequence."
+    },
+    {
+      "id": "lp-anglais-women-at-work",
+      "title": "Anglais · Bac pro · Women at Work",
+      "summary": "Hub de trois séquences d’anglais sur les femmes au travail : Hidden Figures, Same Job, Same Pay? et Call the Midwife.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "bacpro",
+      "levelLabel": "Bac pro B1 to B2 · C1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "citoyennete",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/women-at-work/",
+      "date": "2026-11-19",
+      "image": "women-at-work.jpg",
+      "credit": "Brenda Zlamany, Five Trailblazing Women Scientists at The Rockefeller University, 2021, oil on canvas, The Rockefeller University, New York. © Brenda Zlamany."
+    },
+    {
+      "id": "lp-anglais-call-the-midwife",
+      "title": "Anglais · Bac pro ASSP · Call the Midwife: Women at Work in Post-War London",
+      "summary": "Nurses and midwives in Poplar, from the Blitz to the NHS. English sequence, Bac pro ASSP · Première ST2S.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "bacpro",
+      "levelLabel": "Bac pro ASSP · Première ST2S",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "citoyennete",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/call-the-midwife/",
+      "date": "2026-11-19",
+      "image": "call-the-midwife.jpg",
+      "credit": "Portrait of a nurse, Poplar, East London."
+    },
+    {
+      "id": "lg-anglais-1re-st2s-call-the-midwife",
+      "title": "Anglais · Première ST2S · Call the Midwife: Women at Work in Post-War London",
+      "summary": "Nurses and midwives in Poplar, from the Blitz to the NHS. English sequence, Bac pro ASSP · Première ST2S.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": "1re",
+      "levelLabel": "Première ST2S · Bac pro ASSP",
+      "collection": "lg-anglais",
+      "themes": [
+        "travail",
+        "citoyennete",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/call-the-midwife/",
+      "date": "2026-11-19",
+      "image": "call-the-midwife.jpg",
+      "credit": "Portrait of a nurse, Poplar, East London."
     }
   ]
 }

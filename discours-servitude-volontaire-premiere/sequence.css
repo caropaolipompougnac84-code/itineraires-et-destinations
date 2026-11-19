@@ -360,3 +360,7 @@ body.deplie .sub-absent::before{content:"Élève absent"}
  .spirale-tel .sv-idee{font-size:21px}
  .spirale-tel .sv-in{font-size:19px}
 }
+
+/* Corrigés de la fiche dys : visibles seulement en Version prof. */
+.mode-eleve .sub-dys .corr-wrap,
+.mode-dys .sub-dys .corr-wrap{display:none!important}

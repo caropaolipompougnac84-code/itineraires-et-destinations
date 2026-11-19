@@ -329,3 +329,7 @@ table { max-width: 100%; }
 }
 
 .mode-dys .stp-main{font-family:var(--dys-font,Arial,Verdana,sans-serif)}
+
+/* Corrigés de la fiche dys : visibles seulement en Version prof. */
+.mode-eleve .sub-dys .corr-wrap,
+.mode-dys .sub-dys .corr-wrap{display:none!important}

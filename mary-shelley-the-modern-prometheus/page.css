@@ -54,3 +54,8 @@ blockquote.dictee-modele{margin:1rem 0}
 /* Couleur anglais : bleu marine */
 .spg-en .sv-step{fill:#12243C}
 .spg-en .sv-in{fill:#1A3658}
+
+/* Corrigés des spirales : jamais visibles en Version dys ni en Version élève. Lesson 5 (évaluation) : Version prof uniquement, pas en version élève absent. */
+.mode-dys details.ans,
+.mode-eleve details.ans{display:none!important}
+.mode-absent #lesson-5 .spg-prof{display:none!important}

@@ -71,3 +71,9 @@ a.brand, .kick{color:inherit}
  .spg-segpa .spirale-tel .sv-idee{font-size:24px}
  .spg-segpa .spirale-tel .sv-in{font-size:22px}
 }
+
+/* Corrigés des spirales (« Voir les réponses ») : jamais visibles en Version dys ni en Version élève. */
+.mode-dys details.spg-aide,
+.mode-eleve details.spg-aide,
+.mode-dys details.ans,
+.mode-eleve details.ans{display:none!important}

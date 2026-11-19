@@ -3184,6 +3184,27 @@
       "date": "2026-11-18",
       "image": "fle/le-francais-du-cm2/img/potter-peter-rabbit.jpg",
       "credit": "Beatrix Potter, illustration pour The Tale of Peter Rabbit, 1902. Londres, Frederick Warne & Co. Domaine public."
+    },
+    {
+      "id": "lg-lettres-1re-discours-servitude-volontaire",
+      "title": "Lettres · 1re · Discours de la servitude volontaire, Étienne de La Boétie",
+      "summary": "Séquence de français pour la Première générale et technologique : Étienne de La Boétie, Discours de la servitude volontaire, vers 1548. Objet d’étude : la littérature d’idées du XVIe au XVIIIe siècle, parcours « Défendre et entretenir la liberté ». Huit séances, versions professeur, élève, dys et élève absent, spirale de Gorse, étude de la langue, préparation à l’EAF.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "1re · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature",
+        "citoyennete",
+        "oral",
+        "ecrit",
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/discours-servitude-volontaire-premiere/",
+      "date": "2026-11-19",
+      "image": "discours-servitude-volontaire-premiere.jpg",
+      "credit": "Jacques-Louis David, Le Serment du Jeu de paume, le 20 juin 1789, huile sur toile, musée Carnavalet, Histoire de Paris (P.67). Domaine public (CC0, Paris Musées)."
     }
   ]
 }

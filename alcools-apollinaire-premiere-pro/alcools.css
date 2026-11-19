@@ -1,0 +1,25 @@
+/* Alcools, Apollinaire : poèmes et calligramme (complète sequence.css) */
+.poeme .texte-num{border-left:4px solid #7B1E3A}
+.poeme .texte-num li{display:flex;gap:.6rem;align-items:baseline;line-height:1.5}
+.poeme .texte-num li.strophe{margin-top:1.1rem}
+.poeme .texte-num .num{flex:none;min-width:2em;font-size:.85em;color:#7B1E3A;opacity:.85}
+.poeme .texte-num .v{flex:1;min-width:0;overflow-wrap:anywhere}
+.poeme .source,.blk-texte .source{font-size:.9rem}
+.blk-texte .quote{border-left:4px solid #7B1E3A;margin:.6rem 0;padding:.2rem 0 .2rem 1rem;font-style:italic}
+.fig-calli .cadre{background:#fff}
+.fig-calli img{max-width:520px;width:100%;height:auto;margin:0 auto;display:block}
+.fig-spirale img,.blk-spirale .prof img{max-width:640px;width:100%;height:auto;display:block;margin:0 auto}
+.couv-legende-texte{max-width:46rem;margin:.8rem auto 0;text-align:center}
+.dys-texte{border-left:4px solid #7B1E3A;padding-left:1rem;margin:1rem 0}
+@media (max-width:600px){.poeme .texte-num{padding-left:.6rem}.poeme .texte-num .v[style]{padding-left:1em!important}}
+
+/* Téléphone : les tableaux à deux colonnes passent à la ligne au lieu de défiler */
+@media (max-width:640px){
+  .tscroll table:not(:has(th:nth-child(3))){min-width:0;table-layout:fixed}
+  .tscroll table:not(:has(th:nth-child(3))) td:first-child,.tscroll table:not(:has(th:nth-child(3))) th:first-child{width:42%;font-size:.9em;hyphens:auto;overflow-wrap:normal}
+  .tscroll table:not(:has(th:nth-child(3))) td{overflow-wrap:break-word;word-break:normal;hyphens:auto}
+}
+
+/* En-têtes de tableaux lisibles : fond #7B1E3A, texte blanc */
+.panel table th,.tscroll th,table thead th{background:#7B1E3A!important;color:#fff!important}
+.panel table th *,.tscroll th *{color:#fff!important}

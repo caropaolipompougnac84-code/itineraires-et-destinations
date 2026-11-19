@@ -3308,6 +3308,26 @@
       "date": "2026-11-19",
       "image": "how-us-elections-work.jpg",
       "credit": "John Sartain after George Caleb Bingham, The County Election, 1854, National Gallery of Art, Washington. Public domain (CC0)."
+    },
+    {
+      "id": "lp-lettres-1re-alcools-apollinaire",
+      "hubOrder": 1,
+      "title": "Lettres · Première professionnelle · Alcools, Apollinaire",
+      "summary": "Séquence de français pour la Première bac pro, objet d’étude « Créer, fabriquer : l’invention et l’imaginaire », autour d’Alcools, Guillaume Apollinaire, 1913. Huit séances de 55 minutes, minutées sur 52 minutes, spirale de Gorse, versions professeur, élève, dys et élève absent, étude de la langue par paliers, trois évaluations.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "1re",
+      "levelLabel": "Première professionnelle · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/alcools-apollinaire-premiere-pro/",
+      "date": "2026-11-19",
+      "image": "alcools-apollinaire-premiere-pro.jpg",
+      "credit": "Henri Rousseau, dit le Douanier Rousseau, La Muse inspirant le poète, 1909, huile sur toile, musée Pouchkine, Moscou. Domaine public."
     }
   ]
 }

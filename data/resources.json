@@ -1820,7 +1820,7 @@
         "litterature",
         "oral"
       ],
-      "url": "https://theatre-bac-pro.netlify.app/",
+      "url": "https://itineraires-destinations.fr/lever-de-rideau-entrer-au-theatre/",
       "date": "2026-11-07",
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120778555490243&set=a.122104658121490243",
       "methodGroup": "oral"
@@ -2400,6 +2400,27 @@
       "credit": "John Morgan, The Jury, 1861. Discover Bucks Museum, Aylesbury. Domaine public, Wikimedia Commons.",
       "duration": "10 séances de 52 minutes",
       "materials": "Tableau numérique, fiches élèves, version dys, édition de l'œuvre"
+    },
+    {
+      "id": "lp-lettres-bacpro-lever-de-rideau",
+      "title": "Lettres · Bac pro · Lever de rideau : entrer au théâtre",
+      "summary": "Molière, Yasmina Reza et Jean-Michel Ribes : lire, dire et jouer le théâtre. Onze leçons en onglets, spirale de Gorse, quiz, ateliers d'écriture et de jeu, versions élève, prof, dys et élève absent, dossiers en pdf, Word et LibreOffice.",
+      "section": "lycee-pro",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "Bac pro · lycée professionnel",
+      "collection": "lp-lettres",
+      "themes": [
+        "litterature",
+        "oral",
+        "ecrit"
+      ],
+      "url": "https://itineraires-destinations.fr/lever-de-rideau-entrer-au-theatre/",
+      "date": "2026-11-19",
+      "image": "lever-de-rideau-entrer-au-theatre.jpg",
+      "credit": "Honoré Daumier, Crispin et Scapin, vers 1864, huile sur toile, musée d'Orsay, Paris. Domaine public, Wikimedia Commons.",
+      "duration": "11 leçons",
+      "materials": "Tableau numérique, édition des pièces, version dys"
     },
     {
       "id": "lg-lettres-2de-test-positionnement",

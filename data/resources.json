@@ -3436,6 +3436,25 @@
       "credit": "Brenda Zlamany, Five Trailblazing Women Scientists at The Rockefeller University, 2021, oil on canvas, The Rockefeller University, New York. © Brenda Zlamany."
     },
     {
+      "id": "lp-anglais-same-job-same-pay",
+      "title": "Anglais · Terminale bac pro · Same Job, Same Pay?",
+      "summary": "From Made in Dagenham to the Lionesses. An English sequence for Terminale bac pro on equal pay and women at work.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "bacpro",
+      "levelLabel": "Terminale bac pro",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "citoyennete",
+        "culture"
+      ],
+      "url": "https://itineraires-destinations.fr/same-job-same-pay/",
+      "date": "2026-11-19",
+      "image": "same-job-same-pay.jpg",
+      "credit": "J. Howard Miller, We Can Do It!, 1943, produced by Westinghouse for the War Production Co-ordinating Committee. National Museum of American History, Smithsonian Institution / U.S. National Archives (NARA 535413 / 44-PA-88). Public domain, via Wikimedia Commons."
+    },
+    {
       "id": "lp-anglais-call-the-midwife",
       "title": "Anglais · Bac pro ASSP · Call the Midwife: Women at Work in Post-War London",
       "summary": "Nurses and midwives in Poplar, from the Blitz to the NHS. English sequence, Bac pro ASSP · Première ST2S.",

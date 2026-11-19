@@ -349,3 +349,14 @@ body.deplie .sub-absent::before{content:"Élève absent"}
   .tscroll table:not(:has(th:nth-child(3))) td{overflow-wrap:break-word;word-break:normal;hyphens:auto}
 }
 .md .tscroll th,.tscroll th{background:var(--b);color:#fff}
+
+/* Spirale de Gorse : dessin téléphone aux étiquettes lisibles (à coller une fois dans sequence.css) */
+.fig-spirale .spirale-tel{display:none}
+@media (max-width:640px){
+ .fig-spirale.a-tel{overflow-x:visible}
+ .fig-spirale.a-tel .spirale:not(.spirale-tel){display:none}
+ .fig-spirale.a-tel .spirale-tel{display:block;min-width:0;width:100%;max-width:440px;height:auto;margin:0 auto}
+ .spirale-tel .sv-step{font-size:24px}
+ .spirale-tel .sv-idee{font-size:21px}
+ .spirale-tel .sv-in{font-size:19px}
+}

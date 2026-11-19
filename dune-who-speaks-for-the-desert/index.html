@@ -337,6 +337,22 @@ body.mode-eleve .prof-only{display:none!important}
 body.mode-prof .eleve-gate-note{display:none!important}
 </style>
 
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
 </head>
 <body data-section="lycee-general" class="mode-eleve english-look">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -645,110 +661,195 @@ body.mode-prof .eleve-gate-note{display:none!important}
       <li>A quotation collection used for cross-checking (always verify in a paper edition): <a href="https://en.wikiquote.org/wiki/Dune_(novel)">Wikiquote, Dune</a>.</li>
       <li>For the teacher only, a biography in which Lesson 1 details may be checked: Brian Herbert, <cite>Dreamer of Dune: The Biography of Frank Herbert</cite>, 2003.</li>
     </ul>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="downloads/Eleve-absent-Dune-Who-Speaks-for-the-Desert.pdf">PDF</a> · <a href="downloads/Eleve-absent-Dune-Who-Speaks-for-the-Desert.docx">Word (.docx)</a> · <a href="downloads/Eleve-absent-Dune-Who-Speaks-for-the-Desert.odt">LibreOffice (.odt)</a>.</p>
     <p>Frank Herbert, <cite>Dune</cite>, 1965. The novel remains protected (the author died in 1986): only short quotations, with precise book and chapter references, will be used. Full credits for every image are on the <a href="sources/">sources</a> page.</p>
     <p>Official texts cited on this page: programme de langues vivantes, <a href="https://www.education.gouv.fr/bo/2025/Hebdo22/MENE2504621A">BO n° 22 du 29 mai 2025</a>; présentation sur <a href="https://eduscol.education.gouv.fr/5811/programmes-et-ressources-en-langues-vivantes-voie-gt">Éduscol</a>.</p>
 
     <p style="margin:1.4rem 0 0"><a class="work-link" href="../lycee-general/anglais.html">Back to English, lycée général et technologique</a></p>
   </main>
-  <section class="compl-block" id="eleve-absent"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
-<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
-<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
-<h3>Lesson 1. A Planet Called Dune</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Observe l'image sans légende de la Lesson 1, puis lis les citations Q1 et Q2.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What do you see? Is it a place to live?</li>
-<li>Who is speaking in Q2? Who is « him »?</li>
-<li>Invent three rules of life on Arrakis.</li>
-<li><strong>Étude de la langue</strong> (10 min). Modaux : <em>must, mustn't, have to</em> pour tes trois règles.</li>
-<li><strong>Je produis</strong> (10 min). Enregistre une note vocale de 1 minute ou écris 60 mots : <em>Would you live on Arrakis?</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+  <section id="eleve-absent" class="absent-route" data-version="absent" aria-labelledby="eleve-absent-titre">
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">Dune: Who Speaks for the Desert?</strong> · Première technologique, lycée général et technologique, B1 vers B2 · axe 3 « Art et pouvoir » (axes 5 et 4 en appui)</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 8 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>La spirale de la séquence (Je remarque, Je repère, Je comprends, J’anticipe, puis la pointe) se remplit aussi en travail seul : un tour par étape, comme en classe.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · A Planet Called Dune</span></h3>
+<p class="absent-question" lang="en"><em>What do we notice about a world where water is the measure of everything?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s1/">Lesson 1</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expression écrite">PE</span> « What do you see? » : regarder l’image sans légende, écrire un mot, puis répondre en une phrase : <span lang="en">Is this a place to live?</span> (3 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écoute : la lesson donne le <span lang="en">Listening text</span> lu en classe par l’enseignante. En travail seul, le faire lire deux fois à voix haute par un proche, ou demander l’enregistrement de l’enseignante par l’ENT. Sans lecteur ni enregistrement : lire le texte une seule fois, le cacher, puis répondre de mémoire. Texte de contexte d’environ une minute vingt (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire Q1 et Q2 (les deux épigraphes d’ouverture) et répondre : <span lang="en">Who is speaking? Who is “him”?</span> (7 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> « Guess the world » en version seul : inventer trois règles de vie sur Arrakis à partir de Q2 et les enregistrer (4 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire « Grammar. Modals of obligation and necessity » (<span lang="en">must not, have to, need to</span>) (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Spirale, tour 1, Je remarque : écrire ce qui est remarqué (côté extérieur) et d’où cela vient (côté intérieur). Faire quatre flashcards, dont <span lang="en">scarce</span> et <span lang="en">epigraph</span> (6 min).</li>
+<li><strong>Évaluation diagnostique</strong> (non notée) : répondre aux questions de positionnement de la lesson et l’envoyer à l’enseignante, qui coche A2, B1 ou B2 (2 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
-<h3>Lesson 2. The Spice: One Resource, One System</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Observe la carte des routes des épices et lis le texte « The spice, explained ».</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Who travelled on the spice routes? Who became rich?</li>
-<li>Why is the spice so important in Dune?</li>
-<li>What resource could be the « spice » of our world?</li>
-<li><strong>Étude de la langue</strong> (10 min). <em>because of, so, that is why</em> : trois phrases.</li>
-<li><strong>Je produis</strong> (10 min). En 60 mots : <em>One resource, one system: who controls it?</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Arrakis is a desert planet where water is scarce. The novel opens with the voice of a historian, the Princess Irulan, who already presents Paul as a great man. On Arrakis, people must…</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Who is the voice of the epigraphs that open the chapters?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">The Princess Irulan, a historian of the future.</p></div></div></li>
+<li><p lang="en">Complete: On Arrakis, you ___ waste water.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r2" hidden><p lang="en">must not</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire Q1 et Q2, faire l’exercice de grammaire et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses de l’écoute, les trois règles enregistrées, le premier tour de spirale et la note vocale de 30 secondes <span lang="en">Three things I noticed about Arrakis</span> (devoir).</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · The Spice: One Resource, One System</span></h3>
+<p class="absent-question" lang="en"><em>Who needs the spice, who extracts it, who controls it?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s2/">Lesson 2</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « A historical map, not a map of Arrakis » : observer la carte des routes médiévales des épices et répondre : qui voyageait, qui s’est enrichi ? C’est une carte historique, pas une carte d’Arrakis (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écoute : la lesson donne le <span lang="en">Listening text</span> lu en classe par l’enseignante. En travail seul, le faire lire deux fois à voix haute par un proche, ou demander l’enregistrement de l’enseignante par l’ENT. Sans lecteur ni enregistrement : lire le texte une seule fois, le cacher, puis répondre de mémoire. Texte <span lang="en">The spice, explained</span>, puis le travail du parcours choisi (10 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> <span class="skill-tag" title="Interaction">PI</span> Jeu de rôle à quatre, en version seul : choisir deux rôles (conseiller de l’Empereur, navigateur de la Guilde, gouverneur Harkonnen, Fremen), écrire six répliques entre eux, puis les enregistrer (7 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire « Grammar. Defining relative clauses » (<span lang="en">who, which, that, whose, where</span>) (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire le paragraphe de définition de 40 à 70 mots qui commence par <span lang="en">The spice is a resource which…</span>, puis la spirale, tour 2, Je repère (7 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 2 et 3.</p>
-<h3>Lesson 3. Whose Planet? Empire and the Desert People</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis le dialogue de la Lesson 3 et la citation Q4.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What is the Missionaria Protectiva?</li>
-<li>Who owns Arrakis, according to the Empire? To the Fremen?</li>
-<li>What is your position?</li>
-<li><strong>Étude de la langue</strong> (10 min). Expression de l'opinion : <em>In my view, I would argue that</em>.</li>
-<li><strong>Je produis</strong> (10 min). Écris l'opinion de 60 mots de la Lesson 3.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The spice is a resource which exists only on Arrakis. The Emperor and the Guild need it, the Harkonnens extract it, and the Fremen live where it is found: one resource creates one system of power.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Complete: The Fremen are the people ___ live in the deep desert.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r3" hidden><p lang="en">who (that)</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire l’écoute, écrire le paragraphe de définition.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses de l’écoute, le dialogue, l’exercice de grammaire, le paragraphe et la spirale.</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · Whose Planet? Empire and the Desert People</span></h3>
+<p class="absent-question" lang="en"><em>Who owns Arrakis?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s3/">Lesson 3</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Se tester seul sur les six flashcards des lessons 1 et 2, à voix haute (4 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire à voix haute le dialogue écrit pour la lesson et repérer ce qu’est le couteau et ce qu’il signifie (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « Reading Q4: the Missionaria Protectiva » : lire le texte et les questions (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer les deux images de la foggara (qanat) : comment un peuple du désert capte et partage l’eau (3 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire « Grammar. Concession » (<span lang="en">although, even though, whereas, however</span>) (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> <span class="skill-tag" title="Expression orale en continu">PO</span> Compléter la trace écrite (environ 60 mots), puis enregistrer 45 secondes : <span lang="en">Who owns Arrakis? My view.</span> (9 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : question 2 et l'opinion.</p>
-<h3>Lesson 4. Making a Messiah</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis la litanie contre la peur (Q3) et le texte « How a prophecy works ».</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What is a prophecy?</li>
-<li>How is a legend made?</li>
-<li>Why is it dangerous?</li>
-<li><strong>Étude de la langue</strong> (10 min). Passif : réécris un événement simple en légende (<em>He was seen…</em>, <em>It is said that…</em>).</li>
-<li><strong>Je produis</strong> (10 min). Réécris un événement banal de ta semaine en légende (80 mots).</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The Missionaria Protectiva shows that the religion of Arrakis was partly written by outsiders. This means that… (about 60 words, to complete).</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">What is the Missionaria Protectiva in the novel?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r4" hidden><p lang="en">The Bene Gesserit order that plants protective legends on worlds.</p></div></div></li>
+<li><p lang="en">Join with although: The Fremen are strong. They are used by others.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r5" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r5" hidden><p lang="en">Although the Fremen are strong, they are used by others.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire Q4 et compléter la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses sur Q4, l’exercice de concession, la trace écrite complétée et l’enregistrement de 45 secondes.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · Making a Messiah</span></h3>
+<p class="absent-question" lang="en"><em>How is a legend written, and who writes it?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s4/">Lesson 4</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire la litanie (Q3) : <span lang="en">I must not fear. Fear is the mind-killer.</span> et répondre aux questions de la lesson (7 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écoute : la lesson donne le <span lang="en">Listening text</span> lu en classe par l’enseignante. En travail seul, le faire lire deux fois à voix haute par un proche, ou demander l’enregistrement de l’enseignante par l’ENT. Sans lecteur ni enregistrement : lire le texte une seule fois, le cacher, puis répondre de mémoire. Texte <span lang="en">how a prophecy works</span>, puis le travail du parcours (10 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Conférence de presse en version seul : écrire trois questions de journaliste et les réponses d’un témoin fremen, puis les enregistrer (6 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire « Grammar. The passive, used to build a myth » (<span lang="en">It was written…, He was sent…</span>) (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Compléter la trace écrite et la spirale, tour 3, Je comprends (7 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : question 2 et la réécriture en 40 mots.</p>
-<h3>Lesson 5. Mid-Sequence Assessment</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). L'évaluation intermédiaire se fait à la maison, sans aide, en 45 minutes : compréhension de l'oral (le texte lu par l'enseignante est disponible en audio), compréhension de l'écrit, expression écrite.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Fais les parties A, B et C dans l'ordre.</li>
-<li>Note l'heure de début et de fin.</li>
-<li>Envoie ton travail sur l'ENT.</li>
-<li><strong>Étude de la langue</strong> (10 min). Relis tes trois traces écrites avant de commencer.</li>
-<li><strong>Je produis</strong> (10 min). Enregistre ta présentation de 2 minutes (partie D).</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite pour cette lesson. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A messiah is made, not born. In Dune, the legend was planted by… (to complete with the Bene Gesserit and the Missionaria Protectiva).</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Rewrite in the passive: The Bene Gesserit planted the legend.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r6" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r6" hidden><p lang="en">The legend was planted by the Bene Gesserit.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire Q3, faire l’écoute et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses de l’écoute, les questions et réponses de la conférence de presse, l’exercice et la spirale. Préparer l’oral de deux minutes de la lesson 5.</p>
+</article>
+<article class="absent-lesson" id="absent-l5">
+<h3><span lang="en">Lesson 5 · Mid-Sequence Assessment</span></h3>
+<p class="absent-question" lang="en"><em>If the Fremen follow the hero, what will they gain and what will they lose?</em></p>
+<p class="absent-meta">Durée : 45 min, sans aide · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s5/">Lesson 5</a></p>
+<ol class="absent-etapes">
+<li><strong>Évaluation intermédiaire</strong> (accessible dans cette version) : la faire en une fois, sans le cahier ni les flashcards, en notant l’heure de début et de fin.</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Partie A, compréhension de l’oral (10 min) : demander l’enregistrement à l’enseignante, ou le faire lire deux fois par un proche.</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Partie B, compréhension de l’écrit (15 min) : rappel de Q4 et Q7.</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Partie C, expression écrite (14 min) : <span lang="en">Is Paul the voice of the Fremen, or are the Fremen the voice of Paul?</span> B1 : 80 à 100 mots ; B2 : 120 à 150 mots.</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Partie D, oral de deux minutes à enregistrer : <span lang="en">Who writes the legend of Paul? Use one quotation.</span> L’enseignante envoie ensuite une question de relance par l’ENT ; y répondre par un deuxième enregistrement.</li>
+<li>Après le retour de la copie : remplir la <span lang="en">Self-correction grid</span> et écrire la version améliorée de la partie C.</li>
 </ol>
-<p><em>Version courte (15 min)</em> : parties A et C seulement.</p>
-<h3>Lesson 6. The Ecologist's Warning</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Observe les images (Banshee Hill, la Namibie vue du ciel) et lis Q5, Q6 et Q9.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What does a moving dune show?</li>
-<li>What is Kynes's dream?</li>
-<li>Should the planet be made green, even if the Fremen way of life disappears?</li>
-<li><strong>Étude de la langue</strong> (10 min). Conditionnel : <em>If the planet became green, …</em></li>
-<li><strong>Je produis</strong> (10 min). Écris la note de l'écologiste (60 mots).</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 6. »</li>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire seulement les parties B et C ; les parties A et D se font un autre jour.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les quatre parties, avec l’heure de début et de fin, puis la grille d’autocorrection.</p>
+</article>
+<article class="absent-lesson" id="absent-l6">
+<h3><span lang="en">Lesson 6 · The Ecologist’s Warning</span></h3>
+<p class="absent-question" lang="en"><em>What does the scientist foresee, and what does he fail to foresee?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s6/">Lesson 6</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer les trois images dans l’ordre : une vraie dune en Oregon, puis les deux autres (4 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écoute : la lesson donne le <span lang="en">Listening text</span> lu en classe par l’enseignante. En travail seul, le faire lire deux fois à voix haute par un proche, ou demander l’enregistrement de l’enseignante par l’ENT. Sans lecteur ni enregistrement : lire le texte une seule fois, le cacher, puis répondre de mémoire. Texte <span lang="en">Kynes’s dream</span> (Liet-Kynes, planétologiste impérial) (9 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire Q5, Q6 et Q9 et répondre aux questions (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Le dilemme en version seul : <span lang="en">Should the planet be made green, even if the Fremen way of life disappears?</span> Enregistrer une position avec deux arguments (4 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire « Grammar. Hypothesis and prediction » (premier et second conditionnel, <span lang="en">might, could, will, would</span>) (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire la note de l’écologiste, 50 à 80 mots : <span lang="en">As an ecologist, I warn that…</span>, puis la spirale, tour 4, J’anticipe (5 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : question 3 et la trace écrite.</p>
-<h3>Lesson 7. The Hero Trap</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis Q7 et Q8.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What pairs of opposites do you find in Q7?</li>
-<li>What is the threat in Q8?</li>
-<li>Why can a hero be a trap?</li>
-<li><strong>Étude de la langue</strong> (10 min). Concession : <em>although, even though</em>.</li>
-<li><strong>Je produis</strong> (10 min). Écris le brouillon de ta déclaration pour le conseil (100 mots).</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 7. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Ecologist's note, 50 to 80 words: As an ecologist, I warn that… (with one first conditional and one second conditional).</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Q5: “No more terrible disaster could befall your people than for them to fall into the hands of a ___.”</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l6-r7" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l6-r7" hidden><p lang="en">Hero</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire l’écoute et écrire la note de l’écologiste.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses, l’enregistrement du dilemme, l’exercice, la note et l’enregistrement d’une minute <span lang="en">A warning from Kynes to the Fremen</span> (devoir).</p>
+</article>
+<article class="absent-lesson" id="absent-l7">
+<h3><span lang="en">Lesson 7 · The Hero Trap</span></h3>
+<p class="absent-question" lang="en"><em>Is the hero the voice of the people, or the voice that replaces them?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s7/">Lesson 7</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Q7 : le faire lire deux fois à voix haute par un proche (ou l’écouter dans l’enregistrement de l’enseignante), sans regarder le texte, et noter chaque paire de contraires (5 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « Reading Q8: the threat » : <span lang="en">The power to destroy a thing is the absolute control over it.</span> Répondre aux questions (7 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Présenter sa propre spirale, du tour 1 à la pointe, en une minute enregistrée. La pointe est une phrase qui répond à la question de la séquence (6 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire « Grammar. Comparison » (<span lang="en">as … as, more … than, the most, less than</span>) (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Commencer le brouillon de la déclaration écrite finale (lesson 8) et répéter le <span lang="en">briefing</span> de 3 à 4 minutes avec un minuteur (12 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : question 3 et 50 mots de brouillon.</p>
-<h3>Lesson 8. The Council of the Deep Desert</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Relis ta spirale et ton brouillon.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Which role do you choose?</li>
-<li>What is your main argument?</li>
-<li>What question would you ask another member of the council?</li>
-<li><strong>Étude de la langue</strong> (10 min). Relecture : temps, connecteurs, modaux.</li>
-<li><strong>Je produis</strong> (10 min). Écris la déclaration finale (150 mots) et enregistre ton intervention de 3 minutes. C'est l'évaluation finale.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie ta phrase la plus forte. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Copy the tip of the spiral (one sentence that answers the question of the sequence), then sign it.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Find two pairs of opposites in Q7.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l7-r8" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l7-r8" hidden><p lang="en">warrior and mystic; ogre and saint; the fox and the innocent; less than a god, more than a man.</p></div></div></li>
+<li><p lang="en">Compare: Paul / powerful / the Emperor</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l7-r9" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l7-r9" hidden><p lang="en">Paul is more powerful than the Emperor (at the end of the novel).</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire l’écoute de Q7 et écrire la pointe de la spirale.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les paires de contraires, la présentation de la spirale enregistrée et le brouillon de la déclaration.</p>
+</article>
+<article class="absent-lesson" id="absent-l8">
+<h3><span lang="en">Lesson 8 · The Council of the Deep Desert</span></h3>
+<p class="absent-question" lang="en"><em>Is the hero the voice of a people or the instrument of those who wrote his legend?</em></p>
+<p class="absent-meta">Durée : 40 min · Documents : <a href="https://itineraires-destinations.fr/dune-who-speaks-for-the-desert/s8/">Lesson 8</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire « The situation » et choisir un rôle de conseiller (4 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> <strong>Évaluation finale, oral</strong> : enregistrer le <span lang="en">briefing</span> de 3 à 4 minutes devant le conseil des anciens, avec deux citations. Le modèle guidé B1 en sept cases peut servir (15 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Répondre à voix haute, par un deuxième enregistrement, aux deux questions de l’enseignante envoyées par l’ENT, comme le ferait le conseil (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> <strong>Évaluation finale, écrit</strong> : terminer et envoyer la déclaration écrite (16 min).</li>
+<li>Après le retour de la copie : remplir la <span lang="en">Self-correction grid</span> (Ce que j’ai fait, ce que j’ai manqué, ma version améliorée).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : la déclaration en 80 mots.</p></section>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : enregistrer le <span lang="en">briefing</span> ; la déclaration écrite peut se finir un autre jour.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : le <span lang="en">briefing</span> enregistré, les réponses aux questions et la déclaration écrite.</p>
+</article>
+<article class="absent-lesson absent-final" id="absent-final">
+<h3>Grilles et évaluation au format de l’épreuve</h3>
+<p>Les grilles sur 20 des lessons 5 et 8 s’appliquent à cette version et sont visibles dans les lessons.</p>
+<p>L’évaluation au format de l’évaluation ponctuelle (1 h 30, compréhension de l’écrit et expression écrite) est envoyée par l’enseignante : la faire sans document, en une fois ou en deux temps de 45 minutes.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+</section>
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script>
 <section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
 <p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
 <p>Axes : axe 5 (années impaires), axe 4 (années paires), axe 3 (années impaires). Voie technologique : l'évaluation ponctuelle porte sur les mêmes axes.</p>

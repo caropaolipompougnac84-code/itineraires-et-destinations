@@ -106,6 +106,22 @@ body.mode-eleve .prof-only{display:none!important}
 body.mode-prof .eleve-gate-note{display:none!important}
 </style>
 
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
 </head>
 <body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
@@ -255,7 +271,7 @@ body.mode-prof .eleve-gate-note{display:none!important}
 </figure>
 
 </main>
-<section class="compl-block" id="eleve-absent"><h2>2. Activités langagières à signaler (marques à ajouter)</h2>
+<section class="compl-block absent-route" id="eleve-absent" data-version="absent"><h2>2. Activités langagières à signaler (marques à ajouter)</h2>
 <div class='tw'><table>
 <thead><tr><th>Lesson</th><th>Étape existante</th><th>Marque à ajouter</th></tr></thead>
 <tbody>
@@ -280,95 +296,185 @@ body.mode-prof .eleve-gate-note{display:none!important}
 <li>Lesson 4 : <em>comes from, is named after, was founded by</em> (premier contact avec le passif).</li>
 <li>Lesson 6 : récapitulatif comparatifs et superlatifs, avec <em>not … but …</em> (<em>The capital of Australia is not Sydney but Canberra</em>).</li>
 </ul>
-<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
-<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
-<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
-<h3>Lesson 1. Why geography matters</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Ouvre l'onglet Lesson 1. Lis le texte « A land of contrasts » et l'histoire d'Inès et de la carte.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Name two contrasts in the geography of the USA.</li>
-<li>Why is the capital often a small city?</li>
-<li>What does Inès understand about the map at the end?</li>
-<li><strong>Étude de la langue</strong> (10 min). Écris trois phrases au présent simple sur les États-Unis avec <em>has</em>, <em>is</em> et <em>borders</em>.</li>
-<li><strong>Je produis</strong> (10 min). En 50 mots : <em>Why does geography matter when you travel?</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie les deux phrases de la trace écrite de la Lesson 1 et la phrase d'Inès sur la carte. »</li>
+
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">The Capital Trap: Is the Biggest City Always the Capital?</strong> · Première, lycée général et technologique, B1 vers B1+ · axe 6 « Les aires anglophones américaines »</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 7 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · Why geography matters</span></h3>
+<p class="absent-question" lang="en"><em>Is the biggest city always the capital?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/the-capital-trap/s1/">Lesson 1</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expression écrite">PE</span> Avant de lire, écrire en deux phrases la réponse personnelle à la question <span lang="en">Is the biggest city always the capital?</span>, d’abord pour la France, puis pour les États-Unis (3 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire « A land of contrasts », « Water first, cities next » et « Why the capital is often a small city » (10 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire l’histoire <span lang="en">Inès and the map</span> et noter ce qu’Inès a compris de travers (7 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Répondre par écrit aux cinq questions de la lesson, en phrases complètes (10 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> <span class="skill-tag" title="Expression orale en continu">PO</span> Apprendre les huit mots de « Expanding your vocabulary », puis enregistrer 30 secondes : <span lang="en">Inès thought that… In fact…</span> (5 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
-<h3>Lesson 2. Discovering the map</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Ouvre la carte politique de la Lesson 2. Repère les océans, les pays voisins, l'Alaska et Hawaï.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Which countries border the USA?</li>
-<li>Which two oceans does the USA touch?</li>
-<li>Why are Alaska and Hawaii special on the map?</li>
-<li><strong>Étude de la langue</strong> (10 min). Prépositions de lieu : complète cinq phrases avec <em>in, north of, between, on the coast of, borders</em>.</li>
-<li><strong>Je produis</strong> (10 min). Décris la position des États-Unis en cinq phrases, comme pour un correspondant qui ne connaît pas la carte.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « The USA is a country in North America. It has 50 states. It borders Canada and Mexico. Its capital is Washington, D.C. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The first big American cities grew near water: people and goods travelled by boat.</p>
+<p lang="en">When Americans chose the capital of a state, they often chose a place near the centre, easy to reach, not the biggest city.</p>
+<p lang="en">Inès learnt that a map is not a list of names: the biggest city is not always the capital.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Why did New York City become the biggest city in the country?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">The Erie Canal (1825) linked New York to the Great Lakes, so goods from the Midwest could travel by boat to New York City.</p></div></div></li>
+<li><p lang="en">Why did the first big cities grow near water?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r2" hidden><p lang="en">People and goods travelled by boat, so cities grew where boats could stop: on the coast, on a river or on a lake.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire l’histoire d’Inès, répondre aux deux premières questions et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses aux cinq questions, l’enregistrement et la liste de cinq villes américaines (devoir).</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · Discovering the map</span></h3>
+<p class="absent-question" lang="en"><em>How can I read the map of the United States as a story of water?</em></p>
+<p class="absent-meta">Durée : 30 min · Documents : <a href="https://itineraires-destinations.fr/the-capital-trap/s2/">Lesson 2</a> et la carte du National Atlas</p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer la carte du National Atlas : pays voisins, océans, Grands Lacs, Alaska et Hawaï (5 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> « Photo or map », en version seul : pour chaque photographie de la lesson, dire à voix haute où elle se trouve, en phrase complète (<span lang="en">It’s in the north-east, near…</span>), puis vérifier sur la carte (8 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Faire « Expanding your vocabulary » : les verbes et la différence entre <span lang="en">in the north of</span> et <span lang="en">to the north of</span> (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « Map search » : trouver sur la carte deux océans et un golfe, deux pays voisins, trois fleuves dont le Mississippi, et écrire une phrase pour chacun (9 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
-<h3>Lesson 3. Big cities vs capitals</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Regarde les deux paires de photos de la Lesson 3. Devine laquelle est la capitale avant de lire la réponse.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Which city is the capital of California? Of Texas?</li>
-<li>Which city is bigger in each pair?</li>
-<li>What is surprising?</li>
-<li><strong>Étude de la langue</strong> (10 min). Comparatifs et superlatifs : fais les exercices 1 et 2 de la Lesson 3, puis vérifie avec le corrigé.</li>
-<li><strong>Je produis</strong> (10 min). Écris trois phrases sur le modèle <em>X is bigger than Y, but Y is the capital of Z.</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Los Angeles is bigger than Sacramento, but Sacramento is the capital of California. Houston is bigger than Austin, but Austin is the capital of Texas. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The United States lies between two oceans, the Atlantic and the Pacific, with Canada to the north and Mexico to the south.</p>
+<p lang="en">Rivers and lakes, like the Mississippi and the Great Lakes, help to explain where people settled. A city in the north of a state is inside it; Canada is to the north of the United States.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Which gulf is to the south of the United States?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r3" hidden><p lang="en">The Gulf of Mexico.</p></div></div></li>
+<li><p lang="en">Complete: Canada is ___ the north of the United States.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r4" hidden><p lang="en">to</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire « Map search » et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les phrases de « Map search » et l’enregistrement de « Photo or map ».</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · Big cities vs capitals</span></h3>
+<p class="absent-question" lang="en"><em>Los Angeles is bigger, but is it the capital?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/the-capital-trap/s3/">Lesson 3</a> et les cartes A de la page <a href="https://itineraires-destinations.fr/the-capital-trap/cards/">Cards</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « Which one is the capital? » : pour chaque paire de photos, choisir avant de vérifier, puis noter le score (5 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Memory en version seul : imprimer ou recopier les cartes A (état et capitale), les retourner, retrouver les paires et compter les essais. Recommencer le lendemain pour battre le score (8 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> « Comparatives and superlatives » : lire la règle, puis faire les exercices 1 et 2 (<span lang="en">USA records</span>) (12 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> « Phonology » : écouter et répéter Illinois, Arkansas, Connecticut, Des Moines, Houston, Albany, puis s’enregistrer (5 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : exercice 1, puis la trace écrite.</p>
-<h3>Lesson 4. Map detective</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis le mystère de Juneau (trois photos) et la partie sur l'origine des noms de lieux.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>How can you go to Juneau?</li>
-<li>Why is it surprising for a capital?</li>
-<li>Give one place name from French, one from Spanish, one from a Native American language.</li>
-<li><strong>Étude de la langue</strong> (10 min). Écris trois phrases avec <em>comes from</em> ou <em>is named after</em> (exemple : <em>Detroit comes from French</em>).</li>
-<li><strong>Je produis</strong> (10 min). Choisis un nom de ville américaine et explique son origine en 40 mots.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Juneau, the capital of Alaska, cannot be reached by road from the rest of the country. You go there by plane or by boat. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Los Angeles is bigger than Sacramento, but Sacramento is the capital of California.</p>
+<p lang="en">Houston is bigger than Austin, but Austin is the capital of Texas.</p>
+<p lang="en">Short adjectives: bigger, the biggest. Long adjectives: more difficult, the most difficult.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Complete: Juneau is ___ (difficult) capital to reach.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r5" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r5" hidden><p lang="en">the most difficult</p></div></div></li>
+<li><p lang="en">Is Salt Lake City a trap?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r6" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r6" hidden><p lang="en">No: it is both the capital and the biggest city of Utah.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire l’exercice 1 et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les exercices 1 et 2, cinq phrases sur le modèle <span lang="en">The capital of X is Y.</span> et l’enregistrement de prononciation.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · Map detective</span></h3>
+<p class="absent-question" lang="en"><em>What story does each city tell?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/the-capital-trap/s4/">Lesson 4</a> et les cartes D</p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « The Juneau mystery » : observer les trois photographies et répondre aux questions de chaque étape (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « Map detective » : répondre par écrit aux questions des cartes D, en phrases complètes (<span lang="en">It’s located in the north-east, next to Canada.</span>) (10 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> « Where do the names come from? » : classer les noms en trois groupes (français, espagnol, amérindien), puis lire les sens cachés (10 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Lire à voix haute et enregistrer deux <span lang="en">surprise cards</span> (5 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2, puis la trace écrite.</p>
-<h3>Lesson 5. Guess the city</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Regarde la courte vidéo de la Lesson 5 (deux fois) et les cartes C.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Note three things you see or hear in the video.</li>
-<li>Which city is it? How do you know?</li>
-<li>What is the most surprising detail?</li>
-<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice 3 : compare deux villes des cartes, avec un superlatif.</li>
-<li><strong>Je produis</strong> (10 min). Écris une devinette en trois indices sur une ville américaine (<em>It is in the south. It is bigger than… It is the …est…</em>).</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie tes trois phrases comparatives, dont une au superlatif. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Juneau, the capital of Alaska, cannot be reached by road from the rest of the country. People go there by plane or by boat.</p>
+<p lang="en">Many American place names come from French, Spanish or Native American languages.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Which river is the border between Texas and Mexico?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r7" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r7" hidden><p lang="en">The Rio Grande.</p></div></div></li>
+<li><p lang="en">Is Baton Rouge a French, Spanish or Native American name?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r8" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r8" hidden><p lang="en">French (“red stick”).</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire « The Juneau mystery » et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses de « Map detective », le classement des noms et une phrase sur Juneau (devoir).</p>
+</article>
+<article class="absent-lesson" id="absent-l5">
+<h3><span lang="en">Lesson 5 · Guess the city</span></h3>
+<p class="absent-question" lang="en"><em>How can I describe a city so that someone can guess it?</em></p>
+<p class="absent-meta">Durée : 40 min · Documents : <a href="https://itineraires-destinations.fr/the-capital-trap/s5/">Lesson 5</a> et les <span lang="en">city ID cards</span></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « Zoom game » : regarder le détail recadré, écrire une hypothèse, puis la photographie entière (Golden Gate et les autres) (5 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Choisir une vidéo en anglais de 2 à 4 minutes parmi les liens de la page Cards, la regarder deux fois et répondre : <span lang="en">Which city is it? How do you know? Is this city a capital?</span> (12 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire deux choses vues dans la vidéo (3 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> <span class="skill-tag" title="Interaction">PI</span> « Guess the city » en version seul : choisir une <span lang="en">city ID card</span>, écrire cinq indices du plus difficile au plus facile, puis les enregistrer. Un proche ou un camarade peut deviner par message (10 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Exercice 3 : comparer deux villes en trois phrases (<span lang="en">Miami is hotter than…</span>) (6 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : la vidéo et la question 2, puis la devinette.</p>
-<h3>Lesson 6. The Capital Trap game</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Relis tes traces écrites des Lessons 3 à 5.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What is the capital of Australia? Of Canada? Of Brazil?</li>
-<li>What is the capital of New York State? Of Florida? Of Illinois?</li>
-<li>Which answer surprised you the most? Why?</li>
-<li><strong>Étude de la langue</strong> (10 min). Prononciation : lis à voix haute <em>Sacramento, Tallahassee, Albany, Ottawa, Canberra</em> en marquant la syllabe accentuée (souligne-la).</li>
-<li><strong>Je produis</strong> (10 min). Crée cinq cartes du jeu sur le modèle <em>The capital of X is Y, not Z.</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « The capital of X is Y, not Z. (trois exemples, les plus surprenants) »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">To describe a city, I give its location, its size, one landmark and one fact: It's on the west coast. It's famous for the Golden Gate Bridge.</p>
+<p lang="en">To compare two cities: Miami is hotter than Chicago. New York is the biggest city in the United States.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Correct: “Chicago is more big than Miami.”</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r9" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r9" hidden><p lang="en">Chicago is bigger than Miami.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire le « Zoom game » et l’exercice 3.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses de la vidéo, les cinq indices enregistrés et les trois phrases de comparaison.</p>
+</article>
+<article class="absent-lesson" id="absent-l6">
+<h3><span lang="en">Lesson 6 · The Capital Trap game</span></h3>
+<p class="absent-question" lang="en"><em>Can I avoid the trap?</em></p>
+<p class="absent-meta">Durée : 30 min · Documents : <a href="https://itineraires-destinations.fr/the-capital-trap/s6/">Lesson 6</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « Recap » : écrire en une phrase ce qu’est le piège de la capitale, avec Houston et Austin (3 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Le jeu en version seul : lire les règles, puis choisir quinze états sur la carte (dont Texas, California, Illinois, New York, Missouri, Alaska) et écrire la capitale de chacun sans regarder. Compter 2 points par bonne capitale, 0 si c’est la plus grande ville (piège) (12 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> S’enregistrer en prononçant les quinze paires (<span lang="en">The capital of Texas is Austin.</span>) (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> « Bilan » : <span lang="en">What was the most surprising capital? Why?</span> en trois phrases (10 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : les cinq cartes seulement.</p>
-<h3>Lesson 7. Planning a road trip</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Regarde le panneau Route 66 et lis le voyage de Lucas (Lesson 7).</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Where did Lucas start?</li>
-<li>Why are there two Springfields on the trip?</li>
-<li>Which capital did he visit?</li>
-<li><strong>Étude de la langue</strong> (10 min). Prétérit : relève six verbes au prétérit dans le texte de Lucas et classe-les selon la prononciation de -ed (/t/, /d/, /ɪd/).</li>
-<li><strong>Je produis</strong> (10 min). Écris ton road trip au prétérit (80 mots), avec au moins trois villes et une capitale.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « First, we started in Chicago. Then we drove … (ton itinéraire, trois villes, une capitale) »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Write three personal pairs, for example: The capital of Texas is Austin, not Houston. The capital of New York State is Albany, not New York City.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">What is the capital of Illinois?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l6-r10" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l6-r10" hidden><p lang="en">Springfield (not Chicago).</p></div></div></li>
+<li><p lang="en">What is the capital of Missouri?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l6-r11" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l6-r11" hidden><p lang="en">Jefferson City.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la liste de dix états et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la liste avec le score, l’enregistrement et le bilan.</p>
+</article>
+<article class="absent-lesson" id="absent-l7">
+<h3><span lang="en">Lesson 7 · Planning a road trip</span></h3>
+<p class="absent-question" lang="en"><em>Can I tell a trip across the United States in the past?</em></p>
+<p class="absent-meta">Durée : 40 min · Documents : <a href="https://itineraires-destinations.fr/the-capital-trap/s7/">Lesson 7</a> et les cartes E</p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « What’s this? » : observer le panneau de la Route 66 et répondre aux trois questions (4 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> « The Route 66 trap » : suivre la route sur la carte et trouver le piège de Springfield (6 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> « The preterite » : lire <span lang="en">Lucas’s trip</span>, souligner les verbes, faire l’exercice 4, puis classer les terminaisons en -ed selon leur prononciation (12 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Tirer une carte E, tracer l’itinéraire, choisir trois photographies de la séquence et raconter le voyage au prétérit (10 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer une étape du voyage en deux ou trois phrases (3 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : la question 1 et cinq phrases du road trip.</p>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A short itinerary in the preterite, with at least three cities and one capital: First, we started in Chicago. Then we drove south along the Mississippi. Finally, we arrived in New Orleans.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Springfield, Missouri: is it a capital?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l7-r12" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l7-r12" hidden><p lang="en">No. The capital of Missouri is Jefferson City. Springfield, Illinois, is a capital.</p></div></div></li>
+<li><p lang="en">How is -ed pronounced in “started”?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l7-r13" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l7-r13" hidden><p lang="en">/ɪd/</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire l’exercice 4 et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : l’exercice 4, le récit du voyage et l’enregistrement.</p>
+</article>
+<article class="absent-lesson absent-final" id="absent-final">
+<h3>Évaluations de fin de séquence</h3>
+<p>Écrit : la carte postale de 80 à 100 mots (devoir de la lesson 7). Oral : enregistrement de 2 minutes avec la liste de contrôle de la fiche élève (quatre villes, deux capitales, quatre mots de géographie, une comparaison, une prononciation soignée).</p>
+<p>L’évaluation écrite prévue pour l’élève absent ou hospitalisé (en deux fois 45 minutes, sans aide, heure de début et de fin notées) se trouve sur la <a href="https://itineraires-destinations.fr/the-capital-trap/">page de la séquence</a>, juste après ce parcours.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+
 <h3>Évaluation pour l'élève absent ou hospitalisé</h3>
-<p>L'évaluation écrite ci-dessous peut se faire à la maison ou à l'hôpital, en deux fois 45 minutes, sans aide. L'élève note l'heure de début et de fin.</p></section>
+<p>L'évaluation écrite ci-dessous peut se faire à la maison ou à l'hôpital, en deux fois 45 minutes, sans aide. L'élève note l'heure de début et de fin.</p>
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script></section>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="/the-capital-trap/downloads/Eleve-absent-The-Capital-Trap.pdf">PDF</a> · <a href="/the-capital-trap/downloads/Eleve-absent-The-Capital-Trap.docx">Word (.docx)</a> · <a href="/the-capital-trap/downloads/Eleve-absent-The-Capital-Trap.odt">LibreOffice (.odt)</a>.</p>
+
 <section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
 <p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
 <p>Axes : axe 6, présent les années paires comme impaires dans l'évaluation ponctuelle.</p>

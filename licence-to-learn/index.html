@@ -107,6 +107,22 @@ body.mode-eleve .prof-only{display:none!important}
 body.mode-prof .eleve-gate-note{display:none!important}
 </style>
 
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
 </head>
 <body class="mode-eleve english-look">
 <a class="skip" href="#main">Skip to content</a>
@@ -304,7 +320,7 @@ body.mode-prof .eleve-gate-note{display:none!important}
 </section>
 
 </main>
-<section class="compl-block" id="eleve-absent"><h2>2. Activités langagières à signaler</h2>
+<section class="compl-block absent-route" id="eleve-absent" data-version="absent"><h2>2. Activités langagières à signaler</h2>
 <div class='tw'><table>
 <thead><tr><th>Lesson</th><th>Étape existante</th><th>Marque à ajouter</th></tr></thead>
 <tbody>
@@ -319,83 +335,165 @@ body.mode-prof .eleve-gate-note{display:none!important}
 <tr><td>6</td><td>A is candidate, B is recruiter ; swap roles</td><td>PI, PO</td></tr>
 </tbody>
 </table></div>
-<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
-<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
-<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
-<h3>Lesson 1. Who will be the next James Bond?</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis le Document A et les profils des candidats (Lesson 1).</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What is the news in Document A?</li>
-<li>Which candidate has the most experience?</li>
-<li>Which qualities does a Bond actor need, according to the documents?</li>
-<li><strong>Étude de la langue</strong> (10 min). Fais l'atelier de grammaire de la Lesson 1 et vérifie avec le corrigé.</li>
-<li><strong>Je produis</strong> (10 min). En 60 mots : <em>I would choose … because … The evidence shows that …</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 1. »</li>
+
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">Licence to Learn</strong> · Première, lycée général et technologique, B1 vers B1+ · axe 3 « Art et pouvoir » (axe 4 « Innovations scientifiques et responsabilité » en appui)</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 6 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · Who will be the next James Bond?</span></h3>
+<p class="absent-question" lang="en"><em>What is known, and what remains uncertain?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/licence-to-learn/s1/">Lesson 1</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire le <span lang="en">Student document A. The casting desk</span> et remplir la <span lang="en">Worksheet 1A. News verification grid</span> : <span lang="en">confirmed, reported, opinion</span> ou <span lang="en">not established</span> (10 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire les trois profils du <span lang="en">Student document B</span> (Jack Lowden, Callum Turner, Josh O’Connor) et remplir la <span lang="en">Worksheet 1B. Candidate grid</span> (8 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire les exercices 1 à 4 : prétérit, prétérit ou present perfect, <span lang="en">might / could</span>, comparer avec prudence (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer l’intervention de 30 à 40 secondes : <span lang="en">I would choose… In…, the actor played… This experience could be useful because…</span> (4 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Devoir : 70 à 90 mots pour recommander un acteur (une phrase au prétérit, une comparaison, une phrase avec <span lang="en">might</span> ou <span lang="en">could</span>), et trois flashcards : <span lang="en">successor, screen test, rumour</span> (5 min de plan).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 3, puis la trace écrite.</p>
-<h3>Lesson 2. Skyfall: listening to a hero under pressure</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Écoute l'extrait de la Lesson 2 trois fois. Remplis la grille d'écoute.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Choose the best summary of the scene.</li>
-<li>Is Bond fully in control? Give one detail.</li>
-<li>Is the danger personal, institutional or both?</li>
-<li><strong>Étude de la langue</strong> (10 min). Fais les exercices de grammaire de la Lesson 2.</li>
-<li><strong>Je produis</strong> (10 min). Enregistre-toi 1 minute (ou écris 60 mots) : <em>What happens in the scene, and how does Bond react?</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 2. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A casting rumour is not an official announcement. Lowden, Turner and O'Connor have been linked to the role in media reporting.</p>
+<p lang="en">I would choose … because … This actor might … However, we cannot conclude that …</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Rewrite with might: Perhaps Lowden will play Bond.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">Lowden might play Bond.</p></div></div></li>
+<li><p lang="en">Choose: Turner played / has played a rower in The Boys in the Boat in 2023.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r2" hidden><p lang="en">played (finished past, with a date)</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la <span lang="en">Worksheet 1A</span> et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les deux grilles, les exercices, l’enregistrement et le texte de 70 à 90 mots.</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · Skyfall: listening to a hero under pressure</span></h3>
+<p class="absent-question" lang="en"><em>What does the trailer tell us, and what does it hide?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/licence-to-learn/s2/">Lesson 2</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expression écrite">PE</span> Remplir la colonne <span lang="en">My prediction</span> de la <span lang="en">Prediction grid</span> avant l’écoute (3 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Regarder la bande-annonce officielle de <span lang="en">Skyfall</span> (Sony Pictures, 2 min 33, lien de la lesson). Première écoute : choisir le meilleur résumé. Deuxième écoute : la grille <span lang="en">retrieve meaning</span>, en notes. Troisième écoute : marquer chaque réponse H (entendu), V (vu) ou I (déduit). Sans vidéo, travailler avec la grille corrigée (12 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Compléter la <span lang="en">Post-listening worksheet</span> (5 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire les exercices 1 à 3 : présent continu, du présent au prétérit, <span lang="en">because, although, however</span> (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer la restitution de 40 secondes : identifier le document, expliquer la situation, dire ce qui reste incertain (4 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : la grille d'écoute seulement.</p>
-<h3>Lesson 3. MI5 or MI6: understand before you compare</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis les documents de la Lesson 3 et surligne les informations clés.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What does MI5 do?</li>
-<li>What does MI6 do?</li>
-<li>Which statement in the lesson is misleading, and why?</li>
-<li><strong>Étude de la langue</strong> (10 min). Comparatifs et nuances : écris trois phrases <em>MI5 …, whereas MI6 …</em>.</li>
-<li><strong>Je produis</strong> (10 min). Complète la grille institutionnelle de la Lesson 3.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 3. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The official trailer presents Bond's return during a crisis. M and Bond have a relationship marked by tension and trust.</p>
+<p lang="en">The trailer creates tension through dialogue, images and music. We must distinguish what we hear from what we see or infer.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Choose the best summary: routine day, serious crisis, ordinary job interview?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r3" hidden><p lang="en">Bond and MI6 face a serious crisis.</p></div></div></li>
+<li><p lang="en">Rewrite in the past simple: Bond returns. M reacts.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r4" hidden><p lang="en">Bond returned. M reacted.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la première et la deuxième écoute, puis recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les grilles d’écoute, la fiche d’après-écoute, l’enregistrement et le compte rendu de six phrases (devoir).</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · MI5 or MI6: understand before you compare</span></h3>
+<p class="absent-question" lang="en"><em>What is the difference between the two services?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/licence-to-learn/s3/">Lesson 3</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire les <span lang="en">Student documents</span> A (<span lang="en">Two connected services</span>) et B (<span lang="en">Officer or agent?</span>), puis remplir la <span lang="en">Worksheet 3A. Institutional grid</span> (10 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Corriger les affirmations de la <span lang="en">Worksheet 3B</span> (5 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire les exercices 1 à 4 : présent simple, questions, <span lang="en">whereas</span>, définition avec <span lang="en">who</span> (10 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> <span class="skill-tag" title="Interaction">PI</span> En version seul : enregistrer l’explication de MI5 en trois phrases (rôle A), puis écrire la question et la correction du rôle B et les enregistrer aussi (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Devoir : quatre questions et réponses pour un quiz, dont une qui commence par <span lang="en">What does…?</span> (5 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
-<h3>Lesson 4. A good Bond, a good employee?</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis les deux panneaux de la Lesson 4.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What is the difference between the two panels?</li>
-<li>Give one fact and one inference.</li>
-<li>Is a good spy a good employee? Give one reason.</li>
-<li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de grammaire de la Lesson 4.</li>
-<li><strong>Je produis</strong> (10 min). Écris trois phrases nuancées : <em>It could be argued that… However…</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 4. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">MI5 protects UK national security. MI6 collects intelligence overseas. Their missions differ, but their work can cross borders.</p>
+<p lang="en">An MI5 officer is an employee. An agent provides information but is not an MI5 employee.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Correct: “An MI5 agent is an employee.”</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r5" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r5" hidden><p lang="en">An agent provides information but is not an MI5 employee; officers are employees.</p></div></div></li>
+<li><p lang="en">Join with whereas: MI5 focuses on UK national security. MI6 focuses on foreign intelligence.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r6" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r6" hidden><p lang="en">MI5 focuses on UK national security, whereas MI6 focuses on foreign intelligence.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la <span lang="en">Worksheet 3A</span> et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les deux fiches, les exercices, l’enregistrement et le quiz.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · A good Bond, a good employee?</span></h3>
+<p class="absent-question" lang="en"><em>Are screen appeal and professional suitability the same thing?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/licence-to-learn/s4/">Lesson 4</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire les <span lang="en">Student documents</span> A et B, puis faire la <span lang="en">Worksheet 4A. Which panel?</span> (<span lang="en">casting, professional recruitment</span> ou <span lang="en">both</span>) (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Remplir la <span lang="en">Worksheet 4B. Claim and evidence</span> (6 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire les exercices 1 à 4 : comparatifs, <span lang="en">too / enough</span>, nuancer avec <span lang="en">may, some, not necessarily</span>, <span lang="en">because / although</span> (10 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer une réponse de 40 secondes : <span lang="en">Should the qualities used to choose the next Bond also be used to recruit an intelligence officer?</span> (4 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Devoir : 80 à 100 mots, <span lang="en">What can Bond show us, and what might Bond hide?</span> (une comparaison, une affirmation nuancée, une référence à un document) (7 min de plan).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : question 3 et la trace écrite.</p>
-<h3>Lesson 5. The responsible officer's code</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis les règles de la Lesson 5.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Which rule is the most important for you?</li>
-<li>Which rule protects the public?</li>
-<li>Which rule could you use in your own future job?</li>
-<li><strong>Étude de la langue</strong> (10 min). Modaux de l'obligation : <em>must, have to, mustn't, don't have to</em>, exercices de la Lesson 5.</li>
-<li><strong>Je produis</strong> (10 min). Écris ton propre « Spy Code » en cinq règles.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie la trace écrite de la Lesson 5. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Casting and recruitment have different aims. A convincing performance does not necessarily prove professional suitability.</p>
+<p lang="en">Official careers documents provide information, but they also aim to attract applicants. A careful argument uses evidence and avoids absolute claims.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Qualify: Screen heroes are good employees.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r7" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r7" hidden><p lang="en">Screen heroes are not necessarily good employees.</p></div></div></li>
+<li><p lang="en">Complete: This statement is ___ general to be reliable.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r8" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r8" hidden><p lang="en">too</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la <span lang="en">Worksheet 4B</span> et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les fiches, les exercices, l’enregistrement et le texte de 80 à 100 mots.</p>
+</article>
+<article class="absent-lesson" id="absent-l5">
+<h3><span lang="en">Lesson 5 · The responsible officer’s code</span></h3>
+<p class="absent-question" lang="en"><em>What must, mustn’t and don’t have to mean at work?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/licence-to-learn/s5/">Lesson 5</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire le <span lang="en">Student document A</span> (règles fictives) et la <span lang="en">Grammar reference</span>, puis faire la <span lang="en">Worksheet 5A. Meaning first</span> (8 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire la <span lang="en">Worksheet 5B</span> : exercices 1 à 3 (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Lire le <span lang="en">Student document B. The unsupported report</span> et remplir la <span lang="en">Worksheet 5C. Resolve the scenario</span> (6 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> <span lang="en">Worksheet 5D</span> : écrire cinq règles expliquées (deux obligations, deux interdictions, une absence d’obligation) (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer une règle, son sens et sa raison, puis transférer la structure à un lieu de travail connu (4 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : le Spy Code en trois règles.</p>
-<h3>Lesson 6. The interview: evidence, not just adjectives</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis le modèle d'entretien de la Lesson 6.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Which adjectives does the candidate use?</li>
-<li>Which evidence does the candidate give for each adjective?</li>
-<li>What makes the answer convincing?</li>
-<li><strong>Étude de la langue</strong> (10 min). Révision : prétérit et present perfect pour parler de son expérience.</li>
-<li><strong>Je produis</strong> (10 min). Écris tes réponses à trois questions de recruteur, chacune avec une preuve. Si possible, enregistre-les.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Recopie tes trois cartes mots clés. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Must / have to: it is necessary (You must check sources). Mustn't: it is forbidden (You mustn't invent evidence). Don't have to: it is not necessary (You don't have to wear a suit).</p>
+<p lang="en">An officer must check sources because decisions depend on reliable information.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Correct: “He doesn’t has to travel.”</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r9" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r9" hidden><p lang="en">He doesn’t have to travel.</p></div></div></li>
+<li><p lang="en">Keep the meaning: It is forbidden to invent evidence. You…</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r10" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r10" hidden><p lang="en">You mustn’t invent evidence.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la <span lang="en">Worksheet 5A</span> et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les fiches 5A à 5D, l’enregistrement et la carte d’entretien préparée pour la lesson 6 (devoir).</p>
+</article>
+<article class="absent-lesson" id="absent-l6">
+<h3><span lang="en">Lesson 6 · The interview: evidence, not just adjectives</span></h3>
+<p class="absent-question" lang="en"><em>How can I support a quality with an example?</em></p>
+<p class="absent-meta">Durée : 40 min · Documents : <a href="https://itineraires-destinations.fr/licence-to-learn/s6/">Lesson 6</a> et la page <a href="https://itineraires-destinations.fr/licence-to-learn/assessment/">Assessment</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire l’offre fictive (<span lang="en">Student document A</span>) et la meilleure réponse (<span lang="en">Student document B</span>) (6 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire les exercices 1 à 3 : construire des questions, corriger une réponse, demander une clarification (8 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Remplir la <span lang="en">Candidate worksheet</span> (8 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> <strong>Évaluation sommative, oral</strong> : entretien d’embauche à distance. L’enseignante (ou un adulte qui lit les questions de la <span lang="en">Recruiter worksheet</span>) pose au moins cinq questions par appel ou par messages vocaux ; enregistrer les réponses. Sans interlocuteur : enregistrer les réponses aux cinq questions, une par une, puis une demande de clarification (10 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Remplir la <span lang="en">Peer-feedback grid</span> pour soi-même, puis le devoir : 80 à 100 mots, <span lang="en">How did my interview improve?</span> (8 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : une seule réponse avec sa preuve.</p>
-<h3>Évaluation pour l'élève absent ou hospitalisé</h3>
-<p>L'entretien final se remplace par un enregistrement audio de 3 minutes (réponses aux trois questions de la Lesson 6) ou par un écrit de 150 mots.</p></section>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">I chose … because … I supported the quality … with the example … I used … correctly. My next target is …</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Correct: “I would like join MI6.”</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l6-r11" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l6-r11" hidden><p lang="en">I would like to join MI6.</p></div></div></li>
+<li><p lang="en">Build the question: your / are / what / qualities?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l6-r12" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l6-r12" hidden><p lang="en">What are your qualities?</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : remplir la <span lang="en">Candidate worksheet</span> ; l’entretien se fait un autre jour.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les exercices, la <span lang="en">Candidate worksheet</span>, l’enregistrement de l’entretien, la grille et le texte de 80 à 100 mots.</p>
+</article>
+<article class="absent-lesson absent-final" id="absent-final">
+<h3>Grille et évaluation au format de l’épreuve</h3>
+<p>La grille de l’oral de la lesson 6 et de la page <a href="https://itineraires-destinations.fr/licence-to-learn/assessment/">Assessment</a> s’applique à cette version.</p>
+<p>L’évaluation au format de l’évaluation ponctuelle (1 h 30, compréhension de l’écrit et expression écrite) est envoyée par l’enseignante : la faire sans document, en une fois ou en deux temps de 45 minutes.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script></section>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="/licence-to-learn/downloads/Eleve-absent-Licence-to-Learn.pdf">PDF</a> · <a href="/licence-to-learn/downloads/Eleve-absent-Licence-to-Learn.docx">Word (.docx)</a> · <a href="/licence-to-learn/downloads/Eleve-absent-Licence-to-Learn.odt">LibreOffice (.odt)</a>.</p>
+
 <section class="compl-block prof-only" id="entrainement-examen"><h2>Évaluation au format de l'évaluation ponctuelle de Première (version prof)</h2>
 <p>Rappel du format de l'évaluation ponctuelle de Première (note de service du 3 juillet 2026, NOR MENE2618195N, à partir du bac 2027) : écrit de 1 h 30 ; compréhension de l'écrit sur un ou deux documents (2 300 à 4 000 signes au total) sur 10 points ; expression écrite en anglais (une ou deux questions liées au thème) sur 10 points. Niveaux : B1-B2 en LVA, A2-B1 en LVB. Pour les élèves scolarisés (contrôle continu), ce format sert de modèle d'entraînement et d'évaluation de fin de séquence ; il peut être tenu en deux lessons (CE puis EE) ou en une plage de 1 h 30.</p>
 <p>Axes : axes 3 et 4, présents tous deux dans l'évaluation ponctuelle (axe 3 les années impaires, axe 4 les années paires).</p>

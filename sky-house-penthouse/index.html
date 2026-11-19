@@ -74,6 +74,22 @@ ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
 body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
 body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 </style>
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
 </head>
 <body class="english-look mode-eleve" data-section="lycee-pro">
 <a class="site-skip" href="#main">Aller au contenu</a>
@@ -270,24 +286,144 @@ items('#g',[['Erik ____ (present) the penthouse.','presented'],['If I ____ (have
 function wc(){const n=$('#prod').value.trim().split(/\s+/).filter(Boolean).length;$('#wc').textContent=n+' words'+(n>=120&&n<=150?', well done':'')}
 </script>
 </main>
-<section class="compl-block compl-eval" id="eleve-absent-audit"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
-<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
-<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
-<h3>Lesson 1. Discovery</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Regarde le tableau de Hassam et lis l'introduction.</li><li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes : What can you see in the painting? What is Billionaires' Row? What is the Sky House?</li><li><strong>Étude de la langue</strong> (10 min). Apprends huit mots de l'introduction et écris deux phrases sur le tableau.</li><li><strong>Je produis</strong> (10 min). Note three things that strike you in the video (si tu peux l'ouvrir) or in the introduction.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 1.</li></ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
-<h3>Lesson 2. Vocabulary</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Lis l'article sur les matériaux.</li><li><strong>Je comprends</strong> (10 min). Questions 1, 2 et 3 de la Lesson 2.</li><li><strong>Étude de la langue</strong> (10 min). Liste de dix matériaux, avec un avantage pour trois d'entre eux.</li><li><strong>Je produis</strong> (10 min). Décris une cuisine en 60 mots, avec trois matériaux.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 2.</li></ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
-<h3>Lesson 3. Units</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Lis le tableau des unités.</li><li><strong>Je comprends</strong> (10 min). Fais l'exercice 1.</li><li><strong>Étude de la langue</strong> (10 min). Fais l'exercice 2, puis convertis 1,382 feet en mètres.</li><li><strong>Je produis</strong> (10 min). Écris quatre phrases : ta taille en pieds et en pouces ; la hauteur de ta porte ; une température ; une phrase pour un client.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 3.</li></ol>
-<p><em>Version courte (15 min)</em> : le tableau et l'exercice 1.</p>
-<h3>Lesson 4. Grammar</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Lis les trois modèles de la trace écrite.</li><li><strong>Je comprends</strong> (10 min). Relève, dans l'introduction ou l'article, une phrase au passé ou un fait.</li><li><strong>Étude de la langue</strong> (10 min). Fais l'exercice de grammaire.</li><li><strong>Je produis</strong> (10 min). Write five sentences about your dream kitchen, with one conditional and one modal.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace écrite de la Lesson 4.</li></ol>
-<p><em>Version courte (15 min)</em> : l'exercice de grammaire et la trace écrite.</p>
-<h3>Lesson 5. Production</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Relis ta consigne : 120 à 150 mots, une mesure, un matériau, un conditionnel ou un modal.</li><li><strong>Je comprends</strong> (10 min). Fais un plan en quatre points.</li><li><strong>Étude de la langue</strong> (10 min). Prépare tes trois structures.</li><li><strong>Je produis</strong> (10 min). Écris le texte (tu peux le finir plus tard, jusqu'à 150 mots).</li><li><strong>Ma trace écrite</strong> (5 min). Recopie le recap.</li></ol>
-<p><em>Version courte (15 min)</em> : le plan et un paragraphe de 60 mots.</p></section>
+<section id="eleve-absent" class="absent-route" data-version="absent" aria-labelledby="eleve-absent-titre">
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">Sky House Penthouse</strong> · Première baccalauréat professionnel, A2 vers B1 · contexte de la vie professionnelle (immobilier, aménagement, matériaux) et de la vie quotidienne (logement)</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 5 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · Discovery</span></h3>
+<p class="absent-question" lang="en"><em>What makes a home a luxury home, and who can live in the sky above Central Park?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/sky-house-penthouse/#compl-lesson-1">Lesson 1</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer le tableau de Childe Hassam, <span lang="en">The Hovel and the Skyscraper</span> (1904), et lire l’introduction (4 min).</li>
+<li>Spirale de Gorse sur le tableau de Hassam : quatre tours (Je remarque, Je repère, Je comprends, J’anticipe), puis la pointe (Je trouve le sens), sur la fiche spirale de la lesson (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Regarder deux ou trois extraits de la vidéo <span lang="en">Erik Conover visits the 150 million dollar Sky House</span> (lien de la lesson). Sans connexion, demander deux extraits à l’enseignante, ou lire l’introduction à la place et l’indiquer sur la copie. Noter trois choses qui frappent, puis faire le <span lang="en">quick quiz</span> (12 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer 30 secondes : présenter une chose vue et réagir (<span lang="en">I was struck by… I would / I wouldn’t…</span>) (4 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire trois phrases sur la visite : un fait, une impression, une question (7 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Childe Hassam painted a small hut in Central Park facing a skyscraper (1904). Today, the towers of Billionaires' Row sell apartments for tens of millions of dollars.</p>
+<p lang="en">The Sky House is a penthouse on the 127th and 128th floors of Central Park Tower, listed at 150 million dollars.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">On which floors is the Sky House?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">On the 127th and 128th floors of Central Park Tower.</p></div></div></li>
+<li><p lang="en">What does the title The Hovel and the Skyscraper show?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r2" hidden><p lang="en">A contrast: a small hut and a tall tower in the same place, two ways of living.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : observer le tableau, regarder un extrait et écrire les trois phrases.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les trois notes et le quiz, la spirale, l’enregistrement et les trois phrases.</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · Vocabulary</span></h3>
+<p class="absent-question" lang="en"><em>Which materials make a kitchen a luxury kitchen?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/sky-house-penthouse/#compl-lesson-2">Lesson 2</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Dire à voix haute trois matériaux vus ou devinés dans la vidéo (2 min).</li>
+<li>Spirale de Gorse sur l’article <span lang="en">What Materials Are Used in High-End Kitchens?</span> : quatre tours (Je remarque, Je repère, Je comprends, J’anticipe), puis la pointe (Je trouve le sens), sur la fiche spirale de la lesson (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire l’article et répondre aux questions de compréhension (10 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> <span class="skill-tag" title="Expression orale en continu">PO</span> <span lang="en">Expanding your vocabulary</span> : dire et répéter <span lang="en">marble, granite, quartzite, quartz, porcelain, oak, walnut, brass, copper, stainless steel</span>, puis s’enregistrer (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Décrire la cuisine de la Sky House en 60 mots, avec trois matériaux (10 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Natural stones: marble is refined but more delicate; granite and quartzite are stronger and more durable.</p>
+<p lang="en">Other materials: quartz, porcelain, oak, walnut, brass, copper, stainless steel.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Which natural stones are mentioned in the article?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r3" hidden><p lang="en">Marble, granite and quartzite.</p></div></div></li>
+<li><p lang="en">Which stone is refined but more delicate?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r4" hidden><p lang="en">Marble.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire l’article, répondre à la question 1 et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les réponses, la spirale, l’enregistrement et la description de 60 mots.</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · Units</span></h3>
+<p class="absent-question" lang="en"><em>How do I give a measurement to a client in feet and in metres?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/sky-house-penthouse/#compl-lesson-3">Lesson 3</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire le tableau des unités (longueur, poids, volume, température) (4 min).</li>
+<li>Spirale de Gorse sur la phrase <span lang="en">The Sky House is 1,382 feet above street level.</span> : quatre tours (Je remarque, Je repère, Je comprends, J’anticipe), puis la pointe (Je trouve le sens), sur la fiche spirale de la lesson (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Réécouter un passage de la vidéo <span lang="en">Erik Conover visits the 150 million dollar Sky House</span> (lien de la lesson). Sans connexion, demander deux extraits à l’enseignante, ou lire l’introduction à la place et l’indiquer sur la copie : relever une mesure dite à l’oral et la convertir (6 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Exercices 1 (anglo-saxon vers métrique), 2 (métrique vers anglo-saxon) et 3 (dans la vidéo) (12 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer trois mesures dites à un client, en pieds puis en mètres (5 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">1 inch = 2.54 cm; 1 foot = 30.48 cm; 1 pound = 0.454 kg. °C = (°F minus 32) divided by 1.8.</p>
+<p lang="en">The Sky House is 1,382 feet (about 421 metres) above street level.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">2 feet = ? cm</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r5" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r5" hidden><p lang="en">61 cm (60.96).</p></div></div></li>
+<li><p lang="en">68 °F = ? °C</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r6" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r6" hidden><p lang="en">20 °C.</p></div></div></li>
+<li><p lang="en">1,382 feet ≈ ? m</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r7" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r7" hidden><p lang="en">about 421 m.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le tableau, faire l’exercice 1 et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les trois exercices, la spirale et l’enregistrement.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · Grammar</span></h3>
+<p class="absent-question" lang="en"><em>How do I talk about the visit, a dream and a possibility?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/sky-house-penthouse/#compl-lesson-4">Lesson 4</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Relire les trois modèles : prétérit, conditionnel, modal (3 min).</li>
+<li>Spirale de Gorse sur la phrase <span lang="en">If I had the money, I would buy it.</span> : quatre tours (Je remarque, Je repère, Je comprends, J’anticipe), puis la pointe (Je trouve le sens), sur la fiche spirale de la lesson (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écouter trois phrases de la visite (ou les faire lire par un proche) et relever un passé, un conditionnel, un modal (6 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Faire l’exercice <span lang="en">Complete with the right form</span>, puis se corriger (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> <span class="skill-tag" title="Expression écrite">PE</span> Cinq phrases, écrites puis enregistrées : ce qu’Erik a présenté, ce qui serait acheté, ce qui pourrait être changé (10 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Past simple: Erik presented the penthouse. Conditional: If I had the money, I would buy it. Modal of possibility: We could rearrange the bathroom.</p>
+<p lang="en">The conditional expresses a dream, not a contract; could opens a possibility.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Erik ____ (present) the penthouse.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r8" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r8" hidden><p lang="en">presented</p></div></div></li>
+<li><p lang="en">If I ____ (have) the money, I ____ (buy) it.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r9" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r9" hidden><p lang="en">had / would buy</p></div></div></li>
+<li><p lang="en">We ____ rearrange the bathroom. (modal of possibility)</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r10" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r10" hidden><p lang="en">could</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire l’exercice et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : l’exercice, la spirale et les cinq phrases enregistrées.</p>
+</article>
+<article class="absent-lesson" id="absent-l5">
+<h3><span lang="en">Lesson 5 · Production</span></h3>
+<p class="absent-question" lang="en"><em>Can I describe the penthouse I would like to buy?</em></p>
+<p class="absent-meta">Durée : 40 min · Documents : <a href="https://itineraires-destinations.fr/sky-house-penthouse/#compl-lesson-5">Lesson 5</a></p>
+<ol class="absent-etapes">
+<li>Spirale de Gorse sur le plan de la production (ce qui sera dit, un chiffre, un matériau, un rêve, une limite) : quatre tours (Je remarque, Je repère, Je comprends, J’anticipe), puis la pointe (Je trouve le sens), sur la fiche spirale de la lesson (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer le plan en une minute : lieu, une mesure, un matériau, une phrase au conditionnel (4 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire 120 à 150 mots (compteur de mots de la page) : une dimension, un matériau, un conditionnel ou un modal (22 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Envoyer le texte à l’enseignante, qui pose deux questions d’acheteur par l’ENT ; y répondre à l’écrit ou par message vocal (6 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Recap: Billionaires' Row; materials; conversions; past simple, conditional and modals.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">What must the 120 to 150 words include?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r11" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r11" hidden><p lang="en">One dimension, one material and one conditional or modal.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : enregistrer le plan d’une minute ; l’écrit se fait un autre jour.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, l’enregistrement, le texte et les réponses aux questions.</p>
+</article>
+<article class="absent-lesson absent-final" id="absent-final">
+<h3>Évaluation sommative</h3>
+<p>L’évaluation finale (accessible dans cette version) se fait sans aide, en notant l’heure de début et de fin : partie 1, trois questions sur la vidéo ou l’article ; partie 2, grammaire et unités ; partie 3, <span lang="en">Describe the penthouse you would like to buy</span>. Puis l’autoévaluation de la page.</p>
+<p>Pour la compréhension de l’oral, demander l’enregistrement à l’enseignante si la vidéo ne s’ouvre pas.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Si une PFMP est manquée ou décalée, l’équipe de la section indique ce qui sera rattrapé ; les tâches professionnelles de ce parcours peuvent s’appuyer sur le métier préparé.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+</section>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="downloads/Eleve-absent-Sky-House-Penthouse.pdf">PDF</a> · <a href="downloads/Eleve-absent-Sky-House-Penthouse.docx">Word (.docx)</a> · <a href="downloads/Eleve-absent-Sky-House-Penthouse.odt">LibreOffice (.odt)</a>.</p>
+
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script>
 <section class="compl-block compl-eval" id="evaluation-ponctuelle"><h2>Évaluation au format de l'évaluation ponctuelle (version prof)</h2>
 <p>À insérer uniquement en Version prof. Entraînement au CCF du baccalauréat professionnel, ou à l'épreuve ponctuelle pour les candidats concernés. Grille nationale (BO n° 47 du 16 décembre 2021, annexe 4).</p>
 <h3>Situation A, en une lesson de 52 minutes</h3>

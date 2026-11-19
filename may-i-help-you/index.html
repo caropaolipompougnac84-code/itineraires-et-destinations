@@ -100,6 +100,22 @@ ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
 body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
 body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 </style>
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
 </head>
 <body class="english-look mode-eleve" data-section="lycee-pro">
 <a class="site-skip" href="#main">Aller au contenu</a>
@@ -338,24 +354,136 @@ render();
 <div class="compl-block"><p>Homework : Déposer la vidéo sur l'ENT si ce n'est pas fait. Remplir l'autoévaluation. Apprendre une phrase à corriger pour le prochain oral.</p><p>Trace écrite : la check-list du parcours, recopiée (accueillir sans notes ; dix mots du magasin ; Sorry, could you repeat? ; relire le mail avec la grille ; selon le niveau, trois questions ouvertes, une objection justifiée, une reformulation).</p></div>
 <div class="compl-block prof-only"><h3>Sortie de secours, version prof</h3><p>Sortie de secours : si le tournage déborde, les derniers binômes passent au début de la lesson suivante ; l'autoévaluation se termine à la maison.</p></div>
 </section>
-<section class="compl-block compl-eval" id="eleve-absent-audit"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
-<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
-<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
-<h3>Lesson 1</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Regarde l'illustration et une photo de vitrine.</li><li><strong>Je comprends</strong> (10 min). What can you see? What is sold? Who is the customer?</li><li><strong>Étude de la langue</strong> (10 min). There is / There are, ou comparatifs selon le niveau. Huit mots du magasin.</li><li><strong>Je produis</strong> (10 min). Carte mentale ou comparaison écrite de 60 mots.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace de la Lesson 1.</li></ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
-<h3>Lesson 2</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Lis le Dialogue 1 de ton parcours.</li><li><strong>Je comprends</strong> (10 min). Écoute Going Shopping ou lis le dialogue deux fois. Quelles formules d'accueil entends-tu ?</li><li><strong>Étude de la langue</strong> (10 min). Recopie six formules.</li><li><strong>Je produis</strong> (10 min). Enregistre le dialogue, ou écris-le en changeant le produit.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace de la Lesson 2.</li></ol>
-<p><em>Version courte (15 min)</em> : le dialogue et trois formules.</p>
-<h3>Lesson 3</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Lis le Dialogue 2 de ton parcours.</li><li><strong>Je comprends</strong> (10 min). Quel est le produit, le prix, l'objection ?</li><li><strong>Étude de la langue</strong> (10 min). Comparatifs ou formules de conseil.</li><li><strong>Je produis</strong> (10 min). Fiche produit ou argumentaire de ton niveau.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace de la Lesson 3.</li></ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 3.</p>
-<h3>Lesson 4</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Lis le Dialogue 3 de ton parcours.</li><li><strong>Je comprends</strong> (10 min). What is the problem? What solution is offered?</li><li><strong>Étude de la langue</strong> (10 min). Formules d'excuse et de solution.</li><li><strong>Je produis</strong> (10 min). Écris le mail de réclamation de ton niveau (tu peux le finir plus tard).</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la trace de la Lesson 4.</li></ol>
-<p><em>Version courte (15 min)</em> : le dialogue et deux formules.</p>
-<h3>Lesson 5</h3>
-<ol><li><strong>Je découvre</strong> (5 min). Relis la tâche finale de ton parcours.</li><li><strong>Je comprends</strong> (10 min). Écris le plan de ta scène (accueil, produit, obstacle, issue).</li><li><strong>Étude de la langue</strong> (10 min). Relis tes traces écrites.</li><li><strong>Je produis</strong> (10 min). Enregistre ta scène, ou écris le dialogue complet si tu ne peux pas filmer.</li><li><strong>Ma trace écrite</strong> (5 min). Recopie la check-list.</li></ol>
-<p><em>Version courte (15 min)</em> : le plan et dix lignes de dialogue.</p></section>
+<section id="eleve-absent" class="absent-route" data-version="absent" aria-labelledby="eleve-absent-titre">
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">May I help you?</strong> · Première baccalauréat professionnel, métiers du commerce et de la vente, B1 et B1+ (parcours B2 pour aller plus loin) · contexte de la vie professionnelle (accueil, conseil, vente)</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 5 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>Choisir le parcours de la page (B1 ou B1+) avec l’enseignante, et garder le même pour les cinq lessons.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · Welcome to the shop</span></h3>
+<p class="absent-question" lang="en"><em>What does a shop window say about a brand?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/may-i-help-you/#compl-lesson-1">Lesson 1</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer l’illustration et les photos de vitrines (Londres, New York) (4 min).</li>
+<li>Spirale de Gorse sur l’illustration ou une vitrine : quatre tours, puis la pointe, sur la fiche spirale de la lesson (7 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire les objectifs du parcours : B1, <span lang="en">There is / There are</span> ; B1+, comparer deux magasins (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer la description d’une vitrine (B1, 45 secondes) ou la mini présentation d’une minute qui compare deux magasins (B1+) (6 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Carte mentale légendée du magasin idéal (B1) ou notes de comparaison avec <span lang="en">I prefer… because…</span> (B1+) (10 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A shop window shows the products and the image of the brand. There is a display of… There are… In the window, on the left…</p>
+<p lang="en">To compare two shops: This shop is bigger / more modern than… I prefer… because…</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Complete: There ___ three bags in the window.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">are</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : observer les vitrines et écrire cinq phrases avec <span lang="en">There is / There are</span>.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, l’enregistrement et la carte mentale ou les notes.</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · Greeting a customer and finding out what customers need</span></h3>
+<p class="absent-question" lang="en"><em>How do I welcome a customer and find out what the customer needs?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/may-i-help-you/#compl-lesson-2">Lesson 2</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire les dialogues du parcours (formules d’accueil et de découverte du besoin) (4 min).</li>
+<li>Spirale de Gorse sur le Dialogue 1 du parcours : quatre tours, puis la pointe, sur la fiche spirale de la lesson (7 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écoute courte de la lesson (<span lang="en">Going Shopping</span> ou British Council, <span lang="en">At the shop</span>) : relever les formules d’accueil, de besoin ou de reformulation (8 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Jeu de rôle en version seul : jouer le vendeur et le client. Écrire les répliques, puis les enregistrer en changeant de voix ; ou, si un proche peut donner la réplique en anglais, enregistrer la scène à deux (Dialogue 1, puis une variante avec un autre client) (10 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire six formules apprises (B1) ou une fiche de questions ouvertes (B1+) (6 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Greeting: Good morning! Can I help you? / Just let me know if you need anything.</p>
+<p lang="en">Finding the need (open questions): What are you looking for today? What does she like? What's your budget?</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">The customer says: “I’m just looking, thanks.” What can the seller answer?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r2" hidden><p lang="en">No problem. Just let me know if you need anything.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le Dialogue 1, l’enregistrer et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les formules relevées, le jeu de rôle enregistré et la fiche écrite.</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · Describing a product and advising</span></h3>
+<p class="absent-question" lang="en"><em>How do I present a product and answer “It’s too expensive”?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/may-i-help-you/#compl-lesson-3">Lesson 3</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Lexique de la taille, de la couleur, de la matière et du prix ; <span lang="en">Expanding your vocabulary</span> du parcours (4 min).</li>
+<li>Spirale de Gorse sur le Dialogue 2 du parcours : quatre tours, puis la pointe, sur la fiche spirale de la lesson (7 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écoute de la lesson (British Council, <span lang="en">Buying new shoes</span> ou <span lang="en">Shopping for clothes</span>) : noter taille, couleur, prix (8 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Jeu de rôle en version seul : jouer le vendeur et le client. Écrire les répliques, puis les enregistrer en changeant de voix ; ou, si un proche peut donner la réplique en anglais, enregistrer la scène à deux : présenter un produit du catalogue (B1) ou conseiller et répondre à <span lang="en">It’s too expensive</span> (B1+) (8 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> <span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Fiche produit (B1) ou argumentaire de cinq phrases (B1+), avec trois comparatifs (<span lang="en">cheaper, bigger, the most popular</span>) (8 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Describing a product: size, colour, material, price. Do you have this T-shirt in a medium? We have it in blue and in black. It's twenty-five euros.</p>
+<p lang="en">Price objection: I understand. It's more expensive, but it lasts longer. This one is cheaper.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Answer the objection “It’s a bit expensive.” with a comparative.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r3" hidden><p lang="en">I understand. It’s more expensive, but it lasts longer. / This one is cheaper.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le Dialogue 2 et écrire la fiche produit.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les notes d’écoute, le jeu de rôle enregistré et la fiche ou l’argumentaire.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · Paying, returns and complaints</span></h3>
+<p class="absent-question" lang="en"><em>How do I deal with a complaint politely?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/may-i-help-you/#compl-lesson-4">Lesson 4</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Lexique : <span lang="en">receipt, refund, exchange, credit note</span> (4 min).</li>
+<li>Spirale de Gorse sur le Dialogue 3 ou la politique de retour : quatre tours, puis la pointe, sur la fiche spirale de la lesson (7 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Écoute de la lesson (British Council, <span lang="en">Returning goods to a shop</span>, ou Ellii, <span lang="en">Returning an Item</span>), ou le Dialogue 3 lu deux fois par un proche (8 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Jeu de rôle en version seul : jouer le vendeur et le client. Écrire les répliques, puis les enregistrer en changeant de voix ; ou, si un proche peut donner la réplique en anglais, enregistrer la scène à deux : réclamation au magasin (B1) ou problème raconté au passé (B1+) (8 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Mini dialogue écrit (B1) ou réclamation écrite (B1+) (8 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A complaint: I bought this yesterday but it doesn't work. The seller: I'm very sorry. Do you have your receipt? I can give you a refund or an exchange.</p>
+<p lang="en">Key words: receipt (ticket de caisse), refund (remboursement), exchange (échange), credit note (avoir).</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">What is a credit note?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r4" hidden><p lang="en">A document that lets the customer buy something else later for the same amount (un avoir).</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le Dialogue 3 et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les notes d’écoute, le jeu de rôle enregistré et le texte écrit.</p>
+</article>
+<article class="absent-lesson" id="absent-l5">
+<h3><span lang="en">Lesson 5 · Final task</span></h3>
+<p class="absent-question" lang="en"><em>Can I play a complete sale, from the welcome to the solution?</em></p>
+<p class="absent-meta">Durée : 40 min · Documents : <a href="https://itineraires-destinations.fr/may-i-help-you/#compl-lesson-5">Lesson 5</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Relire la tâche finale du parcours et la <span lang="en">check-list</span> (4 min).</li>
+<li>Spirale de Gorse sur le plan de la scène (accueil, conseil, obstacle, issue) : quatre tours, puis la pointe, sur la fiche spirale de la lesson (7 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Répéter la scène sans lire : 2 minutes (B1) ou 3 minutes (B1+) (8 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> <strong>Évaluation finale, oral</strong> : filmer ou enregistrer la scène au téléphone, avec un proche qui donne la réplique, ou en appel avec l’enseignante qui joue le client. Sans partenaire : enregistrer le rôle du vendeur en réponse aux répliques du client envoyées par l’enseignante. Déposer la vidéo sur l’ENT (15 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Autoévaluation avec la grille d’oral du parcours, et un objectif pour la fois suivante (6 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A good sale: welcome, find the need, advise, deal with an obstacle, close. The seller listens first, then suggests; reading notes breaks the exchange.</p>
+</div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : préparer le plan de la scène et la répéter une fois.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la vidéo ou l’enregistrement de la scène, et l’autoévaluation.</p>
+</article>
+<article class="absent-lesson absent-final" id="absent-final">
+<h3>Évaluation sommative au format du CCF</h3>
+<p>L’évaluation sommative de la page (format CCF : compréhension de l’oral, compréhension de l’écrit, expression écrite) est accessible dans cette version. La faire sans aide, en notant l’heure de début et de fin ; pour l’écoute, demander l’enregistrement à l’enseignante.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Si une PFMP est manquée ou décalée, l’équipe de la section indique ce qui sera rattrapé ; les tâches professionnelles de ce parcours peuvent s’appuyer sur le métier préparé.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+</section>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="downloads/Eleve-absent-May-I-Help-You.pdf">PDF</a> · <a href="downloads/Eleve-absent-May-I-Help-You.docx">Word (.docx)</a> · <a href="downloads/Eleve-absent-May-I-Help-You.odt">LibreOffice (.odt)</a>.</p>
+
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script>
 <section class="compl-block compl-eval" id="evaluation-ponctuelle"><h2>Évaluation au format de l'évaluation ponctuelle (version prof)</h2>
 <p>À insérer uniquement en Version prof. Entraînement au CCF du baccalauréat professionnel, ou à l'épreuve ponctuelle pour les candidats concernés. Grille nationale (BO n° 47 du 16 décembre 2021, annexe 4). Les textes ci-dessous correspondent au parcours B1 ; en B1+ et en B2, on reprend les documents déjà prévus sur la page (avis client, return policy) et les longueurs d'écrit du parcours (90 à 110 mots, 140 à 160 mots).</p>
 <h3>Situation A, en une lesson de 52 minutes</h3>

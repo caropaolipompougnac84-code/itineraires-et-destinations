@@ -220,6 +220,22 @@ ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
 body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
 body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 </style>
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
 </head>
 <body data-section="lycee-pro" class="mode-eleve english-look">
   <header class="site-header">
@@ -589,6 +605,7 @@ body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
           </span>
         </li>
       </ul>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="downloads/Eleve-absent-American-Superheroes.pdf">PDF</a> · <a href="downloads/Eleve-absent-American-Superheroes.docx">Word (.docx)</a> · <a href="downloads/Eleve-absent-American-Superheroes.odt">LibreOffice (.odt)</a>.</p>
       <h3>Cover</h3>
       <p>McClelland Barclay, <cite>Man the Guns, Join the Navy</cite>, 1942, United States Navy recruiting poster. National Archives (NARA) 513519; Library of Congress, Prints and Photographs Division, reproduction number LC-USZC4-2009. Public domain (United States government work). Image via Wikimedia Commons.</p>
       <h3>The comics we print</h3>
@@ -600,7 +617,7 @@ body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
     </section>
   </main>
 
-  <section class="compl-block" id="eleve-absent"><h2>2. Lessons minutées (55 minutes, minutées sur 52)</h2>
+  <section class="compl-block absent-route" id="eleve-absent" data-version="absent"><h2>2. Lessons minutées (55 minutes, minutées sur 52)</h2>
 <h3>Lesson 1. What do we see on this page?</h3>
 <div class='tw'><table>
 <thead><tr><th>Minutes</th><th>Étape</th><th>Ce que font les élèves</th><th>Activité</th></tr></thead>
@@ -694,81 +711,158 @@ body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 <p><strong>Trace écrite</strong> : Pas de trace écrite : tâche finale.</p>
 <p><strong>Devoirs</strong> : Aucun.</p>
 <p><strong>Sortie de secours</strong> (8 dernières minutes, si le tableau numérique ne marche pas ou si la lesson déborde) : Parties 1 et 2 écrites seulement ; l'oral est reporté à la lesson suivante.</p>
-<h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
-<p>À placer dans un onglet à part, visible par l'élève. Chaque lesson se fait en 30 à 40 minutes, seul, avec la page de la séquence ouverte (documents en libre accès). Une version courte de 15 minutes est prévue pour les jours de fatigue. Le travail se dépose sur l'ENT ou se rend au retour. L'enseignante corrige et renvoie un mot.</p>
-<p>Règle pour l'élève : « Fais ce que tu peux, dans l'ordre. Si tu es fatigué, fais seulement la version courte. Rien n'est perdu : on rattrape ensemble au retour. »</p>
-<h3>Lesson 1. What do we see on this page?</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Ouvre la page 4 de The Black Terror (Lesson 1) et les détails agrandis.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>How many panels are there?</li>
-<li>What is in the gutter?</li>
-<li>What does the first caption say?</li>
-<li><strong>Étude de la langue</strong> (10 min). <em>There is / there are</em> : écris quatre phrases sur la page.</li>
-<li><strong>Je produis</strong> (10 min). Décris une case en 40 mots.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « On this page there are … panels. A caption gives information; a balloon gives words. »</li>
+
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">American Superheroes</strong> · Première baccalauréat professionnel, B1 · contexte de la vie quotidienne et sociale (œuvres, histoire et culture des États-Unis)</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 6 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>Ce parcours suit les consignes marquées « 1re » dans chaque lesson.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · What do we see on this page?</span></h3>
+<p class="absent-question" lang="en"><em>How do we read a comic page before we interpret it?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/american-superheroes/#lesson-1">Lesson 1</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer <span lang="en">The Black Terror</span> no. 11, août 1945, page 4 (domaine public), puis les détails agrandis (6 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Apprendre le tableau <span lang="en">Building your vocabulary</span> : <span lang="en">panel, gutter, speech balloon, caption, reading path</span>, prépositions de lieu (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Tâches A et B : compter et numéroter les cases dans l’ordre de lecture ; trouver une gouttière, une bulle, un récitatif et dire où ils sont (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Tâche C : un proche lit à voix haute une bulle ou un récitatif au choix, sans le montrer ; le retrouver sur la page et dire ce qui a été entendu. Sans lecteur, demander l’enregistrement à l’enseignante (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire huit phrases avec les amorces de la lesson, puis : <span lang="en">This page cannot prove…</span> (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer la description en 40 secondes (2 min).</li>
+<li>Spirale de Gorse : remplir le tour du jour (côté extérieur l’idée, côté intérieur le détail de la page qui la prouve) (3 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
-<h3>Lesson 2. How does the page show movement?</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Ouvre les pages 3 et 6 (Lesson 2).</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>What is a splash?</li>
-<li>Find two onomatopoeias.</li>
-<li>How do we see movement?</li>
-<li><strong>Étude de la langue</strong> (10 min). Be + -ing : quatre phrases sur une case.</li>
-<li><strong>Je produis</strong> (10 min). Décris le mouvement dans une case en 40 mots.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « A splash is one large image. Onomatopoeia shows sound. Motion lines show movement. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A comic page is made of panels separated by gutters. Speech balloons show what characters say; captions give the narration. We read left to right, then down: this is the reading path.</p>
+<p lang="en">I describe before I interpret: In the first panel, on the left, a boy in a red shirt is sitting.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">What is a gutter?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">The space between two panels.</p></div></div></li>
+<li><p lang="en">What is a caption?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r2" hidden><p lang="en">A box of narration (often yellow on this page).</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : observer la page, faire la tâche A et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les tâches A à C, les huit phrases et l’enregistrement.</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · How does the page show movement?</span></h3>
+<p class="absent-question" lang="en"><em>How can a still image show speed and sound?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/american-superheroes/#lesson-2">Lesson 2</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer les pages 3 (<span lang="en">splash</span>) et 6 de <span lang="en">The Black Terror</span> no. 11, puis les détails agrandis (6 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Apprendre <span lang="en">splash page, motion lines, onomatopoeia, to leap, to fall, to zoom, to punch, diagonally, dynamic, static</span> (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Tâches A et B : où sont l’avion et le héros, que représentent les lignes autour de l’hélice ; trouver quatre onomatopées sur la page 6 (8 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> <span class="skill-tag" title="Expression écrite">PE</span> Tâche C : dix phrases au présent continu, puis <span lang="en">The page looks dynamic because…</span> (8 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer 40 secondes : décrire le mouvement sur la page 6 (4 min).</li>
+<li>Spirale de Gorse : remplir le tour du jour (côté extérieur l’idée, côté intérieur le détail de la page qui la prouve) (3 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
-<h3>Lesson 3. What kind of hero in wartime?</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Lis la page d'ouverture de Daredevil Comics no. 1 (1941).</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>When did the comic appear?</li>
-<li>Who does the hero fight?</li>
-<li>When did the USA enter the war?</li>
-<li><strong>Étude de la langue</strong> (10 min). Prétérit : cinq phrases sur 1941.</li>
-<li><strong>Je produis</strong> (10 min). En 50 mots : <em>What kind of hero is he?</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Daredevil Comics no. 1 appeared in July 1941, before the USA entered the war. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">A splash page is one large image. Motion lines show speed; onomatopoeias are sounds written as words (WUMP!, WHIRRR).</p>
+<p lang="en">The present continuous describes the action in the picture: The hero is leaping. A body is falling diagonally. Page 6 looks dynamic.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Which onomatopoeia is in the bottom right of page 6?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r3" hidden><p lang="en">WUMP!</p></div></div></li>
+<li><p lang="en">What do the circular lines around the propeller show?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r4" hidden><p lang="en">Movement and speed (motion lines).</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la tâche B et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les tâches A et B, les dix phrases, l’enregistrement et les six phrases du devoir.</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · What kind of hero in wartime?</span></h3>
+<p class="absent-question" lang="en"><em>What does a 1941 comic tell us about the United States at war?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/american-superheroes/#lesson-3">Lesson 3</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer <span lang="en">Daredevil Comics</span> no. 1, juillet 1941 (Lev Gleason, pas le personnage de Marvel), puis lire la frise chronologique (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Tâches A et B : décrire la page de garde et suivre l’ordre de lecture de la page intérieure (8 min).</li>
+<li><span class="skill-tag" title="Étude de la langue">Étude de la langue</span> Tâche C : F (fait), I (interprétation) ou U (affirmation non prouvée) pour chaque phrase (6 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer 45 secondes : présenter la page de 1941 avec deux dates de la frise (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire cinq phrases prudentes avec <span lang="en">may</span> sur ce que la page veut faire ressentir (5 min).</li>
+<li>Spirale de Gorse : remplir le tour du jour (côté extérieur l’idée, côté intérieur le détail de la page qui la prouve) (3 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : questions 1 et 2.</p>
-<h3>Lesson 4. Colour, and who is left out</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Reprends une page des lessons 1 ou 2 ; ouvre le lien vers Drowning Girl (MoMA).</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Name the main colours and where they are.</li>
-<li>Who is not on these pages?</li>
-<li>What is Pop Art?</li>
-<li><strong>Étude de la langue</strong> (10 min). <em>may, might, cannot</em> : trois phrases.</li>
-<li><strong>Je produis</strong> (10 min). Écris trois phrases nuancées sur la couleur d'une page.</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « The colours may … but I cannot reduce the page to one meaning. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Daredevil Comics no. 1 appeared in July 1941, before the United States entered the Second World War in December 1941. Superman first appeared in June 1938, Captain America in March 1941.</p>
+<p lang="en">A fact can be dated; an interpretation uses may; a claim about every American is unsupported.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">“Every American wanted this hero to punch the enemy.” F, I or U?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r5" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r5" hidden><p lang="en">U: unsupported, we cannot know what every American wanted.</p></div></div></li>
+<li><p lang="en">When did the United States enter the war?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r6" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r6" hidden><p lang="en">In December 1941.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire la frise, faire la tâche C et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les tâches A à C, l’enregistrement et les cinq phrases.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · Colour, and who is left out</span></h3>
+<p class="absent-question" lang="en"><em>What do colours suggest, and who is missing from the page?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/american-superheroes/#lesson-4">Lesson 4</a> et la <a href="https://www.moma.org/collection/works/80249">page du MoMA</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Tâche A : revoir une page de <span lang="en">The Black Terror</span>, nommer les couleurs principales et dire où elles sont, sans sauter au symbole (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Tâche B : ouvrir la page officielle du MoMA de Roy Lichtenstein, <span lang="en">Drowning Girl</span> (1963, n° 80249), l’œuvre n’étant pas reproduite sur le site. Écrire titre, date, musée, numéro, puis six phrases de description et les deux phrases <span lang="en">It is close to a comic panel because… It is no longer a comic page because…</span> (14 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Tâche C : <span lang="en">Who is left out?</span> Quatre phrases prudentes avec <span lang="en">may</span> sur qui est visible et qui ne l’est pas dans les pages de 1941 et 1945 (6 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Enregistrer l’étiquette de musée à voix haute (3 min).</li>
+<li>Spirale de Gorse : remplir le tour du jour (côté extérieur l’idée, côté intérieur le détail de la page qui la prouve) (3 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : question 1 et une phrase.</p>
-<h3>Lesson 5. The Museum of Unfinished Heroes</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). Fais les enveloppes 1 et 2 du jeu seul (les indices sont sur la page).</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>How many panels on page 4?</li>
-<li>What is wrong with the damaged label?</li>
-<li>How would you correct it?</li>
-<li><strong>Étude de la langue</strong> (10 min). Phrase de musée : <em>This page was drawn by… in…</em></li>
-<li><strong>Je produis</strong> (10 min). Écris l'étiquette corrigée (40 mots).</li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « A good museum label is accurate and does not mislead the visitor. »</li>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Colours guide the eye, but one colour does not have one fixed meaning. Pop Art (Roy Lichtenstein, 1963) borrowed the style of comic panels for paintings.</p>
+<p lang="en">A careful reader also asks who is not on the page: These pages may leave out…</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Which museum holds Drowning Girl, and what is its number?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r7" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r7" hidden><p lang="en">The Museum of Modern Art, New York, 80249.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la tâche A et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les tâches A à C, l’enregistrement et l’étiquette de musée de huit lignes (devoir).</p>
+</article>
+<article class="absent-lesson" id="absent-l5">
+<h3><span lang="en">Lesson 5 · Escape game: The Museum of Unfinished Heroes</span></h3>
+<p class="absent-question" lang="en"><em>Can I restore accurate labels without misleading the visitor?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/american-superheroes/#lesson-5">Lesson 5</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Enveloppe 1 : sur la page 4 de la lesson 1, compter les cases (le code est leur nombre) (5 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Enveloppe 2 : réécrire l’étiquette fausse en une étiquette juste pour <span lang="en">Daredevil Comics</span> no. 1 (le mot code est le mois de publication, en anglais, en minuscules) (8 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Enveloppe 3 : sur la page 6, trouver trois onomatopées et dire où elles sont (le code est celle en bas à droite) (5 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Envoyer les trois codes à l’enseignante par l’ENT : elle répond par un indice si un code est faux, comme en classe (2 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> <span lang="en">Final statement</span> : choisir l’affirmation prudente, puis écrire six à huit lignes avec deux dates et quatre mots du vocabulaire (10 min).</li>
+<li>Spirale de Gorse : remplir le tour du jour (côté extérieur l’idée, côté intérieur le détail de la page qui la prouve) (3 min).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : enveloppe 1 seulement.</p>
-<h3>Lesson 6. Final task: images of a nation</h3>
-<ol>
-<li><strong>Je découvre</strong> (5 min). La tâche finale se fait à la maison, 45 minutes, sans aide.</li>
-<li><strong>Je comprends</strong> (10 min). Réponds en français ou en anglais, en phrases complètes :</li>
-<li>Décris la page choisie.</li>
-<li>Ce qu'elle veut faire ressentir (<em>may</em>).</li>
-<li>Deux choses qu'elle ne prouve pas.</li>
-<li><strong>Étude de la langue</strong> (10 min). Relis tes traces écrites avant de commencer.</li>
-<li><strong>Je produis</strong> (10 min). Enregistre 2 minutes : <em>What do American superheroes tell us about the nation?</em></li>
-<li><strong>Ma trace écrite</strong> (5 min). Recopie dans ton cahier : « Pas de trace écrite. »</li>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Envelope 2: what is the code word?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r8" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r8" hidden><p lang="en">july</p></div></div></li>
+<li><p lang="en">Envelope 3: what is the code?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r9" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r9" hidden><p lang="en">WUMP!</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire les enveloppes 1 et 3.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les trois codes, l’étiquette réécrite, le <span lang="en">final statement</span> et les huit lignes du devoir.</p>
+</article>
+<article class="absent-lesson" id="absent-l6">
+<h3><span lang="en">Lesson 6 · Final task: images of a nation</span></h3>
+<p class="absent-question" lang="en"><em>What do American superheroes reveal about the United States, its fears and its ideals?</em></p>
+<p class="absent-meta">Durée : 45 min · Documents : <a href="https://itineraires-destinations.fr/american-superheroes/#lesson-6">Lesson 6</a></p>
+<ol class="absent-etapes">
+<li><strong>Évaluation de fin de séquence</strong> (entraînement au CCF, accessible dans cette version), sans aide, heure de début et de fin notées.</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> 1 et 2 : décrire une page de la séquence (cases ou <span lang="en">splash</span>, ordre de lecture, lieux, mouvement, bulles, récitatifs, onomatopées, couleurs), puis ce qu’elle peut vouloir faire ressentir (<span lang="en">may</span>) et deux choses qu’elle ne prouve pas.</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> 3 : répondre à la question de la séquence en 180 à 220 mots, avec au moins trois dates, et finir à la pointe de la spirale.</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> 4 : oral d’environ deux minutes enregistré : décrire une page, puis <span lang="en">This may reveal… It cannot prove…</span>.</li>
+<li><span class="skill-tag" title="Interaction">PI</span> L’enseignante envoie ensuite deux questions de relance par l’ENT ; y répondre par un deuxième enregistrement.</li>
+<li>Après le retour de la copie : faire l’autocorrection (ce qui n’allait pas, la phrase améliorée, un mot employé plus précisément).</li>
 </ol>
-<p><em>Version courte (15 min)</em> : la description seulement.</p></section>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire les parties 1 et 2 ; la suite se fait un autre jour.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : l’écrit, les deux enregistrements et l’autocorrection.</p>
+</article>
+<article class="absent-lesson absent-final" id="absent-final">
+<h3>Documents à imprimer</h3>
+<p>Les fiches de la séquence (PDF, Word, LibreOffice) restent utilisables sans connexion ; les corrigés de l’escape game sont sur la fiche de correction.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Si une PFMP est manquée ou décalée, l’équipe de la section indique ce qui sera rattrapé ; les tâches professionnelles de ce parcours peuvent s’appuyer sur le métier préparé.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script></section>
 <section class="compl-block prof-only" id="entrainement-examen"><h2>Entraînement au CCF (Première bac pro, version prof)</h2>
 <p>Rappel du format officiel (arrêté du 17 juin 2020, annexe V ; épreuve de langue vivante, bac pro, coefficient 2) :</p>
 <ul>

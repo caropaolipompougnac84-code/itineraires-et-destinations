@@ -39,6 +39,22 @@ ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
 body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
 body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 </style>
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
 </head>
 <body class="english-look sf sf-en mode-eleve">
 <a class="skip" href="#main">Aller au contenu</a>
@@ -1225,9 +1241,101 @@ Cette vidéo peut être ouverte ici : <a href="videos/fleuriste.mp4">Margot</a>.
 <p>Pour chaque tour : la question du professeur, la réponse attendue, et ce qui se resserre.</p>
 <table><thead><tr><th>Tour</th><th>Question du professeur</th><th>Réponse attendue</th><th>Ce qui se resserre</th></tr></thead><tbody><tr><td>1. Je remarque (I notice)</td><td>Qu'est-ce qui saute aux yeux ? Lisez la première phrase, puis dites de quoi parle le texte.</td><td>« In my trade I name three things in English: the tool, the risk, the next step. » Dans mon métier, je nomme trois choses en anglais : l'outil, le risque, l'étape suivante.</td><td>On n'est plus devant « l'anglais du métier » en général ; trois mots sont déjà posés, et c'est par eux que l'on entre dans le texte.</td></tr><tr><td>2. Je repère (I spot)</td><td>Quels exemples précis voyez-vous ensuite ? Nommez l'outil, le risque et l'étape.</td><td>Ce matin, le mètre (tape measure). Le risque : une coupure ou une chute. L'étape suivante : tracer le bois, puis couper. Si un outil est cassé, on prévient le responsable.</td><td>Les trois mots ne sont plus une liste à apprendre : chacun a un exemple, déjà plus net.</td></tr><tr><td>3. Je comprends (I understand)</td><td>Que vous apprennent ces éléments sur la façon de parler au poste ?</td><td>On dit l'outil, le risque et l'étape suivante, et l'on prévient si quelque chose ne va pas. Une phrase courte suffit, si elle est claire.</td><td>Le critère n'est plus de connaître beaucoup de vocabulaire ; c'est de dire juste ce qui sert, au bon moment.</td></tr><tr><td>4. Je trouve le sens (I find the meaning)</td><td>Quelle phrase essentielle pouvez-vous défendre, et quelle est sa limite ?</td><td>Une phrase courte suffit, si elle est claire : outil, risque, étape suivante. Limite : une longue liste d'outils, sans le danger et sans le geste suivant, ne fait pas le travail.</td><td>On arrive à une phrase défendable, avec sa limite, prête pour l'écrit de 60 à 80 mots ou pour l'oral de six minutes.</td></tr></tbody></table>
 <p>Dans chaque lesson, on applique la version qui correspond à la filière (complète en baccalauréat professionnel et en baccalauréat professionnel agricole, courte en CAP et en CAPA), au métier du jour : l'outil, le risque, l'étape suivante, sur le texte, l'audio ou l'image de la lesson.</p></section>
-<section class="compl-block compl-eval" id="eleve-absent-audit"><h2>L'élève ne peut pas venir en classe ou est hospitalisé</h2>
-<p>L'épreuve blanche peut se faire à la maison ou à l'hôpital, sans aide, en respectant la durée. L'élève note l'heure de début et de fin. Le document audio est déposé sur l'ENT ; l'élève l'écoute trois fois, avec une minute de pause entre les écoutes, sans revenir en arrière. L'oral se fait par enregistrement (présentation), puis par un échange au téléphone ou en visioconférence avec l'enseignante, ou à défaut par trois questions écrites envoyées après l'enregistrement. Version courte (fatigue) : une seule partie de l'écrit et la présentation orale.</p>
-<p>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p></section>
+<section id="eleve-absent" class="absent-route" data-version="absent" aria-labelledby="eleve-absent-titre">
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">Trades in English</strong> · Première baccalauréat professionnel, A2 vers B1 · mise en situation professionnelle avec un client anglophone</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 4 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>La page est une banque de métiers : on travaille une seule vidéo, celle de sa spécialité, sur les quatre lessons.</li>
+<li>Les vidéos sont courtes : les regarder trois fois, avec des sous-titres anglais si le lecteur les propose.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · Meet the professional</span></h3>
+<p class="absent-question" lang="en"><em>What does the client need, and how does the professional answer?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/trades-in-english/">Trades in English</a></p>
+<ol class="absent-etapes">
+<li>Choisir la vidéo de sa spécialité parmi les fiches de Première bac pro : <a href="https://itineraires-destinations.fr/trades-in-english/videos/pompe-a-chaleur.mp4">Lucas, pompe à chaleur</a>, <a href="https://itineraires-destinations.fr/trades-in-english/videos/brasserie.mp4">Inès, brasserie</a>, <a href="https://itineraires-destinations.fr/trades-in-english/videos/prothesiste-dentaire.mp4">Julien, prothèse dentaire</a>, <a href="https://itineraires-destinations.fr/trades-in-english/videos/coiffure-mariage.mp4">Léa, coiffure</a>, <a href="https://itineraires-destinations.fr/trades-in-english/videos/vendeuse.mp4">Manon, vente</a>. À défaut, prendre la plus proche de son métier.</li>
+<li>Spirale de Gorse sur la vidéo du métier : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Regarder la vidéo trois fois, puis faire les parties 1 à 3 de la fiche de compréhension, par exemple la <a href="{F}fiche-comprehension-lucas-pompe-a-chaleur.pdf">fiche de Lucas</a> (15 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Relever dix mots du métier dans la vidéo et les classer : objets, actions, formules polies (5 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The client explains the problem. The professional asks questions, explains what he or she will do, says when it will be ready and reassures the client.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Lucas: what is the problem?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">The heat pump has stopped (the house is cold).</p></div></div></li>
+<li><p lang="en">Lucas: what does he check?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r2" hidden><p lang="en">The filters and the pressure.</p></div></div></li>
+<li><p lang="en">Lucas: what does he do at the end?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r3" hidden><p lang="en">He restarts the system.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : regarder la vidéo et faire les parties 1 et 2 de la fiche.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, la fiche de compréhension et la liste de mots.</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · Reading about a training path</span></h3>
+<p class="absent-question" lang="en"><em>How did this professional learn the job?</em></p>
+<p class="absent-meta">Durée : 30 min · Documents : <a href="https://itineraires-destinations.fr/trades-in-english/">Trades in English</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Faire la partie 4 de la fiche : lire le texte sur la formation du professionnel et répondre <span lang="en">True or False</span> en justifiant (10 min).</li>
+<li>Spirale de Gorse sur la vidéo du métier : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Expanding your vocabulary">Vocabulary</span> Faire la partie 5, <span lang="en">Building your vocabulary</span> : associer les mots et les définitions (7 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire 60 à 80 mots sur sa propre formation : lycée, PFMP, ce qu’on aime dans le métier (8 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Talking about training: I am in Première at the lycée professionnel. I did my PFMP at… I learnt how to… I like my job because…</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Lucas: is he an apprentice for two years?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r4" hidden><p lang="en">False: three years.</p></div></div></li>
+<li><p lang="en">Lucas: where does he work?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r5" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r5" hidden><p lang="en">At Périgord Chauffage, in Bergerac.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire la partie 4 et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les parties 4 et 5 et le texte sur sa formation.</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · Your turn to speak</span></h3>
+<p class="absent-question" lang="en"><em>Can I help an English client and present my company?</em></p>
+<p class="absent-meta">Durée : 40 min · Documents : <a href="https://itineraires-destinations.fr/trades-in-english/">Trades in English</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire la fiche de préparation à l’oral de sa vidéo, par exemple la <a href="{F}preparation-orale-lucas-pompe-a-chaleur.pdf">fiche de Lucas</a> : cartes de rôle et formules utiles (5 min).</li>
+<li>Spirale de Gorse sur la vidéo du métier : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Écrire des mots-clés, pas de phrases longues, pour les sept étapes de la carte du professionnel (8 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Partie A, jeu de rôle : enregistrer le rôle du professionnel en répondant, dans l’ordre, aux six répliques du client lues à voix haute par un proche ou écrites sur une feuille ; ou le jouer au téléphone avec l’enseignante (3 à 4 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Partie B, <span lang="en">My company</span> : enregistrer la présentation de son entreprise de PFMP, une à deux minutes, en regardant seulement les mots-clés (8 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Greet the client, ask two questions, explain what you will do, say when it will be ready, give one tip, talk about your training, say goodbye politely.</p>
+</div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : faire seulement la partie B, <span lang="en">My company</span>.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les mots-clés et les deux enregistrements.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · Épreuve blanche au format du CCF</span></h3>
+<p class="absent-question" lang="en"><em>Am I ready for the bac pro English test?</em></p>
+<p class="absent-meta">Durée : selon la durée de l’épreuve · Documents : <a href="https://itineraires-destinations.fr/trades-in-english/">Évaluation</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> <span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> L’épreuve blanche (accessible dans cette version) se fait à la maison ou à l’hôpital, sans aide, en respectant la durée ; noter l’heure de début et de fin. Le document audio est déposé sur l’ENT : l’écouter trois fois, avec une minute de pause entre les écoutes, sans revenir en arrière.</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> <span class="skill-tag" title="Interaction">PI</span> L’oral se fait par enregistrement (présentation), puis par un échange au téléphone ou en visioconférence avec l’enseignante, ou à défaut par trois questions écrites envoyées après l’enregistrement.</li>
+</ol>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : une seule partie de l’écrit et la présentation orale.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : les copies et l’enregistrement, avec les heures de début et de fin.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Si une PFMP est manquée ou décalée, l’équipe de la section indique ce qui sera rattrapé ; les tâches professionnelles de ce parcours peuvent s’appuyer sur le métier préparé.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+</section>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="downloads/Eleve-absent-Trades-in-English.pdf">PDF</a> · <a href="downloads/Eleve-absent-Trades-in-English.docx">Word (.docx)</a> · <a href="downloads/Eleve-absent-Trades-in-English.odt">LibreOffice (.odt)</a>.</p>
+
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script>
 <section class="compl-block gorse-block" id="spirale-de-gorse"><h2>Spirale de Gorse</h2><p>À appliquer, dans chaque lesson, au document principal. Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-complete.svg" width="800" height="900" alt="Spirale de Gorse : cinq tours annotés se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, J'anticipe, Je trouve le sens."><figcaption>Spirale de Gorse, quatre tours puis la pointe. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Ce qui saute aux yeux, la première impression.</p><p>I notice… / This is about…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail, un passage, un élément plus net.</p><p>I spot… / The key word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Ce que ces éléments permettent de comprendre.</p><p>This shows that… / They have in common…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>J'anticipe (I anticipate)</strong></p><p>La visée du texte, ce qu'il faut en faire.</p><p>The text wants me to… / I anticipate…</p></div></li><li><span class="n" aria-hidden="true">5</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>La pointe : l'essentiel que l'on peut défendre, et sa limite.</p><p>The point is… / But I must not…</p></div></li></ol></section>
 <section class="compl-block gorse-block" id="spirale-de-gorse-courte"><h2>Spirale de Gorse, version courte</h2><p>En CAP, et de même en SEGPA s'il y a lieu, on s'arrête à quatre tours, sans le tour « J'anticipe ». Chaque version courte comporte un exemple travaillé : pour chaque tour, la question du professeur, la réponse attendue, et ce qui se resserre.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-courte-cap.svg" width="800" height="900" alt="Spirale de Gorse, version courte : quatre tours se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, Je trouve le sens."><figcaption>Spirale de Gorse, version courte, quatre tours. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Qu'est-ce qui saute aux yeux ?</p><p>I notice… / I can see… / I hear…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail plus net : un mot, un geste, un fait.</p><p>I spot… / The important word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Que me permettent de comprendre ces éléments ?</p><p>This shows that…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>L'essentiel, en une phrase, et sa limite.</p><p>The point is… / I must not forget…</p></div></li></ol></section>
 <footer><div class="wrap"><p>© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p></div></footer>

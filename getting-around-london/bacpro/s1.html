@@ -44,6 +44,26 @@ ol.gorse-steps p{margin:.15rem 0 .35rem;line-height:1.55}
 body.mode-eleve .prof-only,body.mode-dys .prof-only,body.mode-absent .prof-only{display:none!important}
 body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 </style>
+<style id="absent-route-styles">
+#eleve-absent.absent-route, .absent-route{font-size:22px;line-height:1.55;color:#1d1d1d}
+#eleve-absent.absent-route h2, .absent-route h2{color:#1A3658;font-size:1.45em;border-bottom:3px solid #1A3658;padding-bottom:6px}
+#eleve-absent.absent-route h3, .absent-route h3{color:#1A3658;font-size:1.2em;margin-top:1.4em}
+#eleve-absent.absent-route h4, .absent-route h4{color:#1A3658;font-size:1.05em;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid #1A3658;border-radius:10px;padding:4px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px}
+.absent-meta,.absent-seq,.absent-droits{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid #1A3658;padding:6px 14px;margin:12px 0}
+.absent-route .skill-tag{display:inline-block;background:#1A3658;color:#fff;border-radius:4px;font-size:22px;font-weight:bold;padding:1px 6px;margin-right:4px}
+.btn-rep{background:#fff;color:#1A3658;border:2px solid #1A3658;border-radius:6px;padding:4px 10px;font-weight:bold;cursor:pointer;margin:4px 0;font-size:22px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:4px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:6px 12px}
+.absent-droits{margin-top:28px}
+@media print{.btn-rep{display:none}}
+</style>
+<style id="absent-mode-visibility">
+body.mode-absent .wrap > :not(.level):not(nav):not(#eleve-absent):not(footer){display:none!important}
+body:not(.mode-absent) #eleve-absent.absent-route{display:none!important}
+</style>
 </head><body class="english-look mode-eleve">
 <div class="compl-modes" role="group" aria-label="Affichage">
 <button type="button" data-compl-mode="eleve" aria-pressed="true">Version élève</button>
@@ -100,4 +120,182 @@ body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 <ol><li>Underground</li><li>background</li><li>ironic</li></ol></div>
 <h2>Homework</h2><p>Find one other British ad or sketch you like. Present it in five sentences.</p><h2>Assessment grid</h2><div class="tbl"><table><tr><th>Criteria</th><th>Level 1</th><th>Level 2</th><th>Level 3</th><th>Level 4</th></tr><tr><td>Content</td><td>Few ideas</td><td>Some ideas</td><td>Clear ideas</td><td>Rich, precise ideas</td></tr><tr><td>Language</td><td>Many errors</td><td>Some errors</td><td>Mostly correct</td><td>Accurate and varied</td></tr><tr><td>Interaction / organisation</td><td>Little</td><td>Basic</td><td>Good</td><td>Fluent and natural</td></tr></table></div>
 <h2>Links reminder</h2><nav class="gnav"><div class="grp"><span class="gl">Start</span><a class='c0' href='/getting-around-london/'>A Long Heritage: British Public Transport</a><a class='c1' href='/getting-around-london/buses/'>Buses</a><a class='c2' href='/getting-around-london/general/'>Version A</a><a class='c3' href='/getting-around-london/bacpro/'>Version B</a><a class='c4' href='/getting-around-london/adapted/'>Adapted</a></div><div class="grp"><span class="gl">Lessons</span><a class='c0' href='/getting-around-london/bacpro/s1.html'>1</a><a class='c1' href='/getting-around-london/bacpro/s2.html'>2</a><a class='c2' href='/getting-around-london/bacpro/s3.html'>3</a><a class='c3' href='/getting-around-london/bacpro/s4.html'>4</a><a class='c4' href='/getting-around-london/bacpro/s5.html'>5</a><a class='c5' href='/getting-around-london/bacpro/s6.html'>6</a></div><div class="grp"><span class="gl">Activities</span><a class='c0' href='/getting-around-london/bacpro/games.html'>Games</a></div><div class="grp"><span class="gl">Skills</span><a class='c0' href='/getting-around-london/bacpro/skill-text.html'>Text study</a><a class='c1' href='/getting-around-london/bacpro/skill-oral.html'>Oral questioning</a><a class='c2' href='/getting-around-london/bacpro/skill-figures.html'>Figures of speech</a><a class='c3' href='/getting-around-london/bacpro/skill-punctuation.html'>Punctuation</a></div><div class="grp"><span class="gl">Assessment</span><a class='c0' href='/getting-around-london/bacpro/final.html'>Final task</a><a class='c1' href='/getting-around-london/bacpro/assessments.html'>Summative test</a></div></nav><section class="compl-block gorse-block" id="spirale-de-gorse"><h2>Spirale de Gorse</h2><p>Méthode conçue par Madame Carole Paoli Pompougnac. Le nom rend hommage à sa grand-mère par alliance, Madame Armandine Gorse, avec un S. On gravit un texte, un audio ou une image comme une pente : chaque tour est une prise plus haute. On part de ce qui saute aux yeux, puis l'attention se resserre, jusqu'à la pointe, le sommet où l'essentiel se laisse voir. Quatre tours, puis la pointe. À appliquer, dans chaque lesson, au document principal (texte, image ou audio). Les réponses détaillées restent en Version prof.</p><figure class="gorse-fig"><img src="/assets/spirale-de-gorse/spirale-de-gorse-complete.svg" width="800" height="900" alt="Spirale de Gorse : cinq tours annotés se resserrent jusqu'à la pointe, Je remarque, Je repère, Je comprends, J'anticipe, Je trouve le sens."><figcaption>Spirale de Gorse, quatre tours puis la pointe. Méthode conçue par Madame Carole Paoli Pompougnac.</figcaption></figure><ol class="gorse-steps"><li><span class="n" aria-hidden="true">1</span><div><p><strong>Je remarque (I notice)</strong></p><p>Ce qui saute aux yeux, la première impression.</p><p>I notice… / This is about…</p></div></li><li><span class="n" aria-hidden="true">2</span><div><p><strong>Je repère (I spot)</strong></p><p>Un détail, un passage, un élément plus net.</p><p>I spot… / The key word is…</p></div></li><li><span class="n" aria-hidden="true">3</span><div><p><strong>Je comprends (I understand)</strong></p><p>Ce que ces éléments permettent de comprendre.</p><p>This shows that… / They have in common…</p></div></li><li><span class="n" aria-hidden="true">4</span><div><p><strong>J'anticipe (I anticipate)</strong></p><p>La visée du texte, ce qu'il faut en faire.</p><p>The text wants me to… / I anticipate…</p></div></li><li><span class="n" aria-hidden="true">5</span><div><p><strong>Je trouve le sens (I find the meaning)</strong></p><p>La pointe : l'essentiel que l'on peut défendre, et sa limite.</p><p>The point is… / But I must not…</p></div></li></ol></section>
+<section id="eleve-absent" class="absent-route" data-version="absent" aria-labelledby="eleve-absent-titre">
+<h2 id="eleve-absent-titre">L’élève ne peut pas venir en classe ou est hospitalisé</h2>
+<p class="absent-seq"><strong lang="en">Mind the Gap: the London Underground (Version B, bac pro)</strong> · Première baccalauréat professionnel, B1 · Getting Around London, séquence 2</p>
+<div class="absent-regles"><h3>Comment travailler</h3><ul>
+<li>Faire les 6 lessons dans l’ordre, une lesson par moment de travail de 30 à 40 minutes. Les jours de fatigue, faire seulement la <strong>version courte</strong> (15 minutes) : rien n’est perdu, la suite se rattrape au retour.</li>
+<li>Ouvrir la page de la lesson (lien « Documents ») : textes, images, vidéos et enregistrements y sont en libre accès. Sans connexion, travailler avec la fiche imprimable (PDF, Word ou LibreOffice) proposée en téléchargement.</li>
+<li>Chercher d’abord, seul et sans traducteur, puis cliquer sur « Afficher la réponse » pour se corriger, avec un stylo d’une autre couleur.</li>
+<li>Production orale et interaction en travail seul : enregistrer un message vocal (téléphone ou ENT), ou écrire le texte qui serait dit, y compris les répliques des deux rôles.</li>
+<li>Recopier la <strong>trace écrite</strong> de chaque lesson dans le cahier : elle sert pour les évaluations.</li>
+<li>Les évaluations sont accessibles dans cette version : les faire au moment indiqué, sans aide, sans document sauf mention contraire, puis les envoyer.</li>
+<li>Envoyer le travail par la messagerie de l’ENT (photo nette ou fichier) ou le rendre au retour. L’enseignante corrige et renvoie un commentaire.</li>
+</ul></div>
+<article class="absent-lesson" id="absent-l1">
+<h3><span lang="en">Lesson 1 · The ad that made us laugh</span></h3>
+<p class="absent-question" lang="en"><em>What makes British humour different?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/s1.html">Lesson 1</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’oral">CO</span> Regarder le <a href="https://www.instagram.com/reel/DdEowsZzTW8/">reel sur Instagram</a> deux fois : une fois pour le plaisir, une fois avec un stylo (6 min).</li>
+<li>Spirale de Gorse sur le document principal de la lesson : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Activités : dire ce qui se passe en trois phrases, lister ce qu’on voit à l’arrière-plan, trouver les références aux histoires britanniques célèbres, choisir le moment le plus drôle et le type d’humour (ironie, <span lang="en">understatement</span>, absurde, autodérision) ; expliquer l’ironie de la photo de Baker Street (10 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> À la place du jeu de rôle : enregistrer une description d’une minute du reel pour quelqu’un qui ne l’a pas vu, puis répondre à trois questions qu’un proche pose ou qu’on se pose soi-même (5 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Fiche à trous, puis devoir : présenter en cinq phrases une autre publicité ou un sketch britannique (7 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The ad is about the London Underground. In the background, I can see many details.</p>
+<p lang="en">Sherlock Holmes with a pipe next to a No smoking sign is ironic.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Gap-fill: The ad is about the London ______.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r1" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r1" hidden><p lang="en">Underground</p></div></div></li>
+<li><p lang="en">Gap-fill: Sherlock Holmes with a pipe next to a No smoking sign is ______.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l1-r2" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l1-r2" hidden><p lang="en">ironic</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : regarder le reel, faire la fiche à trous et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les réponses aux activités, l’enregistrement et la fiche à trous.</p>
+</article>
+<article class="absent-lesson" id="absent-l2">
+<h3><span lang="en">Lesson 2 · 1863: the first underground railway</span></h3>
+<p class="absent-question" lang="en"><em>Why was the first Tube line a world first?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/s2.html">Lesson 2</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire le texte sur le Metropolitan Railway et observer la gravure de Baker Street vers 1863 (8 min).</li>
+<li>Spirale de Gorse sur le document principal de la lesson : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Activités : la date, les deux terminus, la méthode de construction ; expliquer <span lang="en">cut and cover</span> avec ses mots ; pourquoi la réponse de Palmerston relève de l’humour britannique ; décrire l’odeur et le bruit en 1863 (10 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Jeu de rôle, un journaliste du <span lang="en">Times</span> interroge un passager après le premier trajet, en jouant les deux rôles : écrire le dialogue (huit à dix répliques), puis l’enregistrer ; ou le jouer au téléphone avec l’enseignante (8 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Fiche à trous, puis devoir : la carte postale d’un passager de 1863 (7 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The Metropolitan Railway opened in 1863, between Paddington and Farringdon. It was the first underground railway in the world.</p>
+<p lang="en">It was built by cut and cover. On the first day it carried 38,000 passengers.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">When did the Metropolitan Railway open?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r3" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r3" hidden><p lang="en">On 10 January 1863.</p></div></div></li>
+<li><p lang="en">How many passengers on the first day?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l2-r4" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l2-r4" hidden><p lang="en">38,000</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le texte, faire la fiche à trous et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les réponses, le dialogue écrit ou enregistré, la fiche et la carte postale.</p>
+</article>
+<article class="absent-lesson" id="absent-l3">
+<h3><span lang="en">Lesson 3 · Going deep: the Tube and Beck’s map</span></h3>
+<p class="absent-question" lang="en"><em>Why is the Tube map not true to real distances?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/s3.html">Lesson 3</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire le texte sur la City and South London Railway et sur Harry Beck ; comparer la carte de 1908 et la carte actuelle (8 min).</li>
+<li>Spirale de Gorse sur le document principal de la lesson : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Activités : trois différences entre les deux cartes ; pourquoi Beck a choisi des lignes droites ; un exemple de distance fausse ; l’origine du surnom <span lang="en">padded cells</span> (10 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Jeu de rôle, un passager perdu avec la carte de 1908 et un agent qui l’aide avec l’idée de Beck, en jouant les deux rôles : écrire le dialogue (huit à dix répliques), puis l’enregistrer ; ou le jouer au téléphone avec l’enseignante (8 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Fiche à trous, puis devoir : dessiner une carte à la manière de Beck de sa ville ou de son lycée (7 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The first deep level tube opened in 1890. Harry Beck drew his map in 1931; it was published in 1933.</p>
+<p lang="en">Beck used straight lines because only the connections mattered to passengers.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">When did Harry Beck draw his map?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r5" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r5" hidden><p lang="en">In 1931 (published in 1933).</p></div></div></li>
+<li><p lang="en">The carriages were nicknamed padded ______.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l3-r6" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l3-r6" hidden><p lang="en">cells</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le texte, faire la fiche à trous et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les réponses, le dialogue, la fiche et la carte.</p>
+</article>
+<article class="absent-lesson" id="absent-l4">
+<h3><span lang="en">Lesson 4 · The lines and what they serve</span></h3>
+<p class="absent-question" lang="en"><em>How do I give directions on the Tube?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/s4.html">Lesson 4</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire le tableau des lignes (couleur, lieux desservis) (6 min).</li>
+<li>Spirale de Gorse sur le document principal de la lesson : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Activités : la ligne qui va à Heathrow ; de Paddington à Westminster ; une journée avec trois lieux et trois lignes ; une station de la Bakerloo où changer pour la Victoria (10 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Jeu de rôle, un touriste à King’s Cross St Pancras demande le chemin de Camden Town par la Northern line, en jouant les deux rôles : écrire le dialogue (huit à dix répliques), puis l’enregistrer ; ou le jouer au téléphone avec l’enseignante (8 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Fiche à trous, puis devoir : l’itinéraire de Baker Street à Canary Wharf (7 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Giving directions: Take the Northern line to Camden Town. Change at Oxford Circus for the Victoria line.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Which line serves Heathrow Airport?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r7" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r7" hidden><p lang="en">The Piccadilly line.</p></div></div></li>
+<li><p lang="en">Where do the Bakerloo and Victoria lines meet?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l4-r8" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l4-r8" hidden><p lang="en">At Oxford Circus.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le tableau, faire la fiche à trous et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les réponses, le dialogue, la fiche et l’itinéraire.</p>
+</article>
+<article class="absent-lesson" id="absent-l5">
+<h3><span lang="en">Lesson 5 · Posters: selling the city</span></h3>
+<p class="absent-question" lang="en"><em>What makes people want to take the Tube?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/s5.html">Lesson 5</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Observer les affiches de Golders Green (1908), de Horace Taylor (1924) et d’Edward McKnight Kauffer (1915, 1922) (6 min).</li>
+<li>Spirale de Gorse sur le document principal de la lesson : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Activités : décrire l’affiche de Golders Green (lieu, personnes, couleurs, slogan) ; la promesse qu’elle fait ; la comparer avec les affiches de Kauffer ; laquelle donne envie de prendre le métro, et pourquoi (10 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> À la place du jeu de rôle : enregistrer, en une minute, le <span lang="en">pitch</span> d’une affiche à Frank Pick, avec le langage de la persuasion (6 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Fiche à trous, puis devoir : créer l’affiche d’une station, avec un slogan (8 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Golders Green is a place of delightful prospects. Edward McKnight Kauffer designed the Godstone poster.</p>
+<p lang="en">Frank Pick wanted fitness for use.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">Gap-fill: Pick wanted fitness for ______.</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r9" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r9" hidden><p lang="en">use</p></div></div></li>
+<li><p lang="en">Who designed the Godstone poster?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l5-r10" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l5-r10" hidden><p lang="en">Edward McKnight Kauffer.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : décrire une affiche, faire la fiche à trous et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les réponses, l’enregistrement, la fiche et l’affiche.</p>
+</article>
+<article class="absent-lesson" id="absent-l6">
+<h3><span lang="en">Lesson 6 · Mind the gap: British humour underground</span></h3>
+<p class="absent-question" lang="en"><em>Why did “Mind the gap” become a symbol of London?</em></p>
+<p class="absent-meta">Durée : 35 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/s6.html">Lesson 6</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> Lire le texte sur <span lang="en">Mind the gap</span>, les tableaux blancs des stations et l’histoire des noms de station (6 min).</li>
+<li>Spirale de Gorse sur le document principal de la lesson : quatre tours, puis la pointe (6 min).</li>
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> Activités : pourquoi <span lang="en">Mind the gap</span> est devenu un symbole ; l’histoire d’un nom de station ; écrire un message drôle ou poétique pour un tableau blanc ; comparer avec l’humour du reel de la lesson 1 (12 min).</li>
+<li><span class="skill-tag" title="Interaction">PI</span> Jeu de rôle, un agent de station répond par une plaisanterie à chaque plainte d’un passager grincheux, en jouant les deux rôles : écrire le dialogue (huit à dix répliques), puis l’enregistrer ; ou le jouer au téléphone avec l’enseignante (8 min).</li>
+<li><span class="skill-tag" title="Expression écrite">PE</span> Fiche à trous, puis devoir : préparer la tâche finale et faire ses <span lang="en">flashcards</span> (page <span lang="en">Games</span>) (5 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">Mind the gap was introduced around 1968. Sherlock Holmes lived in Baker Street. Platform 9¾ is at King's Cross.</p>
+</div>
+<div class="absent-check"><h4>Je vérifie</h4><ol>
+<li><p lang="en">When was Mind the gap introduced?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l6-r11" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l6-r11" hidden><p lang="en">Around 1968.</p></div></div></li>
+<li><p lang="en">Where is Platform 9¾?</p><div class="rep-wrap"><button type="button" class="btn-rep" aria-expanded="false" aria-controls="abs-l6-r12" data-label="la réponse">Afficher la réponse</button><div class="reponse" id="abs-l6-r12" hidden><p lang="en">At King’s Cross.</p></div></div></li>
+</ol></div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : lire le texte, écrire le message de tableau blanc et recopier la trace écrite.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la spirale, les réponses, le message de tableau blanc, le dialogue et la fiche.</p>
+</article>
+<article class="absent-lesson" id="absent-l7">
+<h3><span lang="en">Lesson 7 · Final task: a guide for a French visitor</span></h3>
+<p class="absent-question" lang="en"><em>Can I guide a visitor through the Tube?</em></p>
+<p class="absent-meta">Durée : 45 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/final.html">Final task</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Expression écrite">PE</span> <strong>Tâche finale, évaluée</strong> : créer un guide pour un visiteur français, avec un trajet en métro, deux histoires de stations, une affiche décrite, un message de tableau blanc et le reel présenté en quelques phrases (25 min).</li>
+<li><span class="skill-tag" title="Expression orale en continu">PO</span> Présenter le guide à l’oral, deux minutes, en s’enregistrant (critères : faits et documents 8, langue 8, argumentation, humour et créativité 4) (10 min).</li>
+</ol>
+<div class="absent-trace"><h4>Trace écrite à recopier dans le cahier</h4>
+<p lang="en">The plan of the task in three points: the route, the stories and the poster, the humour (whiteboard message and reel).</p>
+</div>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : le trajet, une histoire de station et une présentation d’une minute.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : le guide et l’enregistrement.</p>
+</article>
+<article class="absent-lesson" id="absent-l8">
+<h3><span lang="en">Lesson 8 · Summative test</span></h3>
+<p class="absent-question" lang="en"><em>What have I learnt about the Tube?</em></p>
+<p class="absent-meta">Durée : 52 min · Documents : <a href="https://itineraires-destinations.fr/getting-around-london/bacpro/assessments.html">Summative test</a></p>
+<ol class="absent-etapes">
+<li><span class="skill-tag" title="Compréhension de l’écrit">CE</span> <span class="skill-tag" title="Expression écrite">PE</span> <strong>Évaluation sommative</strong> (accessible dans cette version), sur 20 : lecture (18 min), lignes et itinéraires (12 min), écriture (22 min). La faire sans aide et sans les notes, en notant l’heure de début et de fin ; relire sa copie.</li>
+</ol>
+<p class="absent-court"><strong>Version courte (15 min)</strong> : la lecture et la partie lignes et itinéraires.</p>
+<p class="absent-envoi"><strong>À envoyer ou à rendre</strong> : la copie, avec les heures de début et de fin.</p>
+</article>
+<div class="absent-contact"><h3>Garder le lien avec la classe</h3><ul>
+<li>Un message court à l’enseignante par l’ENT suffit pour dire où en est le travail ou poser une question, même sans avoir tout fini.</li>
+<li>Un ou une camarade volontaire peut transmettre les documents distribués en classe et les nouvelles du groupe.</li>
+<li>À l’hôpital ou à domicile, l’enseignant de l’école à l’hôpital ou du SAPAD peut accompagner ce parcours : lui montrer cette page.</li>
+<li>Si une PFMP est manquée ou décalée, l’équipe de la section indique ce qui sera rattrapé ; les tâches professionnelles de ce parcours peuvent s’appuyer sur le métier préparé.</li>
+<li>Au retour, un point de dix minutes avec l’enseignante permet de vérifier les traces écrites et de rattraper l’oral.</li>
+</ul></div>
+<p class="absent-droits">© 2026 Madame Carole Paoli Pompougnac · CC BY-NC-SA 4.0</p>
+</section>
+<p class="downloads">Parcours de l'élève absent ou hospitalisé : <a href="/getting-around-london/downloads/Eleve-absent-Mind-the-Gap-bac-pro.pdf">PDF</a> · <a href="/getting-around-london/downloads/Eleve-absent-Mind-the-Gap-bac-pro.docx">Word (.docx)</a> · <a href="/getting-around-london/downloads/Eleve-absent-Mind-the-Gap-bac-pro.odt">LibreOffice (.odt)</a>.</p>
+
+<script>(function(){var r=document.getElementById('eleve-absent');if(!r)return;r.addEventListener('click',function(e){var b=e.target.closest('.btn-rep');if(!b||!r.contains(b))return;var d=document.getElementById(b.getAttribute('aria-controls'));if(!d)return;var open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',open?'false':'true');d.hidden=open;b.textContent=(open?'Afficher ':'Cacher ')+(b.getAttribute('data-label')||'la réponse');e.stopImmediatePropagation();},true);})();</script>
 <footer>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></footer></div></body></html>

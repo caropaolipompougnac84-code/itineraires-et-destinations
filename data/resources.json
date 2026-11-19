@@ -2135,8 +2135,8 @@
     },
     {
       "id": "segpa-brevet-preparation-dnb",
-      "title": "Français / Anglais · 3e · Préparation au brevet",
-      "summary": "Panneau dédié au DNB 2026 : français (dictée, rédaction, réécriture, oral) et anglais par le contrôle continu.",
+      "title": "Français · 3e · Préparation au brevet",
+      "summary": "Panneau dédié au DNB 2026 : dictée, rédaction, réécriture, oral.",
       "section": "segpa",
       "subject": "lettres",
       "level": "brevet",
@@ -3366,25 +3366,6 @@
       "date": "2026-11-19",
       "image": "mary-shelley-the-modern-prometheus.jpg",
       "credit": "Portrait of Frankenstein’s creature, opening image of the sequence."
-    },
-    {
-      "id": "lp-anglais-hidden-figures",
-      "title": "Anglais · Hidden Figures",
-      "summary": "Séquence d’anglais (B1, B2, C1) sur Katherine Johnson, Dorothy Vaughan et Mary Jackson à la NASA Langley, dans la lignée My Working Day. Cinq lessons, versions élève, prof, dys et élève absent. Photographies NASA du domaine public.",
-      "section": "lycee-pro",
-      "subject": "anglais",
-      "level": "tous",
-      "levelLabel": "B1 · B2 · C1",
-      "collection": "lp-anglais",
-      "themes": [
-        "travail",
-        "culture",
-        "citoyennete"
-      ],
-      "url": "https://itineraires-destinations.fr/hidden-figures/",
-      "date": "2026-11-19",
-      "image": "hidden-figures.jpg",
-      "credit": "Katherine Johnson at NASA Langley, 1966. NASA. Public domain."
     }
   ]
 }

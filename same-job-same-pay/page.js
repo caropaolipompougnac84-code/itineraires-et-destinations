@@ -2,11 +2,15 @@
 (function(){
   function setMode(m){
     var body=document.body;
-    body.classList.remove('mode-eleve','mode-prof','mode-dys','eleve','dys-opendys','teacher','answers');
+    body.classList.remove('mode-eleve','mode-prof','mode-dys','mode-absent','eleve','dys-opendys','teacher','answers');
     if(m==='prof'){
       body.classList.add('mode-prof','teacher','answers');
     } else if(m==='dys'){
       body.classList.add('mode-eleve','eleve','mode-dys','dys-opendys');
+    } else if(m==='absent'){
+      body.classList.add('mode-eleve','eleve','mode-absent');
+      var abs=document.querySelector('.tab-btn[data-k="hospitalise"]');
+      if(abs) abs.click();
     } else {
       m='eleve';
       body.classList.add('mode-eleve','eleve');

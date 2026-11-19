@@ -51,3 +51,50 @@ body.mode-dys .x .fr{margin-top:.15rem;color:#333;}
 table{border-collapse:collapse;width:100%;font-size:22px;}
 th,td{border:1px solid #d9dde5;padding:.4rem .5rem;text-align:left;vertical-align:top;}
 .absent-note{border:2px solid var(--bx);border-radius:12px;padding:12px 14px;margin:1rem 0;}
+
+/* Call the Midwife · spirale de Gorse : dessin, parties élève, prof, dys, et version téléphone (à coller une fois à la fin de page.css) */
+.spg{margin:1.2rem 0;padding-top:.6rem;border-top:1px solid #d8dee8}
+.spg h3 .time{font-size:.8em;font-weight:400;color:#555;margin-left:.4rem}
+.fig-spirale{margin:1rem 0;overflow-x:auto}
+.fig-spirale figcaption{font-size:.9em;color:#444;text-align:center}
+.spirale{width:100%;height:auto;max-width:1100px;display:block;margin:0 auto;min-width:620px}
+.sv-step{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:30px;fill:#12243C}
+.sv-idee{font-family:Arial,Helvetica,sans-serif;font-size:24px;fill:#26201F}
+.sv-in{font-family:Arial,Helvetica,sans-serif;font-size:22px;fill:#1A3658;font-style:italic}
+.spg-steps li{margin:.35rem 0}
+.spg-dys{display:none}
+body.mode-dys .spg-dys{display:block}
+body.mode-dys .spg-eleve{display:none}
+.fig-spirale .spirale-tel{display:none}
+@media (max-width:640px){
+ .fig-spirale.a-tel{overflow-x:visible}
+ .fig-spirale.a-tel .spirale:not(.spirale-tel){display:none}
+ .fig-spirale.a-tel .spirale-tel{display:block;min-width:0;width:100%;max-width:440px;height:auto;margin:0 auto}
+ .spirale-tel .sv-step{font-size:24px}
+ .spirale-tel .sv-idee{font-size:21px}
+ .spirale-tel .sv-in{font-size:19px}
+}
+
+/* Corrigés des spirales : jamais en Version élève ni en Version dys */
+body.mode-eleve details.ans,body.mode-dys details.ans{display:none!important}
+body.mode-prof details.ans{display:block}
+
+/* Parcours de l’élève absent */
+#eleve-absent,#eleve-absent p,#eleve-absent li{font-size:22px;line-height:1.6}
+#eleve-absent h2{color:var(--bx,#1A3658);font-size:1.6rem;border-bottom:3px solid var(--bx,#1A3658);padding-bottom:6px}
+#eleve-absent h3{color:var(--bx,#1A3658);font-size:1.25rem;margin-top:1.6em}
+#eleve-absent h4{color:var(--bx,#1A3658);font-size:22px;margin:.9em 0 .3em}
+.absent-regles,.absent-contact{border:2px solid var(--bx,#1A3658);border-radius:10px;padding:8px 16px 10px;margin:16px 0}
+.absent-lesson{border-top:1px solid #c9d3e3;padding-top:4px;margin-top:1rem}
+.absent-meta{color:#3a4a66}
+.absent-trace{background:#f3f6fb;border-left:5px solid var(--bx,#1A3658);padding:8px 14px;margin:12px 0}
+.skill-tag{display:inline-block;background:var(--bx,#1A3658);color:#fff;border-radius:4px;font-size:22px;font-weight:700;padding:1px 8px;margin-right:4px}
+.btn-rep{background:#fff;color:var(--bx,#1A3658);border:2px solid var(--bx,#1A3658);border-radius:8px;padding:8px 14px;font:700 22px inherit;cursor:pointer;margin:4px 0;min-height:48px}
+.reponse{background:#f3f6fb;border-radius:6px;padding:8px 12px;margin:4px 0 8px}
+.absent-court{background:#fffbea;border:1px solid #e3d48a;border-radius:6px;padding:8px 12px}
+.absent-droits{margin-top:28px;color:#3a4a66}
+.absent-downloads{margin:1rem 0}
+/* Les corrigés du parcours absent restent en Version prof et en version élève absent */
+body:not(.mode-absent):not(.mode-prof) #eleve-absent .btn-rep,
+body:not(.mode-absent):not(.mode-prof) #eleve-absent .reponse,
+body:not(.mode-absent):not(.mode-prof) #eleve-absent .rep-wrap{display:none!important}

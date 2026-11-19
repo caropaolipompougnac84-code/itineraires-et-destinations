@@ -73,5 +73,9 @@
       a.src=src; a.play();
     });
   });
+
+  document.querySelectorAll('[data-print]').forEach(function(b){
+    b.addEventListener('click', function(){ window.print(); });
+  });
   setMode('eleve');
 })();

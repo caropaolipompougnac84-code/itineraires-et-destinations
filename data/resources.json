@@ -298,6 +298,29 @@
       "credit": "Dialogue filmé en classe, électricien en Dordogne"
     },
     {
+      "id": "lp-anglais-the-parts-of-a-car",
+      "title": "Anglais · CAP, bac pro et CFA · The Parts of a Car",
+      "summary": "Carrosserie : nommer les parties d’une voiture en anglais, à l’atelier et avec le client. Liste de mots, écoute, définitions, dialogue, jeu de rôle, spirale de Gorse courte, version dys. Téléchargements pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": [
+        "cap",
+        "2de",
+        "1re",
+        "tle"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · carrosserie · A2-B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/the-parts-of-a-car/",
+      "date": "2026-11-20",
+      "image": "the-parts-of-a-car.jpg",
+      "credit": "Luigi Russolo, Automobile in corsa, 1912-1913, Centre Pompidou, domaine public"
+    },
+    {
       "id": "cfa-anglais-quiz-metiers",
       "hubOrder": 0,
       "title": "Anglais · Quiz de vocabulaire anglais des métiers",
@@ -338,6 +361,27 @@
       "date": "2026-11-14",
       "image": "trades-in-english.jpg",
       "credit": "Dialogue filmé en classe, électricien en Dordogne"
+    },
+    {
+      "id": "cfa-anglais-the-parts-of-a-car",
+      "title": "Anglais · CAP, bac pro et CFA · The Parts of a Car",
+      "summary": "Carrosserie : nommer les parties d’une voiture en anglais, à l’atelier et avec le client. Liste de mots, écoute, définitions, dialogue, jeu de rôle, spirale de Gorse courte, version dys. Téléchargements pdf, docx et odt.",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": [
+        "cap",
+        "bacpro"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · carrosserie · A2-B1",
+      "collection": "cfa-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/the-parts-of-a-car/",
+      "date": "2026-11-20",
+      "image": "the-parts-of-a-car.jpg",
+      "credit": "Luigi Russolo, Automobile in corsa, 1912-1913, Centre Pompidou, domaine public"
     },
     {
       "id": "agri-anglais-trades-in-english",

@@ -3691,7 +3691,7 @@
     {
       "id": "lg-anglais-1re-tle-curtain-up-entering-shakespeares-world",
       "title": "Anglais · 1re / Tle · Curtain Up: Entering Shakespeare's World",
-      "summary": "William Shakespeare au lycée : un ensemble qui s'ouvre sur une introduction à la tragédie, puis relie Hamlet (cinq lessons), Macbeth (six lessons) et Othello (Passing the Flame, Terminale LLCER), et se termine par l'étude du film Shakespeare in Love (John Madden, 1998), avec un guide de visionnage. Première et Terminale, lycée général et technologique. Version élève, version prof, version dys. Spirale de Gorse.",
+      "summary": "William Shakespeare au lycée : un ensemble qui s'ouvre sur une introduction à la tragédie et la lesson Going further in Shakespeare's writing (Terminales), puis relie Hamlet (cinq lessons), Macbeth (six lessons) et Othello (Passing the Flame, Terminale LLCER), et se termine par l'étude du film Shakespeare in Love (John Madden, 1998), avec un guide de visionnage. Première et Terminale, lycée général et technologique. Version élève, version prof, version dys. Spirale de Gorse.",
       "section": "lycee-general",
       "subject": "anglais",
       "level": [
@@ -3712,6 +3712,29 @@
       "date": "2026-11-19",
       "image": "curtain-up-entering-shakespeares-world.jpg",
       "credit": "Ford Madox Brown, Romeo and Juliet, 1869-1870, oil on canvas, 135.6 × 94 cm, Delaware Art Museum, Wilmington. Public domain. Image: Wikimedia Commons."
+    },
+    {
+      "id": "lg-anglais-tle-going-further-in-shakespeares-writing",
+      "title": "Anglais · Tle · Going further in Shakespeare's writing",
+      "summary": "Othello, Hamlet et Macbeth : une réplique qui révèle un personnage, une réplique qui provoque une décision, un incident qui fait avancer l'action. Une lesson pour les Terminales du lycée général et technologique, dans l'ensemble Curtain Up: Entering Shakespeare's World, juste après l'introduction. Version élève, version prof avec corrigé, version dys. Spirale de Gorse. Téléchargements pdf, docx et odt.",
+      "section": "lycee-general",
+      "subject": "anglais",
+      "level": [
+        "tle"
+      ],
+      "levelLabel": "Terminales · lycée général et technologique",
+      "collection": "lg-anglais",
+      "themes": [
+        "litterature",
+        "culture",
+        "ecrit"
+      ],
+      "duration": "1 lesson",
+      "materials": "Tableau numérique, les extraits des pièces, fiches pdf, docx et odt, version dys",
+      "url": "https://itineraires-destinations.fr/going-further-in-shakespeares-writing/",
+      "date": "2026-11-21",
+      "image": "going-further-in-shakespeares-writing.jpg",
+      "credit": "Eugène Delacroix, Hamlet et Horatio au cimetière, 1839, huile sur toile, 81,5 x 65,4 cm, Musée du Louvre, RF 1942, domaine public. Image : Wikimedia Commons."
     },
     {
       "id": "lp-anglais-1re-macbeth-ambition-darkness-and-guilt",

@@ -321,6 +321,52 @@
       "credit": "Luigi Russolo, Automobile in corsa, 1912-1913, Centre Pompidou, domaine public"
     },
     {
+      "id": "lp-anglais-the-plumbers-quote",
+      "title": "Anglais · CAP, bac pro et CFA · The Plumber's Quote",
+      "summary": "Plomberie : nommer les pièces, les outils et les pannes en anglais, parler au client, puis établir un devis en euros avec la TVA. Liste de mots, définitions, dialogue, jeu de rôle, jeu du devis, spirale de Gorse courte, version dys. Téléchargements pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": [
+        "cap",
+        "2de",
+        "1re",
+        "tle"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · plomberie · A2-B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/the-plumbers-quote/",
+      "date": "2026-11-21",
+      "image": "the-plumbers-quote.jpg",
+      "credit": "Jean-Baptiste-Siméon Chardin, La Fontaine de cuivre, vers 1733-1734, huile sur bois, 28,5 x 23 cm, Musée du Louvre, MI 1037, domaine public"
+    },
+    {
+      "id": "lp-anglais-the-electricians-quote",
+      "title": "Anglais · CAP, bac pro et CFA · The Electrician's Quote",
+      "summary": "Électricité : nommer les pièces, les outils et les pannes en anglais, parler au client, puis établir un devis en euros avec la TVA. Liste de mots, définitions, dialogue, jeu de rôle, jeu du devis, spirale de Gorse courte, version dys. Téléchargements pdf, docx et odt.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": [
+        "cap",
+        "2de",
+        "1re",
+        "tle"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · électricité · A2-B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/the-electricians-quote/",
+      "date": "2026-11-21",
+      "image": "the-electricians-quote.jpg",
+      "credit": "Raoul Dufy, La Fée Électricité, 1937, Musée d’Art Moderne de Paris, AMVP 1 ; photo Francesco Bini, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    {
       "id": "cfa-anglais-quiz-metiers",
       "hubOrder": 0,
       "title": "Anglais · Quiz de vocabulaire anglais des métiers",
@@ -382,6 +428,48 @@
       "date": "2026-11-20",
       "image": "the-parts-of-a-car.jpg",
       "credit": "Luigi Russolo, Automobile in corsa, 1912-1913, Centre Pompidou, domaine public"
+    },
+    {
+      "id": "cfa-anglais-the-plumbers-quote",
+      "title": "Anglais · CAP, bac pro et CFA · The Plumber's Quote",
+      "summary": "Plomberie : nommer les pièces, les outils et les pannes en anglais, parler au client, puis établir un devis en euros avec la TVA. Liste de mots, définitions, dialogue, jeu de rôle, jeu du devis, spirale de Gorse courte, version dys. Téléchargements pdf, docx et odt.",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": [
+        "cap",
+        "bacpro"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · plomberie · A2-B1",
+      "collection": "cfa-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/the-plumbers-quote/",
+      "date": "2026-11-21",
+      "image": "the-plumbers-quote.jpg",
+      "credit": "Jean-Baptiste-Siméon Chardin, La Fontaine de cuivre, vers 1733-1734, huile sur bois, 28,5 x 23 cm, Musée du Louvre, MI 1037, domaine public"
+    },
+    {
+      "id": "cfa-anglais-the-electricians-quote",
+      "title": "Anglais · CAP, bac pro et CFA · The Electrician's Quote",
+      "summary": "Électricité : nommer les pièces, les outils et les pannes en anglais, parler au client, puis établir un devis en euros avec la TVA. Liste de mots, définitions, dialogue, jeu de rôle, jeu du devis, spirale de Gorse courte, version dys. Téléchargements pdf, docx et odt.",
+      "section": "cfa",
+      "subject": "anglais",
+      "level": [
+        "cap",
+        "bacpro"
+      ],
+      "levelLabel": "CAP · bac pro · CFA · électricité · A2-B1",
+      "collection": "cfa-anglais",
+      "themes": [
+        "travail",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/trades-in-english/the-electricians-quote/",
+      "date": "2026-11-21",
+      "image": "the-electricians-quote.jpg",
+      "credit": "Raoul Dufy, La Fée Électricité, 1937, Musée d’Art Moderne de Paris, AMVP 1 ; photo Francesco Bini, CC BY-SA 4.0, via Wikimedia Commons"
     },
     {
       "id": "agri-anglais-trades-in-english",

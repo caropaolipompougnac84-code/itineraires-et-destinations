@@ -236,6 +236,12 @@ body.mode-eleve .compl-eval,body.mode-dys .compl-eval{display:none!important}
 .absent-droits{margin-top:28px}
 @media print{.btn-rep{display:none}}
 </style>
+<style id="tabs-contrast">
+/* Onglets de leçon lisibles : texte marine sur fond blanc, onglet ouvert en marine plein */
+html body nav.tabs .row a{color:#1A3658!important;background:#FFFFFF!important;border:2px solid #1A3658!important;font-size:22px!important;line-height:1.2!important;opacity:1!important;text-shadow:none!important}
+html body nav.tabs .row a:hover{color:#1A3658!important;background:#E3EAF3!important;border-color:#1A3658!important}
+html body nav.tabs .row a[aria-selected="true"],html body nav.tabs .row a[aria-current="true"],html body nav.tabs .row a[aria-current="page"]{color:#FFFFFF!important;background:#1A3658!important;border:3px solid #1A3658!important;text-decoration:underline!important;text-underline-offset:4px!important}
+</style>
 </head>
 <body data-section="lycee-pro" class="mode-eleve english-look">
   <header class="site-header">

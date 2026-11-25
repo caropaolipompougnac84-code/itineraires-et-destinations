@@ -7,3 +7,5 @@
 - `thames-albert-embankment-boats.jpg` : File:Albert Embankment, London - geograph.org.uk - 4518046.jpg. The Thames at the Albert Embankment. Photo: Alan Hunt. CC BY-SA 2.0, Wikimedia Commons.
 - `sis-building-from-the-river.jpg` : File:London - Secret Intelligence Service Building (1).jpg. The SIS building from across the Thames. Photo: Fred Romero. CC BY 2.0, Wikimedia Commons.
 - `jubilee-walkway-albert-embankment.jpg` : File:London - Albert Embankment - South Bank - Jubilee Walkway - View NNE towards Millbank Tower, Victoria Tower & London Eye.jpg. The Jubilee Walkway on the Albert Embankment. Photo: Txllxt TxllxT. CC BY-SA 4.0, Wikimedia Commons.
+
+- `connery-db5-andermatt-1964.jpg` : File:ETH-BIB Goldfinger 1964 – Com C13-035-005.jpg. Sean Connery at the wheel of an Aston Martin DB5, location work at the Aurora petrol station, Andermatt, 1964. ETH-Bibliothek Zürich, Bildarchiv / Fotograf: Comet Photo AG (Zürich) / Com_C13-035-005 / CC BY-SA 4.0, Wikimedia Commons.

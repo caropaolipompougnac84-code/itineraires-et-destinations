@@ -8,4 +8,4 @@
 - `sheep-creek-bridge-bc.jpg` : File:BC Highway 20 Sheep Creek Bridge dllu.jpg. Highway 20 and the Sheep Creek Bridge, British Columbia. Photo: Dllu. CC BY-SA 4.0, Wikimedia Commons.
 - `peace-river-valley.jpg` : File:Peace River Valley.jpg. Peace River Valley. Photo: The Cosmonaut. CC BY-SA 2.5 ca, Wikimedia Commons.
 - `stanley-park-seawall.jpg` : File:Stanley Seawall.jpg. The Stanley Park seawall, Vancouver. Photo: bobanny. Public domain, Wikimedia Commons.
-- `vancouver-seawall.jpg` : File:Seawall Vancouver.jpg. The seawall, Vancouver. CC BY-SA 2.0, Wikimedia Commons.
+- `vancouver-seawall.jpg` : File:Seawall Vancouver.jpg. The seawall, Vancouver. Photo: Andrew Raun. CC BY-SA 2.0, Wikimedia Commons.

@@ -655,7 +655,7 @@ def build_s7():
 )}
 {trace("At the border, declare food, plants, animal products, wood, and cash of AUD 10,000 or more. When in doubt, declare. Declaring does not cost you anything.")}
 {homework("Make a checklist of 8 items for your own bag. Tick what you must declare.", "8")}
-{more("Site officiel", '<p><a href="https://www.abf.gov.au/entering-and-leaving-australia/going-through-border-control/what-can-i-bring">Australian Border Force · What can I bring?</a></p>')}
+{more("Site officiel", '<p><a href="https://www.abf.gov.au/entering-and-leaving-australia/can-you-bring-it-in">Australian Border Force · What can I bring?</a></p>')}
 '''
     body = wrap_lesson(body, "s7")
     page("s7/index.html", f"{TITLE} · Séance 7",
@@ -716,7 +716,7 @@ def build_s8():
 {more("Sources", '''
 <ul>
 <li><a href="https://www.fairwork.gov.au/starting-employment/minimum-wages">Fair Work Ombudsman · minimum wages</a></li>
-<li><a href="https://www.banque-france.fr/fr/taux-de-change">Banque de France · taux de change</a></li>
+<li><a href="https://www.banque-france.fr/fr/publications-et-statistiques/statistiques/taux-et-cours/taux-de-change-parites-quotidiennes">Banque de France · taux de change</a></li>
 <li><a href="https://www.ato.gov.au/">Australian Taxation Office</a></li>
 </ul>
 ''')}

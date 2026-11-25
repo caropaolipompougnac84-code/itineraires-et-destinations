@@ -66,7 +66,7 @@ figure img{display:block;margin:0 auto;height:auto;border-radius:6px}
 .fig-cover img{max-width:60%;width:100%}
 .fig-wide img{width:100%}
 figcaption{font-size:18px;color:var(--soft);font-style:italic;margin-top:.5rem;line-height:1.45}
-@media (max-width:700px){.sub-dys,.sub-dys p,.sub-dys li,.sub-dys td{font-size:21px}.fig-cover img{max-width:100%}.stp-main,.stp-main p,.stp-main li,.stp-main td{font-size:20px}}
+@media (max-width:700px){.sub-dys,.sub-dys p,.sub-dys li,.sub-dys td{font-size:21px}.fig-cover img{max-width:100%}.stp-main,.stp-main p,.stp-main li,.stp-main td,.stp-main th{font-size:22px}}
 .video-card{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start;margin:1rem 0;padding:.9rem;border:2px solid var(--line);border-radius:14px;background:var(--pale)}
 .video-thumb{position:relative;display:block;max-width:420px;width:100%}
 .video-thumb img{width:100%;height:auto;display:block;border-radius:10px}
@@ -180,7 +180,7 @@ figcaption,.video-src,.panel-foot,.tab-manage,.act-note,.blk-label,.prof::before
 img,video{max-width:100%;height:auto}
 .stp-main table{word-break:break-word}
 @media (max-width:420px){
-  .stp-main,.stp-main p,.stp-main li,.stp-main td,.stp-main th{font-size:18px}
+  .stp-main,.stp-main p,.stp-main li,.stp-main td,.stp-main th{font-size:22px}
   .fig-cover img{max-width:100%}
   .marques-l{grid-template-columns:1fr}
   h1,.stp-head h1{overflow-wrap:anywhere}

@@ -23,7 +23,7 @@ header.top{background:var(--navy);color:#fff}
 header.top .wrap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.4rem 1rem;padding-top:.8rem;padding-bottom:.8rem}
 header.top .brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.55rem;color:#fff;text-decoration:none;letter-spacing:.02em}
 nav.lessons{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-nav.lessons .wrap{display:flex;gap:.4rem;overflow-x:auto;padding-top:.5rem;padding-bottom:.5rem;scrollbar-width:thin}
+nav.lessons .wrap{display:flex;flex-wrap:wrap;gap:.4rem;overflow-x:auto;padding-top:.5rem;padding-bottom:.5rem;scrollbar-width:thin}
 nav.lessons a{flex:0 0 auto;font-size:1.375rem;text-decoration:none;padding:.45rem .85rem;border:1px solid var(--line);border-radius:2rem;color:var(--navy);white-space:nowrap}
 nav.lessons a[aria-current]{background:var(--navy);color:#fff;border-color:var(--navy)}
 .kicker{font-size:1.375rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin:1.6rem 0 0}

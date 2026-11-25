@@ -274,6 +274,28 @@
       "credit": "Bairbre Duggan, Fifteen Year Old, huile sur panneau."
     },
     {
+      "id": "lp-anglais-from-vampire-to-superhero",
+      "title": "Anglais · Seconde bac pro · From Vampire to Superhero: Dare to reinvent yourself!",
+      "summary": "Quatre leçons d’anglais, Seconde bac pro, A2+ vers B1 : comment un jeune artiste ou un jeune professionnel casse une étiquette et construit un nouveau parcours. Version élève, version professeur et version dys.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "2de",
+      "levelLabel": "Seconde bac pro · toutes filières · A2+ vers B1",
+      "collection": "lp-anglais",
+      "themes": [
+        "culture",
+        "travail",
+        "identite",
+        "oral",
+        "ecrit"
+      ],
+      "duration": "4 leçons de 1 h",
+      "url": "https://itineraires-destinations.fr/licence-to-learn/from-vampire-to-superhero/",
+      "date": "2026-11-25",
+      "image": "from-vampire-to-superhero.jpg",
+      "credit": "Carte typographique."
+    },
+    {
       "id": "lp-anglais-trades-in-english",
       "title": "Anglais · CAP, bac pro et CFA · Learning a Job and Keeping Going to School: Dual-Track Curriculum",
       "summary": "Vingt dialogues en anglais, entre un professionnel et un client, pour le CAP, le bac professionnel et le CFA. Chaque vidéo a sa fiche élève et son corrigé, en pdf, docx et odt.",

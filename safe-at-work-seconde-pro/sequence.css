@@ -189,3 +189,23 @@ img,video{max-width:100%;height:auto}
   .paliers-nav{display:none!important}
   .palier{display:block!important}
 }
+
+/* Čumil opening image: portrait of the statue in the street */
+.fig-cumil img{
+  max-width:min(100%, 36rem);
+  width:auto;
+  height:auto;
+  max-height:80vh;
+}
+@media (max-width:700px){
+  .fig-cumil img{max-width:100%;max-height:none}
+}
+#cumil-prompt ul{margin:.2rem 0 .8rem 1.2rem}
+#cumil-prompt li{margin:.15rem 0}
+.fig-cumil + p,
+#cumil-prompt,
+#cumil-prompt p,
+#cumil-prompt li{
+  font-size:22px!important;
+  line-height:1.55;
+}

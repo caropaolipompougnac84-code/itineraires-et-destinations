@@ -1,4 +1,4 @@
-/* Quiz de vocabulaire professionnel : moteur commun */
+/* Workplace vocabulary quiz: shared engine */
 (function(){
   "use strict";
   var DATA = window.QUIZ_DATA; if(!DATA) return;
@@ -15,7 +15,7 @@
   function loadVoices(){ if("speechSynthesis" in window){ voices = window.speechSynthesis.getVoices() || []; } }
   if("speechSynthesis" in window){ loadVoices(); window.speechSynthesis.onvoiceschanged = loadVoices; }
   function speak(text){
-    if(!("speechSynthesis" in window)){ alert("La lecture audio n'est pas disponible sur cet appareil."); return; }
+    if(!("speechSynthesis" in window)){ alert("The audio cannot be played on this device."); return; }
     var u = new SpeechSynthesisUtterance(text);
     u.lang = "en-GB"; u.rate = 0.85;
     var v = voices.filter(function(x){return /^en[-_]GB/i.test(x.lang);})[0];
@@ -33,17 +33,17 @@
     steps = [];
     var mcItems = dys ? shuffle(items).slice(0,8) : shuffle(items);
     mcItems.forEach(function(it){
-      steps.push({type:"mc", part:"1. Du français à l'anglais", prompt:it.fr, answer:it.en, say:it.en, item:it,
+      steps.push({type:"mc", part:"1. From French to English", prompt:it.fr, answer:it.en, say:it.en, item:it,
         options:shuffle([it.en].concat(others(enAll,it.en,nOpt)))});
     });
     shuffle(items).slice(0, dys ? 4 : 6).forEach(function(it){
-      steps.push({type:"listen", part:"2. Écouter et choisir", answer:it.fr, say:it.en,
+      steps.push({type:"listen", part:"2. Listen and choose", answer:it.fr, say:it.en,
         options:shuffle([it.fr].concat(others(frAll,it.fr,nOpt)))});
     });
     var mp = shuffle(items).slice(0, dys ? 4 : 6);
-    steps.push({type:"match", part:"3. Associer", pairs:mp});
+    steps.push({type:"match", part:"3. Match", pairs:mp});
     shuffle(DATA.gaps).slice(0, dys ? 4 : 6).forEach(function(g){
-      steps.push({type:"gap", part:"4. Compléter la phrase", prompt:g.s, answer:g.a, say:g.s.replace("___", g.a),
+      steps.push({type:"gap", part:"4. Complete the sentence", prompt:g.s, answer:g.a, say:g.s.replace("___", g.a),
         options:shuffle([g.a].concat(shuffle(g.d).slice(0,nOpt)))});
     });
     total = steps.reduce(function(n,s){return n + (s.type==="match" ? s.pairs.length : 1);},0);
@@ -60,28 +60,28 @@
   }
 
   function nextButton(fb){
-    var b = el("button","btn primary","Suivant"); b.type="button";
+    var b = el("button","btn primary","Next"); b.type="button";
     b.addEventListener("click", function(){ idx++; render(); });
     fb.appendChild(b); b.focus();
   }
 
   function sayBtn(text, label){
-    var b = el("button","btn say", label || "Écouter"); b.type="button";
-    b.setAttribute("aria-label", (label || "Écouter") + " en anglais");
+    var b = el("button","btn say", label || "Listen"); b.type="button";
+    b.setAttribute("aria-label", (label || "Listen") + " in English");
     b.addEventListener("click", function(){ speak(text); });
     return b;
   }
 
   function renderChoice(step){
     if(step.type === "listen"){
-      root.appendChild(el("p",null,"Écoutez le mot anglais, puis choisissez sa traduction."));
-      var lb = sayBtn(step.say, "Écouter"); lb.classList.add("primary"); lb.dataset.role="listen";
+      root.appendChild(el("p",null,"Listen to the English word, then choose its translation."));
+      var lb = sayBtn(step.say, "Listen"); lb.classList.add("primary"); lb.dataset.role="listen";
       var r = el("div","row"); r.appendChild(lb); root.appendChild(r);
     } else if(step.type === "gap"){
-      root.appendChild(el("p",null,"Choisissez le mot qui complète la phrase."));
+      root.appendChild(el("p",null,"Choose the word that completes the sentence."));
       root.appendChild(el("p","prompt sentence", step.prompt.replace("___","________")));
     } else {
-      root.appendChild(el("p",null,"Comment dit-on en anglais :"));
+      root.appendChild(el("p",null,"How do you say this in English:"));
       if(step.item && step.item.img){
         var fig = el("figure","qfig"), im = el("img","qimg");
         im.src = step.item.img; im.alt = step.item.fr; im.width = step.item.w; im.height = step.item.h;
@@ -97,10 +97,10 @@
       b.addEventListener("click", function(){
         var all = box.querySelectorAll("button"); all.forEach(function(x){x.disabled=true;});
         var good = (o === step.answer);
-        if(good){ score++; b.classList.add("ok"); fb.textContent="Bravo, c'est juste !"; fb.className="feedback ok"; }
+        if(good){ score++; b.classList.add("ok"); fb.textContent="Well done, that is right!"; fb.className="feedback ok"; }
         else { b.classList.add("ko"); all.forEach(function(x){ if(x.textContent===step.answer) x.classList.add("ok"); });
-          fb.textContent = "Pas tout à fait. La bonne réponse : " + step.answer; fb.className="feedback ko"; }
-        var r2 = el("div","row"); r2.appendChild(sayBtn(step.say, "Réécouter"));
+          fb.textContent = "Not quite. The right answer: " + step.answer; fb.className="feedback ko"; }
+        var r2 = el("div","row"); r2.appendChild(sayBtn(step.say, "Listen again"));
         fb.parentNode.insertBefore(r2, fb.nextSibling);
         nextButton(r2);
       });
@@ -110,9 +110,9 @@
   }
 
   function renderMatch(step){
-    root.appendChild(el("p",null,"Touchez un mot anglais, puis sa traduction française."));
+    root.appendChild(el("p",null,"Touch an English word, then its French translation."));
     var m = el("div","match"), cE = el("div","col"), cF = el("div","col");
-    cE.appendChild(el("p","part","Anglais")); cF.appendChild(el("p","part","Français"));
+    cE.appendChild(el("p","part","English")); cF.appendChild(el("p","part","Français"));
     var fb = el("p","feedback"); fb.setAttribute("aria-live","polite");
     var sel = null, done = 0, firstTry = {};
     step.pairs.forEach(function(p){ firstTry[p.en] = true; });
@@ -125,16 +125,16 @@
       var b = el("button","btn pair", p.fr); b.type="button"; b.dataset.en=p.en;
       b.addEventListener("click", function(){
         if(b.disabled) return;
-        if(!sel){ fb.textContent="Touchez d'abord un mot anglais."; fb.className="feedback ko"; return; }
+        if(!sel){ fb.textContent="First touch an English word."; fb.className="feedback ko"; return; }
         if(sel.dataset.en === p.en){
           [sel,b].forEach(function(x){x.classList.remove("sel");x.classList.add("ok");x.disabled=true;});
           if(firstTry[p.en]) score++;
-          done++; sel=null; fb.textContent="Bravo !"; fb.className="feedback ok";
-          if(done === step.pairs.length){ fb.textContent="Toutes les paires sont trouvées."; var rr = el("div","row"); root.appendChild(rr); nextButton(rr); }
+          done++; sel=null; fb.textContent="Well done!"; fb.className="feedback ok";
+          if(done === step.pairs.length){ fb.textContent="You have found all the pairs."; var rr = el("div","row"); root.appendChild(rr); nextButton(rr); }
         } else {
           firstTry[sel.dataset.en] = false;
           b.classList.add("ko"); setTimeout(function(){b.classList.remove("ko");},700);
-          fb.textContent="Essayez encore."; fb.className="feedback ko";
+          fb.textContent="Try again."; fb.className="feedback ko";
         }
       });
       cF.appendChild(b);
@@ -143,15 +143,15 @@
   }
 
   function renderEnd(){
-    root.appendChild(el("h2",null,"Résultat"));
+    root.appendChild(el("h2",null,"Result"));
     root.appendChild(el("p","score", score + " / " + total));
-    var pct = score/total, msg = pct>=0.8 ? "Excellent travail !" : pct>=0.5 ? "Bon travail, continuez !" : "Reprenez la liste de vocabulaire, puis recommencez.";
+    var pct = score/total, msg = pct>=0.8 ? "Excellent work!" : pct>=0.5 ? "Good work, keep going!" : "Look at the word list again, then start again.";
     root.appendChild(el("p",null,msg));
     var r = el("div","row");
-    var b = el("button","btn primary","Recommencer"); b.type="button"; b.id="restart";
+    var b = el("button","btn primary","Start again"); b.type="button"; b.id="restart";
     b.addEventListener("click", function(){ build(); render(); });
     r.appendChild(b);
-    var a = el("a","btn","Voir la liste de vocabulaire"); a.href="#vocabulaire"; r.appendChild(a);
+    var a = el("a","btn","See the word list"); a.href="#vocabulaire"; r.appendChild(a);
     root.appendChild(r); root.dataset.finished = "1"; b.focus();
   }
 

@@ -34,8 +34,8 @@
       var box=d.getElementById(b.getAttribute('aria-controls'));
       if(box&&box.closest('.prof-only')&&!isProf) return;
       b.setAttribute('aria-expanded',open?'true':'false');
-      var lab=b.getAttribute('data-l')||' les réponses';
-      b.textContent=(open?'Cacher':'Afficher')+lab;
+      var lab=b.getAttribute('data-l')||' the answers';
+      b.textContent=(open?'Hide':'Show')+lab;
     });
     [].forEach.call(d.querySelectorAll('[data-act="reponses"]'),function(b){
       b.setAttribute('aria-pressed',open?'true':'false');
@@ -81,8 +81,8 @@
       var open=b.getAttribute('aria-expanded')==='true';
       box.hidden=open;
       b.setAttribute('aria-expanded',open?'false':'true');
-      var lab=b.getAttribute('data-l')||' les réponses';
-      b.textContent=(open?'Afficher':'Cacher')+lab;
+      var lab=b.getAttribute('data-l')||' the answers';
+      b.textContent=(open?'Show':'Hide')+lab;
       return;
     }
   });

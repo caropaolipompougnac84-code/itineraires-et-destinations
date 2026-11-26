@@ -27,7 +27,7 @@
     var b=e.target.closest('.btn-corr');
     if(b){var box=d.getElementById(b.getAttribute('aria-controls'));if(!box)return;
       var open=b.getAttribute('aria-expanded')==='true';
-      box.hidden=open;b.setAttribute('aria-expanded',open?'false':'true');b.textContent=open?'Afficher':'Cacher';return;}
+      box.hidden=open;b.setAttribute('aria-expanded',open?'false':'true');b.textContent=open?'Show the answer key':'Hide the answer key';return;}
     var m=e.target.closest('.mode-btn[data-mode]');
     if(m){setMode(m.getAttribute('data-mode'));return;}
     var dy=e.target.closest('.mode-btn[data-dys]');

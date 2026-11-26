@@ -42,7 +42,7 @@ body.dys .toolkit .card p,body.dys .toolkit li{max-width:60ch}
 .toolkit .card h2{font-family:"Playfair Display", Georgia, serif;color:var(--green);margin:0 0 8px;font-size:1.3em}
 .toolkit .card h3{margin:12px 0 6px;color:var(--green);font-size:1.05em}
 .toolkit .prof{border-left:5px solid var(--gold);background:#fffaf0}
-.toolkit .prof::before{content:"Version prof";display:inline-block;font-size:.75em;font-weight:bold;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+.toolkit .prof::before{content:"Teacher version";display:inline-block;font-size:.75em;font-weight:bold;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
 body.eleve .toolkit .prof{display:none}
 .toolkit .bilan{border:2px dashed var(--green);background:var(--green2)}
 .toolkit .bilan h3{margin-top:0}
@@ -157,9 +157,9 @@ body.eleve .toolkit .prof{display:none}
   </div>
 
   <div class="bar">
-    <button type="button" id="bProf" class="on">Version prof</button>
-    <button type="button" id="bEleve">Version élève</button>
-    <button type="button" id="bDys">Version dys</button>
+    <button type="button" id="bProf" class="on">Teacher version</button>
+    <button type="button" id="bEleve">Student version</button>
+    <button type="button" id="bDys">Dys-friendly version</button>
     <button type="button" id="bPrint">Imprimer</button>
   </div>
 
@@ -422,7 +422,7 @@ function render(){
  <p><b>Volume :</b> 6 heures : quatre séances de 55 minutes, calibrées sur 52, et la séance 5 en deux périodes de 52 minutes (oral, puis écrit).</p>
  <p><b>Fil rouge :</b> parler à un client anglais comme on aimerait qu'on nous parle, poliment, lentement, clairement.</p>
  <div class="tbl-scroll"><table>
- <tr><th>Séance</th><th>Objectif</th><th>Supports</th><th>Trace écrite</th><th>Évaluation</th><th>Date</th><th>Fait</th></tr>
+ <tr><th>Séance</th><th>Objectif</th><th>Supports</th><th>Lesson summary</th><th>Assessment</th><th>Date</th><th>Fait</th></tr>
  <tr><td>1. My Workplace</td><td>Décrire le tableau, nommer 8 mots du métier</td><td>Tableau projeté, liste de mots</td><td>Carte mentale (3 branches)</td><td>Bilan écrit 1</td><td></td><td>☐</td></tr>
  <tr><td>2. Working Day and Customer</td><td>Dire l'heure, décrire sa journée, accueillir un client</td><td>Journée type, 7 règles d'or, dialogue en 6 étapes, cartes</td><td>Branche Times, dialogue recopié</td><td>Bilan écrit 2</td><td></td><td>☐</td></tr>
  <tr><td>3. Safety First</td><td>Énoncer les règles avec must et mustn't</td><td>Règles du métier, jeu Supervisor Says</td><td>Branche Rules</td><td>Bilan écrit 3</td><td></td><td>☐</td></tr>
@@ -432,8 +432,8 @@ function render(){
  <h3>Avant de commencer</h3>
  <p>Vérifier que le tableau s'affiche en ligne. Photocopier la fiche issue de secours pour chaque élève, au cas où. Prévoir les téléphones des élèves pour enregistrer l'oral.</p>
  <h3>Différenciation</h3>
- <p>Version dys en haut de page. Élèves en difficulté : dialogue en 6 étapes donné en entier, ils lisent puis remplacent un seul mot. Élèves à l'aise : ils jouent un client qui pose une question imprévue.</p>
- <h3>Élève absent</h3>
+ <p>Dys-friendly version en haut de page. Élèves en difficulté : dialogue en 6 étapes donné en entier, ils lisent puis remplacent un seul mot. Élèves à l'aise : ils jouent un client qui pose une question imprévue.</p>
+ <h3>For absent students</h3>
  <p>Il rattrape avec la fiche issue de secours et passe l'oral d'une minute à la séance suivante.</p>
  <h3>Flashcards</h3>
  <p>À chaque séance, quelques minutes pour fabriquer ses propres cartes à la main sur des bristols (consignes, matériel et grille dans la section Flashcards, plus bas sur cette page). Le paquet est noté sur 10.</p>
@@ -453,7 +453,7 @@ function render(){
 <li>Bilan écrit 1. <span class="pdr-time">9 min</span></li>
 </ol>
 <ul class="pdr-end">
-<li><b>Trace écrite.</b> Carte mentale (trois branches) et le bilan écrit 1 (my workplace in 3 sentences).</li>
+<li><b>Lesson summary.</b> Carte mentale (trois branches) et le bilan écrit 1 (my workplace in 3 sentences).</li>
 <li><b>Participation.</b> Chacun parle au moins une fois : une proposition de métier sur le tableau, ou une phrase de description.</li>
 <li><b>Travail pour la séance suivante.</b> Apprendre huit mots du métier ; relire la carte mentale.</li>
 </ul>
@@ -483,7 +483,7 @@ function render(){
 <li>Bilan écrit 2. <span class="pdr-time">9 min</span></li>
 </ol>
 <ul class="pdr-end">
-<li><b>Trace écrite.</b> Branche Times, dialogue recopié, et le bilan écrit 2 (my day in 4 sentences).</li>
+<li><b>Lesson summary.</b> Branche Times, dialogue recopié, et le bilan écrit 2 (my day in 4 sentences).</li>
 <li><b>Participation.</b> Chacun parle au moins une fois : une réplique du jeu de rôle, ou un mot de la séance 1 au tour de classe.</li>
 <li><b>Travail pour la séance suivante.</b> Relire les sept règles d’or et le dialogue en six étapes.</li>
 </ul>
@@ -537,7 +537,7 @@ function render(){
 <li>Bilan écrit 3. On complète la branche Rules de la carte mentale. <span class="pdr-time">9 min</span></li>
 </ol>
 <ul class="pdr-end">
-<li><b>Trace écrite.</b> Branche Rules et le bilan écrit 3 (4 safety rules).</li>
+<li><b>Lesson summary.</b> Branche Rules et le bilan écrit 3 (4 safety rules).</li>
 <li><b>Participation.</b> Chacun parle au moins une fois : une phrase avec must ou mustn’t, ou un tour au jeu Supervisor Says.</li>
 <li><b>Travail pour la séance suivante.</b> Relire les quatre règles de sécurité.</li>
 </ul>
@@ -561,7 +561,7 @@ function render(){
 <li>Bilan écrit 4. <span class="pdr-time">9 min</span></li>
 </ol>
 <ul class="pdr-end">
-<li><b>Trace écrite.</b> Bilan écrit 4 (réponses à deux questions du jury).</li>
+<li><b>Lesson summary.</b> Bilan écrit 4 (réponses à deux questions du jury).</li>
 <li><b>Participation.</b> Chacun parle au moins une fois : une question ou une réponse au hot seat.</li>
 <li><b>Travail pour la séance suivante.</b> Préparer le plan de présentation en cinq étapes.</li>
 </ul>
@@ -586,7 +586,7 @@ function render(){
 <li>Retour collectif. <span class="pdr-time">6 min</span></li>
 </ol>
 <ul class="pdr-end">
-<li><b>Trace écrite.</b> Le plan de présentation complété.</li>
+<li><b>Lesson summary.</b> Le plan de présentation complété.</li>
 <li><b>Participation.</b> Chacun parle au moins une fois : un passage comme candidat ou comme juré.</li>
 <li><b>Travail pour la séance suivante.</b> Revoir le plan avant la note de synthèse (période B).</li>
 </ul>
@@ -599,7 +599,7 @@ function render(){
 <li>Relecture. <span class="pdr-time">5 min</span></li>
 </ol>
 <ul class="pdr-end">
-<li><b>Trace écrite.</b> La note de synthèse finale (60 à 80 mots).</li>
+<li><b>Lesson summary.</b> La note de synthèse finale (60 à 80 mots).</li>
 <li><b>Participation.</b> Chacun parle au moins une fois : une phrase de rappel sur l’un des trois documents, avant l’écrit.</li>
 <li><b>Travail pour la séance suivante.</b> Fin de la séquence ; relire sa note si le professeur le demande.</li>
 </ul>

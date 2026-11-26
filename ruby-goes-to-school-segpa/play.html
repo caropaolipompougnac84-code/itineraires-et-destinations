@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Families: play at the board · Ruby Goes to School · English · SEGPA · Itinéraires et destinations</title>
+  <meta name="description" content="Play Happy Families at the interactive board: draw a card, turn it, and put it in its family. Seven families from Ruby Goes to School, for SEGPA English (A1 towards A2)." />
+  <meta name="author" content="Madame Carole Paoli Pompougnac" />
+  <link rel="canonical" href="https://itineraires-destinations.fr/ruby-goes-to-school-segpa/play.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Itinéraires et destinations" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Happy Families: play at the board · Ruby Goes to School · English · SEGPA · Itinéraires et destinations" />
+  <meta property="og:description" content="Play Happy Families at the interactive board: draw a card, turn it, and put it in its family. Seven families from Ruby Goes to School, for SEGPA English (A1 towards A2)." />
+  <meta property="og:url" content="https://itineraires-destinations.fr/ruby-goes-to-school-segpa/play.html" />
+  <meta property="og:image" content="https://itineraires-destinations.fr/ruby-goes-to-school-segpa/img/rockwell-problem-we-all-live-with-1963.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Sans+3:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+.ruby *,.ruby *::before,.ruby *::after{all:revert;box-sizing:border-box}
+.ruby{display:block}
+.compl-modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.ruby .compl-modes button{font:700 22px/1.2 "Source Sans 3",Verdana,sans-serif;border:2px solid #1A3658;background:#fff;color:#1A3658;border-radius:12px;padding:.55rem 1rem;cursor:pointer;min-height:56px}
+.ruby .compl-modes button[aria-pressed="true"]{background:#1A3658;color:#fff}
+body.mode-eleve .ruby .prof-only{display:none!important}
+.ruby .kicker-level{font:700 22px/1.4 "Source Sans 3",Verdana,sans-serif;letter-spacing:.04em;color:#1d3557;margin:.2em 0 0}
+@media print{.site-header,.site-footer,.breadcrumb,.compl-modes{display:none!important}}
+@font-face{font-family:"Andika";
+  src:url("fonts/Andika-Regular.ttf") format("truetype");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;}
+@font-face{font-family:"Andika";
+  src:url("fonts/Andika-Bold.ttf") format("truetype");
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;}
+.ruby *{box-sizing:border-box}
+.ruby{margin:0;font-family:Georgia,"Times New Roman",serif;background:#f4f7fb;color:#1a2233;line-height:1.5;font-size:22px}
+.ruby .rwrap{max-width:1600px;margin:auto;padding:12px 16px 28px}
+.ruby .umb{background:#1d3557;color:#fff;font-weight:700;padding:8px 12px 2px;border-radius:10px 10px 0 0;text-align:center;font-size:22px;letter-spacing:.02em}
+.ruby .level{background:#1d3557;color:#dfe8f5;font-weight:400;padding:2px 12px 10px;border-radius:0 0 10px 10px;text-align:center;font-size:22px}
+.ruby h1{color:#1d3557;font-size:2rem;margin:.5em 0 .35em;line-height:1.25}
+.ruby h2{color:#a4262c;border-bottom:2px solid #2a8c82;padding-bottom:4px;margin-top:1.4em;font-size:1.5rem}
+.ruby a{color:#0b5cad;overflow-wrap:anywhere}
+.ruby nav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.ruby nav a{padding:10px 14px;border:2px solid #2a8c82;border-radius:16px;text-decoration:none;color:#1a2233;background:#fff;font-size:22px;min-height:48px;display:inline-flex;align-items:center}
+.ruby nav a.on{background:#1d3557;border-color:#1d3557;color:#fff}
+.ruby nav a:focus,.ruby button:focus,.ruby a.btn:focus,.ruby .hf-card:focus{outline:3px solid #0b5cad;outline-offset:3px}
+.ruby .skip{position:absolute;left:-999px;top:8px;background:#fff;color:#1d3557;padding:8px 14px;border:3px solid #1d3557;border-radius:10px;font-size:22px;z-index:20}
+.ruby .skip:focus{left:12px}
+.ruby .intro{background:#fff;border:3px solid #1d3557;border-radius:14px;padding:14px 16px;margin:12px 0}
+.ruby .intro p{margin:.45em 0}
+.ruby .board{background:#fff;border:3px solid #1d3557;border-radius:16px;padding:14px 14px 18px;margin:14px 0}
+.ruby .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin:0 0 14px}
+.ruby .team-btn,.ruby .action-btn,.ruby .listen-btn,.ruby .put-btn,.ruby .dys-btn{font:inherit;font-size:22px;font-weight:700;min-height:56px;padding:10px 18px;border-radius:14px;border:3px solid #1d3557;background:#fff;color:#1d3557;cursor:pointer;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.ruby .team-btn[aria-pressed="true"].team-a{background:#e63946;border-color:#e63946;color:#fff}
+.ruby .team-btn[aria-pressed="true"].team-b{background:#1e88e5;border-color:#1e88e5;color:#fff}
+.ruby .action-btn{background:#1d3557;color:#fff}
+.ruby .action-btn:hover{background:#16304f}
+.ruby .action-btn:disabled{background:#8aa0bf;border-color:#8aa0bf;color:#fff;cursor:not-allowed}
+.ruby .action-btn.secondary{background:#2a8c82;border-color:#2a8c82;color:#fff}
+.ruby .action-btn.secondary:hover{background:#23756d}
+.ruby .action-btn.warn{background:#fff;color:#a4262c;border-color:#a4262c}
+.ruby .dys-btn[aria-pressed="true"]{background:#4b3f9e;border-color:#4b3f9e;color:#fff}
+.ruby .scores{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 12px}
+.ruby .score{background:#ebf2fb;border:2px solid #1d3557;border-radius:12px;padding:10px 12px;font-size:22px;min-height:56px;display:flex;align-items:center}
+.ruby .score.team-a{border-color:#e63946;background:#ffe5e7}
+.ruby .score.team-b{border-color:#1e88e5;background:#e3f1fc}
+.ruby .score b{margin-right:.4em}
+.ruby .status{font-size:22px;background:#e5f4f2;border:3px solid #2a8c82;border-radius:14px;padding:12px 16px;margin:0 0 16px;min-height:64px;display:flex;align-items:center}
+.ruby .status.is-yes{background:#e6f8ea;border-color:#2bb24c}
+.ruby .status.is-no{background:#ffe5e7;border-color:#e63946}
+.ruby .status.is-done{background:#fff8d6;border-color:#ffc61a}
+.ruby .play-area{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
+.ruby .stage h2,.ruby .families-block h2{margin:.2em 0 .7em;font-size:1.375rem}
+.ruby .card-slot{min-height:280px;display:flex;justify-content:center;align-items:stretch}
+.ruby .card-empty{width:100%;max-width:420px;min-height:280px;border:3px dashed #1d3557;border-radius:18px;background:#ebf2fb;color:#1d3557;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:22px}
+.ruby .hf-card{width:100%;max-width:420px;min-height:480px;perspective:1400px;border:0;background:transparent;padding:0;cursor:pointer;font:inherit;touch-action:manipulation}
+.ruby .hf-card .inner{position:relative;width:100%;min-height:480px;height:100%;transform-style:preserve-3d;transition:transform .45s ease}
+.ruby .hf-card.is-flipped .inner{transform:rotateY(180deg)}
+.ruby .hf-card .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:5px solid #1d3557;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.ruby .hf-card .back{background:linear-gradient(180deg,#1d3557 0%,#16304f 100%);color:#fff;align-items:center;justify-content:center;text-align:center;padding:20px;gap:14px}
+.ruby .hf-card .back .game-name{font-size:1.6rem;font-weight:700;letter-spacing:.06em;line-height:1.2}
+.ruby .hf-card .back .seq-name{font-size:22px;letter-spacing:.04em}
+.ruby .dots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.ruby .dots span{width:18px;height:18px;border-radius:50%;border:2px solid #fff;display:inline-block}
+.ruby .hf-card .front{transform:rotateY(180deg);background:#fff;color:#1a2233;padding:0}
+.ruby .hf-card .hband{width:100%;padding:10px 12px;font-weight:700;font-size:22px;text-align:center}
+.ruby .hf-card .ph{margin:10px 12px 0;border:3px solid #1d3557;border-radius:12px;overflow:hidden;background:#ebf2fb;flex:1 1 auto;min-height:180px;display:flex;align-items:center;justify-content:center}
+.ruby .hf-card .ph img{display:block;width:100%;height:100%;max-height:280px;object-fit:contain;background:#fff}
+.ruby .hf-card .word{margin:10px 12px 0;font-size:1.7rem;font-weight:700;color:#1d3557;line-height:1.2;text-align:center}
+.ruby .hf-card .sentence{margin:6px 12px 8px;font-size:22px;text-align:center;line-height:1.35}
+.ruby .hf-card .front-actions{display:flex;justify-content:center;padding:0 12px 14px}
+.ruby .listen-btn{min-width:140px;background:#fff}
+.ruby .family-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ruby .family-tab{font:inherit;font-size:22px;font-weight:700;min-height:56px;padding:10px 12px;border-radius:14px;border:3px solid #1d3557;background:#fff;color:#1a2233;cursor:pointer;touch-action:manipulation;user-select:none;-webkit-user-select:none;flex:1 1 calc(50% - 8px);text-align:center}
+.ruby .family-tab .count{display:block;font-weight:400;font-size:22px}
+.ruby .family-tab[aria-selected="true"]{color:#fff}
+.ruby .family-tab.is-ready{box-shadow:0 0 0 3px #ffc61a}
+.ruby .family-tab.is-complete{outline:3px solid #2bb24c;outline-offset:2px}
+.ruby .family-panel{border:3px solid #1d3557;border-radius:16px;padding:12px;background:#ebf2fb;min-height:240px}
+.ruby .family-panel .panel-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:0 0 12px}
+.ruby .family-panel h3{margin:0;color:#1d3557;font-size:1.375rem;line-height:1.3}
+.ruby .badge{display:inline-block;background:#2bb24c;color:#fff;font-weight:700;font-size:22px;border-radius:999px;padding:6px 14px;min-height:44px;line-height:1.3}
+.ruby .put-btn{background:#2a8c82;border-color:#2a8c82;color:#fff;min-width:180px}
+.ruby .put-btn:hover{background:#23756d}
+.ruby .put-btn:disabled{background:#9bb8c8;border-color:#9bb8c8;color:#fff;cursor:not-allowed}
+.ruby .slots{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ruby .slot{background:#fff;border:2px solid #1d3557;border-radius:12px;min-height:120px;padding:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:22px}
+.ruby .slot.is-empty{background:#f4f7fb;color:#3c475a}
+.ruby .slot img{width:100%;max-height:110px;object-fit:contain;border-radius:8px;margin-bottom:6px}
+.ruby .slot .slot-word{font-weight:700;color:#1d3557;font-size:22px}
+.ruby .slot .slot-team{margin-top:4px;font-size:22px}
+.ruby .slot .slot-team.is-a{color:#e63946}
+.ruby .slot .slot-team.is-b{color:#1e88e5}
+.ruby .print-box{background:#fff;border:2px solid #1d3557;border-radius:14px;padding:14px 16px;margin:16px 0}
+.ruby .print-box p{margin:.45em 0}
+.ruby .btn{display:inline-flex;align-items:center;justify-content:center;margin:6px 8px 6px 0;padding:10px 16px;border-radius:12px;border:3px solid #1d3557;background:#1d3557;color:#fff;font-weight:700;text-decoration:none;font-size:22px;min-height:56px}
+.ruby .btn.alt{background:#fff;color:#1d3557}
+.ruby .prof{background:#eef0fb;border:2px solid #4b3f9e;border-radius:12px;padding:10px 14px;margin:16px 0;font-size:22px}
+.ruby .prof summary{cursor:pointer;font-weight:700;color:#4b3f9e;min-height:44px}
+.ruby .prof p{margin:.55em 0}
+.ruby footer{margin-top:28px;padding:14px;background:#1d3557;color:#fff;border-radius:10px;text-align:center;font-size:22px}
+.ruby footer a{color:#fff}
+.ruby .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+body.mode-dys .ruby,body.mode-dys .ruby button,body.mode-dys .ruby h1,body.mode-dys .ruby h2,body.mode-dys .ruby h3,body.mode-dys .ruby nav a,body.mode-dys .ruby a.btn{font-family:"Andika",Verdana,Arial,sans-serif;letter-spacing:.04em;word-spacing:.08em;line-height:1.7}
+body.mode-dys .ruby .hf-card .inner,body.mode-dys .ruby .hf-card.is-flipped .inner{transition:none}
+@media (min-width:720px){.ruby .scores{grid-template-columns:1fr 1fr}
+.ruby .family-tab{flex:1 1 calc(33.33% - 8px)}
+.ruby .slots{grid-template-columns:1fr 1fr 1fr}
+.ruby .slot{min-height:160px}
+.ruby .slot img{max-height:140px}}
+@media (min-width:1100px){.ruby .scores{grid-template-columns:repeat(4,1fr)}
+.ruby .play-area{grid-template-columns:minmax(340px,420px) 1fr;gap:28px}
+.ruby .family-tab{flex:1 1 0;min-width:0}
+.ruby .hf-card,.ruby .hf-card .inner{min-height:540px}
+.ruby .hf-card .ph img{max-height:320px}}
+@media (min-width:1500px){.ruby .team-btn,.ruby .action-btn,.ruby .family-tab,.ruby .put-btn,.ruby .listen-btn,.ruby .dys-btn,.ruby .btn{min-height:64px}
+.ruby .hf-card,.ruby .hf-card .inner{min-height:620px}
+.ruby .hf-card .word{font-size:2rem}
+.ruby .slot{min-height:200px}
+.ruby .slot img{max-height:170px}}
+@media (prefers-reduced-motion:reduce){.ruby .hf-card .inner,.ruby .hf-card.is-flipped .inner{transition:none}}
+@media print{.ruby nav,.ruby .toolbar,.ruby .put-btn,.ruby .listen-btn,.ruby .dys-btn,.ruby .action-btn,.ruby .team-btn,.ruby .skip{display:none}
+.ruby .hf-card .front{transform:none;position:relative}
+.ruby .hf-card .back{display:none}}
+.ruby .badge[hidden]{display:none !important}
+.ruby details > summary{list-style:none}
+.ruby details > summary::-webkit-details-marker{display:none}
+.ruby details > summary::marker{content:""}
+  </style>
+</head>
+<body data-section="segpa" class="mode-eleve">
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a class="brand-mark" href="../index.html">Itinéraires et destinations</a>
+        <span class="brand-tag">Séquences prêtes à l'emploi · Français, anglais · Tous niveaux</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger"><span class="sr-only">Menu</span></label>
+      <nav class="nav-main" aria-label="Navigation principale">
+                <a href="../index.html">Accueil</a>
+        <a href="../lycee-pro/index.html">Lycée professionnel</a>
+        <a href="../lycee-general/index.html">Lycée général et technologique</a>
+        <a href="../lycee-agricole/index.html">Lycée agricole</a>
+        <a href="../cfa/index.html">CFA</a>
+        <a href="../segpa/index.html" aria-current="page">6e à 3e · SEGPA</a>
+        <a href="../methodologie/index.html">Méthodologie</a>
+        <a href="../themes.html">Thèmes</a>
+        <a href="../nouveautes.html">Nouveautés</a>
+        <a href="../a-propos.html">À propos</a>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../segpa/index.html">6e à 3e · SEGPA</a></li><li><a href="../segpa/anglais.html">Anglais</a></li><li><a href="index.html">Ruby Goes to School</a></li><li aria-current="page">Play</li></ol></nav>
+  <main class="ruby" id="main">
+<a class="skip" href="#game">Skip to the game</a>
+<div class="rwrap">
+<h1>Happy Families: play at the board</h1><p class="kicker-level">English · SEGPA · A1 towards A2</p><div aria-label="Display version" class="compl-modes noprint" role="group"><button aria-pressed="true" data-compl-mode="eleve" type="button">Student version</button><button aria-pressed="false" data-compl-mode="prof" type="button">Teacher version</button></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="s1.html">Lesson 1</a>
+<a href="s2.html">Lesson 2</a>
+<a href="s3.html">Lesson 3</a>
+<a href="s4.html">Lesson 4: Final task</a>
+<a href="games.html">Relax time</a>
+<a class="on" href="play.html">Play</a>
+<a href="dys.html">Dys version</a>
+<a href="fiche.html">Worksheet</a>
+<a href="sources.html">Sources</a>
+</nav>
+<div class="intro">
+<p>Take a break and play with the words of Ruby's story. No need to cut the cards.</p>
+<p>Two teams take turns. Draw a card, turn it, then touch its family. The first team to complete a family keeps that family. The team with the most families at the end wins.</p>
+</div>
+<div class="board" id="game">
+<div class="toolbar">
+<button aria-pressed="true" class="team-btn team-a" id="team-a" type="button">Team A</button>
+<button aria-pressed="false" class="team-btn team-b" id="team-b" type="button">Team B</button>
+<button class="action-btn" id="draw-card" type="button">Draw a card</button>
+<button class="action-btn secondary" id="new-game" type="button">Shuffle / New game</button>
+<button aria-pressed="false" class="dys-btn" id="dys-toggle" type="button">Dys version</button>
+</div>
+<div aria-live="polite" class="scores">
+<div class="score" id="score-families">Complete families: 0 / 7</div>
+<div class="score team-a" id="score-a">Team A: 0 families, 0 cards</div>
+<div class="score team-b" id="score-b">Team B: 0 families, 0 cards</div>
+<div class="score" id="score-pile">Cards in the pile: 42</div>
+</div>
+<div aria-live="polite" class="status" id="game-status" role="status">Team A starts. Touch Draw a card.</div>
+<div class="play-area">
+<section aria-label="The card from the pile" class="stage">
+<h2>The card</h2>
+<div class="card-slot" id="card-slot"></div>
+</section>
+<section aria-label="The seven families" class="families-block">
+<h2>The families</h2>
+<div aria-label="The seven families" class="family-tabs" id="family-tabs" role="tablist"></div>
+<div aria-labelledby="panel-title" class="family-panel" id="panel-families" role="tabpanel">
+<div class="panel-head">
+<h3 id="panel-title">The Clothes Family</h3>
+<span class="badge" hidden="" id="complete-badge">Complete</span>
+<button class="put-btn" id="put-here" type="button">Put it here</button>
+</div>
+<div class="slots" id="family-slots"></div>
+</div>
+</section>
+</div>
+</div>
+<div class="print-box">
+<h2>Print the cards</h2>
+<p>You can also print the cards and play on the table. The paper game and the rules are on the Relax time page.</p>
+<p>
+<a class="btn" href="games.html">Relax time: rules and paper game</a>
+<a class="btn alt" href="cards.pdf">Classic cards (PDF)</a>
+<a class="btn alt" href="cards-dys.pdf">Dys cards (PDF)</a>
+<a class="btn alt" href="cards-print.html">Print from the browser</a>
+</p>
+</div>
+<details class="prof prof-only" lang="fr">
+<summary>Note pour l'enseignante</summary>
+<p>Version tableau du jeu des sept familles, conçue pour un tableau numérique interactif: plus besoin de découper les cartes. Les élèves jouent en deux équipes. À chaque tour, une équipe pioche une carte (face cachée), la retourne d'une tape ou avec le bouton, puis la range dans sa famille d'un toucher sur l'onglet, ou avec « Put it here ».</p>
+<p>Si la famille est la bonne, la carte s'y place et le tour passe à l'autre équipe. Si la famille est la mauvaise, un message invite à réessayer, sans perdre la carte. Une famille est complète à six cartes; elle est attribuée à l'équipe qui pose la dernière carte. Un compteur affiche les familles complètes et le score de chaque équipe. « Shuffle / New game » demande une deuxième tape, pour éviter d'effacer une partie en cours.</p>
+<p>Le bouton « Dys version » passe le texte en police Andika, plus aéré. Un bouton Listen lit le mot et la phrase. Pour un groupe très fragile, on peut laisser les onglets des sept familles visibles, ou ne jouer qu'avec trois familles en s'arrêtant quand celles-ci sont complètes. Les cartes à imprimer restent disponibles plus bas, et sur la page Relax time.</p>
+<p>Les illustrations des cartes sont des dessins créés pour ce jeu; le tableau de Rockwell et ses détails restent les seules images des séances.</p>
+</details>
+</div>
+</main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p style="margin:0"><strong>© 2026 Madame Carole Paoli Pompougnac · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a></strong></p>
+        <p class="muted" style="margin:0.4rem 0 0">Catalogue pédagogique · Itinéraires et destinations</p>
+      </div>
+      <div class="licence">
+        <p style="margin:0">Creative Commons licence BY-NC-SA 4.0</p>
+        <p style="margin:0.35rem 0 0">You may use and adapt these documents, with credit to their author, without commercial use, and share your versions under the same conditions.
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">Licence details</a>.</p>
+        <p class="photo-credits-foot">Norman Rockwell, The Problem We All Live With, 1963, Norman Rockwell Museum, Stockbridge. Licensed by Norman Rockwell Licensing; © Norman Rockwell Family Agency, not in the public domain. Happy Families card, Mrs. Bones: John Jaques &amp; Son, drawings attributed to John Tenniel, public domain. Card Mrs. Chip: Victoria and Albert Museum, London, MISC.47-1975, © Victoria and Albert Museum. The Happy Families card pictures in the game are drawings made for this sequence. © 2026 Madame Carole Paoli Pompougnac.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js" defer></script>
+<script src="play.js"></script>
+<script>
+(function(){
+  var KEY="id-ruby-mode-v1";
+  function setM(m){
+    document.body.classList.toggle("mode-eleve", m==="eleve");
+    document.body.classList.toggle("mode-prof", m==="prof");
+    document.querySelectorAll("[data-compl-mode]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-compl-mode")===m ? "true":"false");
+    });
+    try{localStorage.setItem(KEY,m);}catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var b=e.target.closest("[data-compl-mode]"); if(b) setM(b.getAttribute("data-compl-mode"));
+  });
+  var saved="eleve"; try{saved=localStorage.getItem(KEY)||"eleve";}catch(e){}
+  setM(saved==="prof"?"prof":"eleve");
+})();
+</script>
+</body>
+</html>

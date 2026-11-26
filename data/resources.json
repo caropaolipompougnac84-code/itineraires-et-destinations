@@ -558,6 +558,24 @@
       "credit": "Classroom video, horticulture in Limeuil"
     },
     {
+      "id": "segpa-anglais-ruby-goes-to-school",
+      "title": "English · SEGPA 6e and 5e · Ruby Goes to School",
+      "summary": "Ruby Bridges goes to a new school in 1960. Norman Rockwell's painting, colours and clothes, a short story in the past, feelings and a postcard to Ruby. Four short lessons, a dys version, a printable worksheet and a Happy Families card game.",
+      "section": "segpa",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "SEGPA 6e and 5e · A1 towards A2",
+      "collection": "segpa-anglais",
+      "themes": [
+        "culture",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/ruby-goes-to-school-segpa/",
+      "date": "2026-11-26",
+      "image": "ruby-goes-to-school-segpa.jpg",
+      "credit": "Norman Rockwell, The Problem We All Live With, 1963, Norman Rockwell Museum, Stockbridge. © Norman Rockwell Family Agency."
+    },
+    {
       "id": "segpa-anglais-masonry-words",
       "title": "English · SEGPA 4e and 3e · Bricklaying: Building Site Vocabulary",
       "summary": "Building and housing: site words in simple English. A word list, a dialogue to complete, a role play, a short Gorse spiral and a dys version. Downloads in pdf, docx and odt.",

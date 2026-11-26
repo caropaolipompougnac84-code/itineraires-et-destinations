@@ -4027,11 +4027,11 @@
     {
       "id": "lg-anglais-tle-shakespeare-in-love-terminale",
       "title": "Shakespeare in Love · Fictions and Realities: Reinventing Shakespeare",
-      "summary": "Shakespeare in Love (John Madden, 1998) : séquence flash en anglais pour la Terminale du lycée général et technologique, niveau B2, axes Fictions et réalités et Art et pouvoir. Trois leçons de 50 minutes, évaluation écrite ou orale incluse, avec Theatre and Power et Love in Shakespeare and in Rock. Version élève, version prof, version dys, version élève absent, spirale de Gorse, téléchargements pdf, docx et odt.",
+      "summary": "Shakespeare in Love (John Madden, 1998): a short English sequence for Terminale, level B2, on Fictions and Realities and Art and Power. Three lessons of 50 minutes, assessment included, with Theatre and Power and Love in Shakespeare and in Rock. Student, teacher and dys versions, a version for absent students, the Gorse spiral, and downloads in pdf, docx and odt.",
       "section": "lycee-general",
       "subject": "anglais",
       "level": "tle",
-      "levelLabel": "Terminale · lycée général et technologique · B2",
+      "levelLabel": "Terminale · B2",
       "collection": "lg-anglais",
       "themes": [
         "litterature",
@@ -4039,8 +4039,8 @@
         "oral",
         "ecrit"
       ],
-      "duration": "3 leçons de 50 minutes, évaluation incluse",
-      "materials": "Tableau numérique, fiches pdf, docx et odt, version dys, version élève absent",
+      "duration": "3 lessons × 50 min",
+      "materials": "Interactive board, printable sheets in pdf, docx and odt, dys version, version for absent students",
       "url": "https://itineraires-destinations.fr/shakespeare-in-love-terminale/",
       "date": "2026-11-26",
       "image": "shakespeare-in-love-terminale.jpg",

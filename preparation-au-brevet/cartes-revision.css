@@ -306,3 +306,47 @@
 
 /* Taille minimale 22 px : étiquettes des cartes et légende de la BD */
 .stp-main #cartes-revision .carte-cat,.stp-main #cartes-revision figcaption{font-size:22px!important}
+
+/* Grands écrans (tableau interactif) : zone des cartes élargie, texte et boutons agrandis.
+   Rien ne change en dessous de 1200 px. */
+@media (min-width:1200px){
+  #cartes-revision{
+    width:min(90vw,1400px);
+    max-width:none;
+    margin-left:calc(50% - min(90vw,1400px) / 2);
+    margin-right:0;
+  }
+  #cartes-revision .cartes-grille{
+    grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+    gap:1.6rem;
+  }
+  .stp-main #cartes-revision > p,
+  .stp-main #cartes-revision .carte-texte,
+  .stp-main #cartes-revision .qcm-liste p,
+  .stp-main #cartes-revision .qcm-liste li,
+  .stp-main #cartes-revision .qcm-reponse,
+  .stp-main #cartes-revision figcaption{
+    font-size:26px!important;
+    line-height:1.45;
+  }
+  .stp-main #cartes-revision .carte-cat{font-size:26px!important}
+  .stp-main #cartes-revision .carte-flip-btn,
+  .stp-main #cartes-revision .qcm-reponse-btn{
+    font-size:28px;
+    min-height:64px;
+    padding:.7rem 1.8rem;
+    margin-top:1rem;
+  }
+  .stp-main #cartes-revision .cartes-sommaire a{
+    font-size:26px;
+    min-height:64px;
+    display:inline-flex;
+    align-items:center;
+    padding:.5rem 1.4rem;
+  }
+  #cartes-revision .bd-enzo img{
+    width:auto;
+    max-width:100%;
+    max-height:90vh;
+  }
+}

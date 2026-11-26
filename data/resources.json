@@ -1372,7 +1372,7 @@
     },
     {
       "id": "lg-lettres-1re-ponge-perec",
-      "title": "Perec et Ponge",
+      "title": "Lettres · 1re · Perec et Ponge",
       "summary": "Du secret des choses au vertige de la consommation, en Première générale et technologique. Une version Terminale spécialité HLP, pour préparer la classe prépa littéraire et l'université, sera proposée à côté de celle-ci.",
       "section": "lycee-general",
       "subject": "lettres",
@@ -1577,7 +1577,7 @@
     },
     {
       "id": "lp-anglais-sky-house",
-      "title": "English · Bac pro · Sky House Penthouse : Billionaires' Row, New York",
+      "title": "English · Bac pro · Sky House Penthouse: Billionaires' Row, New York",
       "summary": "New York real estate: a sequence in five lessons.",
       "section": "lycee-pro",
       "subject": "anglais",
@@ -1593,8 +1593,24 @@
       "facebookUrl": "https://www.facebook.com/photo/?fbid=122120576307490243&set=a.122120060253490243"
     },
     {
+      "id": "lp-anglais-english-speaking-world-celebrations",
+      "title": "English · Bac pro · English-Speaking World Celebrations",
+      "summary": "Celebrations of the English-speaking world, month by month through the school year. On air starts with Hogmanay, New Year in Scotland, then students present another celebration of the year in the same short form.",
+      "section": "lycee-pro",
+      "subject": "anglais",
+      "level": "tous",
+      "levelLabel": "Bac pro",
+      "collection": "lp-anglais",
+      "themes": [
+        "culture",
+        "oral"
+      ],
+      "url": "https://itineraires-destinations.fr/les-fetes-du-monde-anglophone/",
+      "date": "2026-11-26"
+    },
+    {
       "id": "lp-anglais-destination-australia",
-      "title": "English · Terminale bac pro and Terminale générale et technologique · Head off to Australia",
+      "title": "English · Terminale · Head off to Australia",
       "summary": "A year in Australia: a working-holiday visa, budget, work, transport and daily life. Thirteen lessons for Terminale bac pro and Terminale, plus the assessment.",
       "section": "lycee-pro",
       "subject": "anglais",
@@ -2688,7 +2704,7 @@
     },
     {
       "id": "lp-anglais-2de-team-spirit",
-      "title": "English · 2de Bac pro · Team Spirit: Sport, Fair Play and Working Together",
+      "title": "English · 2de Bac pro · Team Spirit. Sport, Fair Play and Working Together",
       "summary": "Rules or trust: what makes a real team? Eight lessons of 52 minutes, in tabs: fair play in Rio, the rules of netball, a fire crew, Margaret Maughan and the birth of the Paralympic Games, a sports day to organise, pétanque explained to a penfriend, then a team pitch and a fair-play charter. Listening, reading, speaking and writing in every lesson, language assessed, dys version.",
       "section": "lycee-pro",
       "subject": "anglais",
@@ -3003,7 +3019,7 @@
     },
     {
       "id": "lg-anglais-destination-australia",
-      "title": "English · Terminale bac pro and Terminale générale et technologique · Head off to Australia",
+      "title": "English · Terminale · Head off to Australia",
       "summary": "A year in Australia: a working-holiday visa, budget, work, transport and daily life. Thirteen lessons for Terminale bac pro and Terminale, plus the assessment.",
       "section": "lycee-general",
       "subject": "anglais",
@@ -4037,7 +4053,7 @@
     },
     {
       "id": "lg-anglais-tle-shakespeare-in-love-terminale",
-      "title": "Shakespeare in Love · Theatre Mirrored on Screen",
+      "title": "English · Tle · Shakespeare in Love · Theatre Mirrored on Screen",
       "summary": "Shakespeare in Love (John Madden, 1998): a short English sequence for Terminale, level B2, on Fictions and Realities and Art and Power. Three lessons of 50 minutes, assessment included, with Theatre and Power and Love in Shakespeare and in Rock. Student, teacher and dys versions, a version for absent students, the Gorse spiral, and downloads in pdf, docx and odt.",
       "section": "lycee-general",
       "subject": "anglais",

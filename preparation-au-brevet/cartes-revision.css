@@ -45,12 +45,17 @@
 #cartes-revision li,
 #cartes-revision .carte-texte,
 #cartes-revision .qcm-liste,
-#cartes-revision .qcm-reponse{
+#cartes-revision .qcm-reponse,
+.tbi-scene li,
+.tbi-scene .carte-texte,
+.tbi-scene .qcm-liste,
+.tbi-scene .qcm-reponse{
   font-size:22px;
   line-height:1.5;
   color:#111;
 }
-#cartes-revision h3.carte-titre{
+#cartes-revision h3.carte-titre,
+.tbi-scene h3.carte-titre{
   font-family:"Bangers","Luckiest Guy",cursive;
   font-size:clamp(1.7rem,6vw,2.15rem);
   font-weight:400;
@@ -62,7 +67,9 @@
   display:block;
 }
 #cartes-revision .carte-boss h3.carte-titre,
-#cartes-revision .carte-boss .carte-cat{
+#cartes-revision .carte-boss .carte-cat,
+.tbi-scene .carte-boss h3.carte-titre,
+.tbi-scene .carte-boss .carte-cat{
   color:#111;
   text-shadow:2px 2px 0 #fff;
 }
@@ -279,7 +286,13 @@
 .mode-dys .carte-titre,
 .mode-dys .carte-flip-btn,
 .mode-dys .qcm-reponse-btn,
-.mode-dys .cartes-sommaire a{
+.mode-dys .cartes-sommaire a,
+.mode-dys .cartes-tablist [role="tab"],
+.mode-dys .btn-tbi,
+.mode-dys .tbi-btn,
+.mode-dys .tbi-compteur,
+.mode-dys .tbi-scene .carte-titre,
+.mode-dys .tbi-scene .carte-cat{
   font-family:inherit;
   text-shadow:none;
   letter-spacing:normal;
@@ -305,7 +318,296 @@
 }
 
 /* Taille minimale 22 px : étiquettes des cartes et légende de la BD */
-.stp-main #cartes-revision .carte-cat,.stp-main #cartes-revision figcaption{font-size:22px!important}
+.stp-main #cartes-revision .carte-cat,.stp-main #cartes-revision figcaption,.tbi-scene .carte-cat{font-size:22px!important}
+
+/* Onglets par famille et mode tableau blanc interactif */
+.cartes-outils{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem 1rem;
+  align-items:flex-start;
+  justify-content:space-between;
+  margin:1rem 0 1.2rem;
+}
+.cartes-tablist{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  flex:1 1 16rem;
+}
+.cartes-tablist [role="tab"]{
+  font-family:"Bangers",cursive;
+  font-size:22px;
+  letter-spacing:.03em;
+  color:#111;
+  background:#fff;
+  border:3px solid #111;
+  border-radius:999px;
+  padding:.35rem .85rem;
+  min-height:48px;
+  cursor:pointer;
+  box-shadow:3px 3px 0 #111;
+  line-height:1.2;
+}
+.cartes-tablist [role="tab"]:hover,
+.cartes-tablist [role="tab"]:focus{
+  background:#FFD200;
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+.cartes-tablist [role="tab"][aria-selected="true"]{
+  background:#FFD200;
+  box-shadow:4px 4px 0 #FF2E93, 3px 3px 0 #111;
+}
+.btn-tbi{
+  font-family:"Bangers",cursive;
+  font-size:22px;
+  letter-spacing:.04em;
+  color:#111;
+  background:#00C2FF;
+  border:3px solid #111;
+  border-radius:999px;
+  padding:.45rem 1.15rem;
+  min-height:64px;
+  min-width:64px;
+  cursor:pointer;
+  box-shadow:4px 4px 0 #111;
+  flex:0 0 auto;
+  line-height:1.2;
+}
+.btn-tbi:hover,
+.btn-tbi:focus{
+  background:#FFD200;
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+@media (max-width:719px){
+  .btn-tbi{
+    order:-1;
+    width:100%;
+  }
+}
+
+.cartes-tabpanel[hidden]{display:none}
+.cartes-tabpanel:not([hidden]){display:block}
+
+/* QCM cliquable : une case par proposition, vert si juste, corail si faux */
+.qcm-liste ul li.qcm-choix{
+  cursor:pointer;
+  min-height:48px;
+  background:#FFFDF5;
+  border:3px solid #111;
+  border-radius:14px;
+  padding:.65rem .85rem;
+  margin:.5rem 0 0;
+  box-shadow:3px 3px 0 #111;
+  display:block;
+  transition:background .15s ease, border-color .15s ease;
+}
+.qcm-choix:hover,
+.qcm-choix:focus{
+  outline:3px solid #00C2FF;
+  outline-offset:2px;
+}
+.qcm-liste ul li.qcm-choix.qcm-bon{
+  background:#C8F5D4;
+  border-color:#2FA36B;
+}
+.qcm-liste ul li.qcm-choix.qcm-faux{
+  background:#FFE0D6;
+  border-color:#F06C5E;
+}
+.qcm-liste ul li.qcm-choix.qcm-choisi{
+  box-shadow:4px 4px 0 #111;
+}
+
+/* Mode tableau blanc */
+.tbi-placeholder{
+  display:none;
+}
+body.tbi-actif{
+  overflow:hidden;
+}
+.tbi-overlay{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  background:
+    radial-gradient(circle, #1A1A1A 1.05px, transparent 1.15px) 0 0 / 9px 9px,
+    linear-gradient(180deg, #FFE566 0%, #FFB703 18%, #FFF6E0 50%);
+  display:flex;
+  flex-direction:column;
+  padding:.6rem .8rem .8rem;
+  box-sizing:border-box;
+}
+.tbi-overlay[hidden]{display:none !important}
+.tbi-cadre{
+  display:flex;
+  flex-direction:column;
+  flex:1 1 auto;
+  min-height:0;
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+}
+.tbi-barre{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem .7rem;
+  align-items:center;
+  justify-content:space-between;
+  margin:0 0 .6rem;
+}
+.tbi-compteur{
+  font-family:"Bangers",cursive;
+  font-size:clamp(1.4rem, 3vw, 2rem);
+  letter-spacing:.04em;
+  color:#7B1E3A;
+  text-shadow:2px 2px 0 #111, -1px 0 0 #FFE566;
+  margin:0;
+  flex:1 1 12rem;
+  line-height:1.15;
+  background:#fff;
+  border:3px solid #111;
+  border-radius:16px;
+  padding:.4rem .8rem;
+  box-shadow:3px 3px 0 #111;
+}
+.tbi-barre-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+}
+.tbi-btn{
+  font-family:"Bangers",cursive;
+  font-size:22px;
+  letter-spacing:.03em;
+  color:#111;
+  background:#fff;
+  border:3px solid #111;
+  border-radius:999px;
+  padding:.4rem 1rem;
+  min-height:64px;
+  min-width:64px;
+  cursor:pointer;
+  box-shadow:3px 3px 0 #111;
+  line-height:1.15;
+}
+.tbi-btn:hover,
+.tbi-btn:focus{
+  outline:3px solid #fff;
+  outline-offset:3px;
+  filter:brightness(1.08);
+}
+.tbi-btn:disabled{
+  opacity:.45;
+  cursor:default;
+  box-shadow:none;
+}
+.tbi-melanger{background:#FF2E93;color:#fff}
+.tbi-melanger:hover,
+.tbi-melanger:focus{color:#111}
+.tbi-quitter{background:#fff}
+.tbi-prev,
+.tbi-next{background:#00C2FF}
+.tbi-flip{background:#FFD200}
+
+.tbi-scene{
+  flex:1 1 auto;
+  min-height:0;
+  overflow:auto;
+  display:flex;
+  align-items:safe center;
+  justify-content:center;
+  padding:.2rem 0 .6rem;
+  -webkit-overflow-scrolling:touch;
+}
+.tbi-scene .carte-rev{
+  width:min(1040px, 100%);
+  max-width:100%;
+  font-size:22px;
+  box-shadow:8px 8px 0 #111;
+}
+.tbi-scene .carte-titre{
+  font-size:clamp(1.85rem, 4.2vw, 2.6rem);
+  margin-right:5rem;
+  color:#fff;
+  text-shadow:3px 3px 0 #111;
+}
+.tbi-scene .carte-boss .carte-titre,
+.tbi-scene .carte-boss .carte-cat{
+  color:#111;
+  text-shadow:2px 2px 0 #fff;
+}
+.tbi-scene .carte-visuel img{
+  aspect-ratio:16/10;
+  max-height:36vh;
+  width:100%;
+  object-fit:cover;
+}
+.tbi-scene .carte-texte,
+.tbi-scene .qcm-liste p,
+.tbi-scene .qcm-liste ul li,
+.tbi-scene .qcm-reponse{
+  font-size:22px;
+}
+.tbi-scene .qcm-liste ul li.qcm-choix{
+  min-height:64px;
+  display:block;
+  padding:.75rem 1rem;
+}
+.tbi-scene .carte-flip-btn,
+.tbi-scene .qcm-reponse-btn{
+  min-height:64px;
+}
+
+.tbi-commandes{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  justify-content:center;
+  margin-top:.2rem;
+}
+.tbi-commandes .tbi-btn{
+  flex:1 1 10rem;
+  max-width:22rem;
+}
+
+@media (max-width:719px){
+  .tbi-overlay{padding:.45rem .5rem .6rem}
+  .tbi-compteur{flex:1 1 100%;font-size:1.4rem}
+  .tbi-barre-actions{width:100%}
+  .tbi-barre-actions .tbi-btn{flex:1 1 8rem}
+  .tbi-commandes{flex-direction:column}
+  .tbi-commandes .tbi-btn{flex:1 1 auto;max-width:none;width:100%}
+  .tbi-scene{align-items:flex-start}
+  .tbi-scene .carte-visuel img{max-height:22vh}
+}
+
+.mode-dys .cartes-tablist [role="tab"],
+.mode-dys .btn-tbi,
+.mode-dys .tbi-btn,
+.mode-dys .tbi-compteur{
+  font-family:inherit;
+  text-shadow:none;
+  letter-spacing:normal;
+  transform:none;
+  font-size:22px;
+}
+.mode-dys .tbi-compteur{
+  font-weight:700;
+}
+
+@media print{
+  .cartes-outils,
+  .btn-tbi,
+  .tbi-overlay{display:none !important}
+  #cartes-revision .cartes-tabpanel,
+  #cartes-revision .cartes-tabpanel[hidden]{
+    display:block !important;
+    visibility:visible !important;
+  }
+}
 
 /* Grands écrans (tableau interactif) : zone des cartes élargie, texte et boutons agrandis.
    Rien ne change en dessous de 1200 px. */
@@ -337,11 +639,14 @@
     padding:.7rem 1.8rem;
     margin-top:1rem;
   }
-  .stp-main #cartes-revision .cartes-sommaire a{
+  .stp-main #cartes-revision .qcm-liste ul li.qcm-choix{
+    min-height:64px;
+    padding:.75rem 1rem;
+  }
+  #cartes-revision .cartes-tablist [role="tab"],
+  #cartes-revision .btn-tbi{
     font-size:26px;
     min-height:64px;
-    display:inline-flex;
-    align-items:center;
     padding:.5rem 1.4rem;
   }
   #cartes-revision .bd-enzo img{
@@ -349,4 +654,26 @@
     max-width:100%;
     max-height:90vh;
   }
+
+  /* Mode plein écran tableau : texte des cartes à 32 px, boutons larges */
+  .tbi-cadre{max-width:1600px}
+  .tbi-compteur{font-size:2.2rem}
+  .tbi-btn{font-size:28px;min-height:72px;padding:.6rem 1.6rem}
+  .tbi-scene .carte-rev{width:min(1400px,100%)}
+  .tbi-scene .carte-visuel img{max-height:34vh}
+  body .tbi-scene .carte-texte,
+  body .tbi-scene .qcm-liste p,
+  body .tbi-scene .qcm-liste ul li,
+  body .tbi-scene .qcm-reponse{
+    font-size:32px;
+    line-height:1.4;
+  }
+  body .tbi-scene .carte-cat{font-size:28px!important}
+  body .tbi-scene .carte-flip-btn,
+  body .tbi-scene .qcm-reponse-btn{
+    font-size:30px;
+    min-height:72px;
+    padding:.6rem 1.8rem;
+  }
+  body .tbi-scene .qcm-liste ul li.qcm-choix{min-height:72px}
 }

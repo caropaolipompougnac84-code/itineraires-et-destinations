@@ -32,3 +32,24 @@
 blockquote.dictee-modele{margin:1rem 0}
 
 .mode-eleve [data-act="reponses"],.mode-dys [data-act="reponses"]{display:none!important}
+
+
+/* Bloc méthode : ce qu’il ne faut pas écrire / ce qu’il faut écrire */
+#methode-questions .methode-source{background:var(--pale);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:1rem 0}
+#methode-questions .extrait-officiel{margin:1rem 0;padding:.9rem 1.1rem;border-left:5px solid var(--b);background:var(--pale);border-radius:0 12px 12px 0;font-size:22px}
+#methode-questions .extrait-officiel p{margin:.4rem 0}
+.paire-reponses{display:grid;grid-template-columns:1fr;gap:1rem;margin:1rem 0 1.8rem}
+@media (min-width:720px){
+  .paire-reponses{grid-template-columns:1fr 1fr;align-items:stretch}
+}
+.rep-eviter,.rep-viser{border-radius:16px;padding:1rem 1.1rem;font-size:22px}
+.rep-eviter{background:#FFE9E2;border:3px solid #F06C5E}
+.rep-viser{background:#E3F8EC;border:3px solid #2FA36B}
+.rep-label{font-family:var(--f-t);font-weight:700;font-size:24px;margin:0 0 .6rem;line-height:1.25;color:inherit}
+.rep-eviter .rep-label{color:#C2303A}
+.rep-viser .rep-label{color:#187A45}
+.rep-pourquoi{margin:.7rem 0 0}
+#methode-questions .rep-eviter p,#methode-questions .rep-viser p{font-size:22px;line-height:1.55}
+
+/* Taille minimale 22 px pour le bloc méthode */
+.stp-main #methode-questions>summary,.stp-main #methode-questions p,.stp-main #methode-questions li{font-size:22px}

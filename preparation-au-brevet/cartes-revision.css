@@ -1,0 +1,308 @@
+/* Cartes de révision : pop art et manga, couleurs vives, contours épais. */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap");
+
+#cartes-revision{
+  --ink:#111;
+  --paper:#FFF6E0;
+  --dot:#1A1A1A;
+  position:relative;
+  background:
+    radial-gradient(circle, var(--dot) 1.05px, transparent 1.15px) 0 0 / 9px 9px,
+    linear-gradient(180deg, #FFE566 0%, #FFB703 18%, #FFF6E0 42%);
+  border:6px solid #111;
+  border-radius:28px;
+  padding:1.2rem 1rem 2rem;
+  box-shadow:8px 8px 0 #111;
+  overflow:hidden;
+}
+#cartes-revision::before{
+  content:"";
+  position:absolute;
+  inset:auto -40px -50px auto;
+  width:180px;height:180px;
+  background:
+    radial-gradient(circle at 30% 30%, #FF2E93 0 28%, transparent 29%),
+    radial-gradient(circle at 70% 60%, #00C2FF 0 22%, transparent 23%),
+    radial-gradient(circle at 40% 80%, #FFD200 0 18%, transparent 19%);
+  opacity:.55;
+  pointer-events:none;
+}
+#cartes-revision > *{position:relative;z-index:1}
+
+#cartes-revision h2{
+  font-family:"Bangers","Luckiest Guy",cursive;
+  font-size:clamp(2.4rem,8vw,3.4rem);
+  letter-spacing:.04em;
+  color:#7B1E3A;
+  text-shadow:4px 4px 0 #111, -2px 0 0 #FFE566;
+  border:0;
+  padding:0;
+  margin:.2rem 0 .6rem;
+  transform:rotate(-1.5deg);
+  line-height:1;
+}
+#cartes-revision > p,
+#cartes-revision li,
+#cartes-revision .carte-texte,
+#cartes-revision .qcm-liste,
+#cartes-revision .qcm-reponse{
+  font-size:22px;
+  line-height:1.5;
+  color:#111;
+}
+#cartes-revision h3.carte-titre{
+  font-family:"Bangers","Luckiest Guy",cursive;
+  font-size:clamp(1.7rem,6vw,2.15rem);
+  font-weight:400;
+  letter-spacing:.03em;
+  line-height:1.05;
+  margin:0 4.4rem .55rem 0;
+  color:#fff;
+  text-shadow:3px 3px 0 #111;
+  display:block;
+}
+#cartes-revision .carte-boss h3.carte-titre,
+#cartes-revision .carte-boss .carte-cat{
+  color:#111;
+  text-shadow:2px 2px 0 #fff;
+}
+#cartes-revision > p{
+  background:#fff;
+  border:3px solid #111;
+  border-radius:16px;
+  padding:.7rem 1rem;
+  box-shadow:4px 4px 0 #111;
+}
+
+.cartes-sommaire{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin:1rem 0 1.4rem;
+}
+.cartes-sommaire a{
+  font-family:"Bangers",cursive;
+  font-size:22px;
+  letter-spacing:.03em;
+  text-decoration:none;
+  color:#111;
+  background:#fff;
+  border:3px solid #111;
+  border-radius:999px;
+  padding:.35rem .85rem;
+  box-shadow:3px 3px 0 #111;
+}
+.cartes-sommaire a:hover,
+.cartes-sommaire a:focus{
+  background:#FFD200;
+}
+
+#cartes-revision h3.cartes-famille{
+  font-family:"Bangers",cursive;
+  font-size:clamp(1.8rem,6vw,2.4rem);
+  letter-spacing:.04em;
+  color:#fff;
+  background:#111;
+  display:inline-block;
+  padding:.25rem .8rem .15rem;
+  margin:1.6rem 0 .8rem;
+  transform:rotate(-1deg);
+  border:3px solid #111;
+  box-shadow:5px 5px 0 #FF2E93;
+}
+
+.cartes-grille{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.3rem;
+  margin:0 0 1.8rem;
+}
+@media (min-width:720px){
+  .cartes-grille{grid-template-columns:1fr 1fr}
+}
+
+.carte-rev{
+  position:relative;
+  border:5px solid #111;
+  border-radius:22px;
+  background:#0B1B3A;
+  color:#fff;
+  box-shadow:6px 6px 0 #111;
+  padding:0;
+  overflow:hidden;
+}
+.carte-rev .carte-recto,
+.carte-rev .carte-verso{
+  padding: .85rem .85rem 1rem;
+  min-height:100%;
+}
+.carte-rev.is-flipped .carte-recto{display:none}
+.carte-rev:not(.is-flipped) .carte-verso{display:none}
+
+/* bandeaux par catégorie */
+.carte-cat{
+  font-family:"Bangers",cursive;
+  font-size:22px;
+  letter-spacing:.06em;
+  margin:0 0 .15rem;
+  text-transform:uppercase;
+  text-shadow:2px 2px 0 #111;
+}
+
+.carte-pouvoir{background:linear-gradient(180deg,#19B5FF 0 5.6rem,#082447 5.6rem)}
+.carte-combo{background:linear-gradient(180deg,#B14BFF 0 5.6rem,#2A0A4A 5.6rem)}
+.carte-survival{background:linear-gradient(180deg,#FF7A00 0 5.6rem,#4A1C00 5.6rem)}
+.carte-trap{background:linear-gradient(180deg,#FF2E93 0 5.6rem,#4A0730 5.6rem)}
+.carte-boss{background:linear-gradient(180deg,#FFD200 0 5.6rem,#1A1333 5.6rem)}
+.carte-strategie{background:linear-gradient(180deg,#FF3B1F 0 5.6rem,#3B0A00 5.6rem)}
+.carte-monde{background:linear-gradient(180deg,#00D4FF 0 5.6rem,#042A4A 5.6rem)}
+.carte-citoyen{background:linear-gradient(180deg,#00C853 0 5.6rem,#01331A 5.6rem)}
+.carte-action{background:linear-gradient(180deg,#FF6A00 0 5.6rem,#3A1400 5.6rem)}
+.carte-culture{background:linear-gradient(180deg,#00C2A8 0 5.6rem,#01332C 5.6rem)}
+.carte-bouclier{background:linear-gradient(180deg,#3B82F6 0 5.6rem,#0B1B4A 5.6rem)}
+.carte-sound{background:linear-gradient(180deg,#9B5CFF 0 5.6rem,#1A0840 5.6rem)}
+
+.carte-visuel{
+  margin:0 -0.2rem .7rem;
+  border:4px solid #111;
+  border-radius:14px;
+  overflow:hidden;
+  background:#111;
+  box-shadow:0 0 0 3px #fff inset;
+}
+.carte-visuel img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/11;
+  object-fit:cover;
+  object-position:center;
+}
+
+.carte-texte{
+  background:#FFFDF5;
+  color:#111;
+  border:3px solid #111;
+  border-radius:14px;
+  padding:.7rem .8rem;
+  margin:0;
+  box-shadow:3px 3px 0 #111;
+}
+.carte-texte b{color:#7B1E3A}
+
+.carte-flip-btn,
+.qcm-reponse-btn{
+  font-family:"Bangers",cursive;
+  font-size:22px;
+  letter-spacing:.04em;
+  border:3px solid #111;
+  border-radius:999px;
+  background:#FFD200;
+  color:#111;
+  padding:.45rem 1rem;
+  margin-top:.8rem;
+  cursor:pointer;
+  box-shadow:3px 3px 0 #111;
+  min-height:48px;
+}
+.carte-flip-btn:hover,
+.qcm-reponse-btn:hover{
+  background:#fff;
+}
+.carte-flip-btn:focus,
+.qcm-reponse-btn:focus{
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+
+.qcm-liste{margin:.4rem 0 .3rem;padding:0 0 0 0;list-style:none}
+.qcm-liste > li{
+  background:#FFFDF5;
+  color:#111;
+  border:3px solid #111;
+  border-radius:14px;
+  padding:.6rem .75rem;
+  margin:0 0 .6rem;
+  box-shadow:3px 3px 0 #111;
+}
+.qcm-liste p{margin:0 0 .35rem;font-size:22px}
+.qcm-liste ul{margin:0;padding:0;list-style:none}
+.qcm-liste ul li{font-size:22px;margin:.15rem 0}
+.qcm-reponse{
+  background:#C8F5D4;
+  color:#111;
+  border:3px solid #111;
+  border-radius:14px;
+  padding:.7rem .8rem;
+  margin:.6rem 0 0;
+  box-shadow:3px 3px 0 #111;
+}
+
+.onomato{
+  position:absolute;
+  top:.45rem;
+  right:.5rem;
+  font-family:"Bangers",cursive;
+  font-size:22px;
+  letter-spacing:.04em;
+  color:#111;
+  background:#FFD200;
+  border:3px solid #111;
+  padding:.15rem .45rem .05rem;
+  transform:rotate(-12deg);
+  box-shadow:3px 3px 0 #111;
+  z-index:2;
+  pointer-events:none;
+  line-height:1;
+}
+.onomato.quiz{background:#FF2E93;color:#fff;transform:rotate(8deg)}
+.onomato.bam{background:#00C2FF;transform:rotate(12deg)}
+.onomato.action{background:#FF7A00;color:#fff;transform:rotate(-8deg)}
+
+/* éclaboussure décorative */
+.carte-rev::after{
+  content:"";
+  position:absolute;
+  width:70px;height:70px;
+  right:-18px;bottom:-18px;
+  background:
+    radial-gradient(circle at 40% 40%, #FF2E93 0 34%, transparent 35%),
+    radial-gradient(circle at 70% 60%, #FFD200 0 22%, transparent 23%);
+  pointer-events:none;
+  opacity:.85;
+}
+
+/* Version dys : texte lisible, plus de comic difficile */
+.mode-dys #cartes-revision h2,
+.mode-dys #cartes-revision h3.cartes-famille,
+.mode-dys .carte-cat,
+.mode-dys .carte-titre,
+.mode-dys .carte-flip-btn,
+.mode-dys .qcm-reponse-btn,
+.mode-dys .cartes-sommaire a{
+  font-family:inherit;
+  text-shadow:none;
+  letter-spacing:normal;
+  transform:none;
+  font-size:22px;
+}
+.mode-dys #cartes-revision h2,
+.mode-dys #cartes-revision h3.cartes-famille{
+  font-size:1.6rem;
+  font-weight:700;
+}
+.mode-dys .onomato{display:none}
+
+@media print{
+  .carte-flip-btn,.qcm-reponse-btn,.onomato{display:none}
+  .carte-rev .carte-verso{display:block}
+  .qcm-reponse{display:block}
+}
+
+#cartes-revision h3.cartes-famille,
+#cartes-revision .carte-rev{
+  scroll-margin-top: calc(var(--header-h, 72px) + var(--tabs-h, 48px) + 10px);
+}
+
+/* Taille minimale 22 px : étiquettes des cartes et légende de la BD */
+.stp-main #cartes-revision .carte-cat,.stp-main #cartes-revision figcaption{font-size:22px!important}

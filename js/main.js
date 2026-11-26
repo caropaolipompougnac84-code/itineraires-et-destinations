@@ -56,9 +56,11 @@
     return true;
   }
 
-  function themeLabel(themesCatalog, id) {
+  function themeLabel(themesCatalog, id, inEnglish) {
     const t = (themesCatalog || []).find((x) => x.id === id);
-    return t ? t.label : id;
+    if (!t) return id;
+    if (inEnglish && t.labelEn) return t.labelEn;
+    return t.label;
   }
   function escapeHtml(s) {
     return String(s)
@@ -81,7 +83,7 @@
   function workHTML(r, themesCatalog) {
     const prefix = assetPrefix();
     const themes = (r.themes || [])
-      .map((id) => `<li class="theme">${escapeHtml(themeLabel(themesCatalog, id))}</li>`)
+      .map((id) => `<li class="theme">${escapeHtml(themeLabel(themesCatalog, id, r.subject === "anglais"))}</li>`)
       .join("");
     const level = r.levelLabel || levelsOf(r).join(" · ") || "";
     const hasUrl = r.url && r.url !== "#";
@@ -104,13 +106,15 @@
       }
       if (hasUrl) {
         const external = /^https?:/i.test(r.url) && !/itineraires-destinations\.fr/i.test(r.url);
-        return `<span class="work-links"><a class="work-link" href="${escapeAttr(r.url)}"${external ? ' target="_blank" rel="noopener"' : ""}>Voir le support</a>${
+        const linkLabel = r.subject === "anglais" ? "See the sequence" : "Voir le support";
+        const fbLabel = r.subject === "anglais" ? "Facebook announcement" : "Annonce Facebook";
+        return `<span class="work-links"><a class="work-link" href="${escapeAttr(r.url)}"${external ? ' target="_blank" rel="noopener"' : ""}>${linkLabel}</a>${
             r.facebookUrl
-              ? `<a class="work-link work-link-secondary" href="${escapeAttr(r.facebookUrl)}" target="_blank" rel="noopener">Annonce Facebook</a>`
+              ? `<a class="work-link work-link-secondary" href="${escapeAttr(r.facebookUrl)}" target="_blank" rel="noopener">${fbLabel}</a>`
               : ""
           }</span>`;
       }
-      return `<span class="muted">Lien à venir</span>`;
+      return `<span class="muted">${r.subject === "anglais" ? "Link coming soon" : "Lien à venir"}</span>`;
     }
     return `
 <article class="work reveal" data-id="${escapeAttr(r.id || "")}">

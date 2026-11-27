@@ -15,7 +15,8 @@
       "idFormat": "[section]-[subject]-[level]-[slug]",
       "dedupeKey": "title + section + subject + level",
       "versions": "Prof / Élève signalés dans materials ou variantes séparées"
-    }
+    },
+    "subtitle2": "Itinéraires et destinations"
   },
   "themes": [
     {
@@ -4090,6 +4091,39 @@
       "date": "2026-11-26",
       "image": "shakespeare-in-love-terminale.jpg",
       "credit": "Frank Dicksee, Romeo and Juliet (detail), 1884, Southampton City Art Gallery. Public domain. Image: Wikimedia Commons."
+    },
+    {
+      "id": "meth-organisation-premiere-heure",
+      "title": "Méthodologie · Organisation : dès la première heure",
+      "summary": "Cahier de brouillon, classeur à pochettes plastifiées perforées, trace écrite, code couleur aux Stabilo, PRONOTE et deux notes coefficient 2 : tout se met en place dès la première séance. Page à télécharger en pdf, docx et odt.",
+      "section": "methodologie",
+      "subject": "transversal",
+      "level": "tous",
+      "levelLabel": "Cours d'anglais et de lettres, toutes classes",
+      "collection": "methodologie",
+      "methodGroup": "_top",
+      "themes": [
+        "examen"
+      ],
+      "url": "https://itineraires-destinations.fr/organisation-premiere-heure/",
+      "date": "2026-11-27"
+    },
+    {
+      "id": "lg-lettres-2de-ils-vecurent-malheureux",
+      "title": "Lettres · 2de · Ils vécurent malheureux et eurent beaucoup de dettes",
+      "summary": "Dernière séquence du Grand Tour : le XIXe siècle retourne les contes de fées (Maupassant, Flaubert, Zola, Balzac, Dumas fils). Six leçons, la spirale de Gorse, des brouillons de classe, une évaluation.",
+      "section": "lycee-general",
+      "subject": "lettres",
+      "level": "2de",
+      "levelLabel": "Seconde · lycée général et technologique",
+      "collection": "lg-lettres",
+      "themes": [
+        "litterature"
+      ],
+      "url": "https://itineraires-destinations.fr/ils-vecurent-malheureux-et-eurent-beaucoup-de-dettes/",
+      "date": "2026-11-27",
+      "image": "ils-vecurent-malheureux-et-eurent-beaucoup-de-dettes.jpg",
+      "credit": "James Tissot, Too Early, 1873, huile sur toile, Guildhall Art Gallery, Londres. Domaine public."
     }
   ]
 }

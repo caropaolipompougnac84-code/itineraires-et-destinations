@@ -92,12 +92,13 @@ body.eleve .toolkit .prof{display:none}
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/english-look.css">
 
+<link rel="stylesheet" href="../css/livre.css" />
 </head>
 <body data-section="lycee-pro" class="english-look">
   <header class="site-header">
     <div class="wrap">
       <div class="brand">
-        <a class="brand-mark" href="../index.html">Grand Tour</a>
+        <a class="brand-mark" href="../index.html">Grand Tour</a><span class="brand-sub">Itinéraires et destinations</span>
         <span class="brand-tag">Séquences prêtes à l'emploi · Français, anglais · Tous niveaux</span>
       </div>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
@@ -120,7 +121,7 @@ body.eleve .toolkit .prof{display:none}
 
   <div class="toolkit">
   <header class="tk-header">
-    <h1 id="title">Exam Toolkit</h1>
+    <h1 id="title"><span class="hl hl-titre">Exam Toolkit</span></h1>
     <div class="sub" id="subtitle">English · CAP et CAPA · A2 · My Working Day</div>
     <p class="downloads" lang="fr">Télécharger le toolkit complet (les huit métiers, CAP et CAPA) :
       <a href="exam-toolkit-cap-capa.pdf">PDF</a> ·
@@ -629,7 +630,7 @@ function render(){
  const tf = T.rules.map((r,i)=>{const shown = i%2 ? !r[1] : !!r[1]; return {txt:`You ${shown?"must":"mustn't"} ${r[0]}.`, ok: shown===!!r[1]};});
  P.ev = `
  <div class="card"><h2>Évaluation intermédiaire · après la séance 3 · /20</h2>
- <p class="prof">Durée : 20 minutes, en début de séance 4. Sans dictionnaire. Corrigé dans la section Answer key, plus bas sur cette page.</p>
+ <p class="prof"><svg class="ico ico-horloge" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 6.5V12l3.8 2.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Durée : 20 minutes, en début de séance 4. Sans dictionnaire. Corrigé dans la section Answer key, plus bas sur cette page.</p>
  <h3>A. Translate into English (/6)</h3><ol>${vq.map(v=>`<li>${v[1]} : ..............................</li>`).join("")}</ol>
  <h3>B. Write the time in words (/3)</h3><ol>${tq.map(d=>`<li>${d[0]} : ......................................</li>`).join("")}</ol>
  <h3>C. True or false? (/5)</h3><ol>${tf.map(t=>`<li>${t.txt} &nbsp; True ☐ &nbsp; False ☐</li>`).join("")}</ol>

@@ -1,0 +1,134 @@
+/* Grand Tour · alignement sur le livre (27/11/2026)
+   Palette de surlignage du livre, mise en route en rouge, sous-titre, encadrés. */
+:root {
+  --hl-jaune: #FFF3A3;
+  --hl-vert: #CDEFC4;
+  --hl-rose: #F9D3E0;
+  --hl-violet: #E3D4F5;
+  --hl-orange: #FFDDB8;
+  --hl-bleu: #CFE6FA;
+  --hl-turquoise: #C8F0EC;
+  --bordeaux-livre: #7B1E3A;
+  --encre-livre: #1d1511;
+}
+
+/* Sous-titre officiel, sous « Grand Tour » */
+.brand-sub {
+  display: block;
+  font-family: var(--serif, Georgia, "Times New Roman", serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  color: var(--navy-wash, var(--ink-soft, #5c4e42));
+}
+
+/* Surlignages des titres (comme au Stabilo) */
+.hl {
+  color: var(--encre-livre);
+  padding: 0.04em 0.3em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.hl-titre { background: var(--hl-jaune); }
+.hl-sous { background: var(--hl-vert); }
+.hl-lecon { background: var(--hl-rose); }
+.hl-devoirs { background: var(--hl-violet); }
+.hl-planb { background: var(--hl-orange); }
+.hl-corrige { background: var(--hl-bleu); }
+.hl-trace { background: var(--hl-turquoise); }
+
+/* Mise en route en rouge, même forme dans chaque leçon */
+.mer {
+  border-left: 6px solid var(--bordeaux-livre);
+  background: #FBF8F2;
+  color: var(--bordeaux-livre);
+  margin: 1.3rem 0;
+  padding: 0.9rem 1.2rem 1rem;
+  font-size: max(22px, 1.375rem);
+  line-height: 1.55;
+}
+.mer .mer-titre {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.15em;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: var(--bordeaux-livre);
+  border: 0;
+  background: none;
+}
+.mer p { margin: 0.3rem 0; color: var(--bordeaux-livre); font-size: 1em; }
+.mer .mer-lead { font-style: italic; }
+.mer .mer-board { font-style: italic; }
+.mer .mer-dots { margin: 0.2rem 0 0; }
+.mer .mer-dots i {
+  display: block;
+  height: 1.9rem;
+  border-bottom: 2px dotted var(--bordeaux-livre);
+}
+
+/* Encadré « Programme axis · AMC » et « Speciality oral » */
+.amc-box {
+  margin: 1.4rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 6px solid #1A3658;
+  background: #EEF3F8;
+  color: #1A3658;
+  font-size: max(22px, 1.375rem);
+  line-height: 1.55;
+}
+.amc-box h2, .amc-box h3 {
+  font-size: 1.1em; margin: 0 0 .25rem; color: #1A3658; border: 0; background: none;
+  font-family: var(--serif, Georgia, serif);
+}
+.amc-box p { margin: 0 0 .9rem; font-size: 1em; color: #1A3658; }
+.amc-box p:last-child { margin-bottom: 0; }
+
+/* Pages écrites pour le livre (Organisation, conclusion de Seconde) : 22 px minimum */
+.livre-page { font-size: max(22px, 1.375rem); line-height: 1.7; }
+.livre-page p, .livre-page li { font-size: 1em; max-width: 42em; }
+.livre-page h2 { font-family: var(--serif, Georgia, serif); font-size: 1.5em; margin: 2.2rem 0 .8rem; line-height: 1.25; }
+.livre-page h3 { font-family: var(--serif, Georgia, serif); font-size: 1.25em; margin: 1.6rem 0 .5rem; line-height: 1.3; }
+.livre-page ul { padding-left: 1.4em; }
+.livre-page li { margin: .35rem 0; }
+.livre-page .lede-livre { font-size: 1.1em; font-style: italic; color: var(--ink-soft, #5c4e42); margin: 0 0 1rem; }
+.livre-page .tablo { overflow-x: auto; margin: 1rem 0; }
+.livre-page table { border-collapse: collapse; width: 100%; font-size: .9em; }
+.livre-page th, .livre-page td { border: 1px solid rgba(29,21,17,.25); padding: .5rem .6rem; text-align: left; vertical-align: top; }
+.livre-page th { background: #F3EADC; }
+.livre-page figure { margin: 1.4rem 0; }
+.livre-page figure img { max-width: 100%; height: auto; display: block; }
+.livre-page figcaption { font-size: .8em; color: var(--ink-soft, #5c4e42); margin-top: .4rem; }
+.livre-page .code-couleur { list-style: none; padding: 0; }
+.livre-page .code-couleur li { margin: .5rem 0; }
+.livre-page .code-couleur .hl { display: inline-block; padding: .1em .6em; font-weight: 600; }
+.livre-page .mot-autrice { border-left: 6px solid var(--bordeaux-livre); padding: .4rem 0 .4rem 1.2rem; margin: 1.8rem 0; }
+.livre-page .mot-autrice h3 { margin-top: 0; }
+.livre-page .dl-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: .6rem 0 1.4rem; }
+.livre-page .dl-row a { font-size: .9em; }
+.livre-page .classe-inventee { font-size: .85em; font-style: italic; color: var(--ink-soft, #5c4e42); }
+
+/* Couverture de l'accueil : sous-titre officiel */
+.gt-subtitle {
+  font-family: var(--serif, Georgia, serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: max(22px, 1.4rem);
+  line-height: 1.3;
+  margin: 0.1rem 0 0.7rem;
+  color: inherit;
+}
+
+/* Icônes SVG : horloge (durée, minuteur) et cible (objectif de la leçon) */
+.ico { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0.4em; flex: none; }
+
+/* Tableaux sur petit écran : chaque ligne devient une carte, texte toujours à 22 px */
+@media (max-width: 640px) {
+  .livre-page .tablo table, .livre-page .tablo tbody, .livre-page .tablo tr, .livre-page .tablo td { display: block; width: 100%; }
+  .livre-page .tablo thead { position: absolute; left: -9999px; }
+  .livre-page .tablo tr { border: 1px solid rgba(29,21,17,.25); margin: 0 0 1rem; background: #fffdf8; }
+  .livre-page .tablo td { border: 0; border-bottom: 1px solid rgba(29,21,17,.12); font-size: 1em; }
+  .livre-page .tablo td:last-child { border-bottom: 0; }
+  .livre-page .tablo td::before { content: attr(data-label); display: block; font-weight: 700; font-size: 1em; color: var(--ink-soft, #5c4e42); margin-bottom: .1rem; }
+}
